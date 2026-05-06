@@ -23,6 +23,51 @@ const PRODUCT_MAP = {
   '2605021152293023': { specId: '2605021152293024', name: '豪華箱' },
 };
 
+// Critical CSS to inline - ensures page renders even if external CSS fails
+const CRITICAL_CSS = `
+<style data-proxy="critical">
+*{box-sizing:border-box}body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;margin:0;padding:20px;line-height:1.6;color:#333}
+.container{max-width:800px;margin:0 auto;background:#fff;padding:30px;border-radius:12px;box-shadow:0 4px 20px rgba(0,0,0,0.1)}
+h1{color:#e65100;margin-bottom:20px;font-size:24px}
+.product-info{background:linear-gradient(135deg,#fff3e0 0%,#ffe0b2 100%);padding:20px;border-radius:12px;margin:20px 0;border-left:4px solid #ff9800}
+.product-name{font-size:20px;font-weight:700;color:#e65100;margin-bottom:10px}
+.product-price{font-size:32px;font-weight:900;color:#ff5722;margin:10px 0}
+.btn-buy{display:inline-block;background:linear-gradient(90deg,#ff7a00,#ffb703);color:#fff;padding:16px 40px;border-radius:50px;font-size:18px;font-weight:700;text-decoration:none;box-shadow:0 4px 15px rgba(255,122,0,0.3);transition:all 0.3s;border:none;cursor:pointer}
+.btn-buy:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(255,122,0,0.4)}
+.loading{text-align:center;padding:40px;color:#666}
+.spinner{display:inline-block;width:40px;height:40px;border:3px solid #f3f3f3;border-top:3px solid #ff9800;border-radius:50%;animation:spin 1s linear infinite}
+@keyframes spin{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+.error{background:#ffebee;color:#c62828;padding:20px;border-radius:8px;margin:20px 0;border-left:4px solid #f44336}
+.success{background:#e8f5e9;color:#2e7d32;padding:20px;border-radius:8px;margin:20px 0;border-left:4px solid #4caf50}
+</style>`;
+
+// Error page HTML
+function getErrorPage(message, isHtml = true) {
+  if (!isHtml) return message;
+  return `<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>賣貨便連線問題</title>
+${CRITICAL_CSS}
+</head>
+<body>
+<div class="container">
+<div class="error">
+<h1>⚠️ 連線問題</h1>
+<p>${message}</p>
+<p>請嘗試以下方式：</p>
+<ul>
+<li>直接前往 <a href="https://myship.7-11.com.tw/general/detail?id=GM2605018541234" target="_blank">賣貨便商店</a></li>
+<li>或聯繫客服 LINE: @sweetburst</li>
+</ul>
+</div>
+</div>
+</body>
+</html>`;
+}
+
 function getProxyBase(host) {
   return `https://${host}/api/ms`;
 }
@@ -33,7 +78,6 @@ function rewriteUrl(url, host) {
 }
 
 function rewriteSetCookie(cookieStr, host) {
-  // Remove Domain attribute so browser sets cookie on proxy domain
   return cookieStr.replace(/;\s*Domain=[^;]+/gi, '');
 }
 
@@ -43,11 +87,11 @@ function rewriteHtml(html, host, checkoutParams) {
   // Rewrite absolute URLs
   let result = html.replace(/https?:\/\/myship\.7-11\.com\.tw/g, proxyBase);
   
-  // Add <base> tag so relative CSS/JS URLs resolve through proxy
+  // Inject critical CSS right after <head>
   if (result.includes('<head>')) {
-    result = result.replace('<head>', '<head><base href="' + proxyBase + '/">');
+    result = result.replace('<head>', '<head>' + CRITICAL_CSS + '<base href="' + proxyBase + '/">');
   } else if (result.includes('<html')) {
-    result = result.replace(/<html([^>]*)>/, '<html$1><head><base href="' + proxyBase + '/"></head>');
+    result = result.replace(/<html([^>]*)>/, '<html$1><head>' + CRITICAL_CSS + '<base href="' + proxyBase + '/"></head>');
   }
   
   // Inject auto-fill JavaScript if checkout params present
@@ -86,7 +130,6 @@ function rewriteHtml(html, host, checkoutParams) {
   }
 })();
 </script>`;
-    // Inject before </body> if exists, otherwise append to end
     if (result.includes('</body>')) {
       result = result.replace('</body>', inject + '\n</body>');
     } else {
@@ -100,19 +143,14 @@ function rewriteHtml(html, host, checkoutParams) {
 export default async function handler(req, res) {
   const host = req.headers.host || req.headers['x-forwarded-host'] || 'localhost:3000';
   
-  // Parse the myship path from the URL
-  // URL format: /api/ms/myship/path?query  OR  /myship/path?query (catch-all)
   const urlObj = new URL(req.url, `https://${host}`);
   let proxyPath = urlObj.pathname.replace(/^\/api\/ms\/?/, '');
-  // If path still starts with / (absolute path like /css/style.js), use it directly
-  if (!proxyPath) {
-    proxyPath = '';
-  }
+  if (!proxyPath) proxyPath = '';
   const myshipUrl = MYSHIP_ORIGIN + (proxyPath ? '/' + proxyPath : '') + urlObj.search;
   
   // Build headers for myship request
   const forwardHeaders = {};
-  const skipHeaders = ['host', 'connection', 'content-length', 'transfer-encoding', 'x-forwarded-for', 'x-forwarded-host', 'x-forwarded-proto', 'x-vercel-forwarded-for', 'x-vercel-ip-country', 'x-vercel-ip-country-region', 'x-vercel-ip-city', 'x-vercel-ip-latitude', 'x-vercel-ip-longitude'];
+  const skipHeaders = ['host', 'connection', 'content-length', 'transfer-encoding', 'x-forwarded-for', 'x-forwarded-host', 'x-forwarded-proto'];
   
   for (const [key, value] of Object.entries(req.headers)) {
     const lower = key.toLowerCase();
@@ -123,11 +161,10 @@ export default async function handler(req, res) {
   forwardHeaders['host'] = 'myship.7-11.com.tw';
   forwardHeaders['origin'] = MYSHIP_ORIGIN;
   forwardHeaders['referer'] = MYSHIP_ORIGIN + '/general/detail?id=GM2605018541234';
-  forwardHeaders['user-agent'] = forwardHeaders['user-agent'] || 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36';
+  forwardHeaders['user-agent'] = forwardHeaders['user-agent'] || 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36';
   forwardHeaders['accept'] = forwardHeaders['accept'] || 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8';
-  forwardHeaders['accept-language'] = forwardHeaders['accept-language'] || 'zh-TW,zh;q=0.9,en-US;q=0.8,en;q=0.7';
+  forwardHeaders['accept-language'] = forwardHeaders['accept-language'] || 'zh-TW,zh;q=0.9,en;q=0.8';
   
-  // Fetch from myship
   try {
     const fetchOptions = {
       method: req.method,
@@ -136,7 +173,6 @@ export default async function handler(req, res) {
     };
     
     if (req.method !== 'GET' && req.method !== 'HEAD') {
-      // Forward request body
       const chunks = [];
       for await (const chunk of req) {
         chunks.push(chunk);
@@ -147,6 +183,14 @@ export default async function handler(req, res) {
     }
     
     const myshipResp = await fetch(myshipUrl, fetchOptions);
+    
+    // Handle 403 errors - return friendly error page
+    if (myshipResp.status === 403) {
+      const errorHtml = getErrorPage('賣貨便伺服器暫時無法存取（403）。這通常是因為賣貨便對靜態資源有存取限制。');
+      res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
+      res.end(errorHtml);
+      return;
+    }
     
     // Handle redirects
     if ([301, 302, 303, 307, 308].includes(myshipResp.status)) {
@@ -162,7 +206,6 @@ export default async function handler(req, res) {
     for (const [key, value] of myshipResp.headers.entries()) {
       const lower = key.toLowerCase();
       if (lower === 'set-cookie') {
-        // Rewrite cookie - remove Domain attribute
         const cookies = Array.isArray(value) ? value : [value];
         respHeaders['set-cookie'] = cookies.map(c => rewriteSetCookie(c, host));
       } else if (lower === 'location') {
@@ -172,7 +215,6 @@ export default async function handler(req, res) {
       }
     }
     
-    // Get response body
     const contentType = myshipResp.headers.get('content-type') || '';
     const isHtml = contentType.includes('text/html');
     
@@ -195,14 +237,36 @@ export default async function handler(req, res) {
       res.writeHead(myshipResp.status, respHeaders);
       res.end(html);
     } else {
-      // Pass through non-HTML responses
+      // For non-HTML (CSS/JS/images), return empty/transparent if 403
+      if (myshipResp.status === 403 || myshipResp.status === 404) {
+        // Return empty for CSS/JS, transparent pixel for images
+        if (contentType.includes('css')) {
+          res.writeHead(200, { 'Content-Type': 'text/css' });
+          res.end('/* CSS blocked by myship */');
+        } else if (contentType.includes('javascript')) {
+          res.writeHead(200, { 'Content-Type': 'application/javascript' });
+          res.end('// JS blocked by myship');
+        } else if (contentType.includes('image')) {
+          // Return 1x1 transparent GIF
+          const transparentGif = Buffer.from('R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7', 'base64');
+          res.writeHead(200, { 'Content-Type': 'image/gif', 'Content-Length': transparentGif.length });
+          res.end(transparentGif);
+        } else {
+          res.writeHead(200, { 'Content-Type': contentType || 'application/octet-stream' });
+          res.end('');
+        }
+        return;
+      }
+      
+      // Pass through successful non-HTML responses
       const buffer = Buffer.from(await myshipResp.arrayBuffer());
       res.writeHead(myshipResp.status, respHeaders);
       res.end(buffer);
     }
   } catch (err) {
     console.error('Proxy error:', err);
-    res.writeHead(502, { 'Content-Type': 'text/plain' });
-    res.end('Proxy error: ' + err.message);
+    const errorHtml = getErrorPage('連線失敗：' + err.message);
+    res.writeHead(502, { 'Content-Type': 'text/html; charset=utf-8' });
+    res.end(errorHtml);
   }
 }
