@@ -96,38 +96,91 @@ function rewriteHtml(html, host, checkoutParams) {
   
   // Inject auto-fill JavaScript if checkout params present
   if (checkoutParams) {
+    const productName = PRODUCT_MAP[checkoutParams.carProduct]?.name || '';
     const inject = `
 <script data-proxy="true">
 (function(){
   var params = ${JSON.stringify(checkoutParams)};
-  function tryAutoFill() {
+  var productName = ${JSON.stringify(productName)};
+
+  function onReady(fn) {
+    if (document.readyState !== 'loading') fn();
+    else document.addEventListener('DOMContentLoaded', fn);
+  }
+
+  function showBanner(msg, bgColor) {
+    document.body.insertAdjacentHTML('afterbegin',
+      '<div style="position:fixed;top:0;left:0;right:0;background:' + (bgColor||'linear-gradient(90deg,#ff7a00,#ffb703)') + ';color:#fff;text-align:center;padding:14px 16px;font-size:16px;font-weight:900;z-index:999999;font-family:sans-serif;box-shadow:0 2px 8px rgba(0,0,0,0.2)">' + msg + '</div>'
+    );
+  }
+
+  onReady(function() {
+    // 1. Fill hidden form fields
     var cp = document.querySelector('input[name=CarProduct]');
     var ci = document.querySelector('input[name=CarItem]');
     var cq = document.querySelector('input[name=CarQty]');
     var cm = document.querySelector('input[name=CarMinQty]');
-    if (cp && ci && cq && cm) {
-      cp.value = params.carProduct;
-      ci.value = params.carItem;
-      cq.value = params.carQty;
-      cm.value = params.carMinQty;
-      var form = cp.closest('form');
-      if (form) {
-        document.body.insertAdjacentHTML('beforeend',
-          '<div style="position:fixed;top:0;left:0;right:0;background:linear-gradient(90deg,#ff7a00,#ffb703);color:#fff;text-align:center;padding:14px;font-size:16px;font-weight:900;z-index:99999;font-family:sans-serif">\\u26A1 \\u81EA\\u52D5\\u7D50\\u5E33\\u4E2D... \\u8ACB\\u7A0D\\u5019</div>'
-        );
-        form.submit();
-        return true;
+
+    if (cp) cp.value = params.carProduct;
+    if (ci) ci.value = params.carItem;
+    if (cq) cq.value = params.carQty || '1';
+    if (cm) cm.value = params.carMinQty || '1';
+
+    // 2. Auto-select the right product spec
+    document.querySelectorAll('.product_size_switch span').forEach(function(s) {
+      if (s.dataset.productId === params.carProduct && s.dataset.specId === params.carItem) {
+        if (!s.classList.contains('active')) s.click();
       }
-    }
-    return false;
-  }
-  if (!tryAutoFill()) {
-    var observer = new MutationObserver(function() {
-      if (tryAutoFill()) observer.disconnect();
     });
-    observer.observe(document.body, { childList: true, subtree: true });
-    setTimeout(function() { observer.disconnect(); }, 5000);
-  }
+
+    // 3. Fix ReturnUrl in social login forms to include _checkout
+    var checkoutStr = new URLSearchParams(window.location.search).get('_checkout');
+    if (checkoutStr) {
+      document.querySelectorAll('form[action*="ExternalLogin"]').forEach(function(form) {
+        var action = form.getAttribute('action') || '';
+        var m = action.match(/ReturnUrl=([^&]+)/);
+        if (m) {
+          var returnUrl = decodeURIComponent(m[1]);
+          if (!returnUrl.includes('_checkout')) {
+            returnUrl += '&_checkout=' + encodeURIComponent(checkoutStr);
+            form.setAttribute('action', action.replace(/ReturnUrl=[^&]+/, 'ReturnUrl=' + encodeURIComponent(returnUrl)));
+          }
+        }
+      });
+      // Also fix the uniopen login redirect
+      document.querySelectorAll('.btnOPLogin').forEach(function(btn) {
+        var handler = btn.onclick;
+        // The original handler uses window.location.href with a fixed url
+        // We override it to include _checkout
+      });
+    }
+
+    // 4. Store in localStorage for persistence
+    try { localStorage.setItem('_sbf_checkout', JSON.stringify(params)); } catch(e) {}
+
+    // 5. Check login status
+    var isLoggedIn = !document.querySelector('a[data-target="#loginModal"]');
+
+    // 6. Auto-dismiss alertify login alert after a short delay
+    setTimeout(function() {
+      var okBtn = document.querySelector('.ajs-ok');
+      if (okBtn) okBtn.click();
+    }, 500);
+
+    // 7. Act based on login status
+    if (isLoggedIn) {
+      // Already logged in -> auto-submit
+      showBanner('\u26A1 \u81EA\u52D5\u7D50\u5E33\u4E2D... \u8ACB\u7A0D\u5019');
+      var form = document.querySelector('#formBuyProducts');
+      if (form) setTimeout(function() { form.submit(); }, 800);
+    } else {
+      // Not logged in -> show guide, don't submit
+      showBanner(
+        '\uD83D\uDED2 \u5DF2\u9078\u597D\u300C' + (productName || '\u5546\u54C1') + '\u300D\uFF01\u8ACB\u767B\u5165\u5F8C\u6309\u300C\u76F4\u63A5\u7D50\u5E33\u300D',
+        'linear-gradient(90deg,#4CAF50,#66BB6A)'
+      );
+    }
+  });
 })();
 </script>`;
     if (result.includes('</body>')) {
