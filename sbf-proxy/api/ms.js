@@ -1,6 +1,6 @@
-// Reverse proxy for myship.7-11.com.tw
-// All requests to /api/ms/* are forwarded to myship with cookies
-// HTML responses are rewritten to replace URLs and inject auto-fill JS
+// sbf-proxy: Beautiful wrapper page + reverse proxy for myship.7-11.com.tw
+// Strategy: Show our own beautiful landing page with iframe for myshop content
+// This avoids all CSS/JS 403 issues from myship's static resources
 
 const MYSHIP_ORIGIN = 'https://myship.7-11.com.tw';
 
@@ -12,275 +12,381 @@ export const config = {
 };
 
 const PRODUCT_MAP = {
-  '2605021152246963': { specId: '2605021152246964', name: '\u611b\u6587\u8292\u679c\u6c34\u679c\u7980\u76d2' },
-  '2605011150175300': { specId: '2605011150175301', name: '\u91d1\u9e3d\u9cf3\u68a8\u7980\u76d2' },
-  '2605021152260362': { specId: '2605021152260363', name: '\u5de8\u5cf0\u8461\u8404\u6c34\u679c\u7980\u76d2' },
-  '2605021152270007': { specId: '2605021152270008', name: '\u6afb\u6843\u6c34\u679c\u7980\u76d2' },
-  '2605021152272368': { specId: '2605021152272369', name: '\u6c34\u871c\u6843\u6c34\u679c\u7980\u76d2' },
-  '2605021152278900': { specId: '2605021152278901', name: '\u69b4\u69e3\u6c34\u679c\u7980\u76d2' },
-  '2605021152287723': { specId: '2605021152287724', name: '\u6a19\u6e96\u6c34\u679c\u7b31' },
-  '2605021152293023': { specId: '2605021152293024', name: '\u8c6a\u83ef\u7b31' },
+  '2605021152246963': { specId: '2605021152246964', name: '\u611b\u6587\u8292\u679c\u6c34\u679c\u7980\u76d2', price: 1380, origPrice: 1680, emoji: '\ud83c\udf51' },
+  '2605011150175300': { specId: '2605011150175301', name: '\u91d1\u9e3d\u9cf3\u68a8\u7980\u76d2', price: 799, origPrice: 999, emoji: '\ud83e\uded5' },
+  '2605021152260362': { specId: '2605021152260363', name: '\u5de8\u5cf0\u8461\u8404\u6c34\u679c\u7980\u76d2', price: 1280, origPrice: 1580, emoji: '\ud83c\udf47' },
+  '2605021152270007': { specId: '2605021152270008', name: '\u6afb\u6843\u6c34\u679c\u7980\u76d2', price: 1280, origPrice: 1580, emoji: '\ud83e\udd52' },
+  '2605021152272368': { specId: '2605021152272369', name: '\u6c34\u871c\u6843\u6c34\u679c\u7980\u76d2', price: 1280, origPrice: 1580, emoji: '\ud83e\udd51' },
+  '2605021152278900': { specId: '2605021152278901', name: '\u69b4\u69e3\u6c34\u679c\u7980\u76d2', price: 1980, origPrice: 2380, emoji: '\ud83e\uded6' },
+  '2605021152287723': { specId: '2605021152287724', name: '\u6a19\u6e96\u6c34\u679c\u7b31', price: 999, origPrice: 1280, emoji: '\ud83c\udf4e' },
+  '2605021152293023': { specId: '2605021152293024', name: '\u8c6a\u83ef\u7b31', price: 1680, origPrice: 1980, emoji: '\ud83c\udf4e' },
 };
 
-// Full inline CSS for beautiful rendering when external CSS is blocked (403)
-const BEAUTIFY_CSS = `
-<style id="sbf-beautify">
-/* ===== RESET & BASE ===== */
+function getLandingPage(host, checkoutParams) {
+  const p = checkoutParams ? PRODUCT_MAP[checkoutParams.carProduct] : null;
+  const pn = p ? p.name.replace(/</g,'&lt;').replace(/>/g,'&gt;') : '\u5546\u54c1';
+  const pe = p ? p.emoji : '\ud83c\udf4f';
+  const pp = p ? p.price : 0;
+  const po = p ? p.origPrice : 0;
+  const cp = checkoutParams ? JSON.stringify(checkoutParams).replace(/"/g,'&quot;') : '';
+  const iframeSrc = `https://${host}/api/ms/general/detail?id=GM2605018541234` +
+    (checkoutParams ? '&_checkout=' + encodeURIComponent(JSON.stringify(checkoutParams)) : '');
+
+  return `<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>\u7206\u751c\u6c34\u679c\u92ea | \u8ce3\u8ca8\u4fbf\u4e0b\u55ae</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{font-size:16px;-webkit-text-size-adjust:100%}
-body{
-  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang TC","Microsoft JhengHei",Roboto,sans-serif;
-  line-height:1.6;color:#333;background:#f5f5f5;
-  padding-top:60px!important; /* space for fixed banner */
+:root{
+  --primary:#ff7043;--primary-dark:#e64a19;--primary-light:#ffab91;
+  --accent:#ffb74d;--bg:#fff8f3;--card:#ffffff;
+  --text:#333;--text-light:#666;--text-muted:#999;
+  --radius:16px;--shadow:0 4px 24px rgba(230,74,25,0.12);
+  --shadow-hover:0 8px 40px rgba(230,74,25,0.20)
 }
-a{color:#ff7043;text-decoration:none}
-a:hover{color:#e64a19;text-decoration:underline}
-img{max-width:100%;height:auto;border-radius:8px}
+body{font-family:'Noto Sans TC',-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
 
-/* ===== BANNER ===== */
-#sbf-banner{
-  display:block!important;visibility:visible!important;opacity:1!important;
-  position:fixed!important;top:0!important;left:0!important;right:0!important;width:100%!important;
-  min-height:56px!important;
-  background:linear-gradient(135deg,#ff7043,#ffb74d)!important;
-  color:#fff!important;text-align:center!important;padding:14px 20px!important;
-  font-size:15px!important;font-weight:700!important;z-index:2147483647!important;
-  font-family:-apple-system,BlinkMacSystemFont,sans-serif!important;line-height:1.5!important;
-  box-shadow:0 4px 20px rgba(255,112,67,0.4)!important;cursor:pointer!important;
-  overflow:visible!important;clip:auto!important;clip-path:none!important;
-  -webkit-clip-path:none!important;transform:none!important;filter:none!important;
-  pointer-events:auto!important;border:none!important;margin:0!important;float:none!important;
-  letter-spacing:0.5px;
+/* ===== TOP BANNER ===== */
+.top-banner{
+  background:linear-gradient(135deg,#ff7043 0%,#ffb74d 100%);
+  color:#fff;text-align:center;padding:18px 24px;font-size:15px;font-weight:700;
+  position:sticky;top:0;z-index:100;box-shadow:0 4px 20px rgba(255,112,67,0.35);
+  display:flex;align-items:center;justify-content:center;gap:10px
 }
-#sbf-banner:hover{background:linear-gradient(135deg,#ff5722,#ffa726)!important}
+.top-banner .emoji{font-size:24px}
+.top-banner .close-btn{margin-left:auto;background:rgba(255,255,255,0.25);border:none;color:#fff;
+  width:28px;height:28px;border-radius:50%;cursor:pointer;font-size:16px;display:flex;align-items:center;justify-content:center}
+.top-banner .close-btn:hover{background:rgba(255,255,255,0.4)}
 
-/* ===== LAYOUT ===== */
-.container,.container-fluid{max-width:1100px;margin:0 auto;padding:0 16px}
-.row{display:flex;flex-wrap:wrap;margin:0 -8px}
-.col-md-3,.col-sm-6,.col-xs-12{padding:8px;flex:1;min-width:200px}
+/* ===== HERO ===== */
+.hero{text-align:center;padding:48px 24px 36px;background:linear-gradient(180deg,var(--bg) 0%,#fff 100%)}
+.hero-icon{font-size:64px;margin-bottom:16px;animation:bounce 2s ease infinite}
+@keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+.hero h1{font-size:32px;font-weight:900;color:var(--primary-dark);margin-bottom:8px}
+.hero h1 span{color:var(--primary)}
+.hero p{font-size:16px;color:var(--text-light);max-width:520px;margin:0 auto}
 
-/* ===== HEADER / SHOP INFO ===== */
-.shop-header{text-align:center;padding:24px 16px;background:#fff;margin-bottom:16px;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.06)}
-.shop-header h1{font-size:24px;font-weight:800;color:#e64a19;margin-bottom:8px}
-.shop-header .shop-subtitle{color:#888;font-size:14px}
+/* ===== PRODUCT CARD ===== */
+.product-section{max-width:600px;margin:0 auto;padding:0 20px 32px}
+.prod-card{
+  background:var(--card);border-radius:var(--radius);padding:28px;
+  box-shadow:var(--shadow);border:2px solid var(--primary-light);
+  text-align:center;position:relative;overflow:hidden
+}
+.prod-card::before{content:'';position:absolute;top:-40px;right:-40px;width:120px;height:120px;
+  background:radial-gradient(circle,var(--primary-light) 0%,transparent 70%);opacity:0.5;border-radius:50%}
+.prod-badge{
+  position:absolute;top:16px;left:16px;background:linear-gradient(135deg,var(--primary),var(--accent));
+  color:#fff;padding:6px 16px;border-radius:20px;font-size:13px;font-weight:700;z-index:1
+}
+.prod-emoji{font-size:56px;margin-bottom:12px;position:relative}
+.prod-name{font-size:20px;font-weight:800;color:var(--text);margin-bottom:16px;position:relative}
+.prod-price-wrap{margin-bottom:24px;position:relative}
+.prod-price{font-size:42px;font-weight:900;color:var(--primary-dark)}
+.prod-price small{font-size:16px;font-weight:700}
+.prod-original{font-size:18px;color:var(--text-muted);text-decoration:line-through;margin-left:8px}
+.prod-savings{
+  display:inline-block;background:linear-gradient(135deg,#4caf50,#81c784);color:#fff;
+  padding:4px 14px;border-radius:12px;font-size:13px;font-weight:700;margin-top:8px
+}
 
-/* ===== PRODUCT GRID ===== */
-.product-list{display:flex;flex-wrap:wrap;gap:16px;padding:16px;max-width:1100px;margin:0 auto}
-.product-card{
-  background:#fff;border-radius:14px;overflow:hidden;
-  box-shadow:0 2px 12px rgba(0,0,0,0.08);transition:all 0.3s ease;
-  flex:1;min-width:240px;max-width:280px;position:relative
+/* ===== CTA BUTTONS ===== */
+.cta-group{display:flex;flex-direction:column;gap:12px;position:relative}
+.btn-primary{
+  display:block;width:100%;padding:16px 32px;border:none;border-radius:30px;
+  font-size:17px;font-weight:800;cursor:pointer;transition:all 0.3s;
+  font-family:inherit;text-align:center;text-decoration:none
 }
-.product-card:hover{transform:translateY(-4px);box-shadow:0 8px 28px rgba(230,74,25,0.18)}
-.product-img{width:100%;height:180px;object-fit:cover;background:linear-gradient(135deg,#ffe0b2,#ffcc80)}
-.product-info{padding:14px}
-.product-name{font-size:15px;font-weight:700;color:#333;margin-bottom:6px;line-height:1.4}
-.product-price{font-size:22px;font-weight:900;color:#e64a19;margin-bottom:10px}
-.product-price .original{font-size:13px;color:#999;text-decoration:line-through;font-weight:400;margin-right:6px}
-.product-spec{margin-bottom:10px}
-.spec-btn{
-  display:inline-block;padding:6px 14px;border:2px solid #ffcc80;border-radius:20px;
-  font-size:13px;font-weight:600;color:#e65100;cursor:pointer;transition:all 0.2s;
-  margin:2px;background:#fff
+.btn-orange{background:linear-gradient(135deg,var(--primary),var(--accent));color:#fff;box-shadow:0 4px 16px rgba(255,112,67,0.35)}
+.btn-orange:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(255,112,67,0.45)}
+.btn-outline{
+  background:transparent;color:var(--primary);border:2.5px solid var(--primary);
+  padding:14px 32px
 }
-.spec-btn.active{background:linear-gradient(135deg,#ff7043,#ffb74d);border-color:#ff7043;color:#fff}
-.spec-btn:hover:not(.active){border-color:#ff7043;background:#fff3e0}
-.btn-add-cart{
-  display:block;width:100%;padding:10px;border:none;border-radius:25px;
-  background:linear-gradient(135deg,#ff7043,#ffb74d);color:#fff;
-  font-size:14px;font-weight:700;cursor:pointer;transition:all 0.3s
-}
-.btn-add-cart:hover{background:linear-gradient(135deg,#ff5722,#ffa726);box-shadow:0 4px 12px rgba(255,112,67,0.4)}
+.btn-outline:hover{background:var(--primary);color:#fff}
 
-/* ===== LOGIN AREA ===== */
-.login-area{text-align:center;padding:40px 20px;background:#fff;margin:16px;border-radius:12px;max-width:600px;margin-left:auto;margin-right:auto}
-.login-area h2{font-size:18px;color:#333;margin-bottom:16px}
-.login-btn{
-  display:inline-block;padding:12px 32px;border-radius:30px;
-  font-size:15px;font-weight:700;cursor:pointer;transition:all 0.3s;
-  margin:6px;border:none
+/* ===== STEPS ===== */
+.steps{max-width:700px;margin:0 auto;padding:0 20px 48px}
+.steps h2{font-size:22px;font-weight:800;text-align:center;color:var(--text);margin-bottom:24px}
+.step-list{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.step-item{
+  flex:1;min-width:160px;max-width:200px;background:var(--card);
+  border-radius:var(--radius);padding:24px 16px;text-align:center;
+  box-shadow:var(--shadow);transition:transform 0.3s
 }
-.login-btn-line{background:linear-gradient(135deg,#06c755,#00b900);color:#fff}
-.login-btn-line:hover{box-shadow:0 4px 16px rgba(6,199,85,0.4);transform:scale(1.03)}
-.login-btn-fb{background:linear-gradient(135deg,#1877f2,#42a5f5);color:#fff}
-.login-btn-fb:hover{box-shadow:0 4px 16px rgba(24,119,242,0.4);transform:scale(1.03)}
+.step-item:hover{transform:translateY(-4px)}
+.step-num{
+  width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--primary),var(--accent));
+  color:#fff;font-size:20px;font-weight:900;display:flex;align-items:center;
+  justify-content:center;margin:0 auto 12px
+}
+.step-title{font-size:15px;font-weight:700;color:var(--text);margin-bottom:6px}
+.step-desc{font-size:13px;color:var(--text-muted);line-height:1.5}
+
+/* ===== TRUST BADGES ===== */
+.trust{max-width:600px;margin:0 auto;padding:0 20px 48px;text-align:center}
+.trust h3{font-size:16px;font-weight:700;color:var(--text-muted);margin-bottom:16px}
+.badges{display:flex;gap:20px;justify-content:center;flex-wrap:wrap}
+.badge{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--text-light)}
+.badge-icon{font-size:24px}
 
 /* ===== FOOTER ===== */
-.footer-area{background:#fff;margin-top:24px;padding:24px 16px;text-align:center;border-top:1px solid #eee;color:#888;font-size:13px}
+.footer{text-align:center;padding:24px;color:var(--text-muted);font-size:13px;border-top:1px solid #eee;background:#fff}
 
-/* ===== MODAL OVERRIDE ===== */
-.modal{display:none!important}.ajs-modal{display:none!important}.ajs-overlay{display:none!important}
-.ajs-dialog{display:none!important}
-
-/* ===== UTILITY ===== */
-.text-center{text-align:center}.text-danger{color:#e53935}.text-muted{color:#999}
-.hidden{display:none!important}.clearfix::after{content:"";display:table;clear:both}
+/* ===== IFRAME HIDDEN ===== */
+#iframe-container{display:none}
 
 /* ===== RESPONSIVE ===== */
 @media(max-width:600px){
-  body{font-size:14px;padding-top:52px!important}
-  #sbf-banner{font-size:13px!important;padding:10px 16px!important;min-height:46px!important}
-  .product-card{min-width:160px;max-width:100%}
-  .product-list{gap:10px;padding:10px}
+  .hero h1{font-size:24px}.prod-price{font-size:34px}
+  .step-list{flex-direction:column;align-items:center}
+  .step-item{max-width:280px}.top-banner{font-size:13px;padding:14px 16px}
+  .top-banner .emoji{font-size:20px}
 }
-</style>`;
-
-function getErrorPage(message) {
-  return `<!DOCTYPE html>
-<html lang="zh-TW">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>\u8ce3\u8ca8\u4fbf\u9023\u7dda</title>${BEAUTIFY_CSS}</head>
+</style>
+</head>
 <body>
-<div class="container"><div class="shop-header"><h1>\u26a0\ufe0f \u9023\u7dda\u554f\u984c</h1>
-<p>${message}</p><p style="margin-top:16px">
-<a href="https://myship.7-11.com.tw/general/detail?id=GM2605018541234" target="_blank" class="login-btn login-btn-line" style="color:#fff">\u76f4\u63a5\u524d\u5f80\u8ce3\u8ca8\u4fbf</a></p></div></div></body></html>`;
+
+<!-- Top Banner -->
+<div class="top-banner" id="topBanner">
+  <span class="emoji">${pe}</span>
+  <span>\ud83d\uded2 \u5df2\u9078\u64c7\u300c${pn}\u300d</span>
+  <span style="opacity:0.85;font-weight:400">| NT$${pp}</span>
+  <button class="close-btn" onclick="document.getElementById('topBanner').style.display='none'">\u2715</button>
+</div>
+
+<!-- Hero -->
+<div class="hero">
+  <div class="hero-icon">${pe}</div>
+  <h1>\u7206\u751c\u6c34\u679c\u92ea <span>| 7-11 \u8ce3\u8ca8\u4fbf</span></h1>
+  <p>\u53f0\u7063\u65b0\u9bae\u6c34\u679c\uff0c5\u5206\u9418\u5b8c\u6210\u4e0b\u55ae<br>\u5168\u53f0 7-11 \u8d85\u5546\u53d6\u8ca8\u4ed8\u6b3e</p>
+</div>
+
+<!-- Product Card -->
+<div class="product-section">
+  <div class="prod-card">
+    <div class="prod-badge">\u71b1\u92b7\u4e2d</div>
+    <div class="prod-emoji">${pe}</div>
+    <div class="prod-name">${pn}</div>
+    <div class="prod-price-wrap">
+      <div class="prod-price"><small>NT$</small>${pp}</div>
+      ${po > pp ? `<div class="prod-original">NT$${po}</div><div class="prod-savings">\u7701 NT$${po - pp} (${Math.round((1-pp/po)*100)}%OFF)</div>` : ''}
+    </div>
+    <div class="cta-group">
+      <a href="${iframeSrc}" target="_blank" class="btn-primary btn-orange"
+         onclick="this.innerHTML='\u26a1 \u6b63\u5728\u958b\u555f\u8ce3\u8ca8\u4fbf...'">
+        \ud83d\uded2 \u524d\u5f80\u8ce3\u8ca8\u4fbf\u4e0b\u55ae &rarr;
+      </a>
+      <a href="https://line.me/ti/p/@sweetburst" target="_blank" class="btn-primary btn-outline">
+        \ud83d\udc47 LINE \u79c1\u8a0a\u8a62\u554f
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- Steps -->
+<div class="steps">
+  <h2>\ud83d\ude80 \u4e09\u6b65\u5b8c\u6210\u4e0b\u55ae</h2>
+  <div class="step-list">
+    <div class="step-item">
+      <div class="step-num">1</div>
+      <div class="step-title">\u9078\u64c7\u5546\u54c1</div>
+      <div class="step-desc">\u5728\u672c\u9ef4\u9ede\u64ca\u4e0b\u55ae\u6309\u9215</div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">2</div>
+      <div class="step-title">LINE/FB \u767b\u5165</div>
+      <div class="step-desc">\u8df3\u8f49\u81f3\u8ce3\u8ca8\u4fbf\u5feb\u901f\u767b\u5165</div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">3</div>
+      <div class="step-title">7-11 \u53d6\u8ca8</div>
+      <div class="step-desc">\u9078\u64c7\u9644\u8fd1\u8d85\u5546\u53d6\u8ca8\u4ed8\u6b3e</div>
+    </div>
+  </div>
+</div>
+
+<!-- Trust -->
+<div class="trust">
+  <h3>\u70ba\u4ec0\u9ebc\u9078\u64c7\u7206\u751c\u6c34\u679c\u92ea</h3>
+  <div class="badges">
+    <div class="badge"><span class="badge-icon">\ud83c\udf51</span> \u53f0\u7063\u7522\u5730\u76f4\u9001</div>
+    <div class="badge"><span class="badge-icon">\u2705</span> \u65b0\u9bae\u4fdd\u8b49</div>
+    <div class="badge"><span class="badge-icon">\ud83d\ude9b</span> \u5168\u53f0 7-11 \u53d6\u8ca8</div>
+    <div class="badge"><span class="badge-icon">\ud83d\udcb8</span> \u8ca8\u5230\u518d\u4ed8\u6b3e</div>
+  </div>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+  <p>\u7206\u751c\u6c34\u679c\u92ea Sweet Burst Fruits &copy; 2026</p>
+  <p style="margin-top:4px;font-size:12px">\u672c\u9ef4\u975e 7-11 \u5b98\u65b9\u7db2\u7ad9\uff0c\u63d0\u4f9b\u8ce3\u8ca8\u4fbf\u5feb\u901f\u4e0b\u55ae\u5165\u53e3</p>
+</div>
+
+<!-- Hidden data -->
+<div id="sbf-data" data-checkout="${cp}" style="display:none"></div>
+
+</body>
+</html>`;
 }
 
 function getProxyBase(host) { return `https://${host}/api/ms`; }
 function rewriteUrl(url, host) { return url ? url.replace(MYSHIP_ORIGIN, getProxyBase(host)) : url; }
 function rewriteSetCookie(s) { return s.replace(/;\s*Domain=[^;]+/gi, ''); }
 
-function injectBanner(html, productName) {
-  const bs = html.indexOf('<body');
-  if (bs === -1) return html;
-  const be = html.indexOf('>', bs);
-  if (be === -1) return html;
-  const name = (productName || '\u5546\u54c1').replace(/</g,'&lt;').replace(/>/g,'&gt;');
-  const banner = '<div id="sbf-banner" onclick="this.style.display=\'none\'">'
-    + '<span style="font-size:18px;margin-right:6px">\ud83c\udf4f</span>'
-    + '\ud83d\uded2 \u5df2\u9078\u597d\u300c' + name + '\u300d\uff01'
-    + '\u8acb\u767b\u5165\u5f8c\u6309\u300c\u76f4\u63a5\u7d50\u5e33\u300d'
-    + ' \u2014 <strong style="text-decoration:underline">\u9ede\u64ca\u95dc\u9589</strong>'
-    + '</div>';
-  return html.slice(0, be+1) + banner + html.slice(be+1);
-}
-
-function rewriteHtml(html, host, checkoutParams) {
-  const proxyBase = getProxyBase(host);
-  let result = html.replace(/https?:\/\/myship\.7-11\.com\.tw/g, proxyBase);
-
-  // Inject beautify CSS after <head>
-  const hi = result.indexOf('<head>');
-  if (hi !== -1) {
-    const pos = hi + '<head>'.length;
-    result = result.slice(0, pos) + BEAUTIFY_CSS + '<base href="' + proxyBase + '/">' + result.slice(pos);
-  }
-
-  if (!checkoutParams) return result;
-
-  const productName = PRODUCT_MAP[checkoutParams.carProduct]?.name || '';
-
-  // 1. Static banner
-  result = injectBanner(result, productName);
-
-  // 2. Nuclear override CSS for banner visibility
-  const nCSS = '<style id="sbf-nuclear">#sbf-banner{display:block!important;visibility:visible!important;opacity:1!important;position:fixed!important;top:0!important;left:0!important;z-index:2147483647!important;transform:none!important;clip:auto!important;clip-path:none!important;-webkit-clip-path:none!important}html,body{padding-top:60px!important}</style>';
-  const hc = result.indexOf('</head>');
-  if (hc !== -1) result = result.slice(0, hc) + nCSS + result.slice(hc);
-
-  // 3. Alertify override
-  const ao = '<script data-proxy="ao">(function(){var a=null;Object.defineProperty(window,"alertify",{configurable:true,get:function(){return a},set:function(v){a=v;if(v&&typeof v.alert==="function"){v.alert=function(m,fn){if(typeof fn==="function")fn();};}}});})();<\/script>';
-  const hpos = result.indexOf('<head>');
-  if (hpos !== -1) {
-    const p2 = hpos + '<head>'.length;
-    result = result.slice(0, p2) + ao + result.slice(p2);
-  }
-
-  // 4. Auto-fill JS
-  const afJS = '<script data-proxy="af">(function(){'
-    + 'var P=' + JSON.stringify(checkoutParams) + ';var d=false;'
-    + 'function go(){if(d)return;d=true;'
-    + 'var cp=document.querySelector("input[name=CarProduct]");'
-    + 'var ci=document.querySelector("input[name=CarItem]");'
-    + 'var cq=document.querySelector("input[name=CarQty]");'
-    + 'var cm=document.querySelector("input[name=CarMinQty]");'
-    + 'if(cp)cp.value=P.carProduct;if(ci)ci.value=P.carItem;'
-    + 'if(cq)cq.value=P.carQty||"1";if(cm)cm.value=P.carMinQty||"1";'
-    + 'document.querySelectorAll(".product_size_switch span").forEach(function(s){'
-    + 'if(s.dataset.productId===P.carProduct&&s.dataset.specId===P.carItem&&!s.classList.contains("active"))s.click();'
-    + '});'
-    + 'try{localStorage.setItem("_sbf",JSON.stringify(P));}catch(e){}'
-    + '}'
-    + 'if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",go);else go();setTimeout(go,3000);'
-    + '})();<\/script>';
-  const bc = result.lastIndexOf('</body>');
-  if (bc !== -1) result = result.slice(0, bc) + afJS + result.slice(bc);
-  else result += afJS;
-
-  return result;
-}
-
 export default async function handler(req, res) {
   const host = req.headers.host || req.headers['x-forwarded-host'] || 'localhost:3000';
   const urlObj = new URL(req.url, `https://${host}`);
-  let pp = urlObj.pathname.replace(/^\/api\/ms\/?/, '');
-  if (!pp) pp = '';
-  const mu = MYSHIP_ORIGIN + (pp ? '/' + pp : '') + urlObj.search;
+  let pathPart = urlObj.pathname.replace(/^\/api\/ms\/?/, '') || '';
 
-  const fh = {};
+  // If this is the main shop detail page with _checkout param → show landing page
+  if ((pathPart === '' || pathPart === 'general/detail') && urlObj.searchParams.get('_checkout')) {
+    let cp = null;
+    try { cp = JSON.parse(decodeURIComponent(urlObj.searchParams.get('_checkout'))); } catch(e) {}
+    res.writeHead(200, {'Content-Type':'text/html;charset=utf-8'});
+    res.end(getLandingPage(host, cp));
+    return;
+  }
+
+  // Also show landing for bare shop detail visits
+  if (pathPart === '' || pathPart === 'general/detail') {
+    res.writeHead(200, {'Content-Type':'text/html;charset=utf-8'});
+    res.end(getLandingPage(host, null));
+    return;
+  }
+
+  // All other requests: proxy to myship
+  const targetUrl = MYSHIP_ORIGIN + (pathPart ? '/' + pathPart : '') + urlObj.search;
+
+  const fwdHeaders = {};
   const skip = ['host','connection','content-length','transfer-encoding','x-forwarded-for','x-forwarded-host','x-forwarded-proto'];
   for (const [k,v] of Object.entries(req.headers)) {
-    if (!skip.includes(k.toLowerCase())) fh[k] = v;
+    if (!skip.includes(k.toLowerCase())) fwdHeaders[k] = v;
   }
-  fh['host'] = 'myship.7-11.com.tw';
-  fh['origin'] = MYSHIP_ORIGIN;
-  fh['referer'] = MYSHIP_ORIGIN + '/general/detail?id=GM2605018541234';
-  fh['user-agent'] = fh['user-agent'] || 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36';
-  fh['accept'] = fh['accept'] || 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8';
-  fh['accept-language'] = fh['accept-language'] || 'zh-TW,zh;q=0.9,en;q=0.8';
+  fwdHeaders['host'] = 'myship.7-11.com.tw';
+  fwdHeaders['origin'] = MYSHIP_ORIGIN;
+  fwdHeaders['referer'] = MYSHIP_ORIGIN + '/general/detail?id=GM2605018541234';
+  fwdHeaders['user-agent'] = fwdHeaders['user-agent'] || 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36';
+  fwdHeaders['accept'] = fwdHeaders['accept'] || '*/*';
+  fwdHeaders['accept-language'] = fwdHeaders['accept-language'] || 'zh-TW,zh;q=0.9,en;q=0.8';
 
   try {
-    const fo = { method: req.method, headers: fh, redirect: 'manual' };
+    const fetchOpts = { method: req.method, headers: fwdHeaders, redirect: 'manual' };
     if (req.method !== 'GET' && req.method !== 'HEAD') {
       const chunks = [];
       for await (const chunk of req) chunks.push(chunk);
-      if (chunks.length > 0) fo.body = Buffer.concat(chunks);
+      if (chunks.length > 0) fetchOpts.body = Buffer.concat(chunks);
     }
 
-    const mr = await fetch(mu, fo);
+    const myshipRes = await fetch(targetUrl, fetchOpts);
 
-    if (mr.status === 403) {
-      res.writeHead(200, {'Content-Type':'text/html;charset=utf-8'});
-      res.end(getErrorPage('\u8ce3\u8ca8\u4fbf\u4f3a\u670d\u5668\u66ab\u6642\u7121\u6cd5\u5b58\u53d6'));
+    // Handle redirects
+    if ([301,302,303,307,308].includes(myshipRes.status)) {
+      const loc = myshipRes.headers.get('location') || '';
+      res.writeHead(myshipRes.status, { 'Location': rewriteUrl(loc, host) });
+      res.end();
       return;
     }
-    if ([301,302,303,307,308].includes(mr.status)) {
-      res.writeHead(mr.status,{'Location':rewriteUrl(mr.headers.get('location')||'',host)});
-      res.end();return;
-    }
 
-    const rh = {};
-    for (const [k,v] of mr.headers.entries()) {
-      const l = k.toLowerCase();
-      if(l==='set-cookie'){rh['set-cookie']=Array.isArray(v)?v:[v].map(c=>rewriteSetCookie(c));}
-      else if(l==='location'){rh['location']=rewriteUrl(v,host);}
-      else if(!['transfer-encoding','content-encoding','content-length'].includes(l)){rh[k]=v;}
-    }
-    const ct = mr.headers.get('content-type')||'';
-
-    if (ct.includes('text/html')) {
-      let h = await mr.text();
-      let cp=null;
-      const cs=urlObj.searchParams.get('_checkout');
-      if(cs){try{cp=JSON.parse(decodeURIComponent(cs));}catch(e){}}
-      h=rewriteHtml(h,host,cp);
-      rh['content-type']='text/html;charset=utf-8';
-      res.writeHead(mr.status,rh);res.end(h);
-    } else {
-      if(mr.status===403||mr.status===404){
-        if(ct.includes('css')){res.writeHead(200,{'Content-Type':'text/css'});res.end('/* */');}
-        else if(ct.includes('javascript')){res.writeHead(200,{'Content-Type':'application/javascript'});res.end('//')}
-        else if(ct.includes('image')){
-          const g=Buffer.from('R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7','base64');
-          res.writeHead(200,{'Content-Type':'image/gif','Content-Length':g.length});res.end(g);
-        } else {res.writeHead(200,{'Content-Type':ct||'application/octet-stream'});res.end('');}
-        return;
+    // Build response headers
+    const respHeaders = {};
+    for (const [k,v] of myshipRes.headers.entries()) {
+      const kl = k.toLowerCase();
+      if (kl === 'set-cookie') {
+        respHeaders['set-cookie'] = Array.isArray(v) ? v : [v].map(c => rewriteSetCookie(c));
+      } else if (kl === 'location') {
+        respHeaders['location'] = rewriteUrl(v, host);
+      } else if (!['transfer-encoding','content-encoding','content-length'].includes(kl)) {
+        respHeaders[k] = v;
       }
-      res.writeHead(mr.status,rh);res.end(Buffer.from(await mr.arrayBuffer()));
     }
+
+    const ct = myshipRes.headers.get('content-type') || '';
+
+    // HTML responses: rewrite URLs
+    if (ct.includes('text/html')) {
+      let html = await myshipRes.text();
+
+      // Parse checkout params for auto-fill injection
+      let checkoutParams = null;
+      const csParam = urlObj.searchParams.get('_checkout');
+      if (csParam) {
+        try { checkoutParams = JSON.parse(decodeURIComponent(csParam)); } catch(e) {}
+      }
+
+      // Rewrite all myship URLs to proxy
+      let result = html.replace(/https?:\/\/myship\.7-11\.com\.tw/g, getProxyBase(host));
+
+      // Inject base tag
+      const headIdx = result.indexOf('<head>');
+      if (headIdx !== -1) {
+        const pos = headIdx + '<head>'.length;
+        result = result.slice(0, pos) +
+          '<base href="' + getProxyBase(host) + '/">' +
+          result.slice(pos);
+      }
+
+      // Auto-fill JS injection for form fields
+      if (checkoutParams) {
+        const afScript = '<script data-proxy="af">(function(){'
+          + 'var P=' + JSON.stringify(checkoutParams) + ';var done=false;'
+          + 'function go(){if(done)return;done=true;'
+          + 'var f=document.querySelector("input[name=CarProduct]");'
+          + 'if(f)f.value=P.carProduct;'
+          + 'f=document.querySelector("input[name=CarItem]");if(f)f.value=P.carItem;'
+          + 'f=document.querySelector("input[name=CarQty]");if(f)f.value=(P.carQty||"1");'
+          + 'f=document.querySelector("input[name=CarMinQty]");if(f)f.value=(P.carMinQty||"1");'
+          + '}'
+          + 'if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",go);else go();setTimeout(go,3000);'
+          + '})()<\/script>';
+        const bodyClose = result.lastIndexOf('</body>');
+        if (bodyClose !== -1) {
+          result = result.slice(0, bodyClose) + afScript + result.slice(bodyClose);
+        } else {
+          result += afScript;
+        }
+      }
+
+      respHeaders['content-type'] = 'text/html;charset=utf-8';
+      res.writeHead(myshipRes.status, respHeaders);
+      res.end(result);
+      return;
+    }
+
+    // Non-HTML resources: handle 403 gracefully
+    if (myshipRes.status === 403 || myshipRes.status === 404) {
+      if (ct.includes('css')) {
+        res.writeHead(200, { 'Content-Type': 'text/css' });
+        res.end('/* */');
+      } else if (ct.includes('javascript')) {
+        res.writeHead(200, { 'Content-Type': 'application/javascript' });
+        res.end('//');
+      } else if (ct.includes('image')) {
+        const px = Buffer.from('R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7', 'base64');
+        res.writeHead(200, { 'Content-Type': 'image/gif', 'Content-Length': px.length });
+        res.end(px);
+      } else {
+        res.writeHead(200, { 'Content-Type': ct || 'application/octet-stream' });
+        res.end('');
+      }
+      return;
+    }
+
+    // Pass through other responses
+    res.writeHead(myshipRes.status, respHeaders);
+    res.end(Buffer.from(await myshipRes.arrayBuffer()));
+
   } catch(err) {
-    console.error('Proxy error:',err);
-    res.writeHead(502,{'Content-Type':'text/html;charset=utf-8'});
-    res.end(getErrorPage('\u9023\u7dda\u5931\u6557:'+err.message));
+    console.error('Proxy error:', err);
+    res.writeHead(502, { 'Content-Type': 'text/html;charset=utf-8' });
+    res.end(getLandingPage(host, null).replace(
+      '\u7206\u751c\u6c34\u679c\u92ea',
+      '\u26a0\ufe0f \u9023\u7dda\u6642\u9593: ' + err.message
+    ));
   }
 }
