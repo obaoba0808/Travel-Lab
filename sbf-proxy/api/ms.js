@@ -29,9 +29,9 @@ function getLandingPage(host, checkoutParams) {
   const pp = p ? p.price : 0;
   const po = p ? p.origPrice : 0;
   const cp = checkoutParams ? JSON.stringify(checkoutParams).replace(/"/g,'&quot;') : '';
-  // Direct link to myship cart confirm page with product pre-filled
+  // Direct link to myship cart confirm page with product pre-filled (use carItem/specId, not carProduct)
   const myshipDirectUrl = 'https://myship.7-11.com.tw/cart/confirm/GM2605018541234?carmId=' + 
-    (checkoutParams && checkoutParams.carProduct ? checkoutParams.carProduct : '2605021152278900');
+    (checkoutParams && checkoutParams.carItem ? checkoutParams.carItem : '2605021152278901');
   const iframeSrc = myshipDirectUrl;
 
   return `<!DOCTYPE html>
