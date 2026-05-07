@@ -12,12 +12,12 @@ export const config = {
 };
 
 const PRODUCT_MAP = {
-  '2605021152246963': { specId: '2605021152246964', name: '\u611b\u6587\u8292\u679c\u6c34\u679c\u7980\u76d2', price: 1380, origPrice: 1680, emoji: '\ud83c\udf51' },
-  '2605011150175300': { specId: '2605011150175301', name: '\u91d1\u9e3d\u9cf3\u68a8\u7980\u76d2', price: 799, origPrice: 999, emoji: '\ud83e\uded5' },
-  '2605021152260362': { specId: '2605021152260363', name: '\u5de8\u5cf0\u8461\u8404\u6c34\u679c\u7980\u76d2', price: 1280, origPrice: 1580, emoji: '\ud83c\udf47' },
-  '2605021152270007': { specId: '2605021152270008', name: '\u6afb\u6843\u6c34\u679c\u7980\u76d2', price: 1280, origPrice: 1580, emoji: '\ud83e\udd52' },
-  '2605021152272368': { specId: '2605021152272369', name: '\u6c34\u871c\u6843\u6c34\u679c\u7980\u76d2', price: 1280, origPrice: 1580, emoji: '\ud83e\udd51' },
-  '2605021152278900': { specId: '2605021152278901', name: '\u69b4\u69e3\u6c34\u679c\u7980\u76d2', price: 1980, origPrice: 2380, emoji: '\ud83e\uded6' },
+  '2605021152246963': { specId: '2605021152246964', name: '\u611b\u6587\u8292\u679c\u6c34\u679c\u79ae\u76d2', price: 1380, origPrice: 1680, emoji: '\ud83c\udf51' },
+  '2605011150175300': { specId: '2605011150175301', name: '\u91d1\u9e3d\u9cf3\u68a8\u79ae\u76d2', price: 799, origPrice: 999, emoji: '\ud83e\uded5' },
+  '2605021152260362': { specId: '2605021152260363', name: '\u5de8\u5cf0\u8461\u8404\u6c34\u679c\u79ae\u76d2', price: 1280, origPrice: 1580, emoji: '\ud83c\udf47' },
+  '2605021152270007': { specId: '2605021152270008', name: '\u6afb\u6843\u6c34\u679c\u79ae\u76d2', price: 1280, origPrice: 1580, emoji: '\ud83e\udd52' },
+  '2605021152272368': { specId: '2605021152272369', name: '\u6c34\u871c\u6843\u6c34\u679c\u79ae\u76d2', price: 1280, origPrice: 1580, emoji: '\ud83e\udd51' },
+  '2605021152278900': { specId: '2605021152278901', name: '\u69b4\u69e3\u6c34\u679c\u79ae\u76d2', price: 1980, origPrice: 2380, emoji: '\ud83e\uded6' },
   '2605021152287723': { specId: '2605021152287724', name: '\u6a19\u6e96\u6c34\u679c\u7b31', price: 999, origPrice: 1280, emoji: '\ud83c\udf4e' },
   '2605021152293023': { specId: '2605021152293024', name: '\u8c6a\u83ef\u7b31', price: 1680, origPrice: 1980, emoji: '\ud83c\udf4e' },
 };
