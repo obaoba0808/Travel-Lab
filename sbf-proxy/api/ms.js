@@ -1,4 +1,4 @@
-// Reverse proxy for myship.7-11.com.tw
+﻿// Reverse proxy for myship.7-11.com.tw
 // All requests to /api/ms/* are forwarded to myship with cookies
 // HTML responses are rewritten to replace URLs and inject auto-fill JS
 
@@ -14,7 +14,7 @@ export const config = {
 // Product ID mapping for auto-fill
 const PRODUCT_MAP = {
   '2605021152246963': { specId: '2605021152246964', name: '\u611b\u6587\u8292\u679c\u6c34\u679c\u7980\u76d2' },
-  '2605011150175300': { specId: '2605011150175301', name: '\u91d1\u9e3d\u9鳳\u68a8\u7980\u76d2' },
+  '2605011150175300': { specId: '2605011150175301', name: '\u91d1\u9e3d\u9cf3\u68a8\u7980\u76d2' },
   '2605021152260362': { specId: '2605021152260363', name: '\u5de8\u5cf0\u8461\u8404\u6c34\u679c\u7980\u76d2' },
   '2605021152270007': { specId: '2605021152270008', name: '\u6afb\u6843\u6c34\u679c\u7980\u76d2' },
   '2605021152272368': { specId: '2605021152272369', name: '\u6c34\u871c\u6843\u6c34\u679c\u7980\u76d2' },
