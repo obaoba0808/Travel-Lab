@@ -19,7 +19,7 @@ const PRODUCT_MAP = {
   '2605021152272368': { specId: '2605021152272369', name: '\u6c34\u871c\u6843\u6c34\u679c\u79ae\u76d2', price: 1280, origPrice: 1580, emoji: '\ud83e\udd51' },
   '2605021152278900': { specId: '2605021152278901', name: '\u69b4\u69e3\u6c34\u679c\u79ae\u76d2', price: 1980, origPrice: 2380, emoji: '\ud83e\uded6' },
   '2605021152287723': { specId: '2605021152287724', name: '\u6a19\u6e96\u6c34\u679c\u7b31', price: 999, origPrice: 1280, emoji: '\ud83c\udf4e' },
-  '2605021152293023': { specId: '2605021152293024', name: '\u8c6a\u83ef\u7b31', price: 1680, origPrice: 1980, emoji: '\ud83c\udf4e' },
+  '2605021152293023': { specId: '2605021152293024', name: '\u8c6a\u83ef\u6c34\u679c\u7b31', price: 1680, origPrice: 1980, emoji: '\ud83c\udf4e' },
 };
 
 function getLandingPage(host, checkoutParams) {
