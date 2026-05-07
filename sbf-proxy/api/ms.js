@@ -29,8 +29,8 @@ function getLandingPage(host, checkoutParams) {
   const pp = p ? p.price : 0;
   const po = p ? p.origPrice : 0;
   const cp = checkoutParams ? JSON.stringify(checkoutParams).replace(/"/g,'&quot;') : '';
-  // Direct link to myship (not proxy) to avoid popup blocker issues
-  const myshipDirectUrl = 'https://myship.7-11.com.tw/general/detail?id=GM2605018541234';
+  const myshipDirectUrl = 'https://myship.7-11.com.tw/general/detail?id=GM2605018541234' +
+    (checkoutParams ? '&_checkout=' + encodeURIComponent(JSON.stringify(checkoutParams)) : '');
   const iframeSrc = myshipDirectUrl;
 
   return `<!DOCTYPE html>
