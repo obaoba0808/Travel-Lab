@@ -29,9 +29,12 @@ function getLandingPage(host, checkoutParams) {
   const pp = p ? p.price : 0;
   const po = p ? p.origPrice : 0;
   const cp = checkoutParams ? JSON.stringify(checkoutParams).replace(/"/g,'&quot;') : '';
-  // Direct link to myship store page (carmId is a cart record ID, not product ID - can't use /cart/confirm/)
-  const myshipDirectUrl = 'https://myship.7-11.com.tw/general/detail?id=GM2605018541234';
-  const iframeSrc = myshipDirectUrl;
+  // Direct link to myship product detail page with product pre-selected
+  const myShipBaseUrl = 'https://myship.7-11.com.tw/general/detail?id=GM2605018541234';
+  // If we have product in URL params, include it so product is pre-highlighted
+  const iframeSrc = checkoutParams && checkoutParams.carProduct 
+    ? myShipBaseUrl + '&productId=' + checkoutParams.carProduct
+    : myShipBaseUrl;
 
   return `<!DOCTYPE html>
 <html lang="zh-TW">
@@ -180,7 +183,7 @@ body{font-family:'Noto Sans TC',-apple-system,sans-serif;background:var(--bg);co
     </div>
     <div class="cta-group">
       <a href="${iframeSrc}" target="_self" class="btn-primary btn-orange">
-        \ud83d\uded2 \u524d\u5f80\u8ce3\u8ca8\u4fbf\u9078\u8cfc\u5546\u54c1 &rarr;
+        \ud83d\uded2 \u76f4\u63a5\u52a0\u5165\u8cfc\u7269\u8f09 &rarr;
       </a>
       <a href="https://line.me/ti/p/@sweetburst" target="_blank" class="btn-primary btn-outline">
         \ud83d\udc47 LINE \u79c1\u8a0a\u8a62\u554f
