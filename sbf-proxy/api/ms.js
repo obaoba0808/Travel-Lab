@@ -97,96 +97,153 @@ function rewriteHtml(html, host, checkoutParams) {
   // Inject auto-fill JavaScript if checkout params present
   if (checkoutParams) {
     const productName = PRODUCT_MAP[checkoutParams.carProduct]?.name || '';
-    const inject = `
+    
+    // Head injection: override alertify BEFORE page scripts run
+    const headInject = `
+<script data-proxy="override">
+(function(){
+  // Suppress alertify login prompt - intercept before it fires
+  var _origAlert = null;
+  Object.defineProperty(window, 'alertify', {
+    configurable: true,
+    get: function() { return _origAlert; },
+    set: function(val) {
+      _origAlert = val;
+      if (val && typeof val.alert === 'function') {
+        val.alert = function(msg, fn) {
+          // Silently dismiss login-related alerts
+          if (fn && typeof fn === 'function') { fn(); return; }
+          if (_origAlert && _origAlert !== val && _origAlert.alert) {
+            return _origAlert.alert.call(_origAlert, msg, fn);
+          }
+        };
+      }
+    }
+  });
+})();
+</script>`;
+    
+    // Body injection: auto-fill logic with robust timing
+    const bodyInject = `
 <script data-proxy="true">
 (function(){
   var params = ${JSON.stringify(checkoutParams)};
   var productName = ${JSON.stringify(productName)};
-
-  function onReady(fn) {
-    if (document.readyState !== 'loading') fn();
-    else document.addEventListener('DOMContentLoaded', fn);
-  }
+  var _done = false;
 
   function showBanner(msg, bgColor) {
-    document.body.insertAdjacentHTML('afterbegin',
-      '<div style="position:fixed;top:0;left:0;right:0;background:' + (bgColor||'linear-gradient(90deg,#ff7a00,#ffb703)') + ';color:#fff;text-align:center;padding:14px 16px;font-size:16px;font-weight:900;z-index:999999;font-family:sans-serif;box-shadow:0 2px 8px rgba(0,0,0,0.2)">' + msg + '</div>'
-    );
+    if (!document.body) return;
+    var el = document.createElement('div');
+    el.style.cssText = 'position:fixed;top:0;left:0;right:0;background:' + (bgColor||'linear-gradient(90deg,#ff7a00,#ffb703)') + ';color:#fff;text-align:center;padding:14px 16px;font-size:16px;font-weight:900;z-index:999999;font-family:sans-serif,-apple-system,BlinkMacSystemFont;box-shadow:0 2px 8px rgba(0,0,0,0.2);pointer-events:auto';
+    el.textContent = msg;
+    document.body.insertBefore(el, document.body.firstChild);
   }
 
-  onReady(function() {
-    // 1. Fill hidden form fields
+  function doAutoFill() {
+    if (_done) return;
+    _done = true;
+
+    // Fill hidden form fields
     var cp = document.querySelector('input[name=CarProduct]');
     var ci = document.querySelector('input[name=CarItem]');
     var cq = document.querySelector('input[name=CarQty]');
     var cm = document.querySelector('input[name=CarMinQty]');
-
     if (cp) cp.value = params.carProduct;
     if (ci) ci.value = params.carItem;
     if (cq) cq.value = params.carQty || '1';
     if (cm) cm.value = params.carMinQty || '1';
 
-    // 2. Auto-select the right product spec
+    // Auto-select product spec
     document.querySelectorAll('.product_size_switch span').forEach(function(s) {
       if (s.dataset.productId === params.carProduct && s.dataset.specId === params.carItem) {
         if (!s.classList.contains('active')) s.click();
       }
     });
 
-    // 3. Fix ReturnUrl in social login forms to include _checkout
-    var checkoutStr = new URLSearchParams(window.location.search).get('_checkout');
-    if (checkoutStr) {
+    // Fix ReturnUrl in social login forms
+    var cs = new URLSearchParams(location.search).get('_checkout');
+    if (cs) {
       document.querySelectorAll('form[action*="ExternalLogin"]').forEach(function(form) {
-        var action = form.getAttribute('action') || '';
-        var m = action.match(/ReturnUrl=([^&]+)/);
+        var act = form.getAttribute('action') || '';
+        var m = act.match(/ReturnUrl=([^&]+)/);
         if (m) {
-          var returnUrl = decodeURIComponent(m[1]);
-          if (!returnUrl.includes('_checkout')) {
-            returnUrl += '&_checkout=' + encodeURIComponent(checkoutStr);
-            form.setAttribute('action', action.replace(/ReturnUrl=[^&]+/, 'ReturnUrl=' + encodeURIComponent(returnUrl)));
+          var ru = decodeURIComponent(m[1]);
+          if (!ru.includes('_checkout')) {
+            ru += '&_checkout=' + encodeURIComponent(cs);
+            form.setAttribute('action', act.replace(/ReturnUrl=[^&]+/, 'ReturnUrl=' + encodeURIComponent(ru)));
           }
         }
       });
-      // Also fix the uniopen login redirect
-      document.querySelectorAll('.btnOPLogin').forEach(function(btn) {
-        var handler = btn.onclick;
-        // The original handler uses window.location.href with a fixed url
-        // We override it to include _checkout
-      });
     }
 
-    // 4. Store in localStorage for persistence
+    // Store in localStorage
     try { localStorage.setItem('_sbf_checkout', JSON.stringify(params)); } catch(e) {}
 
-    // 5. Check login status
-    var isLoggedIn = !document.querySelector('a[data-target="#loginModal"]');
+    // Check login status
+    var loggedIn = !document.querySelector('a[data-target="#loginModal"]');
 
-    // 6. Auto-dismiss alertify login alert after a short delay
+    // Dismiss any existing alertify dialog
     setTimeout(function() {
       var okBtn = document.querySelector('.ajs-ok');
       if (okBtn) okBtn.click();
-    }, 500);
+      // Also try clicking overlay to close modal
+      var overlay = document.querySelector('.ajs-overlay');
+      if (overlay) overlay.click();
+    }, 600);
 
-    // 7. Act based on login status
-    if (isLoggedIn) {
-      // Already logged in -> auto-submit
+    if (loggedIn) {
       showBanner('\u26A1 \u81EA\u52D5\u7D50\u5E33\u4E2D... \u8ACB\u7A0D\u5019');
       var form = document.querySelector('#formBuyProducts');
-      if (form) setTimeout(function() { form.submit(); }, 800);
+      if (form) setTimeout(function() { form.submit(); }, 1000);
     } else {
-      // Not logged in -> show guide, don't submit
       showBanner(
         '\uD83D\uDED2 \u5DF2\u9078\u597D\u300C' + (productName || '\u5546\u54C1') + '\u300D\uFF01\u8ACB\u767B\u5165\u5F8C\u6309\u300C\u76F4\u63A5\u7D50\u5E33\u300D',
         'linear-gradient(90deg,#4CAF50,#66BB6A)'
       );
     }
+  }
+
+  // Triple fallback strategy:
+  // 1. DOMContentLoaded (normal case)
+  // 2. MutationObserver (if DOM is still building)
+  // 3. setTimeout 3s (ultimate fallback)
+  
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', doAutoFill);
+  } else {
+    doAutoFill();
+  }
+
+  // Fallback: observe body for form elements
+  var observer = new MutationObserver(function(mutations) {
+    if (document.querySelector('input[name=CarProduct]') || document.querySelector('#loginModal')) {
+      setTimeout(doAutoFill, 200);
+    }
   });
+  if (document.body) {
+    observer.observe(document.body, { childList: true, subtree: true });
+  } else {
+    document.addEventListener('DOMContentLoaded', function() {
+      observer.observe(document.body, { childList: true, subtree: true });
+    });
+  }
+
+  // Ultimate timeout fallback
+  setTimeout(doAutoFill, 3000);
 })();
 </script>`;
+    // Inject head override (suppress alertify) after <head> or critical CSS
+    if (result.includes('<head>')) {
+      result = result.replace('<head>', '<head>' + headInject);
+    } else if (result.includes(CRITICAL_CSS)) {
+      result = result.replace(CRITICAL_CSS, CRITICAL_CSS + headInject);
+    }
+    
+    // Inject body script before </body>
     if (result.includes('</body>')) {
-      result = result.replace('</body>', inject + '\n</body>');
+      result = result.replace('</body>', bodyInject + '\n</body>');
     } else {
-      result += inject;
+      result += bodyInject;
     }
   }
   
