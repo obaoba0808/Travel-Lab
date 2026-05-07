@@ -29,8 +29,9 @@ function getLandingPage(host, checkoutParams) {
   const pp = p ? p.price : 0;
   const po = p ? p.origPrice : 0;
   const cp = checkoutParams ? JSON.stringify(checkoutParams).replace(/"/g,'&quot;') : '';
-  const iframeSrc = `https://${host}/api/ms/general/detail?id=GM2605018541234` +
-    (checkoutParams ? '&_checkout=' + encodeURIComponent(JSON.stringify(checkoutParams)) : '');
+  // Direct link to myship (not proxy) to avoid popup blocker issues
+  const myshipDirectUrl = 'https://myship.7-11.com.tw/general/detail?id=GM2605018541234';
+  const iframeSrc = myshipDirectUrl;
 
   return `<!DOCTYPE html>
 <html lang="zh-TW">
@@ -178,8 +179,7 @@ body{font-family:'Noto Sans TC',-apple-system,sans-serif;background:var(--bg);co
       ${po > pp ? `<div class="prod-original">NT$${po}</div><div class="prod-savings">\u7701 NT$${po - pp} (${Math.round((1-pp/po)*100)}%OFF)</div>` : ''}
     </div>
     <div class="cta-group">
-      <a href="${iframeSrc}" target="_blank" class="btn-primary btn-orange"
-         onclick="this.innerHTML='\u26a1 \u6b63\u5728\u958b\u555f\u8ce3\u8ca8\u4fbf...'">
+      <a href="${iframeSrc}" target="_self" class="btn-primary btn-orange">
         \ud83d\uded2 \u524d\u5f80\u8ce3\u8ca8\u4fbf\u4e0b\u55ae &rarr;
       </a>
       <a href="https://line.me/ti/p/@sweetburst" target="_blank" class="btn-primary btn-outline">
