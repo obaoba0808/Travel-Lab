@@ -29,9 +29,8 @@ function getLandingPage(host, checkoutParams) {
   const pp = p ? p.price : 0;
   const po = p ? p.origPrice : 0;
   const cp = checkoutParams ? JSON.stringify(checkoutParams).replace(/"/g,'&quot;') : '';
-  // Direct link to myship cart confirm page with product pre-filled (use carItem/specId, not carProduct)
-  const myshipDirectUrl = 'https://myship.7-11.com.tw/cart/confirm/GM2605018541234?carmId=' + 
-    (checkoutParams && checkoutParams.carItem ? checkoutParams.carItem : '2605021152278901');
+  // Direct link to myship store page (carmId is a cart record ID, not product ID - can't use /cart/confirm/)
+  const myshipDirectUrl = 'https://myship.7-11.com.tw/general/detail?id=GM2605018541234';
   const iframeSrc = myshipDirectUrl;
 
   return `<!DOCTYPE html>
@@ -181,7 +180,7 @@ body{font-family:'Noto Sans TC',-apple-system,sans-serif;background:var(--bg);co
     </div>
     <div class="cta-group">
       <a href="${iframeSrc}" target="_self" class="btn-primary btn-orange">
-        \ud83d\uded2 \u524d\u5f80\u8ce3\u8ca8\u4fbf\u4e0b\u55ae &rarr;
+        \ud83d\uded2 \u524d\u5f80\u8ce3\u8ca8\u4fbf\u9078\u8cfc\u5546\u54c1 &rarr;
       </a>
       <a href="https://line.me/ti/p/@sweetburst" target="_blank" class="btn-primary btn-outline">
         \ud83d\udc47 LINE \u79c1\u8a0a\u8a62\u554f
