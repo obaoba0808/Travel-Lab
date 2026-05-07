@@ -98,6 +98,17 @@ function rewriteHtml(html, host, checkoutParams) {
   if (checkoutParams) {
     const productName = PRODUCT_MAP[checkoutParams.carProduct]?.name || '';
     
+    // === STATIC HTML BANNER (100% reliable, no JS dependency) ===
+    const staticBanner = `
+<div id="sbf-banner" style="position:fixed;top:0;left:0;right:0;background:linear-gradient(90deg,#4CAF50,#66BB6A);color:#fff;text-align:center;padding:16px;font-size:17px;font-weight:900;z-index:2147483647!important;font-family:sans-serif,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto;box-shadow:0 4px 12px rgba(0,0,0,0.3);cursor:pointer;line-height:1.4" onclick="this.style.display='none'">�\uDED2 \u5DF2\u9078\u597D\u300C${productName || '\u5546\u54C1'}\u300D\uFF01\u8ACB\u767B\u5165\u5F8C\u6309\u300C\u76F4\u63A5\u7D50\u5E33\u300D \u2014 \u9EDE\u64CA\u95DC\u9D09
+</div>`;
+    
+    // Insert banner right after <body> opens
+    result = result.replace(/<body[^]*?>/, '$&' + staticBanner);
+    
+    // Add body padding to prevent content from hiding behind fixed banner
+    result = result.replace('</head>', '</head><style>#sbf-banner+*{padding-top:60px!important}</style>');
+    
     // Head injection: override alertify BEFORE page scripts run
     const headInject = `
 <script data-proxy="override">
