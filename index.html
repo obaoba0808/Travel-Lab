@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="UTF-8">
+  <title>均在路上 Travel Lab｜省錢自由行攻略、景點懶人包、旅遊工具推薦</title>
+  <meta name="description" content="均在路上 Travel Lab 提供日本、韓國、台灣自由行攻略、便宜機票、訂房優惠、景點懶人包與旅遊工具推薦。">
+  <meta name="keywords" content="旅遊部落格,自由行攻略,便宜機票,訂房優惠,日本自由行,韓國自由行,台灣旅遊">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- 引入 Google 字體 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* ----- 基礎設定與變數 ----- */
+    :root {
+      --tiffany-green: #0ABAB5;       /* 主色：Tiffany綠 */
+      --tiffany-light: #E6F8F7;     /* 淺Tiffany綠 (背景/點綴用) */
+      --tiffany-dark: #088F8C;      /* 深Tiffany綠 (Hover用) */
+      --text-dark: #333333;
+      --text-gray: #666666;
+      --bg-color: #F8F9FA;
+      --white: #FFFFFF;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Noto Sans TC', sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-dark);
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: var(--tiffany-green);
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: var(--tiffany-dark);
+    }
+
+    /* ----- 導覽列 Header & Nav ----- */
+    header {
+      background-color: var(--white);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .header-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .logo-area h1 {
+      font-size: 24px;
+      color: var(--tiffany-green);
+      font-weight: 700;
+    }
+
+    .logo-area p {
+      font-size: 12px;
+      color: var(--text-gray);
+      margin-top: 2px;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+    }
+
+    nav a {
+      font-weight: 500;
+      color: var(--text-dark);
+      padding: 5px 0;
+      position: relative;
+    }
+
+    nav a:hover {
+      color: var(--tiffany-green);
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: var(--tiffany-green);
+      transition: width 0.3s ease;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    /* ----- 橫幅 Hero Section ----- */
+    .hero {
+      background: linear-gradient(rgba(10, 186, 181, 0.8), rgba(10, 186, 181, 0.6)), url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1920&q=80') center/cover;
+      color: var(--white);
+      text-align: center;
+      padding: 80px 20px;
+      margin-bottom: 40px;
+    }
+
+    .hero h2 {
+      font-size: 36px;
+      margin-bottom: 10px;
+      text-shadow: 1px 1px 5px rgba(0,0,0,0.2);
+    }
+
+    .hero p {
+      font-size: 18px;
+      max-width: 600px;
+      margin: 0 auto;
+      text-shadow: 1px 1px 5px rgba(0,0,0,0.2);
+    }
+
+    /* ----- 主內容區塊 Main ----- */
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px 60px;
+    }
+
+    .section-title {
+      font-size: 24px;
+      color: var(--text-dark);
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .section-title::before {
+      content: '';
+      display: inline-block;
+      width: 5px;
+      height: 24px;
+      background-color: var(--tiffany-green);
+      border-radius: 3px;
+    }
+
+    /* 卡片網格佈局 (文章列表) */
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 25px;
+      margin-bottom: 50px;
+    }
+
+    .card {
+      background: var(--white);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(10, 186, 181, 0.2);
+    }
+
+    .card-img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      background-color: #eee;
+    }
+
+    .card-content {
+      padding: 20px;
+    }
+
+    .card-content h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+      color: var(--text-dark);
+    }
+
+    .card-content p {
+      font-size: 14px;
+      color: var(--text-gray);
+      margin-bottom: 15px;
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: var(--tiffany-green);
+      color: var(--white);
+      padding: 8px 20px;
+      border-radius: 30px;
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .btn:hover {
+      background-color: var(--tiffany-dark);
+      color: var(--white);
+    }
+
+    /* ----- 旅遊工具與變現區塊 ----- */
+    .tools-section {
+      background-color: var(--tiffany-light);
+      padding: 40px;
+      border-radius: 12px;
+      margin-bottom: 50px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .tools-list {
+      flex: 1;
+      min-width: 250px;
+      list-style: none;
+    }
+
+    .tools-list li {
+      background: var(--white);
+      margin-bottom: 15px;
+      padding: 15px 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 500;
+    }
+
+    .affiliate-box {
+      flex: 1;
+      min-width: 250px;
+      background: var(--white);
+      padding: 25px;
+      border-radius: 8px;
+      text-align: center;
+      border: 2px dashed var(--tiffany-green);
+    }
+
+    .affiliate-box h3 {
+      color: var(--tiffany-green);
+      margin-bottom: 15px;
+    }
+
+    /* ----- 頁尾 Footer ----- */
+    footer {
+      background-color: var(--text-dark);
+      color: var(--white);
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    footer p {
+      font-size: 14px;
+      opacity: 0.8;
+    }
+
+    /* ----- 手機版 RWD 設定 ----- */
+    @media (max-width: 768px) {
+      .header-container {
+        flex-direction: column;
+        text-align: center;
+      }
+      nav {
+        margin-top: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .tools-section {
+        padding: 25px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-container">
+    <div class="logo-area">
+      <h1>均在路上 Travel Lab</h1>
+      <p>用最少預算，走最多地方的實戰旅遊攻略</p>
+    </div>
+    <nav>
+      <a href="#home">首頁</a>
+      <a href="#japan">日本自由行</a>
+      <a href="#korea">韓國自由行</a>
+      <a href="#taiwan">台灣旅遊</a>
+      <a href="#tools">旅遊工具</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero" id="home">
+  <h2>探索世界，從這裡開始</h2>
+  <p>為你整理最實用的自由行攻略、超值機票與高CP值住宿推薦，跟著「均在路上」出發吧！</p>
+</div>
+
+<main>
+  <!-- 熱門自由行攻略 -->
+  <section id="japan">
+    <h2 class="section-title">熱門自由行攻略</h2>
+    <div class="grid-container">
+      
+      <!-- 卡片 1：日本 -->
+      <article class="card">
+        <!-- 佔位圖，未來可替換成你的實際圖片網址 -->
+        <img class="card-img" src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=600&q=80" alt="日本自由行">
+        <div class="card-content">
+          <h3>日本自由行懶人包</h3>
+          <p>東京、大阪、京都行程規劃，包含便宜機票、住宿、交通票券、必去景點一次整理給你。</p>
+          <a href="#" class="btn">看完整攻略</a>
+        </div>
+      </article>
+
+      <!-- 卡片 2：韓國 -->
+      <article class="card" id="korea">
+        <img class="card-img" src="https://images.unsplash.com/photo-1517154421773-0529f29ea451?auto=format&fit=crop&w=600&q=80" alt="韓國自由行">
+        <div class="card-content">
+          <h3>韓國首爾釜山攻略</h3>
+          <p>小資族必看！首爾逛街地圖、釜山海景咖啡廳，以及最划算的換錢與交通卡推薦。</p>
+          <a href="#" class="btn">看完整攻略</a>
+        </div>
+      </article>
+
+      <!-- 卡片 3：台灣 -->
+      <article class="card" id="taiwan">
+        <img class="card-img" src="https://images.unsplash.com/photo-1552912810-72cb612db629?auto=format&fit=crop&w=600&q=80" alt="台灣旅遊">
+        <div class="card-content">
+          <h3>台灣深度旅遊</h3>
+          <p>不出國也能玩得很盡興！精選台灣東部海岸秘境、中南部美食小吃與特色包棟民宿。</p>
+          <a href="#" class="btn">看完整攻略</a>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- 旅遊工具與變現區塊 -->
+  <section class="tools-section" id="tools">
+    <div class="tools-list">
+      <h2 class="section-title" style="margin-bottom: 20px;">旅遊省錢工具推薦</h2>
+      <ul>
+        <li>✈️ 便宜機票比價 <a href="#" style="font-weight:bold;">前往 Skyscanner</a></li>
+        <li>🏨 國內外訂房優惠 <a href="#" style="font-weight:bold;">查看 Agoda</a></li>
+        <li>🎫 景點門票與交通券 <a href="#" style="font-weight:bold;">前往 Klook</a></li>
+        <li>🛡️ 旅平險與不便險比較 <a href="#" style="font-weight:bold;">閱讀評比</a></li>
+      </ul>
+    </div>
+
+    <div class="affiliate-box">
+      <h3>專屬讀者優惠 (變現區塊)</h3>
+      <p style="font-size: 14px; margin-bottom: 15px; color: var(--text-gray);">
+        透過下方專屬聯盟連結預訂，您不需要多花一毛錢，但能讓本站獲得微薄分潤，支持我們寫出更多實用文章！
+      </p>
+      <!-- 這裡可以放置各大廣告聯播網或Klook/KKday的Banner原始碼 -->
+      <a href="#" class="btn" style="width: 100%;">領取 Klook 全站 9 折優惠碼</a>
+      <br><br>
+      <a href="#" class="btn" style="width: 100%; background-color: #f5a623;">前往 Agoda 尋找隱藏優惠</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>© 2026 均在路上 Travel Lab. All Rights Reserved.</p>
+  <p style="margin-top: 10px; font-size: 12px;">版面設計由 AI 協助生成，配色為 Tiffany 綠風格</p>
+</footer>
+
+</body>
+</html>
