@@ -70,8 +70,15 @@ ul { list-style:none; }
 .dropdown-menu a { padding:10px 16px; font-size:13px; font-weight:400; border-bottom:none; }
 .dropdown-menu a:hover { background:var(--coral-light); color:var(--coral-dark); }
 
+/* ========== TOPBAR LOGO ========== */
+.topbar-logo { display:flex; align-items:center; gap:8px; text-decoration:none; color:var(--text-dark); }
+.topbar-logo img { width:32px; height:32px; border-radius:50%; object-fit:cover; }
+.topbar-logo span { font-size:15px; font-weight:700; white-space:nowrap; }
+.topbar-logo em { font-style:normal; color:var(--coral); font-weight:400; font-size:12px; }
+
 /* ========== SITE BRANDING ========== */
 .site-branding { text-align:center; padding:40px 20px 30px; background:var(--bg); }
+.site-branding .logo-img { width:90px; height:90px; border-radius:50%; object-fit:cover; margin:0 auto 12px; display:block; }
 .site-branding h1 { font-family:'Noto Serif TC',serif; font-size:32px; font-weight:700; color:var(--text-dark); margin-bottom:6px; }
 .site-branding h1 span { color:var(--coral); }
 .site-branding p { font-size:14px; color:var(--text-gray); letter-spacing:1px; }
@@ -169,6 +176,7 @@ ul { list-style:none; }
 <div class="site-topbar">
   <div class="topbar-inner">
     <button class="mobile-toggle" onclick="document.querySelector('.main-nav').classList.toggle('open')">☰</button>
+    <a href="index.html" class="topbar-logo"><img src="images/logo.png" alt="Travel Lab"><span>均在路上 <em>Travel Lab</em></span></a>
     <nav class="main-nav">
       <a href="index.html" class="active">首頁</a>
       <div class="nav-dropdown">
@@ -212,6 +220,7 @@ ul { list-style:none; }
 
 <!-- SITE BRANDING -->
 <div class="site-branding">
+  <img src="images/logo.png" alt="均在路上 Travel Lab" class="logo-img">
   <h1>均在路上 <span>Travel Lab</span></h1>
   <p>準備好心情 ✦ 跟著我們去旅行，用最少預算走最多地方！</p>
 </div>

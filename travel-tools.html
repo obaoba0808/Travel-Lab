@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="zh-Hant-TW">
 <head>
   <meta charset="UTF-8">
@@ -52,109 +52,161 @@
     ]
   }
   </script>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
-  <style>
-    :root { --tiffany-green: #0ABAB5; --tiffany-light: #E6F8F7; --tiffany-dark: #088F8C; --text-dark: #333333; --text-gray: #666666; --bg-color: #F8F9FA; --white: #FFFFFF; }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Noto Sans TC', sans-serif; background-color: var(--bg-color); color: var(--text-dark); line-height: 1.6; }
-    a { text-decoration: none; color: var(--tiffany-green); transition: 0.3s; }
-    a:hover { color: var(--tiffany-dark); }
-    header { background-color: var(--white); box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; }
-    .header-container { max-width: 1200px; margin: 0 auto; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
-    .logo-area h1 { font-size: 24px; color: var(--tiffany-green); }
-    .logo-area p { font-size: 12px; color: var(--text-gray); }
-    nav { display: flex; gap: 20px; }
-    nav a { font-weight: 500; color: var(--text-dark); position: relative; padding: 5px 0; }
-    nav a:hover { color: var(--tiffany-green); }
-    nav a::after { content: ''; position: absolute; width: 0; height: 2px; bottom: 0; left: 0; background-color: var(--tiffany-green); transition: 0.3s; }
-    nav a:hover::after { width: 100%; }
-    .hero { background: linear-gradient(rgba(10, 186, 181, 0.8), rgba(10, 186, 181, 0.6)), url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1920&q=80') center/cover; color: var(--white); text-align: center; padding: 80px 20px; margin-bottom: 40px; }
-    .hero h2 { font-size: 36px; margin-bottom: 10px; }
-    main { max-width: 1200px; margin: 0 auto; padding: 0 20px 60px; }
-    .section-title { font-size: 24px; margin-bottom: 20px; display: flex; align-items: center; gap: 10px; }
-    .section-title::before { content: ''; display: inline-block; width: 5px; height: 24px; background-color: var(--tiffany-green); border-radius: 3px; }
-    .btn { display: inline-block; background-color: var(--tiffany-green); color: var(--white); padding: 8px 20px; border-radius: 30px; font-size: 14px; text-align: center;}
-    .btn:hover { background-color: var(--tiffany-dark); color: var(--white); }
-    
-    /* 工具特化樣式 */
-    .tools-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); gap: 30px; }
-    .tool-box { background: var(--white); border: 1px solid #eee; border-radius: 12px; padding: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); }
-    .tool-box h3 { color: var(--tiffany-green); font-size: 22px; margin-bottom: 10px; display: flex; align-items: center; gap: 8px;}
-    .tool-box p { color: var(--text-gray); margin-bottom: 20px; }
-    .coupon-code { background-color: var(--tiffany-light); padding: 15px; border-radius: 8px; border: 1px dashed var(--tiffany-green); text-align: center; font-weight: bold; font-size: 18px; margin-bottom: 20px; color: var(--tiffany-dark); }
-    
-    footer { background-color: var(--text-dark); color: var(--white); text-align: center; padding: 30px 20px; margin-top: 40px; }
-    @media (max-width: 768px) { .header-container { flex-direction: column; text-align: center; } nav { margin-top: 15px; flex-wrap: wrap; justify-content: center; } .tools-grid { grid-template-columns: 1fr; } }
-  </style>
-<!-- Google Analytics 4 -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-S7KQGHSD2R"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-S7KQGHSD2R');
-</script>
+
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-S7KQGHSD2R"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-S7KQGHSD2R');
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Serif+TC:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
-  <div class="header-container">
-    <div class="logo-area">
-      <h1>均在路上 Travel Lab</h1>
-      <p>用最少預算，走最多地方的實戰旅遊攻略</p>
-    </div>
-    <nav>
+<!-- TOP BAR NAVIGATION with LOGO -->
+<div class="site-topbar">
+  <div class="topbar-inner">
+    <button class="mobile-toggle" onclick="document.querySelector('.main-nav').classList.toggle('open')">☰</button>
+    <a href="index.html" class="topbar-logo"><img src="images/logo.png" alt="Travel Lab"><span>均在路上 <em>Travel Lab</em></span></a>
+    <nav class="main-nav">
       <a href="index.html">首頁</a>
-      <a href="japan-travel.html">日本自由行</a>
-      <a href="korea-travel.html">韓國自由行</a>
-      <a href="taiwan-travel.html">台灣旅遊</a>
-      <a href="travel-tools.html" style="color: var(--tiffany-green); border-bottom: 2px solid var(--tiffany-green);">旅遊工具</a>
+      <div class="nav-dropdown">
+        <a href="japan-travel.html">日本自由行 ▾</a>
+        <div class="dropdown-menu">
+          <a href="tokyo-5days.html">東京5天4夜行程</a>
+          <a href="kansai-pass.html">關西交通票券指南</a>
+          <a href="hokkaido-winter.html">北海道冬季賞雪</a>
+          <a href="okinawa.html">沖繩自駕攻略</a>
+          <a href="kyoto-temples.html">京都寺廟散步地圖</a>
+        </div>
+      </div>
+      <div class="nav-dropdown">
+        <a href="korea-travel.html">韓國自由行 ▾</a>
+        <div class="dropdown-menu">
+          <a href="seoul-food.html">首爾必吃美食攻略</a>
+          <a href="busan-capsule.html">釜山膠囊列車預約</a>
+          <a href="jeju-island.html">濟州島自駕環島</a>
+        </div>
+      </div>
+      <div class="nav-dropdown">
+        <a href="taiwan-travel.html">台灣旅遊 ▾</a>
+        <div class="dropdown-menu">
+          <a href="hualien-taitung.html">花東三天兩夜</a>
+          <a href="tainan-food.html">台南美食牛肉湯</a>
+          <a href="kenting.html">墾丁海景夜市攻略</a>
+        </div>
+      </div>
+      <div class="nav-dropdown">
+        <a href="southeast-asia.html">東南亞自由行 ▾</a>
+        <div class="dropdown-menu">
+          <a href="chiang-mai.html">清邁數位遊牧指南</a>
+          <a href="bangkok-3days.html">曼谷吃貨攻略</a>
+        </div>
+      </div>
+      <a href="travel-tools.html" class="active">旅遊工具</a>
     </nav>
+    <div style="font-size:13px;color:var(--text-light);">✈️ 用最少預算，走最多地方</div>
   </div>
-</header>
-
-<div class="hero">
-  <h2>省錢旅遊工具包</h2>
-  <p>機票比價、住宿折扣、網卡推薦與專屬優惠碼，出發前先看這篇省一波！</p>
 </div>
 
-<main>
-  <h2 class="section-title">均在路上讀者專屬優惠</h2>
-  <div class="tools-grid">
-    
-    <!-- 訂房工具 -->
-    <div class="tool-box">
-      <h3>🏨 Agoda 全球訂房優惠</h3>
-      <p>我出國最常使用的訂房網站，時常有隱藏版半價優惠，登入會員還能累積A金卡折抵房價。</p>
-      <a href="https://www.agoda.com/zh-tw/" target="_blank" rel="noopener noreferrer" class="btn" style="width: 100%;">前往 Agoda 搜尋最低房價</a>
-    </div>
+<!-- SITE BRANDING with LOGO -->
+<div class="site-branding">
+  <img src="images/logo.png" alt="均在路上 Travel Lab" class="logo-img">
+  <h1>均在路上 <span>Travel Lab</span></h1>
+  <p>準備好心情 ✦ 跟著我們去旅行，用最少預算走最多地方！</p>
+</div>
 
-    <!-- 票券工具 -->
-    <div class="tool-box">
-      <h3>🎫 Klook 行程票券</h3>
-      <p>購買機場快線、交通卡、樂園門票必備！結帳時輸入下方專屬優惠碼再享額外折扣。</p>
-      <div class="coupon-code">優惠碼：TRAVEL2026</div>
-      <a href="https://www.klook.com/zh-TW/promo/klook-discount-coupon/" target="_blank" rel="noopener noreferrer" class="btn" style="width: 100%; background-color: #FF5A5F;">領取 Klook 優惠</a>
-    </div>
-
-    <!-- 機票工具 -->
-    <div class="tool-box">
-      <h3>✈️ Skyscanner 機票比價</h3>
-      <p>想找便宜機票第一步就是比價！支援整個月的票價走勢圖，一眼看出哪天出發最划算。</p>
-      <a href="https://www.skyscanner.com.tw/" target="_blank" rel="noopener noreferrer" class="btn" style="width: 100%; background-color: #00A2DF;">開始比價機票</a>
-    </div>
-
-    <!-- 網路通訊 -->
-    <div class="tool-box">
-      <h3>📶 出國上網 eSIM 推薦</h3>
-      <p>不用換實體卡片，掃描 QR Code 就能馬上連網。日本、韓國實測網速超快不卡頓！</p>
-      <div class="coupon-code">9折專屬碼：ESIM_LAB</div>
-      <a href="https://www.airalo.com/" target="_blank" rel="noopener noreferrer" class="btn" style="width: 100%; background-color: #333;">購買 eSIM 網卡</a>
-    </div>
-
+<!-- CATEGORY HERO -->
+<div class="category-hero">
+  <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1920&q=80" alt="旅遊工具">
+  <div class="overlay">
+    <h2>省錢旅遊工具包</h2>
+    <p>機票比價、住宿折扣、網卡推薦與專屬優惠碼，出發前先看這篇省一波！</p>
   </div>
-</main>
+</div>
 
-<footer><p>© 2026 均在路上 Travel Lab. All Rights Reserved.</p></footer>
+<!-- MAIN CONTENT -->
+<div class="site-content">
+  <main class="content-area">
+
+    <div class="section-divider"><h2>均在路上讀者專屬優惠</h2></div>
+
+    <div class="tools-grid">
+
+      <!-- 訂房工具 -->
+      <div class="tool-box">
+        <h3>🏨 Agoda 全球訂房優惠</h3>
+        <p>我出國最常使用的訂房網站，時常有隱藏版半價優惠，登入會員還能累積A金卡折抵房價。</p>
+        <a href="https://www.agoda.com/zh-tw/" target="_blank" rel="noopener noreferrer" class="btn" style="width:100%;">前往 Agoda 搜尋最低房價</a>
+      </div>
+
+      <!-- 票券工具 -->
+      <div class="tool-box">
+        <h3>🎫 Klook 行程票券</h3>
+        <p>購買機場快線、交通卡、樂園門票必備！結帳時輸入下方專屬優惠碼再享額外折扣。</p>
+        <div class="coupon-code">優惠碼：TRAVEL2026</div>
+        <a href="https://www.klook.com/zh-TW/promo/klook-discount-coupon/" target="_blank" rel="noopener noreferrer" class="btn" style="width:100%;background-color:#FF5A5F;">領取 Klook 優惠</a>
+      </div>
+
+      <!-- 機票工具 -->
+      <div class="tool-box">
+        <h3>✈️ Skyscanner 機票比價</h3>
+        <p>想找便宜機票第一步就是比價！支援整個月的票價走勢圖，一眼看出哪天出發最划算。</p>
+        <a href="https://www.skyscanner.com.tw/" target="_blank" rel="noopener noreferrer" class="btn" style="width:100%;background-color:#00A2DF;">開始比價機票</a>
+      </div>
+
+      <!-- 網路通訊 -->
+      <div class="tool-box">
+        <h3>📶 出國上網 eSIM 推薦</h3>
+        <p>不用換實體卡片，掃描 QR Code 就能馬上連網。日本、韓國實測網速超快不卡頓！</p>
+        <div class="coupon-code">9折專屬碼：ESIM_LAB</div>
+        <a href="https://www.airalo.com/" target="_blank" rel="noopener noreferrer" class="btn" style="width:100%;background-color:#333;">購買 eSIM 網卡</a>
+      </div>
+
+    </div>
+
+  </main>
+</div>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-col">
+      <h4>🇯🇵 日本自由行</h4>
+      <a href="tokyo-5days.html">東京5天4夜行程</a>
+      <a href="kansai-pass.html">關西交通票券指南</a>
+      <a href="hokkaido-winter.html">北海道冬季賞雪</a>
+      <a href="okinawa.html">沖繩自駕攻略</a>
+      <a href="kyoto-temples.html">京都寺廟散步地圖</a>
+    </div>
+    <div class="footer-col">
+      <h4>🇰🇷 韓國自由行</h4>
+      <a href="seoul-food.html">首爾必吃美食攻略</a>
+      <a href="busan-capsule.html">釜山膠囊列車預約</a>
+      <a href="jeju-island.html">濟州島自駕環島</a>
+    </div>
+    <div class="footer-col">
+      <h4>🇹🇼 台灣旅遊</h4>
+      <a href="hualien-taitung.html">花東三天兩夜</a>
+      <a href="tainan-food.html">台南美食牛肉湯</a>
+      <a href="kenting.html">墾丁海景夜市攻略</a>
+    </div>
+    <div class="footer-col">
+      <h4>🌏 東南亞自由行</h4>
+      <a href="chiang-mai.html">清邁數位遊牧指南</a>
+      <a href="bangkok-3days.html">曼谷吃貨攻略</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 均在路上 Travel Lab. All Rights Reserved.</p>
+  </div>
+</footer>
+
 </body>
 </html>
