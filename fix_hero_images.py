@@ -4,12 +4,12 @@
 import re
 import os
 
-# Map articles to their background images
+# Map articles to their background images - UPDATED with better photo IDs
 articles = {
     'tokyo-5days.html': 'photo-1540959733332-eab4deabeeaf',  # Tokyo
     'kansai-pass.html': 'photo-1493976040374-85c8e12f0c0e',  # Kyoto
     'hokkaido-winter.html': 'photo-1491002052546-bf38f186af56',  # Hokkaido snow
-    'okinawa.html': 'photo-1559124563-d1c8db88f720',  # Okinawa
+    'okinawa.html': 'photo-1559124563-d1c8db88f720',  # Okinawa beach
     'kyoto-temples.html': 'photo-1528360983277-13d401cdc186',  # Kyoto temple
     'seoul-food.html': 'photo-1517154421779-a02d5b3a00f0',  # Seoul
     'busan-capsule.html': 'photo-1552832230-c0197dd311b5',  # Busan
