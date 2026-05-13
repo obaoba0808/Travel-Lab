@@ -29,18 +29,13 @@ ul { list-style:none; }
 .dropdown-menu a { padding:10px 16px; font-size:13px; font-weight:400; border-bottom:none; }
 .dropdown-menu a:hover { background:var(--coral-light); color:var(--coral-dark); }
 
-/* BRANDING */
-.site-branding { text-align:center; padding:30px 20px 25px; background:var(--bg); }
-.site-branding .logo-img { width:90px; height:90px; margin:0 auto 12px; border-radius:50%; object-fit:contain; }
-.site-branding h1 { font-family:'Noto Serif TC',serif; font-size:28px; font-weight:700; color:var(--text-dark); margin-bottom:6px; }
-.site-branding h1 span { color:var(--coral); }
-.site-branding p { font-size:14px; color:var(--text-gray); letter-spacing:1px; }
+/* BRANDING (logo-only, text is in the image) */
+.site-branding { text-align:center; padding:25px 20px 20px; background:var(--bg); }
+.site-branding .logo-img { height:80px; width:auto; margin:0 auto; display:block; }
 
-/* TOPBAR LOGO */
-.topbar-logo { display:flex; align-items:center; gap:8px; }
-.topbar-logo img { width:32px; height:32px; border-radius:50%; }
-.topbar-logo span { font-family:'Noto Serif TC',serif; font-size:16px; font-weight:700; color:var(--text-dark); }
-.topbar-logo span em { color:var(--coral); font-style:normal; }
+/* TOPBAR LOGO (horizontal image-text logo) */
+.topbar-logo { display:flex; align-items:center; }
+.topbar-logo img { height:36px; width:auto; }
 
 /* CATEGORY HERO */
 .category-hero { position:relative; height:320px; overflow:hidden; }
