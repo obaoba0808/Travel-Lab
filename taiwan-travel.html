@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="zh-Hant-TW">
 <head>
   <meta charset="UTF-8">
@@ -52,194 +52,99 @@
     ]
   }
   </script>
-
-  <!-- Google Analytics 4 -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-S7KQGHSD2R"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-S7KQGHSD2R');
-  </script>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Serif+TC:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root { --tiffany-green: #0ABAB5; --tiffany-light: #E6F8F7; --tiffany-dark: #088F8C; --text-dark: #333333; --text-gray: #666666; --bg-color: #F8F9FA; --white: #FFFFFF; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Noto Sans TC', sans-serif; background-color: var(--bg-color); color: var(--text-dark); line-height: 1.6; }
+    a { text-decoration: none; color: var(--tiffany-green); transition: 0.3s; }
+    a:hover { color: var(--tiffany-dark); }
+    header { background-color: var(--white); box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; }
+    .header-container { max-width: 1200px; margin: 0 auto; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
+    .logo-area h1 { font-size: 24px; color: var(--tiffany-green); }
+    .logo-area p { font-size: 12px; color: var(--text-gray); }
+    nav { display: flex; gap: 20px; }
+    nav a { font-weight: 500; color: var(--text-dark); position: relative; padding: 5px 0; }
+    nav a:hover { color: var(--tiffany-green); }
+    nav a::after { content: ''; position: absolute; width: 0; height: 2px; bottom: 0; left: 0; background-color: var(--tiffany-green); transition: 0.3s; }
+    nav a:hover::after { width: 100%; }
+    .hero { background: linear-gradient(rgba(10, 186, 181, 0.8), rgba(10, 186, 181, 0.6)), url('https://images.unsplash.com/photo-1552912810-72cb612db629?auto=format&fit=crop&w=1920&q=80') center/cover; color: var(--white); text-align: center; padding: 80px 20px; margin-bottom: 40px; }
+    .hero h2 { font-size: 36px; margin-bottom: 10px; }
+    main { max-width: 1200px; margin: 0 auto; padding: 0 20px 60px; }
+    .section-title { font-size: 24px; margin-bottom: 20px; display: flex; align-items: center; gap: 10px; }
+    .section-title::before { content: ''; display: inline-block; width: 5px; height: 24px; background-color: var(--tiffany-green); border-radius: 3px; }
+    .grid-container { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 25px; }
+    .card { background: var(--white); border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); transition: 0.3s; }
+    .card:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(10, 186, 181, 0.2); }
+    .card-img { width: 100%; height: 200px; object-fit: cover; }
+    .card-content { padding: 20px; }
+    .btn { display: inline-block; background-color: var(--tiffany-green); color: var(--white); padding: 8px 20px; border-radius: 30px; font-size: 14px; }
+    .btn:hover { background-color: var(--tiffany-dark); color: var(--white); }
+    footer { background-color: var(--text-dark); color: var(--white); text-align: center; padding: 30px 20px; margin-top: 40px; }
+    @media (max-width: 768px) { .header-container { flex-direction: column; text-align: center; } nav { margin-top: 15px; flex-wrap: wrap; justify-content: center; } }
+  </style>
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-S7KQGHSD2R"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-S7KQGHSD2R');
+</script>
 </head>
 <body>
 
-<!-- TOP BAR NAVIGATION with LOGO -->
-<div class="site-topbar">
-  <div class="topbar-inner">
-    <button class="mobile-toggle" onclick="document.querySelector('.main-nav').classList.toggle('open')">☰</button>
-    <a href="index.html" class="topbar-logo"><img src="images/logo.png" alt="均在路上 Travel Lab"></a>
-    <nav class="main-nav">
+<header>
+  <div class="header-container">
+    <div class="logo-area">
+      <h1>均在路上 Travel Lab</h1>
+      <p>用最少預算，走最多地方的實戰旅遊攻略</p>
+    </div>
+    <nav>
       <a href="index.html">首頁</a>
-      <div class="nav-dropdown">
-        <a href="japan-travel.html">日本自由行 ▾</a>
-        <div class="dropdown-menu">
-          <a href="tokyo-5days.html">東京5天4夜行程</a>
-          <a href="kansai-pass.html">關西交通票券指南</a>
-          <a href="hokkaido-winter.html">北海道冬季賞雪</a>
-          <a href="okinawa.html">沖繩自駕攻略</a>
-          <a href="kyoto-temples.html">京都寺廟散步地圖</a>
-        </div>
-      </div>
-      <div class="nav-dropdown">
-        <a href="korea-travel.html">韓國自由行 ▾</a>
-        <div class="dropdown-menu">
-          <a href="seoul-food.html">首爾必吃美食攻略</a>
-          <a href="busan-capsule.html">釜山膠囊列車預約</a>
-          <a href="jeju-island.html">濟州島自駕環島</a>
-        </div>
-      </div>
-      <div class="nav-dropdown">
-        <a href="taiwan-travel.html" class="active">台灣旅遊 ▾</a>
-        <div class="dropdown-menu">
-          <a href="hualien-taitung.html">花東三天兩夜</a>
-          <a href="tainan-food.html">台南美食牛肉湯</a>
-          <a href="kenting.html">墾丁海景夜市攻略</a>
-        </div>
-      </div>
-      <div class="nav-dropdown">
-        <a href="southeast-asia.html">東南亞自由行 ▾</a>
-        <div class="dropdown-menu">
-          <a href="chiang-mai.html">清邁數位遊牧指南</a>
-          <a href="bangkok-3days.html">曼谷吃貨攻略</a>
-        </div>
-      </div>
+      <a href="japan-travel.html">日本自由行</a>
+      <a href="korea-travel.html">韓國自由行</a>
+      <a href="taiwan-travel.html" style="color: var(--tiffany-green); border-bottom: 2px solid var(--tiffany-green);">台灣旅遊</a>
       <a href="travel-tools.html">旅遊工具</a>
     </nav>
-    <div style="font-size:13px;color:var(--text-light);">✈️ 用最少預算，走最多地方</div>
   </div>
+</header>
+
+<div class="hero">
+  <h2>台灣深度旅遊提案</h2>
+  <p>不出國也能玩得很盡興！全台秘境景點、必吃美食與特色包棟民宿大公開。</p>
 </div>
 
-<!-- SITE BRANDING with LOGO -->
-<div class="site-branding">
-  <img src="images/logo.png" alt="均在路上 Travel Lab" class="logo-img"></div>
-
-<!-- CATEGORY HERO -->
-<div class="category-hero">
-  <img src="https://images.unsplash.com/photo-1552912810-72cb612db629?auto=format&fit=crop&w=1920&q=80" alt="台灣旅遊">
-  <div class="overlay">
-    <h2>台灣深度旅遊提案</h2>
-    <p>不出國也能玩得很盡興！全台秘境景點、必吃美食與特色包棟民宿大公開。</p>
-  </div>
-</div>
-
-<!-- MAIN CONTENT + SIDEBAR -->
-<div class="site-content">
-  <main class="content-area">
-
-    <div class="section-divider"><h2>熱門國旅路線</h2></div>
-
-    <div class="card-grid">
-      <article class="card">
-        <img src="https://images.unsplash.com/photo-1596783074918-c84cb1394178?auto=format&fit=crop&w=600&q=80" alt="花東旅遊">
-        <div class="card-body">
-          <a href="taiwan-travel.html" class="cat-tag">台灣旅遊</a>
-          <h3><a href="hualien-taitung.html">花東三天兩夜攻略｜太魯閣步道、池上自行車道、海景民宿</a></h3>
-          <p>絕美東海岸秘境、太魯閣步道，以及編輯私藏的高CP值無敵海景民宿。</p>
-          <a href="hualien-taitung.html" class="read-more">繼續閱讀 →</a>
-        </div>
-      </article>
-
-      <article class="card">
-        <img src="https://images.unsplash.com/photo-1621258600067-1752b7ba14eb?auto=format&fit=crop&w=600&q=80" alt="台南美食">
-        <div class="card-body">
-          <a href="taiwan-travel.html" class="cat-tag">台灣旅遊</a>
-          <h3><a href="tainan-food.html">台南美食攻略｜5家必喝牛肉湯、國華街小吃地圖、老屋咖啡</a></h3>
-          <p>在地人帶路！國華街必吃小吃地圖與充滿故事的老宅文青咖啡廳。</p>
-          <a href="tainan-food.html" class="read-more">繼續閱讀 →</a>
-        </div>
-      </article>
-
-      <article class="card">
-        <img src="https://images.unsplash.com/photo-1552912810-72cb612db629?auto=format&fit=crop&w=600&q=80" alt="墾丁旅遊">
-        <div class="card-body">
-          <a href="taiwan-travel.html" class="cat-tag">台灣旅遊</a>
-          <h3><a href="kenting.html">墾丁三天兩夜海景與夜市攻略｜南灣戲水、龍磐看海、夜市吃爆</a></h3>
-          <p>國境之南的陽光沙灘，南灣戲水、龍磐看海、夜市吃爆。</p>
-          <a href="kenting.html" class="read-more">繼續閱讀 →</a>
-        </div>
-      </article>
-    </div>
-
-  </main>
-
-  <!-- SIDEBAR -->
-  <aside class="sidebar">
-    <div class="widget">
-      <div class="widget-title">🎒 分類導覽</div>
-      <div class="widget-categories">
-        <a href="japan-travel.html">🇯🇵 日本自由行 <span>5</span></a>
-        <a href="korea-travel.html">🇰🇷 韓國自由行 <span>3</span></a>
-        <a href="taiwan-travel.html">🇹🇼 台灣旅遊 <span>3</span></a>
-        <a href="southeast-asia.html">🌏 東南亞自由行 <span>2</span></a>
-        <a href="travel-tools.html">🔧 旅遊工具 <span>4</span></a>
+<main>
+  <h2 class="section-title">熱門國旅路線</h2>
+  <div class="grid-container">
+    <article class="card">
+      <img class="card-img" src="https://images.unsplash.com/photo-1596783074918-c84cb1394178?auto=format&fit=crop&w=600&q=80" alt="花東旅遊">
+      <div class="card-content">
+        <h3>【花蓮台東】看海放空三天兩夜</h3>
+        <p>絕美東海岸秘境、太魯閣步道，以及編輯私藏的高CP值無敵海景民宿。</p>
+        <a href="hualien-taitung.html" class="btn">閱讀文章</a>
       </div>
-    </div>
-
-    <div class="widget">
-      <div class="widget-title">🔥 熱門文章</div>
-      <div class="widget-popular">
-        <li><a href="hualien-taitung.html">花東三天兩夜攻略</a></li>
-        <li><a href="tainan-food.html">台南美食牛肉湯攻略</a></li>
-        <li><a href="kenting.html">墾丁海景夜市攻略</a></li>
-        <li><a href="tokyo-5days.html">東京5天4夜省錢行程</a></li>
-        <li><a href="chiang-mai.html">清邁數位遊牧指南</a></li>
+    </article>
+    <article class="card">
+      <img class="card-img" src="https://images.unsplash.com/photo-1621258600067-1752b7ba14eb?auto=format&fit=crop&w=600&q=80" alt="台南美食">
+      <div class="card-content">
+        <h3>【台南美食】牛肉湯與老屋咖啡</h3>
+        <p>在地人帶路！國華街必吃小吃地圖與充滿故事的老宅文青咖啡廳。</p>
+        <a href="tainan-food.html" class="btn">閱讀文章</a>
       </div>
-    </div>
-
-    <div class="widget widget-tools">
-      <div class="widget-title">💰 讀者專屬優惠</div>
-      <a href="https://www.agoda.com/zh-tw/" target="_blank" rel="noopener noreferrer" class="tool-btn agoda">🏨 Agoda 訂房優惠</a>
-      <a href="https://www.klook.com/zh-TW/promo/klook-discount-coupon/" target="_blank" rel="noopener noreferrer" class="tool-btn klook">🎫 Klook 優惠碼領取</a>
-      <a href="https://www.skyscanner.com.tw/" target="_blank" rel="noopener noreferrer" class="tool-btn skyscanner">✈️ Skyscanner 機票比價</a>
-      <a href="https://www.airalo.com/" target="_blank" rel="noopener noreferrer" class="tool-btn esim">📶 eSIM 網卡推薦</a>
-    </div>
-
-    <div class="widget">
-      <div class="widget-title">💌 關於我們</div>
-      <p style="font-size:13px;color:var(--text-gray);line-height:1.8;">均在路上 Travel Lab 是一個實戰旅遊攻略網站，我們相信旅行不必花大錢。每篇攻略都經過實地走訪驗證，從交通教學到美食推薦，幫你用最少預算走最多地方。</p>
-    </div>
-  </aside>
-</div>
-
-<!-- FOOTER -->
-<footer class="site-footer">
-  <div class="footer-inner">
-    <div class="footer-col">
-      <h4>🇯🇵 日本自由行</h4>
-      <a href="tokyo-5days.html">東京5天4夜行程</a>
-      <a href="kansai-pass.html">關西交通票券指南</a>
-      <a href="hokkaido-winter.html">北海道冬季賞雪</a>
-      <a href="okinawa.html">沖繩自駕攻略</a>
-      <a href="kyoto-temples.html">京都寺廟散步地圖</a>
-    </div>
-    <div class="footer-col">
-      <h4>🇰🇷 韓國自由行</h4>
-      <a href="seoul-food.html">首爾必吃美食攻略</a>
-      <a href="busan-capsule.html">釜山膠囊列車預約</a>
-      <a href="jeju-island.html">濟州島自駕環島</a>
-    </div>
-    <div class="footer-col">
-      <h4>🇹🇼 台灣旅遊</h4>
-      <a href="hualien-taitung.html">花東三天兩夜</a>
-      <a href="tainan-food.html">台南美食牛肉湯</a>
-      <a href="kenting.html">墾丁海景夜市攻略</a>
-    </div>
-    <div class="footer-col">
-      <h4>🌏 東南亞自由行</h4>
-      <a href="chiang-mai.html">清邁數位遊牧指南</a>
-      <a href="bangkok-3days.html">曼谷吃貨攻略</a>
-    </div>
+    </article>
+    <article class="card">
+      <img class="card-img" src="https://images.unsplash.com/photo-1552912810-72cb612db629?auto=format&fit=crop&w=600&q=80" alt="墾丁旅遊">
+      <div class="card-content">
+        <h3>【墾丁】三天兩夜海景與夜市攻略</h3>
+        <p>國境之南的陽光沙灘，南灣戲水、龍磐看海、夜市吃爆。</p>
+        <a href="kenting.html" class="btn">閱讀文章</a>
+      </div>
+    </article>
   </div>
-  <div class="footer-bottom">
-    <p>© 2026 均在路上 Travel Lab. All Rights Reserved.</p>
-  </div>
-</footer>
+</main>
 
+<footer><p>© 2026 均在路上 Travel Lab. All Rights Reserved.</p></footer>
 </body>
 </html>
