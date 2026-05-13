@@ -72,11 +72,13 @@ ul { list-style:none; }
 
 /* ========== TOPBAR LOGO ========== */
 .topbar-logo { display:flex; align-items:center; }
-.topbar-logo img { height:36px; width:auto; }
+.topbar-logo img { height:48px; width:auto; }
 
-/* ========== SITE BRANDING (logo includes text) ========== */
-.site-branding { text-align:center; padding:20px 20px 15px; background:var(--bg); }
-.site-branding .logo-img { height:80px; width:auto; margin:0 auto; display:block; }
+/* ========== SITE BRANDING (text-only) ========== */
+.site-branding { text-align:center; padding:30px 20px 25px; background:var(--bg); }
+.site-branding h1 { font-family:'Noto Serif TC',serif; font-size:32px; font-weight:700; color:var(--text-dark); margin-bottom:6px; }
+.site-branding h1 span { color:var(--coral); }
+.site-branding p { font-size:14px; color:var(--text-gray); letter-spacing:1px; }
 
 /* ========== FEATURED SLIDER ========== */
 .featured-section { background:var(--bg-light); padding:30px 0 20px; }
@@ -161,7 +163,7 @@ ul { list-style:none; }
   .post-item { flex-direction:column; }
   .post-thumb { width:100%; }
   .post-thumb img { height:200px; }
-  .site-branding .logo-img { height:60px; }
+  .site-branding h1 { font-size:24px; }
 }
 </style>
 </head>
@@ -213,9 +215,10 @@ ul { list-style:none; }
   </div>
 </div>
 
-<!-- SITE BRANDING (logo includes text) -->
+<!-- SITE BRANDING -->
 <div class="site-branding">
-  <img src="images/logo.png" alt="均在路上 Travel Lab" class="logo-img">
+  <h1>均在路上 <span>Travel Lab</span></h1>
+  <p>準備好心情 ✦ 跟著我們去旅行，用最少預算走最多地方！</p>
 </div>
 
 <!-- FEATURED ARTICLES -->
