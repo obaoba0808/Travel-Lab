@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="zh-Hant-TW">
 <head>
   <meta charset="UTF-8">
@@ -54,32 +54,32 @@
   </script>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
   <style>
-    :root { --tiffany-green: #0ABAB5; --tiffany-light: #E6F8F7; --tiffany-dark: #088F8C; --text-dark: #333333; --text-gray: #666666; --bg-color: #F8F9FA; --white: #FFFFFF; }
+    :root { --coral:#f29e9a; --coral-light:#fdf0ef; --coral-dark:#e07e7a; --text-dark: #333333; --text-gray: #666666; --bg-color: #F8F9FA; --white: #FFFFFF; }
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { font-family: 'Noto Sans TC', sans-serif; background-color: var(--bg-color); color: var(--text-dark); line-height: 1.6; }
-    a { text-decoration: none; color: var(--tiffany-green); transition: 0.3s; }
-    a:hover { color: var(--tiffany-dark); }
+    a { text-decoration: none; color: var(--coral); transition: 0.3s; }
+    a:hover { color: var(--coral-dark); }
     header { background-color: var(--white); box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; }
     .header-container { max-width: 1200px; margin: 0 auto; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
-    .logo-area h1 { font-size: 24px; color: var(--tiffany-green); }
+    .logo-area h1 { font-size: 24px; color: var(--coral); }
     .logo-area p { font-size: 12px; color: var(--text-gray); }
     nav { display: flex; gap: 20px; }
     nav a { font-weight: 500; color: var(--text-dark); position: relative; padding: 5px 0; }
-    nav a:hover { color: var(--tiffany-green); }
-    nav a::after { content: ''; position: absolute; width: 0; height: 2px; bottom: 0; left: 0; background-color: var(--tiffany-green); transition: 0.3s; }
+    nav a:hover { color: var(--coral); }
+    nav a::after { content: ''; position: absolute; width: 0; height: 2px; bottom: 0; left: 0; background-color: var(--coral); transition: 0.3s; }
     nav a:hover::after { width: 100%; }
     .hero { background: linear-gradient(rgba(10, 186, 181, 0.8), rgba(10, 186, 181, 0.6)), url('https://images.unsplash.com/photo-1552912810-72cb612db629?auto=format&fit=crop&w=1920&q=80') center/cover; color: var(--white); text-align: center; padding: 80px 20px; margin-bottom: 40px; }
     .hero h2 { font-size: 36px; margin-bottom: 10px; }
     main { max-width: 1200px; margin: 0 auto; padding: 0 20px 60px; }
     .section-title { font-size: 24px; margin-bottom: 20px; display: flex; align-items: center; gap: 10px; }
-    .section-title::before { content: ''; display: inline-block; width: 5px; height: 24px; background-color: var(--tiffany-green); border-radius: 3px; }
+    .section-title::before { content: ''; display: inline-block; width: 5px; height: 24px; background-color: var(--coral); border-radius: 3px; }
     .grid-container { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 25px; }
     .card { background: var(--white); border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); transition: 0.3s; }
     .card:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(10, 186, 181, 0.2); }
     .card-img { width: 100%; height: 200px; object-fit: cover; }
     .card-content { padding: 20px; }
-    .btn { display: inline-block; background-color: var(--tiffany-green); color: var(--white); padding: 8px 20px; border-radius: 30px; font-size: 14px; }
-    .btn:hover { background-color: var(--tiffany-dark); color: var(--white); }
+    .btn { display: inline-block; background-color: var(--coral); color: var(--white); padding: 8px 20px; border-radius: 30px; font-size: 14px; }
+    .btn:hover { background-color: var(--coral-dark); color: var(--white); }
     footer { background-color: var(--text-dark); color: var(--white); text-align: center; padding: 30px 20px; margin-top: 40px; }
     @media (max-width: 768px) { .header-container { flex-direction: column; text-align: center; } nav { margin-top: 15px; flex-wrap: wrap; justify-content: center; } }
   </style>
@@ -104,7 +104,7 @@
       <a href="index.html">首頁</a>
       <a href="japan-travel.html">日本自由行</a>
       <a href="korea-travel.html">韓國自由行</a>
-      <a href="taiwan-travel.html" style="color: var(--tiffany-green); border-bottom: 2px solid var(--tiffany-green);">台灣旅遊</a>
+      <a href="taiwan-travel.html" style="color: var(--coral); border-bottom: 2px solid var(--coral);">台灣旅遊</a>
       <a href="travel-tools.html">旅遊工具</a>
     </nav>
   </div>
