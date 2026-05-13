@@ -63,11 +63,12 @@ ul { list-style:none; }
 .category-hero .overlay p { color:rgba(255,255,255,0.85); font-size:15px; margin-top:6px; }
 
 /* ========== ARTICLE HERO (for pages with .hero class) ========== */
-.hero { position:relative; height:400px; overflow:hidden; background-size:cover; background-position:center; display:flex; align-items:center; justify-content:center; }
-.hero::before { content:''; position:absolute; inset:0; background:linear-gradient(transparent 40%,rgba(0,0,0,0.65)); }
-.hero > * { position:relative; z-index:1; color:#fff; text-align:center; text-shadow:0 1px 4px rgba(0,0,0,0.6); }
-.hero h2 { font-family:'Noto Serif TC',serif; font-size:32px; font-weight:700; line-height:1.4; margin:0 0 10px 0; }
-.hero p { font-size:16px; opacity:0.9; margin:0; }
+.hero { position:relative; width:100%; overflow:hidden; margin-bottom:0; }
+.hero::before { display:none; }
+.hero-img { width:100%; height:auto; display:block; }
+.hero-title { text-align:center; padding:28px 20px 20px 20px; }
+.hero-title h2 { font-family:'Noto Serif TC',serif; font-size:28px; font-weight:700; line-height:1.4; margin:0 0 10px 0; color:#1a1a2e; }
+.hero-title p { font-size:16px; opacity:0.8; margin:0; color:#555; }
 
 /* ========== ARTICLE HERO OLD STYLE ========== */
 .article-hero { position:relative; height:400px; overflow:hidden; }
