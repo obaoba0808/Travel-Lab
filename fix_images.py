@@ -1,83 +1,52 @@
-import os, re
+import os
 
-workspace = r'C:\Users\FH01\.qclaw\workspace-cwapojim0yfmyvq8\travel-lab'
+base_chiang = "https://images.unsplash.com/photo-1528181304800-259b08848526"
+base_kyoto = "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e"
+base_osaka = "https://images.unsplash.com/photo-1480796927426-f609979314bd"
+base_taiwan_food = "https://images.unsplash.com/photo-1555939594-58d7cb561ad1"
+base_bangkok = "https://images.unsplash.com/photo-1508009603885-50cf7c579365"
+base_tokyo = "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf"
+base_seoul = "https://images.unsplash.com/photo-1538681105587-85640961bf8b"
+base_winter = "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1"
+base_beach = "https://images.unsplash.com/photo-1507525428034-b723cf961d3e"
 
-# Replacement image sets (each page gets 4 unique images)
-replacements = {
-    'hualien-taitung.html': {
-        'photo-1596783074918-c84cb1394178': [
-            'photo-1470004914212-05527e49370b',
-            'photo-1506905925346-21bda4d32df4',
-            'photo-1558981403-c5f9899a28bc',
-            'photo-1519451241324-20b4ea2c4220',
-        ]
-    },
-    'busan-capsule.html': {
-        'photo-1508009603885-50cf7c579365': [
-            'photo-1583417319070-4a69db38a482',
-            'photo-1530523247026-b8e64ae7b8e4',
-            'photo-1524592094714-0f0654e20314',
-            'photo-1513694203232-719a280e022f',
-        ]
-    },
-    'hokkaido-winter.html': {
-        'photo-1508009603885-50cf7c579365': [
-            'photo-1476514525535-07fb3b4ae5f1',
-            'photo-1505228395891-9a51e7e86bf6',
-            'photo-1553284965-83fd3e82fa5a',
-            'photo-1519681393784-d120267933ba',
-        ]
-    },
-    'tainan-food.html': {
-        'photo-1508009603885-50cf7c579365': [
-            'photo-1555939594-58d7cb561ad1',
-            'photo-1540189549336-e6e99c3679fe',
-            'photo-1567620905732-2d1ec7ab7445',
-            'photo-1565299624946-b28f40a0ae38',
-        ]
-    },
-    'kenting.html': {
-        'photo-1508009603885-50cf7c579365': [
-            'photo-1507525428034-b723cf961d3e',
-            'photo-1544551763-46a013bb70d5',
-            'photo-1559827291-72ee739d0d9a',
-            'photo-1585909695284-32d2985ac9c0',
-        ]
-    }
-}
-
-def replace_images_in_file(filepath, page_replacements):
-    with open(filepath, 'r', encoding='utf-8') as f:
-        content = f.read()
-    original = content
-    
-    for old_id, new_ids in page_replacements.items():
-        # Find all occurrences
-        count = content.count(old_id)
-        print(f'  Found {count} occurrences of {old_id}')
-        
-        # Replace each occurrence sequentially with different images
-        for i in range(count):
-            new_id = new_ids[i % len(new_ids)]
-            # Replace first occurrence
-            pos = content.find(old_id)
-            if pos >= 0:
-                content = content.replace(old_id, new_id, 1)
-                print(f'  Replaced occurrence {i+1} with {new_id}')
-    
-    if content != original:
-        with open(filepath, 'w', encoding='utf-8') as f:
-            f.write(content)
-        print(f'  Saved: {os.path.basename(filepath)}')
+def fix_hero(fn, old_base, new_base):
+    txt = open(fn, encoding='utf-8').read()
+    n = txt.replace(old_base, new_base)
+    if n != txt:
+        open(fn, 'w', encoding='utf-8').write(n)
+        print(f'Fixed hero in {fn}: {old_base[:60]} -> {new_base[:60]}')
     else:
-        print(f'  No changes: {os.path.basename(filepath)}')
+        print(f'No change in {fn} (hero)')
 
-for fname, page_replacements in replacements.items():
-    path = os.path.join(workspace, fname)
-    if os.path.exists(path):
-        print(f'\nFixing: {fname}')
-        replace_images_in_file(path, page_replacements)
+def fix_meta(fn, old_base, new_base, props):
+    txt = open(fn, encoding='utf-8').read()
+    n = txt
+    for prop in props:
+        n = n.replace(f'<meta property="{prop}" content="{old_base}', f'<meta property="{prop}" content="{new_base}')
+        n = n.replace(f'<meta name="{prop}" content="{old_base}', f'<meta name="{prop}" content="{new_base}')
+    if n != txt:
+        open(fn, 'w', encoding='utf-8').write(n)
+        print(f'Fixed meta in {fn}: {old_base[:60]} -> {new_base[:60]}')
     else:
-        print(f'File not found: {fname}')
+        print(f'No change in {fn} (meta)')
 
-print('\nDone!')
+# 1. chiang-mai Hero: Kyoto -> Chiang Mai temple
+fix_hero('chiang-mai.html', base_kyoto, base_chiang)
+
+# 2. kansai-pass Hero: Kyoto -> Osaka/Kansai
+fix_hero('kansai-pass.html', base_kyoto, base_osaka)
+
+# 3. tainan-food Hero: Bangkok -> Taiwan food
+fix_hero('tainan-food.html', base_bangkok, base_taiwan_food)
+
+# 4. tokyo-5days Hero: Seoul -> Tokyo
+fix_hero('tokyo-5days.html', base_seoul, base_tokyo)
+
+# 5. hokkaido-winter og:image: Bangkok -> Winter scenery
+fix_meta('hokkaido-winter.html', base_bangkok, base_winter, ['og:image', 'twitter:image'])
+
+# 6. hualien-taitung og:image: Winter -> Taiwan beach
+fix_meta('hualien-taitung.html', base_winter, base_beach, ['og:image', 'twitter:image'])
+
+print('\nAll fixes done!')
