@@ -220,3 +220,32 @@ ul { list-style:none; }
   .card-grid { grid-template-columns:1fr; }
   .tools-grid { grid-template-columns:1fr; }
 }
+/* ========== TAIWAN CAR CHARTER SERVICE ========== */
+.car-service { background:linear-gradient(135deg,#f0faf8 0%,#e8f8f7 100%); padding:50px 0; margin:50px 0 0; border-top:1px solid var(--border); }
+.car-service .service-inner { max-width:1100px; margin:0 auto; padding:0 20px; }
+.car-service .service-header { text-align:center; margin-bottom:40px; }
+.car-service .service-header h2 { font-size:26px; font-weight:700; color:var(--tiffany-dark); margin-bottom:8px; }
+.car-service .service-header p { font-size:15px; color:var(--text-gray); }
+.car-service-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); gap:16px; margin-bottom:30px; }
+.car-service-item { background:#fff; border-radius:12px; padding:20px; border:2px solid var(--border); text-align:center; transition:0.3s; }
+.car-service-item:hover { border-color:var(--tiffany); transform:translateY(-3px); box-shadow:0 6px 20px rgba(10,186,181,0.12); }
+.car-service-item .icon { font-size:28px; margin-bottom:10px; }
+.car-service-item h4 { font-size:15px; color:var(--tiffany-dark); margin-bottom:6px; }
+.car-service-item p { font-size:13px; color:var(--text-gray); }
+.car-service-cta { display:flex; flex-wrap:wrap; gap:14px; justify-content:center; align-items:center; }
+.car-service-cta .btn-primary { display:inline-block; background:var(--tiffany); color:#fff; padding:12px 28px; border-radius:30px; font-size:15px; font-weight:500; }
+.car-service-cta .btn-primary:hover { background:var(--tiffany-dark); }
+.car-service-cta .btn-secondary { display:inline-block; background:#fff; color:var(--tiffany-dark); padding:12px 28px; border-radius:30px; font-size:15px; font-weight:500; border:2px solid var(--tiffany); }
+.car-service-cta .btn-secondary:hover { background:var(--tiffany-light); }
+.car-service-trust { display:flex; flex-wrap:wrap; gap:20px; justify-content:center; margin-top:24px; }
+.car-service-trust span { font-size:13px; color:var(--text-gray); background:#fff; padding:6px 14px; border-radius:20px; border:1px solid var(--border); }
+.car-service-trust span::before { content:'✓ '; color:var(--tiffany); font-weight:700; }
+
+/* ========== ARTICLE BOTTOM CTA ========== */
+.article-bottom-cta { background:var(--tiffany); padding:30px; border-radius:12px; margin:40px 0 0; text-align:center; color:#fff; }
+.article-bottom-cta h3 { font-size:20px; margin-bottom:8px; }
+.article-bottom-cta p { font-size:14px; opacity:0.9; margin-bottom:14px; }
+.article-bottom-cta .cta-badges { display:flex; flex-wrap:wrap; gap:12px; justify-content:center; margin-bottom:14px; }
+.article-bottom-cta .badge { background:rgba(255,255,255,0.2); padding:6px 16px; border-radius:20px; font-size:13px; }
+.article-bottom-cta .btn-white { display:inline-block; background:#fff; color:var(--tiffany); padding:10px 28px; border-radius:30px; font-size:14px; font-weight:600; margin:4px; }
+.article-bottom-cta .btn-white:hover { background:var(--tiffany-light); color:#fff; }
