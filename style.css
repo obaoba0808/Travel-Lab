@@ -63,9 +63,9 @@ ul { list-style:none; }
 .category-hero .overlay p { color:rgba(255,255,255,0.85); font-size:15px; margin-top:6px; }
 
 /* ========== ARTICLE HERO (for pages with .hero class) ========== */
-.hero { position:relative; width:100%; overflow:hidden; margin-bottom:0; max-height: 400px; } /* Added max-height */
+.hero { position:relative; width:100%; margin-bottom:0; } /* Added max-height */
 .hero::before { display:none; }
-.hero-img { width:100%; height:auto; display:block; object-fit: cover; object-position: center; } /* Added object-fit */
+.hero-img { width:100%; height:auto; display:block; } /* Added object-fit */
 .hero-title { text-align:center; padding:28px 20px 20px 20px; }
 .hero-title h1 { /* Changed from h2 to h1 to match HTML */
     font-family:'Noto Serif TC',serif;
