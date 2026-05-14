@@ -20,7 +20,7 @@ ul { list-style:none; }
 
 /* ========== TOP BAR ========== */
 .site-topbar { background:var(--bg); border-bottom:1px solid var(--border); position:sticky; top:0; z-index:999; }
-.topbar-inner { max-width:1140px; margin:0 auto; padding:0 20px; display:flex; align-items:center; justify-content:space-between; height:52px; }
+.topbar-inner { max-width:1240px; /* Aligned with three-col-wrapper max-width */ margin:0 auto; padding:0 20px; display:flex; align-items:center; justify-content:space-between; height:52px; }
 .main-nav { display:flex; gap:0; }
 .main-nav a { display:block; padding:14px 16px; font-size:14px; font-weight:500; color:var(--text-dark); letter-spacing:0.3px; border-bottom:3px solid transparent; }
 .main-nav a:hover, .main-nav a.active { color:var(--tiffany); border-bottom-color:var(--tiffany); }
@@ -85,11 +85,6 @@ ul { list-style:none; }
 .article-hero .overlay h2 { color:#fff; font-family:'Noto Serif TC',serif; font-size:28px; font-weight:700; line-height:1.4; }
 .article-hero .overlay .meta { color:rgba(255,255,255,0.75); font-size:13px; margin-top:8px; }
 
-/* ========== MAIN CONTENT LAYOUT (Original was .site-content, updated for .three-col-wrapper) ========== */
-/* Removed original .site-content and .sidebar styles from here to avoid conflict,
-   as three-col-wrapper handles the main layout for this specific page.
-   If .site-content is used elsewhere, you might need to adjust. */
-
 /* CHARTER BANNER - Apply max-width and centering */
 div[style*="max-width:900px;margin:0 auto 30px;padding:0 20px;"] {
     max-width: 900px;
@@ -106,14 +101,14 @@ div[style*="max-width:900px;margin:0 auto 30px;padding:0 20px;"] {
   padding: 0 20px; /* Adjusted padding for consistency */
   gap: 24px; /* Adjusted gap for consistency */
   align-items: flex-start;
-  /* Removed flex-wrap: wrap for initial desktop view to ensure three columns */
+  /* flex-wrap: wrap; Removed for initial desktop view to ensure three columns */
 }
 
 .sidebar-card {
   width: 250px; /* Adjusted fixed width for sidebars */
   flex-shrink: 0;
   position: sticky;
-  top: 80px; /* Adjusted top for sticky to clear topbar */
+  top: 80px; /* Adjusted top for sticky to clear topbar (52px topbar + ~28px margin) */
   border-radius: 14px;
   overflow: hidden;
   background: #fff;
@@ -326,12 +321,12 @@ div[style*="max-width:900px;margin:0 auto 30px;padding:0 20px;"] {
 
 /* ========== FOOTER ========== */
 .site-footer { background:#1a1a1a; color:#ccc; padding:40px 0; margin-top:40px; /* Removed width:100vw and margins, let it behave normally within parent */ }
-.footer-inner { max-width:1140px; margin:0 auto; display:flex; justify-content:space-between; flex-wrap:wrap; gap:30px; padding: 0 20px; /* Added padding */ }
+.footer-inner { max-width:1240px; /* Aligned with three-col-wrapper max-width */ margin:0 auto; display:flex; justify-content:space-between; flex-wrap:wrap; gap:30px; padding: 0 20px; /* Added padding */ }
 .footer-col { flex:1; min-width:200px; }
 .footer-col h4 { color:#fff; font-size:14px; font-weight:700; margin-bottom:12px; }
 .footer-col a { display:block; font-size:13px; color:#999; padding:3px 0; }
 .footer-col a:hover { color:var(--tiffany); }
-.footer-bottom { max-width:1140px; margin:20px auto 0; padding-top:20px; border-top:1px solid #444; text-align:center; font-size:12px; color:#666; }
+.footer-bottom { max-width:1240px; /* Aligned with three-col-wrapper max-width */ margin:20px auto 0; padding-top:20px; border-top:1px solid #444; text-align:center; font-size:12px; color:#666; }
 
 /* ========== TOOLS GRID ========== */
 .tools-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:30px; } /* Adjusted minmax to 300px for consistency */
@@ -344,14 +339,9 @@ div[style*="max-width:900px;margin:0 auto 30px;padding:0 20px;"] {
 
 /* ========== MOBILE ========== */
 .mobile-toggle { display:none; background:none; border:none; font-size:20px; cursor:pointer; color:var(--text-dark); }
-@media(max-width:900px) {
-  /* Removed .site-content flex-direction:column; as it's not used for this page's main layout */
-  /* Re-enable .sidebar for general purpose if needed elsewhere */
-  .featured-grid { grid-template-columns:1fr; }
-  .featured-main { grid-row:auto; }
-  .featured-main img { min-height:240px; }
 
-  /* Adjust three-col-wrapper for tablet/small desktop */
+/* --- Tablet/Small Desktop Breakpoint --- */
+@media(max-width:1024px) { /* Changed from 900px to 1024px for smoother transition */
   .three-col-wrapper {
     flex-direction: column; /* Stack columns vertically */
     align-items: center; /* Center items when stacked */
@@ -359,18 +349,24 @@ div[style*="max-width:900px;margin:0 auto 30px;padding:0 20px;"] {
   }
   .sidebar-card {
     width: 90%; /* Take up more width when stacked */
-    max-width: 400px; /* Max width for readability when stacked */
+    max-width: 600px; /* Max width for readability when stacked */
     position: static; /* Remove sticky behavior when stacked */
     top: auto;
   }
   .col-center {
     width: 90%; /* Take up more width when stacked */
     padding: 25px; /* Adjust padding for smaller screens */
+    max-width: 700px; /* Keep content readable */
   }
   .hero-title h1 { font-size: 28px; }
   .hero-title p { font-size: 14px; }
+  .related-card .post-thumb { width: 180px; height: 120px; } /* Adjust size for stacked related card */
+  .related-card .post-body { padding: 12px; }
 }
+
+/* --- Mobile Breakpoint --- */
 @media(max-width:768px) {
+  .topbar-inner { padding: 0 15px; } /* Adjust topbar padding */
   .main-nav { display:none; flex-direction:column; position:absolute; top:52px; left:0; right:0; background:#fff; box-shadow:0 4px 12px var(--shadow); padding:10px 0; z-index:998; }
   .main-nav.open { display:flex; }
   .main-nav a { padding:12px 20px; border-bottom:none; }
@@ -392,18 +388,20 @@ div[style*="max-width:900px;margin:0 auto 30px;padding:0 20px;"] {
   .faq-section h2 { font-size: 20px; margin-bottom: 20px; }
   .footer-col { flex-basis: calc(50% - 15px); } /* Two columns in footer */
 }
+
+/* --- Smallest Mobile Breakpoint --- */
 @media(max-width:480px) {
-    .topbar-inner { padding: 0 15px; } /* Adjust topbar padding */
-    .hero-title h1 { font-size: 24px; }
-    .hero-title p { font-size: 13px; }
-    .three-col-wrapper { padding: 0 15px; } /* Adjust wrapper padding */
+    .topbar-inner { padding: 0 10px; } /* Adjust topbar padding for very small screens */
+    .hero-title h1 { font-size: 22px; }
+    .hero-title p { font-size: 12px; }
+    .three-col-wrapper { padding: 0 10px; } /* Adjust wrapper padding */
     .sidebar-card, .col-center { width: 100%; } /* Full width on smallest screens */
-    .col-center { padding: 20px; }
-    .related-card .post-thumb { height: 150px; }
-    .footer-inner { padding: 0 15px; }
+    .col-center { padding: 15px; } /* Reduced padding for content */
+    .related-card .post-thumb { height: 120px; }
+    .footer-inner { padding: 0 10px; }
     .footer-col { flex-basis: 100%; } /* Single column in footer */
-    .article-bottom-cta .btn-white { padding: 10px 20px; font-size: 13px; } /* Smaller CTA buttons */
-    .article-bottom-cta .badge { font-size: 12px; padding: 5px 12px; }
+    .article-bottom-cta .btn-white { padding: 8px 18px; font-size: 12px; } /* Smaller CTA buttons */
+    .article-bottom-cta .badge { font-size: 11px; padding: 4px 10px; }
 }
 
 /* ========== TAIWAN CAR CHARTER SERVICE (Keep your original styles) ========== */
