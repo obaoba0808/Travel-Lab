@@ -42,7 +42,7 @@ ul { list-style:none; }
 
 /* ========== FEATURED GRID ========== */
 .featured-section { background:var(--bg-light); padding:30px 0 20px; }
-.featured-inner { max-width:1140px; margin:0 auto; padding:0 40px; }
+.featured-inner { max-width:1140px; margin:0 auto; padding:0 60px; }
 .featured-grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
 .featured-main { grid-row:span 2; position:relative; border-radius:10px; overflow:hidden; }
 .featured-main img { width:100%; height:100%; object-fit:cover; min-height:380px; transition:0.4s; }
@@ -405,7 +405,7 @@ div[style*="max-width:900px;margin:0 auto 30px;padding:0 20px;"] {
 
 /* ========== TAIWAN CAR CHARTER SERVICE (Keep your original styles) ========== */
 .car-service { background:linear-gradient(135deg,#f0faf8 0%,#e8f8f7 100%); padding:50px 0; margin:50px 0 0; border-top:1px solid var(--border); }
-.car-service .service-inner { max-width:1100px; margin:0 auto; padding:0 40px; }
+.car-service .service-inner { max-width:1100px; margin:0 auto; padding:0 60px; }
 .car-service .service-header { text-align:center; margin-bottom:40px; }
 .car-service .service-header h2 { font-size:26px; font-weight:700; color:var(--tiffany-dark); margin-bottom:8px; }
 .car-service .service-header p { font-size:15px; color:var(--text-gray); }
