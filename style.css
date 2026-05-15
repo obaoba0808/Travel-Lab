@@ -57,7 +57,7 @@ ul { list-style:none; }
 
 /* ========== CATEGORY HERO ========== */
 .category-hero { position:relative; overflow:hidden; }
-.category-hero img { width:100%; height:100%; object-fit:cover; }
+.category-hero img { width:100%; height:auto; object-fit:contain; display:block; }
 .category-hero .overlay { position:absolute; inset:0; display:flex; align-items:flex-end; padding:40px; color:#fff; text-shadow:0 1px 4px rgba(0,0,0,0.6); }
 .category-hero .overlay h2 { color:#fff; font-family:'Noto Serif TC',serif; font-size:32px; font-weight:700; }
 .category-hero .overlay p { color:rgba(255,255,255,0.85); font-size:15px; margin-top:6px; }
@@ -379,7 +379,7 @@ div[style*="max-width:900px;margin:0 auto 30px;padding:0 20px;"] {
   .related-card .post-thumb { width:100%; height:180px; } /* Ensured related card image height */
   .related-card .post-body { padding: 15px; } /* Added padding for readability */
   .site-branding h1 { font-size:24px; }
-  .category-hero, .article-hero { height:240px; }
+  .category-hero, .article-hero { height:auto; min-height:0; }
   .category-hero .overlay h2, .article-hero .overlay h2 { font-size:22px; }
   .card-grid { grid-template-columns:1fr; }
   .tools-grid { grid-template-columns:1fr; }
