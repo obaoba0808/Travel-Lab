@@ -1,0 +1,7 @@
+import sys; sys.stdout.reconfigure(encoding='utf-8')
+c = open('japan-travel.html', 'r', encoding='utf-8').read()
+# Find the 2nd japan-hero.png (card thumbnail, not hero)
+idx = c.find('images/japan-hero.png')
+idx2 = c.find('images/japan-hero.png', idx + 1)
+print('=== 2nd occurrence (card) ===')
+print(c[max(0,idx2-100):idx2+100])
