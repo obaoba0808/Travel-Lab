@@ -136,80 +136,46 @@
 </div>
 
 <!-- MAIN CONTENT -->
-<div class="site-content">
-  <main class="content-area">
-    <h2 class="section-title">最新文章</h2>
-    <div class="posts-grid">
-      <article class="card">
-        <div class="card-image">
-          <img src="images/chiangmai-hero.webp" alt="【清邁數位遊牧】7天生活指南" width="1536" height="1024">
-        </div>
-        <div class="card-content">
-          <h3><a href="chiang-mai.html">【清邁數位遊牧】7天生活指南</a></h3>
-          <p>清邁咖啡廳、長租公寓、簽證與網路推薦，數位遊牧必備攻略。</p>
-          <a href="chiang-mai.html" class="btn btn-primary">閱讀文章</a>
-        </div>
-      </article>
-      <article class="card">
-        <div class="card-image">
-          <img src="images/bangkok-hero.webp" alt="【曼谷3天2夜】吃貨攻略" width="1536" height="1024">
-        </div>
-        <div class="card-content">
-          <h3><a href="bangkok-3days.html">【曼谷3天2夜】吃貨攻略</a></h3>
-          <p>洽圖洽週末市集、唐人街、10大必吃美食推薦。</p>
-          <a href="bangkok-3days.html" class="btn btn-primary">閱讀文章</a>
-        </div>
-      </article>
-    </div>
-  </main>
+<main class="site-content" style="display:block;">
+  <div class="section-divider"><h2>🌏 東南亞旅遊文章</h2></div>
+  <div class="card-grid">
 
-  <!-- SIDEBAR -->
-  <aside class="sidebar">
-    <div class="sidebar-widget">
-      <h3>分類導覽</h3>
-      <ul>
-        <li><a href="japan-travel.html">日本自由行</a></li>
-        <li><a href="korea-travel.html">韓國自由行</a></li>
-        <li><a href="taiwan-travel.html">台灣旅遊</a></li>
-        <li><a href="southeast-asia.html">東南亞自由行</a></li>
-        <li><a href="travel-tools.html">旅遊工具推薦</a></li>
-      </ul>
-    </div>
+    <article class="card">
+      <img src="images/chiangmai-hero.webp" alt="清邁數位遊牧7天生活指南" width="1536" height="1024">
+      <div class="card-body">
+        <a href="southeast-asia.html" class="cat-tag">東南亞自由行</a>
+        <h3><a href="chiang-mai.html">【清邁數位遊牧】7天生活指南</a></h3>
+        <p>清邁咖啡廳、長租公寓、簽證與網路推薦，數位遊牧必備攻略。</p>
+        <a href="chiang-mai.html" class="read-more">閱讀文章 →</a>
+      </div>
+    </article>
 
-    <div class="sidebar-widget">
-      <h3>熱門文章</h3>
-      <ul>
-        <li><a href="tokyo-5days.html">東京5天4夜行程攻略</a></li>
-        <li><a href="seoul-food.html">首爾必吃美食清單</a></li>
-        <li><a href="okinawa.html">沖繩自駕攻略</a></li>
-      </ul>
-    </div>
+    <article class="card">
+      <img src="images/bangkok-hero.webp" alt="曼谷3天2夜吃貨攻略" width="1536" height="1024">
+      <div class="card-body">
+        <a href="southeast-asia.html" class="cat-tag">東南亞自由行</a>
+        <h3><a href="bangkok-3days.html">【曼谷3天2夜】吃貨攻略</a></h3>
+        <p>洽圖洽週末市集、唐人街、10大必吃美食推薦，從街頭到夜市一路吃到飽。</p>
+        <a href="bangkok-3days.html" class="read-more">閱讀文章 →</a>
+      </div>
+    </article>
 
-    <div class="sidebar-widget">
-      <h3>優惠工具</h3>
-      <ul>
-        <li><a href="https://www.agoda.com/zh-tw" target="_blank" rel="noopener noreferrer sponsored">Agoda 訂房優惠</a></li>
-        <li><a href="https://www.klook.com/zh-TW/" target="_blank" rel="noopener noreferrer sponsored">Klook 門票折扣</a></li>
-        <li><a href="https://www.skyscanner.com.tw/" target="_blank" rel="noopener noreferrer sponsored">Skyscanner 機票比價</a></li>
-        <li><a href="https://www.airalo.com/" target="_blank" rel="noopener noreferrer sponsored">Airalo eSIM</a></li>
-      </ul>
-    </div>
-  </aside>
-</div>
+  </div>
+</main>
 
 <section class="faq-section" style="max-width:900px;margin:40px auto;padding:0 40px;">
-  <h2 class="section-title">常見問題</h2>
-  <div class="faq-item">
-    <h3 class="faq-q">Q: 東南亞自由行哪裡最便宜？</h3>
-    <p class="faq-a">泰國和越南是 CP 值最高的目的地。清邁一個月生活費約 NT,000-30,000，曼谷3天2夜約 NT,000-20,000。</p>
+  <h2 class="section-title">❓ 常見問題</h2>
+  <div class="faq-item" onclick="this.classList.toggle('open')">
+    <div class="faq-q">東南亞自由行哪裡最便宜？</div>
+    <div class="faq-a">泰國和越南是 CP 值最高的目的地。清邁一個月生活費約 NT$15,000-30,000，曼谷3天2夜約 NT$8,000-20,000。</div>
   </div>
-  <div class="faq-item">
-    <h3 class="faq-q">Q: 東南亞需要簽證嗎？</h3>
-    <p class="faq-a">台灣護照前往泰國免簽60天，越南需要電子簽證（約 US）。建議出發前查最新簽證政策。</p>
+  <div class="faq-item" onclick="this.classList.toggle('open')">
+    <div class="faq-q">東南亞需要簽證嗎？</div>
+    <div class="faq-a">台灣護照前往泰國免簽60天，越南需要電子簽證（約 US$25-50）。建議出發前查最新簽證政策。</div>
   </div>
-  <div class="faq-item">
-    <h3 class="faq-q">Q: 東南亞哪裡適合數位遊牧？</h3>
-    <p class="faq-a">清邁是亞洲數位遊牧大本營，咖啡廳多、物價低、社群活躍。曼谷和巴厘島也是熱門選擇。</p>
+  <div class="faq-item" onclick="this.classList.toggle('open')">
+    <div class="faq-q">東南亞哪裡適合數位遊牧？</div>
+    <div class="faq-a">清邁是亞洲數位遊牧大本營，咖啡廳多、物價低、社群活躍。曼谷和巴厘島也是熱門選擇。</div>
   </div>
 </section>
 
