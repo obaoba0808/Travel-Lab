@@ -218,6 +218,8 @@ div[style*="max-width:900px;margin:0 auto 30px;padding:0 20px;"] {
 }
 
 /* ========== POST LIST (blog style like vialife) ========== */
+.site-content { max-width:1140px; margin:0 auto; padding:0 40px; }
+
 .post-item { display:flex; gap:24px; padding:28px 0; border-bottom:1px solid var(--border); }
 .post-item:first-child { padding-top:0; }
 .post-thumb { width:280px; flex-shrink:0; border-radius:8px; overflow:hidden; }
