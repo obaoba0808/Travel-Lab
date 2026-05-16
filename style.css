@@ -62,6 +62,66 @@ ul { list-style:none; }
 .category-hero .overlay h2 { color:#fff; font-family:'Noto Serif TC',serif; font-size:32px; font-weight:700; }
 .category-hero .overlay p { color:rgba(255,255,255,0.85); font-size:15px; margin-top:6px; }
 
+/* ========== FULL-BLEED HERO (image + title below) ========== */
+.hero-full-bleed {
+  width: 100%;
+  line-height: 0;
+}
+.hero-full-img {
+  width: 100%;
+  height: auto;
+  max-height: 520px;
+  object-fit: cover;
+  object-position: center 35%;
+  display: block;
+}
+.hero-title-block {
+  background: linear-gradient(135deg, var(--tiffany-light) 0%, #fff 100%);
+  padding: 36px 24px 32px;
+  text-align: center;
+  border-bottom: 3px solid var(--tiffany);
+}
+.hero-title-inner {
+  max-width: 720px;
+  margin: 0 auto;
+}
+.hero-region-tag {
+  display: inline-block;
+  background: var(--tiffany);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 4px 16px;
+  border-radius: 20px;
+  margin-bottom: 14px;
+}
+.hero-main-title {
+  font-family: 'Noto Serif TC', serif;
+  font-size: 34px;
+  font-weight: 700;
+  color: #1a1a2e;
+  line-height: 1.4;
+  margin: 0 0 10px 0;
+}
+.hero-sub-title {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.7;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .hero-full-img { max-height: 320px; }
+  .hero-main-title { font-size: 26px; }
+  .hero-title-block { padding: 28px 16px 24px; }
+}
+@media (max-width: 480px) {
+  .hero-full-img { max-height: 220px; }
+  .hero-main-title { font-size: 22px; }
+}
+
 /* ========== ARTICLE HERO (for pages with .hero class) ========== */
 .hero { position:relative; width:100%; margin-bottom:0; } /* Added max-height */
 .hero::before { display:none; }
