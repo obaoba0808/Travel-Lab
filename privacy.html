@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="zh-Hant-TW">
 <head>
 <meta charset="UTF-8">
@@ -10,23 +10,17 @@
 <link rel="alternate" hreflang="zh-Hant" href="https://golightly.fun/privacy.html">
 <link rel="alternate" hreflang="zh-TW" href="https://golightly.fun/privacy.html">
 <link rel="alternate" hreflang="x-default" href="https://golightly.fun/privacy.html">
-
-<!-- Open Graph -->
 <meta property="og:title" content="隱私權政策｜均在路上 Travel Lab">
 <meta property="og:description" content="均在路上 Travel Lab 隱私權政策，說明我們如何收集、使用和保護您的個人資料。">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://golightly.fun/privacy.html">
 <meta property="og:image" content="https://golightly.fun/images/tokyo-hero.webp">
-<meta property="og:site_name" content="均在路上 Travel Lab">
+<meta property="og:site_name" content="均在在路上 Travel Lab">
 <meta property="og:locale" content="zh_TW">
-
-<!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="隱私權政策｜均在路上 Travel Lab">
-<meta name="twitter:description" content="均在路上 Travel Lab 隱私權政策，說明我們如何收集、使用和保護您的個人資料。">
+<meta name="twitter:description" content="均在路上 Travel Lab 隱私權政策。">
 <meta name="twitter:image" content="https://golightly.fun/images/tokyo-hero.webp">
-
-<!-- JSON-LD: WebPage -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -34,11 +28,7 @@
   "name": "隱私權政策",
   "description": "均在路上 Travel Lab 隱私權政策，說明我們如何收集、使用和保護您的個人資料。",
   "url": "https://golightly.fun/privacy.html",
-  "isPartOf": {
-    "@type": "WebSite",
-    "name": "均在路上 Travel Lab",
-    "url": "https://golightly.fun/"
-  }
+  "isPartOf": {"@type": "WebSite", "name": "均在路上 Travel Lab", "url": "https://golightly.fun/"}
 }
 </script>
 <script type="application/ld+json">
@@ -51,16 +41,10 @@
   ]
 }
 </script>
-
-<!-- Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&family=Noto+Serif+TC:wght@400;700&display=swap" rel="stylesheet">
-
-<!-- Stylesheet -->
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
-
-<!-- Google Analytics 4 -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-S7KQGHSD2R"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -69,6 +53,259 @@
   gtag('config', 'G-S7KQGHSD2R');
 </script>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✈️</text></svg>">
+<style>
+/* ===== PRIVACY PAGE ===== */
+.legal-hero {
+  background: linear-gradient(135deg, #0ABAB5 0%, #089693 100%);
+  padding: 56px 20px 60px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.legal-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 70% 50%, rgba(255,255,255,0.07) 0%, transparent 60%);
+  pointer-events: none;
+}
+.legal-hero-icon { font-size: 52px; margin-bottom: 14px; display: block; }
+.legal-hero h1 {
+  font-family: 'Noto Serif TC', serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 8px;
+  position: relative;
+}
+.legal-hero p { font-size: 15px; color: rgba(255,255,255,0.85); max-width: 480px; margin: 0 auto; }
+
+/* Layout */
+.legal-main { max-width: 1060px; margin: 0 auto; padding: 48px 20px 64px; }
+.legal-body { display: flex; gap: 36px; align-items: flex-start; }
+
+/* TOC */
+.legal-toc {
+  width: 220px;
+  flex-shrink: 0;
+  position: sticky;
+  top: 72px;
+  background: #fff;
+  border-radius: 16px;
+  border: 2px solid #e0f7f7;
+  padding: 24px 20px;
+  max-height: calc(100vh - 100px);
+  overflow-y: auto;
+}
+.toc-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 14px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #e0f7f7;
+}
+.toc-list { list-style: none; padding: 0; margin: 0; }
+.toc-list li { margin-bottom: 4px; }
+.toc-list a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: #555;
+  padding: 8px 10px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
+.toc-list a:hover { background: #e0f7f7; color: #089693; }
+.toc-list a.active { background: #e0f7f7; color: #089693; font-weight: 700; }
+.toc-num {
+  font-size: 11px;
+  font-weight: 700;
+  background: #0ABAB5;
+  color: #fff;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* Content */
+.legal-content { flex: 1; min-width: 0; }
+
+.legal-meta-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 28px;
+  padding: 12px 18px;
+  background: linear-gradient(135deg, #f0fcfc, #fff);
+  border: 1.5px solid #e0f7f7;
+  border-radius: 10px;
+}
+.legal-meta-bar .meta-icon { font-size: 18px; }
+.legal-meta-bar .meta-text { font-size: 13px; color: #666; }
+.legal-meta-bar .meta-text strong { color: #089693; }
+
+/* Section blocks */
+.legal-section {
+  background: #fff;
+  border-radius: 18px;
+  border: 1.5px solid #eaeaea;
+  margin-bottom: 18px;
+  overflow: hidden;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.legal-section:hover {
+  border-color: #0ABAB5;
+  box-shadow: 0 4px 20px rgba(10,186,181,0.08);
+}
+.legal-section-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 22px 28px 18px;
+  cursor: pointer;
+  user-select: none;
+}
+.section-num-badge {
+  font-size: 11px;
+  font-weight: 700;
+  background: #0ABAB5;
+  color: #fff;
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.section-title-wrap { flex: 1; }
+.section-title-wrap h2 {
+  font-family: 'Noto Serif TC', serif;
+  font-size: 17px;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 3px;
+}
+.section-title-wrap p { font-size: 12px; color: #aaa; }
+.section-chevron { font-size: 16px; color: #aaa; transition: transform 0.3s; flex-shrink: 0; }
+.legal-section.open .section-chevron { transform: rotate(180deg); }
+.legal-section-body { display: none; padding: 0 28px 24px; }
+.legal-section.open .legal-section-body { display: block; }
+
+/* Content styling */
+.legal-section-body p { font-size: 14px; color: #555; line-height: 1.8; margin-bottom: 14px; }
+.legal-section-body p:last-child { margin-bottom: 0; }
+.legal-section-body ul { list-style: none; padding: 0; margin: 0 0 14px; }
+.legal-section-body li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 14px;
+  color: #444;
+  line-height: 1.7;
+  padding: 8px 0;
+  border-bottom: 1px solid #f5f5f5;
+}
+.legal-section-body li:last-child { border-bottom: none; }
+.li-icon { font-size: 16px; flex-shrink: 0; margin-top: 1px; }
+.li-bold { font-weight: 700; color: #1a1a2e; min-width: 110px; flex-shrink: 0; }
+.legal-section-body a { color: #0ABAB5; font-weight: 600; }
+.legal-section-body a:hover { text-decoration: underline; }
+
+.legal-section-body .highlight-box {
+  background: linear-gradient(135deg, #e0f7f7, #f0fcfc);
+  border-left: 4px solid #0ABAB5;
+  border-radius: 0 10px 10px 0;
+  padding: 16px 20px;
+  margin: 12px 0;
+  font-size: 13px;
+  color: #444;
+  line-height: 1.7;
+}
+.highlight-box strong { color: #089693; }
+
+/* Quick summary cards */
+.quick-summary {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-bottom: 28px;
+}
+.qs-card {
+  background: #fff;
+  border-radius: 14px;
+  border: 1.5px solid #e0f7f7;
+  padding: 20px 16px;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.qs-card:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(10,186,181,0.12); }
+.qs-icon { font-size: 32px; display: block; margin-bottom: 10px; }
+.qs-title { font-size: 14px; font-weight: 700; color: #1a1a2e; margin-bottom: 4px; }
+.qs-desc { font-size: 12px; color: #888; line-height: 1.5; }
+
+/* Accordion items inside section */
+.accordion-item {
+  background: #f9fcfc;
+  border-radius: 10px;
+  padding: 14px 16px;
+  margin-bottom: 10px;
+}
+.accordion-item h4 {
+  font-size: 13px;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.accordion-item p { font-size: 13px; color: #666; line-height: 1.6; }
+
+/* Sticky back-to-top */
+.back-to-top {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 48px;
+  height: 48px;
+  background: #0ABAB5;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  text-decoration: none;
+  box-shadow: 0 4px 16px rgba(10,186,181,0.35);
+  transition: transform 0.2s, box-shadow 0.2s;
+  z-index: 100;
+}
+.back-to-top:hover { transform: translateY(-3px); box-shadow: 0 6px 22px rgba(10,186,181,0.45); }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .legal-body { flex-direction: column; }
+  .legal-toc { width: 100%; position: static; max-height: none; }
+  .quick-summary { grid-template-columns: 1fr; }
+  .legal-hero h1 { font-size: 28px; }
+}
+@media (max-width: 480px) {
+  .legal-hero { padding: 40px 16px 48px; }
+  .legal-hero h1 { font-size: 24px; }
+  .legal-section-header { padding: 16px 18px 14px; }
+  .legal-section-body { padding: 0 18px 20px; }
+}
+</style>
 </head>
 <body>
 
@@ -117,71 +354,208 @@
   </div>
 </div>
 
-<!-- SITE BRANDING -->
-<div class="site-branding">
-  <span class="site-title">均在路上 <span>Travel Lab</span></span>
-  <p>用最少預算，走最多地方的實戰旅遊攻略</p>
-</div>
-
-<!-- CATEGORY HERO -->
-<div class="category-hero" style="background-image: url('images/tokyo-hero.webp');">
-  <div class="overlay"></div>
-  <div class="hero-content">
-    <h1>隱私權政策</h1>
-    <p>我們重視您的隱私，以下說明我們如何處理您的資料。</p>
-  </div>
-</div>
+<!-- LEGAL HERO -->
+<section class="legal-hero">
+  <span class="legal-hero-icon">🔒</span>
+  <h1>隱私權政策</h1>
+  <p>我們重視您的隱私，以下說明我們如何處理您的資料。<br>最後更新：2026年5月15日</p>
+</section>
 
 <!-- MAIN CONTENT -->
-<div class="site-content">
-  <main class="content-area" style="max-width:800px;">
+<div class="legal-main">
+  <div class="legal-body">
 
-    <p><em>最後更新日期：2026年5月15日</em></p>
+    <!-- TOC -->
+    <nav class="legal-toc">
+      <div class="toc-title">📋 章節導覽</div>
+      <ul class="toc-list">
+        <li><a href="#s1" class="toc-item active" onclick="smoothScroll(event, 's1')"><span class="toc-num">1</span>資料收集</a></li>
+        <li><a href="#s2" class="toc-item" onclick="smoothScroll(event, 's2')"><span class="toc-num">2</span>使用目的</a></li>
+        <li><a href="#s3" class="toc-item" onclick="smoothScroll(event, 's3')"><span class="toc-num">3</span>第三方服務</a></li>
+        <li><a href="#s4" class="toc-item" onclick="smoothScroll(event, 's4')"><span class="toc-num">4</span>Cookie 政策</a></li>
+        <li><a href="#s5" class="toc-item" onclick="smoothScroll(event, 's5')"><span class="toc-num">5</span>資料安全</a></li>
+        <li><a href="#s6" class="toc-item" onclick="smoothScroll(event, 's6')"><span class="toc-num">6</span>政策更新</a></li>
+      </ul>
+    </nav>
 
-    <h2>資料收集範圍</h2>
-    <p>我們可能收集以下類型的資料：</p>
-    <ul>
-      <li><strong>Google Analytics Cookie</strong> — 我們使用 Google Analytics 了解網站流量與使用者行為，收集的資料包括瀏覽頁面、停留時間、裝置類型等匿名數據。</li>
-      <li><strong>聯絡表單資訊</strong> — 當您透過 LINE 或 Email 聯繫我們時，我們會收到您提供的姓名、聯絡方式及詢問內容。</li>
-    </ul>
+    <!-- Content -->
+    <div class="legal-content">
 
-    <h2>資料使用目的</h2>
-    <p>我們收集的資料僅用於以下目的：</p>
-    <ul>
-      <li><strong>改善網站體驗</strong> — 透過分析數據優化網站內容與效能。</li>
-      <li><strong>回覆詢問</strong> — 處理您的包車詢價、合作邀約或一般問題。</li>
-    </ul>
-    <p>我們不會將您的個人資料出售或分享給第三方用於行銷目的。</p>
+      <!-- Quick summary -->
+      <div class="quick-summary">
+        <div class="qs-card">
+          <span class="qs-icon">📊</span>
+          <div class="qs-title">僅收集匿名數據</div>
+          <div class="qs-desc">僅使用 Google Analytics 收集匿名流量統計</div>
+        </div>
+        <div class="qs-card">
+          <span class="qs-icon">🚫</span>
+          <div class="qs-title">不販售個資</div>
+          <div class="qs-desc">絕不將您的資料出售或分享給第三方行銷</div>
+        </div>
+        <div class="qs-card">
+          <span class="qs-icon">🔐</span>
+          <div class="qs-title">加密傳輸保護</div>
+          <div class="qs-desc">所有資料傳輸採用加密 HTTPS 協 定</div>
+        </div>
+      </div>
 
-    <h2>第三方服務</h2>
-    <p>本網站使用以下第三方服務：</p>
-    <ul>
-      <li><strong>Google Analytics</strong> — 網站流量分析，相關隱私政策請參閱 <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google 隱私權政策</a>。</li>
-      <li><strong>聯盟行銷連結</strong> — 本站部分連結為聯盟行銷連結（如 Agoda、Klook、Skyscanner、Airalo），點擊後可能產生追蹤 Cookie，但不影響您的購買價格。</li>
-    </ul>
+      <!-- Meta bar -->
+      <div class="legal-meta-bar">
+        <span class="meta-icon">📅</span>
+        <span class="meta-text">最後更新：<strong>2026年5月15日</strong></span>
+        <span class="meta-icon" style="margin-left:8px;">🔗</span>
+        <span class="meta-text"><a href="contact.html">有問題？聯絡我們 →</a></span>
+      </div>
 
-    <h2>Cookie 政策</h2>
-    <p>本網站使用 Cookie 以提升瀏覽體驗：</p>
-    <ul>
-      <li><strong>必要 Cookie</strong> — 網站正常運作所需。</li>
-      <li><strong>分析 Cookie</strong> — Google Analytics 使用，用於了解訪客行為。</li>
-      <li><strong>聯盟行銷 Cookie</strong> — 追蹤推薦連結的點擊。</li>
-    </ul>
-    <p>您可以透過瀏覽器設定停用 Cookie，但可能影響部分網站功能。</p>
+      <!-- Section 1 -->
+      <div class="legal-section" id="s1">
+        <div class="legal-section-header" onclick="toggleSection(this)">
+          <span class="section-num-badge">1</span>
+          <div class="section-title-wrap">
+            <h2>資料收集範圍</h2>
+            <p>我們收集什麼資料，以及為何收集</p>
+          </div>
+          <span class="section-chevron">▼</span>
+        </div>
+        <div class="legal-section-body">
+          <div class="highlight-box">
+            <strong>💡 簡單來說：</strong>我們只收集必要的匿名數據，不會收集您的身份證字號、護照號碼或銀行帳戶等敏感資訊。
+          </div>
+          <p>我們可能收集以下類型的資料：</p>
+          <ul>
+            <li><span class="li-icon">🍪</span><span class="li-bold">Google Analytics</span>了解網站流量與使用者行為，收集瀏覽頁面、停留時間、裝置類型等匿名數據</li>
+            <li><span class="li-icon">💬</span><span class="li-bold">聯絡表單資訊</span>當您透過 LINE 或 Email 聯繫我們時，我們會收到您提供的姓名、聯絡方式及詢問內容</li>
+            <li><span class="li-icon">🔗</span><span class="li-bold">聯盟連結追蹤</span>點擊 Agoda、Klook、Skyscanner 等聯盟連結時，第三方可能產生追蹤 Cookie</li>
+            <li><span class="li-icon">📧</span><span class="li-bold">Email 訂閱</span>我們目前未提供電子報訂閱服務，未來若有變更會另行公告</li>
+          </ul>
+        </div>
+      </div>
 
-    <h2>資料安全</h2>
-    <p>我們採取合理措施保護您的個人資料，包括限制資料存取權限及使用加密傳輸。然而，網際網路傳輸無法保證百分之百安全，我們無法對資料傳輸的安全性做出絕對保證。</p>
+      <!-- Section 2 -->
+      <div class="legal-section" id="s2">
+        <div class="legal-section-header" onclick="toggleSection(this)">
+          <span class="section-num-badge">2</span>
+          <div class="section-title-wrap">
+            <h2>資料使用目的</h2>
+            <p>我們如何使用您的資料</p>
+          </div>
+          <span class="section-chevron">▼</span>
+        </div>
+        <div class="legal-section-body">
+          <p>我們收集的資料僅用於以下目的：</p>
+          <ul>
+            <li><span class="li-icon">📈</span><span class="li-bold">改善網站體驗</span>透過分析數據優化網站內容與效能，了解訪客最關心的目的地與話題</li>
+            <li><span class="li-icon">💬</span><span class="li-bold">回覆詢問</span>處理您的包車詢價、合作邀約或一般問題</li>
+            <li><span class="li-icon">📊</span><span class="li-bold">流量分析</span>了解哪些攻略頁面最受歡迎，優先更新高流量內容</li>
+          </ul>
+          <div class="highlight-box">
+            <strong>🚫 我們不會：</strong>將您的個人資料出售、轉讓或分享給第三方用於行銷目的。
+          </div>
+        </div>
+      </div>
 
-    <h2>聯絡方式</h2>
-    <p>如果您對本隱私權政策有任何疑問，請透過以下方式聯繫我們：</p>
-    <ul>
-      <li><strong>Email</strong>：<a href="mailto:travel.lab.tw@gmail.com">travel.lab.tw@gmail.com</a></li>
-    </ul>
+      <!-- Section 3 -->
+      <div class="legal-section" id="s3">
+        <div class="legal-section-header" onclick="toggleSection(this)">
+          <span class="section-num-badge">3</span>
+          <div class="section-title-wrap">
+            <h2>第三方服務</h2>
+            <p>我們使用哪些外部工具</p>
+          </div>
+          <span class="section-chevron">▼</span>
+        </div>
+        <div class="legal-section-body">
+          <p>本網站使用以下第三方服務：</p>
+          <div class="accordion-item">
+            <h4>📊 Google Analytics</h4>
+            <p>網站流量分析，了解訪客行為以改善內容品質。<br>相關隱私政策：<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google 隱私權政策</a></p>
+          </div>
+          <div class="accordion-item">
+            <h4>🛏️ 住宿預訂平台（Agoda / Booking.com）</h4>
+            <p>本站住宿推薦頁含聯盟行銷連結，點擊後可能產生追蹤 Cookie，但不影響您的購買價格。<br>如不願被追蹤，可在瀏覽器中啟用「拒絕追蹤」功能。</p>
+          </div>
+          <div class="accordion-item">
+            <h4>🎫 票券與體驗平台（Klook / GetYourGuide）</h4>
+            <p>協助讀者預訂景點門票與當地體驗，連結為聯盟行銷性質。<br>各平台隱私政策請至其官方網站查閱。</p>
+          </div>
+          <div class="accordion-item">
+            <h4>✈️ 機票比價（Skyscanner）</h4>
+            <p>協助讀者比較機票價格與航班選項。</p>
+          </div>
+          <div class="accordion-item">
+            <h4>📱 eSIM（Airalo / Holafly）</h4>
+            <p>協助旅客在出發前購買目的地網卡，連結為聯盟行銷性質。</p>
+          </div>
+        </div>
+      </div>
 
-    <h2>政策更新</h2>
-    <p>我們保留隨時更新本隱私權政策的權利。重大變更將於本頁面公告，建議您定期查看。</p>
+      <!-- Section 4 -->
+      <div class="legal-section" id="s4">
+        <div class="legal-section-header" onclick="toggleSection(this)">
+          <span class="section-num-badge">4</span>
+          <div class="section-title-wrap">
+            <h2>Cookie 政策</h2>
+            <p>什麼是 Cookie 以及我們如何使用</p>
+          </div>
+          <span class="section-chevron">▼</span>
+        </div>
+        <div class="legal-section-body">
+          <p>本網站使用 Cookie 以提升瀏覽體驗：</p>
+          <ul>
+            <li><span class="li-icon">⚙️</span><span class="li-bold">必要 Cookie</span>網站正常運作所需，例如導航功能與安全驗證</li>
+            <li><span class="li-icon">📊</span><span class="li-bold">分析 Cookie</span>Google Analytics 使用，用於了解訪客行為與流量來源</li>
+            <li><span class="li-icon">🔗</span><span class="li-bold">聯盟行銷 Cookie</span>追蹤推薦連結的點擊，以計算聯盟佣金（不影響您的購買價格）</li>
+          </ul>
+          <div class="highlight-box">
+            <strong>🔧 如何管理 Cookie：</strong>您可以透過瀏覽器設定（Chrome / Safari / Firefox）停用 Cookie，但可能影響部分網站功能。多數瀏覽器亦提供「隱私模式」瀏覽，適合在公共電腦上使用。
+          </div>
+        </div>
+      </div>
 
-  </main>
+      <!-- Section 5 -->
+      <div class="legal-section" id="s5">
+        <div class="legal-section-header" onclick="toggleSection(this)">
+          <span class="section-num-badge">5</span>
+          <div class="section-title-wrap">
+            <h2>資料安全</h2>
+            <p>我們如何保護您的資料</p>
+          </div>
+          <span class="section-chevron">▼</span>
+        </div>
+        <div class="legal-section-body">
+          <div class="highlight-box">
+            <strong>🔐 我們的保護措施：</strong>所有資料傳輸採用 HTTPS 加密（TLS 1.2+）；資料存取權限僅限核心管理人員；不使用任何需要伺服器端資料庫儲存會員個人資料的系統。
+          </div>
+          <p>然而，網際網路傳輸無法保證百分之百安全。我們無法對資料傳輸的安全性做出絕對保證，亦不對因不可抗力或第三方原因導致的資料外洩承擔責任。如您發現任何安全疑慮，請立即透過 <a href="contact.html">聯絡我們</a> 回報。</p>
+        </div>
+      </div>
+
+      <!-- Section 6 -->
+      <div class="legal-section" id="s6">
+        <div class="legal-section-header" onclick="toggleSection(this)">
+          <span class="section-num-badge">6</span>
+          <div class="section-title-wrap">
+            <h2>政策更新</h2>
+            <p>何時會修改本政策</p>
+          </div>
+          <span class="section-chevron">▼</span>
+        </div>
+        <div class="legal-section-body">
+          <p>我們保留隨時更新本隱私權政策的權利。重大變更（如新增資料收集類型或第三方服務變更）將於本頁面公告，並更新「最後更新」日期。</p>
+          <div class="highlight-box">
+            <strong>📧 如有重大更新：</strong>我們會在網站首頁置頂公告至少 30 天，確保您有充足時間了解新政策內容。如您在我們公告後繼續使用本網站，即表示您接受修改後的條款。
+          </div>
+          <p>如對本隱私權政策有任何疑問，歡迎透過以下方式聯繫我們：</p>
+          <ul>
+            <li><span class="li-icon">💬</span><span class="li-bold">LINE</span><a href="https://line.me/ti/g/NbNGnW4Eh6" target="_blank" rel="noopener">@938nzmjr</a></li>
+            <li><span class="li-icon">📧</span><span class="li-bold">Email</span><a href="mailto:travel.lab.tw@gmail.com">travel.lab.tw@gmail.com</a></li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
 </div>
 
 <!-- FOOTER -->
@@ -214,10 +588,12 @@
       </ul>
     </div>
     <div class="footer-col">
-      <h4>東南亞自由行</h4>
+      <h4>法律資訊</h4>
       <ul>
-        <li><a href="chiang-mai.html">清邁數位遊牧</a></li>
-        <li><a href="bangkok-3days.html">曼谷吃貨攻略</a></li>
+        <li><a href="privacy.html">隱私權政策</a></li>
+        <li><a href="terms.html">使用條款</a></li>
+        <li><a href="disclaimer.html">免責聲明</a></li>
+        <li><a href="contact.html">聯絡我們</a></li>
       </ul>
     </div>
   </div>
@@ -231,6 +607,42 @@
     </div>
   </div>
 </footer>
+
+<a href="#" class="back-to-top" title="回到頂部">↑</a>
+
+<script>
+// Accordion toggle
+function toggleSection(header) {
+  const section = header.closest('.legal-section');
+  section.classList.toggle('open');
+}
+
+// Active TOC on scroll
+const sections = document.querySelectorAll('.legal-section[id]');
+const tocLinks = document.querySelectorAll('.toc-item');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      tocLinks.forEach(a => a.classList.remove('active'));
+      const active = document.querySelector(`.toc-item[href="#${entry.target.id}"]`);
+      if (active) active.classList.add('active');
+    }
+  });
+}, { threshold: 0.3 });
+sections.forEach(s => observer.observe(s));
+
+// Smooth scroll
+function smoothScroll(e, id) {
+  e.preventDefault();
+  document.getElementById(id).scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+// Back to top
+document.querySelector('.back-to-top').addEventListener('click', (e) => {
+  e.preventDefault();
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+</script>
 
 </body>
 </html>
