@@ -259,5 +259,21 @@
   </div>
 </footer>
 
+
+<script>
+  // Track affiliate link clicks via GA4
+  document.addEventListener('click', function(e) {
+    var link = e.target.closest('[data-affiliate]');
+    if (link) {
+      if (typeof gtag === 'function') {
+        gtag('event', 'affiliate_click', {
+          affiliate: link.getAttribute('data-affiliate'),
+          page: window.location.pathname
+        });
+      }
+    }
+  });
+</script>
+<script src="js/monetization.js" defer></script>
 </body>
 </html>
