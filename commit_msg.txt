@@ -1,6 +1,0 @@
-UI美化：japan-travel.html 标题移至HERO图片下方，杂志式呈现
-
-- 移除 overlay 叠字效果，标题移至图片下方
-- 新增 hero-title-block / hero-region-tag / hero-main-title / hero-sub-title / hero-meta 样式
-- style.css 同步更新
-- og:image / twitter:image 路径统一为 japan-hero.webp
