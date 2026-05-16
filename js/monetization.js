@@ -15,7 +15,7 @@
         <span class="toolbar-icon">✈️</span>
         <span class="toolbar-label">比价机票</span>
       </a>
-      <a href="https://www.klook.com/zh-TW/" target="_blank" rel="noopener sponsored" class="toolbar-btn" data-affiliate="klook">
+      <a href="https://www.klook.com/zh-TW/?dd_referrer=https%3A%2F%2Fwww.klook.com%2Fzh-TW%2Faffiliate%2F" target="_blank" rel="noopener sponsored" class="toolbar-btn" data-affiliate="klook">
         <span class="toolbar-icon">🎫</span>
         <span class="toolbar-label">景点门票</span>
       </a>
@@ -233,7 +233,7 @@
               <div class="cta-card-sub">Skyscanner</div>
             </div>
           </a>
-          <a href="https://www.klook.com/zh-TW/search/results?keyword=${encodeURIComponent(destLabel)}" target="_blank" rel="noopener sponsored" class="cta-card cta-klook" data-affiliate="klook">
+          <a href="https://www.klook.com/zh-TW/search/results?keyword=${encodeURIComponent(destLabel)}&dd_referrer=https%3A%2F%2Fwww.klook.com%2Fzh-TW%2Faffiliate%2F" target="_blank" rel="noopener sponsored" class="cta-card cta-klook" data-affiliate="klook">
             <div class="cta-card-icon">🎫</div>
             <div>
               <div class="cta-card-text">买门票</div>
