@@ -2,7 +2,11 @@
 // Adds floating toolbar and in-article CTA blocks
 
 (function() {
+  // Skip toolbar on homepage
+  const isHomepage = window.location.pathname === '/' || window.location.pathname === '/index.html' || window.location.pathname.endsWith('/index.html');
+  
   // === 1. FLOATING BOTTOM TOOLBAR ===
+  if (!isHomepage) {
   const toolbar = document.createElement('div');
   toolbar.id = 'travel-toolbar';
   toolbar.innerHTML = `
@@ -190,6 +194,7 @@
   if (sentinel) scrollObserver.observe(sentinel);
   // Fallback: show after 1s if still hidden
   setTimeout(() => { if (!toolbarShown) { toolbar.classList.add('visible'); toolbarShown = true; } }, 1500);
+  } // end if (!isHomepage)
 
   // === 2. IN-ARTICLE CTA BLOCK ===
   const mainContent = document.querySelector('.content-area');
@@ -274,6 +279,8 @@
     mainContent.appendChild(pkgBlock);
   }
 
-  // Add padding to body bottom for toolbar
-  document.body.style.paddingBottom = '64px';
+  // Add padding to body bottom for toolbar (only on non-homepage pages)
+  if (!isHomepage) {
+    document.body.style.paddingBottom = '64px';
+  }
 })();
