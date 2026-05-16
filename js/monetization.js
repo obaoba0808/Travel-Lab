@@ -7,7 +7,7 @@
   toolbar.id = 'travel-toolbar';
   toolbar.innerHTML = `
     <div class="toolbar-inner">
-      <a href="https://www.agoda.com/zh-tw" target="_blank" rel="noopener sponsored" class="toolbar-btn" data-affiliate="agoda">
+      <a href="https://www.agoda.com/zh-tw/?tag=e9ea26c2-c046-468f-939d-97d11075d6e0" target="_blank" rel="noopener sponsored" class="toolbar-btn" data-affiliate="agoda">
         <span class="toolbar-icon">🏨</span>
         <span class="toolbar-label">订房优惠</span>
       </a>
@@ -219,7 +219,7 @@
         <div class="article-cta-title">🎒 ${destLabel}旅行实用工具</div>
         <div class="article-cta-desc">出发前先搞定这四件事，省时又省钱</div>
         <div class="cta-grid">
-          <a href="https://www.agoda.com/zh-tw/search/${destSearch}" target="_blank" rel="noopener sponsored" class="cta-card cta-agoda" data-affiliate="agoda">
+          <a href="https://www.agoda.com/zh-tw/search/${destSearch}?tag=e9ea26c2-c046-468f-939d-97d11075d6e0" target="_blank" rel="noopener sponsored" class="cta-card cta-agoda" data-affiliate="agoda">
             <div class="cta-card-icon">🏨</div>
             <div>
               <div class="cta-card-text">订酒店</div>
