@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="zh-Hant-TW">
 <head>
 <meta charset="UTF-8">
@@ -115,7 +115,7 @@
           <a href="bangkok-3days.html">曼谷吃貨攻略</a>
         </div>
       </div>
-      <a href="travel-tools.html">旅遊工具</a>
+      <a href="travel-tools.html" class="active">旅遊工具</a>
     </nav>
   </div>
 </div>
@@ -136,60 +136,87 @@
 </div>
 
 <!-- MAIN CONTENT -->
-<div class="site-content">
-  <main class="content-area">
-    <h2 class="section-title">最新文章</h2>
-    <div class="posts-grid">
+<div class="site-content" style="max-width:1100px;">
+  <main class="content-area" style="max-width:100%;">
+
+    <!-- Tools Grid with Tiffany styling -->
+    <h2 style="color:var(--tiffany-dark); margin:40px 0 24px; padding-left:15px; border-left:5px solid var(--tiffany);">訂房與住宿</h2>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:24px; margin-bottom:40px;">
+      <div style="background:#fff; border-radius:16px; padding:30px; box-shadow:0 4px 24px rgba(10,186,181,0.12); border:2px solid var(--tiffany-light); transition:0.3s;">
+        <div style="display:flex; align-items:center; gap:12px; margin-bottom:16px;">
+          <div style="background:linear-gradient(135deg, #f5a623 0%, #e8941c 100%); width:50px; height:50px; border-radius:12px; display:flex; align-items:center; justify-content:center; font-size:24px;">🏨</div>
+          <h3 style="color:#e8941c; font-size:20px;">Agoda</h3>
+        </div>
+        <p style="color:var(--text-gray); font-size:14px; line-height:1.8; margin-bottom:20px;">全球訂房平台，常態折扣 10-20%，會員累積點數可折抵現金。</p>
+        <a href="https://www.agoda.com/zh-tw" target="_blank" rel="noopener noreferrer sponsored" style="display:inline-block; background:linear-gradient(135deg, #f5a623 0%, #e8941c 100%); color:#fff; padding:10px 24px; border-radius:30px; font-size:14px; font-weight:500;">前往 Agoda →</a>
+      </div>
     </div>
+
+    <h2 style="color:var(--tiffany-dark); margin:40px 0 24px; padding-left:15px; border-left:5px solid var(--tiffany);">景點門票與活動</h2>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:24px; margin-bottom:40px;">
+      <div style="background:#fff; border-radius:16px; padding:30px; box-shadow:0 4px 24px rgba(10,186,181,0.12); border:2px solid var(--tiffany-light); transition:0.3s;">
+        <div style="display:flex; align-items:center; gap:12px; margin-bottom:16px;">
+          <div style="background:linear-gradient(135deg, #FF5A5F 0%, #e04a4f 100%); width:50px; height:50px; border-radius:12px; display:flex; align-items:center; justify-content:center; font-size:24px;">🎫</div>
+          <h3 style="color:#e04a4f; font-size:20px;">Klook</h3>
+        </div>
+        <p style="color:var(--text-gray); font-size:14px; line-height:1.8; margin-bottom:20px;">亞洲最大旅遊體驗平台，門票、一日遊、交通票券一站購足。</p>
+        <a href="https://www.klook.com/zh-TW/" target="_blank" rel="noopener noreferrer sponsored" style="display:inline-block; background:linear-gradient(135deg, #FF5A5F 0%, #e04a4f 100%); color:#fff; padding:10px 24px; border-radius:30px; font-size:14px; font-weight:500;">前往 Klook →</a>
+      </div>
+    </div>
+
+    <h2 style="color:var(--tiffany-dark); margin:40px 0 24px; padding-left:15px; border-left:5px solid var(--tiffany);">機票比價</h2>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:24px; margin-bottom:40px;">
+      <div style="background:#fff; border-radius:16px; padding:30px; box-shadow:0 4px 24px rgba(10,186,181,0.12); border:2px solid var(--tiffany-light); transition:0.3s;">
+        <div style="display:flex; align-items:center; gap:12px; margin-bottom:16px;">
+          <div style="background:linear-gradient(135deg, #00A2DF 0%, #0090c8 100%); width:50px; height:50px; border-radius:12px; display:flex; align-items:center; justify-content:center; font-size:24px;">✈️</div>
+          <h3 style="color:#0090c8; font-size:20px;">Skyscanner</h3>
+        </div>
+        <p style="color:var(--text-gray); font-size:14px; line-height:1.8; margin-bottom:20px;">全球機票比價引擎，一次比較數百家航空，找出最便宜組合。</p>
+        <a href="https://www.skyscanner.com.tw/" target="_blank" rel="noopener noreferrer sponsored" style="display:inline-block; background:linear-gradient(135deg, #00A2DF 0%, #0090c8 100%); color:#fff; padding:10px 24px; border-radius:30px; font-size:14px; font-weight:500;">前往 Skyscanner →</a>
+      </div>
+    </div>
+
+    <h2 style="color:var(--tiffany-dark); margin:40px 0 24px; padding-left:15px; border-left:5px solid var(--tiffany);">出國網路</h2>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:24px; margin-bottom:40px;">
+      <div style="background:#fff; border-radius:16px; padding:30px; box-shadow:0 4px 24px rgba(10,186,181,0.12); border:2px solid var(--tiffany-light); transition:0.3s;">
+        <div style="display:flex; align-items:center; gap:12px; margin-bottom:16px;">
+          <div style="background:linear-gradient(135deg, #333 0%, #222 100%); width:50px; height:50px; border-radius:12px; display:flex; align-items:center; justify-content:center; font-size:24px;">📱</div>
+          <h3 style="color:#333; font-size:20px;">Airalo eSIM</h3>
+        </div>
+        <p style="color:var(--text-gray); font-size:14px; line-height:1.8; margin-bottom:20px;">全球 eSIM 平台，免換卡、即買即用，日韓泰 eSIM 只要 NT$200 起。</p>
+        <a href="https://www.airalo.com/" target="_blank" rel="noopener noreferrer sponsored" style="display:inline-block; background:linear-gradient(135deg, #333 0%, #222 100%); color:#fff; padding:10px 24px; border-radius:30px; font-size:14px; font-weight:500;">前往 Airalo →</a>
+      </div>
+    </div>
+
   </main>
-
-  <!-- SIDEBAR -->
-  <aside class="sidebar">
-    <div class="sidebar-widget">
-      <h3>分類導覽</h3>
-      <ul>
-        <li><a href="japan-travel.html">日本自由行</a></li>
-        <li><a href="korea-travel.html">韓國自由行</a></li>
-        <li><a href="taiwan-travel.html">台灣旅遊</a></li>
-        <li><a href="southeast-asia.html">東南亞自由行</a></li>
-        <li><a href="travel-tools.html">旅遊工具推薦</a></li>
-      </ul>
-    </div>
-
-    <div class="sidebar-widget">
-      <h3>熱門文章</h3>
-      <ul>
-        <li><a href="tokyo-5days.html">東京5天4夜行程攻略</a></li>
-        <li><a href="seoul-food.html">首爾必吃美食清單</a></li>
-        <li><a href="okinawa.html">沖繩自駕攻略</a></li>
-      </ul>
-    </div>
-
-    <div class="sidebar-widget">
-      <h3>優惠工具</h3>
-      <ul>
-        <li><a href="https://www.agoda.com/zh-tw" target="_blank" rel="noopener noreferrer sponsored">Agoda 訂房優惠</a></li>
-        <li><a href="https://www.klook.com/zh-TW/" target="_blank" rel="noopener noreferrer sponsored">Klook 門票折扣</a></li>
-        <li><a href="https://www.skyscanner.com.tw/" target="_blank" rel="noopener noreferrer sponsored">Skyscanner 機票比價</a></li>
-        <li><a href="https://www.airalo.com/" target="_blank" rel="noopener noreferrer sponsored">Airalo eSIM</a></li>
-      </ul>
-    </div>
-  </aside>
 </div>
 
-<section class="faq-section" style="max-width:900px;margin:40px auto;padding:0 40px;">
-  <h2 class="section-title">常見問題</h2>
-  <div class="faq-item">
-    <h3 class="faq-q">Q: 出國旅行必備哪些 APP？</h3>
-    <p class="faq-a">Google Maps（導航）、Google Translate（翻譯）、Klook（門票預約）、Agoda（訂房）、Skyscanner（機票比價）是五大必裝 APP。</p>
+<!-- FAQ Section with Tiffany styling -->
+<section style="max-width:900px; margin:40px auto; padding:0 40px;">
+  <h2 style="color:var(--tiffany-dark); margin-bottom:24px; padding-left:15px; border-left:5px solid var(--tiffany);">常見問題</h2>
+  
+  <div style="background:var(--tiffany-light); border-radius:14px; margin-bottom:16px; overflow:hidden; border:1px solid var(--tiffany-light);">
+    <h3 style="padding:20px 24px; font-weight:600; cursor:pointer; display:flex; justify-content:space-between; align-items:center; background:#fff; margin:0;">
+      <span style="color:var(--tiffany-dark);">Q: 出國旅行必備哪些 APP？</span>
+      <span style="color:var(--tiffany); font-size:18px;">▼</span>
+    </h3>
+    <p style="padding:0 24px 20px; color:var(--text-gray); line-height:1.9; background:#fff;">Google Maps（導航）、Google Translate（翻譯）、Klook（門票預約）、Agoda（訂房）、Skyscanner（機票比價）是五大必裝 APP。</p>
   </div>
-  <div class="faq-item">
-    <h3 class="faq-q">Q: eSIM 和 Wi-Fi 分享器哪個好？</h3>
-    <p class="faq-a">短期旅行（3-5天）推薦 Airalo eSIM，免租借、即買即用、約 NT-400。長期或多人同行用 Wi-Fi 分享器更划算。</p>
+  
+  <div style="background:var(--tiffany-light); border-radius:14px; margin-bottom:16px; overflow:hidden; border:1px solid var(--tiffany-light);">
+    <h3 style="padding:20px 24px; font-weight:600; cursor:pointer; display:flex; justify-content:space-between; align-items:center; background:#fff; margin:0;">
+      <span style="color:var(--tiffany-dark);">Q: eSIM 和 Wi-Fi 分享器哪個好？</span>
+      <span style="color:var(--tiffany); font-size:18px;">▼</span>
+    </h3>
+    <p style="padding:0 24px 20px; color:var(--text-gray); line-height:1.9; background:#fff;">短期旅行（3-5天）推薦 Airalo eSIM，免租借、即買即用、約 NT$200-400。長期或多人同行用 Wi-Fi 分享器更划算。</p>
   </div>
-  <div class="faq-item">
-    <h3 class="faq-q">Q: 旅遊保險一定要買嗎？</h3>
-    <p class="faq-a">強烈建議購買。醫療費用、班機延誤、行李遺失都能理賠。富邦、國泰等保險公司有專門的旅遊險，一天約 NT-200。</p>
+  
+  <div style="background:var(--tiffany-light); border-radius:14px; margin-bottom:16px; overflow:hidden; border:1px solid var(--tiffany-light);">
+    <h3 style="padding:20px 24px; font-weight:600; cursor:pointer; display:flex; justify-content:space-between; align-items:center; background:#fff; margin:0;">
+      <span style="color:var(--tiffany-dark);">Q: 旅遊保險一定要買嗎？</span>
+      <span style="color:var(--tiffany); font-size:18px;">▼</span>
+    </h3>
+    <p style="padding:0 24px 20px; color:var(--text-gray); line-height:1.9; background:#fff;">強烈建議購買。醫療費用、班機延誤、行李遺失都能理賠。富邦、國泰等保險公司有專門的旅遊險，一天約 NT$100-200。</p>
   </div>
 </section>
 
@@ -231,7 +258,7 @@
     </div>
   </div>
   <div class="footer-bottom">
-    <p>© 2026 均在路上 Travel Lab. All Rights Reserved.</p>
+    <p>&copy; 2026 均在路上 Travel Lab. All Rights Reserved.</p>
   </div>
     <div style="margin-top:8px;font-size:12px;">
       <a href="about.html" style="color:inherit;margin-right:12px;">關於我們</a>
