@@ -293,6 +293,79 @@
     mainContent.appendChild(pkgBlock);
   }
 
+  // === 4. TRIP.COM PROMO BANNER (contextual per destination) ===
+  const tripBase = 'https://tw.trip.com/?Allianceid=8237671&SID=312406690';
+  const tripBanners = {
+    japan:   { img: 'images/trip-japan.webp', alt: 'Trip.com 日本機票酒店優惠', link: tripBase },
+    tokyo:   { img: 'images/trip-japan.webp', alt: 'Trip.com 東京機票酒店優惠', link: tripBase },
+    kansai:  { img: 'images/trip-japan.webp', alt: 'Trip.com 關西機票酒店優惠', link: tripBase },
+    hokkaido:{ img: 'images/trip-japan.webp', alt: 'Trip.com 北海道機票酒店優惠', link: tripBase },
+    okinawa: { img: 'images/trip-okinawa.webp', alt: 'Trip.com 沖繩機加酒優惠', link: tripBase },
+    kyoto:   { img: 'images/trip-japan.webp', alt: 'Trip.com 京都機票酒店優惠', link: tripBase },
+    osaka:   { img: 'images/trip-japan.webp', alt: 'Trip.com 大阪機票酒店優惠', link: tripBase },
+    korea:   { img: 'images/trip-korea.webp', alt: 'Trip.com 韓國五折優惠', link: tripBase },
+    seoul:   { img: 'images/trip-korea.webp', alt: 'Trip.com 首爾機票酒店優惠', link: tripBase },
+    busan:   { img: 'images/trip-busan.webp', alt: 'Trip.com 釜山遊優惠', link: tripBase },
+    jeju:    { img: 'images/trip-korea.webp', alt: 'Trip.com 濟州島機票酒店優惠', link: tripBase },
+    taiwan:  { img: 'images/trip-taiwan.webp', alt: 'Trip.com 台灣飯店五折優惠', link: tripBase },
+    hualien: { img: 'images/trip-taiwan.webp', alt: 'Trip.com 台灣飯店五折優惠', link: tripBase },
+    tainan:  { img: 'images/trip-taiwan.webp', alt: 'Trip.com 台灣飯店五折優惠', link: tripBase },
+    kenting: { img: 'images/trip-taiwan.webp', alt: 'Trip.com 台灣飯店五折優惠', link: tripBase },
+    taipei:  { img: 'images/trip-taiwan.webp', alt: 'Trip.com 台灣飯店五折優惠', link: tripBase },
+    chiangmai:{ img: 'images/trip-thailand.webp', alt: 'Trip.com 泰國五折優惠', link: tripBase },
+    bangkok: { img: 'images/trip-thailand.webp', alt: 'Trip.com 曼谷五折優惠', link: tripBase },
+    southeast:{ img: 'images/trip-thailand.webp', alt: 'Trip.com 東南亞機票優惠', link: tripBase },
+    vietnam: { img: 'images/trip-thailand.webp', alt: 'Trip.com 東南亞機票優惠', link: tripBase },
+    hongkong:{ img: 'images/trip-hongkong.webp', alt: 'Trip.com 港澳快閃優惠', link: tripBase },
+  };
+
+  // Detect which banner to show
+  let matchedBanner = null;
+  for (const [key, banner] of Object.entries(tripBanners)) {
+    if (page.includes(key)) { matchedBanner = banner; break; }
+  }
+
+  if (mainContent && matchedBanner) {
+    const bannerEl = document.createElement('div');
+    bannerEl.className = 'trip-promo-banner';
+    bannerEl.innerHTML = `
+      <a href="${matchedBanner.link}" target="_blank" rel="noopener sponsored" data-affiliate="trip">
+        <img src="${matchedBanner.img}" alt="${matchedBanner.alt}" loading="lazy" />
+      </a>
+    `;
+    // Insert after CTA block or after first h2
+    const existingCta = mainContent.querySelector('.article-cta');
+    if (existingCta) {
+      existingCta.parentNode.insertBefore(bannerEl, existingCta.nextSibling);
+    } else {
+      const firstH2 = mainContent.querySelector('h2');
+      if (firstH2) firstH2.parentNode.insertBefore(bannerEl, firstH2.nextSibling);
+    }
+
+    // Add banner styles
+    const bannerCSS = document.createElement('style');
+    bannerCSS.textContent = `
+      .trip-promo-banner {
+        margin: 24px 0;
+        border-radius: 14px;
+        overflow: hidden;
+        box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+        transition: transform 0.2s, box-shadow 0.2s;
+      }
+      .trip-promo-banner:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 24px rgba(0,0,0,0.12);
+      }
+      .trip-promo-banner a { display: block; }
+      .trip-promo-banner img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+    `;
+    document.head.appendChild(bannerCSS);
+  }
+
   // Add padding to body bottom for toolbar (only on non-homepage pages)
   if (!isHomepage) {
     document.body.style.paddingBottom = '64px';
