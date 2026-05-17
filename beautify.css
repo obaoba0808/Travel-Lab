@@ -3,8 +3,8 @@
 /* ---- HERO BEAUTIFY ---- */
 .hero-beautify {
   position: relative;
-  height: 70vh;
-  min-height: 420px;
+  height: 600px;
+  min-height: auto;
   background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
   display: flex;
   align-items: center;
