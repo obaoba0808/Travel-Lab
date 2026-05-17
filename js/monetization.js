@@ -27,6 +27,10 @@
         <span class="toolbar-icon">📱</span>
         <span class="toolbar-label">eSIM网卡</span>
       </a>
+      <a href="https://tw.trip.com/?Allianceid=8237671&SID=312406690" target="_blank" rel="noopener sponsored" class="toolbar-btn" data-affiliate="trip">
+        <span class="toolbar-icon">🧳</span>
+        <span class="toolbar-label">Trip.com</span>
+      </a>
     </div>
   `;
 
@@ -99,8 +103,8 @@
     }
     .cta-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-      gap: 12px;
+      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+      gap: 10px;
     }
     .cta-card {
       display: flex;
@@ -141,6 +145,9 @@
     .cta-airalo { background: #fff; border-color: #e0e0e0; }
     .cta-airalo .cta-card-icon { background: linear-gradient(135deg, #333, #222); }
     .cta-airalo .cta-card-text { color: #333; }
+    .cta-trip { background: #fff; border-color: #cce5ff; }
+    .cta-trip .cta-card-icon { background: linear-gradient(135deg, #0077cc, #005bb5); }
+    .cta-trip .cta-card-text { color: #0077cc; }
 
     /* Package service CTA (for Taiwan pages) */
     .pkg-cta {
@@ -250,6 +257,13 @@
             <div>
               <div class="cta-card-text">买eSIM</div>
               <div class="cta-card-sub">免换卡上网</div>
+            </div>
+          </a>
+          <a href="https://tw.trip.com/?Allianceid=8237671&SID=312406690" target="_blank" rel="noopener sponsored" class="cta-card cta-trip" data-affiliate="trip">
+            <div class="cta-card-icon">🧳</div>
+            <div>
+              <div class="cta-card-text">Trip.com</div>
+              <div class="cta-card-sub">机票酒店</div>
             </div>
           </a>
         </div>
