@@ -104,7 +104,7 @@
       `;
       
       // Insert after FAQ section (user request 2026-05-18)
-      const faqSection = articleContainer.querySelector('.faq-section, .faq-accordion-beautify');
+      const faqSection = articleContainer.querySelector('.faq-section') || articleContainer.querySelector('.faq-accordion-beautify');
       if (faqSection) {
         faqSection.after(ctaBlock);
       } else {
