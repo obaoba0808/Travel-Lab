@@ -204,7 +204,7 @@
   } // end if (!isHomepage)
 
   // === 2. IN-ARTICLE CTA BLOCK ===
-  const mainContent = document.querySelector('.content-area');
+  const mainContent = document.querySelector('.content-area') || document.querySelector('.article-container');
   if (mainContent) {
     // Detect destination from page
     const page = window.location.pathname;
