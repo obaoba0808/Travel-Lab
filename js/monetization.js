@@ -1,4 +1,4 @@
-// add-monetization.js - Travel Lab 变现组件
+﻿// add-monetization.js - Travel Lab ?蝏辣
 // Adds floating toolbar and in-article CTA blocks
 
 (function() {
@@ -13,23 +13,23 @@
   toolbar.innerHTML = `
     <div class="toolbar-inner">
       <a href="https://www.agoda.com/zh-tw/?tag=e9ea26c2-c046-468f-939d-97d11075d6e0" target="_blank" rel="noopener sponsored" class="toolbar-btn" data-affiliate="agoda">
-        <span class="toolbar-icon">🏨</span>
-        <span class="toolbar-label">订房优惠</span>
+        <span class="toolbar-icon">?</span>
+        <span class="toolbar-label">霈Ｘ隡?</span>
       </a>
       <a href="https://www.skyscanner.com.tw/" target="_blank" rel="noopener sponsored" class="toolbar-btn" data-affiliate="skyscanner">
-        <span class="toolbar-icon">✈️</span>
-        <span class="toolbar-label">比价机票</span>
+        <span class="toolbar-icon">??</span>
+        <span class="toolbar-label">瘥遠?箇巨</span>
       </a>
       <a href="https://www.klook.com/zh-TW/?dd_referrer=https%3A%2F%2Fwww.klook.com%2Fzh-TW%2Faffiliate%2F" target="_blank" rel="noopener sponsored" class="toolbar-btn" data-affiliate="klook">
-        <span class="toolbar-icon">🎫</span>
-        <span class="toolbar-label">景点门票</span>
+        <span class="toolbar-icon">?</span>
+        <span class="toolbar-label">?舐?函巨</span>
       </a>
       <a href="https://www.airalo.com/" target="_blank" rel="noopener sponsored" class="toolbar-btn" data-affiliate="airalo">
-        <span class="toolbar-icon">📱</span>
-        <span class="toolbar-label">eSIM网卡</span>
+        <span class="toolbar-icon">?</span>
+        <span class="toolbar-label">eSIM蝵</span>
       </a>
       <a href="https://tw.trip.com/sale/w/4823/flight-deals.html?locale=zh-TW&promo_referer=3952_4823_6&Allianceid=8237671&SID=312406690&trip_sub1=&trip_sub3=P17078938" target="_blank" rel="noopener sponsored" class="toolbar-btn" data-affiliate="trip">
-        <span class="toolbar-icon">🧳</span>
+        <span class="toolbar-icon">?妊</span>
         <span class="toolbar-label">Trip.com</span>
       </a>
     </div>
@@ -212,16 +212,16 @@
     let destLabel = '';
     let destSearch = '';
     if (page.includes('japan') || page.includes('tokyo') || page.includes('kansai') || page.includes('hokkaido') || page.includes('okinawa') || page.includes('kyoto')) {
-      destLabel = '日本';
+      destLabel = '?交';
       destSearch = 'Japan';
     } else if (page.includes('korea') || page.includes('seoul') || page.includes('busan') || page.includes('jeju')) {
-      destLabel = '韩国';
+      destLabel = '?拙';
       destSearch = 'Korea';
     } else if (page.includes('taiwan') || page.includes('hualien') || page.includes('tainan') || page.includes('kenting')) {
-      destLabel = '台湾';
+      destLabel = '?唳嗾';
       destSearch = 'Taiwan';
     } else if (page.includes('southeast') || page.includes('chiang-mai') || page.includes('bangkok')) {
-      destLabel = '东南亚';
+      destLabel = '銝?鈭?;
       destSearch = 'Southeast Asia';
     }
 
@@ -229,42 +229,42 @@
       const ctaBlock = document.createElement('div');
       ctaBlock.className = 'article-cta';
       ctaBlock.innerHTML = `
-        <div class="article-cta-title">🎒 ${destLabel}旅行实用工具</div>
-        <div class="article-cta-desc">出发前先搞定这四件事，省时又省钱</div>
+        <div class="article-cta-title">?? ${destLabel}??摰撌亙</div>
+        <div class="article-cta-desc">?箏?????餈?隞嗡?嚗??嗅??</div>
         <div class="cta-grid">
           <a href="https://www.agoda.com/zh-tw/search/${destSearch}?tag=e9ea26c2-c046-468f-939d-97d11075d6e0" target="_blank" rel="noopener sponsored" class="cta-card cta-agoda" data-affiliate="agoda">
-            <div class="cta-card-icon">🏨</div>
+            <div class="cta-card-icon">?</div>
             <div>
-              <div class="cta-card-text">订酒店</div>
-              <div class="cta-card-sub">Agoda 折扣</div>
+              <div class="cta-card-text">霈ａ?摨?/div>
+              <div class="cta-card-sub">Agoda ?</div>
             </div>
           </a>
           <a href="https://www.skyscanner.com.tw/" target="_blank" rel="noopener sponsored" class="cta-card cta-skyscanner" data-affiliate="skyscanner">
-            <div class="cta-card-icon">✈️</div>
+            <div class="cta-card-icon">??</div>
             <div>
-              <div class="cta-card-text">比机票</div>
+              <div class="cta-card-text">瘥蟡?/div>
               <div class="cta-card-sub">Skyscanner</div>
             </div>
           </a>
           <a href="https://www.klook.com/zh-TW/search/results?keyword=${encodeURIComponent(destLabel)}&dd_referrer=https%3A%2F%2Fwww.klook.com%2Fzh-TW%2Faffiliate%2F" target="_blank" rel="noopener sponsored" class="cta-card cta-klook" data-affiliate="klook">
-            <div class="cta-card-icon">🎫</div>
+            <div class="cta-card-icon">?</div>
             <div>
-              <div class="cta-card-text">买门票</div>
-              <div class="cta-card-sub">Klook 立折</div>
+              <div class="cta-card-text">銋圈蟡?/div>
+              <div class="cta-card-sub">Klook 蝡?</div>
             </div>
           </a>
           <a href="https://www.airalo.com/" target="_blank" rel="noopener sponsored" class="cta-card cta-airalo" data-affiliate="airalo">
-            <div class="cta-card-icon">📱</div>
+            <div class="cta-card-icon">?</div>
             <div>
-              <div class="cta-card-text">买eSIM</div>
-              <div class="cta-card-sub">免换卡上网</div>
+              <div class="cta-card-text">銋送SIM</div>
+              <div class="cta-card-sub">??∩?蝵?/div>
             </div>
           </a>
           <a href="https://tw.trip.com/sale/w/4823/flight-deals.html?locale=zh-TW&promo_referer=3952_4823_6&Allianceid=8237671&SID=312406690&trip_sub1=&trip_sub3=P17078938" target="_blank" rel="noopener sponsored" class="cta-card cta-trip" data-affiliate="trip">
-            <div class="cta-card-icon">🧳</div>
+            <div class="cta-card-icon">?妊</div>
             <div>
               <div class="cta-card-text">Trip.com</div>
-              <div class="cta-card-sub">机票酒店特惠</div>
+              <div class="cta-card-sub">?箇巨???寞?</div>
             </div>
           </a>
         </div>
@@ -284,10 +284,10 @@
     const pkgBlock = document.createElement('div');
     pkgBlock.className = 'pkg-cta';
     pkgBlock.innerHTML = `
-      <h4>🚐 台湾包车服务</h4>
-      <p>花东、垦丁、台南…专车接送，中文司机，行程自由安排</p>
+      <h4>?? ?唳嗾?膠?</h4>
+      <p>?曹??銝?虫?頧行??銝剜??豢嚗?蝔?勗???/p>
       <a href="https://line.me/ti/g/NbNGnW4Eh6" target="_blank" rel="noopener" class="pkg-btn">
-        💬 LINE 立即询价
+        ? LINE 蝡霂Ｖ遠
       </a>
     `;
     // Insert near the end of content
@@ -297,27 +297,27 @@
   // === 4. TRIP.COM PROMO BANNER (now embedded directly in HTML, no JS injection needed) ===
   /* REMOVED - banners are now hardcoded in each HTML page */
   if (false) { const tripBanners = {
-    japan:   { img: 'images/trip-japan.webp', alt: 'Trip.com 日本旅遊優惠', link: 'https://tw.trip.com/sale/w/4217/japan-travel.html?locale=zh_tw&promo_referer=3952_4217_9&Allianceid=8237671&SID=312406690&trip_sub1=&trip_sub3=P17078945n' },
-    tokyo:   { img: 'images/trip-japan.webp', alt: 'Trip.com 東京機票酒店優惠', link: 'https://tw.trip.com/sale/w/4217/japan-travel.html?locale=zh_tw&promo_referer=3952_4217_9&Allianceid=8237671&SID=312406690&trip_sub1=&trip_sub3=P17078945n' },
-    kansai:  { img: 'images/trip-japan.webp', alt: 'Trip.com 關西機票酒店優惠', link: 'https://tw.trip.com/sale/w/4217/japan-travel.html?locale=zh_tw&promo_referer=3952_4217_9&Allianceid=8237671&SID=312406690&trip_sub1=&trip_sub3=P17078945n' },
-    hokkaido:{ img: 'images/trip-japan.webp', alt: 'Trip.com 北海道機票酒店優惠', link: 'https://tw.trip.com/sale/w/4217/japan-travel.html?locale=zh_tw&promo_referer=3952_4217_9&Allianceid=8237671&SID=312406690&trip_sub1=&trip_sub3=P17078945n' },
-    okinawa: { img: 'images/trip-okinawa.webp', alt: 'Trip.com 快閃沖繩 機+酒折$1000', link: 'https://tw.trip.com/sale/w/17859/okinawapromotion.html?locale=zh-TW&promo_referer=3952_17859_2&Allianceid=8237671&SID=312406690&trip_sub1=&trip_sub3=P17011395' },
-    kyoto:   { img: 'images/trip-japan.webp', alt: 'Trip.com 京都機票酒店優惠', link: 'https://tw.trip.com/sale/w/4217/japan-travel.html?locale=zh_tw&promo_referer=3952_4217_9&Allianceid=8237671&SID=312406690&trip_sub1=&trip_sub3=P17078945n' },
-    osaka:   { img: 'images/trip-japan.webp', alt: 'Trip.com 大阪機票酒店優惠', link: 'https://tw.trip.com/sale/w/4217/japan-travel.html?locale=zh_tw&promo_referer=3952_4217_9&Allianceid=8237671&SID=312406690&trip_sub1=&trip_sub3=P17078945n' },
-    korea:   { img: 'images/trip-korea.webp', alt: 'Trip.com 暢遊韓國五折起', link: 'https://tw.trip.com/sale/w/4337/southkorea-destination.html?locale=zh-TW&promo_referer=3952_4337_8&Allianceid=8237671&SID=312406690&trip_sub1=&trip_sub3=P17011353' },
-    seoul:   { img: 'images/trip-korea.webp', alt: 'Trip.com 首爾機票酒店優惠', link: 'https://tw.trip.com/sale/w/4337/southkorea-destination.html?locale=zh-TW&promo_referer=3952_4337_8&Allianceid=8237671&SID=312406690&trip_sub1=&trip_sub3=P17011353' },
-    busan:   { img: 'images/trip-busan.webp', alt: 'Trip.com 釜山遊 機+酒$999起', link: 'https://tw.trip.com/sale/w/31376/superbusan-promotion.html?locale=zh-TW&promo_referer=3952_31376_3&Allianceid=8237671&SID=312406690&trip_sub1=&trip_sub3=P17011416' },
-    jeju:    { img: 'images/trip-korea.webp', alt: 'Trip.com 濟州島機票酒店優惠', link: 'https://tw.trip.com/sale/w/4337/southkorea-destination.html?locale=zh-TW&promo_referer=3952_4337_8&Allianceid=8237671&SID=312406690&trip_sub1=&trip_sub3=P17011353' },
-    taiwan:  { img: 'images/trip-taiwan.webp', alt: 'Trip.com 台灣飯店五折起', link: 'https://tw.trip.com/sale/w/4823/hotel-deals.html?locale=zh-TW&promo_referer=3952_4823_11&Allianceid=8237671&SID=312406690&trip_sub1=&trip_sub3=P17011507' },
-    hualien: { img: 'images/trip-taiwan.webp', alt: 'Trip.com 台灣飯店五折起', link: 'https://tw.trip.com/sale/w/4823/hotel-deals.html?locale=zh-TW&promo_referer=3952_4823_11&Allianceid=8237671&SID=312406690&trip_sub1=&trip_sub3=P17011507' },
-    tainan:  { img: 'images/trip-taiwan.webp', alt: 'Trip.com 台灣飯店五折起', link: 'https://tw.trip.com/sale/w/4823/hotel-deals.html?locale=zh-TW&promo_referer=3952_4823_11&Allianceid=8237671&SID=312406690&trip_sub1=&trip_sub3=P17011507' },
-    kenting: { img: 'images/trip-taiwan.webp', alt: 'Trip.com 台灣飯店五折起', link: 'https://tw.trip.com/sale/w/4823/hotel-deals.html?locale=zh-TW&promo_referer=3952_4823_11&Allianceid=8237671&SID=312406690&trip_sub1=&trip_sub3=P17011507' },
-    taipei:  { img: 'images/trip-taiwan.webp', alt: 'Trip.com 台灣飯店五折起', link: 'https://tw.trip.com/sale/w/4823/hotel-deals.html?locale=zh-TW&promo_referer=3952_4823_11&Allianceid=8237671&SID=312406690&trip_sub1=&trip_sub3=P17011507' },
-    chiangmai:{ img: 'images/trip-thailand.webp', alt: 'Trip.com 泰國五折優惠', link: 'https://tw.trip.com/sale/w/26497/go-thailand.html?locale=zh-tw&curr=twd&promo_referer=3952_26497_7&Allianceid=8237671&SID=312406690&trip_sub1=&trip_sub3=P17078987' },
-    bangkok: { img: 'images/trip-thailand.webp', alt: 'Trip.com 曼谷五折優惠', link: 'https://tw.trip.com/sale/w/26497/go-thailand.html?locale=zh-tw&curr=twd&promo_referer=3952_26497_7&Allianceid=8237671&SID=312406690&trip_sub1=&trip_sub3=P17078987' },
-    southeast:{ img: 'images/trip-thailand.webp', alt: 'Trip.com 東南亞機票優惠', link: 'https://tw.trip.com/sale/w/26497/go-thailand.html?locale=zh-tw&curr=twd&promo_referer=3952_26497_7&Allianceid=8237671&SID=312406690&trip_sub1=&trip_sub3=P17078987' },
-    vietnam: { img: 'images/trip-thailand.webp', alt: 'Trip.com 東南亞機票優惠', link: 'https://tw.trip.com/sale/w/26497/go-thailand.html?locale=zh-tw&curr=twd&promo_referer=3952_26497_7&Allianceid=8237671&SID=312406690&trip_sub1=&trip_sub3=P17078987' },
-    hongkong:{ img: 'images/trip-hongkong.webp', alt: 'Trip.com 港澳快閃優惠', link: '#' },
+    japan:   { img: 'images/trip-japan.webp', alt: 'Trip.com ?交???芣?', link: 'https://tw.trip.com/sale/w/4217/japan-travel.html?locale=zh_tw&promo_referer=3952_4217_9&Allianceid=8237671&SID=312406690&trip_sub1=&trip_sub3=P17078945n' },
+    tokyo:   { img: 'images/trip-japan.webp', alt: 'Trip.com ?曹漪璈巨???芣?', link: 'https://tw.trip.com/sale/w/4217/japan-travel.html?locale=zh_tw&promo_referer=3952_4217_9&Allianceid=8237671&SID=312406690&trip_sub1=&trip_sub3=P17078945n' },
+    kansai:  { img: 'images/trip-japan.webp', alt: 'Trip.com ?正璈巨???芣?', link: 'https://tw.trip.com/sale/w/4217/japan-travel.html?locale=zh_tw&promo_referer=3952_4217_9&Allianceid=8237671&SID=312406690&trip_sub1=&trip_sub3=P17078945n' },
+    hokkaido:{ img: 'images/trip-japan.webp', alt: 'Trip.com ?絲??蟡券?摨??, link: 'https://tw.trip.com/sale/w/4217/japan-travel.html?locale=zh_tw&promo_referer=3952_4217_9&Allianceid=8237671&SID=312406690&trip_sub1=&trip_sub3=P17078945n' },
+    okinawa: { img: 'images/trip-okinawa.webp', alt: 'Trip.com 敹恍?瘝鼎 璈???$1000', link: 'https://tw.trip.com/sale/w/17859/okinawapromotion.html?locale=zh-TW&promo_referer=3952_17859_2&Allianceid=8237671&SID=312406690&trip_sub1=&trip_sub3=P17011395' },
+    kyoto:   { img: 'images/trip-japan.webp', alt: 'Trip.com 鈭祇璈巨???芣?', link: 'https://tw.trip.com/sale/w/4217/japan-travel.html?locale=zh_tw&promo_referer=3952_4217_9&Allianceid=8237671&SID=312406690&trip_sub1=&trip_sub3=P17078945n' },
+    osaka:   { img: 'images/trip-japan.webp', alt: 'Trip.com 憭折璈巨???芣?', link: 'https://tw.trip.com/sale/w/4217/japan-travel.html?locale=zh_tw&promo_referer=3952_4217_9&Allianceid=8237671&SID=312406690&trip_sub1=&trip_sub3=P17078945n' },
+    korea:   { img: 'images/trip-korea.webp', alt: 'Trip.com ?ａ???鈭?韏?, link: 'https://tw.trip.com/sale/w/4337/southkorea-destination.html?locale=zh-TW&promo_referer=3952_4337_8&Allianceid=8237671&SID=312406690&trip_sub1=&trip_sub3=P17011353' },
+    seoul:   { img: 'images/trip-korea.webp', alt: 'Trip.com 擐璈巨???芣?', link: 'https://tw.trip.com/sale/w/4337/southkorea-destination.html?locale=zh-TW&promo_referer=3952_4337_8&Allianceid=8237671&SID=312406690&trip_sub1=&trip_sub3=P17011353' },
+    busan:   { img: 'images/trip-busan.webp', alt: 'Trip.com ?控??璈???999韏?, link: 'https://tw.trip.com/sale/w/31376/superbusan-promotion.html?locale=zh-TW&promo_referer=3952_31376_3&Allianceid=8237671&SID=312406690&trip_sub1=&trip_sub3=P17011416' },
+    jeju:    { img: 'images/trip-korea.webp', alt: 'Trip.com 瞈?撜嗆?蟡券?摨??, link: 'https://tw.trip.com/sale/w/4337/southkorea-destination.html?locale=zh-TW&promo_referer=3952_4337_8&Allianceid=8237671&SID=312406690&trip_sub1=&trip_sub3=P17011353' },
+    taiwan:  { img: 'images/trip-taiwan.webp', alt: 'Trip.com ?啁憌臬?鈭?韏?, link: 'https://tw.trip.com/sale/w/4823/hotel-deals.html?locale=zh-TW&promo_referer=3952_4823_11&Allianceid=8237671&SID=312406690&trip_sub1=&trip_sub3=P17011507' },
+    hualien: { img: 'images/trip-taiwan.webp', alt: 'Trip.com ?啁憌臬?鈭?韏?, link: 'https://tw.trip.com/sale/w/4823/hotel-deals.html?locale=zh-TW&promo_referer=3952_4823_11&Allianceid=8237671&SID=312406690&trip_sub1=&trip_sub3=P17011507' },
+    tainan:  { img: 'images/trip-taiwan.webp', alt: 'Trip.com ?啁憌臬?鈭?韏?, link: 'https://tw.trip.com/sale/w/4823/hotel-deals.html?locale=zh-TW&promo_referer=3952_4823_11&Allianceid=8237671&SID=312406690&trip_sub1=&trip_sub3=P17011507' },
+    kenting: { img: 'images/trip-taiwan.webp', alt: 'Trip.com ?啁憌臬?鈭?韏?, link: 'https://tw.trip.com/sale/w/4823/hotel-deals.html?locale=zh-TW&promo_referer=3952_4823_11&Allianceid=8237671&SID=312406690&trip_sub1=&trip_sub3=P17011507' },
+    taipei:  { img: 'images/trip-taiwan.webp', alt: 'Trip.com ?啁憌臬?鈭?韏?, link: 'https://tw.trip.com/sale/w/4823/hotel-deals.html?locale=zh-TW&promo_referer=3952_4823_11&Allianceid=8237671&SID=312406690&trip_sub1=&trip_sub3=P17011507' },
+    chiangmai:{ img: 'images/trip-thailand.webp', alt: 'Trip.com 瘜啣?鈭??芣?', link: 'https://tw.trip.com/sale/w/26497/go-thailand.html?locale=zh-tw&curr=twd&promo_referer=3952_26497_7&Allianceid=8237671&SID=312406690&trip_sub1=&trip_sub3=P17078987' },
+    bangkok: { img: 'images/trip-thailand.webp', alt: 'Trip.com ?潸健鈭??芣?', link: 'https://tw.trip.com/sale/w/26497/go-thailand.html?locale=zh-tw&curr=twd&promo_referer=3952_26497_7&Allianceid=8237671&SID=312406690&trip_sub1=&trip_sub3=P17078987' },
+    southeast:{ img: 'images/trip-thailand.webp', alt: 'Trip.com ?勗?鈭?蟡典??, link: 'https://tw.trip.com/sale/w/26497/go-thailand.html?locale=zh-tw&curr=twd&promo_referer=3952_26497_7&Allianceid=8237671&SID=312406690&trip_sub1=&trip_sub3=P17078987' },
+    vietnam: { img: 'images/trip-thailand.webp', alt: 'Trip.com ?勗?鈭?蟡典??, link: 'https://tw.trip.com/sale/w/26497/go-thailand.html?locale=zh-tw&curr=twd&promo_referer=3952_26497_7&Allianceid=8237671&SID=312406690&trip_sub1=&trip_sub3=P17078987' },
+    hongkong:{ img: 'images/trip-hongkong.webp', alt: 'Trip.com 皜舀噫敹恍??芣?', link: '#' },
   }; }
 
   // Add padding to body bottom for toolbar (only on non-homepage pages)
@@ -325,3 +325,4 @@
     document.body.style.paddingBottom = '64px';
   }
 })();
+
