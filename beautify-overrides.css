@@ -768,3 +768,78 @@
   .article-bottom-cta h3 { font-size: 17px; }
   .article-bottom-cta .btn-white { padding: 10px 22px; font-size: 13px; }
 }
+
+/* ========== Hero Section Beautify (2026-05-18) ========== */
+.hero-beautify {
+  background: linear-gradient(135deg, #0ABAB5 0%, #0ea5a0 50%, #088886 100%);
+  padding: 100px 40px 80px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.hero-beautify::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+  animation: heroShine 8s ease-in-out infinite;
+}
+@keyframes heroShine {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(20%, 20%); }
+}
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.hero-region-tag {
+  display: inline-block;
+  background: rgba(255,255,255,0.2);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 6px 18px;
+  border-radius: 999px;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.3);
+}
+.hero-content h1 {
+  font-family: 'Noto Serif TC', serif;
+  font-size: 48px;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 16px 0;
+  letter-spacing: 2px;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.15);
+  line-height: 1.3;
+}
+.hero-content p {
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size: 18px;
+  color: rgba(255,255,255,0.95);
+  margin: 0;
+  line-height: 1.8;
+  letter-spacing: 0.5px;
+  text-shadow: 0 1px 6px rgba(0,0,0,0.1);
+}
+
+/* Hero responsive */
+@media (max-width: 768px) {
+  .hero-beautify { padding: 80px 24px 60px; }
+  .hero-content h1 { font-size: 36px; letter-spacing: 1px; }
+  .hero-content p { font-size: 16px; }
+  .hero-region-tag { font-size: 13px; padding: 5px 14px; }
+}
+@media (max-width: 480px) {
+  .hero-beautify { padding: 60px 16px 48px; }
+  .hero-content h1 { font-size: 28px; }
+  .hero-content p { font-size: 14px; line-height: 1.7; }
+  .hero-region-tag { font-size: 12px; padding: 4px 12px; }
+}
