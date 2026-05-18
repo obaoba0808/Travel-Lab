@@ -731,13 +731,18 @@
     align-items: center !important;
     text-align: center !important;
   }
-  /* 图标容器全宽 */
+  /* 手机版：SVG 图标全宽显示 */
   .car-service-item .icon {
-    width: 120px !important;
-    height: 120px !important;
-    font-size: 64px !important;
-    line-height: 120px !important;
-    margin-bottom: 16px !important;
+    width: 90vw !important;
+    height: 90vw !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin-bottom: 20px !important;
+  }
+  .car-icon-svg {
+    width: 100% !important;
+    height: 100% !important;
   }
 }
 @media (max-width: 480px) {
