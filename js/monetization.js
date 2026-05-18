@@ -104,11 +104,9 @@
       `;
       
       // Insert after FAQ section (user request 2026-05-18)
-      const faqSection = articleContainer.querySelector('.faq-section');
-      if (faqSection && faqSection.nextElementSibling) {
-        articleContainer.insertBefore(ctaBlock, faqSection.nextElementSibling);
-      } else if (faqSection) {
-        articleContainer.appendChild(ctaBlock);
+      const faqSection = articleContainer.querySelector('.faq-section, .faq-accordion-beautify');
+      if (faqSection) {
+        faqSection.after(ctaBlock);
       } else {
         // Fallback: insert after first day-card or after first 3 paragraphs
         const dayCard = articleContainer.querySelector('.day-card');
