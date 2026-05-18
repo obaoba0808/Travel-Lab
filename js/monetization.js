@@ -27,7 +27,7 @@
         <span class="toolbar-icon">📱</span>
         <span class="toolbar-label">eSIM网卡</span>
       </a>
-      <a href="https://tw.trip.com/?Allianceid=8237671&SID=312406690" target="_blank" rel="noopener sponsored" class="toolbar-btn" data-affiliate="trip">
+      <a href="https://tw.trip.com/sale/w/4823/flight-deals.html?locale=zh-TW&promo_referer=3952_4823_6&Allianceid=8237671&SID=312406690&trip_sub1=&trip_sub3=P17078938" target="_blank" rel="noopener sponsored" class="toolbar-btn" data-affiliate="trip">
         <span class="toolbar-icon">🧳</span>
         <span class="toolbar-label">Trip.com</span>
       </a>
@@ -259,11 +259,11 @@
               <div class="cta-card-sub">免换卡上网</div>
             </div>
           </a>
-          <a href="https://tw.trip.com/?Allianceid=8237671&SID=312406690" target="_blank" rel="noopener sponsored" class="cta-card cta-trip" data-affiliate="trip">
+          <a href="https://tw.trip.com/sale/w/4823/flight-deals.html?locale=zh-TW&promo_referer=3952_4823_6&Allianceid=8237671&SID=312406690&trip_sub1=&trip_sub3=P17078938" target="_blank" rel="noopener sponsored" class="cta-card cta-trip" data-affiliate="trip">
             <div class="cta-card-icon">🧳</div>
             <div>
               <div class="cta-card-text">Trip.com</div>
-              <div class="cta-card-sub">机票酒店</div>
+              <div class="cta-card-sub">机票酒店特惠</div>
             </div>
           </a>
         </div>
@@ -294,29 +294,28 @@
   }
 
   // === 4. TRIP.COM PROMO BANNER (contextual per destination) ===
-  const tripBase = 'https://tw.trip.com/?Allianceid=8237671&SID=312406690';
   const tripBanners = {
-    japan:   { img: 'images/trip-japan.webp', alt: 'Trip.com 日本機票酒店優惠', link: tripBase },
-    tokyo:   { img: 'images/trip-japan.webp', alt: 'Trip.com 東京機票酒店優惠', link: tripBase },
-    kansai:  { img: 'images/trip-japan.webp', alt: 'Trip.com 關西機票酒店優惠', link: tripBase },
-    hokkaido:{ img: 'images/trip-japan.webp', alt: 'Trip.com 北海道機票酒店優惠', link: tripBase },
-    okinawa: { img: 'images/trip-okinawa.webp', alt: 'Trip.com 沖繩機加酒優惠', link: tripBase },
-    kyoto:   { img: 'images/trip-japan.webp', alt: 'Trip.com 京都機票酒店優惠', link: tripBase },
-    osaka:   { img: 'images/trip-japan.webp', alt: 'Trip.com 大阪機票酒店優惠', link: tripBase },
-    korea:   { img: 'images/trip-korea.webp', alt: 'Trip.com 韓國五折優惠', link: tripBase },
-    seoul:   { img: 'images/trip-korea.webp', alt: 'Trip.com 首爾機票酒店優惠', link: tripBase },
-    busan:   { img: 'images/trip-busan.webp', alt: 'Trip.com 釜山遊優惠', link: tripBase },
-    jeju:    { img: 'images/trip-korea.webp', alt: 'Trip.com 濟州島機票酒店優惠', link: tripBase },
-    taiwan:  { img: 'images/trip-taiwan.webp', alt: 'Trip.com 台灣飯店五折優惠', link: tripBase },
-    hualien: { img: 'images/trip-taiwan.webp', alt: 'Trip.com 台灣飯店五折優惠', link: tripBase },
-    tainan:  { img: 'images/trip-taiwan.webp', alt: 'Trip.com 台灣飯店五折優惠', link: tripBase },
-    kenting: { img: 'images/trip-taiwan.webp', alt: 'Trip.com 台灣飯店五折優惠', link: tripBase },
-    taipei:  { img: 'images/trip-taiwan.webp', alt: 'Trip.com 台灣飯店五折優惠', link: tripBase },
-    chiangmai:{ img: 'images/trip-thailand.webp', alt: 'Trip.com 泰國五折優惠', link: tripBase },
-    bangkok: { img: 'images/trip-thailand.webp', alt: 'Trip.com 曼谷五折優惠', link: tripBase },
-    southeast:{ img: 'images/trip-thailand.webp', alt: 'Trip.com 東南亞機票優惠', link: tripBase },
-    vietnam: { img: 'images/trip-thailand.webp', alt: 'Trip.com 東南亞機票優惠', link: tripBase },
-    hongkong:{ img: 'images/trip-hongkong.webp', alt: 'Trip.com 港澳快閃優惠', link: tripBase },
+    japan:   { img: 'images/trip-japan.webp', alt: 'Trip.com 日本旅遊優惠', link: 'https://tw.trip.com/sale/w/4217/japan-travel.html?locale=zh_tw&promo_referer=3952_4217_9&Allianceid=8237671&SID=312406690&trip_sub1=&trip_sub3=P17078945n' },
+    tokyo:   { img: 'images/trip-japan.webp', alt: 'Trip.com 東京機票酒店優惠', link: 'https://tw.trip.com/sale/w/4217/japan-travel.html?locale=zh_tw&promo_referer=3952_4217_9&Allianceid=8237671&SID=312406690&trip_sub1=&trip_sub3=P17078945n' },
+    kansai:  { img: 'images/trip-japan.webp', alt: 'Trip.com 關西機票酒店優惠', link: 'https://tw.trip.com/sale/w/4217/japan-travel.html?locale=zh_tw&promo_referer=3952_4217_9&Allianceid=8237671&SID=312406690&trip_sub1=&trip_sub3=P17078945n' },
+    hokkaido:{ img: 'images/trip-japan.webp', alt: 'Trip.com 北海道機票酒店優惠', link: 'https://tw.trip.com/sale/w/4217/japan-travel.html?locale=zh_tw&promo_referer=3952_4217_9&Allianceid=8237671&SID=312406690&trip_sub1=&trip_sub3=P17078945n' },
+    okinawa: { img: 'images/trip-okinawa.webp', alt: 'Trip.com 快閃沖繩 機+酒折$1000', link: 'https://tw.trip.com/sale/w/17859/okinawapromotion.html?locale=zh-TW&promo_referer=3952_17859_2&Allianceid=8237671&SID=312406690&trip_sub1=&trip_sub3=P17011395' },
+    kyoto:   { img: 'images/trip-japan.webp', alt: 'Trip.com 京都機票酒店優惠', link: 'https://tw.trip.com/sale/w/4217/japan-travel.html?locale=zh_tw&promo_referer=3952_4217_9&Allianceid=8237671&SID=312406690&trip_sub1=&trip_sub3=P17078945n' },
+    osaka:   { img: 'images/trip-japan.webp', alt: 'Trip.com 大阪機票酒店優惠', link: 'https://tw.trip.com/sale/w/4217/japan-travel.html?locale=zh_tw&promo_referer=3952_4217_9&Allianceid=8237671&SID=312406690&trip_sub1=&trip_sub3=P17078945n' },
+    korea:   { img: 'images/trip-korea.webp', alt: 'Trip.com 暢遊韓國五折起', link: 'https://tw.trip.com/sale/w/4337/southkorea-destination.html?locale=zh-TW&promo_referer=3952_4337_8&Allianceid=8237671&SID=312406690&trip_sub1=&trip_sub3=P17011353' },
+    seoul:   { img: 'images/trip-korea.webp', alt: 'Trip.com 首爾機票酒店優惠', link: 'https://tw.trip.com/sale/w/4337/southkorea-destination.html?locale=zh-TW&promo_referer=3952_4337_8&Allianceid=8237671&SID=312406690&trip_sub1=&trip_sub3=P17011353' },
+    busan:   { img: 'images/trip-busan.webp', alt: 'Trip.com 釜山遊 機+酒$999起', link: 'https://tw.trip.com/sale/w/31376/superbusan-promotion.html?locale=zh-TW&promo_referer=3952_31376_3&Allianceid=8237671&SID=312406690&trip_sub1=&trip_sub3=P17011416' },
+    jeju:    { img: 'images/trip-korea.webp', alt: 'Trip.com 濟州島機票酒店優惠', link: 'https://tw.trip.com/sale/w/4337/southkorea-destination.html?locale=zh-TW&promo_referer=3952_4337_8&Allianceid=8237671&SID=312406690&trip_sub1=&trip_sub3=P17011353' },
+    taiwan:  { img: 'images/trip-taiwan.webp', alt: 'Trip.com 台灣飯店五折起', link: 'https://tw.trip.com/sale/w/4823/hotel-deals.html?locale=zh-TW&promo_referer=3952_4823_11&Allianceid=8237671&SID=312406690&trip_sub1=&trip_sub3=P17011507' },
+    hualien: { img: 'images/trip-taiwan.webp', alt: 'Trip.com 台灣飯店五折起', link: 'https://tw.trip.com/sale/w/4823/hotel-deals.html?locale=zh-TW&promo_referer=3952_4823_11&Allianceid=8237671&SID=312406690&trip_sub1=&trip_sub3=P17011507' },
+    tainan:  { img: 'images/trip-taiwan.webp', alt: 'Trip.com 台灣飯店五折起', link: 'https://tw.trip.com/sale/w/4823/hotel-deals.html?locale=zh-TW&promo_referer=3952_4823_11&Allianceid=8237671&SID=312406690&trip_sub1=&trip_sub3=P17011507' },
+    kenting: { img: 'images/trip-taiwan.webp', alt: 'Trip.com 台灣飯店五折起', link: 'https://tw.trip.com/sale/w/4823/hotel-deals.html?locale=zh-TW&promo_referer=3952_4823_11&Allianceid=8237671&SID=312406690&trip_sub1=&trip_sub3=P17011507' },
+    taipei:  { img: 'images/trip-taiwan.webp', alt: 'Trip.com 台灣飯店五折起', link: 'https://tw.trip.com/sale/w/4823/hotel-deals.html?locale=zh-TW&promo_referer=3952_4823_11&Allianceid=8237671&SID=312406690&trip_sub1=&trip_sub3=P17011507' },
+    chiangmai:{ img: 'images/trip-thailand.webp', alt: 'Trip.com 泰國五折優惠', link: 'https://tw.trip.com/sale/w/26497/go-thailand.html?locale=zh-tw&curr=twd&promo_referer=3952_26497_7&Allianceid=8237671&SID=312406690&trip_sub1=&trip_sub3=P17078987' },
+    bangkok: { img: 'images/trip-thailand.webp', alt: 'Trip.com 曼谷五折優惠', link: 'https://tw.trip.com/sale/w/26497/go-thailand.html?locale=zh-tw&curr=twd&promo_referer=3952_26497_7&Allianceid=8237671&SID=312406690&trip_sub1=&trip_sub3=P17078987' },
+    southeast:{ img: 'images/trip-thailand.webp', alt: 'Trip.com 東南亞機票優惠', link: 'https://tw.trip.com/sale/w/26497/go-thailand.html?locale=zh-tw&curr=twd&promo_referer=3952_26497_7&Allianceid=8237671&SID=312406690&trip_sub1=&trip_sub3=P17078987' },
+    vietnam: { img: 'images/trip-thailand.webp', alt: 'Trip.com 東南亞機票優惠', link: 'https://tw.trip.com/sale/w/26497/go-thailand.html?locale=zh-tw&curr=twd&promo_referer=3952_26497_7&Allianceid=8237671&SID=312406690&trip_sub1=&trip_sub3=P17078987' },
+    hongkong:{ img: 'images/trip-hongkong.webp', alt: 'Trip.com 港澳快閃優惠', link: 'https://tw.trip.com/sale/w/5025/cn-hk-mo-promotion.html?locale=zh_tw&promo_referer=3952_5025_10&Allianceid=8237671&SID=312406690&trip_sub1=&trip_sub3=P17079001' },
   };
 
   // Detect which banner to show
