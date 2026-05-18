@@ -727,10 +727,10 @@
   .car-service-item { padding: 20px 14px; }
   /* 放大图标容器 - 手机版 */
   .car-service-item .icon {
-    width: 72px !important;
-    height: 72px !important;
-    font-size: 40px !important;
-    line-height: 72px !important;
+    width: 100px !important;
+    height: 100px !important;
+    font-size: 56px !important;
+    line-height: 100px !important;
   }
 }
 @media (max-width: 480px) {
