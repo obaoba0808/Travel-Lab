@@ -4,6 +4,7 @@
 (function() {
   // Skip toolbar on homepage
   const isHomepage = window.location.pathname === '/' || window.location.pathname === '/index.html' || window.location.pathname.endsWith('/index.html');
+  const page = window.location.pathname;
   
   // === 1. FLOATING BOTTOM TOOLBAR ===
   if (!isHomepage) {
@@ -207,7 +208,7 @@
   const mainContent = document.querySelector('.content-area') || document.querySelector('.article-container');
   if (mainContent) {
     // Detect destination from page
-    const page = window.location.pathname;
+    // page already defined at top of IIFE
     let destLabel = '';
     let destSearch = '';
     if (page.includes('japan') || page.includes('tokyo') || page.includes('kansai') || page.includes('hokkaido') || page.includes('okinawa') || page.includes('kyoto')) {
