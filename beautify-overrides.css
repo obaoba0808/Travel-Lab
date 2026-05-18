@@ -840,3 +840,19 @@
   .hero-content p { font-size: 14px; line-height: 1.7; }
   .hero-region-tag { font-size: 12px; padding: 4px 12px; }
 }
+
+/* ========== Mobile Menu Fix (2026-05-18) ========== */
+@media (max-width: 768px) {
+  .mobile-toggle { display: block !important; }
+  .main-nav { display: none !important; }
+  .main-nav.open { display: flex !important; flex-direction: column; }
+}
+
+/* ========== Search Box Spacing Fix (2026-05-18) ========== */
+.search-box-wrap {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+.hero-beautify {
+  padding-bottom: 40px !important;
+}
