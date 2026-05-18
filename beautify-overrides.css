@@ -714,6 +714,13 @@
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
+/* ========== 包車橫幅圖片全寬 ========== */
+.charter-banner-wrap { margin: 0 0 30px; padding: 0 16px; }
+.charter-banner-img { width: 100%; border-radius: 12px; display: block; }
+@media (max-width: 767px) {
+  .charter-banner-wrap { padding: 0 !important; margin: 0 0 20px !important; }
+}
+
 .car-cta-btn:hover {
   transform: translateY(-2px);
   box-shadow: 0 4px 16px rgba(0,0,0,0.15);
