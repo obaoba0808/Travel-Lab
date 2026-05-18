@@ -139,40 +139,64 @@ ul { list-style:none; }
   display: block;
 }
 .hero-title-block {
-  background: linear-gradient(135deg, var(--tiffany-light) 0%, #fff 100%);
-  padding: 36px 24px 32px;
+  background: linear-gradient(180deg, #f0faf8 0%, #ffffff 100%);
+  padding: 44px 28px 40px;
   text-align: center;
   border-bottom: 3px solid var(--tiffany);
+  position: relative;
+}
+.hero-title-block::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: var(--tiffany-dark);
+  border-radius: 2px;
 }
 .hero-title-inner {
-  max-width: 720px;
+  max-width: 740px;
   margin: 0 auto;
 }
 .hero-region-tag {
-  display: inline-block;
-  background: var(--tiffany);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: linear-gradient(135deg, var(--tiffany), var(--tiffany-dark));
   color: #fff;
   font-size: 12px;
   font-weight: 600;
-  letter-spacing: 2px;
+  letter-spacing: 1.5px;
   text-transform: uppercase;
-  padding: 4px 16px;
+  padding: 5px 18px;
   border-radius: 20px;
-  margin-bottom: 14px;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 8px rgba(10,186,181,0.3);
 }
 .hero-main-title {
   font-family: 'Noto Serif TC', serif;
-  font-size: 34px;
+  font-size: 36px;
   font-weight: 700;
   color: #1a1a2e;
-  line-height: 1.4;
-  margin: 0 0 10px 0;
+  line-height: 1.35;
+  margin: 0 0 12px 0;
 }
 .hero-sub-title {
   font-size: 16px;
-  color: #555;
-  line-height: 1.7;
+  color: #666;
+  line-height: 1.8;
   margin: 0;
+}
+
+@media (max-width: 768px) {
+  .hero-main-title { font-size: 28px; }
+  .hero-title-block { padding: 32px 20px 28px; }
+}
+@media (max-width: 480px) {
+  .hero-main-title { font-size: 23px; }
+  .hero-title-block { padding: 24px 16px 20px; }
 }
 
 @media (max-width: 768px) {
@@ -389,9 +413,9 @@ div[style*="max-width:900px;margin:0 auto 30px;padding:0 20px;"] {
 .card-body .read-more:hover { background:var(--tiffany); color:#fff; }
 
 /* ========== ARTICLE BODY (Now within col-center) ========== */
-.article-container { max-width:700px; /* Adjusted max-width for content readability */ margin:0 auto; padding:0; /* Removed padding, col-center provides it */ }
-.article-container h2 { font-size:22px; color:var(--tiffany-dark); margin:40px 0 15px; padding-left:15px; border-left:5px solid var(--tiffany); }
-.article-container h3 { font-size:18px; color:var(--text-dark); margin:25px 0 10px; }
+.article-container { max-width:720px; margin:0 auto; padding:0 10px; }
+.article-container h2 { font-size:23px; color:var(--tiffany-dark); margin:44px 0 18px; padding-left:18px; border-left:5px solid var(--tiffany); line-height:1.5; }
+.article-container h3 { font-size:19px; color:var(--text-dark); margin:28px 0 12px; padding-bottom:8px; border-bottom:2px solid var(--tiffany-light); display:inline-block; }
 .article-container p { margin-bottom:15px; }
 .article-container ul, .article-container ol { margin:10px 0 20px 20px; list-style:none; padding: 0; } /* Removed default list style, added custom */
 .article-container li { margin-bottom:8px; position:relative; padding-left: 25px; } /* Added relative and padding for custom bullet */
@@ -402,10 +426,11 @@ div[style*="max-width:900px;margin:0 auto 30px;padding:0 20px;"] {
     left: 0;
     top: 0;
 }
-.day-card { background:var(--bg-light); border-radius:12px; padding:25px; margin-bottom:20px; border:1px solid var(--border); }
-.day-card h3 { color:var(--tiffany-dark); margin-top:0; }
+.day-card { background:#fff; border-radius:14px; padding:28px 28px 24px; margin-bottom:24px; border:1px solid var(--border); box-shadow:0 2px 12px var(--shadow); transition: box-shadow 0.3s, transform 0.3s; }
+.day-card:hover { box-shadow:0 8px 30px rgba(10,186,181,0.13); transform:translateY(-3px); }
+.day-card h3 { color:var(--tiffany-dark); margin:0 0 12px 0; font-size:20px; padding-bottom:10px; border-bottom:2px solid var(--tiffany-light); display:inline-block; }
 .day-tag { display:inline-block; background:var(--tiffany); color:#fff; padding:3px 12px; border-radius:20px; font-size:13px; font-weight:500; margin-bottom:10px; }
-.tip-box { background:var(--tiffany-light); border-left:4px solid var(--tiffany); padding:20px; border-radius:0 8px 8px 0; margin:20px 0; }
+.tip-box { background:linear-gradient(135deg, #e0f7f7 0%, #f0faf9 100%); border-left:5px solid var(--tiffany); padding:22px 24px; border-radius:0 12px 12px 0; margin:24px 0; font-size:15px; line-height:1.8; }
 .tip-box strong { color:var(--tiffany-dark); }
 
 /* ========== FAQ ========== */
