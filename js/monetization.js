@@ -1,4 +1,4 @@
-﻿// add-monetization.js - Travel Lab ?蝏辣
+// add-monetization.js - Travel Lab 聯盟行銷工具
 // Adds floating toolbar and in-article CTA blocks
 
 (function() {
@@ -10,218 +10,58 @@
   if (!isHomepage) {
   const toolbar = document.createElement('div');
   toolbar.id = 'travel-toolbar';
+  
+  // Toolbar HTML
   toolbar.innerHTML = `
     <div class="toolbar-inner">
-      <a href="https://www.agoda.com/zh-tw/?tag=e9ea26c2-c046-468f-939d-97d11075d6e0" target="_blank" rel="noopener sponsored" class="toolbar-btn" data-affiliate="agoda">
-        <span class="toolbar-icon">?</span>
-        <span class="toolbar-label">霈Ｘ隡?</span>
+      <a href="https://www.agoda.com/zh-tw/?tag=e9ea26c2-c046-468f-939d-97d11075d6e0" target="_blank" rel="noopener sponsored" data-affiliate="agoda" class="toolbar-item">
+        <span class="tb-icon">🏨</span>
+        <span class="tb-label">Agoda 訂房</span>
       </a>
-      <a href="https://www.skyscanner.com.tw/" target="_blank" rel="noopener sponsored" class="toolbar-btn" data-affiliate="skyscanner">
-        <span class="toolbar-icon">??</span>
-        <span class="toolbar-label">瘥遠?箇巨</span>
+      <a href="https://www.skyscanner.net.tw/?affiliateId=skyscan-ch&label=travel-lab" target="_blank" rel="noopener sponsored" data-affiliate="skyscanner" class="toolbar-item">
+        <span class="tb-icon">✈️</span>
+        <span class="tb-label">Skyscanner 機票</span>
       </a>
-      <a href="https://www.klook.com/zh-TW/?dd_referrer=https%3A%2F%2Fwww.klook.com%2Fzh-TW%2Faffiliate%2F" target="_blank" rel="noopener sponsored" class="toolbar-btn" data-affiliate="klook">
-        <span class="toolbar-icon">?</span>
-        <span class="toolbar-label">?舐?函巨</span>
+      <a href="https://www.klook.com/zh-TW/?aid=13014149&aff_label=travellab" target="_blank" rel="noopener sponsored" data-affiliate="klook" class="toolbar-item">
+        <span class="tb-icon">🎫</span>
+        <span class="tb-label">Klook 門票</span>
       </a>
-      <a href="https://www.airalo.com/" target="_blank" rel="noopener sponsored" class="toolbar-btn" data-affiliate="airalo">
-        <span class="toolbar-icon">?</span>
-        <span class="toolbar-label">eSIM蝵</span>
+      <a href="https://airalo.prf.hn/click/camref:1011lwbU/pubref:travellab/destination:https%3A%2F%2Fairalo.com%2Fzh-tw%2F" target="_blank" rel="noopener sponsored" data-affiliate="airalo" class="toolbar-item">
+        <span class="tb-icon">📱</span>
+        <span class="tb-label">Airalo eSIM</span>
       </a>
-      <a href="https://tw.trip.com/sale/w/4823/flight-deals.html?locale=zh-TW&promo_referer=3952_4823_6&Allianceid=8237671&SID=312406690&trip_sub1=&trip_sub3=P17078938" target="_blank" rel="noopener sponsored" class="toolbar-btn" data-affiliate="trip">
-        <span class="toolbar-icon">?妊</span>
-        <span class="toolbar-label">Trip.com</span>
+      <a href="https://www.trip.com.tw/?Allianceid=8237671&SID=312406690" target="_blank" rel="noopener sponsored" data-affiliate="tripcom" class="toolbar-item">
+        <span class="tb-icon">🌏</span>
+        <span class="tb-label">Trip.com</span>
       </a>
     </div>
   `;
-
-  // Toolbar CSS
-  const toolbarCSS = document.createElement('style');
-  toolbarCSS.textContent = `
-    #travel-toolbar {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      z-index: 9999;
-      background: rgba(15, 23, 42, 0.97);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border-top: 1px solid rgba(255,255,255,0.08);
-      transform: translateY(100%);
-      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-      box-shadow: 0 -4px 24px rgba(0,0,0,0.2);
-    }
-    #travel-toolbar.visible { transform: translateY(0); }
-    .toolbar-inner {
-      display: flex;
-      justify-content: center;
-      gap: 4px;
-      max-width: 600px;
-      margin: 0 auto;
-      padding: 6px 12px;
-    }
-    .toolbar-btn {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 2px;
-      padding: 8px 16px;
-      border-radius: 10px;
-      text-decoration: none;
-      transition: background 0.2s, transform 0.15s;
-      flex: 1;
-      min-width: 0;
-    }
-    .toolbar-btn:hover { background: rgba(255,255,255,0.08); transform: translateY(-2px); }
-    .toolbar-btn:active { transform: translateY(0); }
-    .toolbar-icon { font-size: 20px; line-height: 1; }
-    .toolbar-label { font-size: 11px; color: rgba(255,255,255,0.75); font-weight: 500; white-space: nowrap; letter-spacing: 0.3px; }
-    .toolbar-btn:hover .toolbar-label { color: #fff; }
-
-    /* In-article CTA block */
-    .article-cta {
-      background: linear-gradient(135deg, #f0fcfc 0%, #e8f8f8 100%);
-      border: 2px solid #e0f7f7;
-      border-radius: 18px;
-      padding: 28px;
-      margin: 36px 0;
-    }
-    .article-cta-title {
-      font-size: 16px;
-      font-weight: 700;
-      color: #1a1a2e;
-      margin-bottom: 6px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-    .article-cta-desc {
-      font-size: 13px;
-      color: #666;
-      margin-bottom: 18px;
-      line-height: 1.6;
-    }
-    .cta-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-      gap: 10px;
-    }
-    .cta-card {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      padding: 14px 16px;
-      border-radius: 12px;
-      text-decoration: none;
-      transition: transform 0.2s, box-shadow 0.2s;
-      border: 1.5px solid transparent;
-    }
-    .cta-card:hover { transform: translateY(-2px); box-shadow: 0 4px 16px rgba(0,0,0,0.08); }
-    .cta-card-icon {
-      width: 40px;
-      height: 40px;
-      border-radius: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 20px;
-      flex-shrink: 0;
-    }
-    .cta-card-text { font-size: 13px; font-weight: 600; }
-    .cta-card-sub { font-size: 11px; color: #888; font-weight: 400; }
-
-    .cta-agoda { background: #fff; border-color: #fde8d8; }
-    .cta-agoda .cta-card-icon { background: linear-gradient(135deg, #f5a623, #e8941c); }
-    .cta-agoda .cta-card-text { color: #e8941c; }
-
-    .cta-skyscanner { background: #fff; border-color: #d6eef8; }
-    .cta-skyscanner .cta-card-icon { background: linear-gradient(135deg, #00A2DF, #0090c8); }
-    .cta-skyscanner .cta-card-text { color: #0090c8; }
-
-    .cta-klook { background: #fff; border-color: #fde0e1; }
-    .cta-klook .cta-card-icon { background: linear-gradient(135deg, #FF5A5F, #e04a4f); }
-    .cta-klook .cta-card-text { color: #e04a4f; }
-
-    .cta-airalo { background: #fff; border-color: #e0e0e0; }
-    .cta-airalo .cta-card-icon { background: linear-gradient(135deg, #333, #222); }
-    .cta-airalo .cta-card-text { color: #333; }
-    .cta-trip { background: #fff; border-color: #cce5ff; }
-    .cta-trip .cta-card-icon { background: linear-gradient(135deg, #0077cc, #005bb5); }
-    .cta-trip .cta-card-text { color: #0077cc; }
-
-    /* Package service CTA (for Taiwan pages) */
-    .pkg-cta {
-      background: linear-gradient(135deg, #0ABAB5 0%, #089693 100%);
-      border-radius: 18px;
-      padding: 28px;
-      margin: 36px 0;
-      text-align: center;
-    }
-    .pkg-cta h4 { color: #fff; font-size: 18px; font-weight: 700; margin-bottom: 8px; }
-    .pkg-cta p { color: rgba(255,255,255,0.85); font-size: 14px; margin-bottom: 18px; }
-    .pkg-cta .pkg-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: #fff;
-      color: #089693;
-      padding: 12px 28px;
-      border-radius: 30px;
-      font-size: 15px;
-      font-weight: 700;
-      text-decoration: none;
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-    .pkg-cta .pkg-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.2); }
-
-    /* Responsive */
-    @media (max-width: 480px) {
-      .toolbar-inner { gap: 2px; padding: 4px 6px; }
-      .toolbar-btn { padding: 6px 8px; }
-      .toolbar-icon { font-size: 18px; }
-      .toolbar-label { font-size: 10px; }
-      .cta-grid { grid-template-columns: 1fr 1fr; }
-      .article-cta { padding: 20px; }
-    }
-  `;
-  document.head.appendChild(toolbarCSS);
-  document.body.appendChild(toolbar);
-
-  // Show toolbar after scrolling 300px
-  let toolbarShown = false;
-  const scrollObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (!entry.isIntersecting && !toolbarShown) {
-        toolbar.classList.add('visible');
-        toolbarShown = true;
-      }
-    });
-  }, { threshold: 0 });
-  const sentinel = document.querySelector('.site-topbar');
-  if (sentinel) scrollObserver.observe(sentinel);
-  // Fallback: show after 1s if still hidden
-  setTimeout(() => { if (!toolbarShown) { toolbar.classList.add('visible'); toolbarShown = true; } }, 1500);
-  } // end if (!isHomepage)
-
-  // === 2. IN-ARTICLE CTA BLOCK ===
-  const mainContent = document.querySelector('.content-area') || document.querySelector('.article-container');
-  if (mainContent) {
+  
+  // Insert into page
+  const body = document.body;
+  if (body) body.appendChild(toolbar);
+  }
+  
+  // === 2. IN-ARTICLE CTA BLOCKS ===
+  // Only insert on article pages (not homepage, not tools/contact/about)
+  const articleContainer = document.querySelector('.article-container') || document.querySelector('.col-center') || document.querySelector('.site-content');
+  
+  if (articleContainer && !isHomepage) {
+    
     // Detect destination from page
-    // page already defined at top of IIFE
     let destLabel = '';
     let destSearch = '';
     if (page.includes('japan') || page.includes('tokyo') || page.includes('kansai') || page.includes('hokkaido') || page.includes('okinawa') || page.includes('kyoto')) {
-      destLabel = '?交';
+      destLabel = '日本';
       destSearch = 'Japan';
     } else if (page.includes('korea') || page.includes('seoul') || page.includes('busan') || page.includes('jeju')) {
-      destLabel = '?拙';
+      destLabel = '韓國';
       destSearch = 'Korea';
     } else if (page.includes('taiwan') || page.includes('hualien') || page.includes('tainan') || page.includes('kenting')) {
-      destLabel = '?唳嗾';
+      destLabel = '台灣';
       destSearch = 'Taiwan';
     } else if (page.includes('southeast') || page.includes('chiang-mai') || page.includes('bangkok')) {
-      destLabel = '銝?鈭?;
+      destLabel = '東南亞';
       destSearch = 'Southeast Asia';
     }
 
@@ -229,100 +69,132 @@
       const ctaBlock = document.createElement('div');
       ctaBlock.className = 'article-cta';
       ctaBlock.innerHTML = `
-        <div class="article-cta-title">?? ${destLabel}??摰撌亙</div>
-        <div class="article-cta-desc">?箏?????餈?隞嗡?嚗??嗅??</div>
+        <div class="article-cta-title">📍 ${destLabel}旅遊推薦工具</div>
+        <div class="article-cta-desc">預訂以下行程服務，享受最優惠價格與專屬折扣</div>
         <div class="cta-grid">
           <a href="https://www.agoda.com/zh-tw/search/${destSearch}?tag=e9ea26c2-c046-468f-939d-97d11075d6e0" target="_blank" rel="noopener sponsored" class="cta-card cta-agoda" data-affiliate="agoda">
-            <div class="cta-card-icon">?</div>
+            <div class="cta-card-icon">🏨</div>
             <div>
-              <div class="cta-card-text">霈ａ?摨?/div>
-              <div class="cta-card-sub">Agoda ?</div>
+              <div class="cta-card-text">飯店住宿</div>
+              <div class="cta-card-sub">Agoda 比價</div>
             </div>
           </a>
-          <a href="https://www.skyscanner.com.tw/" target="_blank" rel="noopener sponsored" class="cta-card cta-skyscanner" data-affiliate="skyscanner">
-            <div class="cta-card-icon">??</div>
+          <a href="https://www.skyscanner.net.tw/transport/flights/tpe/${destSearch.toLowerCase()}?affiliateId=skyscan-ch&label=travel-lab" target="_blank" rel="noopener sponsored" class="cta-card cta-skyscanner" data-affiliate="skyscanner">
+            <div class="cta-card-icon">✈️</div>
             <div>
-              <div class="cta-card-text">瘥蟡?/div>
+              <div class="cta-card-text">機票比價</div>
               <div class="cta-card-sub">Skyscanner</div>
             </div>
           </a>
-          <a href="https://www.klook.com/zh-TW/search/results?keyword=${encodeURIComponent(destLabel)}&dd_referrer=https%3A%2F%2Fwww.klook.com%2Fzh-TW%2Faffiliate%2F" target="_blank" rel="noopener sponsored" class="cta-card cta-klook" data-affiliate="klook">
-            <div class="cta-card-icon">?</div>
+          <a href="https://www.klook.com/zh-TW/search/?keyword=${destSearch}&aid=13014149&aff_label=travellab" target="_blank" rel="noopener sponsored" class="cta-card cta-klook" data-affiliate="klook">
+            <div class="cta-card-icon">🎫</div>
             <div>
-              <div class="cta-card-text">銋圈蟡?/div>
-              <div class="cta-card-sub">Klook 蝡?</div>
+              <div class="cta-card-text">當地體驗</div>
+              <div class="cta-card-sub">Klook</div>
             </div>
           </a>
-          <a href="https://www.airalo.com/" target="_blank" rel="noopener sponsored" class="cta-card cta-airalo" data-affiliate="airalo">
-            <div class="cta-card-icon">?</div>
+          <a href="https://airalo.prf.hn/click/camref:1011lwbU/pubref:travellab/destination:https%3A%2F%2Fairalo.com%2Fzh-tw%2F" target="_blank" rel="noopener sponsored" class="cta-card cta-esim" data-affiliate="airalo">
+            <div class="cta-card-icon">📱</div>
             <div>
-              <div class="cta-card-text">銋送SIM</div>
-              <div class="cta-card-sub">??∩?蝵?/div>
-            </div>
-          </a>
-          <a href="https://tw.trip.com/sale/w/4823/flight-deals.html?locale=zh-TW&promo_referer=3952_4823_6&Allianceid=8237671&SID=312406690&trip_sub1=&trip_sub3=P17078938" target="_blank" rel="noopener sponsored" class="cta-card cta-trip" data-affiliate="trip">
-            <div class="cta-card-icon">?妊</div>
-            <div>
-              <div class="cta-card-text">Trip.com</div>
-              <div class="cta-card-sub">?箇巨???寞?</div>
+              <div class="cta-card-text">上網卡</div>
+              <div class="cta-card-sub">Airalo eSIM</div>
             </div>
           </a>
         </div>
       `;
-      // Insert CTA after first 200px of content or after first h2
-      const firstH2 = mainContent.querySelector('h2');
-      if (firstH2) {
-        firstH2.parentNode.insertBefore(ctaBlock, firstH2.nextSibling);
+      
+      // Insert after first day-card or after first 3 paragraphs
+      const dayCard = articleContainer.querySelector('.day-card');
+      const ps = articleContainer.querySelectorAll('p');
+      
+      if (dayCard && dayCard.nextElementSibling) {
+        dayCard.parentNode.insertBefore(ctaBlock, dayCard.nextElementSibling);
+      } else if (ps.length >= 3) {
+        ps[2].parentNode.insertBefore(ctaBlock, ps[2].nextSibling);
       } else {
-        mainContent.appendChild(ctaBlock);
+        articleContainer.appendChild(ctaBlock);
       }
+    }
+    
+    // === 3. TAIWAN CAR CHARTER CTA ===
+    // Show on Taiwan-related pages only
+    if (page.includes('taiwan') || page.includes('hualien') || page.includes('tainan') || page.includes('kenting')) {
+      const carCta = document.createElement('div');
+      carCta.className = 'car-cta-block';
+      carCta.innerHTML = `
+        <div class="car-cta-inner">
+          <div class="car-cta-icon">🚐</div>
+          <div class="car-cta-body">
+            <div class="car-cta-title">台灣包車服務 · 一日遊專車接送</div>
+            <div class="car-cta-desc">花東、墾丁、台南等地區，司機導覽、客製化行程，出發前報價無隱藏費用</div>
+          </div>
+          <a href="https://line.me/R/ti/p/@938nzmjr" target="_blank" rel="noopener" class="car-cta-btn">LINE 立即詢問</a>
+        </div>
+      `;
+      
+      articleContainer.appendChild(carCta);
     }
   }
 
-  // === 3. PACKAGE SERVICE CTA (Taiwan pages only) ===
-  if (mainContent && (page.includes('taiwan') || page.includes('hualien') || page.includes('tainan') || page.includes('kenting'))) {
-    const pkgBlock = document.createElement('div');
-    pkgBlock.className = 'pkg-cta';
-    pkgBlock.innerHTML = `
-      <h4>?? ?唳嗾?膠?</h4>
-      <p>?曹??銝?虫?頧行??銝剜??豢嚗?蝔?勗???/p>
-      <a href="https://line.me/ti/g/NbNGnW4Eh6" target="_blank" rel="noopener" class="pkg-btn">
-        ? LINE 蝡霂Ｖ遠
-      </a>
-    `;
-    // Insert near the end of content
-    mainContent.appendChild(pkgBlock);
+  // === 4. TRIP.COM PROMO BANNER ===
+  // Auto-insert Trip.com promo banner based on destination
+  function insertTripBanner() {
+    const container = document.querySelector('.article-container') || document.querySelector('.col-center');
+    if (!container) return;
+    
+    let bannerHtml = '';
+    
+    if (page.includes('japan') || page.includes('tokyo') || page.includes('kansai') || page.includes('hokkaido') || page.includes('okinawa') || page.includes('kyoto')) {
+      bannerHtml = `<a href="https://www.trip.com.tw/?Allianceid=8237671&SID=312406690" target="_blank" rel="noopener sponsored" data-affiliate="tripcom" class="trip-banner-link"><img src="images/trip-japan-promo.webp" alt="Trip.com 日本旅遊促銷 - 機票酒店優惠" class="trip-banner-img" loading="lazy"></a>`;
+    } else if (page.includes('korea') || page.includes('seoul') || page.includes('busan') || page.includes('jeju')) {
+      bannerHtml = `<a href="https://www.trip.com.tw/?Allianceid=8237671&SID=312406690" target="_blank" rel="noopener sponsored" data-affiliate="tripcom" class="trip-banner-link"><img src="images/trip-korea-promo.webp" alt="Trip.com 韓國旅遊促銷 - 機票酒店優惠" class="trip-banner-img" loading="lazy"></a>`;
+    } else if (page.includes('taiwan') || page.includes('hualien') || page.includes('tainan') || page.includes('kenting')) {
+      bannerHtml = `<a href="https://www.trip.com.tw/?Allianceid=8237671&SID=312406690" target="_blank" rel="noopener sponsored" data-affiliate="tripcom" class="trip-banner-link"><img src="images/trip-taiwan-promo.webp" alt="Trip.com 台灣旅遊促銷 - 機票酒店優惠" class="trip-banner-img" loading="lazy"></a>`;
+    } else if (page.includes('southeast') || page.includes('chiang-mai') || page.includes('bangkok')) {
+      bannerHtml = `<a href="https://www.trip.com.tw/?Allianceid=8237671&SID=312406690" target="_blank" rel="noopener sponsored" data-affiliate="tripcom" class="trip-banner-link"><img src="images/trip-southeastasia-promo.webp" alt="Trip.com 東南亞旅遊促銷 - 機票酒店優惠" class="trip-banner-img" loading="lazy"></a>`;
+    }
+    
+    if (bannerHtml) {
+      const wrapper = document.createElement('div');
+      wrapper.className = 'trip-banner-wrapper';
+      wrapper.innerHTML = bannerHtml;
+      
+      // Insert before the FAQ section or at end of article
+      const faqSection = container.querySelector('.faq-section');
+      if (faqSection) {
+        container.insertBefore(wrapper, faqSection);
+      } else {
+        container.appendChild(wrapper);
+      }
+    }
+  }
+  
+  // Run after DOM is ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', insertTripBanner);
+  } else {
+    insertTripBanner();
   }
 
-  // === 4. TRIP.COM PROMO BANNER (now embedded directly in HTML, no JS injection needed) ===
-  /* REMOVED - banners are now hardcoded in each HTML page */
-  if (false) { const tripBanners = {
-    japan:   { img: 'images/trip-japan.webp', alt: 'Trip.com ?交???芣?', link: 'https://tw.trip.com/sale/w/4217/japan-travel.html?locale=zh_tw&promo_referer=3952_4217_9&Allianceid=8237671&SID=312406690&trip_sub1=&trip_sub3=P17078945n' },
-    tokyo:   { img: 'images/trip-japan.webp', alt: 'Trip.com ?曹漪璈巨???芣?', link: 'https://tw.trip.com/sale/w/4217/japan-travel.html?locale=zh_tw&promo_referer=3952_4217_9&Allianceid=8237671&SID=312406690&trip_sub1=&trip_sub3=P17078945n' },
-    kansai:  { img: 'images/trip-japan.webp', alt: 'Trip.com ?正璈巨???芣?', link: 'https://tw.trip.com/sale/w/4217/japan-travel.html?locale=zh_tw&promo_referer=3952_4217_9&Allianceid=8237671&SID=312406690&trip_sub1=&trip_sub3=P17078945n' },
-    hokkaido:{ img: 'images/trip-japan.webp', alt: 'Trip.com ?絲??蟡券?摨??, link: 'https://tw.trip.com/sale/w/4217/japan-travel.html?locale=zh_tw&promo_referer=3952_4217_9&Allianceid=8237671&SID=312406690&trip_sub1=&trip_sub3=P17078945n' },
-    okinawa: { img: 'images/trip-okinawa.webp', alt: 'Trip.com 敹恍?瘝鼎 璈???$1000', link: 'https://tw.trip.com/sale/w/17859/okinawapromotion.html?locale=zh-TW&promo_referer=3952_17859_2&Allianceid=8237671&SID=312406690&trip_sub1=&trip_sub3=P17011395' },
-    kyoto:   { img: 'images/trip-japan.webp', alt: 'Trip.com 鈭祇璈巨???芣?', link: 'https://tw.trip.com/sale/w/4217/japan-travel.html?locale=zh_tw&promo_referer=3952_4217_9&Allianceid=8237671&SID=312406690&trip_sub1=&trip_sub3=P17078945n' },
-    osaka:   { img: 'images/trip-japan.webp', alt: 'Trip.com 憭折璈巨???芣?', link: 'https://tw.trip.com/sale/w/4217/japan-travel.html?locale=zh_tw&promo_referer=3952_4217_9&Allianceid=8237671&SID=312406690&trip_sub1=&trip_sub3=P17078945n' },
-    korea:   { img: 'images/trip-korea.webp', alt: 'Trip.com ?ａ???鈭?韏?, link: 'https://tw.trip.com/sale/w/4337/southkorea-destination.html?locale=zh-TW&promo_referer=3952_4337_8&Allianceid=8237671&SID=312406690&trip_sub1=&trip_sub3=P17011353' },
-    seoul:   { img: 'images/trip-korea.webp', alt: 'Trip.com 擐璈巨???芣?', link: 'https://tw.trip.com/sale/w/4337/southkorea-destination.html?locale=zh-TW&promo_referer=3952_4337_8&Allianceid=8237671&SID=312406690&trip_sub1=&trip_sub3=P17011353' },
-    busan:   { img: 'images/trip-busan.webp', alt: 'Trip.com ?控??璈???999韏?, link: 'https://tw.trip.com/sale/w/31376/superbusan-promotion.html?locale=zh-TW&promo_referer=3952_31376_3&Allianceid=8237671&SID=312406690&trip_sub1=&trip_sub3=P17011416' },
-    jeju:    { img: 'images/trip-korea.webp', alt: 'Trip.com 瞈?撜嗆?蟡券?摨??, link: 'https://tw.trip.com/sale/w/4337/southkorea-destination.html?locale=zh-TW&promo_referer=3952_4337_8&Allianceid=8237671&SID=312406690&trip_sub1=&trip_sub3=P17011353' },
-    taiwan:  { img: 'images/trip-taiwan.webp', alt: 'Trip.com ?啁憌臬?鈭?韏?, link: 'https://tw.trip.com/sale/w/4823/hotel-deals.html?locale=zh-TW&promo_referer=3952_4823_11&Allianceid=8237671&SID=312406690&trip_sub1=&trip_sub3=P17011507' },
-    hualien: { img: 'images/trip-taiwan.webp', alt: 'Trip.com ?啁憌臬?鈭?韏?, link: 'https://tw.trip.com/sale/w/4823/hotel-deals.html?locale=zh-TW&promo_referer=3952_4823_11&Allianceid=8237671&SID=312406690&trip_sub1=&trip_sub3=P17011507' },
-    tainan:  { img: 'images/trip-taiwan.webp', alt: 'Trip.com ?啁憌臬?鈭?韏?, link: 'https://tw.trip.com/sale/w/4823/hotel-deals.html?locale=zh-TW&promo_referer=3952_4823_11&Allianceid=8237671&SID=312406690&trip_sub1=&trip_sub3=P17011507' },
-    kenting: { img: 'images/trip-taiwan.webp', alt: 'Trip.com ?啁憌臬?鈭?韏?, link: 'https://tw.trip.com/sale/w/4823/hotel-deals.html?locale=zh-TW&promo_referer=3952_4823_11&Allianceid=8237671&SID=312406690&trip_sub1=&trip_sub3=P17011507' },
-    taipei:  { img: 'images/trip-taiwan.webp', alt: 'Trip.com ?啁憌臬?鈭?韏?, link: 'https://tw.trip.com/sale/w/4823/hotel-deals.html?locale=zh-TW&promo_referer=3952_4823_11&Allianceid=8237671&SID=312406690&trip_sub1=&trip_sub3=P17011507' },
-    chiangmai:{ img: 'images/trip-thailand.webp', alt: 'Trip.com 瘜啣?鈭??芣?', link: 'https://tw.trip.com/sale/w/26497/go-thailand.html?locale=zh-tw&curr=twd&promo_referer=3952_26497_7&Allianceid=8237671&SID=312406690&trip_sub1=&trip_sub3=P17078987' },
-    bangkok: { img: 'images/trip-thailand.webp', alt: 'Trip.com ?潸健鈭??芣?', link: 'https://tw.trip.com/sale/w/26497/go-thailand.html?locale=zh-tw&curr=twd&promo_referer=3952_26497_7&Allianceid=8237671&SID=312406690&trip_sub1=&trip_sub3=P17078987' },
-    southeast:{ img: 'images/trip-thailand.webp', alt: 'Trip.com ?勗?鈭?蟡典??, link: 'https://tw.trip.com/sale/w/26497/go-thailand.html?locale=zh-tw&curr=twd&promo_referer=3952_26497_7&Allianceid=8237671&SID=312406690&trip_sub1=&trip_sub3=P17078987' },
-    vietnam: { img: 'images/trip-thailand.webp', alt: 'Trip.com ?勗?鈭?蟡典??, link: 'https://tw.trip.com/sale/w/26497/go-thailand.html?locale=zh-tw&curr=twd&promo_referer=3952_26497_7&Allianceid=8237671&SID=312406690&trip_sub1=&trip_sub3=P17078987' },
-    hongkong:{ img: 'images/trip-hongkong.webp', alt: 'Trip.com 皜舀噫敹恍??芣?', link: '#' },
-  }; }
+  // === 5. AFFILIATE CLICK TRACKING ===
+  // Track affiliate link clicks for GA4
+  document.addEventListener('click', function(e) {
+    const link = e.target.closest('[data-affiliate]');
+    if (!link) return;
+    
+    const affiliateName = link.getAttribute('data-affiliate') || 'unknown';
+    const pageTitle = document.title || '';
+    
+    // Send to GA4 if available
+    if (typeof gtag !== 'undefined') {
+      gtag('event', 'affiliate_click', {
+        affiliate_name: affiliateName,
+        page_location: page,
+        page_title: pageTitle
+      });
+    }
+    
+    console.log('[Affiliate Click]', affiliateName, page);
+  });
 
-  // Add padding to body bottom for toolbar (only on non-homepage pages)
-  if (!isHomepage) {
-    document.body.style.paddingBottom = '64px';
-  }
 })();
-
