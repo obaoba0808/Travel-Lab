@@ -413,6 +413,162 @@
   flex-shrink: 0;
 }
 
+/* ========== Taiwan Car Charter Service ========== */
+.car-service {
+  background: linear-gradient(160deg, #f0fdfc 0%, #e8f9f8 50%, #f0fdfc 100%);
+  padding: 64px 0;
+  margin: 64px 0 0;
+  border-top: 3px solid var(--tiffany-light);
+  position: relative;
+}
+.car-service::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--tiffany), var(--tiffany-dark), var(--tiffany));
+}
+.car-service .service-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 28px;
+}
+.car-service .service-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+.car-service .service-header h2 {
+  font-size: 30px;
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--tiffany-dark) 0%, var(--tiffany) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 12px;
+  letter-spacing: -0.5px;
+}
+.car-service .service-header p {
+  font-size: 16px;
+  color: var(--text-gray);
+  line-height: 1.8;
+}
+.car-service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 20px;
+  margin-bottom: 40px;
+}
+.car-service-item {
+  background: #fff;
+  border-radius: 18px;
+  padding: 28px 20px;
+  border: 1.5px solid var(--border);
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+  box-shadow: 0 2px 12px var(--shadow);
+}
+.car-service-item:hover {
+  border-color: var(--tiffany);
+  transform: translateY(-6px);
+  box-shadow: 0 12px 36px rgba(10,186,181,0.16);
+}
+.car-service-item .icon {
+  font-size: 36px;
+  margin-bottom: 14px;
+  display: inline-block;
+  background: linear-gradient(135deg, #f0fdfc, #e0f7f7);
+  width: 64px;
+  height: 64px;
+  line-height: 64px;
+  border-radius: 16px;
+}
+.car-service-item h4 {
+  font-size: 16px;
+  color: var(--tiffany-dark);
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+.car-service-item p {
+  font-size: 13.5px;
+  color: var(--text-gray);
+  line-height: 1.7;
+}
+.car-service-cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 32px;
+}
+.car-service-cta .btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, var(--tiffany) 0%, var(--tiffany-dark) 100%);
+  color: #fff;
+  padding: 14px 32px;
+  border-radius: 30px;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 4px 16px rgba(10,186,181,0.25);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.car-service-cta .btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(10,186,181,0.35);
+}
+.car-service-cta .btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #fff;
+  color: var(--tiffany-dark);
+  padding: 14px 32px;
+  border-radius: 30px;
+  font-size: 15px;
+  font-weight: 700;
+  border: 2px solid var(--tiffany);
+  text-decoration: none;
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+.car-service-cta .btn-secondary:hover {
+  background: var(--tiffany-light);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(10,186,181,0.15);
+}
+.car-service-trust {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+.car-service-trust span {
+  font-size: 13px;
+  color: var(--tiffany-dark);
+  background: #fff;
+  padding: 7px 16px;
+  border-radius: 20px;
+  border: 1.5px solid var(--tiffany-light);
+  font-weight: 500;
+  transition: background 0.2s, transform 0.2s;
+}
+.car-service-trust span:hover {
+  background: var(--tiffany-light);
+  transform: translateY(-1px);
+}
+@media (max-width: 768px) {
+  .car-service { padding: 48px 0; }
+  .car-service .service-header h2 { font-size: 24px; }
+  .car-service-grid { grid-template-columns: 1fr 1fr; gap: 14px; }
+  .car-service-item { padding: 20px 14px; }
+}
+@media (max-width: 480px) {
+  .car-service-grid { grid-template-columns: 1fr; }
+  .car-service-cta .btn-primary, .car-service-cta .btn-secondary { width: 100%; justify-content: center; }
+}
+
 /* ========== Responsive Tweaks for Enhanced Sections ========== */
 @media (max-width: 768px) {
   .faq-q { font-size: 14px; padding: 16px 18px; }
