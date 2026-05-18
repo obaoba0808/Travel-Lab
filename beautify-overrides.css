@@ -720,17 +720,24 @@
   color: #0ABAB5;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .car-service { padding: 48px 0; }
   .car-service .service-header h2 { font-size: 24px; }
-  .car-service-grid { grid-template-columns: 1fr 1fr; gap: 14px; }
-  .car-service-item { padding: 20px 14px; }
-  /* 放大图标容器 - 手机版 */
+  .car-service-grid { grid-template-columns: 1fr !important; gap: 20px; }
+  .car-service-item { 
+    padding: 24px 16px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+  /* 图标容器全宽 */
   .car-service-item .icon {
-    width: 100px !important;
-    height: 100px !important;
-    font-size: 56px !important;
-    line-height: 100px !important;
+    width: 120px !important;
+    height: 120px !important;
+    font-size: 64px !important;
+    line-height: 120px !important;
+    margin-bottom: 16px !important;
   }
 }
 @media (max-width: 480px) {
