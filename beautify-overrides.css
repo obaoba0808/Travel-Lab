@@ -721,40 +721,39 @@
 }
 
 @media (max-width: 767px) {
-  .car-service { padding: 48px 0; }
-  .car-service .service-header h2 { font-size: 24px; }
-  .car-service-grid { grid-template-columns: 1fr !important; gap: 20px; }
+  /* 包車區塊手機版全寬 */
+  .car-service { padding: 32px 16px !important; margin: 24px 0 !important; }
+  .car-service .service-inner { max-width: 100% !important; padding: 0 !important; }
+  .car-service .service-header h2 { font-size: 22px; }
+  .car-service-grid { grid-template-columns: 1fr !important; gap: 16px; }
   .car-service-item { 
-    padding: 24px 16px !important;
+    padding: 20px 12px !important;
     display: flex !important;
-    flex-direction: column !important;
+    flex-direction: row !important;
     align-items: center !important;
-    text-align: center !important;
+    text-align: left !important;
   }
-  /* 手机版：SVG 图标全宽显示 */
+  /* 手機版：SVG 圖標適中大小 */
   .car-service-item .icon {
-    width: 90vw !important;
-    height: 90vw !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    margin-bottom: 20px !important;
+    width: 64px !important;
+    height: 64px !important;
+    min-width: 64px !important;
+    margin-bottom: 0 !important;
+    margin-right: 14px !important;
+    flex-shrink: 0;
   }
   .car-icon-svg {
-    width: 100% !important;
-    height: 100% !important;
+    width: 44px !important;
+    height: 44px !important;
   }
+  .car-service-item h4 { font-size: 15px !important; }
+  .car-service-item p { font-size: 13px !important; display: none !important; }
+  .car-service-cta { flex-direction: column; }
+  .car-service-cta a { width: 100%; text-align: center; justify-content: center; }
 }
 @media (max-width: 480px) {
   .car-service-grid { grid-template-columns: 1fr; }
   .car-service-cta .btn-primary, .car-service-cta .btn-secondary { width: 100%; justify-content: center; }
-  /* 超小屏幕图标再放大 */
-  .car-service-item .icon {
-    width: 80px !important;
-    height: 80px !important;
-    font-size: 44px !important;
-    line-height: 80px !important;
-  }
 }
 
 /* ========== Responsive Tweaks for Enhanced Sections ========== */
