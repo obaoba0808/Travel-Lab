@@ -103,16 +103,23 @@
         </div>
       `;
       
-      // Insert after first day-card or after first 3 paragraphs
-      const dayCard = articleContainer.querySelector('.day-card');
-      const ps = articleContainer.querySelectorAll('p');
-      
-      if (dayCard && dayCard.nextElementSibling) {
-        dayCard.parentNode.insertBefore(ctaBlock, dayCard.nextElementSibling);
-      } else if (ps.length >= 3) {
-        ps[2].parentNode.insertBefore(ctaBlock, ps[2].nextSibling);
-      } else {
+      // Insert after FAQ section (user request 2026-05-18)
+      const faqSection = articleContainer.querySelector('.faq-section');
+      if (faqSection && faqSection.nextElementSibling) {
+        articleContainer.insertBefore(ctaBlock, faqSection.nextElementSibling);
+      } else if (faqSection) {
         articleContainer.appendChild(ctaBlock);
+      } else {
+        // Fallback: insert after first day-card or after first 3 paragraphs
+        const dayCard = articleContainer.querySelector('.day-card');
+        const ps = articleContainer.querySelectorAll('p');
+        if (dayCard && dayCard.nextElementSibling) {
+          dayCard.parentNode.insertBefore(ctaBlock, dayCard.nextElementSibling);
+        } else if (ps.length >= 3) {
+          ps[2].parentNode.insertBefore(ctaBlock, ps[2].nextSibling);
+        } else {
+          articleContainer.appendChild(ctaBlock);
+        }
       }
     }
     
