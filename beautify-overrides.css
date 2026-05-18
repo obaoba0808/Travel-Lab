@@ -240,6 +240,179 @@
   color: #666;
 }
 
+/* ========== Sidebar Widgets ========== */
+.widget {
+  background: #fff;
+  border-radius: 16px;
+  padding: 24px 22px;
+  margin-bottom: 28px;
+  box-shadow: 0 2px 14px var(--shadow);
+  border: 1px solid var(--border);
+  transition: box-shadow 0.3s;
+}
+.widget:hover { box-shadow: 0 6px 24px rgba(10,186,181,0.1); }
+.widget-title {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 18px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--tiffany-light);
+  position: relative;
+}
+.widget-title::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background: var(--tiffany);
+  border-radius: 1px;
+}
+.widget-categories a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 14px;
+  border-radius: 10px;
+  color: var(--text-gray);
+  font-size: 14.5px;
+  font-weight: 500;
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+  margin-bottom: 4px;
+}
+.widget-categories a:hover {
+  background: var(--tiffany-light);
+  color: var(--tiffany);
+  transform: translateX(4px);
+}
+.widget-categories a span {
+  background: var(--tiffany-light);
+  color: var(--tiffany);
+  border-radius: 20px;
+  font-size: 12px;
+  padding: 2px 10px;
+  font-weight: 600;
+}
+.widget-popular li {
+  list-style: none;
+  margin-bottom: 8px;
+  padding: 0;
+}
+.widget-popular li a {
+  display: block;
+  padding: 10px 14px;
+  border-radius: 10px;
+  color: var(--text-gray);
+  font-size: 14px;
+  line-height: 1.5;
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+  border-left: 3px solid transparent;
+}
+.widget-popular li a:hover {
+  background: var(--tiffany-light);
+  color: var(--tiffany);
+  border-left-color: var(--tiffany);
+  transform: translateX(4px);
+}
+
+/* ========== Reader Tools Widget (.widget-tools) ========== */
+.widget-tools .tool-btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 13px 16px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  margin-bottom: 10px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  border: 1.5px solid transparent;
+}
+.widget-tools .tool-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+}
+.widget-tools .tool-btn.agoda {
+  background: #fff5ee;
+  border-color: #fde8d8;
+  color: #c97000;
+}
+.widget-tools .tool-btn.agoda:hover { background: #fff3e6; }
+.widget-tools .tool-btn.klook {
+  background: #fff0f0;
+  border-color: #fde0e1;
+  color: #e04a4f;
+}
+.widget-tools .tool-btn.klook:hover { background: #fff5f5; }
+.widget-tools .tool-btn.skyscanner {
+  background: #f0f8ff;
+  border-color: #d6eef8;
+  color: #0090c8;
+}
+.widget-tools .tool-btn.skyscanner:hover { background: #e8f4ff; }
+.widget-tools .tool-btn.esim {
+  background: #f8f8f8;
+  border-color: #e0e0e0;
+  color: #444;
+}
+.widget-tools .tool-btn.esim:hover { background: #f0f0f0; }
+
+/* ========== Klook Hotel Widget Section ========== */
+.klook-section {
+  max-width: 1100px;
+  margin: 0 auto 36px;
+  padding: 0 28px;
+}
+.klook-section-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+  padding-bottom: 14px;
+  border-bottom: 2px solid var(--tiffany-light);
+}
+.klook-section-badge {
+  background: linear-gradient(135deg, #FF5A5F, #e04a4f);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 5px 14px;
+  border-radius: 20px;
+  letter-spacing: 0.5px;
+  flex-shrink: 0;
+}
+.klook-section-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+.klook-section-sub {
+  font-size: 13px;
+  color: var(--text-gray);
+}
+
+/* ========== About / About Widget ========== */
+.about-widget-box {
+  background: linear-gradient(135deg, #f0fcfc, #e8f8f8);
+  border-radius: 12px;
+  padding: 16px 18px;
+  font-size: 12.5px;
+  line-height: 2;
+}
+.about-widget-box div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-gray);
+}
+.about-widget-box div::before {
+  content: '✅';
+  flex-shrink: 0;
+}
+
 /* ========== Responsive Tweaks for Enhanced Sections ========== */
 @media (max-width: 768px) {
   .faq-q { font-size: 14px; padding: 16px 18px; }
