@@ -293,8 +293,9 @@
     mainContent.appendChild(pkgBlock);
   }
 
-  // === 4. TRIP.COM PROMO BANNER (contextual per destination) ===
-  const tripBanners = {
+  // === 4. TRIP.COM PROMO BANNER (now embedded directly in HTML, no JS injection needed) ===
+  /* REMOVED - banners are now hardcoded in each HTML page */
+  if (false) { const tripBanners = {
     japan:   { img: 'images/trip-japan.webp', alt: 'Trip.com 日本旅遊優惠', link: 'https://tw.trip.com/sale/w/4217/japan-travel.html?locale=zh_tw&promo_referer=3952_4217_9&Allianceid=8237671&SID=312406690&trip_sub1=&trip_sub3=P17078945n' },
     tokyo:   { img: 'images/trip-japan.webp', alt: 'Trip.com 東京機票酒店優惠', link: 'https://tw.trip.com/sale/w/4217/japan-travel.html?locale=zh_tw&promo_referer=3952_4217_9&Allianceid=8237671&SID=312406690&trip_sub1=&trip_sub3=P17078945n' },
     kansai:  { img: 'images/trip-japan.webp', alt: 'Trip.com 關西機票酒店優惠', link: 'https://tw.trip.com/sale/w/4217/japan-travel.html?locale=zh_tw&promo_referer=3952_4217_9&Allianceid=8237671&SID=312406690&trip_sub1=&trip_sub3=P17078945n' },
@@ -315,55 +316,8 @@
     bangkok: { img: 'images/trip-thailand.webp', alt: 'Trip.com 曼谷五折優惠', link: 'https://tw.trip.com/sale/w/26497/go-thailand.html?locale=zh-tw&curr=twd&promo_referer=3952_26497_7&Allianceid=8237671&SID=312406690&trip_sub1=&trip_sub3=P17078987' },
     southeast:{ img: 'images/trip-thailand.webp', alt: 'Trip.com 東南亞機票優惠', link: 'https://tw.trip.com/sale/w/26497/go-thailand.html?locale=zh-tw&curr=twd&promo_referer=3952_26497_7&Allianceid=8237671&SID=312406690&trip_sub1=&trip_sub3=P17078987' },
     vietnam: { img: 'images/trip-thailand.webp', alt: 'Trip.com 東南亞機票優惠', link: 'https://tw.trip.com/sale/w/26497/go-thailand.html?locale=zh-tw&curr=twd&promo_referer=3952_26497_7&Allianceid=8237671&SID=312406690&trip_sub1=&trip_sub3=P17078987' },
-    hongkong:{ img: 'images/trip-hongkong.webp', alt: 'Trip.com 港澳快閃優惠', link: 'https://tw.trip.com/sale/w/5025/cn-hk-mo-promotion.html?locale=zh_tw&promo_referer=3952_5025_10&Allianceid=8237671&SID=312406690&trip_sub1=&trip_sub3=P17079001' },
-  };
-
-  // Detect which banner to show
-  let matchedBanner = null;
-  for (const [key, banner] of Object.entries(tripBanners)) {
-    if (page.includes(key)) { matchedBanner = banner; break; }
-  }
-
-  if (mainContent && matchedBanner) {
-    const bannerEl = document.createElement('div');
-    bannerEl.className = 'trip-promo-banner';
-    bannerEl.innerHTML = `
-      <a href="${matchedBanner.link}" target="_blank" rel="noopener sponsored" data-affiliate="trip">
-        <img src="${matchedBanner.img}" alt="${matchedBanner.alt}" loading="lazy" />
-      </a>
-    `;
-    // Insert after CTA block or after first h2
-    const existingCta = mainContent.querySelector('.article-cta');
-    if (existingCta) {
-      existingCta.parentNode.insertBefore(bannerEl, existingCta.nextSibling);
-    } else {
-      const firstH2 = mainContent.querySelector('h2');
-      if (firstH2) firstH2.parentNode.insertBefore(bannerEl, firstH2.nextSibling);
-    }
-
-    // Add banner styles
-    const bannerCSS = document.createElement('style');
-    bannerCSS.textContent = `
-      .trip-promo-banner {
-        margin: 24px 0;
-        border-radius: 14px;
-        overflow: hidden;
-        box-shadow: 0 2px 12px rgba(0,0,0,0.06);
-        transition: transform 0.2s, box-shadow 0.2s;
-      }
-      .trip-promo-banner:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 6px 24px rgba(0,0,0,0.12);
-      }
-      .trip-promo-banner a { display: block; }
-      .trip-promo-banner img {
-        width: 100%;
-        height: auto;
-        display: block;
-      }
-    `;
-    document.head.appendChild(bannerCSS);
-  }
+    hongkong:{ img: 'images/trip-hongkong.webp', alt: 'Trip.com 港澳快閃優惠', link: '#' },
+  }; }
 
   // Add padding to body bottom for toolbar (only on non-homepage pages)
   if (!isHomepage) {
