@@ -558,6 +558,168 @@
   background: var(--tiffany-light);
   transform: translateY(-1px);
 }
+
+/* ========== In-Article CTA Blocks (from monetization.js) ========== */
+.article-cta {
+  background: linear-gradient(135deg, #f0faf9 0%, #e6f7f5 100%);
+  border: 1px solid #b2e8e3;
+  border-radius: 14px;
+  padding: 28px 24px;
+  margin: 36px 0;
+  box-shadow: 0 2px 12px rgba(10,186,181,0.08);
+}
+
+.article-cta-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #0ABAB5;
+  margin-bottom: 6px;
+}
+
+.article-cta-desc {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.cta-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.cta-card {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  gap: 14px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 18px 16px;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  transition: transform 0.25s, box-shadow 0.25s;
+  border: 1px solid #e8f4f3;
+}
+
+.cta-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(10,186,181,0.15);
+  text-decoration: none;
+  color: inherit;
+}
+
+.cta-card-icon {
+  font-size: 28px;
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f0faf9;
+  border-radius: 10px;
+}
+
+.cta-card-text {
+  font-size: 15px;
+  font-weight: 600;
+  color: #222;
+  line-height: 1.4;
+}
+
+.cta-card-sub {
+  font-size: 13px;
+  color: #888;
+  margin-top: 2px;
+}
+
+/* CTA card color accents */
+.cta-agoda .cta-card-icon { background: #fece00; font-size: 24px; }
+.cta-skyscanner .cta-card-icon { background: #0770e3; font-size: 20px; }
+.cta-klook .cta-card-icon { background: #ff5722; font-size: 22px; }
+.cta-esim .cta-card-icon { background: #e8f5e9; font-size: 24px; }
+
+/* ========== Trip.com Banner Wrapper ========== */
+.trip-banner-wrapper {
+  margin: 36px 0;
+  text-align: center;
+}
+
+.trip-banner-link {
+  display: block;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  transition: transform 0.25s;
+}
+
+.trip-banner-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(10,186,181,0.12);
+}
+
+.trip-banner-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ========== Car CTA Block (Taiwan pages) ========== */
+.car-cta-block {
+  background: linear-gradient(135deg, #0ABAB5 0%, #088886 100%);
+  border-radius: 14px;
+  padding: 28px 24px;
+  margin: 36px 0;
+  color: #fff;
+}
+
+.car-cta-inner {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.car-cta-icon {
+  font-size: 42px;
+  flex-shrink: 0;
+}
+
+.car-cta-body {
+  flex: 1;
+}
+
+.car-cta-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.car-cta-desc {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.car-cta-btn {
+  display: inline-block;
+  background: #fff;
+  color: #0ABAB5;
+  font-weight: 700;
+  padding: 12px 28px;
+  border-radius: 999px;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.car-cta-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+  color: #0ABAB5;
+}
+
 @media (max-width: 768px) {
   .car-service { padding: 48px 0; }
   .car-service .service-header h2 { font-size: 24px; }
