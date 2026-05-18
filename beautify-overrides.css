@@ -583,19 +583,3 @@
   .article-bottom-cta h3 { font-size: 17px; }
   .article-bottom-cta .btn-white { padding: 10px 22px; font-size: 13px; }
 }
-
-/* ========== Trip.com iframe Responsive ========== */
-#S17073744 {
-  width: 100% !important;
-  max-width: 900px !important;
-  height: auto !important;
-  aspect-ratio: 900 / 200 !important;
-  display: block;
-  margin: 0 auto;
-}
-@media (max-width: 600px) {
-  #S17073744 {
-    aspect-ratio: 16 / 9 !important;
-    height: auto !important;
-  }
-}
