@@ -127,6 +127,15 @@
 }
 .related-card .post-body h3 a:hover { color: var(--tiffany); }
 
+/* Fix: make related-posts full-width below sidebar + article */
+.three-col-wrapper {
+  flex-wrap: wrap !important;
+}
+.three-col-wrapper .related-posts {
+  flex-basis: 100% !important;
+  width: 100% !important;
+}
+
 /* ========== Bottom CTA Enhanced ========== */
 .article-bottom-cta {
   background: linear-gradient(135deg, var(--tiffany) 0%, var(--tiffany-dark) 100%);
