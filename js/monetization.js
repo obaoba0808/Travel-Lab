@@ -103,10 +103,13 @@
         </div>
       `;
       
-      // Insert after FAQ section (user request 2026-05-18)
-      // Search ENTIRE document (FAQ may be outside articleContainer)
+      // Insert AFTER related-posts (user request 2026-05-19)
+      // Priority: related-posts > FAQ section > fallback
+      const relatedPosts = document.querySelector('.related-posts');
       const faqSection = document.querySelector('.faq-section') || document.querySelector('.faq-accordion-beautify') || articleContainer.querySelector('.faq-section') || articleContainer.querySelector('.faq-accordion-beautify');
-      if (faqSection) {
+      if (relatedPosts) {
+        relatedPosts.after(ctaBlock);
+      } else if (faqSection) {
         faqSection.after(ctaBlock);
       } else {
         // Fallback: insert after first day-card or after first 3 paragraphs
