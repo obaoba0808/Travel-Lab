@@ -642,31 +642,36 @@
 .cta-esim .cta-card-icon { background: #e8f5e9; font-size: 24px; }
 
 /* ========== Trip.com Banner Wrapper ========== */
+/* Trip.com iframe - 突破 article-container 寬度限制 */
 .trip-banner-wrapper {
-  margin: 36px 0;
-  text-align: center;
+  width: 100vw;
+  margin-left: calc(-1 * (100vw - 100%) / 2);
+  display: flex;
+  justify-content: center;
+  margin-top: 36px;
+  margin-bottom: 36px;
+}
+.trip-banner-wrapper iframe {
+  width: 728px;
+  height: 90px;
+  border: none;
+  border-radius: 8px;
+  max-width: 95vw;
+}
+@media (max-width: 768px) {
+  .trip-banner-wrapper {
+    width: 100%;
+    margin-left: 0;
+    padding: 0 10px;
+    box-sizing: border-box;
+  }
+  .trip-banner-wrapper iframe {
+    width: 100% !important;
+    aspect-ratio: 728 / 90;
+    height: auto;
+  }
 }
 
-.trip-banner-link {
-  display: block;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-  transition: transform 0.25s;
-}
-
-.trip-banner-link:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(10,186,181,0.12);
-}
-
-.trip-banner-img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* ========== Car CTA Block (Taiwan pages) ========== */
 .car-cta-block {
   background: linear-gradient(135deg, #0ABAB5 0%, #088886 100%);
   border-radius: 14px;
@@ -956,30 +961,4 @@
     padding: 15px 10px 20px 10px !important;
   }
 }
-/* Trip.com iframe - 突破 article-container 寬度限制 */
-.trip-banner-wrapper {
-  width: 100vw;
-  margin-left: calc(-1 * (100vw - 100%) / 2);
-  display: flex;
-  justify-content: center;
-}
-.trip-banner-wrapper iframe {
-  width: 728px;
-  height: 90px;
-  border: none;
-  border-radius: 8px;
-  max-width: 95vw;
-}
-@media (max-width: 768px) {
-  .trip-banner-wrapper {
-    width: 100%;
-    margin-left: 0;
-    padding: 0 10px;
-    box-sizing: border-box;
-  }
-  .trip-banner-wrapper iframe {
-    width: 100% !important;
-    aspect-ratio: 728 / 90;
-    height: auto;
-  }
-}
+/* ========== Car CTA Block (Taiwan pages) ==========
