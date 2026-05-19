@@ -146,98 +146,77 @@
   }
 
   // === 4. TRIP.COM PROMO BANNER ===
-  // Auto-insert Trip.com promo image banner based on destination
+  // Auto-insert destination-specific Trip.com DYNAMIC banners
   function insertTripBanner() {
     const container = document.querySelector('.article-container') || document.querySelector('.col-center');
     if (!container) return;
     
-    let tripPromo = null;
-    
-    // Destination-specific Trip.com promo images (user provided 2026-05-19)
-    const tripPromos = {
-      // 日本：tokyo, okinawa, kyoto, kansai, hokkaido, osaka, usj, japan
-      'japan': {
-        img: 'trip-japan.webp',
-        url: 'https://tw.trip.com/sale/w/4217/japan-travel.html?locale=zh_tw&promo_referer=3952_4217_9&Allianceid=8237671&SID=312406690&trip_sub1=&trip_sub3=P17078945n',
-        alt: 'Trip 日本自由行優惠'
-      },
-      // 韓國：seoul, busan, jeju, korea
-      'korea': {
-        img: 'trip-korea.webp',
-        url: 'https://tw.trip.com/sale/w/4337/southkorea-destination.html?locale=zh-TW&promo_referer=3952_4337_8&Allianceid=8237671&SID=312406690&trip_sub1=&trip_sub3=P17011353',
-        alt: 'Trip 韓國自由行優惠'
-      },
-      // 釜山專用
-      'busan': {
-        img: 'trip-busan.webp',
-        url: 'https://tw.trip.com/sale/w/31376/superbusan-promotion.html?locale=zh-TW&promo_referer=3952_31376_3&Allianceid=8237671&SID=312406690&trip_sub1=&trip_sub3=P17011416',
-        alt: 'Trip 釜山機加酒優惠'
-      },
-      // 沖繩專用
-      'okinawa': {
-        img: 'trip-okinawa.webp',
-        url: 'https://tw.trip.com/sale/w/17859/okinawapromotion.html?locale=zh-TW&promo_referer=3952_17859_2&Allianceid=8237671&SID=312406690&trip_sub1=&trip_sub3=P17011395',
-        alt: 'Trip 沖繩機加酒優惠'
-      },
-      // 台灣：taipei, taiwan-travel, hualien, tainan, kenting, jiufen, taiwan
-      'taiwan': {
-        img: 'trip-taiwan.webp',
-        url: 'https://tw.trip.com/sale/w/4823/hotel-deals.html?locale=zh-TW&promo_referer=3952_4823_11&Allianceid=8237671&SID=312406690&trip_sub1=&trip_sub3=P17011507',
-        alt: 'Trip 台灣旅遊優惠'
-      },
-      // 東南亞/泰國：chiang-mai, bangkok, southeast, thailand
-      'thailand': {
-        img: 'trip-thailand.webp',
-        url: 'https://tw.trip.com/sale/w/26497/go-thailand.html?locale=zh-tw&curr=twd&promo_referer=3952_26497_7&Allianceid=8237671&SID=312406690&trip_sub1=&trip_sub3=P17078987',
-        alt: 'Trip 泰國自由行優惠'
-      },
-      // 港澳
-      'hongkong': {
-        img: 'trip-hongkong.webp',
-        url: 'https://tw.trip.com/sale/w/5025/cn-hk-mo-promotion.html?locale=zh_tw&promo_referer=3952_5025_10&Allianceid=8237671&SID=312406690&trip_sub1=&trip_sub3=P17079001',
-        alt: 'Trip 港澳自由行優惠'
-      },
-      // 機票
-      'flights': {
-        img: 'trip-flights.webp',
-        url: 'https://tw.trip.com/sale/w/4823/flight-deals.html?locale=zh-TW&promo_referer=3952_4823_6&Allianceid=8237671&SID=312406690&trip_sub1=&trip_sub3=P17078938',
-        alt: 'Trip 機票優惠'
-      }
+    // Destination → Trip.com dynamic banner ID mapping (user provided 2026-05-20)
+    const bannerConfig = {
+      'tokyo':       { id: 'DB17161314', w: 468, h: 60 },
+      'osaka':       { id: 'DB17161349', w: 468, h: 60 },
+      'kyoto':       { id: 'DB17161349', w: 468, h: 60 },
+      'kansai':      { id: 'DB17161349', w: 468, h: 60 },
+      'hokkaido':    { id: 'DB17161468', w: 468, h: 60 },
+      'sapporo':     { id: 'DB17161468', w: 468, h: 60 },
+      'okinawa':     { id: 'DB17161314', w: 468, h: 60 },
+      'japan':       { id: 'DB17161314', w: 468, h: 60 },
+      'seoul':       { id: 'DB17161370', w: 468, h: 60 },
+      'busan':       { id: 'DB17161545', w: 468, h: 60 },
+      'jeju':        { id: 'DB17161370', w: 468, h: 60 },
+      'korea':       { id: 'DB17161370', w: 468, h: 60 },
+      'chiang-mai':  { id: 'DB17161559', w: 468, h: 60 },
+      'bangkok':     { id: 'DB17161132', w: 468, h: 60 },
+      'thailand':    { id: 'DB17161132', w: 468, h: 60 },
+      'taipei':      { id: 'DB17138130', w: 728, h: 90 },
+      'taiwan':      { id: 'DB17138130', w: 728, h: 90 },
+      'hualien':     { id: 'DB17138130', w: 728, h: 90 },
+      'tainan':      { id: 'DB17138130', w: 728, h: 90 },
+      'kenting':     { id: 'DB17138130', w: 728, h: 90 },
+      'jiufen':      { id: 'DB17138130', w: 728, h: 90 },
+      'hongkong':    { id: 'DB17165486', w: 468, h: 60 },
+      'vietnam':     { id: 'DB17165612', w: 468, h: 60 },
+      'danang':      { id: 'DB17165612', w: 468, h: 60 },
+      'hanoi':       { id: 'DB17165710', w: 468, h: 60 }
     };
     
-    // Match destination priority: specific > general
-    if (page.includes('busan')) {
-      tripPromo = tripPromos['busan'];
-    } else if (page.includes('okinawa')) {
-      tripPromo = tripPromos['okinawa'];
-    } else if (page.includes('hongkong')) {
-      tripPromo = tripPromos['hongkong'];
-    } else if (page.includes('seoul') || page.includes('jeju')) {
-      tripPromo = tripPromos['korea'];
-    } else if (page.includes('chiang-mai') || page.includes('bangkok') || page.includes('thailand')) {
-      tripPromo = tripPromos['thailand'];
-    } else if (page.includes('tokyo') || page.includes('osaka') || page.includes('usj') || page.includes('kyoto') || page.includes('kansai') || page.includes('hokkaido') || page.includes('sapporo')) {
-      tripPromo = tripPromos['japan'];
-    } else if (page.includes('taipei') || page.includes('taiwan-travel') || page.includes('hualien') || page.includes('tainan') || page.includes('kenting') || page.includes('jiufen') || page.includes('taiwan')) {
-      tripPromo = tripPromos['taiwan'];
-    } else if (page.includes('japan')) {
-      tripPromo = tripPromos['japan'];
-    } else if (page.includes('korea')) {
-      tripPromo = tripPromos['korea'];
-    } else if (page.includes('southeast')) {
-      tripPromo = tripPromos['thailand'];
-    } else if (page.includes('vietnam') || page.includes('danang')) {
-      tripPromo = tripPromos['thailand'];
+    // Detect destination from page path (priority: specific > general)
+    let matchedConfig = null;
+    const pageLower = page.toLowerCase();
+    
+    if (pageLower.includes('busan')) {
+      matchedConfig = bannerConfig['busan'];
+    } else if (pageLower.includes('hongkong')) {
+      matchedConfig = bannerConfig['hongkong'];
+    } else if (pageLower.includes('hanoi')) {
+      matchedConfig = bannerConfig['hanoi'];
+    } else if (pageLower.includes('seoul') || pageLower.includes('jeju')) {
+      matchedConfig = bannerConfig['seoul'];
+    } else if (pageLower.includes('bangkok') || pageLower.includes('thailand')) {
+      matchedConfig = bannerConfig['bangkok'];
+    } else if (pageLower.includes('chiang-mai')) {
+      matchedConfig = bannerConfig['chiang-mai'];
+    } else if (pageLower.includes('tokyo') || pageLower.includes('osaka') || pageLower.includes('kyoto') || pageLower.includes('kansai') || pageLower.includes('hokkaido') || pageLower.includes('sapporo') || pageLower.includes('okinawa')) {
+      // Match specific city first, fallback to japan
+      if (pageLower.includes('tokyo'))    matchedConfig = bannerConfig['tokyo'];
+      else if (pageLower.includes('osaka'))   matchedConfig = bannerConfig['osaka'];
+      else if (pageLower.includes('kyoto'))   matchedConfig = bannerConfig['kyoto'];
+      else if (pageLower.includes('kansai'))  matchedConfig = bannerConfig['kansai'];
+      else if (pageLower.includes('hokkaido') || pageLower.includes('sapporo')) matchedConfig = bannerConfig['hokkaido'];
+      else if (pageLower.includes('okinawa')) matchedConfig = bannerConfig['okinawa'];
+      else                                 matchedConfig = bannerConfig['japan'];
+    } else if (pageLower.includes('taipei') || pageLower.includes('taiwan') || pageLower.includes('hualien') || pageLower.includes('tainan') || pageLower.includes('kenting') || pageLower.includes('jiufen')) {
+      matchedConfig = bannerConfig['taiwan'];
+    } else if (pageLower.includes('vietnam') || pageLower.includes('danang')) {
+      matchedConfig = bannerConfig['vietnam'];
     }
     
-    if (tripPromo) {
+    if (matchedConfig) {
+      const iframeHtml = `<iframe border="0" src="https://tw.trip.com/partners/ad/${matchedConfig.id}?Allianceid=8237671&SID=312406690&trip_sub1=" style="width:${matchedConfig.w}px;height:${matchedConfig.h}px" frameborder="0" scrolling="no" style="border:none;max-width:100%" id="${matchedConfig.id}"></iframe>`;
+      
       const wrapper = document.createElement('div');
-      wrapper.className = 'trip-promo-wrapper';
-      wrapper.innerHTML = `
-        <a href="${tripPromo.url}" target="_blank" rel="noopener sponsored" class="trip-promo-link" data-affiliate="tripcom">
-          <img src="images/${tripPromo.img}" alt="${tripPromo.alt}" class="trip-promo-img">
-        </a>
-      `;
+      wrapper.className = 'trip-banner-wrapper';
+      wrapper.innerHTML = iframeHtml;
       
       // Insert before the FAQ section or at end of article
       const faqSection = container.querySelector('.faq-section');
