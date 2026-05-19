@@ -961,4 +961,15 @@
     padding: 15px 10px 20px 10px !important;
   }
 }
+/* ========== Related Posts Full Width Fix ========== */
+/* Make related-posts full width below col-center */
+.three-col-wrapper {
+  flex-wrap: wrap !important;
+}
+.three-col-wrapper .related-posts {
+  flex-basis: 100% !important;
+  max-width: 100% !important;
+  width: 100% !important;
+}
+
 /* ========== Car CTA Block (Taiwan pages) ==========
