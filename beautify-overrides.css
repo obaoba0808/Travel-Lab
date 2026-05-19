@@ -971,3 +971,76 @@
   }
 }
 /* ========== Car CTA Block (Taiwan pages) ==========
+
+/* ========== Floating Bottom Toolbar (Travel Lab) ========== */
+#travel-toolbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  box-shadow: 0 -4px 20px rgba(0,0,0,0.3);
+  padding: 0;
+  font-family: 'Noto Sans TC', sans-serif;
+}
+.toolbar-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.toolbar-inner::-webkit-scrollbar { display: none; }
+.toolbar-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 12px 18px;
+  color: #e0e0e0;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+  white-space: nowrap;
+  transition: all 0.25s ease;
+  border-right: 1px solid rgba(255,255,255,0.08);
+  position: relative;
+}
+.toolbar-item:first-child { border-left: 1px solid rgba(255,255,255,0.08); }
+.toolbar-item:hover {
+  background: rgba(10,186,181,0.15);
+  color: #0ABAB5;
+}
+.toolbar-item:active { transform: scale(0.96); }
+.tb-icon {
+  font-size: 18px;
+  line-height: 1;
+  filter: grayscale(0.3);
+  transition: filter 0.25s ease;
+}
+.toolbar-item:hover .tb-icon { filter: grayscale(0); transform: scale(1.15); }
+.tb-label {
+  font-size: 13px;
+  letter-spacing: 0.3px;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .toolbar-inner { justify-content: flex-start; gap: 0; }
+  .toolbar-item {
+    padding: 10px 14px;
+    font-size: 12px;
+    gap: 4px;
+  }
+  .tb-icon { font-size: 16px; }
+  .tb-label { font-size: 11px; }
+}
+@media (max-width: 480px) {
+  .toolbar-item { padding: 9px 11px; }
+  .tb-label { font-size: 10px; }
+  .tb-icon { font-size: 15px; }
+}
