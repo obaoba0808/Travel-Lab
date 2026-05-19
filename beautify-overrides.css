@@ -1051,3 +1051,32 @@
 
 /* Hide old-style FAQ black arrow (▼) */
 .faq-q .arrow { display: none !important; }
+
+/* Trip.com Promo Image Banner (replaces iframe 2026-05-19) */
+.trip-promo-wrapper {
+  display: block;
+  width: 100%;
+  max-width: 728px;
+  margin: 24px auto;
+  text-align: center;
+}
+.trip-promo-link {
+  display: inline-block;
+  width: 100%;
+  max-width: 728px;
+}
+.trip-promo-img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+.trip-promo-link:hover .trip-promo-img {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+  transform: translateY(-2px);
+}
+@media (max-width: 768px) {
+  .trip-promo-wrapper { max-width: 100%; margin: 16px auto; padding: 0 12px; }
+  .trip-promo-link { max-width: 100%; }
+}
