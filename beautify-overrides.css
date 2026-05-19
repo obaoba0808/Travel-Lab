@@ -956,14 +956,30 @@
     padding: 15px 10px 20px 10px !important;
   }
 }
-/* Trip.com iframe 響應式 */
-.trip-banner-wrapper iframe {
-  max-width: 100%;
-  height: auto;
+/* Trip.com iframe - 突破 article-container 寬度限制 */
+.trip-banner-wrapper {
+  width: 100vw;
+  margin-left: calc(-1 * (100vw - 100%) / 2);
+  display: flex;
+  justify-content: center;
 }
-@media (max-width: 728px) {
+.trip-banner-wrapper iframe {
+  width: 728px;
+  height: 90px;
+  border: none;
+  border-radius: 8px;
+  max-width: 95vw;
+}
+@media (max-width: 768px) {
+  .trip-banner-wrapper {
+    width: 100%;
+    margin-left: 0;
+    padding: 0 10px;
+    box-sizing: border-box;
+  }
   .trip-banner-wrapper iframe {
     width: 100% !important;
     aspect-ratio: 728 / 90;
+    height: auto;
   }
 }
