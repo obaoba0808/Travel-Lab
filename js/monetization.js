@@ -150,14 +150,11 @@
     
     let bannerHtml = '';
     
-    if (page.includes('japan') || page.includes('tokyo') || page.includes('kansai') || page.includes('hokkaido') || page.includes('okinawa') || page.includes('kyoto')) {
-      bannerHtml = `<div class="trip-banner-wrapper"><iframe border="0" src="https://tw.trip.com/partners/ad/DB17138130?Allianceid=8237671&SID=312406690&trip_sub1=" frameborder="0" scrolling="no" id="DB17138130"></iframe></div>`;
-    } else if (page.includes('korea') || page.includes('seoul') || page.includes('busan') || page.includes('jeju')) {
-      bannerHtml = `<div class="trip-banner-wrapper" "><iframe border="0" src="https://tw.trip.com/partners/ad/DB17138130?Allianceid=8237671&SID=312406690&trip_sub1=" frameborder="0" scrolling="no" id="DB17138130"></iframe></div>`;
-    } else if (page.includes('taiwan') || page.includes('hualien') || page.includes('tainan') || page.includes('kenting')) {
-      bannerHtml = `<div class="trip-banner-wrapper" "><iframe border="0" src="https://tw.trip.com/partners/ad/DB17138130?Allianceid=8237671&SID=312406690&trip_sub1=" frameborder="0" scrolling="no" id="DB17138130"></iframe></div>`;
-    } else if (page.includes('southeast') || page.includes('chiang-mai') || page.includes('bangkok')) {
-      bannerHtml = `<div class="trip-banner-wrapper" "><iframe border="0" src="https://tw.trip.com/partners/ad/DB17138130?Allianceid=8237671&SID=312406690&trip_sub1=" frameborder="0" scrolling="no" id="DB17138130"></iframe></div>`;
+    if (page.includes('japan') || page.includes('tokyo') || page.includes('kansai') || page.includes('hokkaido') || page.includes('okinawa') || page.includes('kyoto')
+      || page.includes('korea') || page.includes('seoul') || page.includes('busan') || page.includes('jeju')
+      || page.includes('taiwan') || page.includes('hualien') || page.includes('tainan') || page.includes('kenting')
+      || page.includes('southeast') || page.includes('chiang-mai') || page.includes('bangkok')) {
+      bannerHtml = '<iframe border="0" src="https://tw.trip.com/partners/ad/DB17138130?Allianceid=8237671&SID=312406690&trip_sub1=" frameborder="0" scrolling="no" id="DB17138130"></iframe>';
     }
     
     if (bannerHtml) {
