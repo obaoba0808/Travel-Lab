@@ -496,19 +496,20 @@ div[style*="max-width:900px;margin:0 auto 30px;padding:0 20px;"] {
 @media(max-width:1024px) { /* Changed from 900px to 1024px for smoother transition */
   .three-col-wrapper {
     flex-direction: column; /* Stack columns vertically */
-    align-items: center; /* Center items when stacked */
+    align-items: stretch; /* Full width on mobile */
     gap: 20px; /* Adjust gap for vertical stacking */
+    padding: 0 20px; /* Add padding for mobile */
   }
   .sidebar-card {
     width: 90%; /* Take up more width when stacked */
     max-width: 600px; /* Max width for readability when stacked */
     position: static; /* Remove sticky behavior when stacked */
     top: auto;
+    margin: 0 auto; /* Center the sidebar card */
   }
   .col-center {
-    width: 90%; /* Take up more width when stacked */
-    padding: 25px; /* Adjust padding for smaller screens */
-    max-width: 700px; /* Keep content readable */
+    width: 100%; /* Full width on mobile */
+    padding: 20px; /* Adjust padding for smaller screens */
   }
   .hero-title h1 { font-size: 28px; }
   .hero-title p { font-size: 14px; }
