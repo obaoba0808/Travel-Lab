@@ -1044,3 +1044,7 @@
   .tb-label { font-size: 10px; }
   .tb-icon { font-size: 15px; }
 }
+
+
+/* Hide old-style FAQ black arrow (▼) */
+.faq-q .arrow { display: none !important; }
