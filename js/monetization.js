@@ -151,13 +151,13 @@
     let bannerHtml = '';
     
     if (page.includes('japan') || page.includes('tokyo') || page.includes('kansai') || page.includes('hokkaido') || page.includes('okinawa') || page.includes('kyoto')) {
-      bannerHtml = `<div class="trip-banner-wrapper" style="display:flex;justify-content:center;margin:32px 0;"><iframe border="0" src="https://tw.trip.com/partners/ad/DB17138130?Allianceid=8237671&SID=312406690&trip_sub1=" style="width:728px;height:90px;border:none;border-radius:8px;display:block;max-width:100%;" frameborder="0" scrolling="no" id="DB17138130"></iframe></div>`;
+      bannerHtml = `<div class="trip-banner-wrapper"><iframe border="0" src="https://tw.trip.com/partners/ad/DB17138130?Allianceid=8237671&SID=312406690&trip_sub1=" frameborder="0" scrolling="no" id="DB17138130"></iframe></div>`;
     } else if (page.includes('korea') || page.includes('seoul') || page.includes('busan') || page.includes('jeju')) {
-      bannerHtml = `<a href="https://www.trip.com.tw/?Allianceid=8237671&SID=312406690" target="_blank" rel="noopener sponsored" data-affiliate="tripcom" class="trip-banner-link"><img src="images/trip-korea-promo.webp" alt="Trip.com 韓國旅遊促銷 - 機票酒店優惠" class="trip-banner-img" loading="lazy"></a>`;
+      bannerHtml = `<div class="trip-banner-wrapper" "><iframe border="0" src="https://tw.trip.com/partners/ad/DB17138130?Allianceid=8237671&SID=312406690&trip_sub1=" frameborder="0" scrolling="no" id="DB17138130"></iframe></div>`;
     } else if (page.includes('taiwan') || page.includes('hualien') || page.includes('tainan') || page.includes('kenting')) {
-      bannerHtml = `<a href="https://www.trip.com.tw/?Allianceid=8237671&SID=312406690" target="_blank" rel="noopener sponsored" data-affiliate="tripcom" class="trip-banner-link"><img src="images/trip-taiwan-promo.webp" alt="Trip.com 台灣旅遊促銷 - 機票酒店優惠" class="trip-banner-img" loading="lazy"></a>`;
+      bannerHtml = `<div class="trip-banner-wrapper" "><iframe border="0" src="https://tw.trip.com/partners/ad/DB17138130?Allianceid=8237671&SID=312406690&trip_sub1=" frameborder="0" scrolling="no" id="DB17138130"></iframe></div>`;
     } else if (page.includes('southeast') || page.includes('chiang-mai') || page.includes('bangkok')) {
-      bannerHtml = `<a href="https://www.trip.com.tw/?Allianceid=8237671&SID=312406690" target="_blank" rel="noopener sponsored" data-affiliate="tripcom" class="trip-banner-link"><img src="images/trip-southeastasia-promo.webp" alt="Trip.com 東南亞旅遊促銷 - 機票酒店優惠" class="trip-banner-img" loading="lazy"></a>`;
+      bannerHtml = `<div class="trip-banner-wrapper" "><iframe border="0" src="https://tw.trip.com/partners/ad/DB17138130?Allianceid=8237671&SID=312406690&trip_sub1=" frameborder="0" scrolling="no" id="DB17138130"></iframe></div>`;
     }
     
     if (bannerHtml) {
