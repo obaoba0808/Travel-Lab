@@ -956,3 +956,14 @@
     padding: 15px 10px 20px 10px !important;
   }
 }
+/* Trip.com iframe 響應式 */
+.trip-banner-wrapper iframe {
+  max-width: 100%;
+  height: auto;
+}
+@media (max-width: 728px) {
+  .trip-banner-wrapper iframe {
+    width: 100% !important;
+    aspect-ratio: 728 / 90;
+  }
+}
