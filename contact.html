@@ -610,6 +610,19 @@
   .quick-contact-buttons { flex-direction: column; align-items: center; }
   .cta-btn { width: 100%; max-width: 280px; justify-content: center; }
 }
+
+/* Dropdown arrow - CSS only, no Unicode dependency */
+a.dropdown-toggle::after {
+  content: '';
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 5px;
+  vertical-align: middle;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 5px solid currentColor;
+}
 </style>
 </head>
 <body>

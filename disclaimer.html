@@ -151,6 +151,19 @@
   .legal-section-body { padding: 0 18px 20px; }
   .warning-banner { flex-direction: column; text-align: center; }
 }
+
+/* Dropdown arrow - CSS only, no Unicode dependency */
+a.dropdown-toggle::after {
+  content: '';
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 5px;
+  vertical-align: middle;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 5px solid currentColor;
+}
 </style>
 </head>
 <body>
@@ -162,7 +175,7 @@
     <nav class="main-nav">
       <a href="index.html" ">首頁</a>
       <div class="nav-dropdown">
-        <a href="japan-travel.html">日本自由行 ▾</a>
+        <a href="japan-travel.html" class="dropdown-toggle">日本自由行 </a>
         <div class="dropdown-menu">
           <a href="tokyo-5days.html">東京5天4夜行程</a>
           <a href="kansai-pass.html">關西交通票券指南</a>
@@ -175,7 +188,7 @@
         </div>
       </div>
       <div class="nav-dropdown">
-        <a href="korea-travel.html">韓國自由行 ▾</a>
+        <a href="korea-travel.html" class="dropdown-toggle">韓國自由行 </a>
         <div class="dropdown-menu">
           <a href="seoul-food.html">首爾必吃美食攻略</a>
           <a href="busan-capsule.html">釜山膠囊列車預約</a>
@@ -184,7 +197,7 @@
         </div>
       </div>
       <div class="nav-dropdown">
-        <a href="taiwan-travel.html">台灣旅遊 ▾</a>
+        <a href="taiwan-travel.html" class="dropdown-toggle">台灣旅遊 </a>
         <div class="dropdown-menu">
           <a href="hualien-taitung.html">花東三天兩夜</a>
           <a href="tainan-food.html">台南美食牛肉湯</a>
@@ -194,7 +207,7 @@
         </div>
       </div>
       <div class="nav-dropdown">
-        <a href="southeast-asia.html">東南亞自由行 ▾</a>
+        <a href="southeast-asia.html" class="dropdown-toggle">東南亞自由行 </a>
         <div class="dropdown-menu">
           <a href="chiang-mai.html">清邁數位遊牧指南</a>
           <a href="bangkok-3days.html">曼谷吃貨攻略</a>
