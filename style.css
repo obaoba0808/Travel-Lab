@@ -496,7 +496,7 @@ div[style*="max-width:900px;margin:0 auto 30px;padding:0 20px;"] {
 .btn:hover { background:var(--tiffany-dark); color:#fff; }
 
 /* ========== MOBILE ========== */
-.mobile-toggle { display:none; background:none; border:none; font-size:20px; cursor:pointer; color:var(--text-dark); }
+.mobile-toggle { display:none !important; background:none; border:none; font-size:20px; cursor:pointer; color:var(--text-dark); }
 
 /* --- Tablet/Small Desktop Breakpoint --- */
 @media(max-width:1024px) { /* Changed from 900px to 1024px for smoother transition */
