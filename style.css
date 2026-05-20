@@ -38,9 +38,15 @@ ul { list-style:none; }
 
 /* ========== SEARCH BOX ========== */
 .search-box-wrap {
-  max-width: 680px;
+  max-width: 960px;
   margin: 0 auto 25px;
   padding: 0 20px;
+}
+.search-box-wrap img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
 }
 .search-form {
   width: 100%;
