@@ -14,21 +14,21 @@
   // Toolbar HTML
   toolbar.innerHTML = `
     <div class="toolbar-inner">
-      <a href="https://www.agoda.com/zh-tw/?tag=e9ea26c2-c046-468f-939d-97d11075d6e0" target="_blank" rel="noopener sponsored" data-affiliate="agoda" class="toolbar-item">
+      <a href="https://www.trip.com/t/KzJgDXR8mU2" target="_blank" rel="noopener sponsored" data-affiliate="tripcom-hotel" class="toolbar-item">
         <span class="tb-icon">🏨</span>
-        <span class="tb-label">Agoda 訂房</span>
+        <span class="tb-label">飯店比價</span>
       </a>
-      <a href="https://www.skyscanner.net.tw/?affiliateId=skyscan-ch&label=travel-lab" target="_blank" rel="noopener sponsored" data-affiliate="skyscanner" class="toolbar-item">
+      <a href="https://www.trip.com/t/FBEyG4BCmU2" target="_blank" rel="noopener sponsored" data-affiliate="tripcom-flight" class="toolbar-item">
         <span class="tb-icon">✈️</span>
-        <span class="tb-label">Skyscanner 機票</span>
+        <span class="tb-label">機票比價</span>
       </a>
-      <a href="https://www.klook.com/zh-TW/?aid=13014149&aff_label=travellab" target="_blank" rel="noopener sponsored" data-affiliate="klook" class="toolbar-item">
+      <a href="https://www.trip.com/t/wbFhPgGCmU2" target="_blank" rel="noopener sponsored" data-affiliate="tripcom-activity" class="toolbar-item">
         <span class="tb-icon">🎫</span>
-        <span class="tb-label">Klook 門票</span>
+        <span class="tb-label">當地體驗</span>
       </a>
-      <a href="https://airalo.prf.hn/click/camref:1011lwbU/pubref:travellab/destination:https%3A%2F%2Fairalo.com%2Fzh-tw%2F" target="_blank" rel="noopener sponsored" data-affiliate="airalo" class="toolbar-item">
-        <span class="tb-icon">📱</span>
-        <span class="tb-label">Airalo eSIM</span>
+      <a href="https://www.trip.com/t/VDqCdSyBmU2" target="_blank" rel="noopener sponsored" data-affiliate="tripcom-transfer" class="toolbar-item">
+        <span class="tb-icon">🚐</span>
+        <span class="tb-label">機場接送</span>
       </a>
       <a href="https://www.trip.com.tw/?Allianceid=8237671&SID=312406690" target="_blank" rel="noopener sponsored" data-affiliate="tripcom" class="toolbar-item">
         <span class="tb-icon">🌏</span>
@@ -72,32 +72,32 @@
         <div class="article-cta-title">📍 ${destLabel}旅遊推薦工具</div>
         <div class="article-cta-desc">預訂以下行程服務，享受最優惠價格與專屬折扣</div>
         <div class="cta-grid">
-          <a href="https://www.agoda.com/zh-tw/search/${destSearch}?tag=e9ea26c2-c046-468f-939d-97d11075d6e0" target="_blank" rel="noopener sponsored" class="cta-card cta-agoda" data-affiliate="agoda">
+          <a href="https://www.trip.com/t/KzJgDXR8mU2" target="_blank" rel="noopener sponsored" class="cta-card cta-agoda" data-affiliate="tripcom-hotel">
             <div class="cta-card-icon">🏨</div>
             <div>
               <div class="cta-card-text">飯店住宿</div>
-              <div class="cta-card-sub">Agoda 比價</div>
+              <div class="cta-card-sub">TRIP 比價</div>
             </div>
           </a>
-          <a href="https://www.skyscanner.net.tw/transport/flights/tpe/${destSearch.toLowerCase()}?affiliateId=skyscan-ch&label=travel-lab" target="_blank" rel="noopener sponsored" class="cta-card cta-skyscanner" data-affiliate="skyscanner">
+          <a href="https://www.trip.com/t/FBEyG4BCmU2" target="_blank" rel="noopener sponsored" class="cta-card cta-skyscanner" data-affiliate="tripcom-flight">
             <div class="cta-card-icon">✈️</div>
             <div>
               <div class="cta-card-text">機票比價</div>
-              <div class="cta-card-sub">Skyscanner</div>
+              <div class="cta-card-sub">TRIP 比價</div>
             </div>
           </a>
-          <a href="https://www.klook.com/zh-TW/search/?keyword=${destSearch}&aid=13014149&aff_label=travellab" target="_blank" rel="noopener sponsored" class="cta-card cta-klook" data-affiliate="klook">
+          <a href="https://www.trip.com/t/wbFhPgGCmU2" target="_blank" rel="noopener sponsored" class="cta-card cta-klook" data-affiliate="tripcom-activity">
             <div class="cta-card-icon">🎫</div>
             <div>
               <div class="cta-card-text">當地體驗</div>
-              <div class="cta-card-sub">Klook</div>
+              <div class="cta-card-sub">TRIP 預訂</div>
             </div>
           </a>
-          <a href="https://airalo.prf.hn/click/camref:1011lwbU/pubref:travellab/destination:https%3A%2F%2Fairalo.com%2Fzh-tw%2F" target="_blank" rel="noopener sponsored" class="cta-card cta-esim" data-affiliate="airalo">
-            <div class="cta-card-icon">📱</div>
+          <a href="https://www.trip.com/t/VDqCdSyBmU2" target="_blank" rel="noopener sponsored" class="cta-card cta-esim" data-affiliate="tripcom-transfer">
+            <div class="cta-card-icon">🚐</div>
             <div>
-              <div class="cta-card-text">上網卡</div>
-              <div class="cta-card-sub">Airalo eSIM</div>
+              <div class="cta-card-text">機場接送</div>
+              <div class="cta-card-sub">TRIP 預訂</div>
             </div>
           </a>
         </div>
