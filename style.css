@@ -1,16 +1,16 @@
 ﻿/* ========== Travel Lab Design System (Tiffany Green Palette) ========== */
 :root {
   --tiffany: #0ABAB5;
-  --tiffany-dark: #089693;
+  --tiffany-dark: #078E8A;
   --tiffany-light: #E0F7F7;
   --tiffany-accent: #5ACFCF;
-  --text-dark: #2d2d2d;
-  --text-gray: #777;
-  --text-light: #aaa;
+  --text-dark: #1a1a2e;
+  --text-gray: #555;
+  --text-light: #888;
   --bg: #ffffff;
-  --bg-light: #f9f9f9;
-  --border: #eaeaea;
-  --shadow: rgba(0,0,0,0.06);
+  --bg-light: #f4f8f8;
+  --border: #dde5e5;
+  --shadow: rgba(0,0,0,0.08);
 }
 * { margin:0; padding:0; box-sizing:border-box; }
 body { font-family:'Noto Sans TC','Helvetica Neue',sans-serif; background:var(--bg); color:var(--text-dark); line-height:1.8; -webkit-font-smoothing:antialiased; }
