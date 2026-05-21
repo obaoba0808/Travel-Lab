@@ -410,6 +410,11 @@ div[style*="max-width:900px;margin:0 auto 30px;padding:0 20px;"] {
 .hub-content p { line-height:1.9; margin-bottom:16px; color:var(--text-dark); }
 .hub-content ul { line-height:1.9; margin-bottom:16px; padding-left:24px; }
 .hub-content strong { color:var(--text-dark); }
+.hub-content table { width:100%; border-collapse:collapse; margin:16px 0; border-radius:10px; overflow:hidden; box-shadow:0 2px 12px var(--shadow); }
+.hub-content table th, .hub-content table td { padding:12px 20px; text-align:left; font-size:14px; }
+.hub-content table th { background:var(--tiffany); color:#fff; font-weight:600; }
+.hub-content table td { background:var(--bg-light); border-bottom:1px solid var(--border); }
+.hub-content table tr:last-child td { border-bottom:none; }
 .hub-grid-wrap { max-width:1140px; margin:0 auto; padding:12px 48px 40px; }
 
 /* ========== CARD GRID ========== */
