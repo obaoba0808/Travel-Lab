@@ -265,8 +265,6 @@ div[style*="max-width:900px;margin:0 auto 30px;padding:0 20px;"] {
   border-radius: 14px;
   overflow: hidden;
   background: #fff;
-  border: 2px solid red !important; /* TEMP DEBUG: make sidebar visible */
-  min-height: 50px !important; /* TEMP DEBUG: ensure visibility */
   /* box-shadow: 0 4px 24px rgba(0,0,0,0.1); Removed for flat two-column layout */
   transition: box-shadow 0.3s;
 }
@@ -515,23 +513,23 @@ div[style*="max-width:900px;margin:0 auto 30px;padding:0 20px;"] {
 .mobile-toggle { display:none !important; background:none; border:none; font-size:20px; cursor:pointer; color:var(--text-dark); }
 
 /* --- Tablet/Small Desktop Breakpoint --- */
-@media(max-width:1024px) { /* Changed from 900px to 1024px for smoother transition */
+@media(max-width:1024px) {
   .three-col-wrapper {
-    flex-direction: column; /* Stack columns vertically */
-    align-items: stretch; /* Full width on mobile */
-    gap: 20px; /* Adjust gap for vertical stacking */
-    padding: 0 20px; /* Add padding for mobile */
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 0 20px;
+    align-items: flex-start;
   }
   .sidebar-card {
-    width: 90%; /* Take up more width when stacked */
-    max-width: 600px; /* Max width for readability when stacked */
-    position: static; /* Remove sticky behavior when stacked */
-    top: auto;
-    margin: 0 auto; /* Center the sidebar card */
+    width: 220px;
+    flex-shrink: 0;
+    position: sticky;
+    top: 80px;
   }
   .col-center {
-    width: 100%; /* Full width on mobile */
-    padding: 20px; /* Adjust padding for smaller screens */
+    flex: 1;
+    min-width: 0;
+    padding: 20px;
   }
   .hero-title h1 { font-size: 28px; }
   .hero-title p { font-size: 14px; }
