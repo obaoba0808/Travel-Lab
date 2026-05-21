@@ -686,3 +686,15 @@ div[style*="max-width:900px;margin:0 auto 30px;padding:0 20px;"] {
 @media (min-width:769px) {
   .scroll-hint { display:none; }
 }
+
+/* ========== KLOOK WIDGET 橫式顯示 ========== */
+.klook-dynamic-banner {
+  max-width: 100% !important;
+  width: 100%;
+}
+.klook-dynamic-banner iframe,
+.klook-dynamic-banner .klk-aff-widget,
+.klook-dynamic-banner [id*="klk"] {
+  max-width: 100% !important;
+  width: 100% !important;
+}
