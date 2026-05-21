@@ -404,6 +404,14 @@ div[style*="max-width:900px;margin:0 auto 30px;padding:0 20px;"] {
 .related-card .post-body h3 { font-size:18px; font-weight:700; line-height:1.6; margin-bottom:8px; }
 .related-card .post-body h3 a:hover { color:var(--tiffany); }
 
+/* ========== HUB PAGE LAYOUT ========== */
+.hub-content { max-width:900px; margin:0 auto; padding:40px 48px 48px; }
+.hub-content h2 { font-size:1.5rem; margin:36px 0 16px; color:var(--tiffany-dark); padding-left:16px; border-left:4px solid var(--tiffany); line-height:1.5; }
+.hub-content p { line-height:1.9; margin-bottom:16px; color:var(--text-dark); }
+.hub-content ul { line-height:1.9; margin-bottom:16px; padding-left:24px; }
+.hub-content strong { color:var(--text-dark); }
+.hub-grid-wrap { max-width:1140px; margin:0 auto; padding:12px 48px 40px; }
+
 /* ========== CARD GRID ========== */
 .card-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:24px; }
 .card { background:var(--bg); border-radius:10px; overflow:hidden; box-shadow:0 2px 12px var(--shadow); transition:0.3s; }
