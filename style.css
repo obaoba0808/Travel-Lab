@@ -265,6 +265,8 @@ div[style*="max-width:900px;margin:0 auto 30px;padding:0 20px;"] {
   border-radius: 14px;
   overflow: hidden;
   background: #fff;
+  border: 2px solid red !important; /* TEMP DEBUG: make sidebar visible */
+  min-height: 50px !important; /* TEMP DEBUG: ensure visibility */
   /* box-shadow: 0 4px 24px rgba(0,0,0,0.1); Removed for flat two-column layout */
   transition: box-shadow 0.3s;
 }
