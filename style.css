@@ -406,7 +406,8 @@ div[style*="max-width:900px;margin:0 auto 30px;padding:0 20px;"] {
 
 /* ========== HUB PAGE LAYOUT ========== */
 .hub-content { max-width:900px; margin:0 auto; padding:40px 48px 48px; }
-.hub-content h2 { font-size:1.5rem; margin:36px 0 16px; color:var(--tiffany-dark); padding-left:16px; border-left:4px solid var(--tiffany); line-height:1.5; }
+.hub-content h2 { font-size:1.5rem; margin:36px 0 16px; color:var(--tiffany-dark); padding-left:16px; border-left:4px solid var(--tiffany); line-height:1.5; padding-top:20px; border-top:1px solid rgba(0,186,170,0.2); }
+.hub-content h2:first-child { border-top:none; padding-top:0; }
 .hub-content p { line-height:1.9; margin-bottom:16px; color:var(--text-dark); }
 .hub-content ul { line-height:1.9; margin-bottom:16px; padding-left:24px; }
 .hub-content strong { color:var(--text-dark); }
