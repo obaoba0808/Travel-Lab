@@ -353,7 +353,12 @@
       <a href="terms.html">使用條款</a>
       <a href="disclaimer.html">免責聲明</a>
     </div>
-
+    <div class="footer-col sister-sites">
+      <h4>我們的其他網站</h4>
+      <a href="https://obaoba0808.github.io/FH/" target="_blank">歐巴傳播｜台北夜生活娛樂</a>
+      <a href="https://obaoba0808.github.io/Yulin-Design/" target="_blank">侑霖室內設計｜台南室內設計推薦</a>
+      <a href="https://obaoba0808.github.io/Sweet-Burst-Fruits/" target="_blank">爆甜水果行｜台南水果禮盒外送</a>
+    </div>
   </div>
   <div class="footer-bottom">
     <p>© 2026 均在路上 Travel Lab. All rights reserved. | <a href="https://golightly.fun">golightly.fun</a></p>
