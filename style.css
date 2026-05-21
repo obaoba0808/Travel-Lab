@@ -581,6 +581,7 @@ div[style*="max-width:900px;margin:0 auto 30px;padding:0 20px;"] {
   .article-container h2 { font-size: 20px; margin: 30px 0 12px; }
   .hub-content { padding: 20px 16px 24px; }
   .hub-grid-wrap { padding: 12px 16px 24px; }
+  .faq-section { padding: 0 16px; }
   .faq-section h2 { font-size: 20px; margin-bottom: 20px; }
   .footer-col { flex-basis: calc(50% - 15px); } /* Two columns in footer */
 }
