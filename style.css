@@ -265,10 +265,10 @@ div[style*="max-width:900px;margin:0 auto 30px;padding:0 20px;"] {
   border-radius: 14px;
   overflow: hidden;
   background: #fff;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.1);
+  /* box-shadow: 0 4px 24px rgba(0,0,0,0.1); Removed for flat two-column layout */
   transition: box-shadow 0.3s;
 }
-.sidebar-card:hover { box-shadow: 0 6px 32px rgba(0,0,0,0.15); }
+.sidebar-card:hover { /* box-shadow: 0 6px 32px rgba(0,0,0,0.15); Removed for flat two-column layout */ }
 .sidebar-card a { display: block; text-decoration: none; color: inherit; }
 .sb-hero-img {
   width: 450%;
@@ -366,7 +366,7 @@ div[style*="max-width:900px;margin:0 auto 30px;padding:0 20px;"] {
   min-width: 0; /* Prevents overflow with long content */
   background: var(--bg); /* Match your article container background */
   border-radius: 12px; /* Apply rounded corners */
-  box-shadow: 0 4px 24px rgba(0,0,0,0.08); /* Apply shadow */
+  /* box-shadow: 0 4px 24px rgba(0,0,0,0.08); Removed for flat two-column layout */
   padding: 30px; /* Inner padding */
 }
 
