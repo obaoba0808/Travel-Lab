@@ -118,7 +118,8 @@
 </ul>
 <div class="highlight-box-beautify">
   <div class="hb-title">📊 我的日本機票購買總結（2023-2026 實戰心得）</div>
-  <div style="overflow-x:auto; margin:14px 0;">
+  <div class="table-scroll-hint" style="overflow-x:auto; margin:14px 0; position:relative;">
+  <div class="scroll-hint">← 左右滑動查看完整表格 →</div>
   <table style="width:100%; border-collapse:collapse; font-size:14px; min-width:540px;">
     <thead>
       <tr style="background:var(--tiffany-light);color:var(--tiffany-dark);text-align:left;">
@@ -324,5 +325,12 @@
 <script>
 window.addEventListener('scroll',function(){var p=document.getElementById('reading-progress'),b=document.getElementById('back-to-top');var st=window.scrollY,dh=document.documentElement.scrollHeight-window.innerHeight;if(dh>0){p.style.width=(st/dh*100)+'%';}else{p.style.width='0%';}b.classList.toggle('visible',st>400);});
 document.querySelectorAll('.faq-item').forEach(function(item){var btn=item.querySelector('.faq-q');if(!btn)return;btn.addEventListener('click',function(){var o=item.classList.contains('open');document.querySelectorAll('.faq-item').forEach(function(i){i.classList.remove('open');});if(!o)item.classList.add('open');});});
+</script>
+<script>
+document.querySelectorAll('.table-scroll-hint').forEach(function(el){
+  el.addEventListener('scroll', function(){
+    if(el.scrollLeft > 5) el.classList.add('scrolled');
+  });
+});
 </script>
 <script src="js/monetization.js" defer></script></body></html>

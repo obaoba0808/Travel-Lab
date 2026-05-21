@@ -654,3 +654,35 @@ div[style*="max-width:900px;margin:0 auto 30px;padding:0 20px;"] {
 .site-title span {
     color: var(--tiffany);
 }
+/* ========== TABLE SCROLL HINT (mobile swipe arrow) ========== */
+.table-scroll-hint {
+  position: relative;
+}
+.scroll-hint {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(10,186,181,0.88);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 8px 18px;
+  border-radius: 20px;
+  pointer-events: none;
+  z-index: 10;
+  animation: hintPulse 1.8s ease-in-out infinite;
+  transition: opacity 0.5s;
+  white-space: nowrap;
+}
+.table-scroll-hint.scrolled .scroll-hint {
+  opacity: 0;
+  pointer-events: none;
+}
+@keyframes hintPulse {
+  0%,100% { opacity:0.88; transform: translate(-50%,-50%) scale(1); }
+  50% { opacity:1; transform: translate(-50%,-50%) scale(1.04); }
+}
+@media (min-width:769px) {
+  .scroll-hint { display:none; }
+}
