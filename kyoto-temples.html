@@ -81,6 +81,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
 
 <!-- Stylesheet -->
+<link rel="preload" href="style.css" as="style">
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="beautify-overrides.css">
 <link rel="stylesheet" href="beautify.css">
@@ -164,7 +165,7 @@
 <div class="breadcrumb-bar"><a href="index.html">首頁</a><span class="sep">›</span><a href="japan-travel.html" class="dropdown-toggle">日本自由行</a><span class="sep">›</span>京都寺廟</div>
 <!-- CHARTER BANNER -->
 <div style="max-width:900px;margin:0 auto 30px;padding:0 20px;">
-  <a href="about.html"><img src="images/charter-banner.webp" alt="台灣包車自由行" style="width:100%;border-radius:12px;display:block;" width="2179" height="722"></a>
+  <a href="about.html"><img src="images/charter-banner.webp" alt="台灣包車自由行" style="width:100%;border-radius:12px;display:block;" width="2179" height="722" loading="lazy"></a>
 </div>
 
 <div class="three-col-wrapper">
@@ -177,7 +178,7 @@
 <div class="article-container">
 
 <!-- TRIP PROMO BANNER -->
-<div style="margin-bottom:24px;"><a href="https://tw.trip.com/sale/w/4217/japan-travel.html?locale=zh_tw&promo_referer=3952_4217_9&Allianceid=8237671&SID=312406690&trip_sub1=&trip_sub3=P17078945n" target="_blank" rel="nofollow sponsored" data-affiliate="trip-com"><img src="images/trip-japan.webp" alt="Trip.com 熱門優惠" style="width:100%;border-radius:12px;display:block;"></a></div>
+<div style="margin-bottom:24px;"><a href="https://tw.trip.com/sale/w/4217/japan-travel.html?locale=zh_tw&promo_referer=3952_4217_9&Allianceid=8237671&SID=312406690&trip_sub1=&trip_sub3=P17078945n" target="_blank" rel="nofollow sponsored" data-affiliate="trip-com"><img src="images/trip-japan.webp" alt="Trip.com 熱門優惠" style="width:100%;border-radius:12px;display:block;" loading="lazy"></a></div>
 <h2>🏯 京都3大寺廟散步路線</h2>
 
 
@@ -255,7 +256,26 @@
     <a href="travel-tools.html" class="btn">旅遊工具推薦｜eSIM、換匯、行李秤</a>
   </div>
 
-  <section class="faq-section">
+  
+<!-- Map Embed: 京都寺廟巡禮地圖 -->
+<div class="map-embed" style="margin:36px 0;background:#f4f0e8;border-radius:16px;padding:24px;box-shadow:0 2px 12px rgba(0,0,0,0.06);">
+  <h3 style="color:#2d5a27;margin-bottom:8px;font-size:1.25rem;">📍 京都寺廟巡禮地圖</h3>
+  <p style="color:#666;margin-bottom:16px;font-size:0.95rem;">清水寺、金閣寺、銀閣寺、伏見稻荷、嵐山等必訪景點位置</p>
+  <iframe 
+    src="https://www.openstreetmap.org/export/embed.html?bbox=135.6181%2C34.9116%2C135.9181%2C35.1116&layer=mapnik&marker=35.0116%2C135.7681" 
+    width="100%" 
+    height="400" 
+    style="border:2px solid #40e0d0;border-radius:12px;" 
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"
+    title="京都寺廟巡禮地圖">
+  </iframe>
+  <p style="margin-top:12px;font-size:0.85rem;color:#999;">
+    🗺️ <a href="https://www.openstreetmap.org/?mlat=35.0116&mlon=135.7681&zoom=13" target="_blank" rel="noopener" style="color:#40e0d0;">在地圖中開開啟完整版</a>
+  </p>
+</div>
+
+<section class="faq-section">
     <h2>❓ 常見問題</h2>
     <div class="faq-item" onclick="this.classList.toggle('open')">
       <div class="faq-q">京都賞楓什麼時候最美？</div>

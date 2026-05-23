@@ -59,6 +59,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
 
 <!-- Stylesheet -->
+<link rel="preload" href="style.css" as="style">
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="beautify-overrides.css">
 <link rel="stylesheet" href="beautify.css">
@@ -151,7 +152,7 @@
 <main class="site-content" style="display:block;">
   <div class="section-divider">
 <!-- TRIP PROMO BANNER -->
-<div style="max-width:1200px;margin:0 auto 32px;padding:0 20px;"><a href="https://tw.trip.com/sale/w/26497/go-thailand.html?locale=zh-tw&curr=twd&promo_referer=3952_26497_7&Allianceid=8237671&SID=312406690&trip_sub1=&trip_sub3=P17078987" target="_blank" rel="nofollow sponsored" data-affiliate="trip-com"><img src="images/trip-thailand.webp" alt="Trip.com 熱門優惠" style="width:100%;border-radius:12px;display:block;"></a></div>
+<div style="max-width:1200px;margin:0 auto 32px;padding:0 20px;"><a href="https://tw.trip.com/sale/w/26497/go-thailand.html?locale=zh-tw&curr=twd&promo_referer=3952_26497_7&Allianceid=8237671&SID=312406690&trip_sub1=&trip_sub3=P17078987" target="_blank" rel="nofollow sponsored" data-affiliate="trip-com"><img src="images/trip-thailand.webp" alt="Trip.com 熱門優惠" style="width:100%;border-radius:12px;display:block;" loading="lazy"></a></div>
 <h2>🌏 東南亞旅遊文章</h2>
 
 </div>
@@ -159,7 +160,7 @@
 <div class="hub-grid-wrap"><div class="card-grid">
 
     <article class="card">
-      <img src="images/chiangmai-hero.webp" alt="清邁數位遊牧7天生活指南" width="1536" height="1024">
+      <img src="images/chiangmai-hero.webp" alt="清邁數位遊牧7天生活指南" width="1536" height="1024" loading="lazy">
       <div class="card-body">
         <a href="southeast-asia.html" class="cat-tag">東南亞自由行</a>
         <h3><a href="chiang-mai.html">【清邁數位遊牧】7天生活指南</a></h3>
@@ -169,7 +170,7 @@
     </article>
 
     <article class="card">
-      <a href="bangkok-3days.html"><img src="images/bangkok-hero.webp" alt="曼谷3天2夜吃貨攻略" width="1536" height="1024"></a>
+      <a href="bangkok-3days.html"><img src="images/bangkok-hero.webp" alt="曼谷3天2夜吃貨攻略" width="1536" height="1024" loading="lazy"></a>
       <div class="card-body">
         <a href="southeast-asia.html" class="cat-tag">東南亞自由行</a>
         <h3><a href="bangkok-3days.html">【曼谷3天2夜】吃貨攻略</a></h3>
@@ -179,7 +180,7 @@
     </article>
 
     <article class="card">
-      <a href="bangkok-massage.html"><img src="images/bangkok-massage-hero.webp" alt="曼谷按摩推薦" width="1536" height="1024"></a>
+      <a href="bangkok-massage.html"><img src="images/bangkok-massage-hero.webp" alt="曼谷按摩推薦" width="1536" height="1024" loading="lazy"></a>
       <div class="card-body">
         <a href="southeast-asia.html" class="cat-tag">東南亞自由行</a>
         <h3><a href="bangkok-massage.html">【曼谷按摩】必試泰式按摩</a></h3>
@@ -189,7 +190,7 @@
     </article>
 
     <article class="card">
-      <a href="vietnam-danang.html"><img src="images/vietnam-danang-hero.webp" alt="越南峴港3天2夜全攻略" width="1536" height="1024"></a>
+      <a href="vietnam-danang.html"><img src="images/vietnam-danang-hero.webp" alt="越南峴港3天2夜全攻略" width="1536" height="1024" loading="lazy"></a>
       <div class="card-body">
         <a href="southeast-asia.html" class="cat-tag">東南亞自由行</a>
         <h3><a href="vietnam-danang.html">【越南峴港】3天2夜全攻略</a></h3>
@@ -242,6 +243,17 @@
 </section>
 </main>
 
+
+<!-- Video Section -->
+<div class="video-section" style="margin:36px 0;background:linear-gradient(135deg,#f4f0e8,#fff);border-radius:16px;padding:24px;box-shadow:0 2px 12px rgba(0,0,0,0.06);">
+  <h3 style="color:#2d5a27;margin-bottom:16px;">🎬 相關影片推薦</h3>
+  <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:12px;">
+    <div style="position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(135deg,#40e0d0,#2d5a27);display:flex;align-items:center;justify-content:center;border-radius:12px;">
+      <p style="color:#fff;font-size:1.1rem;text-align:center;padding:20px;">▶️ 東南亞背包客指南<br><small style="opacity:0.8">YouTube 影片即將推出，歡迎訂閱追蹤最新旅遊攻略</small></p>
+    </div>
+  </div>
+</div>
+
 <section class="faq-section" style="max-width:900px;margin:40px auto;padding:0 40px;">
   <h2 class="section-title">❓ 常見問題</h2>
   <div class="faq-item" onclick="this.classList.toggle('open')">
@@ -262,7 +274,7 @@
 <!-- Trip.com Promo Banner -->
 <div class="trip-banner">
   <a href="https://www.trip.com/t/UbxF4MWAmU2" target="_blank" rel="noopener sponsored" data-affiliate="tripcom-bangkok">
-    <img src="images/bangkok-flight-hotel.webp" alt="Trip.com 曼谷機票+飯店優惠" width="1536" height="384">
+    <img src="images/bangkok-flight-hotel.webp" alt="Trip.com 曼谷機票+飯店優惠" width="1536" height="384" loading="lazy">
   </a>
 </div>
 <style>

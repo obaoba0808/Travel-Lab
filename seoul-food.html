@@ -59,6 +59,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
 
 <!-- Stylesheet -->
+<link rel="preload" href="style.css" as="style">
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="beautify-overrides.css">
 <link rel="stylesheet" href="beautify.css">
@@ -232,7 +233,7 @@ a.dropdown-toggle::after {
 <div class="breadcrumb-bar"><a href="index.html">首頁</a><span class="sep">›</span><a href="korea-travel.html" class="dropdown-toggle">韓國自由行</a><span class="sep">›</span>首爾美食</div>
 <!-- CHARTER BANNER -->
 <div style="max-width:900px;margin:0 auto 30px;padding:0 20px;">
-  <a href="about.html"><img src="images/charter-banner.webp" alt="台灣包車自由行" style="width:100%;border-radius:12px;display:block;" width="2179" height="722"></a>
+  <a href="about.html"><img src="images/charter-banner.webp" alt="台灣包車自由行" style="width:100%;border-radius:12px;display:block;" width="2179" height="722" loading="lazy"></a>
 </div>
 
 <div class="three-col-wrapper">
@@ -245,7 +246,7 @@ a.dropdown-toggle::after {
 <div class="article-container">
 
 <!-- TRIP PROMO BANNER -->
-<div style="margin-bottom:24px;"><a href="https://tw.trip.com/sale/w/4337/southkorea-destination.html?locale=zh-TW&promo_referer=3952_4337_8&Allianceid=8237671&SID=312406690&trip_sub1=&trip_sub3=P17011353" target="_blank" rel="nofollow sponsored" data-affiliate="trip-com"><img src="images/trip-korea.webp" alt="Trip.com 熱門優惠" style="width:100%;border-radius:12px;display:block;"></a></div>
+<div style="margin-bottom:24px;"><a href="https://tw.trip.com/sale/w/4337/southkorea-destination.html?locale=zh-TW&promo_referer=3952_4337_8&Allianceid=8237671&SID=312406690&trip_sub1=&trip_sub3=P17011353" target="_blank" rel="nofollow sponsored" data-affiliate="trip-com"><img src="images/trip-korea.webp" alt="Trip.com 熱門優惠" style="width:100%;border-radius:12px;display:block;" loading="lazy"></a></div>
 <h2>🦀 必吃美食 Top 5</h2>
 
 
@@ -337,6 +338,25 @@ a.dropdown-toggle::after {
 </div>
 
 <div class="cta-box"><h3>出發前先訂機票住宿，省更多！</h3><p style="margin:10px 0">用對工具訂房訂票，把錢留給吃烤肉</p><a href="travel-tools.html" class="btn">旅遊工具推薦｜eSIM、換匯、行李秤</a></div>
+
+
+<!-- Map Embed: 首爾美食地圖 -->
+<div class="map-embed" style="margin:36px 0;background:#f4f0e8;border-radius:16px;padding:24px;box-shadow:0 2px 12px rgba(0,0,0,0.06);">
+  <h3 style="color:#2d5a27;margin-bottom:8px;font-size:1.25rem;">📍 首爾美食地圖</h3>
+  <p style="color:#666;margin-bottom:16px;font-size:0.95rem;">明洞、弘大、江南、鐘路等美食熱區</p>
+  <iframe 
+    src="https://www.openstreetmap.org/export/embed.html?bbox=126.82799999999999%2C37.466499999999996%2C127.128%2C37.6665&layer=mapnik&marker=37.5665%2C126.978" 
+    width="100%" 
+    height="400" 
+    style="border:2px solid #40e0d0;border-radius:12px;" 
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"
+    title="首爾美食地圖">
+  </iframe>
+  <p style="margin-top:12px;font-size:0.85rem;color:#999;">
+    🗺️ <a href="https://www.openstreetmap.org/?mlat=37.5665&mlon=126.978&zoom=13" target="_blank" rel="noopener" style="color:#40e0d0;">在地圖中開開啟完整版</a>
+  </p>
+</div>
 
 <section class="faq-section">
 <h2>❓ 常見問題</h2>

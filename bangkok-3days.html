@@ -81,6 +81,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
 
 <!-- Stylesheet -->
+<link rel="preload" href="style.css" as="style">
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="beautify-overrides.css">
 <link rel="stylesheet" href="beautify.css">
@@ -166,7 +167,7 @@
 <div class="breadcrumb-bar"><a href="index.html">首頁</a><span class="sep">›</span><a href="southeast-asia.html" class="dropdown-toggle">東南亞自由行</a><span class="sep">›</span>曼谷吃貨</div>
 <!-- CHARTER BANNER -->
 <div style="max-width:900px;margin:0 auto 30px;padding:0 20px;">
-  <a href="about.html"><img src="images/charter-banner.webp" alt="台灣包車自由行" style="width:100%;border-radius:12px;display:block;" width="2179" height="722"></a>
+  <a href="about.html"><img src="images/charter-banner.webp" alt="台灣包車自由行" style="width:100%;border-radius:12px;display:block;" width="2179" height="722" loading="lazy"></a>
 </div>
 
 <div class="three-col-wrapper">
@@ -179,7 +180,7 @@
 <div class="article-container">
 
 <!-- TRIP PROMO BANNER -->
-<div style="margin-bottom:24px;"><a href="https://tw.trip.com/sale/w/26497/go-thailand.html?locale=zh-tw&curr=twd&promo_referer=3952_26497_7&Allianceid=8237671&SID=312406690&trip_sub1=&trip_sub3=P17078987" target="_blank" rel="nofollow sponsored" data-affiliate="trip-com"><img src="images/trip-thailand.webp" alt="Trip.com 熱門優惠" style="width:100%;border-radius:12px;display:block;"></a></div>
+<div style="margin-bottom:24px;"><a href="https://tw.trip.com/sale/w/26497/go-thailand.html?locale=zh-tw&curr=twd&promo_referer=3952_26497_7&Allianceid=8237671&SID=312406690&trip_sub1=&trip_sub3=P17078987" target="_blank" rel="nofollow sponsored" data-affiliate="trip-com"><img src="images/trip-thailand.webp" alt="Trip.com 熱門優惠" style="width:100%;border-radius:12px;display:block;" loading="lazy"></a></div>
 <h2>🚇 曼谷交通：BTS + MRT 最省心</h2>
 
   <p>曼谷塞車世界有名，善用空鐵和地鐵是最聰明的選擇：</p>
@@ -271,7 +272,26 @@
   </div>
 
 
-  <section class="faq-section">
+  
+<!-- Map Embed: 曼谷3日行程地圖 -->
+<div class="map-embed" style="margin:36px 0;background:#f4f0e8;border-radius:16px;padding:24px;box-shadow:0 2px 12px rgba(0,0,0,0.06);">
+  <h3 style="color:#2d5a27;margin-bottom:8px;font-size:1.25rem;">📍 曼谷3日行程地圖</h3>
+  <p style="color:#666;margin-bottom:16px;font-size:0.95rem;">大皇宮、乍都乍、考山路、暹羅廣場等景點位置</p>
+  <iframe 
+    src="https://www.openstreetmap.org/export/embed.html?bbox=100.3518%2C13.6563%2C100.65180000000001%2C13.8563&layer=mapnik&marker=13.7563%2C100.5018" 
+    width="100%" 
+    height="400" 
+    style="border:2px solid #40e0d0;border-radius:12px;" 
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"
+    title="曼谷3日行程地圖">
+  </iframe>
+  <p style="margin-top:12px;font-size:0.85rem;color:#999;">
+    🗺️ <a href="https://www.openstreetmap.org/?mlat=13.7563&mlon=100.5018&zoom=13" target="_blank" rel="noopener" style="color:#40e0d0;">在地圖中開開啟完整版</a>
+  </p>
+</div>
+
+<section class="faq-section">
     <h2>❓ 常見問題</h2>
     <div class="faq-item" onclick="this.classList.toggle('open')">
       <div class="faq-q">曼谷3天2夜花多少錢？</div>
