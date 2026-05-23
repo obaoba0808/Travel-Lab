@@ -5,15 +5,15 @@
   --tiffany-dark: #2d5a27;     /* 森林深綠 — 深層/hover */
   --tiffany-light: #e0faf7;    /* Tiffany 綠極淺色 — 標籤/淺底 */
   --tiffany-accent: #7eeae0;   /* Tiffany 綠淺色 — 強調/漸層 */
-  --beige: #f4f0e8;            /* 燕麥米色 — 溫暖淺底 */
-  --beige-dark: #e8e0d0;       /* 燕麥米深色 — 邊框/分隔 */
+  --beige: #ffffff;            /* 純白 — 淺底 */
+  --beige-dark: #e8e8e8;       /* 淺灰 — 邊框/分隔 */
   /* 文字（無障礙：深灰替代純黑）*/
   --text-dark: #333333;
   --text-gray: #666666;
   --text-light: #999999;
   /* 背景 */
   --bg: #ffffff;
-  --bg-light: #f4f0e8;         /* 燕麥米色作為淺色背景 */
+  --bg-light: #ffffff;         /* 純白淺底 */
   /* 邊框 & 陰影 */
   --border: #dde5e0;
   --shadow: rgba(45,90,39,0.08);
