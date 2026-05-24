@@ -41,8 +41,12 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&family=Noto+Serif+TC:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&family=Noto+Serif+TC:wght@400;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&family=Noto+Serif+TC:wght@400;700&display=swap" rel="stylesheet"></noscript>
+<link rel="preload" href="style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="style.css"></noscript>
 <link rel="stylesheet" href="beautify-overrides.css">
 <link rel="stylesheet" href="beautify.css">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✈️</text></svg>">
@@ -116,7 +120,7 @@
 
 <!-- SEARCH BOX -->
 <div class="search-box-wrap">
-<a href="https://www.trip.com/t/UbxF4MWAmU2" target="_blank" rel="noopener sponsored"><img src="images/bangkok-flight-hotel.webp" alt="Bangkok Flight + Hotel - Trip.com 專屬優惠"></a>
+<a href="https://www.trip.com/t/UbxF4MWAmU2" target="_blank" rel="noopener sponsored"><img src="images/bangkok-flight-hotel.webp" alt="Bangkok Flight + Hotel - Trip.com 專屬優惠" loading="lazy" decoding="async"></a>
 </div>
 
 
@@ -126,7 +130,7 @@
   <div class="featured-inner">
     <div class="featured-grid">
       <a href="tokyo-5days.html" class="featured-main">
-        <img src="images/tokyo-hero.webp" alt="東京自由行 5天4夜行程攻略" width="1536" height="1024">
+        <img src="images/tokyo-hero.webp" alt="東京自由行 5天4夜行程攻略" width="1536" height="1024" loading="lazy" decoding="async">
         <div class="featured-overlay">
           <span class="cat-tag">日本自由行</span>
           <h3>東京5天4夜省錢行程攻略：地鐵教學、住宿推薦、景點門票全解析</h3>
@@ -503,7 +507,7 @@
 
 <!-- OKINAWA CRUISE PROMO -->
 <div class="search-box-wrap">
-  <a href="https://www.trip.com/t/9OaQvBEAmU2" target="_blank" rel="noopener sponsored"><img src="images/okinawa-cruise.webp" alt="沖繩郵輪假期 - Trip.com 專屬優惠"></a>
+  <a href="https://www.trip.com/t/9OaQvBEAmU2" target="_blank" rel="noopener sponsored"><img src="images/okinawa-cruise.webp" alt="沖繩郵輪假期 - Trip.com 專屬優惠" loading="lazy" decoding="async"></a>
 </div>
 
 <!-- FOOTER -->
@@ -589,7 +593,7 @@
     }
   });
 </script>
-<script src="js/monetization.js" defer></script>
+<script src="js/monetization.js" defer defer></script>
 </body>
 </html>
 
