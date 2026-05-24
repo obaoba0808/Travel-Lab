@@ -1,3 +1,5 @@
+# robots.txt for golightly.fun
+# Allow all crawlers, signal AI training allowed
 User-agent: *
 Allow: /
 Sitemap: https://golightly.fun/sitemap.xml
