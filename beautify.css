@@ -1,0 +1,411 @@
+/* ========== Travel Lab UI Beautify (appended 2026-05-16) ========== */
+
+/* ---- HERO BEAUTIFY (2026-05-18 updated) ---- */
+.hero-beautify {
+  position: relative;
+  background: #fff !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 40px 60px;
+  text-align: center;
+  overflow: hidden;
+}
+.hero-beautify::before {
+  content: '';
+  position: absolute;
+  top: -50%; left: -50%;
+  width: 200%; height: 200%;
+  background: radial-gradient(circle, rgba(10,186,181,0.04) 0%, transparent 70%);
+  animation: heroShine 8s ease-in-out infinite;
+}
+@keyframes heroShine {
+  0%,100% { transform: translate(0,0); }
+  50% { transform: translate(20%,20%); }
+}
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.hero-content .hero-region-tag {
+  display: inline-block;
+  background: rgba(10,186,181,0.1);
+  color: #0ABAB5;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  padding: 6px 18px;
+  border-radius: 999px;
+  margin-bottom: 20px;
+  border: 1px solid rgba(10,186,181,0.2);
+}
+.hero-content h1 {
+  font-family: 'Noto Serif TC', serif;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 16px;
+  color: #0ABAB5 !important;  /* Tiffany 绿 */
+  letter-spacing: 2px;
+}
+.hero-content p {
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size: 18px;
+  line-height: 1.8;
+  color: #333 !important;
+  opacity: 1;
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+/* ---- ARTICLE CARD BEAUTIFY ---- */
+.article-card-beautify {
+  border-radius: 14px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.article-card-beautify:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 14px 36px rgba(10,186,181,0.16);
+}
+.article-card-beautify img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+.article-card-beautify:hover img {
+  transform: scale(1.05);
+}
+.article-card-body {
+  padding: 20px 22px 22px;
+}
+.article-card-body .cat-tag {
+  display: inline-block;
+  background: var(--tiffany);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 12px;
+  border-radius: 3px;
+  margin-bottom: 10px;
+}
+.article-card-body h3 {
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.55;
+  margin-bottom: 8px;
+  color: var(--text-dark);
+}
+.article-card-body h3 a:hover { color: var(--tiffany); }
+.article-card-body p {
+  font-size: 13px;
+  color: var(--text-gray);
+  line-height: 1.7;
+  margin: 0;
+}
+.article-card-meta {
+  display: flex;
+  gap: 12px;
+  font-size: 12px;
+  color: var(--text-light);
+  margin-top: 12px;
+}
+
+/* ---- STICKY TOC ---- */
+.sticky-toc-wrap {
+  position: sticky;
+  top: 80px;
+  max-height: calc(100vh - 100px);
+  overflow-y: auto;
+  padding: 20px 22px;
+  background: var(--bg-light);
+  border-radius: 12px;
+  border: 1px solid var(--border);
+}
+.sticky-toc-wrap h4 {
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 14px;
+  color: var(--text-dark);
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--tiffany-light);
+}
+.sticky-toc-wrap ul { list-style: none; padding: 0; margin: 0; }
+.sticky-toc-wrap li { padding: 7px 0; border-bottom: 1px solid var(--border); }
+.sticky-toc-wrap li:last-child { border-bottom: none; }
+.sticky-toc-wrap a {
+  font-size: 13px;
+  color: #555;
+  transition: color 0.2s;
+  display: block;
+  padding: 2px 0;
+}
+.sticky-toc-wrap a:hover { color: var(--tiffany); }
+.sticky-toc-wrap a.active { color: var(--tiffany); font-weight: 600; }
+
+/* ---- FAQ ACCORDION BEAUTIFY ---- */
+.faq-accordion-beautify .faq-item-b {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  margin-bottom: 12px;
+  overflow: hidden;
+  background: #fff;
+  transition: box-shadow 0.25s;
+}
+.faq-accordion-beautify .faq-item-b:hover {
+  box-shadow: 0 4px 16px rgba(10,186,181,0.1);
+}
+.faq-q-b {
+  padding: 18px 22px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  font-size: 15px;
+  background: var(--bg-light);
+  transition: background 0.2s;
+}
+.faq-q-b:hover { background: var(--tiffany-light); }
+.faq-q-b .arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--tiffany);
+  color: #fff;
+  font-size: 16px;
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+}
+.faq-item-b.open .faq-q-b .arrow {
+  transform: rotate(180deg);
+  background: var(--tiffany-dark);
+}
+.faq-a-b {
+  padding: 0 22px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease, padding 0.35s ease;
+  color: var(--text-gray);
+  line-height: 1.85;
+  font-size: 14px;
+}
+.faq-item-b.open .faq-a-b {
+  padding: 16px 22px 22px;
+  max-height: 600px;
+}
+
+/* ---- BACK TO TOP ---- */
+.back-to-top {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--tiffany);
+  color: #fff;
+  font-size: 22px;
+  border: none;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(12px);
+  transition: opacity 0.3s, visibility 0.3s, transform 0.3s, background 0.2s;
+  box-shadow: 0 4px 14px rgba(10,186,181,0.35);
+  z-index: 10000;
+}
+.back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.back-to-top:hover { background: var(--tiffany-dark); }
+
+/* ---- BREADCRUMB ---- */
+.breadcrumb-bar {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 14px 20px;
+  font-size: 13px;
+  color: var(--text-light);
+}
+.breadcrumb-bar a { color: var(--tiffany); }
+.breadcrumb-bar a:hover { text-decoration: underline; }
+.breadcrumb-bar .sep { margin: 0 8px; color: var(--text-light); }
+
+/* ---- RELATED ARTICLES BEAUTIFY ---- */
+.related-section-beautify {
+  margin-top: 60px;
+  padding-top: 32px;
+  border-top: 2px solid var(--tiffany-light);
+}
+.related-section-beautify h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  color: var(--text-dark);
+  position: relative;
+  padding-left: 18px;
+}
+.related-section-beautify h3::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 2px;
+  width: 5px;
+  height: 22px;
+  background: var(--tiffany);
+  border-radius: 3px;
+}
+.related-grid-beautify {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 22px;
+}
+
+/* ---- PROGRESS BAR ---- */
+.reading-progress {
+  position: fixed;
+  top: 52px;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--tiffany), var(--tiffany-accent));
+  z-index: 10001;
+  transition: width 0.15s ease;
+}
+
+/* ---- READING TIME BADGE ---- */
+.reading-time-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: var(--tiffany-light);
+  color: var(--tiffany-dark);
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 20px;
+  margin-bottom: 12px;
+}
+
+/* ---- CTA BOX BEAUTIFY ---- */
+.cta-box-beautify {
+  background: linear-gradient(135deg, var(--tiffany), var(--tiffany-dark));
+  color: #fff;
+  text-align: center;
+  padding: 36px 30px;
+  border-radius: 14px;
+  margin: 44px 0;
+  position: relative;
+  overflow: hidden;
+}
+.cta-box-beautify::before {
+  content: '';
+  position: absolute;
+  top: -30px;
+  right: -30px;
+  width: 120px;
+  height: 120px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 50%;
+}
+.cta-box-beautify h3 { font-size: 22px; margin-bottom: 10px; position: relative; }
+.cta-box-beautify p { font-size: 14px; opacity: 0.9; margin-bottom: 18px; position: relative; }
+.cta-box-beautify .btn-white {
+  display: inline-block;
+  background: #fff;
+  color: var(--tiffany-dark);
+  padding: 10px 30px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 700;
+  transition: background 0.2s, color 0.2s;
+  position: relative;
+}
+.cta-box-beautify .btn-white:hover { background: var(--tiffany-light); }
+
+/* ---- HIGHLIGHT BOX ---- */
+.highlight-box-beautify {
+  background: linear-gradient(135deg, var(--tiffany-light), #f0fffe);
+  border-left: 4px solid var(--tiffany);
+  border-radius: 0 10px 10px 0;
+  padding: 20px 24px;
+  margin: 24px 0;
+}
+.highlight-box-beautify .hb-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--tiffany-dark);
+  margin-bottom: 8px;
+}
+.highlight-box-beautify p {
+  font-size: 14px;
+  color: var(--text-dark);
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* ---- DAY CARD BEAUTIFY ---- */
+.day-card-beautify {
+  background: #fff;
+  border-radius: 14px;
+  padding: 26px 28px;
+  margin-bottom: 22px;
+  border: 1px solid var(--border);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+  transition: box-shadow 0.25s;
+}
+.day-card-beautify:hover {
+  box-shadow: 0 6px 24px rgba(10,186,181,0.12);
+}
+.day-card-beautify h3 {
+  font-size: 18px;
+  color: var(--tiffany-dark);
+  margin: 0 0 12px 0;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--tiffany-light);
+}
+.day-tag-beautify {
+  display: inline-block;
+  background: var(--tiffany);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 14px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+
+/* ---- RESPONSIVE TWEAKS (2026-05-18 updated) ---- */
+@media (max-width: 768px) {
+  .hero-beautify { padding: 80px 24px 50px !important; }
+  .hero-content h1 { font-size: 36px !important; letter-spacing: 1px; }
+  .hero-content p { font-size: 16px !important; }
+  .sticky-toc-wrap { position: static; margin-bottom: 24px; }
+  .back-to-top { bottom: 20px; right: 20px; width: 42px; height: 42px; font-size: 18px; }
+  /* 手机版菜单：只显示 ☰ 图标 */
+  .mobile-toggle { display: block !important; font-size: 24px; padding: 8px 12px; }
+  .main-nav { display: none !important; flex-direction: column; position: absolute; top: 52px; left: 0; right: 0; background: #fff; box-shadow: 0 4px 12px rgba(0,0,0,0.1); padding: 10px 0; z-index: 998; }
+  .main-nav.open { display: flex !important; }
+}
+@media (max-width: 480px) {
+  .hero-beautify { padding: 60px 16px 40px !important; }
+  .hero-content h1 { font-size: 28px !important; }
+  .hero-content p { font-size: 14px !important; line-height: 1.7; }
+}
+
+/* ---- Search Box Spacing Fix ---- */
+.search-box-wrap {
+  margin-top: -20px !important;
+  padding-top: 0 !important;
+}
