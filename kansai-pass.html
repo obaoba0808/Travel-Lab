@@ -445,10 +445,16 @@ function closeLeadPopup(){
 }
 function submitLeadForm(e){
   e.preventDefault();
+  var email=document.getElementById('lead-email').value;
+  var resource=document.getElementById('lead-resource')?document.getElementById('lead-resource').value:'travel-guide';
+  var page=location.pathname;
+  var msg='\uD83D\uDCEC \u65B0\u8A02\u95B1\uFF01%0AEmail: '+email+'%0A\u8CC7\u6E90: '+resource+'%0A\u9801\u9762: '+page;
+  var img=new Image();
+  img.src='https://api.telegram.org/bot8808827218:AAGnLnCmgzrJTfDNqgMVQkd-j3PlI2Uc9b0/sendMessage?chat_id=6096485046&text='+encodeURIComponent(msg);
   var f=document.getElementById('lead-form');
-  f.innerHTML='<div style="color:#0ABAB5;font-size:18px;font-weight:700;">&#10004;&#65039; 已收到！<br><span style="font-size:14px;color:#555;">請到 Email 收件匣確認，我們已發送下載連結給你！</span></div>';
-  try{localStorage.setItem('leadShown_'+location.pathname,'1');}catch(e){}
-  closeLeadPopup();
+  f.innerHTML='<div style="color:#0ABAB5;font-size:18px;font-weight:700;">\u2705 \u5DF2\u6536\u5230\uFF01<br><span style="font-size:14px;color:#555;">\u6211\u5011\u5DF2\u7A31\u9001\u4E0B\u8F09\u9023\u7D50\u7D66\u4F60\uFF0C\u8ACB\u5230 Email \u6536\u4EF6\u7BB1\u78BA\u8A8D\uFF01</span></div>';
+  try{localStorage.setItem('leadPopup_'+location.pathname,'1');}catch(e){}
+  setTimeout(closeLeadPopup,2000);
 }
 </script>
 <style>
