@@ -842,3 +842,42 @@ div[style*="max-width:900px;margin:0 auto 30px;padding:0 20px;"] {
 .lead-inline button:disabled{background:#bdbdbd;cursor:not-allowed;transform:none;box-shadow:none}
 .lead-inline.success{background:linear-gradient(135deg,#e8f5e9 0%,#c8e6c9 100%);border-color:#66bb6a}
 .lead-note{font-size:13px;color:#78909c;margin:20px 0 0;display:flex;align-items:center;justify-content:center;gap:6px}
+
+/* Force override for .lead-inline (beats beautify.css) */
+.lead-inline.lead-inline {
+  background: linear-gradient(135deg, #f1f8e9 0%, #e8f5e9 50%, #dcedc8 100%) !important;
+  border-radius: 20px !important;
+  padding: 40px !important;
+  box-shadow: 0 8px 32px rgba(46, 125, 50, 0.12), 0 2px 8px rgba(0,0,0,0.06) !important;
+  border: 2px solid #a5d6a7 !important;
+  max-width: 640px !important;
+  margin: 56px auto !important;
+  text-align: center !important;
+  overflow: hidden !important;
+  position: relative !important;
+}
+.lead-inline.lead-inline h3 {
+  color: #1b5e20 !important;
+  font-size: 26px !important;
+  font-weight: 700 !important;
+}
+.lead-inline.lead-inline > p {
+  color: #33691e !important;
+  font-size: 16px !important;
+}
+.lead-inline.lead-inline form input[type='email'] {
+  border: 2px solid #a5d6a7 !important;
+  border-radius: 12px !important;
+  padding: 14px 20px !important;
+  font-size: 16px !important;
+}
+.lead-inline.lead-inline form button {
+  background: linear-gradient(135deg, #4db6ac, #009688) !important;
+  color: white !important;
+  border: none !important;
+  border-radius: 12px !important;
+  padding: 14px 28px !important;
+  font-size: 16px !important;
+  font-weight: 700 !important;
+  cursor: pointer !important;
+}
