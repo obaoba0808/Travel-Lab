@@ -441,28 +441,13 @@
         </footer>
 <button class="back-to-top" id="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
 <script>
-window.addEventListener('scroll',function(){var p=document.getElementById('reading-progress'),b=document.getElementById('back-to-top');var st=window.scrollY,dh=document.documentElement.scrollHeight-window.innerHeight;if(dh>0){p.style.width=(st/dh*100)+'%';}else{p.style.width='0%';}b.classList.toggle('visible',st>400);});
+// DISABLED:var p=document.getElementById('reading-progress'),b=document.getElementById('back-to-top');var st=window.scrollY,dh=document.documentElement.scrollHeight-window.innerHeight;if(dh>0){p.style.width=(st/dh*100)+'%';}else{p.style.width='0%';}b.classList.toggle('visible',st>400);});
 document.querySelectorAll('.faq-item').forEach(function(item){var btn=item.querySelector('.faq-q');if(!btn)return;btn.addEventListener('click',function(){var o=item.classList.contains('open');document.querySelectorAll('.faq-item').forEach(function(i){i.classList.remove('open');});if(!o)item.classList.add('open');});});
 </script>
 <script src="js/monetization.js" defer defer></script>
 
 
 
-<div class="lead-popup-overlay" id="leadPopup">
-  <div class="lead-popup">
-    <button class="lead-popup-close" onclick="closeLeadPopup()">&times;</button>
-    <div class="lead-popup-header">
-      <h3>📘 小編獨家攻略，限時免費送</h3>
-    </div>
-    <div class="lead-popup-body">
-      <p id="leadDesc">填Email立即收到PDF下載連結<br>和最新日本自由行資訊</p>
-      <form onsubmit="submitLeadForm(this,event)">
-        <input type="email" placeholder="輸入你的Email" required id="leadEmail">
-        <button type="submit" id="leadSubmitBtn">免費下載攻略</button>
-      </form>
-      <p class="lead-note">🔒 尊重隱私，隨時可取消訂閱</p>
-    </div>
-  </div>
 </div>
 
 
@@ -534,7 +519,7 @@ else{document.getElementById('leadSubmitBtn').textContent='傳送失敗，再試
 .catch(function(_0e){document.getElementById('leadSubmitBtn').textContent='傳送失敗，再試一次';document.getElementById('leadSubmitBtn').disabled=false;});
 }
 
-window.addEventListener('scroll',function(){
+// DISABLED:
 if(localStorage.getItem('leadSent')||localStorage.getItem('leadPopupClosed'))return;
 var _0sy=window.scrollY;
 var _0dH=document.documentElement.scrollHeight;
@@ -547,4 +532,17 @@ document.getElementById('leadPopup').classList.add('active');
 document.getElementById('leadPopup').addEventListener('click',function(_0ev){if(_0ev.target===document.getElementById('leadPopup'))closeLeadPopup();});
 </script>
 
-</body></html>
+
+
+    <div class="lead-inline">
+      <div class="lead-inline-icon">&#128227;</div>
+      <h3>&#23554;&#37559;&#29483;&#23478;&#25991;&#29872;&#65292;&#38480;&#26178;&#20813;&#36063;&#36865;</h3>
+      <p>&#22635;Email&#31478;&#31481;&#25910;&#21040;PDF&#19979;&#36617;&#32887;&#25509;&#21518;&#21644;&#26368;&#26032;&#26053;&#36153;&#36028;&#24785;</p>
+      <form onsubmit="submitLeadForm(this,event)">
+        <input type="email" placeholder="&#36755;&#20837;&#20320;&#30340;Email" required id="leadEmail">
+        <button type="submit" id="leadSubmitBtn">&#20813;&#36063;&#19979;&#36617;&#25913;&#30053;</button>
+      </form>
+      <p class="lead-note">&#128274; &#23653;&#37329;&#38544;&#31169;&#65292;&#38543;&#26178;&#21487;&#21462;&#28040;&#35680;&#38283;</p>
+    </div>
+
+  </body></html>

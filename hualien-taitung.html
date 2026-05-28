@@ -409,21 +409,6 @@
 </script>
 <script src="js/monetization.js" defer defer></script>
 
-<div class="lead-popup-overlay" id="leadPopup">
-  <div class="lead-popup">
-    <button class="lead-popup-close" onclick="closeLeadPopup()">&times;</button>
-    <div class="lead-popup-header">
-      <h3>📘 小編獨家攻略，限時免費送</h3>
-    </div>
-    <div class="lead-popup-body">
-      <p id="leadDesc">填Email立即收到PDF下載連結<br>和最新日本自由行資訊</p>
-      <form onsubmit="submitLeadForm(this,event)">
-        <input type="email" placeholder="輸入你的Email" required id="leadEmail">
-        <button type="submit" id="leadSubmitBtn">免費下載攻略</button>
-      </form>
-      <p class="lead-note">🔒 尊重隱私，隨時可取消訂閱</p>
-    </div>
-  </div>
 </div>
 
 
@@ -495,7 +480,7 @@ else{document.getElementById('leadSubmitBtn').textContent='傳送失敗，再試
 .catch(function(_0e){document.getElementById('leadSubmitBtn').textContent='傳送失敗，再試一次';document.getElementById('leadSubmitBtn').disabled=false;});
 }
 
-window.addEventListener('scroll',function(){
+// DISABLED:
 if(localStorage.getItem('leadSent')||localStorage.getItem('leadPopupClosed'))return;
 var _0sy=window.scrollY;
 var _0dH=document.documentElement.scrollHeight;
@@ -508,5 +493,14 @@ document.getElementById('leadPopup').classList.add('active');
 document.getElementById('leadPopup').addEventListener('click',function(_0ev){if(_0ev.target===document.getElementById('leadPopup'))closeLeadPopup();});
 </script>
 
+<div class="lead-inline">
+<div class="lead-inline-icon">TEST</div>
+<h3>Email</h3>
+<form onsubmit="submitLeadForm(this,event)">
+<input type="email" placeholder="Email" id="leadEmail">
+<button type="submit">Submit</button>
+</form>
+<p class="lead-note">Private</p>
+</div>
 </body>
 </html>
