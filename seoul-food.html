@@ -451,7 +451,30 @@ a.dropdown-toggle::after {
   </div>
 </div>
 </div>
-</div><!-- /article-container --><!-- /col-center -->
+</div>
+<div class="faq-section">
+  <h2>❓ 常見問題 FAQ</h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <h3>韓國插座是什麼規格？需要變壓器嗎？</h3>
+      <p>韓國電壓220V，插座為兩頭圓腳（歐規）。台灣插頭需要轉接頭，建議在台灣先買好。變壓器大多不需要，手機、筆電都支援110-240V。</p>
+    </div>
+    <div class="faq-item">
+      <h3>韓國簽證需要嗎？</h3>
+      <p>台灣護照免簽證，可停留90天。但需填寫「入境卡」和「健康狀態調查表」。建議準備來回機票和住宿證明，海關可能查驗。</p>
+    </div>
+    <div class="faq-item">
+      <h3>韓國 T-money 卡怎麼用？</h3>
+      <p>T-money卡可在便利商店購買（₩2,500），地鐵、公車都能用，比現金便宜₩100。也可在便利商店消費。退卡可退押金，但需手續費，不常用建議直接留作紀念。</p>
+    </div>
+    <div class="faq-item">
+      <h3>韓國上網怎麼辦？</h3>
+      <p>推薦在台灣先買好eSIM（Korea Telecom、SK Telecom），下飛機就有網路。也可在仁川機場租WiFi機（約₩3,000/天），多人分攤較划算。</p>
+    </div>
+  </div>
+</div>
+
+<!-- /article-container --><!-- /col-center -->
 </div><!-- /three-col-wrapper -->
 <!-- FOOTER -->
 <footer class="site-footer">
@@ -547,5 +570,48 @@ a.dropdown-toggle::after {
   });
 </script>
 <script src="js/monetization.js" defer defer></script>
+<!-- Email Lead Magnet Popup -->
+<div id="lead-magnet-popup" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;z-index:9999;background:rgba(0,0,0,0.6);font-family:'Noto Sans TC',sans-serif;">
+  <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);background:#fff;border-radius:20px;padding:40px;max-width:520px;width:90%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.3);">
+    <button onclick="closeLeadPopup()" style="position:absolute;top:16px;right:20px;background:none;border:none;font-size:24px;cursor:pointer;color:#999;">&times;</button>
+    <div style="background:#0ABAB5;color:#fff;border-radius:50%;width:64px;height:64px;line-height:64px;font-size:32px;margin:0 auto 20px;">&#9992;&#65039;</div>
+    <h2 id="popup-title" style="color:#0ABAB5;margin:0 0 8px;font-size:22px;">首爾美食地圖免費送！</h2>
+    <p id="popup-subtitle" style="color:#555;margin:0 0 24px;font-size:15px;line-height:1.6;">明洞/弘大/江南三大區美食地圖PDF</p>
+    <form id="lead-form" onsubmit="submitLeadForm(event)">
+      <input type="email" id="lead-email" placeholder="輸入你的Email" required style="width:100%;padding:14px 16px;border:2px solid #0ABAB5;border-radius:10px;font-size:16px;margin-bottom:12px;box-sizing:border-box;">
+      <input type="hidden" id="lead-resource" value="seoul-food-map">
+      <button type="submit" style="width:100%;padding:14px;background:#0ABAB5;color:#fff;border:none;border-radius:10px;font-size:16px;font-weight:700;cursor:pointer;">下載首爾美食地圖</button>
+    </form>
+    <p style="margin:10px 0 0;font-size:12px;color:#aaa;">我們重視隱私，不會寄垃圾郵件，隨時可退訂</p>
+  </div>
+</div>
+<script>
+var leadPopupShown=false;
+window.addEventListener('scroll',function(){
+  if(leadPopupShown)return;
+  var sh=document.documentElement.scrollHeight-window.innerHeight;
+  var sp=(window.scrollY/sh)*100;
+  if(sp>60){
+    leadPopupShown=true;
+    var p=document.getElementById('lead-magnet-popup');
+    if(p){p.style.display='block';p.style.animation='fadeInPopup 0.4s ease';}
+  }
+});
+function closeLeadPopup(){
+  var p=document.getElementById('lead-magnet-popup');
+  if(p)p.style.display='none';
+  try{localStorage.setItem('leadShown_'+location.pathname,'1');}catch(e){}
+}
+function submitLeadForm(e){
+  e.preventDefault();
+  var f=document.getElementById('lead-form');
+  f.innerHTML='<div style="color:#0ABAB5;font-size:18px;font-weight:700;">&#10004;&#65039; 已收到！<br><span style="font-size:14px;color:#555;">請到 Email 收件匣確認，我們已發送下載連結給你！</span></div>';
+  try{localStorage.setItem('leadShown_'+location.pathname,'1');}catch(e){}
+  closeLeadPopup();
+}
+</script>
+<style>
+@keyframes fadeInPopup{from{opacity:0;transform:translate(-50%,-45%);}to{opacity:1;transform:translate(-50%,-50%);}}
+</style>
 </body>
 </html>

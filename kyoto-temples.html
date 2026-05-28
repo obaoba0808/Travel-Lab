@@ -171,7 +171,7 @@
 <div class="article-container">
 
 <!-- TRIP PROMO BANNER -->
-<div style="margin-bottom:24px;"><a href="https://tw.trip.com/sale/w/4217/japan-travel.html?locale=zh_tw&promo_referer=3952_4217_9&Allianceid=8237671&SID=312406690&trip_sub1=&trip_sub3=P17078945n" target="_blank" rel="nofollow sponsored" data-affiliate="trip-com"><img src="images/trip-japan.webp" alt="Trip.com 熱門優惠" style="width:100%;border-radius:12px;display:block;"></a></div>
+
 <h2>🏯 京都3大寺廟散步路線</h2>
 
 <!-- 實戰推薦配圖 -->
@@ -342,7 +342,30 @@
 <a href="https://line.me/ti/g/NbNGnW4Eh6" target="_blank" rel="noopener noreferrer" class="btn-white">💬 LINE 詢問包車報價</a>
   <a href="https://line.me/ti/g/NbNGnW4Eh6" target="_blank" rel="noopener noreferrer" class="btn-white">🗺️ 幫我規劃台灣行程</a>
 </div>
-</div><!-- /article-container -->
+</div>
+<div class="faq-section">
+  <h2>❓ 常見問題 FAQ</h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <h3>日本便利商店有哪些必買？</h3>
+      <p>7-11的飯糰、FamilyMart的炸雞、Lawson的霜淇淋都超推薦。還有各式便當、沙拉、飯店、甜點，品質不輸餐廳，價格只要1/3。</p>
+    </div>
+    <div class="faq-item">
+      <h3>日本插座需要變壓器嗎？</h3>
+      <p>日本電壓100V，台灣110V，大部分電器（手機、筆電）可直接使用。但吹風機、電棒捲可能需要變壓器。插座為兩頭扁腳，台灣插頭可直接使用。</p>
+    </div>
+    <div class="faq-item">
+      <h3>日本旅遊最佳季節是什麼時候？</h3>
+      <p>櫻花季（3-4月）和紅葉季（11月）最美，但人多價高。5-6月、9-10月避開梅雨季和颱風，價格較低，天氣也舒適。冬季（12-2月）適合滑雪和泡溫泉。</p>
+    </div>
+    <div class="faq-item">
+      <h3>日本怎麼上網？SIM卡還是WiFi機？</h3>
+      <p>推薦購買當地SIM卡（成田、羽田機場都有賣），價格約¥2,000-3,000/5天。WiFi機訊號穩但需歸還，適合多人分攤。Free WiFi熱點越來越多，但覆蓋率仍不足。</p>
+    </div>
+  </div>
+</div>
+
+<!-- /article-container -->
 
 </div><!-- /three-col-wrapper -->
 
@@ -439,5 +462,48 @@
   });
 </script>
 <script src="js/monetization.js" defer defer></script>
+<!-- Email Lead Magnet Popup -->
+<div id="lead-magnet-popup" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;z-index:9999;background:rgba(0,0,0,0.6);font-family:'Noto Sans TC',sans-serif;">
+  <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);background:#fff;border-radius:20px;padding:40px;max-width:520px;width:90%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.3);">
+    <button onclick="closeLeadPopup()" style="position:absolute;top:16px;right:20px;background:none;border:none;font-size:24px;cursor:pointer;color:#999;">&times;</button>
+    <div style="background:#0ABAB5;color:#fff;border-radius:50%;width:64px;height:64px;line-height:64px;font-size:32px;margin:0 auto 20px;">&#9992;&#65039;</div>
+    <h2 id="popup-title" style="color:#0ABAB5;margin:0 0 8px;font-size:22px;">京都賞楓時間表2026！</h2>
+    <p id="popup-subtitle" style="color:#555;margin:0 0 24px;font-size:15px;line-height:1.6;">京都賞楓最佳觀測點+預測時間表PDF</p>
+    <form id="lead-form" onsubmit="submitLeadForm(event)">
+      <input type="email" id="lead-email" placeholder="輸入你的Email" required style="width:100%;padding:14px 16px;border:2px solid #0ABAB5;border-radius:10px;font-size:16px;margin-bottom:12px;box-sizing:border-box;">
+      <input type="hidden" id="lead-resource" value="kyoto-momiji-schedule">
+      <button type="submit" style="width:100%;padding:14px;background:#0ABAB5;color:#fff;border:none;border-radius:10px;font-size:16px;font-weight:700;cursor:pointer;">免費下載賞楓時間表</button>
+    </form>
+    <p style="margin:10px 0 0;font-size:12px;color:#aaa;">我們重視隱私，不會寄垃圾郵件，隨時可退訂</p>
+  </div>
+</div>
+<script>
+var leadPopupShown=false;
+window.addEventListener('scroll',function(){
+  if(leadPopupShown)return;
+  var sh=document.documentElement.scrollHeight-window.innerHeight;
+  var sp=(window.scrollY/sh)*100;
+  if(sp>60){
+    leadPopupShown=true;
+    var p=document.getElementById('lead-magnet-popup');
+    if(p){p.style.display='block';p.style.animation='fadeInPopup 0.4s ease';}
+  }
+});
+function closeLeadPopup(){
+  var p=document.getElementById('lead-magnet-popup');
+  if(p)p.style.display='none';
+  try{localStorage.setItem('leadShown_'+location.pathname,'1');}catch(e){}
+}
+function submitLeadForm(e){
+  e.preventDefault();
+  var f=document.getElementById('lead-form');
+  f.innerHTML='<div style="color:#0ABAB5;font-size:18px;font-weight:700;">&#10004;&#65039; 已收到！<br><span style="font-size:14px;color:#555;">請到 Email 收件匣確認，我們已發送下載連結給你！</span></div>';
+  try{localStorage.setItem('leadShown_'+location.pathname,'1');}catch(e){}
+  closeLeadPopup();
+}
+</script>
+<style>
+@keyframes fadeInPopup{from{opacity:0;transform:translate(-50%,-45%);}to{opacity:1;transform:translate(-50%,-50%);}}
+</style>
 </body>
 </html>

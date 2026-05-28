@@ -409,7 +409,30 @@
   </div>
 </div>
 </div>
-</div><!-- /article-container -->
+</div>
+<div class="faq-section">
+  <h2>❓ 常見問題 FAQ</h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <h3>東南亞旅遊最佳季節？</h3>
+      <p>乾季（11-2月）最舒適，雨水少、溫度適中。雨季（5-10月）雖然下雨但機票住宿便宜，適合預算有限的旅客。4月最熱（35°C+），需做好防曬。</p>
+    </div>
+    <div class="faq-item">
+      <h3>東南亞交通怎麼安排？</h3>
+      <p>城市內用Grab（東南亞版Uber）最方便。長途移動可搭廉航（AirAsia、Lion Air）。火車適合慢活旅行（泰國、越南）。租機車需國際駕照，戴安全帽。</p>
+    </div>
+    <div class="faq-item">
+      <h3>東南亞上網怎麼辦？</h3>
+      <p>推薦在台灣買好當地eSIM（Airalo、Nomad），或購買當地SIM卡（7-11、全家都有賣）。WiFi機多人分攤較划算，但需歸還。Free WiFi覆蓋率城市較高，鄉村較差。</p>
+    </div>
+    <div class="faq-item">
+      <h3>東南亞需要打疫苗嗎？</h3>
+      <p>建議接種日本腦炎、A型肝炎、破傷風疫苗。瘧疾藥物視目的地而定（城市不需要，深山叢林建議）。出發前2個月諮詢旅遊醫學門診。</p>
+    </div>
+  </div>
+</div>
+
+<!-- /article-container -->
 <!-- ARTICLE BOTTOM CTA -->
 
 </div><!-- /col-center -->
@@ -510,5 +533,48 @@
 <script src="js/monetization.js" defer defer></script>
 
 <p>清邁的生活步調很慢，非常適合長期停留或數位遊牧。如果你想要逃離繁忙的都市生活，清邁絕對是最佳選擇。來這裡待上一個月，你會發現自己的生活節奏完全改變，變得更健康、更放鬆！</p>
+<!-- Email Lead Magnet Popup -->
+<div id="lead-magnet-popup" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;z-index:9999;background:rgba(0,0,0,0.6);font-family:'Noto Sans TC',sans-serif;">
+  <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);background:#fff;border-radius:20px;padding:40px;max-width:520px;width:90%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.3);">
+    <button onclick="closeLeadPopup()" style="position:absolute;top:16px;right:20px;background:none;border:none;font-size:24px;cursor:pointer;color:#999;">&times;</button>
+    <div style="background:#0ABAB5;color:#fff;border-radius:50%;width:64px;height:64px;line-height:64px;font-size:32px;margin:0 auto 20px;">&#9992;&#65039;</div>
+    <h2 id="popup-title" style="color:#0ABAB5;margin:0 0 8px;font-size:22px;">清邁數位遊牧指南！</h2>
+    <p id="popup-subtitle" style="color:#555;margin:0 0 24px;font-size:15px;line-height:1.6;">免費下載清邁簽證攻略+共享空間清單</p>
+    <form id="lead-form" onsubmit="submitLeadForm(event)">
+      <input type="email" id="lead-email" placeholder="輸入你的Email" required style="width:100%;padding:14px 16px;border:2px solid #0ABAB5;border-radius:10px;font-size:16px;margin-bottom:12px;box-sizing:border-box;">
+      <input type="hidden" id="lead-resource" value="chiang-mai-guide">
+      <button type="submit" style="width:100%;padding:14px;background:#0ABAB5;color:#fff;border:none;border-radius:10px;font-size:16px;font-weight:700;cursor:pointer;">下載簽證攻略</button>
+    </form>
+    <p style="margin:10px 0 0;font-size:12px;color:#aaa;">我們重視隱私，不會寄垃圾郵件，隨時可退訂</p>
+  </div>
+</div>
+<script>
+var leadPopupShown=false;
+window.addEventListener('scroll',function(){
+  if(leadPopupShown)return;
+  var sh=document.documentElement.scrollHeight-window.innerHeight;
+  var sp=(window.scrollY/sh)*100;
+  if(sp>60){
+    leadPopupShown=true;
+    var p=document.getElementById('lead-magnet-popup');
+    if(p){p.style.display='block';p.style.animation='fadeInPopup 0.4s ease';}
+  }
+});
+function closeLeadPopup(){
+  var p=document.getElementById('lead-magnet-popup');
+  if(p)p.style.display='none';
+  try{localStorage.setItem('leadShown_'+location.pathname,'1');}catch(e){}
+}
+function submitLeadForm(e){
+  e.preventDefault();
+  var f=document.getElementById('lead-form');
+  f.innerHTML='<div style="color:#0ABAB5;font-size:18px;font-weight:700;">&#10004;&#65039; 已收到！<br><span style="font-size:14px;color:#555;">請到 Email 收件匣確認，我們已發送下載連結給你！</span></div>';
+  try{localStorage.setItem('leadShown_'+location.pathname,'1');}catch(e){}
+  closeLeadPopup();
+}
+</script>
+<style>
+@keyframes fadeInPopup{from{opacity:0;transform:translate(-50%,-45%);}to{opacity:1;transform:translate(-50%,-50%);}}
+</style>
 </body>
 </html>

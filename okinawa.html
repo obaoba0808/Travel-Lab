@@ -371,7 +371,30 @@
   </div>
 </div>
 </div>
-</div><!-- /article-container --><!-- /col-center -->
+</div>
+<div class="faq-section">
+  <h2>❓ 常見問題 FAQ</h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <h3>日本旅遊最佳季節是什麼時候？</h3>
+      <p>櫻花季（3-4月）和紅葉季（11月）最美，但人多價高。5-6月、9-10月避開梅雨季和颱風，價格較低，天氣也舒適。冬季（12-2月）適合滑雪和泡溫泉。</p>
+    </div>
+    <div class="faq-item">
+      <h3>日本交通怎麼省錢？</h3>
+      <p>建議購買JR Pass（全國版或地區版），新幹線自由席比指定席便宜。市內交通用地鐵一日券（Tokyo Subway Ticket、Osaka Amazing Pass）。巴士比地鐵便宜，但較慢。</p>
+    </div>
+    <div class="faq-item">
+      <h3>日本溫泉禮儀要注意什麼？</h3>
+      <p>入浴前要先沖洗身體。毛巾不可放入浴池，可放在頭上或旁邊。有刺青者可能被拒絕入場（可找允許刺青的溫泉或用貼布遮蓋）。</p>
+    </div>
+    <div class="faq-item">
+      <h3>日本怎麼上網？SIM卡還是WiFi機？</h3>
+      <p>推薦購買當地SIM卡（成田、羽田機場都有賣），價格約¥2,000-3,000/5天。WiFi機訊號穩但需歸還，適合多人分攤。Free WiFi熱點越來越多，但覆蓋率仍不足。</p>
+    </div>
+  </div>
+</div>
+
+<!-- /article-container --><!-- /col-center -->
 </div><!-- /three-col-wrapper -->
 <!-- FOOTER -->
 <footer class="site-footer">
@@ -467,6 +490,49 @@
   });
 </script>
 <script src="js/monetization.js" defer defer></script>
+<!-- Email Lead Magnet Popup -->
+<div id="lead-magnet-popup" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;z-index:9999;background:rgba(0,0,0,0.6);font-family:'Noto Sans TC',sans-serif;">
+  <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);background:#fff;border-radius:20px;padding:40px;max-width:520px;width:90%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.3);">
+    <button onclick="closeLeadPopup()" style="position:absolute;top:16px;right:20px;background:none;border:none;font-size:24px;cursor:pointer;color:#999;">&times;</button>
+    <div style="background:#0ABAB5;color:#fff;border-radius:50%;width:64px;height:64px;line-height:64px;font-size:32px;margin:0 auto 20px;">&#9992;&#65039;</div>
+    <h2 id="popup-title" style="color:#0ABAB5;margin:0 0 8px;font-size:22px;">沖繩自駕必備地圖！</h2>
+    <p id="popup-subtitle" style="color:#555;margin:0 0 24px;font-size:15px;line-height:1.6;">免費下載沖繩自駕路線圖PDF，含停車場位置</p>
+    <form id="lead-form" onsubmit="submitLeadForm(event)">
+      <input type="email" id="lead-email" placeholder="輸入你的Email" required style="width:100%;padding:14px 16px;border:2px solid #0ABAB5;border-radius:10px;font-size:16px;margin-bottom:12px;box-sizing:border-box;">
+      <input type="hidden" id="lead-resource" value="okinawa-driving-map">
+      <button type="submit" style="width:100%;padding:14px;background:#0ABAB5;color:#fff;border:none;border-radius:10px;font-size:16px;font-weight:700;cursor:pointer;">下載自駕路線圖</button>
+    </form>
+    <p style="margin:10px 0 0;font-size:12px;color:#aaa;">我們重視隱私，不會寄垃圾郵件，隨時可退訂</p>
+  </div>
+</div>
+<script>
+var leadPopupShown=false;
+window.addEventListener('scroll',function(){
+  if(leadPopupShown)return;
+  var sh=document.documentElement.scrollHeight-window.innerHeight;
+  var sp=(window.scrollY/sh)*100;
+  if(sp>60){
+    leadPopupShown=true;
+    var p=document.getElementById('lead-magnet-popup');
+    if(p){p.style.display='block';p.style.animation='fadeInPopup 0.4s ease';}
+  }
+});
+function closeLeadPopup(){
+  var p=document.getElementById('lead-magnet-popup');
+  if(p)p.style.display='none';
+  try{localStorage.setItem('leadShown_'+location.pathname,'1');}catch(e){}
+}
+function submitLeadForm(e){
+  e.preventDefault();
+  var f=document.getElementById('lead-form');
+  f.innerHTML='<div style="color:#0ABAB5;font-size:18px;font-weight:700;">&#10004;&#65039; 已收到！<br><span style="font-size:14px;color:#555;">請到 Email 收件匣確認，我們已發送下載連結給你！</span></div>';
+  try{localStorage.setItem('leadShown_'+location.pathname,'1');}catch(e){}
+  closeLeadPopup();
+}
+</script>
+<style>
+@keyframes fadeInPopup{from{opacity:0;transform:translate(-50%,-45%);}to{opacity:1;transform:translate(-50%,-50%);}}
+</style>
 </body>
 </html>
 

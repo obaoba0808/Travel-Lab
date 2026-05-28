@@ -307,7 +307,30 @@
   </div>
 </div>
 </div>
-</div><!-- /article-container --><!-- /col-center -->
+</div>
+<div class="faq-section">
+  <h2>❓ 常見問題 FAQ</h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <h3>台灣有什麼特色體驗？</h3>
+      <p>泡湯（北投、陽明山）、自行車道（河濱公園、日月潭）、茶園採茶（阿里山、梨山）、原住民文化（花蓮、台東）、夜市美食團購（適合多人）。</p>
+    </div>
+    <div class="faq-item">
+      <h3>台灣旅遊最佳時間？</h3>
+      <p>春秋（3-5月、9-11月）天氣最舒適。夏季（6-8月）炎熱多雨，但適合海邊活動。冬季（12-2月）北部濕冷，南部仍溫暖。颱風季（7-9月）需注意天氣預報。</p>
+    </div>
+    <div class="faq-item">
+      <h3>台灣住宿推薦哪裡？</h3>
+      <p>台北：西門町（交通方便）、中山區（文青咖啡廳多）。台中：逢甲附近（夜市美食）。台南：老城區（古蹟民宿）。花蓮：火車站附近（交通方便）。墾丁：大街附近（海邊活動）。</p>
+    </div>
+    <div class="faq-item">
+      <h3>台灣交通怎麼安排？</h3>
+      <p>台鐵（火車）和高鐵（高鐵）連接主要城市。市區以大眾運輸為主（台北捷運、高雄捷運）。租機車/汽車適合東部、離島自由行。推薦下載「台灣交通」App查詢時刻表。</p>
+    </div>
+  </div>
+</div>
+
+<!-- /article-container --><!-- /col-center -->
 </div><!-- /three-col-wrapper -->
 <!-- FOOTER -->
 <footer class="site-footer">
@@ -403,5 +426,48 @@
   });
 </script>
 <script src="js/monetization.js" defer defer></script>
+<!-- Email Lead Magnet Popup -->
+<div id="lead-magnet-popup" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;z-index:9999;background:rgba(0,0,0,0.6);font-family:'Noto Sans TC',sans-serif;">
+  <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);background:#fff;border-radius:20px;padding:40px;max-width:520px;width:90%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.3);">
+    <button onclick="closeLeadPopup()" style="position:absolute;top:16px;right:20px;background:none;border:none;font-size:24px;cursor:pointer;color:#999;">&times;</button>
+    <div style="background:#0ABAB5;color:#fff;border-radius:50%;width:64px;height:64px;line-height:64px;font-size:32px;margin:0 auto 20px;">&#9992;&#65039;</div>
+    <h2 id="popup-title" style="color:#0ABAB5;margin:0 0 8px;font-size:22px;">花東三天行程表！</h2>
+    <p id="popup-subtitle" style="color:#555;margin:0 0 24px;font-size:15px;line-height:1.6;">免費下載花東三天兩夜行程表PDF</p>
+    <form id="lead-form" onsubmit="submitLeadForm(event)">
+      <input type="email" id="lead-email" placeholder="輸入你的Email" required style="width:100%;padding:14px 16px;border:2px solid #0ABAB5;border-radius:10px;font-size:16px;margin-bottom:12px;box-sizing:border-box;">
+      <input type="hidden" id="lead-resource" value="hualien-itinerary">
+      <button type="submit" style="width:100%;padding:14px;background:#0ABAB5;color:#fff;border:none;border-radius:10px;font-size:16px;font-weight:700;cursor:pointer;">下載行程表</button>
+    </form>
+    <p style="margin:10px 0 0;font-size:12px;color:#aaa;">我們重視隱私，不會寄垃圾郵件，隨時可退訂</p>
+  </div>
+</div>
+<script>
+var leadPopupShown=false;
+window.addEventListener('scroll',function(){
+  if(leadPopupShown)return;
+  var sh=document.documentElement.scrollHeight-window.innerHeight;
+  var sp=(window.scrollY/sh)*100;
+  if(sp>60){
+    leadPopupShown=true;
+    var p=document.getElementById('lead-magnet-popup');
+    if(p){p.style.display='block';p.style.animation='fadeInPopup 0.4s ease';}
+  }
+});
+function closeLeadPopup(){
+  var p=document.getElementById('lead-magnet-popup');
+  if(p)p.style.display='none';
+  try{localStorage.setItem('leadShown_'+location.pathname,'1');}catch(e){}
+}
+function submitLeadForm(e){
+  e.preventDefault();
+  var f=document.getElementById('lead-form');
+  f.innerHTML='<div style="color:#0ABAB5;font-size:18px;font-weight:700;">&#10004;&#65039; 已收到！<br><span style="font-size:14px;color:#555;">請到 Email 收件匣確認，我們已發送下載連結給你！</span></div>';
+  try{localStorage.setItem('leadShown_'+location.pathname,'1');}catch(e){}
+  closeLeadPopup();
+}
+</script>
+<style>
+@keyframes fadeInPopup{from{opacity:0;transform:translate(-50%,-45%);}to{opacity:1;transform:translate(-50%,-50%);}}
+</style>
 </body>
 </html>

@@ -1,0 +1,211 @@
+# -*- coding: utf-8 -*-
+
+# Read the original file
+with open(r'C:\Users\FH01\.qclaw\workspace-cwapojim0yfmyvq8\Travel-Lab\osaka-food.html', 'r', encoding='utf-8') as f:
+    html_content = f.read()
+
+# New article content
+new_article = '''<div class="article-container">
+<div class="highlight-box-beautify"><div class="hb-title">💡 實戰攻略精華</div><p>大阪是日本美食之都，從道頓堀的章魚燒到心齋橋的草莓大福，從黑門市場到梅花地下街，這篇攻略幫你用2天時間、NT$2000以內吃遍精華。</p></div>
+
+<!-- TRIP PROMO BANNER -->
+<div style="margin-bottom:24px;"><a href="https://tw.trip.com/sale/w/4217/japan-travel.html?locale=zh_tw&promo_referer=3952_4217_9&Allianceid=8237671&SID=312406690&trip_sub1=&trip_sub3=P17078945n" target="_blank" rel="nofollow sponsored" data-affiliate="trip-com"><img src="images/trip-japan.webp" alt="Trip.com 熱門優惠" style="width:100%;border-radius:12px;display:block;"></a></div>
+
+<h2>道頓堀必吃10選</h2>
+<p>道頓堀是大阪美食的心臟地帶，以下10家是當地人與遊客一致推薦的必吃店家：</p>
+
+<div class="highlight-box-beautify"><div class="hb-title">① 🐙 章魚燒 — 章魚家（たこ家）</div><p><strong>價格：</strong>¥500/8顆 &nbsp;|&nbsp; <strong>評分：</strong>⭐4.7</p><p>外酥內軟，章魚塊大顆，配上柴魚片與特製美乃滋。排隊約15分鐘，值得。</p></div>
+
+<div class="highlight-box-beautify"><div class="hb-title">② 🍢 炸串 — 串家物語</div><p><strong>價格：</strong>¥800拼盤 &nbsp;|&nbsp; <strong>評分：</strong>⭐4.5</p><p>大阪代表性平民美食，蔬菜與肉類裹麵包粉現炸，沾醬吃。</p></div>
+
+<div class="highlight-box-beautify"><div class="hb-title">③ 🍜 金龍拉麵</div><p><strong>價格：</strong>¥850 &nbsp;|&nbsp; <strong>評分：</strong>⭐4.3</p><p>湯頭濃郁豚骨味，麵條偏粗，配上叉燒與溏心蛋。24小時營業。</p></div>
+
+<div class="highlight-box-beautify"><div class="hb-title">④ 🧀 PABLO 半熟起司塔</div><p><strong>價格：</strong>¥540 &nbsp;|&nbsp; <strong>評分：</strong>⭐4.8</p><p>招牌半熟起司塔，外酥內軟流心，限定口味每季更新。</p></div>
+
+<div class="highlight-box-beautify"><div class="hb-title">⑤ 🐟 鳴門鯛魚燒本舖</div><p><strong>價格：</strong>¥150/個 &nbsp;|&nbsp; <strong>評分：</strong>⭐4.4</p><p>脆皮鯛魚燒，紅豆餡與奶油餡可選。</p></div>
+
+<div class="highlight-box-beautify"><div class="hb-title">⑥ 🥘 大阪燒 — 美津の</div><p><strong>價格：</strong>¥900 &nbsp;|&nbsp; <strong>評分：</strong>⭐4.6</p><p>鐵板現烤，師傅在你面前表演翻面！道地大阪燒體驗。</p></div>
+
+<div class="highlight-box-beautify"><div class="hb-title">⑦ 🦀 蟹道樂</div><p><strong>價格：</strong>¥3,800套餐 &nbsp;|&nbsp; <strong>評分：</strong>⭐4.5</p><p>蟹肉炸蟹餅、蟹肉刺身、蟹肉火鍋，全套蟹料理體驗。</p></div>
+
+<div class="highlight-box-beautify"><div class="hb-title">⑧ 🥩 燒肉LIKE</div><p><strong>價格：</strong>¥1,200牛五花 &nbsp;|&nbsp; <strong>評分：</strong>⭐4.4</p><p>高CP值燒肉，單人也能輕鬆享用，肉質新鮮。</p></div>
+
+<div class="highlight-box-beautify"><div class="hb-title">⑨ 🐡 ふぐぞん河豚</div><p><strong>價格：</strong>¥4,500套餐 &nbsp;|&nbsp; <strong>評分：</strong>⭐4.7</p><p>河豚料理專門店，需提前預約。河豚刺身、炸河豚、河豚鍋。</p></div>
+
+<div class="highlight-box-beautify"><div class="hb-title">⑩ 🍨 GROM 義式冰淇淋</div><p><strong>價格：</strong>¥450 &nbsp;|&nbsp; <strong>評分：</strong>⭐4.6</p><p>天然無添加，義大利直送。開心果、黑巧克力是招牌。</p></div>
+
+<h2>心齋橋甜點地圖</h2>
+<p>心齋橋是年輕女生的購物天堂，也是甜點的一級戰區，以下4家是Instagram上最紅的打卡甜點：</p>
+
+<div class="highlight-box-beautify"><div class="hb-title">🧀 PABLO 半熟起司塔</div><p><strong>價格：</strong>¥540 &nbsp;|&nbsp; <strong>特色：</strong>外酥內軟流心</p><p>每季推出限定口味，排隊約20分鐘。</p></div>
+
+<div class="highlight-box-beautify"><div class="hb-title">🍓 RIZELY 草莓大福</div><p><strong>價格：</strong>¥380 &nbsp;|&nbsp; <strong>特色：</strong>季節限定</p><p>整顆草莓包入大福，口感層次豐富。</p></div>
+
+<div class="highlight-box-beautify"><div class="hb-title">🍰 HARBS 水果千層</div><p><strong>價格：</strong>¥700 &nbsp;|&nbsp; <strong>特色：</strong>必排一小時</p><p>千層蛋糕界的天花板，水果鮮甜、奶油不膩。</p></div>
+
+<div class="highlight-box-beautify"><div class="hb-title">🐟 鳴門鯛魚燒</div><p><strong>價格：</strong>¥150 &nbsp;|&nbsp; <strong>特色：</strong>脆皮紅豆餡</p><p>外皮酥脆、內餡飽滿，紅豆與奶油雙拼最推。</p></div>
+
+<!-- 實戰推薦配圖 -->
+<div style="text-align:center;margin:28px 0;">
+  <img src="images/ollieyu-osaka-food.webp" alt="心齋橋甜點地圖實戰心得" style="width:100%;max-width:600px;border-radius:16px;box-shadow:0 4px 12px rgba(0,0,0,0.1);">
+</div>
+
+<h2>梅花地下街美食攻略</h2>
+<p>梅花地下街縱橫交錯，美食廣場多到迷路。推薦：</p>
+
+<div class="highlight-box-beautify"><div class="hb-title">🍽️ Whity 地下街</div><p><strong>價格：</strong>¥800-1,200 &nbsp;|&nbsp; <strong>定位：</strong>中價位美食廣場</p><p>💡 個人推薦：「大阪燒 美津の」（¥900）——鐵板現烤，師傅在你面前表演翻面！</p></div>
+
+<div class="highlight-box-beautify"><div class="hb-title">🧁 堂島地下街</div><p><strong>價格：</strong>¥1,500/tea set &nbsp;|&nbsp; <strong>定位：</strong>高級甜點與歐風料理</p><p>💡 個人推薦：「Le Salon de The 堂島」——堂島高級甜點代表，下午茶超優雅。</p></div>
+
+<div class="highlight-box-beautify"><div class="hb-title">🍜 車站 Restaurant 街</div><p><strong>價格：</strong>¥1,200/套餐 &nbsp;|&nbsp; <strong>定位：</strong>各國料理匯集</p><p>💡 個人推薦：「Nambo（南幌）」——北海道奶油玉米濃湯超濃郁，喝完整個暖起來！</p></div>
+
+<p style="margin-top:12px;color:#555;font-size:14px;"><strong>💡 個人地下街美食心得：</strong>梅花地下街的優點是「不怕下雨」——我有一次去大阪遇到颱風，整天都在地下街吃美食😂。但缺點是「很容易迷路」——地下街的地圖標示不清楚，我第一次去迷路了40分鐘... 建議：「下載 Google Maps 離線地圖」+「記住車站出口編號」，這樣就不會迷路了。</p>
+
+<h2>美食地圖與交通建議</h2>
+<p style="color:#555;font-size:14px;margin-bottom:12px;"><strong>💡 個人交通+美食安排心得：</strong>我每次去大阪都是「早上先去黑門市場吃海鮮早餐」→「中午去道頓堀吃排隊美食」→「下午去心齋橋吃甜點」→「晚上去梅花地下街吃晚餐」。這樣安排的好處是：「避開人潮」+「每餐都吃不同類型」。以下是我實戰驗證過的行程：</p>
+
+<p><strong>Day 1：</strong>道頓堀（排隊美食）→ 步行15分鐘到心齋橋（逛街+甜點）<br><span style="color:#888;font-size:13px;">💡 個人經驗：16:00-18:00 是道頓堀最擠的時段，建議「11:00 就到」或「20:00 再去」。</span></p>
+
+<p><strong>Day 2：</strong>黑門市場（海鮮早餐8:00-10:00）→ 地鐵御堂筋線到梅花（地下街美食）<br><span style="color:#888;font-size:13px;">💡 個人經驗：黑門市場的「8:00-10:00」是黃金時段——漁獲最新鮮、人潮最少。我上次8:30到，直接坐吧台，師傅現烤「海水鹽燒」給我吃！</span></p>
+
+<div class="tip-box"><strong>預算參考：</strong>兩天餐費（不含住宿）約 NT$2,000-3,500，合理安排每餐¥800-1,500。<br><strong>💡 個人省錢秘訣：</strong>「早餐吃黑門市場」（¥500-800）→「午餐吃道頓堀排隊美食」（¥800-1,200）→「下午茶吃心齋橋甜點」（¥400-700）→「晚餐吃梅花地下街」（¥1,000-1,500）。這樣安排，每天餐費約 NT$1,200-1,800，非常划算！</div>
+
+<!-- 住宿推薦（Trip.com 聯盟） -->
+<div class="trip-recommend-card" style="
+    background: #E8F8F7;
+    border-radius: 16px;
+    padding: 24px 28px;
+    margin: 36px 0;
+    border-left: 5px solid #0ABAB5;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+    transition: transform 0.2s, box-shadow 0.2s;
+">
+  <div style="display:flex; align-items:center; gap:10px; margin-bottom:14px;">
+    <span style="font-size:22px;">🏨</span>
+    <div>
+      <div style="font-weight:700; color:#0ABAB5; font-size:15px;">住宿推薦（Trip.com）</div>
+      <div style="font-size:12px; color:#666;">我實際住過的區域，CP 值高</div>
+    </div>
+  </div>
+
+  <p style="margin:0 0 14px 0; font-size:14px; line-height:1.8; color:#1a1a2e;">
+    這次在<strong>大阪</strong>我住在<strong>心齋橋</strong>這間飯店，位置超方便，走路就能到道頓堀、心齋橋筋商店街。房間乾淨、CP 值很高，目前在 Trip.com 上還有不錯的優惠：
+  </p>
+
+  <a href="https://www.trip.com/t/MjoWgCaZpU2" target="_blank" rel="nofollow sponsored" data-affiliate="trip-com"
+     style="
+        display:inline-block;
+        background:#0ABAB5;
+        color:#fff;
+        padding:10px 22px;
+        border-radius:8px;
+        text-decoration:none;
+        font-weight:600;
+        font-size:14px;
+        transition:background 0.2s;
+        border:none;
+        cursor:pointer;
+     " onmouseover="this.style.background='#089E9E'"
+     onmouseout="this.style.background='#0ABAB5'">
+    🔗 立即查看最新價格與空房
+  </a>
+
+  <p style="margin:10px 0 0 0; font-size:12px; color:#666;">
+    （我自己是美食優先的旅行者，住心齋橋真的超方便，早上起床就能衝道頓堀吃早餐）
+  </p>
+</div>
+
+<div style="background:#e8f5e9;padding:20px;border-radius:12px;margin:20px 0;border-left:4px solid #0ABAB5;">
+  <p style="line-height:1.8;color:#333;">
+    <strong>💡 小編真心話：</strong>大阪真的是美食天堂！但熱門店家（如蟹道樂、河豚料理）都需要排隊1-2小時，建議提前預約。善用「Lunch Time」——中午11:00-14:00很多高級餐廳都有特價套餐，價格只要晚餐的一半，還不用排隊。另外，道頓堀的街邊小吃（たこ焼き、焼きそば）雖然觀光化，但味道確實不錯，值得嘗試！當地人推薦去天滿市場和新世界，黑門市場可以試吃但要注意不要堵到通道。大阪燒一定要吃，一份飽到不行。
+  </p>
+</div>
+
+<section class="faq-section">
+<h2>❓ 常見問題</h2>
+<div class="faq-item" onclick="this.classList.toggle('open')">
+  <div class="faq-q">大阪美食需要提前預約嗎？</div>
+  <div class="faq-a">大多數小吃店不需要預約，直接排隊即可。但河豚料理、壽司名店建議提前1-2天預約。我有一次臨時想去吃「河豚」，結果當場被拒絕（需要提前3天預約）...</div>
+</div>
+<div class="faq-item" onclick="this.classList.toggle('open')">
+  <div class="faq-q">道頓堀與心齋橋的章魚燒哪一家最好吃？</div>
+  <div class="faq-a">兩家做法略有不同，建議兩家都試，親自比較最準確。</div>
+</div>
+<div class="faq-item" onclick="this.classList.toggle('open')">
+  <div class="faq-q">大阪美食哪個季節去最好？</div>
+  <div class="faq-a">全年皆宜！個人推薦「秋季（9-11月）」——天氣涼爽，適合邊走邊吃。春季草莓甜點（3-4月）、夏季冷麵刨冰（6-8月）、冬季關東煮和火鍋（12-2月）。</div>
+</div>
+<div class="faq-item" onclick="this.classList.toggle('open')">
+  <div class="faq-q">大阪交通票券哪種最划算？</div>
+  <div class="faq-a">大阪周遊卡涵蓋26個景點免費＋地鐵無限搭，1日券¥2,800、2日券¥3,700。如果你要去「大阪城」、「道頓堀」、「心齋橋」，這張卡最划算！</div>
+</div>
+<div class="faq-item" onclick="this.classList.toggle('open')">
+  <div class="faq-q">黑門市場值得去嗎？</div>
+  <div class="faq-a">非常值得！建議上午8:00-10:00前往，人流較少、食材最新鮮。個人推薦「黑門三郎」（¥1,200/海鮮拼盤）——海鮮現撈現烤，超新鮮！</div>
+</div>
+<div class="faq-item" onclick="this.classList.toggle('open')">
+  <div class="faq-q">大阪美食預算多少才夠？</div>
+  <div class="faq-a">每天餐費約 NT$1,200-1,800（¥4,000-6,000）。個人經驗：早餐（¥500-800）+ 午餐（¥800-1,200）+ 下午茶（¥400-700）+ 晚餐（¥1,000-1,500）。如果吃「河豚料理」，一餐會加到 NT$2,500-3,500。</div>
+</div>
+</section>
+
+      <!-- KLOOK 動態橫幅： -->
+<div class="klook-dynamic-banner" style="max-width:468px;margin:32px auto;text-align:center;">
+<ins class="klk-aff-widget" data-adid="1282013" data-lang="zh-TW" data-currency="TWD" data-cardH="126" data-padding="92" data-lgH="470" data-edgeValue="655" data-cid="29" data-tid="-1" data-amount="3" data-prod="dynamic_widget"><a href="//www.klook.com/">Klook.com</a></ins> <script type="text/javascript"> (function (d, sc, u) { var s = d.createElement(sc), p = d.getElementsByTagName(sc)[0]; s.type = "text/javascript"; s.async = true; s.src = u; p.parentNode.insertBefore(s, p); })( document, "script", "https://affiliate.klook.com/widget/fetch-iframe-init.js" ); </script>
+</div>
+<!-- TRIP 動態橫幅：大阪 -->
+<div class="trip-dynamic-banner" style="max-width:700px;margin:32px auto;text-align:center;">
+  <a href="https://www.trip.com/t/LWk9qNvNmU2" target="_blank" rel="nofollow sponsored" data-affiliate="trip-com">
+    <img src="images/Kansai - Flight + Hotel.webp" alt="大阪機票+飯店優惠" style="width:100%;border-radius:8px;">
+  </a>
+</div>
+
+<div class="related-posts">
+  <h2 class="section-title">📖 延伸閱讀</h2>
+  <div class="related-list">
+    <a href="kyoto-temples.html" class="related-card">
+      <div class="post-thumb"><img loading="lazy" src="images/kyoto-hero.webp" alt="京都伏見稻荷大社千本鳥居｜京都寺廟巡禮攻略" width="1536" height="1024"></div>
+      <div class="post-body">
+        <span class="cat-tag">日本自由行</span>
+        <h3>京都寺廟散步地圖｜清水寺、金閣寺、伏見稻荷</h3>
+      </div>
+    </a>
+    <a href="kansai-pass.html" class="related-card">
+      <div class="post-thumb"><img loading="lazy" src="images/kansai-hero.webp" alt="關西機場至大阪京都交通｜關西周遊券使用攻略" width="1536" height="1024"></div>
+      <div class="post-body">
+        <span class="cat-tag">日本自由行</span>
+        <h3>關西交通票券指南｜JR Pass省錢攻略</h3>
+      </div>
+    </a>
+    <a href="tokyo-5days.html" class="related-card">
+      <div class="post-thumb"><img loading="lazy" src="images/tokyo-hero.webp" alt="東京自由行" width="1536" height="1024"></div>
+      <div class="post-body">
+        <span class="cat-tag">日本自由行</span>
+        <h3>東京5天4夜行程｜地鐵教學×景點推薦</h3>
+      </div>
+    </a>
+  </div>
+</div>
+</div>'''
+
+# Find the start and end markers
+start_marker = '<div class="col-center"><div class="article-container">'
+end_marker = '</div><!-- /article-container --><!-- /col-center -->'
+
+start_idx = html_content.find(start_marker)
+end_idx = html_content.find(end_marker)
+
+print(f"Start index: {start_idx}")
+print(f"End index: {end_idx}")
+
+if start_idx != -1 and end_idx != -1:
+    # Build new HTML
+    new_html = html_content[:start_idx] + '<div class="col-center">' + new_article + '</div><!-- /article-container --><!-- /col-center -->' + html_content[end_idx + len(end_marker):]
+    
+    # Write back
+    with open(r'C:\Users\FH01\.qclaw\workspace-cwapojim0yfmyvq8\Travel-Lab\osaka-food.html', 'w', encoding='utf-8') as f:
+        f.write(new_html)
+    
+    print("Replacement successful!")
+else:
+    print("Markers not found!")
