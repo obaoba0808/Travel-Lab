@@ -618,7 +618,7 @@ if(p.includes('bangkok-massage'))return'BANGKOK_MASSAGE';
 if(p.includes('vietnam-danang'))return'VIETNAM_DANANG';
 return null;}
 
-function closeLeadPopup(){localStorage.setItem('leadPopupClosed','1');document.getElementById('leadPopup').classList.remove('active')}
+function {localStorage.setItem('leadPopupClosed','1');// REMOVED: document.getElementById('leadPopup').classList.remove('active')}
 
 function submitLeadForm(_0xfrm,_0xevt){
 _0xevt.preventDefault();
@@ -641,12 +641,12 @@ if(localStorage.getItem('leadSent')||localStorage.getItem('leadPopupClosed'))ret
 var _0sy=window.scrollY;
 var _0dH=document.documentElement.scrollHeight;
 var _0ch=window.innerHeight;
-if(_0sy/_0dH>0.58&&!document.getElementById('leadPopup').classList.contains('active')){
-document.getElementById('leadPopup').classList.add('active');
+if(_0sy/_0dH>0.58&&!// REMOVED: document.getElementById('leadPopup').classList.contains('active')){
+// REMOVED: document.getElementById('leadPopup').classList.add('active');
 }
 });
 
-document.getElementById('leadPopup').addEventListener('click',function(_0ev){if(_0ev.target===document.getElementById('leadPopup'))closeLeadPopup();});
+// REMOVED: document.getElementById('leadPopup').addEventListener('click',function(_0ev){if(_0ev.target===// REMOVED: document.getElementById('leadPopup'));});
 </script>
 
 </body>
