@@ -1,0 +1,124 @@
+Files modified: 0
+[WARN] 404.html: closeLeadPopup function NOT FOUND
+[WARN] 404.html: scroll listener pattern NOT FOUND
+[NOCHANGE] 404.html: no changes needed
+[WARN] _live_index.html: closeLeadPopup function NOT FOUND
+[WARN] _live_index.html: scroll listener pattern NOT FOUND
+[NOCHANGE] _live_index.html: no changes needed
+[WARN] about.html: closeLeadPopup function NOT FOUND
+[WARN] about.html: scroll listener pattern NOT FOUND
+[NOCHANGE] about.html: no changes needed
+[SKIP] bangkok-3days.html: closeLeadPopup already has leadDismissed
+[SKIP] bangkok-3days.html: scroll listener already has leadDismissed
+[NOCHANGE] bangkok-3days.html: no changes needed
+[SKIP] bangkok-massage.html: closeLeadPopup already has leadDismissed
+[SKIP] bangkok-massage.html: scroll listener already has leadDismissed
+[NOCHANGE] bangkok-massage.html: no changes needed
+[SKIP] busan-capsule.html: closeLeadPopup already has leadDismissed
+[SKIP] busan-capsule.html: scroll listener already has leadDismissed
+[NOCHANGE] busan-capsule.html: no changes needed
+[SKIP] chiang-mai.html: closeLeadPopup already has leadDismissed
+[SKIP] chiang-mai.html: scroll listener already has leadDismissed
+[NOCHANGE] chiang-mai.html: no changes needed
+[WARN] contact.html: closeLeadPopup function NOT FOUND
+[WARN] contact.html: scroll listener pattern NOT FOUND
+[NOCHANGE] contact.html: no changes needed
+[WARN] disclaimer.html: closeLeadPopup function NOT FOUND
+[WARN] disclaimer.html: scroll listener pattern NOT FOUND
+[NOCHANGE] disclaimer.html: no changes needed
+[WARN] esim-comparison.html: closeLeadPopup function NOT FOUND
+[WARN] esim-comparison.html: scroll listener pattern NOT FOUND
+[NOCHANGE] esim-comparison.html: no changes needed
+[SKIP] hokkaido-winter.html: closeLeadPopup already has leadDismissed
+[SKIP] hokkaido-winter.html: scroll listener already has leadDismissed
+[NOCHANGE] hokkaido-winter.html: no changes needed
+[SKIP] hualien-taitung.html: closeLeadPopup already has leadDismissed
+[SKIP] hualien-taitung.html: scroll listener already has leadDismissed
+[NOCHANGE] hualien-taitung.html: no changes needed
+[WARN] index.html: closeLeadPopup function NOT FOUND
+[WARN] index.html: scroll listener pattern NOT FOUND
+[NOCHANGE] index.html: no changes needed
+[SKIP] japan-budget-guide.html: closeLeadPopup already has leadDismissed
+[SKIP] japan-budget-guide.html: scroll listener already has leadDismissed
+[NOCHANGE] japan-budget-guide.html: no changes needed
+[WARN] japan-travel.html: closeLeadPopup function NOT FOUND
+[WARN] japan-travel.html: scroll listener pattern NOT FOUND
+[NOCHANGE] japan-travel.html: no changes needed
+[SKIP] jeju-island.html: closeLeadPopup already has leadDismissed
+[SKIP] jeju-island.html: scroll listener already has leadDismissed
+[NOCHANGE] jeju-island.html: no changes needed
+[SKIP] jiufen.html: closeLeadPopup already has leadDismissed
+[SKIP] jiufen.html: scroll listener already has leadDismissed
+[NOCHANGE] jiufen.html: no changes needed
+[SKIP] kansai-pass.html: closeLeadPopup already has leadDismissed
+[SKIP] kansai-pass.html: scroll listener already has leadDismissed
+[NOCHANGE] kansai-pass.html: no changes needed
+[SKIP] kenting.html: closeLeadPopup already has leadDismissed
+[SKIP] kenting.html: scroll listener already has leadDismissed
+[NOCHANGE] kenting.html: no changes needed
+[WARN] korea-budget-travel-guide.html: closeLeadPopup function NOT FOUND
+[WARN] korea-budget-travel-guide.html: scroll listener pattern NOT FOUND
+[NOCHANGE] korea-budget-travel-guide.html: no changes needed
+[SKIP] korea-budget.html: closeLeadPopup already has leadDismissed
+[SKIP] korea-budget.html: scroll listener already has leadDismissed
+[NOCHANGE] korea-budget.html: no changes needed
+[WARN] korea-travel.html: closeLeadPopup function NOT FOUND
+[WARN] korea-travel.html: scroll listener pattern NOT FOUND
+[NOCHANGE] korea-travel.html: no changes needed
+[SKIP] kyoto-temples.html: closeLeadPopup already has leadDismissed
+[SKIP] kyoto-temples.html: scroll listener already has leadDismissed
+[NOCHANGE] kyoto-temples.html: no changes needed
+[WARN] live-japan-budget.html: closeLeadPopup function NOT FOUND
+[WARN] live-japan-budget.html: scroll listener pattern NOT FOUND
+[NOCHANGE] live-japan-budget.html: no changes needed
+[SKIP] okinawa.html: closeLeadPopup already has leadDismissed
+[SKIP] okinawa.html: scroll listener already has leadDismissed
+[NOCHANGE] okinawa.html: no changes needed
+[SKIP] osaka-food.html: closeLeadPopup already has leadDismissed
+[SKIP] osaka-food.html: scroll listener already has leadDismissed
+[NOCHANGE] osaka-food.html: no changes needed
+[SKIP] osaka-usj.html: closeLeadPopup already has leadDismissed
+[SKIP] osaka-usj.html: scroll listener already has leadDismissed
+[NOCHANGE] osaka-usj.html: no changes needed
+[WARN] packing-list-online.html: closeLeadPopup function NOT FOUND
+[WARN] packing-list-online.html: scroll listener pattern NOT FOUND
+[NOCHANGE] packing-list-online.html: no changes needed
+[WARN] packing-list.html: closeLeadPopup function NOT FOUND
+[WARN] packing-list.html: scroll listener pattern NOT FOUND
+[NOCHANGE] packing-list.html: no changes needed
+[WARN] privacy.html: closeLeadPopup function NOT FOUND
+[WARN] privacy.html: scroll listener pattern NOT FOUND
+[NOCHANGE] privacy.html: no changes needed
+[WARN] seasia-budget-travel-guide.html: closeLeadPopup function NOT FOUND
+[WARN] seasia-budget-travel-guide.html: scroll listener pattern NOT FOUND
+[NOCHANGE] seasia-budget-travel-guide.html: no changes needed
+[SKIP] seoul-food.html: closeLeadPopup already has leadDismissed
+[SKIP] seoul-food.html: scroll listener already has leadDismissed
+[NOCHANGE] seoul-food.html: no changes needed
+[WARN] southeast-asia.html: closeLeadPopup function NOT FOUND
+[WARN] southeast-asia.html: scroll listener pattern NOT FOUND
+[NOCHANGE] southeast-asia.html: no changes needed
+[SKIP] tainan-food.html: closeLeadPopup already has leadDismissed
+[SKIP] tainan-food.html: scroll listener already has leadDismissed
+[NOCHANGE] tainan-food.html: no changes needed
+[SKIP] taipei-food.html: closeLeadPopup already has leadDismissed
+[SKIP] taipei-food.html: scroll listener already has leadDismissed
+[NOCHANGE] taipei-food.html: no changes needed
+[WARN] taiwan-travel-guide.html: closeLeadPopup function NOT FOUND
+[WARN] taiwan-travel-guide.html: scroll listener pattern NOT FOUND
+[NOCHANGE] taiwan-travel-guide.html: no changes needed
+[WARN] taiwan-travel.html: closeLeadPopup function NOT FOUND
+[WARN] taiwan-travel.html: scroll listener pattern NOT FOUND
+[NOCHANGE] taiwan-travel.html: no changes needed
+[WARN] terms.html: closeLeadPopup function NOT FOUND
+[WARN] terms.html: scroll listener pattern NOT FOUND
+[NOCHANGE] terms.html: no changes needed
+[SKIP] tokyo-5days.html: closeLeadPopup already has leadDismissed
+[SKIP] tokyo-5days.html: scroll listener already has leadDismissed
+[NOCHANGE] tokyo-5days.html: no changes needed
+[WARN] travel-tools.html: closeLeadPopup function NOT FOUND
+[WARN] travel-tools.html: scroll listener pattern NOT FOUND
+[NOCHANGE] travel-tools.html: no changes needed
+[SKIP] vietnam-danang.html: closeLeadPopup already has leadDismissed
+[SKIP] vietnam-danang.html: scroll listener already has leadDismissed
+[NOCHANGE] vietnam-danang.html: no changes needed

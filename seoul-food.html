@@ -143,7 +143,7 @@ a.dropdown-toggle::after {
 
 
 <style>
-.lead-popup-overlay{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.6);z-index:9999;align-items:center;justify-content:center}.lead-popup-overlay.active{display:flex}.lead-popup{background:#fff;border-radius:16px;padding:0;max-width:480px;width:90%;position:relative;text-align:center;font-family:"Noto Sans TC",sans-serif;overflow:hidden}.lead-popup-header{background:linear-gradient(135deg,#81d4ce,#4db6ac);padding:20px 32px 16px;position:relative}.lead-popup-header h3{color:#fff;margin:0;font-size:18px;line-height:1.4;text-shadow:0 1px 3px rgba(0,0,0,0.15)}.lead-popup-close{position:absolute;top:8px;right:10px;background:none;border:none;font-size:24px;cursor:pointer:#4db6ac;color:#4db6ac;z-index:10;line-height:1;padding:4px;transition:color 0.2s}.lead-popup-close:hover{color:#2a7a6e}.lead-popup-body{padding:24px 32px 28px}.lead-popup-body p{color:#444;margin:0 0 16px;font-size:14px;line-height:1.7}.lead-popup input[type=email]{width:100%;padding:12px 16px;border:2px solid #81d4ce;border-radius:8px;font-size:15px;box-sizing:border-box;margin-bottom:12px;outline:none;transition:border-color 0.2s}.lead-popup input[type=email]:focus{border-color:#4db6ac;box-shadow:0 0 0 3px rgba(77,182,172,0.2)}.lead-popup button{width:100%;padding:14px;background:linear-gradient(135deg,#81d4ce,#4db6ac);color:#fff;border:none;border-radius:8px;font-size:16px;font-weight:bold;cursor:pointer;transition:transform 0.2s,box-shadow 0.2s}.lead-popup button:hover{transform:translateY(-2px);box-shadow:0 4px 12px rgba(77,182,172,0.35)}.lead-popup .lead-note{font-size:11px;color:#aaa;margin-top:10px}
+.lead-popup-overlay{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.6);z-index:9999;align-items:center;justify-content:center}.lead-popup-overlay.active{display:flex}.lead-popup{background:#fff;border-radius:16px;padding:0;max-width:480px;width:90%;position:relative;text-align:center;font-family:"Noto Sans TC",sans-serif;overflow:hidden}.lead-popup-header{background:linear-gradient(135deg,#81d4ce,#4db6ac);padding:20px 32px 16px;position:relative}.lead-popup-header h3{color:#fff;margin:0;font-size:18px;line-height:1.4;text-shadow:0 1px 3px rgba(0,0,0,0.15)}.lead-popup-close{position:absolute;top:10px;right:12px;background:rgba(255,255,255,0.3);border:none;font-size:22px;cursor:pointer;color:#fff;width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;line-height:1;z-index:20;transition:background 0.2s}.lead-popup-close:hover{background:rgba(255,255,255,0.55)}.lead-popup-body{padding:24px 32px 28px}.lead-popup-body p{color:#444;margin:0 0 16px;font-size:14px;line-height:1.7}.lead-popup input[type=email]{width:100%;padding:12px 16px;border:2px solid #81d4ce;border-radius:8px;font-size:15px;box-sizing:border-box;margin-bottom:12px;outline:none;transition:border-color 0.2s}.lead-popup input[type=email]:focus{border-color:#4db6ac;box-shadow:0 0 0 3px rgba(77,182,172,0.2)}.lead-popup button{width:100%;padding:14px;background:linear-gradient(135deg,#81d4ce,#4db6ac);color:#fff;border:none;border-radius:8px;font-size:16px;font-weight:bold;cursor:pointer;transition:transform 0.2s,box-shadow 0.2s}.lead-popup button:hover{transform:translateY(-2px);box-shadow:0 4px 12px rgba(77,182,172,0.35)}.lead-popup .lead-note{font-size:11px;color:#aaa;margin-top:10px}
 </style>
 
 </head>
@@ -597,16 +597,32 @@ BANGKOK_3DAYS:'https://golightly.fun/downloads/bangkok-3days-guide.pdf',
 BANGKOK_MASSAGE:'https://golightly.fun/downloads/bangkok-massage-guide.pdf',
 VIETNAM_DANANG:'https://golightly.fun/downloads/vietnam-danang-guide.pdf'
 };
+function getResourceKey(){var p=window.location.pathname;
+if(p.includes('tokyo-5days'))return'TOKYO_5DAYS';
+if(p.includes('kansai-pass'))return'KANSAI_PASS';
+if(p.includes('hokkaido-winter'))return'HOKKAIDO_WINTER';
+if(p.includes('okinawa'))return'OKINAWA';
+if(p.includes('kyoto-temples'))return'KYOTO_TEMPLES';
+if(p.includes('osaka-food'))return'OSAKA_FOOD';
+if(p.includes('osaka-usj'))return'OSAKA_USJ';
+if(p.includes('japan-budget'))return'JAPAN_BUDGET';
+if(p.includes('seoul-food'))return'SEOUL_FOOD';
+if(p.includes('busan-capsule'))return'BUSAN_CAPSULE';
+if(p.includes('jeju-island'))return'JEJU_ISLAND';
+if(p.includes('korea-budget'))return'KOREA_BUDGET';
+if(p.includes('hualien-taitung'))return'HUALIEN_TAITUNG';
+if(p.includes('tainan-food'))return'TAINAN_FOOD';
+if(p.includes('kenting'))return'KENTING';
+if(p.includes('taipei-food'))return'TAIPEI_FOOD';
+if(p.includes('jiufen'))return'JIUFEN';
+if(p.includes('chiang-mai'))return'CHIANG_MAI';
+if(p.includes('bangkok-3days'))return'BANGKOK_3DAYS';
+if(p.includes('bangkok-massage'))return'BANGKOK_MASSAGE';
+if(p.includes('vietnam-danang'))return'VIETNAM_DANANG';
+return null;}
 
-function getResourceKey(){
-var m=location.pathname.match(/\/([^\/]+)\.html/);
-if(!m)return'';
-var f=m[1].toLowerCase();
-var map={'tokyo-5days':'TOKYO_5DAYS','kansai-pass':'KANSAI_PASS','hokkaido-winter':'HOKKAIDO_WINTER','okinawa':'OKINAWA','kyoto-temples':'KYOTO_TEMPLES','osaka-food':'OSAKA_FOOD','osaka-usj':'OSAKA_USJ','japan-budget-guide':'JAPAN_BUDGET','seoul-food':'SEOUL_FOOD','busan-capsule':'BUSAN_CAPSULE','jeju-island':'JEJU_ISLAND','korea-budget':'KOREA_BUDGET','hualien-taitung':'HUALIEN_TAITUNG','tainan-food':'TAINAN_FOOD','kenting':'KENTING','taipei-food':'TAIPEI_FOOD','jiufen':'JIUFEN','chiang-mai':'CHIANG_MAI','bangkok-3days':'BANGKOK_3DAYS','bangkok-massage':'BANGKOK_MASSAGE','vietnam-danang':'VIETNAM_DANANG'};
-return map[f]||'';
-}
+function closeLeadPopup(){localStorage.setItem('leadPopupClosed','1');document.getElementById('leadPopup').classList.remove('active')}
 
-function closeLeadPopup(){document.getElementById('leadPopup').classList.remove('active')}
 function submitLeadForm(_0xfrm,_0xevt){
 _0xevt.preventDefault();
 var _0em=document.getElementById('leadEmail').value;
@@ -622,8 +638,9 @@ else{document.getElementById('leadSubmitBtn').textContent='傳送失敗，再試
 })
 .catch(function(_0e){document.getElementById('leadSubmitBtn').textContent='傳送失敗，再試一次';document.getElementById('leadSubmitBtn').disabled=false;});
 }
+
 window.addEventListener('scroll',function(){
-if(localStorage.getItem('leadSent'))return;
+if(localStorage.getItem('leadSent')||localStorage.getItem('leadPopupClosed'))return;
 var _0sy=window.scrollY;
 var _0dH=document.documentElement.scrollHeight;
 var _0ch=window.innerHeight;
@@ -631,6 +648,7 @@ if(_0sy/_0dH>0.58&&!document.getElementById('leadPopup').classList.contains('act
 document.getElementById('leadPopup').classList.add('active');
 }
 });
+
 document.getElementById('leadPopup').addEventListener('click',function(_0ev){if(_0ev.target===document.getElementById('leadPopup'))closeLeadPopup();});
 </script>
 
