@@ -1,0 +1,27 @@
+function closeLeadPopup(){document.getElementById('leadPopup').classList.remove('active')}
+function submitLeadForm(_0xfrm,_0xevt){
+_0xevt.preventDefault();
+var _0em=document.getElementById('leadEmail').value;
+var _0res=getResourceKey();
+var _0pg=document.title;
+document.getElementById('leadSubmitBtn').textContent='傳送中...';
+document.getElementById('leadSubmitBtn').disabled=true;
+fetch(WORKER_URL+'?email='+encodeURIComponent(_0em)+'&resource='+encodeURIComponent(_0res)+'&page='+encodeURIComponent(_0pg))
+.then(function(_0xr){return _0xr.json();})
+.then(function(_0d){
+if(_0d.ok||_0d.success){document.getElementById('leadSubmitBtn').textContent='已寄出 ✉️ 請收Email';localStorage.setItem('leadSent','1');setTimeout(closeLeadPopup,2000);}
+else{document.getElementById('leadSubmitBtn').textContent='傳送失敗，再試一次';document.getElementById('leadSubmitBtn').disabled=false;}
+})
+.catch(function(_0e){document.getElementById('leadSubmitBtn').textContent='傳送失敗，再試一次';document.getElementById('leadSubmitBtn').disabled=false;});
+}
+window.addEventListener('scroll',function(){
+if(localStorage.getItem('leadSent'))return;
+var _0sy=window.scrollY;
+var _0dH=document.documentElement.scrollHeight;
+var _0ch=window.innerHeight;
+if(_0sy/_0dH>0.58&&!document.getElementById('leadPopup').classList.contains('active')){
+document.getElementById('leadPopup').classList.add('active');
+}
+});
+document.getElementById('leadPopup').addEventListener('click',function(_0ev){if(_0ev.target===document.getElementById('leadPopup'))closeLeadPopup();});
+</script>

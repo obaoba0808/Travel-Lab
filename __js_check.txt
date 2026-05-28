@@ -1,0 +1,10 @@
+=== closeLeadPopup ===
+
+
+=== scroll listener ===
+addEventListener('click',function(_0ev){if(_0ev.target===document.getElementById('leadPopup'))closeLeadPopup();});
+</script>
+
+</body>
+</html>
+
