@@ -413,86 +413,7 @@
 </div>
 
 
-<script>
-const WORKER_URL='https://golightly-email.8107e1de.workers.dev';
 
-const PDF_LINKS={
-TOKYO_5DAYS:'https://golightly.fun/downloads/tokyo-subway-guide.pdf',
-KANSAI_PASS:'https://golightly.fun/downloads/kansai-pass-guide.pdf',
-HOKKAIDO_WINTER:'https://golightly.fun/downloads/hokkaido-winter-guide.pdf',
-OKINAWA:'https://golightly.fun/downloads/okinawa-guide.pdf',
-KYOTO_TEMPLES:'https://golightly.fun/downloads/kyoto-temples-guide.pdf',
-OSAKA_FOOD:'https://golightly.fun/downloads/osaka-food-guide.pdf',
-OSAKA_USJ:'https://golightly.fun/downloads/osaka-usj-guide.pdf',
-JAPAN_BUDGET:'https://golightly.fun/downloads/japan-budget-guide.pdf',
-SEOUL_FOOD:'https://golightly.fun/downloads/seoul-food-guide.pdf',
-BUSAN_CAPSULE:'https://golightly.fun/downloads/busan-capsule-guide.pdf',
-JEJU_ISLAND:'https://golightly.fun/downloads/jeju-island-guide.pdf',
-KOREA_BUDGET:'https://golightly.fun/downloads/korea-budget-guide.pdf',
-HUALIEN_TAITUNG:'https://golightly.fun/downloads/hualien-taitung-guide.pdf',
-TAINAN_FOOD:'https://golightly.fun/downloads/tainan-food-guide.pdf',
-KENTING:'https://golightly.fun/downloads/kenting-guide.pdf',
-TAIPEI_FOOD:'https://golightly.fun/downloads/taipei-food-guide.pdf',
-JIUFEN:'https://golightly.fun/downloads/jiufen-guide.pdf',
-CHIANG_MAI:'https://golightly.fun/downloads/chiang-mai-guide.pdf',
-BANGKOK_3DAYS:'https://golightly.fun/downloads/bangkok-3days-guide.pdf',
-BANGKOK_MASSAGE:'https://golightly.fun/downloads/bangkok-massage-guide.pdf',
-VIETNAM_DANANG:'https://golightly.fun/downloads/vietnam-danang-guide.pdf'
-};
-function getResourceKey(){var p=window.location.pathname;
-if(p.includes('tokyo-5days'))return'TOKYO_5DAYS';
-if(p.includes('kansai-pass'))return'KANSAI_PASS';
-if(p.includes('hokkaido-winter'))return'HOKKAIDO_WINTER';
-if(p.includes('okinawa'))return'OKINAWA';
-if(p.includes('kyoto-temples'))return'KYOTO_TEMPLES';
-if(p.includes('osaka-food'))return'OSAKA_FOOD';
-if(p.includes('osaka-usj'))return'OSAKA_USJ';
-if(p.includes('japan-budget'))return'JAPAN_BUDGET';
-if(p.includes('seoul-food'))return'SEOUL_FOOD';
-if(p.includes('busan-capsule'))return'BUSAN_CAPSULE';
-if(p.includes('jeju-island'))return'JEJU_ISLAND';
-if(p.includes('korea-budget'))return'KOREA_BUDGET';
-if(p.includes('hualien-taitung'))return'HUALIEN_TAITUNG';
-if(p.includes('tainan-food'))return'TAINAN_FOOD';
-if(p.includes('kenting'))return'KENTING';
-if(p.includes('taipei-food'))return'TAIPEI_FOOD';
-if(p.includes('jiufen'))return'JIUFEN';
-if(p.includes('chiang-mai'))return'CHIANG_MAI';
-if(p.includes('bangkok-3days'))return'BANGKOK_3DAYS';
-if(p.includes('bangkok-massage'))return'BANGKOK_MASSAGE';
-if(p.includes('vietnam-danang'))return'VIETNAM_DANANG';
-return null;}
-
-function {localStorage.setItem('leadPopupClosed','1');// REMOVED: document.getElementById('leadPopup').classList.remove('active')}
-
-function submitLeadForm(_0xfrm,_0xevt){
-_0xevt.preventDefault();
-var _0em=document.getElementById('leadEmail').value;
-var _0res=getResourceKey();
-var _0pg=document.title;
-document.getElementById('leadSubmitBtn').textContent='傳送中...';
-document.getElementById('leadSubmitBtn').disabled=true;
-fetch(WORKER_URL+'?email='+encodeURIComponent(_0em)+'&resource='+encodeURIComponent(_0res)+'&page='+encodeURIComponent(_0pg))
-.then(function(_0xr){return _0xr.json();})
-.then(function(_0d){
-if(_0d.ok||_0d.success){document.getElementById('leadSubmitBtn').textContent='已寄出 ✉️ 請收Email';localStorage.setItem('leadSent','1');setTimeout(closeLeadPopup,2000);}
-else{document.getElementById('leadSubmitBtn').textContent='傳送失敗，再試一次';document.getElementById('leadSubmitBtn').disabled=false;}
-})
-.catch(function(_0e){document.getElementById('leadSubmitBtn').textContent='傳送失敗，再試一次';document.getElementById('leadSubmitBtn').disabled=false;});
-}
-
-// DISABLED:
-if(localStorage.getItem('leadSent')||localStorage.getItem('leadPopupClosed'))return;
-var _0sy=window.scrollY;
-var _0dH=document.documentElement.scrollHeight;
-var _0ch=window.innerHeight;
-if(_0sy/_0dH>0.58&&!// REMOVED: document.getElementById('leadPopup').classList.contains('active')){
-// REMOVED: document.getElementById('leadPopup').classList.add('active');
-}
-});
-
-// REMOVED: document.getElementById('leadPopup').addEventListener('click',function(_0ev){if(_0ev.target===// REMOVED: document.getElementById('leadPopup'));});
-</script>
 
 
 <style>
@@ -514,9 +435,108 @@ if(_0sy/_0dH>0.58&&!// REMOVED: document.getElementById('leadPopup').classList.c
 <form onsubmit="submitLeadForm(this,event)">
 <input type="email" placeholder="輸入你的Email" id="leadEmail">
 <button type="submit" id="leadSubmitBtn">免費下載攻略</button>
-</form>
+<div id="leadMsg" style="font-size:13px;margin-top:8px;min-height:20px;"></div>
+  </form>
 <p class="lead-note">🔒 基地金隱私，隨時可取消訂閱</p>
 </div>
+
+<script>
+const WORKER_URL = 'https://golightly-email.8107e1de.workers.dev';
+
+/* PDF download URL per page */
+const LEAD_PDF = {
+  'tokyo-5days.html':          'https://assets.golightly.fun/pdf/tokyo-5days.pdf',
+  'kansai-pass.html':          'https://assets.golightly.fun/pdf/kansai-pass.pdf',
+  'hokkaido-winter.html':      'https://assets.golightly.fun/pdf/hokkaido-winter.pdf',
+  'okinawa.html':              'https://assets.golightly.fun/pdf/okinawa.pdf',
+  'kyoto-temples.html':        'https://assets.golightly.fun/pdf/kyoto-temples.pdf',
+  'osaka-food.html':           'https://assets.golightly.fun/pdf/osaka-food.pdf',
+  'osaka-usj.html':            'https://assets.golightly.fun/pdf/osaka-usj.pdf',
+  'japan-budget-guide.html':   'https://assets.golightly.fun/pdf/japan-budget-guide.pdf',
+  'seoul-food.html':            'https://assets.golightly.fun/pdf/seoul-food.pdf',
+  'busan-capsule.html':        'https://assets.golightly.fun/pdf/busan-capsule.pdf',
+  'jeju-island.html':          'https://assets.golightly.fun/pdf/jeju-island.pdf',
+  'korea-budget.html':         'https://assets.golightly.fun/pdf/korea-budget.pdf',
+  'hualien-taitung.html':      'https://assets.golightly.fun/pdf/hualien-taitung.pdf',
+  'tainan-food.html':          'https://assets.golightly.fun/pdf/tainan-food.pdf',
+  'kenting.html':              'https://assets.golightly.fun/pdf/kenting.pdf',
+  'taipei-food.html':          'https://assets.golightly.fun/pdf/taipei-food.pdf',
+  'jiufen.html':               'https://assets.golightly.fun/pdf/jiufen.pdf',
+  'chiang-mai.html':           'https://assets.golightly.fun/pdf/chiang-mai.pdf',
+  'bangkok-3days.html':        'https://assets.golightly.fun/pdf/bangkok-3days.pdf',
+  'bangkok-massage.html':      'https://assets.golightly.fun/pdf/bangkok-massage.pdf',
+  'vietnam-danang.html':       'https://assets.golightly.fun/pdf/vietnam-danang.pdf',
+};
+
+function getResourceKey(){
+  var p = window.location.pathname.split('/').pop();
+  if(!p||p==''||p=='index.html') return 'INDEX';
+  if(p.includes('tokyo-5days')) return 'TOKYO_5DAYS';
+  if(p.includes('kansai-pass')) return 'KANSAI_PASS';
+  if(p.includes('hokkaido-winter')) return 'HOKKAIDO_WINTER';
+  if(p.includes('okinawa')) return 'OKINAWA';
+  if(p.includes('kyoto-temples')) return 'KYOTO_TEMPLES';
+  if(p.includes('osaka-food')) return 'OSAKA_FOOD';
+  if(p.includes('osaka-usj')) return 'OSAKA_USJ';
+  if(p.includes('japan-budget-guide')) return 'JAPAN_BUDGET_GUIDE';
+  if(p.includes('seoul-food')) return 'SEOUL_FOOD';
+  if(p.includes('busan-capsule')) return 'BUSAN_CAPSULE';
+  if(p.includes('jeju-island')) return 'JEJU_ISLAND';
+  if(p.includes('korea-budget')) return 'KOREA_BUDGET';
+  if(p.includes('hualien-taitung')) return 'HUALIEN_TAITUNG';
+  if(p.includes('tainan-food')) return 'TAINAN_FOOD';
+  if(p.includes('kenting')) return 'KENTING';
+  if(p.includes('taipei-food')) return 'TAIPEI_FOOD';
+  if(p.includes('jiufen')) return 'JIUFEN';
+  if(p.includes('chiang-mai')) return 'CHIANG_MAI';
+  if(p.includes('bangkok-3days')) return 'BANGKOK_3DAYS';
+  if(p.includes('bangkok-massage')) return 'BANGKOK_MASSAGE';
+  if(p.includes('vietnam-danang')) return 'VIETNAM_DANANG';
+  return 'INDEX';
+}
+
+function submitLeadForm(ev){
+  ev.preventDefault();
+  var email = document.getElementById('leadEmail').value.trim();
+  if(!email || !email.includes('@')){
+    document.getElementById('leadMsg').innerHTML = '請輸入有效的 Email';
+    document.getElementById('leadMsg').style.color = '#c62828';
+    return;
+  }
+  var btn = document.getElementById('leadSubmitBtn');
+  var msg = document.getElementById('leadMsg');
+  btn.textContent = '傳送中...';
+  btn.disabled = true;
+  msg.innerHTML = '';
+
+  fetch(WORKER_URL + '?email=' + encodeURIComponent(email) + '&resource=' + encodeURIComponent(getResourceKey()) + '&page=' + encodeURIComponent(document.title))
+    .then(function(r){ return r.json(); })
+    .then(function(d){
+      if(d.ok || d.success){
+        btn.textContent = '✉️ 已寄出，請收Email';
+        btn.style.background = '#a5d6a7';
+        btn.disabled = true;
+        msg.innerHTML = '📧 Email 已寄出！請檢查信箱（含垃圾郵件）';
+        msg.style.color = '#2e7d32';
+        localStorage.setItem('leadSent','1');
+      } else {
+        btn.textContent = '傳送失敗，再試一次';
+        btn.disabled = false;
+        btn.style.background = '';
+        msg.innerHTML = '傳送失敗，請再試一次 🙏';
+        msg.style.color = '#c62828';
+      }
+    })
+    .catch(function(e){
+      btn.textContent = '傳送失敗，再試一次';
+      btn.disabled = false;
+      btn.style.background = '';
+      msg.innerHTML = '網路錯誤，請再試一次 🙏';
+      msg.style.color = '#c62828';
+    });
+}
+</script>
+
 </body>
 </html>
 
