@@ -420,7 +420,10 @@ a.dropdown-toggle::after {
 
 
 <!-- KLOOK 動態橫幅： -->
+<div class="klook-dynamic-banner" style="max-width:468px;margin:32px auto;text-align:center;">
 
+<ins class="klk-aff-widget" data-adid="1282023" data-lang="zh-TW" data-currency="TWD" data-cardH="126" data-padding="92" data-lgH="470" data-edgeValue="655" data-cid="13" data-tid="-1" data-amount="3" data-prod="dynamic_widget"><a href="//www.klook.com/">Klook.com</a></ins> <script type="text/javascript"> (function (d, sc, u) { var s = d.createElement(sc), p = d.getElementsByTagName(sc)[0]; s.type = "text/javascript"; s.async = true; s.src = u; p.parentNode.insertBefore(s, p); })( document, "script", "https://affiliate.klook.com/widget/fetch-iframe-init.js" ); </script>
+</div>
 <div class="related-posts">
   <h2 class="section-title">📖 延伸閱讀</h2>
   <div class="related-list">
@@ -448,30 +451,7 @@ a.dropdown-toggle::after {
   </div>
 </div>
 </div>
-</div>
-<div class="faq-section">
-  <h2>❓ 常見問題 FAQ</h2>
-  <div class="faq-list">
-    <div class="faq-item">
-      <h3>韓國插座是什麼規格？需要變壓器嗎？</h3>
-      <p>韓國電壓220V，插座為兩頭圓腳（歐規）。台灣插頭需要轉接頭，建議在台灣先買好。變壓器大多不需要，手機、筆電都支援110-240V。</p>
-    </div>
-    <div class="faq-item">
-      <h3>韓國簽證需要嗎？</h3>
-      <p>台灣護照免簽證，可停留90天。但需填寫「入境卡」和「健康狀態調查表」。建議準備來回機票和住宿證明，海關可能查驗。</p>
-    </div>
-    <div class="faq-item">
-      <h3>首爾美食預算要抓多少？</h3>
-      <p>街頭小吃₩30,000-50,000/天（約NT$700-1,200）。一般餐廳₩60,000-100,000/天（約NT$1,400-2,400）。高端餐廳₩150,000+/天（約NT$3,600+）。推薦混搭：早餐便利商店、午餐街頭小吃、晚餐餐廳體驗。</p>
-    </div>
-    <div class="faq-item">
-      <h3>韓國上網怎麼辦？</h3>
-      <p>推薦在台灣先買好eSIM（Korea Telecom、SK Telecom），下飛機就有網路。也可在仁川機場租WiFi機（約₩3,000/天），多人分攤較划算。</p>
-    </div>
-  </div>
-</div>
-
-<!-- /article-container --><!-- /col-center -->
+</div><!-- /article-container --><!-- /col-center -->
 </div><!-- /three-col-wrapper -->
 <!-- FOOTER -->
 <footer class="site-footer">
@@ -567,54 +547,5 @@ a.dropdown-toggle::after {
   });
 </script>
 <script src="js/monetization.js" defer defer></script>
-<!-- Email Lead Magnet Popup -->
-<div id="lead-magnet-popup" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;z-index:9999;background:rgba(0,0,0,0.6);font-family:'Noto Sans TC',sans-serif;">
-  <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);background:#fff;border-radius:20px;padding:40px;max-width:520px;width:90%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.3);">
-    <button onclick="closeLeadPopup()" style="position:absolute;top:16px;right:20px;background:none;border:none;font-size:24px;cursor:pointer;color:#999;">&times;</button>
-    <div style="background:#0ABAB5;color:#fff;border-radius:50%;width:64px;height:64px;line-height:64px;font-size:32px;margin:0 auto 20px;">&#9992;&#65039;</div>
-    <h2 id="popup-title" style="color:#0ABAB5;margin:0 0 8px;font-size:22px;">首爾美食地圖免費送！</h2>
-    <p id="popup-subtitle" style="color:#555;margin:0 0 24px;font-size:15px;line-height:1.6;">明洞/弘大/江南三大區美食地圖PDF</p>
-    <form id="lead-form" onsubmit="submitLeadForm(event)">
-      <input type="email" id="lead-email" placeholder="輸入你的Email" required style="width:100%;padding:14px 16px;border:2px solid #0ABAB5;border-radius:10px;font-size:16px;margin-bottom:12px;box-sizing:border-box;">
-      <input type="hidden" id="lead-resource" value="seoul-food-map">
-      <button type="submit" style="width:100%;padding:14px;background:#0ABAB5;color:#fff;border:none;border-radius:10px;font-size:16px;font-weight:700;cursor:pointer;">下載首爾美食地圖</button>
-    </form>
-    <p style="margin:10px 0 0;font-size:12px;color:#aaa;">我們重視隱私，不會寄垃圾郵件，隨時可退訂</p>
-  </div>
-</div>
-<script>
-var leadPopupShown=false;
-window.addEventListener('scroll',function(){
-  if(leadPopupShown)return;
-  var sh=document.documentElement.scrollHeight-window.innerHeight;
-  var sp=(window.scrollY/sh)*100;
-  if(sp>60){
-    leadPopupShown=true;
-    var p=document.getElementById('lead-magnet-popup');
-    if(p){p.style.display='block';p.style.animation='fadeInPopup 0.4s ease';}
-  }
-});
-function closeLeadPopup(){
-  var p=document.getElementById('lead-magnet-popup');
-  if(p)p.style.display='none';
-  try{localStorage.setItem('leadShown_'+location.pathname,'1');}catch(e){}
-}
-function submitLeadForm(e){
-  e.preventDefault();
-  var email=document.getElementById('lead-email').value;
-  var resource=document.getElementById('lead-resource')?document.getElementById('lead-resource').value:'travel-guide';
-  var page=location.pathname;
-  var msg='\uD83D\uDCEC \u65B0\u8A02\u95B1\uFF01%0AEmail: '+email+'%0A\u8CC7\u6E90: '+resource+'%0A\u9801\u9762: '+page;
-  var img=new Image();
-  img.src='https://api.telegram.org/bot8808827218:AAGnLnCmgzrJTfDNqgMVQkd-j3PlI2Uc9b0/sendMessage?chat_id=6096485046&text='+encodeURIComponent(msg);
-  var f=document.getElementById('lead-form');
-  f.innerHTML='<div style="color:#0ABAB5;font-size:18px;font-weight:700;">\u2705 \u5DF2\u6536\u5230\uFF01<br><span style="font-size:14px;color:#555;">\u6211\u5011\u5DF2\u7A31\u9001\u4E0B\u8F09\u9023\u7D50\u7D66\u4F60\uFF0C\u8ACB\u5230 Email \u6536\u4EF6\u7BB1\u78BA\u8A8D\uFF01</span></div>';
-  try{localStorage.setItem('leadPopup_'+location.pathname,'1');}catch(e){}
-  setTimeout(closeLeadPopup,2000);
-}
-</script>
-<style>
-@keyframes fadeInPopup{from{opacity:0;transform:translate(-50%,-45%);}to{opacity:1;transform:translate(-50%,-50%);}}
-</style>
 </body>
 </html>

@@ -375,7 +375,10 @@
   </section>
 
 <!-- KLOOK 動態橫幅：清邁 -->
-
+<div class="klook-dynamic-banner" style="max-width:468px;margin:32px auto;text-align:center;">
+  <ins class="klk-aff-widget" data-adid="1282031" data-lang="zh-TW" data-currency="TWD" data-cardH="126" data-padding="92" data-lgH="470" data-edgeValue="655" data-cid="5" data-tid="-1" data-amount="3" data-prod="dynamic_widget"><a href="//www.klook.com/">Klook.com</a></ins>
+  <script type="text/javascript"> (function (d, sc, u) { var s = d.createElement(sc), p = d.getElementsByTagName(sc)[0]; s.type = "text/javascript"; s.async = true; s.src = u; p.parentNode.insertBefore(s, p); })( document, "script", "https://affiliate.klook.com/widget/fetch-iframe-init.js" ); </script>
+</div>
 
 
 </div>
@@ -406,30 +409,7 @@
   </div>
 </div>
 </div>
-</div>
-<div class="faq-section">
-  <h2>❓ 常見問題 FAQ</h2>
-  <div class="faq-list">
-    <div class="faq-item">
-      <h3>東南亞旅遊最佳季節？</h3>
-      <p>乾季（11-2月）最舒適，雨水少、溫度適中。雨季（5-10月）雖然下雨但機票住宿便宜，適合預算有限的旅客。4月最熱（35°C+），需做好防曬。</p>
-    </div>
-    <div class="faq-item">
-      <h3>東南亞交通怎麼安排？</h3>
-      <p>城市內用Grab（東南亞版Uber）最方便。長途移動可搭廉航（AirAsia、Lion Air）。火車適合慢活旅行（泰國、越南）。租機車需國際駕照，戴安全帽。</p>
-    </div>
-    <div class="faq-item">
-      <h3>東南亞上網怎麼辦？</h3>
-      <p>清邁的7-11比曼谷少，但古城區仍有幾家。推薦買「Thai-Danish」餅乾當伴手禮（₿89）。便利商店的椰子水（₿25）超解渴，比觀光區便宜一半。</p>
-    </div>
-    <div class="faq-item">
-      <h3>東南亞需要打疫苗嗎？</h3>
-      <p>建議接種日本腦炎、A型肝炎、破傷風疫苗。瘧疾藥物視目的地而定（城市不需要，深山叢林建議）。出發前2個月諮詢旅遊醫學門診。</p>
-    </div>
-  </div>
-</div>
-
-<!-- /article-container -->
+</div><!-- /article-container -->
 <!-- ARTICLE BOTTOM CTA -->
 
 </div><!-- /col-center -->
@@ -530,54 +510,5 @@
 <script src="js/monetization.js" defer defer></script>
 
 <p>清邁的生活步調很慢，非常適合長期停留或數位遊牧。如果你想要逃離繁忙的都市生活，清邁絕對是最佳選擇。來這裡待上一個月，你會發現自己的生活節奏完全改變，變得更健康、更放鬆！</p>
-<!-- Email Lead Magnet Popup -->
-<div id="lead-magnet-popup" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;z-index:9999;background:rgba(0,0,0,0.6);font-family:'Noto Sans TC',sans-serif;">
-  <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);background:#fff;border-radius:20px;padding:40px;max-width:520px;width:90%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.3);">
-    <button onclick="closeLeadPopup()" style="position:absolute;top:16px;right:20px;background:none;border:none;font-size:24px;cursor:pointer;color:#999;">&times;</button>
-    <div style="background:#0ABAB5;color:#fff;border-radius:50%;width:64px;height:64px;line-height:64px;font-size:32px;margin:0 auto 20px;">&#9992;&#65039;</div>
-    <h2 id="popup-title" style="color:#0ABAB5;margin:0 0 8px;font-size:22px;">清邁數位遊牧指南！</h2>
-    <p id="popup-subtitle" style="color:#555;margin:0 0 24px;font-size:15px;line-height:1.6;">免費下載清邁簽證攻略+共享空間清單</p>
-    <form id="lead-form" onsubmit="submitLeadForm(event)">
-      <input type="email" id="lead-email" placeholder="輸入你的Email" required style="width:100%;padding:14px 16px;border:2px solid #0ABAB5;border-radius:10px;font-size:16px;margin-bottom:12px;box-sizing:border-box;">
-      <input type="hidden" id="lead-resource" value="chiang-mai-guide">
-      <button type="submit" style="width:100%;padding:14px;background:#0ABAB5;color:#fff;border:none;border-radius:10px;font-size:16px;font-weight:700;cursor:pointer;">下載簽證攻略</button>
-    </form>
-    <p style="margin:10px 0 0;font-size:12px;color:#aaa;">我們重視隱私，不會寄垃圾郵件，隨時可退訂</p>
-  </div>
-</div>
-<script>
-var leadPopupShown=false;
-window.addEventListener('scroll',function(){
-  if(leadPopupShown)return;
-  var sh=document.documentElement.scrollHeight-window.innerHeight;
-  var sp=(window.scrollY/sh)*100;
-  if(sp>60){
-    leadPopupShown=true;
-    var p=document.getElementById('lead-magnet-popup');
-    if(p){p.style.display='block';p.style.animation='fadeInPopup 0.4s ease';}
-  }
-});
-function closeLeadPopup(){
-  var p=document.getElementById('lead-magnet-popup');
-  if(p)p.style.display='none';
-  try{localStorage.setItem('leadShown_'+location.pathname,'1');}catch(e){}
-}
-function submitLeadForm(e){
-  e.preventDefault();
-  var email=document.getElementById('lead-email').value;
-  var resource=document.getElementById('lead-resource')?document.getElementById('lead-resource').value:'travel-guide';
-  var page=location.pathname;
-  var msg='\uD83D\uDCEC \u65B0\u8A02\u95B1\uFF01%0AEmail: '+email+'%0A\u8CC7\u6E90: '+resource+'%0A\u9801\u9762: '+page;
-  var img=new Image();
-  img.src='https://api.telegram.org/bot8808827218:AAGnLnCmgzrJTfDNqgMVQkd-j3PlI2Uc9b0/sendMessage?chat_id=6096485046&text='+encodeURIComponent(msg);
-  var f=document.getElementById('lead-form');
-  f.innerHTML='<div style="color:#0ABAB5;font-size:18px;font-weight:700;">\u2705 \u5DF2\u6536\u5230\uFF01<br><span style="font-size:14px;color:#555;">\u6211\u5011\u5DF2\u7A31\u9001\u4E0B\u8F09\u9023\u7D50\u7D66\u4F60\uFF0C\u8ACB\u5230 Email \u6536\u4EF6\u7BB1\u78BA\u8A8D\uFF01</span></div>';
-  try{localStorage.setItem('leadPopup_'+location.pathname,'1');}catch(e){}
-  setTimeout(closeLeadPopup,2000);
-}
-</script>
-<style>
-@keyframes fadeInPopup{from{opacity:0;transform:translate(-50%,-45%);}to{opacity:1;transform:translate(-50%,-50%);}}
-</style>
 </body>
 </html>

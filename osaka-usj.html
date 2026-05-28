@@ -119,7 +119,19 @@
 <div class="highlight-box-beautify"><div class="hb-title">🔥 超人氣（排隊2-3小時）</div><p>① 飛天翼龍（過山車）② 咒術迴戰 ③ 好萊塢夢幻雲霄飛車 ④ 蜘蛛人驚魂歷險 ⑤ 哈利波特禁忌之旅</p></div>
 <div class="highlight-box-beautify"><div class="hb-title">⭐ 推薦（排隊30-60分鐘）</div><p>⑥ 迷你兵團鬧翻天 ⑦ 大白鯊 ⑧ 浴火赤子情 ⑨ 飛天史努比 ⑩ 小小兵樂園</p></div>
 <!-- KLOOK 聯盟推薦 -->
-
+<div class="klook-recommend-card" style="
+    background: #FFF3E0;
+    border-radius: 16px;
+    padding: 24px 28px;
+    margin: 36px 0;
+    border-left: 5px solid #FF5722;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+    transition: transform 0.2s, box-shadow 0.2s;
+" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 6px 24px rgba(0,0,0,0.12)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 4px 16px rgba(0,0,0,0.06)'">
+  <div style="display:flex; align-items:center; gap:10px; margin-bottom:14px;">
+    <span style="font-size:22px;">🎢</span>
+    <div>
+      <div style="font-weight:700; color:#FF5722; font-size:15px;">門票推薦（Klook）</div>
       <div style="font-size:12px; color:#666;">我自己購買的電子票，QR Code 直接入場</div>
     </div>
   </div>
@@ -154,7 +166,19 @@
 
 
 <!-- KLOOK 聯盟推薦 -->
-
+<div class="klook-recommend-card" style="
+    background: #FFF3E0;
+    border-radius: 16px;
+    padding: 24px 28px;
+    margin: 36px 0;
+    border-left: 5px solid #FF5722;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+    transition: transform 0.2s, box-shadow 0.2s;
+" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 6px 24px rgba(0,0,0,0.12)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 4px 16px rgba(0,0,0,0.06)'">
+  <div style="display:flex; align-items:center; gap:10px; margin-bottom:14px;">
+    <span style="font-size:22px;">⚡</span>
+    <div>
+      <div style="font-weight:700; color:#FF5722; font-size:15px;">快速通關推薦（Klook）</div>
       <div style="font-size:12px; color:#666;">熱門設施免排隊，節省 2-4 小時</div>
     </div>
   </div>
@@ -302,7 +326,9 @@
 </div>
 
 <!-- KLOOK 動態橫幅： -->
-
+<div class="klook-dynamic-banner" style="max-width:468px;margin:32px auto;text-align:center;">
+<ins class="klk-aff-widget" data-adid="1282013" data-lang="zh-TW" data-currency="TWD" data-cardH="126" data-padding="92" data-lgH="470" data-edgeValue="655" data-cid="29" data-tid="-1" data-amount="3" data-prod="dynamic_widget"><a href="//www.klook.com/">Klook.com</a></ins> <script type="text/javascript"> (function (d, sc, u) { var s = d.createElement(sc), p = d.getElementsByTagName(sc)[0]; s.type = "text/javascript"; s.async = true; s.src = u; p.parentNode.insertBefore(s, p); })( document, "script", "https://affiliate.klook.com/widget/fetch-iframe-init.js" ); </script>
+</div>
 <div class="related-posts">
   <h2 class="section-title">📖 延伸閱讀</h2>
   <div class="related-list">
@@ -416,53 +442,4 @@ document.querySelectorAll('.faq-item').forEach(function(item){var btn=item.query
 <script src="js/monetization.js" defer defer></script>
 
 
-<!-- Email Lead Magnet Popup -->
-<div id="lead-magnet-popup" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;z-index:9999;background:rgba(0,0,0,0.6);font-family:'Noto Sans TC',sans-serif;">
-  <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);background:#fff;border-radius:20px;padding:40px;max-width:520px;width:90%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.3);">
-    <button onclick="closeLeadPopup()" style="position:absolute;top:16px;right:20px;background:none;border:none;font-size:24px;cursor:pointer;color:#999;">&times;</button>
-    <div style="background:#0ABAB5;color:#fff;border-radius:50%;width:64px;height:64px;line-height:64px;font-size:32px;margin:0 auto 20px;">&#9992;&#65039;</div>
-    <h2 id="popup-title" style="color:#0ABAB5;margin:0 0 8px;font-size:22px;">USJ快速通關攻略！</h2>
-    <p id="popup-subtitle" style="color:#555;margin:0 0 24px;font-size:15px;line-height:1.6;">免費下載FP抽籤攻略+刺激設施排行</p>
-    <form id="lead-form" onsubmit="submitLeadForm(event)">
-      <input type="email" id="lead-email" placeholder="輸入你的Email" required style="width:100%;padding:14px 16px;border:2px solid #0ABAB5;border-radius:10px;font-size:16px;margin-bottom:12px;box-sizing:border-box;">
-      <input type="hidden" id="lead-resource" value="usj-quick-pass">
-      <button type="submit" style="width:100%;padding:14px;background:#0ABAB5;color:#fff;border:none;border-radius:10px;font-size:16px;font-weight:700;cursor:pointer;">下載快速通關攻略</button>
-    </form>
-    <p style="margin:10px 0 0;font-size:12px;color:#aaa;">我們重視隱私，不會寄垃圾郵件，隨時可退訂</p>
-  </div>
-</div>
-<script>
-var leadPopupShown=false;
-window.addEventListener('scroll',function(){
-  if(leadPopupShown)return;
-  var sh=document.documentElement.scrollHeight-window.innerHeight;
-  var sp=(window.scrollY/sh)*100;
-  if(sp>60){
-    leadPopupShown=true;
-    var p=document.getElementById('lead-magnet-popup');
-    if(p){p.style.display='block';p.style.animation='fadeInPopup 0.4s ease';}
-  }
-});
-function closeLeadPopup(){
-  var p=document.getElementById('lead-magnet-popup');
-  if(p)p.style.display='none';
-  try{localStorage.setItem('leadShown_'+location.pathname,'1');}catch(e){}
-}
-function submitLeadForm(e){
-  e.preventDefault();
-  var email=document.getElementById('lead-email').value;
-  var resource=document.getElementById('lead-resource')?document.getElementById('lead-resource').value:'travel-guide';
-  var page=location.pathname;
-  var msg='\uD83D\uDCEC \u65B0\u8A02\u95B1\uFF01%0AEmail: '+email+'%0A\u8CC7\u6E90: '+resource+'%0A\u9801\u9762: '+page;
-  var img=new Image();
-  img.src='https://api.telegram.org/bot8808827218:AAGnLnCmgzrJTfDNqgMVQkd-j3PlI2Uc9b0/sendMessage?chat_id=6096485046&text='+encodeURIComponent(msg);
-  var f=document.getElementById('lead-form');
-  f.innerHTML='<div style="color:#0ABAB5;font-size:18px;font-weight:700;">\u2705 \u5DF2\u6536\u5230\uFF01<br><span style="font-size:14px;color:#555;">\u6211\u5011\u5DF2\u7A31\u9001\u4E0B\u8F09\u9023\u7D50\u7D66\u4F60\uFF0C\u8ACB\u5230 Email \u6536\u4EF6\u7BB1\u78BA\u8A8D\uFF01</span></div>';
-  try{localStorage.setItem('leadPopup_'+location.pathname,'1');}catch(e){}
-  setTimeout(closeLeadPopup,2000);
-}
-</script>
-<style>
-@keyframes fadeInPopup{from{opacity:0;transform:translate(-50%,-45%);}to{opacity:1;transform:translate(-50%,-50%);}}
-</style>
 </body></html>

@@ -321,16 +321,10 @@
 </div>
 
 <!-- KLOOK 動態橫幅： -->
-
-<div class="
-<div style="background:#e8f5e9;padding:20px;border-radius:12px;margin:20px 0;border-left:4px solid #0ABAB5;">
-  <h3 style="color:#0ABAB5;margin-bottom:12px;">ϳ 小編真心話</h3>
-  <p style="line-height:1.8;color:#333;">
-    飛黑自小鍋船車記得接進立刺下遊車票，推延到登西已報名歸雷已滿。要推延必須先接購歸雷，再接購強刺票，一般已報名歸雷就接購不到強刺票了。
-  </p>
+<div class="klook-dynamic-banner" style="max-width:468px;margin:32px auto;text-align:center;">
+<ins class="klk-aff-widget" data-adid="1282009" data-lang="zh-TW" data-currency="TWD" data-cardH="126" data-padding="92" data-lgH="470" data-edgeValue="655" data-cid="46" data-tid="-1" data-amount="3" data-prod="dynamic_widget"><a href="//www.klook.com/">Klook.com</a></ins> <script type="text/javascript"> (function (d, sc, u) { var s = d.createElement(sc), p = d.getElementsByTagName(sc)[0]; s.type = "text/javascript"; s.async = true; s.src = u; p.parentNode.insertBefore(s, p); })( document, "script", "https://affiliate.klook.com/widget/fetch-iframe-init.js" ); </script>
 </div>
-
-related-posts">
+<div class="related-posts">
   <h2 class="section-title">📖 延伸閱讀</h2>
   <div class="related-list">
     <a href="seoul-food.html" class="related-card">
@@ -456,78 +450,6 @@ related-posts">
 
 
 
-
-<div class="faq-section">
-  <h2>❓ 常見問題 FAQ</h2>
-  <div class="faq-list">
-    <div class="faq-item">
-      <h3>釜山地鐵怎麼搭？</h3>
-      <p>釜山地鐵有4條線，刷T-money卡基本₩1,400起。從海雲台到釜山站約30分鐘（₩1,600）。推薦下載「Subway Korea」App查路線，支援中文顯示。</p>
-    </div>
-    <div class="faq-item">
-      <h3>韓國插座是什麼規格？需要變壓器嗎？</h3>
-      <p>韓國電壓220V，插座為兩頭圓腳（歐規）。台灣插頭需要轉接頭，建議在台灣先買好。變壓器大多不需要，手機、筆電都支援110-240V。</p>
-    </div>
-    <div class="faq-item">
-      <h3>韓國夜生活安全嗎？</h3>
-      <p>首爾弘大、明洞、江南都算安全，但建議避開偏僻小巷。女性單獨旅行建議22:00前回住宿。計程車安全，但需注意酒後亂說話的司機（可裝假翻譯App應付）。</p>
-    </div>
-    <div class="faq-item">
-      <h3>韓國购物退稅怎麼辦？</h3>
-      <p>單店消費₩30,000以上可退稅（約7-8%）。結帳時出示護照，離開韓國時在海關退稅櫃檯辦理。建議集中在樂天、現代免稅店購買，可當場折扣。</p>
-    </div>
-  </div>
-</div>
-
-<!-- Email Lead Magnet Popup -->
-<div id="lead-magnet-popup" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;z-index:9999;background:rgba(0,0,0,0.6);font-family:'Noto Sans TC',sans-serif;">
-  <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);background:#fff;border-radius:20px;padding:40px;max-width:520px;width:90%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.3);">
-    <button onclick="closeLeadPopup()" style="position:absolute;top:16px;right:20px;background:none;border:none;font-size:24px;cursor:pointer;color:#999;">&times;</button>
-    <div style="background:#0ABAB5;color:#fff;border-radius:50%;width:64px;height:64px;line-height:64px;font-size:32px;margin:0 auto 20px;">&#9992;&#65039;</div>
-    <h2 id="popup-title" style="color:#0ABAB5;margin:0 0 8px;font-size:22px;">釜山膠囊列車預約攻略！</h2>
-    <p id="popup-subtitle" style="color:#555;margin:0 0 24px;font-size:15px;line-height:1.6;">免費下載預約時間表+乘車攻略</p>
-    <form id="lead-form" onsubmit="submitLeadForm(event)">
-      <input type="email" id="lead-email" placeholder="輸入你的Email" required style="width:100%;padding:14px 16px;border:2px solid #0ABAB5;border-radius:10px;font-size:16px;margin-bottom:12px;box-sizing:border-box;">
-      <input type="hidden" id="lead-resource" value="busan-capsule-guide">
-      <button type="submit" style="width:100%;padding:14px;background:#0ABAB5;color:#fff;border:none;border-radius:10px;font-size:16px;font-weight:700;cursor:pointer;">下載預約攻略</button>
-    </form>
-    <p style="margin:10px 0 0;font-size:12px;color:#aaa;">我們重視隱私，不會寄垃圾郵件，隨時可退訂</p>
-  </div>
-</div>
-<script>
-var leadPopupShown=false;
-window.addEventListener('scroll',function(){
-  if(leadPopupShown)return;
-  var sh=document.documentElement.scrollHeight-window.innerHeight;
-  var sp=(window.scrollY/sh)*100;
-  if(sp>60){
-    leadPopupShown=true;
-    var p=document.getElementById('lead-magnet-popup');
-    if(p){p.style.display='block';p.style.animation='fadeInPopup 0.4s ease';}
-  }
-});
-function closeLeadPopup(){
-  var p=document.getElementById('lead-magnet-popup');
-  if(p)p.style.display='none';
-  try{localStorage.setItem('leadShown_'+location.pathname,'1');}catch(e){}
-}
-function submitLeadForm(e){
-  e.preventDefault();
-  var email=document.getElementById('lead-email').value;
-  var resource=document.getElementById('lead-resource')?document.getElementById('lead-resource').value:'travel-guide';
-  var page=location.pathname;
-  var msg='\uD83D\uDCEC \u65B0\u8A02\u95B1\uFF01%0AEmail: '+email+'%0A\u8CC7\u6E90: '+resource+'%0A\u9801\u9762: '+page;
-  var img=new Image();
-  img.src='https://api.telegram.org/bot8808827218:AAGnLnCmgzrJTfDNqgMVQkd-j3PlI2Uc9b0/sendMessage?chat_id=6096485046&text='+encodeURIComponent(msg);
-  var f=document.getElementById('lead-form');
-  f.innerHTML='<div style="color:#0ABAB5;font-size:18px;font-weight:700;">\u2705 \u5DF2\u6536\u5230\uFF01<br><span style="font-size:14px;color:#555;">\u6211\u5011\u5DF2\u7A31\u9001\u4E0B\u8F09\u9023\u7D50\u7D66\u4F60\uFF0C\u8ACB\u5230 Email \u6536\u4EF6\u7BB1\u78BA\u8A8D\uFF01</span></div>';
-  try{localStorage.setItem('leadPopup_'+location.pathname,'1');}catch(e){}
-  setTimeout(closeLeadPopup,2000);
-}
-</script>
-<style>
-@keyframes fadeInPopup{from{opacity:0;transform:translate(-50%,-45%);}to{opacity:1;transform:translate(-50%,-50%);}}
-</style>
 </body>
 </html>
 
