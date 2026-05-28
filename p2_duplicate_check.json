@@ -1,0 +1,213 @@
+{
+  "check_time": "1779959787.948668",
+  "duplicates_count": 23,
+  "duplicates": [
+    {
+      "file1": "tokyo-5days.html",
+      "para1_idx": 24,
+      "para1": "建議購買JR Pass（全國版或地區版），新幹線自由席比指定席便宜。市內交通用地鐵一日券（Tokyo Subway Ticket、Osaka Amazing Pass）。巴士比地鐵便宜，但較慢。",
+      "file2": "kansai-pass.html",
+      "para2_idx": 25,
+      "para2": "建議購買JR Pass（全國版或地區版），新幹線自由席比指定席便宜。市內交通用地鐵一日券（Tokyo Subway Ticket、Osaka Amazing Pass）。巴士比地鐵便宜，但較慢。",
+      "similarity": 1.0
+    },
+    {
+      "file1": "tokyo-5days.html",
+      "para1_idx": 26,
+      "para1": "入浴前要先沖洗身體。毛巾不可放入浴池，可放在頭上或旁邊。有刺青者可能被拒絕入場（可找允許刺青的溫泉或用貼布遮蓋）。",
+      "file2": "kansai-pass.html",
+      "para2_idx": 24,
+      "para2": "入浴前要先沖洗身體。毛巾不可放入浴池，可放在頭上或旁邊。有刺青者可能被拒絕入場（可找允許刺青的溫泉或用貼布遮蓋）。",
+      "similarity": 1.0
+    },
+    {
+      "file1": "tokyo-5days.html",
+      "para1_idx": 27,
+      "para1": "推薦購買當地SIM卡（成田、羽田機場都有賣），價格約¥2,000-3,000/5天。WiFi機訊號穩但需歸還，適合多人分攤。Free WiFi熱點越來越多，但覆蓋率仍不足。",
+      "file2": "kansai-pass.html",
+      "para2_idx": 23,
+      "para2": "推薦購買當地SIM卡（成田、羽田機場都有賣），價格約¥2,000-3,000/5天。WiFi機訊號穩但需歸還，適合多人分攤。Free WiFi熱點越來越多，但覆蓋率仍不足。",
+      "similarity": 1.0
+    },
+    {
+      "file1": "bangkok-3days.html",
+      "para1_idx": 18,
+      "content1": "推薦在台灣買好當地eSIM（Airalo、Nomad），或購買當地SIM卡（7-11、全家都有賣）。WiFi機多人分攤較划算，但需歸還。Free WiFi覆蓋率城市較高，鄉村較差。",
+      "file2": "chiang-mai.html",
+      "para2_idx": 11,
+      "content2": "推薦在台灣買好當地eSIM（Airalo、Nomad），或購買當地SIM卡（7-11、全家都有賣）。WiFi機多人分攤較划算，但需歸還。Free WiFi覆蓋率城市較高，鄉村較差。",
+      "similarity": 1.0
+    },
+    {
+      "file1": "bangkok-3days.html",
+      "para1_idx": 18,
+      "content1": "推薦在台灣買好當地eSIM（Airalo、Nomad），或購買當地SIM卡（7-11、全家都有賣）。WiFi機多人分攤較划算，但需歸還。Free WiFi覆蓋率城市較高，鄉村較差。",
+      "file2": "seasia-budget-travel-guide.html",
+      "para2_idx": 15,
+      "content2": "推薦在台灣買好當地eSIM（Airalo、Nomad），或購買當地SIM卡（7-11、全家都有賣）。WiFi機多人分攤較划算，但需歸還。Free WiFi覆蓋率城市較高，鄉村較差。",
+      "similarity": 1.0
+    },
+    {
+      "file1": "bangkok-3days.html",
+      "para1_idx": 18,
+      "content1": "推薦在台灣買好當地eSIM（Airalo、Nomad），或購買當地SIM卡（7-11、全家都有賣）。WiFi機多人分攤較划算，但需歸還。Free WiFi覆蓋率城市較高，鄉村較差。",
+      "file2": "southeast-asia.html",
+      "para2_idx": 1,
+      "content2": "推薦在台灣買好當地eSIM（Airalo、Nomad），或購買當地SIM卡（7-11、全家都有賣）。WiFi機多人分攤較划算，但需歸還。Free WiFi覆蓋率城市較高，鄉村較差。",
+      "similarity": 1.0
+    },
+    {
+      "file1": "busan-capsule.html",
+      "para1_idx": 14,
+      "content1": "T-money卡可在便利商店購買（₩2,500），地鐵、公車都能用，比現金便宜₩100。也可在便利商店消費。退卡可退押金，但需手續費，不常用建議直接留作紀念。",
+      "file2": "jeju-island.html",
+      "para2_idx": 19,
+      "content2": "T-money卡可在便利商店購買（₩2,500），地鐵、公車都能用，比現金便宜₩100。也可在便利商店消費。退卡可退押金，但需手續費，不常用建議直接留作紀念。",
+      "similarity": 1.0
+    },
+    {
+      "file1": "busan-capsule.html",
+      "para1_idx": 14,
+      "content1": "T-money卡可在便利商店購買（₩2,500），地鐵、公車都能用，比現金便宜₩100。也可在便利商店消費。退卡可退押金，但需手續費，不常用建議直接留作紀念。",
+      "file2": "korea-budget-travel-guide.html",
+      "para2_idx": 11,
+      "content2": "T-money卡可在便利商店購買（₩2,500），地鐵、公車都能用，比現金便宜₩100。也可在便利商店消費。退卡可退押金，但需手續費，不常用建議直接留作紀念。",
+      "similarity": 1.0
+    },
+    {
+      "file1": "busan-capsule.html",
+      "para1_idx": 14,
+      "content1": "T-money卡可在便利商店購買（₩2,500），地鐵、公車都能用，比現金便宜₩100。也可在便利商店消費。退卡可退押金，但需手續費，不常用建議直接留作紀念。",
+      "file2": "seoul-food.html",
+      "para2_idx": 21,
+      "content2": "T-money卡可在便利商店購買（₩2,500），地鐵、公車都能用，比現金便宜₩100。也可在便利商店消費。退卡可退押金，但需手續費，不常用建議直接留作紀念。",
+      "similarity": 1.0
+    },
+    {
+      "file1": "chiang-mai.html",
+      "para1_idx": 11,
+      "content1": "推薦在台灣買好當地eSIM（Airalo、Nomad），或購買當地SIM卡（7-11、全家都有賣）。WiFi機多人分攤較划算，但需歸還。Free WiFi覆蓋率城市較高，鄉村較差。",
+      "file2": "seasia-budget-travel-guide.html",
+      "para2_idx": 15,
+      "content2": "推薦在台灣買好當地eSIM（Airalo、Nomad），或購買當地SIM卡（7-11、全家都有賣）。WiFi機多人分攤較划算，但需歸還。Free WiFi覆蓋率城市較高，鄉村較差。",
+      "similarity": 1.0
+    },
+    {
+      "file1": "chiang-mai.html",
+      "para1_idx": 11,
+      "content1": "推薦在台灣買好當地eSIM（Airalo、Nomad），或購買當地SIM卡（7-11、全家都有賣）。WiFi機多人分攤較划算，但需歸還。Free WiFi覆蓋率城市較高，鄉村較差。",
+      "file2": "southeast-asia.html",
+      "para2_idx": 1,
+      "content2": "推薦在台灣買好當地eSIM（Airalo、Nomad），或購買當地SIM卡（7-11、全家都有賣）。WiFi機多人分攤較划算，但需歸還。Free WiFi覆蓋率城市較高，鄉村較差。",
+      "similarity": 1.0
+    },
+    {
+      "file1": "japan-travel.html",
+      "para1_idx": 14,
+      "content1": "餐費 ：便利商店一餐 NT$150~250，普通餐廳 NT$300~600，高CP值拉麵 NT$100~200",
+      "file2": "korea-travel.html",
+      "para2_idx": 15,
+      "content2": "餐費 ：便利商店一餐 NT$100~150，普通餐廳 NT$200~500，烤肉一餐 NT$500~1,000",
+      "similarity": 0.7818181818181819
+    },
+    {
+      "file1": "japan-travel.html",
+      "para1_idx": 15,
+      "content1": "不含機票，5天4夜大概抓 NT$25,000~35,000 就很舒服了。如果願意住青旅、吃便利商店、用廉航，甚至可以壓到 NT$18,000 以內。我自己的紀錄是：5天4夜東京，總花費 NT$16,000（含機票！）——那次是搭虎航來回 NT$4,800，住宿全程青旅，交通全用 Tokyo Subw",
+      "file2": "korea-travel.html",
+      "para2_idx": 17,
+      "content2": "不含機票，4天3夜大概抓 NT$15,000~25,000 就很舒服了。如果願意住青旅、吃便利商店、用廉航，甚至可以壓到 NT$10,000 以內。我自己最好的紀錄是：4天3夜首爾，總花費 NT$9,000（含機票！）——那次是搭虎航來回 NT$3,800，住宿全程青旅，交通全用 T-money 卡",
+      "similarity": 0.88
+    },
+    {
+      "file1": "japan-travel.html",
+      "para1_idx": 15,
+      "content1": "不含機票，5天4夜大概抓 NT$25,000~35,000 就很舒服了。如果願意住青旅、吃便利商店、用廉航，甚至可以壓到 NT$18,000 以內。我自己的紀錄是：5天4夜東京，總花費 NT$16,000（含機票！）——那次是搭虎航來回 NT$4,800，住宿全程青旅，交通全用 Tokyo Subw",
+      "file2": "taiwan-travel.html",
+      "para2_idx": 20,
+      "content2": "不含機票，3 天 2 夜大概抓 NT$6,000-12,000 就很舒服了。如果願意住民宿、吃夜市、用大眾運輸，甚至可以壓到 NT$4,000 以內。我自己最好的紀錄是：3 天 2 夜台南+高雄，總花費 NT$3,500（含高鐵！）——那次是搭早鳥高鐵去台南，住宿全程民宿，交通全用高鐵+捷運，吃飯全",
+      "similarity": 0.6533333333333333
+    },
+    {
+      "file1": "jeju-island.html",
+      "para1_idx": 19,
+      "content1": "T-money卡可在便利商店購買（₩2,500），地鐵、公車都能用，比現金便宜₩100。也可在便利商店消費。退卡可退押金，但需手續費，不常用建議直接留作紀念。",
+      "file2": "korea-budget-travel-guide.html",
+      "para2_idx": 11,
+      "content2": "T-money卡可在便利商店購買（₩2,500），地鐵、公車都能用，比現金便宜₩100。也可在便利商店消費。退卡可退押金，但需手續費，不常用建議直接留作紀念。",
+      "similarity": 1.0
+    },
+    {
+      "file1": "jeju-island.html",
+      "para1_idx": 19,
+      "content1": "T-money卡可在便利商店購買（₩2,500），地鐵、公車都能用，比現金便宜₩100。也可在便利商店消費。退卡可退押金，但需手續費，不常用建議直接留作紀念。",
+      "file2": "seoul-food.html",
+      "para2_idx": 21,
+      "content2": "T-money卡可在便利商店購買（₩2,500），地鐵、公車都能用，比現金便宜₩100。也可在便利商店消費。退卡可退押金，但需手續費，不常用建議直接留作紀念。",
+      "similarity": 1.0
+    },
+    {
+      "file1": "kansai-pass.html",
+      "para1_idx": 22,
+      "content1": "7-11的飯糰、FamilyMart的炸雞、Lawson的霜淇淋都超推薦。還有各式便當、沙拉、飯店、甜點，品質不輸餐廳，價格只要1/3。",
+      "file2": "kyoto-temples.html",
+      "para2_idx": 8,
+      "content2": "7-11的飯糰、FamilyMart的炸雞、Lawson的霜淇淋都超推薦。還有各式便當、沙拉、飯店、甜點，品質不輸餐廳，價格只要1/3。",
+      "similarity": 1.0
+    },
+    {
+      "file1": "kansai-pass.html",
+      "para1_idx": 22,
+      "content1": "7-11的飯糰、FamilyMart的炸雞、Lawson的霜淇淋都超推薦。還有各式便當、沙拉、飯店、甜點，品質不輸餐廳，價格只要1/3。",
+      "file2": "osaka-food.html",
+      "para2_idx": 32,
+      "content2": "7-11的飯糰、FamilyMart的炸雞、Lawson的霜淇淋都超推薦。還有各式便當、沙拉、飯店、甜點，品質不輸餐廳，價格只要1/3。",
+      "similarity": 1.0
+    },
+    {
+      "file1": "korea-budget-travel-guide.html",
+      "para1_idx": 11,
+      "content1": "T-money卡可在便利商店購買（₩2,500），地鐵、公車都能用，比現金便宜₩100。也可在便利商店消費。退卡可退押金，但需手續費，不常用建議直接留作紀念。",
+      "file2": "seoul-food.html",
+      "para2_idx": 21,
+      "content2": "T-money卡可在便利商店購買（₩2,500），地鐵、公車都能用，比現金便宜₩100。也可在便利商店消費。退卡可退押金，但需手續費，不常用建議直接留作紀念。",
+      "similarity": 1.0
+    },
+    {
+      "file1": "korea-travel.html",
+      "para1_idx": 10,
+      "content1": "1.  買一張 T-money 卡 ：就像台灣的悠遊卡，地鐵、公車、便利商店都能用。在仁川/金海機場就能買到，押金 ₩2,500 可退。",
+      "file2": "taiwan-travel.html",
+      "para2_idx": 12,
+      "content2": "1.  辦一張悠遊卡/一卡通 ：就像台灣的悠遊卡，捷運、公車、便利商店、甚至高鐵都能用。在機場或高鐵站就能買到。",
+      "similarity": 0.6129032258064516
+    },
+    {
+      "file1": "korea-travel.html",
+      "para1_idx": 17,
+      "content1": "不含機票，4天3夜大概抓 NT$15,000~25,000 就很舒服了。如果願意住青旅、吃便利商店、用廉航，甚至可以壓到 NT$10,000 以內。我自己最好的紀錄是：4天3夜首爾，總花費 NT$9,000（含機票！）——那次是搭虎航來回 NT$3,800，住宿全程青旅，交通全用 T-money 卡",
+      "file2": "taiwan-travel.html",
+      "para2_idx": 20,
+      "content2": "不含機票，3 天 2 夜大概抓 NT$6,000-12,000 就很舒服了。如果願意住民宿、吃夜市、用大眾運輸，甚至可以壓到 NT$4,000 以內。我自己最好的紀錄是：3 天 2 夜台南+高雄，總花費 NT$3,500（含高鐵！）——那次是搭早鳥高鐵去台南，住宿全程民宿，交通全用高鐵+捷運，吃飯全",
+      "similarity": 0.6733333333333333
+    },
+    {
+      "file1": "kyoto-temples.html",
+      "para1_idx": 8,
+      "content1": "7-11的飯糰、FamilyMart的炸雞、Lawson的霜淇淋都超推薦。還有各式便當、沙拉、飯店、甜點，品質不輸餐廳，價格只要1/3。",
+      "file2": "osaka-food.html",
+      "para2_idx": 32,
+      "content2": "7-11的飯糰、FamilyMart的炸雞、Lawson的霜淇淋都超推薦。還有各式便當、沙拉、飯店、甜點，品質不輸餐廳，價格只要1/3。",
+      "similarity": 1.0
+    },
+    {
+      "file1": "seasia-budget-travel-guide.html",
+      "para1_idx": 15,
+      "content1": "推薦在台灣買好當地eSIM（Airalo、Nomad），或購買當地SIM卡（7-11、全家都有賣）。WiFi機多人分攤較划算，但需歸還。Free WiFi覆蓋率城市較高，鄉村較差。",
+      "file2": "southeast-asia.html",
+      "para2_idx": 1,
+      "content2": "推薦在台灣買好當地eSIM（Airalo、Nomad），或購買當地SIM卡（7-11、全家都有賣）。WiFi機多人分攤較划算，但需歸還。Free WiFi覆蓋率城市較高，鄉村較差。",
+      "similarity": 1.0
+    }
+  ]
+}
