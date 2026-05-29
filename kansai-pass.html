@@ -273,6 +273,31 @@
 <div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q">關西旅遊買什麼票券最省？</div><div class="faq-a">行程只在大阪：買大阪周遊卡。大阪+京都+奈良：買關西周遊卡或JR關西地區鐵路周遊券。大阪+神戶：買JR神戶線一日券¥1,680。先排行程再決定買哪張票券。</div></div>
 <div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q">ICOCA和Suica可以通用嗎？</div><div class="faq-a">可以！ICOCA（關西）和Suica（關東）在全日本都能互相使用。如果你從關西進、關東出，一張ICOCA就能全程使用，不用買兩張卡。</div></div>
 <div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q">關西機場有紅綠燈嗎？</div><div class="faq-a">關西機場有免稅店和便利商店，但規模比成田小。想要瘋狂購物的話，建議在大阪市區的Don Quijote（唐吉訶德）或車站百貨購買。</div></div>
+ <style>
+.lead-inline{background:linear-gradient(135deg,#f1f8e9 0%,#e8f5e9 50%,#dcedc8 100%)!important;border-radius:20px!important;padding:40px!important;text-align:center;margin:56px auto;max-width:640px;box-shadow:0 8px 32px rgba(46,125,50,.12),0 2px 8px rgba(0,0,0,.06)!important;border:2px solid #a5d6a7!important;position:relative;overflow:hidden}
+.lead-inline-icon{font-size:56px;margin-bottom:16px;display:inline-block;animation:bounce-lead 2s ease-in-out infinite}
+@keyframes bounce-lead{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+.lead-inline h3{color:#1b5e20;margin:0 0 16px;font-size:26px;font-weight:700}
+.lead-inline p{color:#2e7d32;margin:0 0 12px;font-size:15px}
+.lead-inline form{display:flex;flex-direction:column;align-items:center;gap:10px;max-width:400px;margin:0 auto}
+.lead-inline input[type=email]{width:100%;padding:14px 20px;border:2px solid #a5d6a7;border-radius:30px;font-size:15px;outline:none;transition:border .3s;box-sizing:border-box}
+.lead-inline input[type=email]:focus{border-color:#4db6ac;box-shadow:0 0 0 3px rgba(77,182,172,.2)}
+.lead-inline button[type=submit]{background:linear-gradient(135deg,#4db6ac,#26a69a);color:#fff;border:none;padding:14px 36px;border-radius:30px;font-size:16px;font-weight:700;cursor:pointer;transition:all .3s;box-shadow:0 4px 15px rgba(38,166,154,.35)}
+.lead-inline button:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(38,166,154,.45)}
+.lead-inline .lead-note{font-size:12px;color:#666;margin:12px 0 0}
+</style>
+<div class="lead-inline">
+      <div class="lead-inline-icon">📘</div>
+      <h3>小編獨家攻略，限時免費送</h3>
+      <p>填Email立即收到PDF下載連結和最新旅遊資訊</p>
+      <form onsubmit="submitLeadForm(event);return false">
+        <input type="email" placeholder="輸入你的Email" required id="leadEmail">
+        <button type="submit" id="leadSubmitBtn">免費下載攻略</button>
+      <div id="leadMsg" style="font-size:13px;margin-top:8px;min-height:20px;"></div>
+  </form>
+      <p class="lead-note">🔒 尊重隱秘，隨時可取消訂閱</p>
+    </div> 
+</section>
 
 <!-- KLOOK 動態橫幅： -->
 <div class="klook-dynamic-banner" style="max-width:468px;margin:32px auto;text-align:center;">
@@ -313,17 +338,7 @@
 </div>
 </div><!-- /article-container --><!-- /col-center -->
 </div><!-- /three-col-wrapper -->
-<section class="lead-inline">
-  <div class="lead-inline-icon">&#128236;</div>
-  <h3>小編獨家攻略，限時免費送</h3>
-  <p>填Email立即收到PDF下載連結和最新旅遊資訊</p>
-  <form onsubmit="submitLeadForm(event);return false">
-    <input type="email" placeholder="輸入你的Email" required id="leadEmail">
-    <button type="submit" id="leadSubmitBtn">免費下載攻略</button>
-  </form>
-  <div id="leadMsg" style="font-size:13px;margin-top:8px;min-height:20px;"></div>
-  <p class="lead-note">&#128274; 尊重隱私，隨時可取消訂閱</p>
-</section>
+
 <!-- FOOTER -->
 <footer class="site-footer">
   <div class="footer-inner">
