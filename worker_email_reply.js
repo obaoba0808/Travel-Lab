@@ -49,12 +49,30 @@ const PAGE_TITLES = {
  'danang-map': '峴港景點地圖',
 };
 
+const CORS = {
+  'Access-Control-Allow-Origin': '*',
+  'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
+  'Access-Control-Allow-Headers': '*'
+};
+
+function jsonResp(data, status = 200) {
+  return new Response(JSON.stringify(data), {
+    status,
+    headers: { ...CORS, 'Content-Type': 'application/json' }
+  });
+}
+
 addEventListener('fetch', event => {
  event.respondWith(handleRequest(event.request));
 });
 
 async function handleRequest(request) {
- // 支援 GET（URL參數）和 POST（JSON body）兩種方式
+ // Handle CORS preflight
+ if (request.method === 'OPTIONS') {
+   return new Response(null, { headers: CORS });
+ }
+
+ // Support GET (URL params) and POST (JSON body)
  let email, resource;
 
  if (request.method === 'POST') {
@@ -63,10 +81,7 @@ async function handleRequest(request) {
      email = body.email;
      resource = body.resource || body.pdfUrl;
    } catch (e) {
-     return new Response(JSON.stringify({error: 'Invalid JSON'}), {
-       status: 400,
-       headers: {'Content-Type': 'application/json'}
-     });
+     return jsonResp({error: 'Invalid JSON'}, 400);
    }
  } else {
    const url = new URL(request.url);
@@ -75,38 +90,26 @@ async function handleRequest(request) {
  }
 
  if (!email || !email.includes('@')) {
-   return new Response(JSON.stringify({error: 'Invalid email'}), {
-     status: 400,
-     headers: {'Content-Type': 'application/json'}
-   });
+   return jsonResp({error: 'Invalid email'}, 400);
  }
 
- const pdfLink = PDF_LINKS[resource] || 'https://golightly.fun/downloads/旅遊攻略工具包.pdf';
+ const pdfLink = PDF_LINKS[resource] || 'https://golightly.fun/downloads/travel-guide-pack.pdf';
  const title = PAGE_TITLES[resource] || '旅遊攻略工具包';
 
  const htmlBody = `
- <div style="font-family: 'Noto Sans TC', sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
- <div style="background: #0ABAB5; color: white; border-radius: 12px 12px 0 0; padding: 24px; text-align: center;">
- <h1 style="margin: 0; font-size: 22px;">✈️ 感謝訂閱均在路上！</h1>
- </div>
- <div style="border: 1px solid #eee; border-top: none; border-radius: 0 0 12px 12px; padding: 24px; background: white;">
- <p style="font-size: 16px; color: #333; line-height: 1.8;">
- 你好！👋<br>
- 感謝你訂閱 <strong>均在路上</strong> 的旅遊攻略！<br><br>
- 以下是你要的免費資源：
- </p>
- <div style="background: #f0fafa; border-left: 4px solid #0ABAB5; padding: 16px 20px; border-radius: 0 8px 8px 0; margin: 20px 0;">
- <h3 style="color: #0ABAB5; margin: 0 0 8px;">📥 ${title}</h3>
- <a href="${pdfLink}" style="color: #0ABAB5; font-size: 14px;">點擊下載 PDF</a>
- </div>
- <p style="font-size: 14px; color: #888; line-height: 1.8;">
- 💡 小提醒：我們未來會不定時寄送最新旅遊攻略給你，隨時可退訂。<br><br>
- 期待與你一起探索世界 🌏<br>
- — 均在路上 小編
- </p>
- </div>
- </div>
- `;
+<div style="font-family:'Noto Sans TC',sans-serif;max-width:600px;margin:0 auto;padding:20px">
+<div style="background:#0ABAB5;color:white;border-radius:12px 12px 0 0;padding:24px;text-align:center">
+<h1 style="margin:0;font-size:22px">✈️ 感謝訂閱均在路上！</h1>
+</div>
+<div style="border:1px solid #eee;border-top:none;border-radius:0 0 12px 12px;padding:24px;background:#fff">
+<p style="font-size:16px;color:#333;line-height:1.8">你好！👋<br>感謝你訂閱 <strong>均在路上</strong> 的旅遊攻略！<br><br>以下是你要的免費資源：</p>
+<div style="background:#f0fafa;border-left:4px solid #0ABAB5;padding:16px 20px;border-radius:0 8px 8px 0;margin:20px 0">
+<h3 style="color:#0ABAB5;margin:0 0 8px">📥 ${title}</h3>
+<a href="${pdfLink}" style="color:#0ABAB5;font-size:14px">點擊下載 PDF</a>
+</div>
+<p style="font-size:14px;color:#888;line-height:1.8">💡 小提醒：我們未來會不定時寄送最新旅遊攻略給你，隨時可退訂。<br><br>期待與你一起探索世界 🌏<br>— 均在路上 小編</p>
+</div>
+</div>`;
 
  const resendKey = RESEND_API_KEY || 're_EHikPqyc_Fe4PASKP8t9Nvtveg1z7DxUx';
 
@@ -127,13 +130,8 @@ async function handleRequest(request) {
  const result = await res.json();
 
  if (!res.ok) {
-   return new Response(JSON.stringify({error: 'Resend API error', detail: result}), {
-     status: 500,
-     headers: {'Content-Type': 'application/json'}
-   });
+   return jsonResp({error: 'Resend API error', detail: result}, 500);
  }
 
- return new Response(JSON.stringify({ok: true, result}), {
-   headers: {'Content-Type': 'application/json'}
- });
+ return jsonResp({ok: true, result});
 }
