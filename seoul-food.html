@@ -420,7 +420,31 @@ a.dropdown-toggle::after {
 <div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q">首爾適合亲子旅行嗎？</div><div class="faq-a">非常適合！樂天世界、COEX Mall、汝矣島公園都很適合小孩。餐廳幾乎都有兒童椅，便利商店買零食超方便。建議避開寒暑假人潮，春秋季最舒適。</div></div>
 <div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q">首爾冬天會下雪嗎？</div><div class="faq-a">12-2月都有可能下雪，但近年暖化雪量減少。想要看雪景建議1月去，機率最高。雪中的景福宮和北村韓屋超美，記得穿保暖衣物。</div></div>
 <div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q">明洞和弘大哪裡好吃？</div><div class="faq-a">明洞適合第一次去首爾的人，換錢方便、醬蟹和人參雞湯品質穩定。弘大更在地化，烤肉一條街價格更親民，宵夜選擇多。建議兩區都安排！</div></div>
-
+<style>
+.lead-inline{background:linear-gradient(135deg,#f1f8e9 0%,#e8f5e9 50%,#dcedc8 100%)!important;border-radius:20px!important;padding:40px!important;text-align:center;margin:56px auto;max-width:640px;box-shadow:0 8px 32px rgba(46,125,50,.12),0 2px 8px rgba(0,0,0,.06)!important;border:2px solid #a5d6a7!important;position:relative;overflow:hidden}
+.lead-inline-icon{font-size:56px;margin-bottom:16px;display:inline-block;animation:bounce-lead 2s ease-in-out infinite}
+@keyframes bounce-lead{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+.lead-inline h3{color:#1b5e20;margin:0 0 16px;font-size:26px;font-weight:700}
+.lead-inline p{color:#2e7d32;margin:0 0 12px;font-size:15px}
+.lead-inline form{display:flex;flex-direction:column;align-items:center;gap:10px;max-width:400px;margin:0 auto}
+.lead-inline input[type=email]{width:100%;padding:14px 20px;border:2px solid #a5d6a7;border-radius:30px;font-size:15px;outline:none;transition:border .3s;box-sizing:border-box}
+.lead-inline input[type=email]:focus{border-color:#4db6ac;box-shadow:0 0 0 3px rgba(77,182,172,.2)}
+.lead-inline button[type=submit]{background:linear-gradient(135deg,#4db6ac,#26a69a);color:#fff;border:none;padding:14px 36px;border-radius:30px;font-size:16px;font-weight:700;cursor:pointer;transition:all .3s;box-shadow:0 4px 15px rgba(38,166,154,.35)}
+.lead-inline button:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(38,166,154,.45)}
+.lead-inline .lead-note{font-size:12px;color:#666;margin:12px 0 0}
+</style>
+<div class="lead-inline">
+      <div class="lead-inline-icon">📘</div>
+      <h3>小編獨家攻略，限時免費送</h3>
+      <p>填Email立即收到PDF下載連結和最新旅遊資訊</p>
+      <form onsubmit="submitLeadForm(event);return false">
+        <input type="email" placeholder="輸入你的Email" required id="leadEmail">
+        <button type="submit" id="leadSubmitBtn">免費下載攻略</button>
+      <div id="leadMsg" style="font-size:13px;margin-top:8px;min-height:20px;"></div>
+  </form>
+      <p class="lead-note">🔒 尊重隱秘，隨時可取消訂閱</p>
+    </div>
+</section>
 
 <!-- KLOOK 動態橫幅： -->
 <div class="klook-dynamic-banner" style="max-width:468px;margin:32px auto;text-align:center;">
@@ -459,30 +483,7 @@ a.dropdown-toggle::after {
 <!-- FOOTER -->
 
     
-<style>
-.lead-inline{background:linear-gradient(135deg,#f1f8e9 0%,#e8f5e9 50%,#dcedc8 100%)!important;border-radius:20px!important;padding:40px!important;text-align:center;margin:56px auto;max-width:640px;box-shadow:0 8px 32px rgba(46,125,50,.12),0 2px 8px rgba(0,0,0,.06)!important;border:2px solid #a5d6a7!important;position:relative;overflow:hidden}
-.lead-inline-icon{font-size:56px;margin-bottom:16px;display:inline-block;animation:bounce-lead 2s ease-in-out infinite}
-@keyframes bounce-lead{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
-.lead-inline h3{color:#1b5e20;margin:0 0 16px;font-size:26px;font-weight:700}
-.lead-inline p{color:#2e7d32;margin:0 0 12px;font-size:15px}
-.lead-inline form{display:flex;flex-direction:column;align-items:center;gap:10px;max-width:400px;margin:0 auto}
-.lead-inline input[type=email]{width:100%;padding:14px 20px;border:2px solid #a5d6a7;border-radius:30px;font-size:15px;outline:none;transition:border .3s;box-sizing:border-box}
-.lead-inline input[type=email]:focus{border-color:#4db6ac;box-shadow:0 0 0 3px rgba(77,182,172,.2)}
-.lead-inline button[type=submit]{background:linear-gradient(135deg,#4db6ac,#26a69a);color:#fff;border:none;padding:14px 36px;border-radius:30px;font-size:16px;font-weight:700;cursor:pointer;transition:all .3s;box-shadow:0 4px 15px rgba(38,166,154,.35)}
-.lead-inline button:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(38,166,154,.45)}
-.lead-inline .lead-note{font-size:12px;color:#666;margin:12px 0 0}
-</style>
-<div class="lead-inline">
-      <div class="lead-inline-icon">&#128227;</div>
-      <h3>&#23554;&#37559;&#29483;&#23478;&#25991;&#29872;&#65292;&#38480;&#26178;&#20813;&#36063;&#36865;</h3>
-      <p>&#22635;Email&#31478;&#31481;&#25910;&#21040;PDF&#19979;&#36617;&#32887;&#25509;&#21518;&#21644;&#26368;&#26032;&#26053;&#36153;&#36028;&#24785;</p>
-      <form onsubmit="submitLeadForm(event);return false">
-        <input type="email" placeholder="&#36755;&#20837;&#20320;&#30340;Email" required id="leadEmail">
-        <button type="submit" id="leadSubmitBtn">&#20813;&#36063;&#19979;&#36617;&#25913;&#30053;</button>
-      <div id="leadMsg" style="font-size:13px;margin-top:8px;min-height:20px;"></div>
-  </form>
-      <p class="lead-note">&#128274; &#23653;&#37329;&#38544;&#31169;&#65292;&#38543;&#26178;&#21487;&#21462;&#28040;&#35680;&#38283;</p>
-    </div>
+
 
   <footer class="site-footer">
   <div class="footer-inner">
