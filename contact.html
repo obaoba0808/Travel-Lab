@@ -9581,13 +9581,10 @@ a.dropdown-toggle::after {
 
 function handleSubmit(e) {
 
-
-
-
-
-
-
-
+  // GA4 form submission tracking
+  if (typeof gtag === 'function') {
+    gtag('event', 'form_submit', {'form_id': 'contact-form', 'page': window.location.pathname});
+  }
 
   e.preventDefault();
 
