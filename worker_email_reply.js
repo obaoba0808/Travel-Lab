@@ -56,7 +56,7 @@ const CORS = {
 };
 
 // Google Apps Script Web App URL (for lead collection)
-const GOOGLE_SHEET_URL = GOOGLE_SHEET_WEBAPP_URL || '';
+const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xredjjgb';
 
 function jsonResp(data, status = 200) {
   return new Response(JSON.stringify(data), {
@@ -136,11 +136,12 @@ async function handleRequest(request) {
    return jsonResp({error: 'Resend API error', detail: result}, 500);
  }
 
- // Also save to Google Sheets (fire and forget, don't block response)
- if (GOOGLE_SHEET_URL) {
-   const pageUrl = new URL(request.url).searchParams.get('page') || title;
-   fetch(GOOGLE_SHEET_URL + '?email=' + encodeURIComponent(email) + '&resource=' + encodeURIComponent(resource) + '&page=' + encodeURIComponent(pageUrl)).catch(() => {});
- }
+ // Save lead to Formspree (fire and forget)
+ fetch(FORMSPREE_ENDPOINT, {
+   method: 'POST',
+   headers: { 'Content-Type': 'application/json' },
+   body: JSON.stringify({ email, resource, page: title })
+ }).catch(() => {});
 
  return jsonResp({ok: true, result});
 }
