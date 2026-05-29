@@ -96,7 +96,7 @@ async function handleRequest(request) {
    return jsonResp({error: 'Invalid email'}, 400);
  }
 
- const pdfLink = PDF_LINKS[resource] || 'https://golightly.fun/downloads/travel-guide-pack.pdf';
+ const pdfLink = PDF_LINKS[resource] || 'https://obaoba0808.github.io/Travel-Lab/downloads/tokyo-metro-map.pdf';
  const title = PAGE_TITLES[resource] || '旅遊攻略工具包';
 
  const htmlBody = `
