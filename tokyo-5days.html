@@ -211,7 +211,7 @@ a.dropdown-toggle::after {
       <div class="lead-inline-icon">📘</div>
       <h3>小編獨家攻略，限時免費送</h3>
       <p>填Email立即收到PDF下載連結和最新旅遊資訊</p>
-      <form onsubmit="submitLeadForm(this,event);return false">
+      <form onsubmit="submitLeadForm(event);return false">
         <input type="email" placeholder="輸入你的Email" required id="leadEmail">
         <button type="submit" id="leadSubmitBtn">免費下載攻略</button>
       <div id="leadMsg" style="font-size:13px;margin-top:8px;min-height:20px;"></div>
@@ -368,7 +368,7 @@ function getResourceKey(){
 }
 
 function submitLeadForm(ev){
-  ev.preventDefault();
+  if(ev) ev.preventDefault();
   var email = document.getElementById('leadEmail').value.trim();
   if(!email || !email.includes('@')){
     document.getElementById('leadMsg').innerHTML = '請輸入有效的 Email';

@@ -449,7 +449,7 @@ document.querySelectorAll('.faq-item').forEach(function(item){var btn=item.query
       <div class="lead-inline-icon">&#128227;</div>
       <h3>&#23554;&#37559;&#29483;&#23478;&#25991;&#29872;&#65292;&#38480;&#26178;&#20813;&#36063;&#36865;</h3>
       <p>&#22635;Email&#31478;&#31481;&#25910;&#21040;PDF&#19979;&#36617;&#32887;&#25509;&#21518;&#21644;&#26368;&#26032;&#26053;&#36153;&#36028;&#24785;</p>
-      <form onsubmit="submitLeadForm(this,event);return false">
+      <form onsubmit="submitLeadForm(event);return false">
         <input type="email" placeholder="&#36755;&#20837;&#20320;&#30340;Email" required id="leadEmail">
         <button type="submit" id="leadSubmitBtn">&#20813;&#36063;&#19979;&#36617;&#25913;&#30053;</button>
       <div id="leadMsg" style="font-size:13px;margin-top:8px;min-height:20px;"></div>
@@ -514,7 +514,7 @@ function getResourceKey(){
 }
 
 function submitLeadForm(ev){
-  ev.preventDefault();
+  if(ev) ev.preventDefault();
   var email = document.getElementById('leadEmail').value.trim();
   if(!email || !email.includes('@')){
     document.getElementById('leadMsg').innerHTML = '請輸入有效的 Email';
