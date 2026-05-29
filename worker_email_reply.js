@@ -108,7 +108,7 @@ async function handleRequest(request) {
  </div>
  `;
 
- const resendKey = RESEND_API_KEY || 're_VB5NPTVx_2FB2g9v6H8qfDWTZouVZKdF3';
+ const resendKey = RESEND_API_KEY || 're_EHikPqyc_Fe4PASKP8t9Nvtveg1z7DxUx';
 
  const res = await fetch('https://api.resend.com/emails', {
    method: 'POST',
