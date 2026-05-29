@@ -42,7 +42,7 @@
 <style>
 .lead-inline{background:linear-gradient(135deg,#f1f8e9 0%,#e8f5e9 50%,#dcedc8 100%)!important;border-radius:20px!important;padding:40px!important;text-align:center;margin:56px auto;max-width:640px;box-shadow:0 8px 32px rgba(46,125,50,.12),0 2px 8px rgba(0,0,0,.06)!important;border:2px solid #a5d6a7!important;position:relative;overflow:hidden}
 .lead-inline-icon{font-size:56px;margin-bottom:16px;display:inline-block;animation:bounce-lead 2s ease-in-out infinite}
-@keyframes bounce-lead{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+@keyframes bounce-lead{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}
 .lead-inline h3{color:#1b5e20;margin:0 0 16px;font-size:26px;font-weight:700}
 .lead-inline p{color:#2e7d32;margin:0 0 12px;font-size:15px}
 .lead-inline form{display:flex;flex-direction:column;align-items:center;gap:10px;max-width:400px;margin:0 auto}
@@ -343,6 +343,18 @@
   </div><!-- /hub-grid-wrap -->
 </div><!-- /hub-content -->
 
+
+<section class="lead-inline">
+      <div class="lead-inline-icon">&#128236;</div>
+      <h3>小編獨家攻略，限時免費送</h3>
+      <p>填Email立即收到PDF下載連結和最新旅遊資訊</p>
+      <form onsubmit="submitLeadForm(event);return false">
+        <input type="email" placeholder="輸入你的Email" required id="leadEmail">
+        <button type="submit" id="leadSubmitBtn">免費下載攻略</button>
+      <div id="leadMsg" style="font-size:13px;margin-top:8px;min-height:20px;"></div>
+  </form>
+      <p class="lead-note">&#128274; 尊重隱私，隨時可取消訂閱</p>
+    </section>
 <footer class="site-footer">
   <div class="footer-inner">
     <div class="footer-col">
@@ -420,40 +432,29 @@ window.addEventListener('scroll', function() {
 });
 </script>
 
-<section class="lead-inline">
-      <div class="lead-inline-icon">📘</div>
-      <h3>小編獨家攻略，限時免費送</h3>
-      <p>填Email立即收到PDF下載連結和最新旅遊資訊</p>
-      <form onsubmit="submitLeadForm(event);return false">
-        <input type="email" placeholder="輸入你的Email" required id="leadEmail">
-        <button type="submit" id="leadSubmitBtn">免費下載攻略</button>
-      <div id="leadMsg" style="font-size:13px;margin-top:8px;min-height:20px;"></div>
-  </form>
-      <p class="lead-note">🔒 尊重隱私，隨時可取消訂閱</p>
-    </div>
 <script>
 const WORKER_URL = "https://golightly-email.happybird.workers.dev";
-function getResourceKey() {
-  const p = location.pathname.replace("/Travel-Lab/","").replace(".html","");
-  const m = {"packing-list":"hokkaido-packing-list"};
-  return m[p] || "hokkaido-packing-list";
+function getResourceKey(){
+  const p=location.pathname.replace("/Travel-Lab/","").replace(".html","");
+  const m={"packing-list":"hokkaido-packing-list"};
+  return m[p]||"hokkaido-packing-list";
 }
-function submitLeadForm(ev) {
-  if(ev) ev.preventDefault();
-  var btn=document.getElementById("leadSubmitBtn");
-  var msg=document.getElementById("leadMsg");
-  var email=document.getElementById("leadEmail").value;
-  if(!email || !email.includes("@")) { msg.textContent="請輸入有效Email"; return; }
-  btn.disabled=true; btn.textContent="傳送中..."; msg.textContent="";
-  fetch(WORKER_URL,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({email:email,resource:getResourceKey()})})
+function submitLeadForm(ev){
+  if(ev)ev.preventDefault();
+  var b=document.getElementById("leadSubmitBtn");
+  var m=document.getElementById("leadMsg");
+  var e=document.getElementById("leadEmail").value;
+  if(!e||!e.includes("@")){m.textContent="請輸入有效Email";return;}
+  b.disabled=true;b.textContent="傳送中...";m.textContent="";
+  fetch(WORKER_URL,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({email:e,resource:getResourceKey()})})
   .then(function(r){return r.json();})
   .then(function(d){
-    if(d.ok) { btn.textContent="已寄出 ✉️"; msg.style.color="#2e7d32"; msg.textContent="PDF連結已寄到信箱！"; localStorage.setItem("leadSent","1"); }
-    else { btn.disabled=false; btn.textContent="免費下載攻略"; msg.style.color="#c62828"; msg.textContent="傳送失敗，請再試一次"; }
+    if(d.ok){b.textContent="已寄出 &#9993;";m.style.color="#2e7d32";m.textContent="PDF連結已寄到信箱！";localStorage.setItem("leadSent","1");}
+    else{b.disabled=false;b.textContent="免費下載攻略";m.style.color="#c62828";m.textContent="傳送失敗，請再試一次";}
   })
-  .catch(function(){ btn.disabled=false; btn.textContent="免費下載攻略"; msg.style.color="#c62828"; msg.textContent="網路錯誤，請再試一次"; });
+  .catch(function(){b.disabled=false;b.textContent="免費下載攻略";m.style.color="#c62828";m.textContent="網路錯誤，請再試一次";});
 }
-if(localStorage.getItem("leadSent")){ var s=document.getElementById("leadSubmitBtn"); if(s){s.textContent="已訂閱 ✉️";s.disabled=true;} }
+if(localStorage.getItem("leadSent")){var s=document.getElementById("leadSubmitBtn");if(s){s.textContent="已訂閱 &#9993;";s.disabled=true;}}
 </script>
 </body>
 </html>

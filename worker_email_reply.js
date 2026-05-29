@@ -137,11 +137,11 @@ async function handleRequest(request) {
  }
 
  // Save lead to Formspree (fire and forget)
- fetch(FORMSPREE_ENDPOINT, {
+ const fsRes = await fetch(FORMSPREE_ENDPOINT, {
    method: 'POST',
    headers: { 'Content-Type': 'application/json' },
    body: JSON.stringify({ email, resource, page: title })
- }).catch(() => {});
+ }).catch(e => ({ error: e.message }));
 
- return jsonResp({ok: true, result});
+ return jsonResp({ok: true, result, formspree: await fsRes.text().catch(() => 'no response')});
 }

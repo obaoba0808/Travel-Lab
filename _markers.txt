@@ -1,0 +1,50 @@
+</main>: found at 16304 (last occurrence)
+  context: ...d-note">&#128274; 尊重隱私，隨時可取消訂閱</p>
+    </section>
+</main>
+
+<div style="max-width:900px;margin:40px auto;pad
+</article>: found at 11338 (last occurrence)
+  context: ...老街攻略2026｜水霧氣氛、必吃美食、私房路線與交通指南</a>
+      </div>
+    </article>
+
+
+  </div></div>
+
+<section class="hub-content">
+ 
+<footer: found at 21823 (last occurrence)
+  context: ...逛夜市吃宵夜）
+  </p>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-inner">
+</body>: found at 26357 (last occurrence)
+  context: ...ntent="已訂閱 &#9993;";s.disabled=true;} }
+</script>
+</body>
+</html>
+
+</html>: found at 26365 (last occurrence)
+  context: ...訂閱 &#9993;";s.disabled=true;} }
+</script>
+</body>
+</html>
+
+KLOOK: NOT FOUND
+klk-aff: NOT FOUND
+faq-item: found at 20072 (last occurrence)
+  context: ...開暑假期間（人潮多、熱），春假或寒假期間去更舒服。</div></div>
+<div class="faq-item" onclick="this.classList.toggle('open')"><div cla
+class="footer: found at 24068 (last occurrence)
+  context: ...    </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 均在路上 Travel Lab. All Right

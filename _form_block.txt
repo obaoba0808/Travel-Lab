@@ -1,0 +1,16 @@
+class="lead-inline">
+      <div class="lead-inline-icon">📘</div>
+      <h3>小編獨家攻略，限時免費送</h3>
+      <p>填Email立即收到PDF下載連結和最新旅遊資訊</p>
+      <form onsubmit="submitLeadForm(event);return false">
+        <input type="email" placeholder="輸入你的Email" required id="leadEmail">
+        <button type="submit" id="leadSubmitBtn">免費下載攻略</button>
+      <div id="leadMsg" style="font-size:13px;margin-top:8px;min-height:20px;"></div>
+  </form>
+      <p class="lead-note">🔒 尊重隱秘，隨時可取消訂閱</p>
+    </div>
+  </section>
+<!-- KLOOK 動態橫幅： -->
+<div class="klook-dynamic-banner" style="max-width:468px;margin:32px auto;text-align:center;">
+<ins class="klk-aff-widget" data-adid="1282006" data-lang="zh-TW" data-currency="TWD" data-cardH="126" data-padding="92" data-lgH="470" data-edgeValue="655" data-cid="30" data-tid="-1" data-amount="3" data-prod="dynamic_widget"><a href="//www.klook.com/">Klook.com</a></ins> <script type="text/javascript"> (function (d, sc, u) { var s = d.createElement(sc), p = d.getElementsByTagName(sc)[0]; s.type = "text/javascript"; s.async = true; s.src = u; p.parentNode.insertBefore(s, p); })( document, "script", "https://affiliate.klook.com/widget/fetch-iframe-init.js" ); </script>
+</div>
