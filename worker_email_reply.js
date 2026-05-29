@@ -55,6 +55,9 @@ const CORS = {
   'Access-Control-Allow-Headers': '*'
 };
 
+// Google Apps Script Web App URL (for lead collection)
+const GOOGLE_SHEET_URL = GOOGLE_SHEET_WEBAPP_URL || '';
+
 function jsonResp(data, status = 200) {
   return new Response(JSON.stringify(data), {
     status,
@@ -131,6 +134,12 @@ async function handleRequest(request) {
 
  if (!res.ok) {
    return jsonResp({error: 'Resend API error', detail: result}, 500);
+ }
+
+ // Also save to Google Sheets (fire and forget, don't block response)
+ if (GOOGLE_SHEET_URL) {
+   const pageUrl = new URL(request.url).searchParams.get('page') || title;
+   fetch(GOOGLE_SHEET_URL + '?email=' + encodeURIComponent(email) + '&resource=' + encodeURIComponent(resource) + '&page=' + encodeURIComponent(pageUrl)).catch(() => {});
  }
 
  return jsonResp({ok: true, result});
