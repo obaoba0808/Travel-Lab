@@ -25,13 +25,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&family=Noto+Serif+TC:wght@400;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
 <noscript><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&family=Noto+Serif+TC:wght@400;700&display=swap" rel="stylesheet"></noscript>
-<link rel="stylesheet" href="style.css?v=202605282234">
+<link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="beautify-overrides.css">
 <link rel="stylesheet" href="beautify.css">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✈</text></svg>">
-
-
-
 
 
 </head>
@@ -185,7 +182,7 @@
 
 <!-- 2500 -->
 
-
+<div class="faq-section">
     
 <!-- 住宿推薦（Trip.com 聯盟） -->
 <div class="trip-recommend-card" style="
@@ -232,7 +229,7 @@
   </p>
 </div>
 
-<section class="faq-section">
+
 <h2>常見問題 FAQ</h2>
       <div class="faq-item">
         <div class="faq-q">曼谷按摩多少錢合理？<span class="arrow">▼</span></div>
@@ -254,6 +251,8 @@
         <div class="faq-q">孕婦可以按摩嗎？<span class="arrow">▼</span></div>
         <div class="faq-a">可以，但必須選擇孕婦專用SPA（如Divana Niramit），一般按摩店不建議孕婦體驗。建議懷孕中期（4-6個月）後再預約。</div>
       </div>
+  </div>
+</div>
       <style>
 .lead-inline{background:linear-gradient(135deg,#f1f8e9 0%,#e8f5e9 50%,#dcedc8 100%)!important;border-radius:20px!important;padding:40px!important;text-align:center;margin:56px auto;max-width:640px;box-shadow:0 8px 32px rgba(46,125,50,.12),0 2px 8px rgba(0,0,0,.06)!important;border:2px solid #a5d6a7!important;position:relative;overflow:hidden}
 .lead-inline-icon{font-size:56px;margin-bottom:16px;display:inline-block;animation:bounce-lead 2s ease-in-out infinite}
@@ -278,8 +277,8 @@
   </form>
       <p class="lead-note">🔒 尊重隱秘，隨時可取消訂閱</p>
     </div>
-</section>
 
+      
 
 <!-- KLOOK 動態橫幅： -->
 <div class="trip-dynamic-banner" style="max-width:468px;margin:32px auto;text-align:center;">
@@ -313,7 +312,6 @@
 </div>
 </div>
 </div><!-- /article-container -->
-
 <!-- FOOTER -->
 <footer class="site-footer">
   <div class="footer-inner">
@@ -393,7 +391,7 @@
         </footer>
 <button class="back-to-top" id="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
 <script>
-// DISABLED:var p=document.getElementById('reading-progress'),b=document.getElementById('back-to-top');var st=window.scrollY,dh=document.documentElement.scrollHeight-window.innerHeight;if(dh>0){p.style.width=(st/dh*100)+'%';}else{p.style.width='0%';}b.classList.toggle('visible',st>400);});
+window.addEventListener('scroll',function(){var p=document.getElementById('reading-progress'),b=document.getElementById('back-to-top');var st=window.scrollY,dh=document.documentElement.scrollHeight-window.innerHeight;if(dh>0){p.style.width=(st/dh*100)+'%';}else{p.style.width='0%';}b.classList.toggle('visible',st>400);});
 document.querySelectorAll('.faq-item').forEach(function(item){var btn=item.querySelector('.faq-q');if(!btn)return;btn.addEventListener('click',function(){var o=item.classList.contains('open');document.querySelectorAll('.faq-item').forEach(function(i){i.classList.remove('open');});if(!o)item.classList.add('open');});});
 </script>
 <script src="js/monetization.js" defer defer></script>
@@ -448,13 +446,4 @@ document.querySelectorAll('.faq-item').forEach(function(item){var btn=item.query
 <p>按摩后1小时内应避免洗澡，以免影响按摩效果。按摩后应避免剧烈运动，让身体充分休息。如果按摩后出现酸痛，这是正常现象，休息1-2天就会恢复。如果酸痛持续超过3天，建议咨询医生。按摩后应避免饮酒，以免影响按摩效果。</p>
 </div>
 
-
-</div>
-
-
-
-
-
-
-    
 </body></html>
