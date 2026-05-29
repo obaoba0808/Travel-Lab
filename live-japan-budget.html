@@ -34,15 +34,15 @@
 <style>
 .lead-inline{background:linear-gradient(135deg,#f1f8e9 0%,#e8f5e9 50%,#dcedc8 100%)!important;border-radius:20px!important;padding:40px!important;text-align:center;margin:56px auto;max-width:640px;box-shadow:0 8px 32px rgba(46,125,50,.12),0 2px 8px rgba(0,0,0,.06)!important;border:2px solid #a5d6a7!important;position:relative;overflow:hidden}
 .lead-inline-icon{font-size:56px;margin-bottom:16px;display:inline-block;animation:bounce-lead 2s ease-in-out infinite}
-@keyframes bounce-lead{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}
+@keyframes bounce-lead{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
 .lead-inline h3{color:#1b5e20;margin:0 0 16px;font-size:26px;font-weight:700}
 .lead-inline p{color:#2e7d32;margin:0 0 12px;font-size:15px}
 .lead-inline form{display:flex;flex-direction:column;align-items:center;gap:10px;max-width:400px;margin:0 auto}
-.lead-inline input[type=email]{width:100%;padding:14px 20px;border:2px solid #a5d6a7;border-radius:30px;font-size:15px;outline:none;transition:border .3s;box-sizing:border-box}
-.lead-inline input[type=email]:focus{border-color:#4db6ac;box-shadow:0 0 0 3px rgba(77,182,172,.2)}
-.lead-inline button[type=submit]{background:linear-gradient(135deg,#4db6ac,#26a69a);color:#fff;border:none;padding:14px 36px;border-radius:30px;font-size:16px;font-weight:700;cursor:pointer;transition:all .3s;box-shadow:0 4px 15px rgba(38,166,154,.35)}
-.lead-inline button:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(38,166,154,.45)}
-.lead-inline .lead-note{font-size:12px;color:#666;margin:12px 0 0}
+.lead-inline input[type=email]{{width:100%;padding:14px 20px;border:2px solid #a5d6a7;border-radius:30px;font-size:15px;outline:none;transition:border .3s;box-sizing:border-box}}
+.lead-inline input[type=email]:focus{{border-color:#4db6ac;box-shadow:0 0 0 3px rgba(77,182,172,.2)}}
+.lead-inline button[type=submit]{{background:linear-gradient(135deg,#4db6ac,#26a69a);color:#fff;border:none;padding:14px 36px;border-radius:30px;font-size:16px;font-weight:700;cursor:pointer;transition:all .3s;box-shadow:0 4px 15px rgba(38,166,154,.35)}}
+.lead-inline button:hover{{transform:translateY(-2px);box-shadow:0 6px 20px rgba(38,166,154,.45)}}
+.lead-inline .lead-note{{font-size:12px;color:#666;margin:12px 0 0}}
 </style>
 </head>
 <body>
@@ -283,6 +283,18 @@
 </div>
 </div><!-- /article-container -->
 <!-- FOOTER -->
+
+<section class="lead-inline">
+      <div class="lead-inline-icon">&#128236;</div>
+      <h3>小編獨家攻略，限時免費送</h3>
+      <p>填Email立即收到PDF下載連結和最新旅遊資訊</p>
+      <form onsubmit="submitLeadForm(event);return false">
+        <input type="email" placeholder="輸入你的Email" required id="leadEmail">
+        <button type="submit" id="leadSubmitBtn">免費下載攻略</button>
+      <div id="leadMsg" style="font-size:13px;margin-top:8px;min-height:20px;"></div>
+  </form>
+      <p class="lead-note">&#128274; 尊重隱私，隨時可取消訂閱</p>
+    </section>
 <footer class="site-footer">
   <div class="footer-inner">
     <div class="footer-col">
@@ -373,18 +385,7 @@ document.querySelectorAll('.table-scroll-hint').forEach(function(el){
 </script>
 <script src="js/monetization.js" defer defer type="2cde2a470304188ddb42f685-text/javascript"></script>
 <script src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="2cde2a470304188ddb42f685-|49" defer></script><script defer src="https://static.cloudflareinsights.com/beacon.min.js/v833ccba57c9e4d2798f2e76cebdd09a11778172276447" integrity="sha512-57MDmcccJXYtNnH+ZiBwzC4jb2rvgVCEokYN+L/nLlmO8rfYT/gIpW2A569iJ/3b+0UEasghjuZH/ma3wIs/EQ==" data-cf-beacon='{"version":"2024.11.0","token":"344a01236c994cb48b1c9e015c51d81e","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a0263020c9f58421',t:'MTc3OTg5NzE1OQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><section class="lead-inline">
-      <div class="lead-inline-icon">&#128236;</div>
-      <h3>小編獨家攻略，限時免費送</h3>
-      <p>填Email立即收到PDF下載連結和最新旅遊資訊</p>
-      <form onsubmit="submitLeadForm(event);return false">
-        <input type="email" placeholder="輸入你的Email" required id="leadEmail">
-        <button type="submit" id="leadSubmitBtn">免費下載攻略</button>
-      <div id="leadMsg" style="font-size:13px;margin-top:8px;min-height:20px;"></div>
-  </form>
-      <p class="lead-note">&#128274; 尊重隱私，隨時可取消訂閱</p>
-    </section>
-<script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a0263020c9f58421',t:'MTc3OTg5NzE1OQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script>
 const WORKER_URL = "https://golightly-email.happybird.workers.dev";
 function getResourceKey(){
   const p=location.pathname.replace("/Travel-Lab/","").replace(".html","");
