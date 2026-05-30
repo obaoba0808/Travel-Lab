@@ -37,6 +37,8 @@ def make_table(headers, data):
         ('TEXTCOLOR', (0,0), (-1,0), W),
         ('FONTNAME', (0,0), (-1,0), 'MSJHB'),
         ('FONTSIZE', (0,0), (-1,0), 11),
+        ('FONTNAME', (0,1), (-1,-1), 'MSJH'),
+        ('FONTSIZE', (0,1), (-1,-1), 10),
         ('ALIGN', (0,0), (-1,-1), 'LEFT'),
         ('VALIGN', (0,0), (-1,-1), 'MIDDLE'),
         ('BACKGROUND', (0,1), (-1,-1), W),
