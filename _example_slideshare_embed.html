@@ -1,0 +1,125 @@
+<!-- SlideShare 預覽 + Email 表單（範例） -->
+<section class="slideshare-section" style="margin: 3rem 0; padding: 2rem; background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+  
+  <!-- 區塊標題 -->
+  <div class="section-title-wrap" style="text-align: center; margin-bottom: 2rem;">
+    <h2 style="font-size: 1.8rem; color: #0ABAB5; margin-bottom: 0.5rem;">📊 免費預覽：東京 5 天自由行完整攻略</h2>
+    <p style="color: #666; font-size: 1.1rem;">下方的 SlideShare 簡報是 <strong>完整 PDF 的精華版</strong>，想要完整版（含隱藏景點 + 預算表 + Google Maps 路線）→ 輸入 Email 立即下載</p>
+  </div>
+
+  <!-- SlideShare 嵌入 (iframe) -->
+  <div class="slideshare-embed" style="margin-bottom: 2rem; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+    <iframe src="https://www.slideshare.net/slideshow/2026-eccc/287852788" 
+            width="100%" 
+            height="485" 
+            frameborder="0" 
+            marginwidth="0" 
+            marginheight="0" 
+            scrolling="no" 
+            allowfullscreen
+            style="border-radius: 8px;">
+    </iframe>
+    <div style="text-align: center; margin-top: 0.5rem; font-size: 0.9rem; color: #666;">
+      ⬆️ 這是簡報預覽（可全螢幕觀看）｜<a href="https://www.slideshare.net/slideshow/2026-eccc/287852788" target="_blank" style="color: #0ABAB5;">在 SlideShare 開啟</a>
+    </div>
+  </div>
+
+  <!-- Email 表單 (Formspree) -->
+  <div class="email-form-wrap" style="background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+    <h3 style="font-size: 1.4rem; color: #333; margin-bottom: 1rem; text-align: center;">📩 輸入 Email 下載完整 PDF（3 個額外秘訣）</h3>
+    
+    <form action="https://formspree.io/f/xredjjgb" 
+          method="POST"
+          style="max-width: 500px; margin: 0 auto;"
+          onsubmit="showThankYou(event)">
+      
+      <!-- 隱藏欄位：標記這是 tokyo-5days 的 PDF -->
+      <input type="hidden" name="pdf_id" value="tokyo-metro-map">
+      <input type="hidden" name="source" value="tokyo-5days.html">
+      
+      <!-- Email 輸入 -->
+      <div style="margin-bottom: 1rem;">
+        <label for="email-slideshare" style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: #333;">你的 Email（收到下載連結用）</label>
+        <input type="email" 
+               id="email-slideshare" 
+               name="email" 
+               placeholder="your@email.com" 
+               required
+               style="width: 100%; padding: 0.8rem; border: 2px solid #ddd; border-radius: 6px; font-size: 1rem; transition: border-color 0.3s;"
+               onfocus="this.style.borderColor='#0ABAB5'"
+               onblur="this.style.borderColor='#ddd'">
+      </div>
+      
+      <!-- 提交按鈕 -->
+      <button type="submit" 
+              style="width: 100%; padding: 1rem; background: linear-gradient(135deg, #0ABAB5 0%, #088F8F 100%); color: white; border: none; border-radius: 6px; font-size: 1.1rem; font-weight: 600; cursor: pointer; transition: transform 0.2s, box-shadow 0.2s;"
+              onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 12px rgba(10,186,181,0.3)'"
+              onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
+        🚀 立即下載東京 5 天完整攻略 PDF
+      </button>
+      
+      <!-- 隱私聲明 -->
+      <p style="text-align: center; margin-top: 0.8rem; font-size: 0.85rem; color: #999;">
+        🔒 你的 Email 只會用來寄送 PDF 下載連結，不會寄送垃圾郵件
+      </p>
+    </form>
+    
+    <!-- 感謝訊息（表單提交後顯示）-->
+    <div id="thank-you-message" style="display: none; text-align: center; padding: 2rem; background: #d4edda; border-radius: 8px; margin-top: 1rem;">
+      <div style="font-size: 3rem; margin-bottom: 1rem;">✅</div>
+      <h4 style="color: #155724; margin-bottom: 0.5rem;">Email 已收到！</h4>
+      <p style="color: #155724;">請檢查你的信箱（含垃圾郵件），點擊下載連結取得完整 PDF</p>
+    </div>
+  </div>
+  
+  <!-- LINE 備選方案 -->
+  <div style="text-align: center; margin-top: 1.5rem; padding: 1rem; background: #fff3cd; border-radius: 8px;">
+    <p style="margin-bottom: 0.5rem; color: #856404;">也可以用 LINE 私訊索取 PDF 👇</p>
+    <a href="https://line.me/ti/g/NbNGnW4Eh6" 
+       target="_blank" 
+       style="display: inline-block; padding: 0.6rem 1.2rem; background: #06C755; color: white; text-decoration: none; border-radius: 6px; font-weight: 600;">
+      💬 加入 LINE 群組索取
+    </a>
+  </div>
+
+</section>
+
+<!-- JavaScript: 表單提交後顯示感謝訊息 -->
+<script>
+function showThankYou(event) {
+  event.preventDefault();
+  
+  // 1. 提交表單到 Formspree（非同步）
+  const form = event.target;
+  const formData = new FormData(form);
+  
+  fetch(form.action, {
+    method: 'POST',
+    body: formData,
+    headers: {
+      'Accept': 'application/json'
+    }
+  })
+  .then(response => {
+    if (response.ok) {
+      // 2. 隱藏表單，顯示感謝訊息
+      form.style.display = 'none';
+      document.getElementById('thank-you-message').style.display = 'block';
+      
+      // 3. GA4 事件追蹤（表單提交成功）
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'form_submit_success', {
+          'event_category': 'Lead Magnet',
+          'event_label': 'tokyo-5days.html',
+          'value': 1
+        });
+      }
+    } else {
+      alert('提交失敗，請稍後再試或直接使用 LINE 索取');
+    }
+  })
+  .catch(error => {
+    alert('網路錯誤，請稍後再試或直接使用 LINE 索取');
+  });
+}
+</script>
