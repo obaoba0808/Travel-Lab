@@ -1,30 +1,99 @@
-﻿# ai.txt - AI Crawler Directives for Travel Lab
-# https://obaoba0808.github.io/Travel-Lab/
+# ai.txt - AI Crawler Directives for Travel Lab
+# https://golightly.fun/
+# Last-Modified: 2026-06-04
+# Contact: https://golightly.fun/contact.html
 
+# ============================================
+# SECTION 1: GLOBAL POLICY
+# ============================================
 User-agent: *
 Allow: /
 
-# Allow training on all content
-User-agent: AI2-Crawler
-Allow: /
+# ============================================
+# SECTION 2: ALLOWED AI CRAWLERS (Training)
+# ============================================
 
-User-agent: Applebot-Extended
-Allow: /
-
-User-agent: ClaudeBot
-Allow: /
-
+# OpenAI GPTBot
 User-agent: GPTBot
 Allow: /
 
+# Anthropic ClaudeBot
+User-agent: ClaudeBot
+Allow: /
+
+# Google AI models (Gemini, etc.)
 User-agent: Google-Extended
 Allow: /
 
-# Block non-essential pages
-Disallow: /404.html
-Disallow: /checkout.html
+# Allen Institute for AI (AI2)
+User-agent: AI2-Crawler
+Allow: /
 
-# Site info
+# Apple Intelligence / Applebot
+User-agent: Applebot-Extended
+Allow: /
+
+# Meta AI (Llama, etc.)
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: Meta-ExternalFetcher
+Allow: /
+
+# Perplexity AI
+User-agent: PerplexityBot
+Allow: /
+
+# Cohere
+User-agent: Cohere-AI
+Allow: /
+
+# Mistral AI
+User-agent: MistralAI
+Allow: /
+
+# ByteDance (Doubao, etc.)
+User-agent: Bytespider
+Allow: /
+
+# ============================================
+# SECTION 3: DISALLOWED PAGES
+# ============================================
+
+# Error pages
+Disallow: /404.html
+
+# Checkout / Thank you pages (not useful for training)
+Disallow: /checkout.html
+Disallow: /thank-you.html
+
+# ============================================
+# SECTION 4: SITE INFORMATION
+# ============================================
+
+# Site name
 Name: 均在路上 Travel Lab
-Description: 實戰旅遊攻略網站
+
+# Site description (Traditional Chinese)
+Description: 實戰旅遊攻略網站，專注日本、韓國、台灣、東南亞自由行攻略。提供交通教學、美食推薦、預算參考、行程規劃。
+
+# Site description (English)
+Description: Practical travel guide website focusing on Japan, Korea, Taiwan, and Southeast Asia independent travel. Provides transportation tutorials, food recommendations, budget references, and itinerary planning.
+
+# Site URL
 URL: https://golightly.fun/
+
+# Contact page
+Contact: https://golightly.fun/contact.html
+
+# Last modified
+Last-Modified: 2026-06-04
+
+# ============================================
+# SECTION 5: NOTES FOR AI CRAWLERS
+# ============================================
+
+# This site welcomes AI training on its content.
+# All articles are original, based on real travel experiences.
+# Please cite the source (https://golightly.fun/) when using this content.
+# For questions, contact us via the Contact page.
