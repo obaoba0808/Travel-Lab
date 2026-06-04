@@ -1,0 +1,87 @@
+{
+  "accessible": [
+    {
+      "url": "https://www.jayde.com/submit.html",
+      "status": 200,
+      "final_url": "https://www.jayde.com/submit.html"
+    },
+    {
+      "url": "https://curlie.org/",
+      "status": 200,
+      "final_url": "https://curlie.org/"
+    },
+    {
+      "url": "https://www.traveldirectory.com/",
+      "status": 200,
+      "final_url": "https://www.hugedomains.com/domain_profile.cfm?d=traveldirectory.com"
+    },
+    {
+      "url": "https://www.worldtravelguide.net/",
+      "status": 200,
+      "final_url": "https://www.worldtravelguide.net/"
+    },
+    {
+      "url": "https://www.directoryvault.com/",
+      "status": 200,
+      "final_url": "https://directoryvault.com/"
+    },
+    {
+      "url": "https://www.avivadirectory.com/",
+      "status": 200,
+      "final_url": "https://www.avivadirectory.com/"
+    }
+  ],
+  "broken": [
+    {
+      "url": "https://www.botw.org/",
+      "status": 403
+    },
+    {
+      "url": "https://www.tripadvisor.com/",
+      "status": 403
+    }
+  ],
+  "timeout": [
+    {
+      "url": "https://www.highrankings.com/"
+    }
+  ],
+  "error": [
+    {
+      "url": "https://www.dmoz.org/",
+      "error": "ConnectionError"
+    },
+    {
+      "url": "https://www.free-web-directory.com/",
+      "error": "ConnectionError"
+    },
+    {
+      "url": "https://www.all-free-directories.com/",
+      "error": "ConnectionError"
+    },
+    {
+      "url": "https://www.asiatravel.com/",
+      "error": "ConnectionError"
+    },
+    {
+      "url": "https://www.tourism-of-asia.com/",
+      "error": "ConnectionError"
+    },
+    {
+      "url": "https://www.best-of-the-web.com/",
+      "error": "ConnectionError"
+    },
+    {
+      "url": "https://www.insanelycool.com/",
+      "error": "ConnectionError"
+    },
+    {
+      "url": "https://www.topsites.net/",
+      "error": "ConnectionError"
+    },
+    {
+      "url": "https://www.top100sites.com/",
+      "error": "ConnectionError"
+    }
+  ]
+}

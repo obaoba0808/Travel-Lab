@@ -1,0 +1,76 @@
+{
+  "found_count": 9,
+  "found_at": "2026-06-04T03:42:00+08:00",
+  "directories": [
+    {
+      "name": "Directory Journal",
+      "url": "https://www.directoryjournal.com/",
+      "type": "general",
+      "difficulty": "medium",
+      "notes": "免費提交，需要審核"
+    },
+    {
+      "name": "Jayde",
+      "url": "https://www.jayde.com/",
+      "type": "general",
+      "difficulty": "easy",
+      "notes": "免費目錄提交"
+    },
+    {
+      "name": "Gimpsy",
+      "url": "https://www.gimpsy.com/",
+      "type": "general",
+      "difficulty": "easy",
+      "notes": "人工審核"
+    },
+    {
+      "name": "Scrub The Web",
+      "url": "https://www.scrubtheweb.com/",
+      "type": "general",
+      "difficulty": "easy",
+      "notes": "免費提交"
+    },
+    {
+      "name": "Site Promotion",
+      "url": "https://www.sitepromotion.com/",
+      "type": "seo",
+      "difficulty": "medium",
+      "notes": "SEO 相關目錄"
+    },
+    {
+      "name": "Marketing Internet Directory",
+      "url": "https://www.marketinginternetdirectory.com/",
+      "type": "marketing",
+      "difficulty": "medium",
+      "notes": "行銷相關目錄"
+    },
+    {
+      "name": "Text Link Directory",
+      "url": "https://www.textlinkdirectory.com/",
+      "type": "seo",
+      "difficulty": "easy",
+      "notes": "免費提交"
+    },
+    {
+      "name": "Directory Critic",
+      "url": "https://www.directorycritic.com/",
+      "type": "general",
+      "difficulty": "medium",
+      "notes": "人工審核"
+    },
+    {
+      "name": "Free Directory",
+      "url": "https://www.freedirectory.com/",
+      "type": "general",
+      "difficulty": "easy",
+      "notes": "免費網站目錄"
+    },
+    {
+      "name": "World Travel Guide",
+      "url": "https://www.worldtravelguide.net/",
+      "type": "travel",
+      "difficulty": "hard",
+      "notes": "旅遊相關，權重高"
+    }
+  ]
+}
