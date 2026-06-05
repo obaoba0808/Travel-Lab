@@ -23,6 +23,7 @@ const PDF_LINKS = {
  'bangkok-food-map': 'https://obaoba0808.github.io/Travel-Lab/downloads/bangkok-food-map.pdf',
  'bangkok-massage-map': 'https://obaoba0808.github.io/Travel-Lab/downloads/bangkok-massage-map.pdf',
  'danang-map': 'https://obaoba0808.github.io/Travel-Lab/downloads/danang-map.pdf',
+ 'packing-checklist': 'https://obaoba0808.github.io/Travel-Lab/downloads/packing-checklist.pdf',
 };
 
 const PAGE_TITLES = {
@@ -47,6 +48,7 @@ const PAGE_TITLES = {
  'bangkok-food-map': '曼谷美食地圖',
  'bangkok-massage-map': '曼谷按摩地圖',
  'danang-map': '峴港景點地圖',
+ 'packing-checklist': '出國打包清單完整版',
 };
 
 const CORS = {
