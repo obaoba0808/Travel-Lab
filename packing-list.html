@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="author" content="均在路上"><title>日本旅遊行李清單2026｜均在路上 Travel Lab</title>
-<meta name="description" content="日本旅遊行李清單2026：3天、5天、7天必備物品打包指南，附藥品申報規定、液體限制、冬季禦寒衣物清單，讓你第一次出國打包也不漏掉任何東西。">
+<meta name="description" content="出國打包清單2026：互動式勾選功能、免費PDF下載，日本/韓國/東南亞3天5天7天必備物品完整指南，附藥品申報規定、液體限制、冬季禦寒衣物清單，讓你第一次出國打包也不漏掉任何東西。">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="canonical" href="https://golightly.fun/packing-list.html">
 <meta name="robots" content="index, follow">
@@ -56,7 +56,49 @@
 .lead-inline button:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(38,166,154,.45)}
 .lead-inline button:disabled{background:#ccc;cursor:not-allowed;transform:none;box-shadow:none}
 .lead-inline .lead-note{font-size:12px;color:#666;margin:12px 0 0}
+
+<style>
+.checklist-interactive{background:linear-gradient(135deg,#f0fdfa,#e0f7f7);border-radius:16px;padding:24px;margin:24px 0;border:2px solid #0ABAB5}
+.checklist-interactive h3{color:#078E8A;margin-bottom:16px;font-size:18px}
+.check-item{display:flex;align-items:center;padding:10px 0;border-bottom:1px solid rgba(10,186,181,0.2)}
+.check-item:last-child{border-bottom:none}
+.check-item input[type="checkbox"]{width:22px;height:22px;margin-right:12px;accent-color:#0ABAB5;cursor:pointer}
+.check-item label{flex:1;cursor:pointer;font-size:15px;line-height:1.5}
+.check-item.checked label{text-decoration:line-through;color:#888}
+.check-progress{background:#fff;border-radius:50px;padding:4px;margin-bottom:16px;overflow:hidden}
+.check-progress-bar{height:8px;background:linear-gradient(90deg,#0ABAB5,#078E8A);border-radius:50px;transition:width 0.3s}
+.check-stats{text-align:center;font-size:14px;color:#555;margin-top:12px}
+.check-stats strong{color:#078E8A;font-size:18px}
 </style>
+<script>
+function updateProgress() {
+  const items = document.querySelectorAll('.check-item input[type="checkbox"]');
+  const checked = document.querySelectorAll('.check-item input[type="checkbox"]:checked');
+  const percent = Math.round((checked.length / items.length) * 100);
+  document.getElementById('progressBar').style.width = percent + '%';
+  document.getElementById('checkedCount').textContent = checked.length;
+  document.getElementById('totalCount').textContent = items.length;
+  // Save to localStorage
+  localStorage.setItem('packingList', JSON.stringify(Array.from(items).map(i => i.checked)));
+}
+function loadProgress() {
+  const saved = localStorage.getItem('packingList');
+  if (saved) {
+    const items = document.querySelectorAll('.check-item input[type="checkbox"]');
+    const checked = JSON.parse(saved);
+    items.forEach((item, i) => { if (checked[i]) { item.checked = true; item.closest('.check-item').classList.add('checked'); }});
+    updateProgress();
+  }
+}
+document.addEventListener('DOMContentLoaded', loadProgress);
+document.querySelectorAll('.check-item input[type="checkbox"]').forEach(cb => {
+  cb.addEventListener('change', function() {
+    this.closest('.check-item').classList.toggle('checked', this.checked);
+    updateProgress();
+  });
+});
+</script>
+
 </head>
 <body>
 <div class="reading-progress" id="reading-progress"></div>
@@ -124,7 +166,7 @@
   <div class="hero-title-block">
     <div class="hero-title-inner">
       <span class="hero-region-tag">🧳 旅遊工具</span>
-      <h1 class="hero-main-title">旅遊打包清單2026版｜3分鐘檢查，出國不再漏帶任何東西</h1>
+      <h1 class="hero-main-title">出國打包清單2026｜互動式勾選+PDF免費下載</h1>
 <p class="author-line" style="color:#888;font-size:13px;margin:8px 0 16px;">📝 均在路上 Travel Lab 編輯部 · 更新於 2026 年</p>
       <p class="hero-sub-title">出發前3分鐘對照這份清單，確保任何東西都不會漏帶，讓你旅途無後顧之憂。</p>
     </div>
@@ -151,22 +193,46 @@
         <p>第一次去日本自由行、擔心漏帶東西的人｜想要優化行李、減少不必要的物品的人｜需要快速打包檢查清單的人</p>
       </div>
 
-      <h2>必備文件類（千萬不能漏！）</h2>
-      <ul class="checklist">
-        <li>✅ <strong>護照</strong>：有效期需在回國後6個月以上（日本入境規定）</li>
-        <li>✅ <strong>機票（或電子機票證明）</strong>：建議手機截圖+紙本各一份</li>
-        <li>✅ <strong>飯店預訂證明</strong>：Agoda / Booking / 飯店官方確認信</li>
-        <li>✅ <strong>來回機票行程表</strong>：海關可能會看（尤其是自由行）</li>
-        <li>✅ <strong>旅遊保險證明</strong>：建議購買，包含海外醫療險</li>
-        <li>✅ <strong>駕照（如果打算自駕）</strong>：台灣駕照+國際駕照（日本需申請）</li>
-      </ul>
+      
+<div class="checklist-interactive">
+  <h3>✅ 必備文件類（請勾選確認）</h3>
+  <div class="check-progress"><div class="check-progress-bar" id="progressBar" style="width:0%"></div></div>
+  <div class="check-item"><input type="checkbox" id="c1"><label for="c1">護照（有效期回國後6個月以上）</label></div>
+  <div class="check-item"><input type="checkbox" id="c2"><label for="c2">機票／電子機票證明（手機截圖+紙本）</label></div>
+  <div class="check-item"><input type="checkbox" id="c3"><label for="c3">飯店預訂證明（Agoda/Booking/官方確認信）</label></div>
+  <div class="check-item"><input type="checkbox" id="c4"><label for="c4">旅遊保險證明（海外醫療險建議購買）</label></div>
+  <div class="check-item"><input type="checkbox" id="c5"><label for="c5">駕照+國際駕照（如需自駕）</label></div>
+  <div class="check-stats">已勾選 <strong id="checkedCount">0</strong>／<strong id="totalCount">5</strong> 項</div>
+</div>
 
-      <div class="highlight-box-beautify">
-        <div class="hb-title">💡 小撇步</div>
-        <p>把所有重要文件「拍照+上傳雲端（Google Drive / iCloud）」，手機沒電或文件遺失時可以緊急使用。另外建議把護照個人資料頁「拍照存在手機相簿」，萬一護照遺失可以快速報案。</p>
-      </div>
+<div class="checklist-interactive">
+  <h3>📱 電子產品與充電設備</h3>
+  <div class="check-item"><input type="checkbox" id="c6"><label for="c6">手機+充電器（日本電壓100V可用）</label></div>
+  <div class="check-item"><input type="checkbox" id="c7"><label for="c7">旅行用轉接頭（萬國款，日本用A型兩扁腳）</label></div>
+  <div class="check-item"><input type="checkbox" id="c8"><label for="c8">行動電源（20,000mAh以內，必須隨身攜帶！）</label></div>
+  <div class="check-item"><input type="checkbox" id="c9"><label for="c9">筆記型電腦+變壓器（如需使用）</label></div>
+  <div class="check-item"><input type="checkbox" id="c10"><label for="c10">相機+備用電池</label></div>
+</div>
 
-      <h2>電子產品與充電設備</h2>
+<div class="checklist-interactive">
+  <h3>👕 衣物打包（依天數+季節調整）</h3>
+  <div class="check-item"><input type="checkbox" id="c11"><label for="c11">上衣（天數+1件備用）</label></div>
+  <div class="check-item"><input type="checkbox" id="c12"><label for="c12">褲裝（天數÷2+1件）</label></div>
+  <div class="check-item"><input type="checkbox" id="c13"><label for="c13">內衣褲襪（天數+1套備用）</label></div>
+  <div class="check-item"><input type="checkbox" id="c14"><label for="c14">外套（依季節：羽絨/薄外套）</label></div>
+  <div class="check-item"><input type="checkbox" id="c15"><label for="c15">舒適好走的鞋子（走路會很多！）</label></div>
+</div>
+
+<div class="checklist-interactive">
+  <h3>🧴 盥洗用品與保養品</h3>
+  <div class="check-item"><input type="checkbox" id="c16"><label for="c16">牙刷+牙膏（飯店有提供，但習慣用自己的更好）</label></div>
+  <div class="check-item"><input type="checkbox" id="c17"><label for="c17">洗面乳+化妝水+乳液（小於100ml）</label></div>
+  <div class="check-item"><input type="checkbox" id="c18"><label for="c18">防曬乳 SPF50+（日本紫外線強）</label></div>
+  <div class="check-item"><input type="checkbox" id="c19"><label for="c19">個人常備藥品（注意日本入境規定！）</label></div>
+  <div class="check-item"><input type="checkbox" id="c20"><label for="c20">OK繃+消毒用品（走路多容易磨腳）</label></div>
+</div>
+
+<h2>電子產品與充電設備</h2>
       <ul class="checklist">
         <li>📱 <strong>手機+充電器</strong>：日本電壓100V（台灣110V），手機充電器通常可用</li>
         <li>🔌 <strong>旅行用轉接頭（萬國款）</strong>：日本用A型（兩扁腳），台灣插頭可直接用，但建議帶萬國轉接頭以備不時之需</li>
@@ -373,6 +439,20 @@
     </aside>
 
   </div><!-- /hub-grid-wrap -->
+
+<!-- PDF Download CTA -->
+<div style="background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;padding:32px;border-radius:20px;margin:32px auto;max-width:640px;text-align:center;">
+  <div style="font-size:48px;margin-bottom:12px;">📥</div>
+  <h3 style="font-size:22px;margin-bottom:8px;">免費下載完整打包清單 PDF</h3>
+  <p style="margin-bottom:16px;opacity:0.9;">包含日本、韓國、東南亞打包清單，出發前印出來對照更方便</p>
+  <form action="https://formspree.io/f/xredjjgb" method="POST" style="display:flex;flex-direction:column;align-items:center;gap:10px;max-width:360px;margin:0 auto">
+    <input type="email" name="email" placeholder="輸入你的Email" required style="width:100%;padding:14px 20px;border:none;border-radius:50px;font-size:15px;box-sizing:border-box">
+    <input type="hidden" name="resource" value="packing-list">
+    <button type="submit" style="background:#fff;color:#764ba2;padding:14px 40px;border:none;border-radius:50px;font-size:16px;font-weight:700;cursor:pointer;width:100%">免費下載 PDF</button>
+  </form>
+  <p style="font-size:12px;margin-top:12px;opacity:0.7;">🔒 不會垃圾郵件，隨時可取消訂閱</p>
+</div>
+
 </div><!-- /hub-content -->
 
 <footer class="site-footer">
