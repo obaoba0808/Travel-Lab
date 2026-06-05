@@ -396,7 +396,7 @@ function generateChecklist() {
 
 function buildCategory(category) {
   let itemsHtml = category.items.map(item => `
-    <div class="check-item" onclick="toggleItem(this)">
+    <div class="check-item">
       <input type="checkbox" id="${item.id}">
       <label class="item-text" for="${item.id}">${item.text}</label>
       ${item.note ? `<span class="item-note">${item.note}</span>` : ''}
@@ -417,6 +417,14 @@ function buildCategory(category) {
 
 function toggleItem(element) {
   const checkbox = element.querySelector('input[type="checkbox"]');
+  // 如果點擊的是 checkbox 本身，讓它自己處理
+  if (event.target.type === 'checkbox') {
+    element.classList.toggle('checked', checkbox.checked);
+    updateProgress();
+    saveProgress();
+    return;
+  }
+  // 如果點擊的是其他區域，手動切換
   checkbox.checked = !checkbox.checked;
   element.classList.toggle('checked', checkbox.checked);
   updateProgress();
@@ -424,6 +432,16 @@ function toggleItem(element) {
 }
 
 function setupCheckboxListeners() {
+  // 為每個 checkbox 添加 change 事件
+  document.querySelectorAll('.check-item input[type="checkbox"]').forEach(cb => {
+    cb.addEventListener('change', function(e) {
+      e.stopPropagation();
+      const item = this.closest('.check-item');
+      item.classList.toggle('checked', this.checked);
+      updateProgress();
+      saveProgress();
+    });
+  });
   loadProgress();
   updateProgress();
 }
