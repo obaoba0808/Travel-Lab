@@ -39,4 +39,11 @@
   <url><loc>https://golightly.fun/taiwan-travel-guide.html</loc><lastmod>2026-05-26</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://golightly.fun/packing-list-online.html</loc><lastmod>2026-05-26</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://golightly.fun/budget-calculator.html</loc><lastmod>2026-06-05</lastmod><changefreq>monthly</changefreq></url>
+
+  <url>
+    <loc>https://golightly.fun/packing-checklist.html</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>

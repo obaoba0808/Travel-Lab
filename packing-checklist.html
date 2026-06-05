@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="author" content="均在路上">
+<title>互動式打包清單｜選擇目的地自動生成｜均在路上 Travel Lab</title>
+<meta name="description" content="互動式出國打包清單工具：選擇目的地（日本/韓國/東南亞）、天數、季節，自動生成客製化清單，支援勾選進度追蹤、列印功能。">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="canonical" href="https://golightly.fun/packing-checklist.html">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="互動式打包清單｜選擇目的地自動生成｜均在路上 Travel Lab">
+<meta property="og:description" content="互動式出國打包清單工具：選擇目的地、天數、季節，自動生成客製化清單，支援勾選與列印。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://golightly.fun/packing-checklist.html">
+<meta property="og:image" content="https://golightly.fun/images/og/og-packing-checklist.jpg">
+<meta property="og:site_name" content="均在路上 Travel Lab">
+<meta name="twitter:card" content="summary_large_image">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "互動式打包清單工具",
+  "description": "選擇目的地、天數、季節，自動生成客製化出國打包清單",
+  "url": "https://golightly.fun/packing-checklist.html",
+  "applicationCategory": "TravelApplication",
+  "operatingSystem": "Any",
+  "offers": {"@type": "Offer", "price": "0", "priceCurrency": "TWD"}
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✈</text></svg>">
+
+<style>
+:root{--tiffany:#0ABAB5;--tiffany-dark:#078E8A;--tiffany-light:#B2E8E6}
+*{box-sizing:border-box}
+body{font-family:'Noto Sans TC',sans-serif;background:#f5f5f5;margin:0;padding:0;color:#333}
+.container{max-width:900px;margin:0 auto;padding:20px}
+
+/* Header */
+.header{text-align:center;padding:40px 20px;background:linear-gradient(135deg,var(--tiffany),var(--tiffany-dark));color:#fff;border-radius:0 0 30px 30px;margin-bottom:30px}
+.header h1{font-size:28px;margin:0 0 12px}
+.header p{font-size:16px;opacity:0.9;margin:0}
+
+/* Selection Cards */
+.selector-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-bottom:30px}
+.selector-card{background:#fff;border-radius:16px;padding:24px;box-shadow:0 2px 12px rgba(0,0,0,0.08)}
+.selector-card h3{font-size:14px;color:#888;margin:0 0 12px;text-transform:uppercase;letter-spacing:1px}
+.option-btns{display:flex;flex-wrap:wrap;gap:8px}
+.option-btn{padding:10px 16px;border:2px solid #e0e0e0;border-radius:50px;background:#fff;cursor:pointer;font-size:14px;transition:all 0.2s}
+.option-btn:hover{border-color:var(--tiffany);background:#f0fdfa}
+.option-btn.active{border-color:var(--tiffany);background:var(--tiffany);color:#fff;font-weight:700}
+.option-btn.selected{border-color:var(--tiffany);background:var(--tiffany);color:#fff}
+
+/* Generate Button */
+.generate-btn{width:100%;padding:18px;border:none;border-radius:50px;background:linear-gradient(135deg,var(--tiffany),var(--tiffany-dark));color:#fff;font-size:18px;font-weight:700;cursor:pointer;transition:transform 0.2s,box-shadow 0.2s;margin-bottom:30px}
+.generate-btn:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(10,186,181,0.4)}
+.generate-btn:disabled{background:#ccc;cursor:not-allowed;transform:none;box-shadow:none}
+
+/* Checklist Container */
+.checklist-container{background:#fff;border-radius:20px;padding:30px;box-shadow:0 2px 12px rgba(0,0,0,0.08);display:none}
+.checklist-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:24px;padding-bottom:16px;border-bottom:2px solid #f0f0f0}
+.checklist-header h2{font-size:22px;margin:0;color:var(--tiffany-dark)}
+.header-actions{display:flex;gap:10px}
+.action-btn{padding:10px 20px;border:2px solid var(--tiffany);border-radius:50px;background:#fff;color:var(--tiffany);font-size:14px;font-weight:600;cursor:pointer;transition:all 0.2s}
+.action-btn:hover{background:var(--tiffany);color:#fff}
+
+/* Progress Bar */
+.progress-section{margin-bottom:24px}
+.progress-bar-bg{height:12px;background:#e0e0e0;border-radius:50px;overflow:hidden}
+.progress-bar-fill{height:100%;background:linear-gradient(90deg,var(--tiffany),var(--tiffany-dark));border-radius:50px;transition:width 0.3s}
+.progress-text{text-align:center;font-size:14px;color:#666;margin-top:8px}
+.progress-text strong{color:var(--tiffany-dark);font-size:20px}
+
+/* Category Section */
+.category{margin-bottom:28px}
+.category-header{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+.category-icon{font-size:24px}
+.category-title{font-size:18px;font-weight:700;color:#333}
+.category-count{margin-left:auto;font-size:13px;color:#888;background:#f0f0f0;padding:4px 12px;border-radius:50px}
+
+/* Checklist Items */
+.check-items{display:flex;flex-direction:column;gap:8px}
+.check-item{display:flex;align-items:center;padding:12px 16px;background:#f8f9fa;border-radius:12px;cursor:pointer;transition:all 0.2s}
+.check-item:hover{background:#f0fdfa}
+.check-item.checked{background:#e8f5e9}
+.check-item.checked .item-text{text-decoration:line-through;color:#888}
+.check-item input[type="checkbox"]{width:22px;height:22px;margin-right:12px;accent-color:var(--tiffany);cursor:pointer}
+.item-text{flex:1;font-size:15px}
+.item-note{font-size:12px;color:#888;margin-left:8px}
+
+/* PDF Download Section */
+.pdf-section{background:linear-gradient(135deg,#667eea,#764ba2);border-radius:20px;padding:32px;text-align:center;color:#fff;margin-top:30px}
+.pdf-section h3{font-size:20px;margin:0 0 8px}
+.pdf-section p{font-size:14px;opacity:0.9;margin:0 0 20px}
+.pdf-form{display:flex;flex-direction:column;align-items:center;gap:10px;max-width:360px;margin:0 auto}
+.pdf-form input[type="email"]{width:100%;padding:14px 20px;border:none;border-radius:50px;font-size:15px}
+.pdf-form button{width:100%;padding:14px 40px;border:none;border-radius:50px;background:#fff;color:#764ba2;font-size:16px;font-weight:700;cursor:pointer}
+.pdf-note{font-size:12px;opacity:0.7;margin-top:12px}
+
+/* Footer */
+.footer{text-align:center;padding:30px;color:#888;font-size:13px}
+
+/* Print Styles */
+@media print{
+  .selector-grid,.generate-btn,.header-actions,.pdf-section,.footer{display:none!important}
+  .checklist-container{display:block!important;box-shadow:none;border:1px solid #ddd}
+  .check-item{break-inside:avoid}
+}
+
+/* Responsive */
+@media(max-width:600px){
+  .header h1{font-size:22px}
+  .selector-grid{grid-template-columns:1fr}
+  .checklist-header{flex-direction:column;gap:12px;align-items:flex-start}
+  .header-actions{width:100%}
+  .action-btn{flex:1;text-align:center}
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>🧳 互動式打包清單</h1>
+  <p>選擇目的地、天數、季節，自動生成你的專屬清單</p>
+</div>
+
+<div class="container">
+
+  <!-- Selection Section -->
+  <div class="selector-grid">
+    <div class="selector-card">
+      <h3>🌍 目的地</h3>
+      <div class="option-btns" id="destBtns">
+        <button class="option-btn" data-value="japan">日本</button>
+        <button class="option-btn" data-value="korea">韓國</button>
+        <button class="option-btn" data-value="sea">東南亞</button>
+        <button class="option-btn" data-value="taiwan">台灣</button>
+      </div>
+    </div>
+    <div class="selector-card">
+      <h3>📅 天數</h3>
+      <div class="option-btns" id="daysBtns">
+        <button class="option-btn" data-value="3">3天2夜</button>
+        <button class="option-btn" data-value="5">5天4夜</button>
+        <button class="option-btn" data-value="7">7天以上</button>
+      </div>
+    </div>
+    <div class="selector-card">
+      <h3>🌡️ 季節</h3>
+      <div class="option-btns" id="seasonBtns">
+        <button class="option-btn" data-value="spring">春季</button>
+        <button class="option-btn" data-value="summer">夏季</button>
+        <button class="option-btn" data-value="autumn">秋季</button>
+        <button class="option-btn" data-value="winter">冬季</button>
+      </div>
+    </div>
+  </div>
+
+  <button class="generate-btn" id="generateBtn" onclick="generateChecklist()">生成專屬清單 →</button>
+
+  <!-- Checklist Container -->
+  <div class="checklist-container" id="checklistContainer">
+    <div class="checklist-header">
+      <h2 id="checklistTitle">你的打包清單</h2>
+      <div class="header-actions">
+        <button class="action-btn" onclick="resetChecklist()">🔄 重置</button>
+        <button class="action-btn" onclick="window.print()">🖨️ 列印</button>
+      </div>
+    </div>
+
+    <div class="progress-section">
+      <div class="progress-bar-bg">
+        <div class="progress-bar-fill" id="progressBar" style="width:0%"></div>
+      </div>
+      <div class="progress-text">已打包 <strong id="checkedCount">0</strong> / <strong id="totalCount">0</strong> 項</div>
+    </div>
+
+    <div id="checklistContent"></div>
+
+    <!-- PDF Download -->
+    <div class="pdf-section">
+      <h3>📥 免費下載 PDF 版本</h3>
+      <p>填寫 Email，立即收到完整打包清單 PDF</p>
+      <form class="pdf-form" action="https://formspree.io/f/xredjjgb" method="POST">
+        <input type="email" name="email" placeholder="輸入你的 Email" required>
+        <input type="hidden" name="resource" value="packing-checklist">
+        <button type="submit">免費下載 PDF</button>
+      </form>
+      <p class="pdf-note">🔒 不會垃圾郵件，隨時可取消訂閱</p>
+    </div>
+  </div>
+
+</div>
+
+<div class="footer">
+  © 2026 均在路上 Travel Lab | <a href="https://golightly.fun">golightly.fun</a>
+</div>
+
+<script>
+// Packing data by destination
+const packingData = {
+  documents: {
+    icon: '📋',
+    title: '必備文件',
+    items: [
+      {id:'passport', text:'護照（有效期6個月以上）', note:'必備'},
+      {id:'ticket', text:'機票/電子機票證明', note:'手機截圖+紙本'},
+      {id:'hotel', text:'飯店預訂證明', note:'Agoda/Booking確認信'},
+      {id:'insurance', text:'旅遊保險證明', note:'建議購買'},
+      {id:'license', text:'駕照+國際駕照', note:'如需自駕'}
+    ]
+  },
+  electronics: {
+    icon: '📱',
+    title: '電子產品',
+    items: [
+      {id:'phone', text:'手機+充電器', note:''},
+      {id:'adapter', text:'旅行轉接頭', note:'萬國款'},
+      {id:'powerbank', text:'行動電源（20,000mAh內）', note:'必須隨身攜帶！'},
+      {id:'laptop', text:'筆電+變壓器', note:'如需使用'},
+      {id:'camera', text:'相機+備用電池', note:''}
+    ]
+  },
+  clothing: {
+    icon: '👕',
+    title: '衣物',
+    getItems: function(days, season) {
+      const base = [
+        {id:'tops', text:'上衣', note:days+'件'},
+        {id:'pants', text:'褲裝', note:Math.ceil(days/2)+'件'},
+        {id:'underwear', text:'內衣褲', note:days+'套'},
+        {id:'socks', text:'襪子', note:days+'雙'},
+        {id:'shoes', text:'舒適好走的鞋子', note:'必備！'}
+      ];
+      // Season-specific additions
+      if (season === 'winter') {
+        base.push({id:'jacket', text:'厚外套/羽絨外套', note:'必備'});
+        base.push({id:'thermal', text:'發熱衣/刷毛內搭', note:'必備'});
+        base.push({id:'gloves', text:'手套', note:''});
+        base.push({id:'hat', text:'毛帽', note:''});
+        base.push({id:'scarf', text:'圍巾', note:''});
+      } else if (season === 'summer') {
+        base.push({id:'shorts', text:'短褲', note:''});
+        base.push({id:'sandals', text:'涼鞋/拖鞋', note:''});
+        base.push({id:'cap', text:'帽子', note:'防曬用'});
+      } else {
+        base.push({id:'lightjacket', text:'薄外套', note:'早晚溫差'});
+      }
+      return base;
+    }
+  },
+  toiletries: {
+    icon: '🧴',
+    title: '盥洗用品',
+    items: [
+      {id:'toothbrush', text:'牙刷+牙膏', note:'飯店有提供'},
+      {id:'skincare', text:'保養品（<100ml）', note:'裝夾鏈袋'},
+      {id:'sunscreen', text:'防曬乳 SPF50+', note:'必備'},
+      {id:'medicine', text:'個人常備藥', note:'注意入境規定'},
+      {id:'bandaid', text:'OK繃', note:'走路多必備'}
+    ]
+  },
+  others: {
+    icon: '🎒',
+    title: '其他用品',
+    items: [
+      {id:'umbrella', text:'輕便雨傘', note:''},
+      {id:'bag', text:'隨身背包', note:''},
+      {id:'water', text:'保溫瓶/水壺', note:''},
+      {id:'snacks', text:'零食/點心', note:''},
+      {id:'plasticbag', text:'塑膠袋/夾鏈袋', note:'裝髒衣服'}
+    ]
+  },
+  destination: {
+    japan: {
+      icon: '🎌',
+      title: '日本限定',
+      items: [
+        {id:'jrpass', text:'JR Pass（如適用）', note:'提前購買'},
+        {id:'iccard', text:'ICOCA/Suica 卡', note:'方便搭車'},
+        {id:'pocketwifi', text:'eSIM/分享器', note:'提前預訂'}
+      ]
+    },
+    korea: {
+      icon: '🇰🇷',
+      title: '韓國限定',
+      items: [
+        {id:'tmoney', text:'T-Money 卡', note:'便利商店買'},
+        {id:'wifi', text:'eSIM/EG Sim', note:'提前預訂'},
+        {id:'converter', text:'轉接頭（C/F型）', note:'圓形插孔'}
+      ]
+    },
+    sea: {
+      icon: '🌴',
+      title: '東南亞限定',
+      items: [
+        {id:'mosquito', text:'防蚊液', note:'必備！'},
+        {id:'stomach', text:'腸胃藥', note:'飲食習慣不同'},
+        {id:'adapter', text:'轉接頭（多國型）', note:'各國不同'}
+      ]
+    },
+    taiwan: {
+      icon: '🇹🇼',
+      title: '台灣國內',
+      items: [
+        {id:'easywallet', text:'悠遊卡/一卡通', note:''},
+        {id:'id', text:'身分證', note:'住宿登記用'}
+      ]
+    }
+  }
+};
+
+let selectedDest = null;
+let selectedDays = 5;
+let selectedSeason = null;
+
+// Option button click handlers
+document.querySelectorAll('.option-btn').forEach(btn => {
+  btn.addEventListener('click', function() {
+    const parent = this.parentElement;
+    parent.querySelectorAll('.option-btn').forEach(b => b.classList.remove('active'));
+    this.classList.add('active');
+    
+    const value = this.dataset.value;
+    if (parent.id === 'destBtns') selectedDest = value;
+    else if (parent.id === 'daysBtns') selectedDays = parseInt(value);
+    else if (parent.id === 'seasonBtns') selectedSeason = value;
+    
+    updateGenerateBtn();
+  });
+});
+
+function updateGenerateBtn() {
+  const btn = document.getElementById('generateBtn');
+  if (selectedDest && selectedDays && selectedSeason) {
+    btn.disabled = false;
+  } else {
+    btn.disabled = true;
+  }
+}
+
+function generateChecklist() {
+  if (!selectedDest || !selectedDays || !selectedSeason) return;
+  
+  const container = document.getElementById('checklistContainer');
+  const content = document.getElementById('checklistContent');
+  
+  // Update title
+  const destNames = {japan:'日本', korea:'韓國', sea:'東南亞', taiwan:'台灣'};
+  const seasonNames = {spring:'春季', summer:'夏季', autumn:'秋季', winter:'冬季'};
+  document.getElementById('checklistTitle').textContent = 
+    `${destNames[selectedDest]} ${selectedDays}天 ${seasonNames[selectedSeason]} 打包清單`;
+  
+  // Build checklist HTML
+  let html = '';
+  
+  // Documents
+  html += buildCategory(packingData.documents);
+  
+  // Electronics
+  html += buildCategory(packingData.electronics);
+  
+  // Clothing (dynamic based on days + season)
+  const clothingCategory = {
+    icon: packingData.clothing.icon,
+    title: packingData.clothing.title,
+    items: packingData.clothing.getItems(selectedDays, selectedSeason)
+  };
+  html += buildCategory(clothingCategory);
+  
+  // Toiletries
+  html += buildCategory(packingData.toiletries);
+  
+  // Others
+  html += buildCategory(packingData.others);
+  
+  // Destination-specific
+  if (packingData.destination[selectedDest]) {
+    html += buildCategory(packingData.destination[selectedDest]);
+  }
+  
+  content.innerHTML = html;
+  container.style.display = 'block';
+  
+  // Scroll to checklist
+  container.scrollIntoView({behavior:'smooth'});
+  
+  // Setup checkbox listeners
+  setupCheckboxListeners();
+}
+
+function buildCategory(category) {
+  let itemsHtml = category.items.map(item => `
+    <div class="check-item" onclick="toggleItem(this)">
+      <input type="checkbox" id="${item.id}">
+      <label class="item-text" for="${item.id}">${item.text}</label>
+      ${item.note ? `<span class="item-note">${item.note}</span>` : ''}
+    </div>
+  `).join('');
+  
+  return `
+    <div class="category">
+      <div class="category-header">
+        <span class="category-icon">${category.icon}</span>
+        <span class="category-title">${category.title}</span>
+        <span class="category-count">${category.items.length} 項</span>
+      </div>
+      <div class="check-items">${itemsHtml}</div>
+    </div>
+  `;
+}
+
+function toggleItem(element) {
+  const checkbox = element.querySelector('input[type="checkbox"]');
+  checkbox.checked = !checkbox.checked;
+  element.classList.toggle('checked', checkbox.checked);
+  updateProgress();
+  saveProgress();
+}
+
+function setupCheckboxListeners() {
+  loadProgress();
+  updateProgress();
+}
+
+function updateProgress() {
+  const items = document.querySelectorAll('.check-item input[type="checkbox"]');
+  const checked = document.querySelectorAll('.check-item input[type="checkbox"]:checked');
+  const percent = items.length > 0 ? Math.round((checked.length / items.length) * 100) : 0;
+  
+  document.getElementById('progressBar').style.width = percent + '%';
+  document.getElementById('checkedCount').textContent = checked.length;
+  document.getElementById('totalCount').textContent = items.length;
+}
+
+function saveProgress() {
+  const items = document.querySelectorAll('.check-item input[type="checkbox"]');
+  const state = Array.from(items).map(i => i.checked);
+  localStorage.setItem('packingList_' + selectedDest + '_' + selectedDays + '_' + selectedSeason, JSON.stringify(state));
+}
+
+function loadProgress() {
+  const saved = localStorage.getItem('packingList_' + selectedDest + '_' + selectedDays + '_' + selectedSeason);
+  if (saved) {
+    const state = JSON.parse(saved);
+    const items = document.querySelectorAll('.check-item input[type="checkbox"]');
+    items.forEach((item, i) => {
+      if (state[i]) {
+        item.checked = true;
+        item.closest('.check-item').classList.add('checked');
+      }
+    });
+  }
+}
+
+function resetChecklist() {
+  const items = document.querySelectorAll('.check-item input[type="checkbox"]');
+  items.forEach(item => {
+    item.checked = false;
+    item.closest('.check-item').classList.remove('checked');
+  });
+  updateProgress();
+  localStorage.removeItem('packingList_' + selectedDest + '_' + selectedDays + '_' + selectedSeason);
+}
+
+// Initialize
+updateGenerateBtn();
+</script>
+
+</body>
+</html>
