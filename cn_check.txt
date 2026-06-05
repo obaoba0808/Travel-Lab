@@ -1,3 +1,0 @@
-﻿Text length: 469
-Has Chinese: True
-Result: GOOD
