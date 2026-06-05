@@ -1,0 +1,10 @@
+﻿python :   File "C:\Users\FH01\.qclaw\workspace-cwapojim0yfmyvq8\Travel-Lab\_add_internal_links.py", line 30
+位於 線路:1 字元:154
++ ... myvq8\Travel-Lab"; python -X utf8 _add_internal_links.py 2>&1 | Out-F ...
++                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (  File "C:\User...ks.py", line 30:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+    if '<h2>🍁 京都賞楓攻略</h2>' in content and 'class="related-posts"' not in content[content.find('<h2>🍁 京都賞楓攻略</h2>'):]
+                                                                                                                    ^
+SyntaxError: expected ':'
