@@ -632,3 +632,79 @@ WordPress.com, Reddit, Pinterest, Pearltrees, Instapaper, GitHub Profile README
 *下次對話時：
 - 均在路上 Travel Lab：GSC sitemap 提交確認（用戶手動操作）
 - 均在路上 Travel Lab：外鏈建設自動化完成（2026-05-26）
+
+
+---
+
+## 🚀 均在路上 Travel Lab（golightly.fun）2026-06-05 擴展完成
+
+### 更新時間：2026-06-05 23:10 GMT+8
+
+### 快速狀態
+- **全站頁面：60+ HTML**
+- **Sitemap：62 URLs**（commit 977a5dd）
+- **Commit 977a5dd**：修復 bangkok-4days + packing-list 導航（加入新加坡/吉隆坡/吳哥窟連結）
+- **W1-W15 全部完成**：1個月的內容行事曆執行完畢
+- **導航全覆蓋：50/50 個標準格式頁面**（含新加坡/吉隆坡/吳哥窟）
+
+### 新增頁面清單（W9-W15）
+| 檔案 | 類型 | 說明 |
+|------|------|------|
+| seoul-5days.html | A | 首爾5天4夜攻略 |
+| korea-transport.html | B | 韓國交通攻略 |
+| korea-budget.html | C | 韓國預算試算器 |
+| kansai-pass.html | B | 關西周遊券 |
+| travel-tools.html | C | 旅遊工具合集 |
+| chiang-mai.html | A | 清邁遊牧攻略（擴充） |
+| thailand-sim.html | C | 泰國eSIM指南 |
+| notion-travel-template.html | C | Notion旅遊模板 |
+| tokyo-accommodation.html | B | 東京住宿推薦 |
+| japan-drugstore-checklist.html | C | 日本藥妝必買 |
+| busan-4days.html | A | 釜山4天3夜 |
+| jeju-island.html | A | 濟州島自駕攻略（擴充） |
+| osaka-food.html | A | 大阪美食攻略（擴充） |
+| seoul-food-map.html | A | 首爾美食地圖 |
+| japan-travel.html | Portal | 日本自由行入口（重寫） |
+| korea-travel.html | Portal | 韓國自由行入口（重寫） |
+| tax-refund-calculator.html | C | 免稅退稅試算器 |
+| fukuoka-5days.html | A | 福岡5天4夜攻略 |
+| japan-money-saving-tips.html | B | 日本省錢密技 |
+| korea-money-saving-tips.html | B | 韓國省錢密技 |
+| power-plug-guide.html | C | 各國插座電壓指南 |
+| vietnam-danang.html | A | 越南峴港4天攻略（擴充） |
+| vietnam-hochiminh.html | A | 胡志明市3天2夜攻略 |
+| bangkok-4days.html | A | 曼谷4天3夜攻略 |
+| credit-card-miles-guide.html | B | 里程兌換機票教學 |
+| budget-airline-guide.html | B | 廉航搶票攻略 |
+| miles-calculator.html | C | 里程累積試算器 |
+| bangkok-massage.html | B | 曼谷按摩推薦 |
+| monthly-review.html | C | 月度回顧頁 |
+| singapore-3days.html | A | 新加坡3天2夜攻略 |
+| angkor-wat-2days.html | A | 吳哥窟2天1夜攻略 |
+| kualalumpur-3days.html | A | 吉隆坡3天2夜攻略 |
+| seoul-food.html | A | 首爾美食攻略（擴充） |
+| osaka-usj.html | B | 大阪環球影城攻略 |
+
+### 全站導航狀態（2026-06-05 23:10）
+- **50/50 標準格式頁面**已完成東南亞下拉選單更新（新加坡/吉隆坡/吳哥窟連結）
+- **bangkok-4days.html** + **packing-list.html**：2026-06-05 23:10 修復並推送（commit 977a5dd）
+
+### P0 待辦（需要用戶操作或外部整合）
+- ⏳ Google Search Console 提交 sitemap.xml
+- ⏳ Booking.com 聯盟申請
+- ⏳ GetYourGuide 聯盟申請
+- ⏳ Email Lead Magnet 端對端測試（Cloudflare Worker RESEND_API_KEY 未設定）
+- ⏳ 外鏈 outreach（台南/高雄經紀網站）
+
+### 技術備註
+- Git 分支：master（非 main）
+- GitHub: https://github.com/obaoba0808/Travel-Lab
+- 部署：Cloudflare Pages
+- Python 寫入：加 -X utf8 參數解決 Windows cp950 編碼問題
+- write 工具：不能用於最終目標檔案，用 Python 腳本
+
+*下次對話時：
+- 確認 golightly.fun 在 Google Search Console 的收錄狀態
+- 申請 Booking.com 聯盟
+- 申請 GetYourGuide 聯盟
+- 設定 Cloudflare Worker RESEND_API_KEY 完成 Email Lead Magnet
