@@ -433,7 +433,7 @@ div[style*="max-width:900px;margin:0 auto 30px;padding:0 20px;"] {
 .card-body .read-more:hover { background:var(--tiffany); color:#fff; }
 
 /* ========== ARTICLE BODY (Now within col-center) ========== */
-.article-container { max-width:720px; margin:0 auto; padding:0 10px; }
+.article-container { max-width:800px; margin:0 auto; padding:0 30px; }
 .article-container h2 { font-size:23px; color:var(--tiffany-dark); margin:44px 0 18px; padding-left:18px; border-left:5px solid var(--tiffany); line-height:1.5; }
 .article-container h3 { font-size:19px; color:var(--text-dark); margin:28px 0 12px; padding-bottom:8px; border-bottom:2px solid var(--tiffany-light); display:inline-block; }
 .article-container p { margin-bottom:15px; }
@@ -587,7 +587,7 @@ div[style*="max-width:900px;margin:0 auto 30px;padding:0 20px;"] {
     padding: 20px 15px;
   }
   .article-container {
-    padding: 20px 15px 30px 15px;
+    padding: 20px 25px 30px 25px;
   }
 
   /* Further adjustments for article and FAQ on smaller screens */
@@ -616,7 +616,7 @@ div[style*="max-width:900px;margin:0 auto 30px;padding:0 20px;"] {
     .sidebar-card, .col-center { width: 100%; } /* Full width on smallest screens */
     .col-center { padding: 15px; } /* Reduced padding for content */
     .article-container {
-      padding: 15px 10px 20px 10px;
+      padding: 15px 20px 20px 20px;
     }
     .related-card .post-thumb { aspect-ratio: 16/9; }
     .footer-inner { padding: 0 10px; }

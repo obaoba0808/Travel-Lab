@@ -926,7 +926,7 @@
     order: 2 !important;
   }
   .article-container {
-    padding: 20px 15px 30px 15px !important;
+    padding: 20px 25px 30px 25px !important;
   }
 }
 
@@ -951,23 +951,23 @@
     order: 2 !important;
   }
   .article-container {
-    padding: 20px 15px 30px 15px !important;
+    padding: 20px 20px 30px 20px !important;
   }
 }
 
 /* 480px 断点 */
 @media (max-width: 480px) {
   .three-col-wrapper {
-    padding: 0 10px !important;
+    padding: 0 15px !important;
   }
   .sidebar-card, .col-center {
     width: 100% !important;
   }
   .col-center {
-    padding: 15px 10px !important;
+    padding: 15px 15px !important;
   }
   .article-container {
-    padding: 15px 10px 20px 10px !important;
+    padding: 15px 15px 20px 15px !important;
   }
 }
 /* ========== Car CTA Block (Taiwan pages) ==========
