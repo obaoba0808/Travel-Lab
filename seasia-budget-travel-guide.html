@@ -457,20 +457,7 @@ function submitLeadForm(ev){
           💬 LINE 群組
         </a>
       </div>
-    </div></nav>
-    <section class="hero-region" style="background-image: url('images/southeast-asia-hero.webp');">
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <span class="hero-region-tag">🌏 東南亞</span>
-            <h1>東南亞預算自由行攻略</h1>
-            <div class="hero-stats">
-                <span>📅 2026年最新</span>
-                <span>✈️ 均在路上</span>
-            </div>
-        </div>
-    </section>
-
-
+    </div>
   </div>
 
   <div class="footer-bottom">
@@ -482,6 +469,24 @@ function submitLeadForm(ev){
       <a href="disclaimer.html" style="color:inherit;">免責聲明</a>
     </div></div>
 
-        </footer></body>
-</html>
+        </footer>
 
+
+<script>
+  // Track affiliate link clicks via GA4
+  document.addEventListener('click', function(e) {
+    var link = e.target.closest('[data-affiliate]');
+    if (link) {
+      if (typeof gtag === 'function') {
+        gtag('event', 'affiliate_click', {
+          affiliate: link.getAttribute('data-affiliate'),
+          page: window.location.pathname
+        });
+      }
+    }
+  });
+</script>
+<script src="js/monetization.js" defer defer></script>
+
+</body>
+</html>
