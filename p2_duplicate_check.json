@@ -1,0 +1,96 @@
+{
+  "check_time": "1779959787.948668",
+  "duplicates_count": 10,
+  "duplicates": [
+    {
+      "file1": "tokyo-5days.html",
+      "para1_idx": 26,
+      "para1": "入浴前要先沖洗身體。毛巾不可放入浴池，可放在頭上或旁邊。有刺青者可能被拒絕入場（可找允許刺青的溫泉或用貼布遮蓋）。",
+      "file2": "kansai-pass.html",
+      "para2_idx": 24,
+      "para2": "入浴前要先沖洗身體。毛巾不可放入浴池，可放在頭上或旁邊。有刺青者可能被拒絕入場（可找允許刺青的溫泉或用貼布遮蓋）。",
+      "similarity": 1.0
+    },
+    {
+      "file1": "japan-travel.html",
+      "para1_idx": 14,
+      "content1": "餐費 ：便利商店一餐 NT$150~250，普通餐廳 NT$300~600，高CP值拉麵 NT$100~200",
+      "file2": "korea-travel.html",
+      "para2_idx": 15,
+      "content2": "餐費 ：便利商店一餐 NT$100~150，普通餐廳 NT$200~500，烤肉一餐 NT$500~1,000",
+      "similarity": 0.7818181818181819
+    },
+    {
+      "file1": "japan-travel.html",
+      "para1_idx": 15,
+      "content1": "不含機票，5天4夜大概抓 NT$25,000~35,000 就很舒服了。如果願意住青旅、吃便利商店、用廉航，甚至可以壓到 NT$18,000 以內。我自己的紀錄是：5天4夜東京，總花費 NT$16,000（含機票！）——那次是搭虎航來回 NT$4,800，住宿全程青旅，交通全用 Tokyo Subw",
+      "file2": "korea-travel.html",
+      "para2_idx": 17,
+      "content2": "不含機票，4天3夜大概抓 NT$15,000~25,000 就很舒服了。如果願意住青旅、吃便利商店、用廉航，甚至可以壓到 NT$10,000 以內。我自己最好的紀錄是：4天3夜首爾，總花費 NT$9,000（含機票！）——那次是搭虎航來回 NT$3,800，住宿全程青旅，交通全用 T-money 卡",
+      "similarity": 0.88
+    },
+    {
+      "file1": "japan-travel.html",
+      "para1_idx": 15,
+      "content1": "不含機票，5天4夜大概抓 NT$25,000~35,000 就很舒服了。如果願意住青旅、吃便利商店、用廉航，甚至可以壓到 NT$18,000 以內。我自己的紀錄是：5天4夜東京，總花費 NT$16,000（含機票！）——那次是搭虎航來回 NT$4,800，住宿全程青旅，交通全用 Tokyo Subw",
+      "file2": "taiwan-travel.html",
+      "para2_idx": 20,
+      "content2": "不含機票，3 天 2 夜大概抓 NT$6,000-12,000 就很舒服了。如果願意住民宿、吃夜市、用大眾運輸，甚至可以壓到 NT$4,000 以內。我自己最好的紀錄是：3 天 2 夜台南+高雄，總花費 NT$3,500（含高鐵！）——那次是搭早鳥高鐵去台南，住宿全程民宿，交通全用高鐵+捷運，吃飯全",
+      "similarity": 0.6533333333333333
+    },
+    {
+      "file1": "kansai-pass.html",
+      "para1_idx": 22,
+      "content1": "7-11的飯糰、FamilyMart的炸雞、Lawson的霜淇淋都超推薦。還有各式便當、沙拉、飯店、甜點，品質不輸餐廳，價格只要1/3。",
+      "file2": "kyoto-temples.html",
+      "para2_idx": 8,
+      "content2": "7-11的飯糰、FamilyMart的炸雞、Lawson的霜淇淋都超推薦。還有各式便當、沙拉、飯店、甜點，品質不輸餐廳，價格只要1/3。",
+      "similarity": 1.0
+    },
+    {
+      "file1": "kansai-pass.html",
+      "para1_idx": 22,
+      "content1": "7-11的飯糰、FamilyMart的炸雞、Lawson的霜淇淋都超推薦。還有各式便當、沙拉、飯店、甜點，品質不輸餐廳，價格只要1/3。",
+      "file2": "osaka-food.html",
+      "para2_idx": 32,
+      "content2": "7-11的飯糰、FamilyMart的炸雞、Lawson的霜淇淋都超推薦。還有各式便當、沙拉、飯店、甜點，品質不輸餐廳，價格只要1/3。",
+      "similarity": 1.0
+    },
+    {
+      "file1": "korea-travel.html",
+      "para1_idx": 10,
+      "content1": "1.  買一張 T-money 卡 ：就像台灣的悠遊卡，地鐵、公車、便利商店都能用。在仁川/金海機場就能買到，押金 ₩2,500 可退。",
+      "file2": "taiwan-travel.html",
+      "para2_idx": 12,
+      "content2": "1.  辦一張悠遊卡/一卡通 ：就像台灣的悠遊卡，捷運、公車、便利商店、甚至高鐵都能用。在機場或高鐵站就能買到。",
+      "similarity": 0.6129032258064516
+    },
+    {
+      "file1": "korea-travel.html",
+      "para1_idx": 17,
+      "content1": "不含機票，4天3夜大概抓 NT$15,000~25,000 就很舒服了。如果願意住青旅、吃便利商店、用廉航，甚至可以壓到 NT$10,000 以內。我自己最好的紀錄是：4天3夜首爾，總花費 NT$9,000（含機票！）——那次是搭虎航來回 NT$3,800，住宿全程青旅，交通全用 T-money 卡",
+      "file2": "taiwan-travel.html",
+      "para2_idx": 20,
+      "content2": "不含機票，3 天 2 夜大概抓 NT$6,000-12,000 就很舒服了。如果願意住民宿、吃夜市、用大眾運輸，甚至可以壓到 NT$4,000 以內。我自己最好的紀錄是：3 天 2 夜台南+高雄，總花費 NT$3,500（含高鐵！）——那次是搭早鳥高鐵去台南，住宿全程民宿，交通全用高鐵+捷運，吃飯全",
+      "similarity": 0.6733333333333333
+    },
+    {
+      "file1": "kyoto-temples.html",
+      "para1_idx": 8,
+      "content1": "7-11的飯糰、FamilyMart的炸雞、Lawson的霜淇淋都超推薦。還有各式便當、沙拉、飯店、甜點，品質不輸餐廳，價格只要1/3。",
+      "file2": "osaka-food.html",
+      "para2_idx": 32,
+      "content2": "7-11的飯糰、FamilyMart的炸雞、Lawson的霜淇淋都超推薦。還有各式便當、沙拉、飯店、甜點，品質不輸餐廳，價格只要1/3。",
+      "similarity": 1.0
+    },
+    {
+      "file1": "seasia-budget-travel-guide.html",
+      "para1_idx": 15,
+      "content1": "東南亞各國便利商店特色不同：泰國7-11有獨特泰式奶茶；越南有Circle K賣越式法包；新加坡7-11價格較高但有獨特商品；馬來西亞7-11有清真認證食品。",
+      "file2": "southeast-asia.html",
+      "para2_idx": 1,
+      "content2": "東南亞便利商店是背包客的好朋友！泰國7-11密度極高，商品多樣；越南Circle K有便宜的越式法包；新加坡7-11價格較高但有特色商品；馬來西亞有清真認證選擇。",
+      "similarity": 0.7
+    }
+  ]
+}
