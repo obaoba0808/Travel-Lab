@@ -1296,3 +1296,62 @@
     justify-content: center !important;
   }
 }
+
+/* ---- HERO 圖片上、標題下布局 (2026-06-08) ---- */
+.hero-region-new {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0;
+}
+.hero-image-wrapper {
+  width: 100%;
+  position: relative;
+}
+.hero-image-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  max-height: 500px;
+}
+.hero-title-below {
+  text-align: center;
+  padding: 30px 20px;
+  background: #fff;
+}
+.hero-title-below .hero-region-tag {
+  display: inline-block;
+  background: linear-gradient(135deg, #0ABAB5, #078E8A);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  padding: 6px 16px;
+  border-radius: 20px;
+  margin-bottom: 16px;
+}
+.hero-title-below h1 {
+  font-family: 'Noto Serif TC', serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin: 0 0 12px 0;
+  line-height: 1.3;
+}
+.hero-title-below .hero-stats {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  font-size: 14px;
+  color: #666;
+  margin-top: 12px;
+}
+@media (max-width: 768px) {
+  .hero-title-below h1 {
+    font-size: 24px;
+  }
+  .hero-title-below {
+    padding: 20px 16px;
+  }
+}
