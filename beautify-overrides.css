@@ -1403,3 +1403,36 @@
     margin-left: 8px;
   }
 }
+
+/* ---- Portal 頁面內容容器 (2026-06-08) ---- */
+.portal-content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 30px 40px;
+}
+.portal-content h2 {
+  font-family: 'Noto Serif TC', serif;
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin: 40px 0 20px;
+  padding-left: 16px;
+  border-left: 4px solid var(--tiffany);
+}
+.portal-content .day-card {
+  margin-bottom: 24px;
+}
+@media (max-width: 768px) {
+  .portal-content {
+    padding: 0 20px 30px;
+  }
+  .portal-content h2 {
+    font-size: 22px;
+    margin: 32px 0 16px;
+  }
+}
+@media (max-width: 480px) {
+  .portal-content {
+    padding: 0 16px 24px;
+  }
+}
