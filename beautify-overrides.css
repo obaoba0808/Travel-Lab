@@ -1301,8 +1301,12 @@
 .hero-region-new {
   width: 100%;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 0 auto 40px;
   padding: 0;
+  background: #fff;
+  border-radius: 0 0 20px 20px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  overflow: hidden;
 }
 .hero-image-wrapper {
   width: 100%;
@@ -1313,45 +1317,89 @@
   height: auto;
   display: block;
   object-fit: cover;
-  max-height: 500px;
+  max-height: 480px;
 }
 .hero-title-below {
   text-align: center;
-  padding: 30px 20px;
-  background: #fff;
+  padding: 40px 30px 50px;
+  background: linear-gradient(180deg, #fff 0%, #f8fffe 100%);
+  position: relative;
+}
+.hero-title-below::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #0ABAB5, #078E8A);
+  border-radius: 2px;
 }
 .hero-title-below .hero-region-tag {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   background: linear-gradient(135deg, #0ABAB5, #078E8A);
   color: #fff;
   font-size: 13px;
   font-weight: 600;
-  letter-spacing: 1px;
-  padding: 6px 16px;
-  border-radius: 20px;
-  margin-bottom: 16px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 8px 20px;
+  border-radius: 25px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 16px rgba(10,186,181,0.35);
 }
 .hero-title-below h1 {
   font-family: 'Noto Serif TC', serif;
-  font-size: 32px;
+  font-size: 38px;
   font-weight: 700;
   color: #1a1a2e;
-  margin: 0 0 12px 0;
-  line-height: 1.3;
+  margin: 0 0 16px 0;
+  line-height: 1.25;
+  letter-spacing: 1px;
 }
 .hero-title-below .hero-stats {
-  display: flex;
-  gap: 20px;
+  display: inline-flex;
+  gap: 12px;
   justify-content: center;
   font-size: 14px;
-  color: #666;
-  margin-top: 12px;
+  color: #fff;
+  margin-top: 20px;
+  background: linear-gradient(135deg, #1a1a2e, #2d2d44);
+  padding: 10px 24px;
+  border-radius: 25px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+}
+.hero-title-below .hero-stats span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.hero-title-below .hero-stats span:not(:last-child)::after {
+  content: '•';
+  margin-left: 12px;
+  opacity: 0.5;
 }
 @media (max-width: 768px) {
-  .hero-title-below h1 {
-    font-size: 24px;
+  .hero-region-new {
+    margin-bottom: 24px;
+    border-radius: 0 0 16px 16px;
   }
   .hero-title-below {
-    padding: 20px 16px;
+    padding: 28px 20px 36px;
+  }
+  .hero-title-below h1 {
+    font-size: 26px;
+  }
+  .hero-title-below .hero-stats {
+    flex-wrap: wrap;
+    font-size: 12px;
+    padding: 8px 16px;
+    gap: 8px;
+  }
+  .hero-title-below .hero-stats span:not(:last-child)::after {
+    margin-left: 8px;
   }
 }
