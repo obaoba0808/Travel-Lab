@@ -1211,3 +1211,88 @@
   .hero-title-bar h1 { font-size: 24px; }
   .hero-title-bar p { font-size: 13px; }
 }
+
+
+/* ========== Footer Social Buttons (2026-06-08) ========== */
+.site-footer .footer-social {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%) !important;
+  border-radius: 16px !important;
+  padding: 32px 24px !important;
+  margin: 40px auto !important;
+  max-width: 800px !important;
+  text-align: center !important;
+  color: #1a1a1a !important;
+}
+.site-footer .footer-social-inner {
+  display: flex !important;
+  flex-direction: column;
+  align-items: center !important;
+  gap: 20px;
+}
+.site-footer .footer-social-title {
+  display: block !important;
+  font-size: 24px !important;
+  font-weight: 700 !important;
+  color: #1a1a1a !important;
+  margin-bottom: 4px !important;
+}
+.site-footer .footer-social-sub {
+  display: block !important;
+  font-size: 14px !important;
+  color: #666 !important;
+  margin: 0 !important;
+}
+.site-footer .footer-social-links {
+  display: flex !important;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center !important;
+}
+.site-footer .footer-social-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  padding: 12px 28px !important;
+  border-radius: 50px !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  text-decoration: none !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15) !important;
+  color: #fff !important;
+  transition: all 0.3s ease !important;
+}
+.site-footer .footer-social-btn:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25) !important;
+  color: #fff !important;
+}
+.site-footer .footer-social-fb {
+  background: #1877F2 !important;
+  color: #fff !important;
+}
+.site-footer .footer-social-fb:hover {
+  background: #0d65d9 !important;
+  color: #fff !important;
+}
+.site-footer .footer-social-line {
+  background: #06C755 !important;
+  color: #fff !important;
+}
+.site-footer .footer-social-line:hover {
+  background: #05a646 !important;
+  color: #fff !important;
+}
+@media (max-width: 768px) {
+  .site-footer .footer-social {
+    padding: 24px 16px !important;
+    margin: 32px 16px !important;
+  }
+  .site-footer .footer-social-links {
+    flex-direction: column !important;
+    width: 100%;
+  }
+  .site-footer .footer-social-btn {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+}
