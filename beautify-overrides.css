@@ -1404,9 +1404,9 @@
   }
 }
 
-/* ---- Portal 頁面內容容器 (2026-06-08) ---- */
+/* ---- Portal 頁面內容容器 (2026-06-08, updated 2026-06-09) ---- */
 .portal-content {
-  max-width: 900px;
+  max-width: 1240px;
   margin: 0 auto;
   padding: 0 30px 40px;
 }
@@ -1424,7 +1424,8 @@
 }
 @media (max-width: 768px) {
   .portal-content {
-    padding: 0 20px 30px;
+    max-width: 100%;
+    padding: 0 16px 30px;
   }
   .portal-content h2 {
     font-size: 22px;
