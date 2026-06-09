@@ -1,0 +1,408 @@
+/* ============================================
+   Travel Lab — Article UI Beautify (2026-06-09)
+   Target: 6 article pages UI enhancement
+   ============================================ */
+
+/* ========== MAIN CONTENT LAYOUT ========== */
+.main-content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 30px 60px;
+}
+
+/* ========== ARTICLE CONTAINER (singapore/kualalumpur/angkor-wat format) ========== */
+.article-container {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.article-container .article-intro {
+  font-size: 17px;
+  line-height: 1.9;
+  color: #444;
+  background: linear-gradient(135deg, #f0faf9 0%, #e8f5f5 100%);
+  padding: 24px 28px;
+  border-radius: 14px;
+  border-left: 4px solid var(--tiffany);
+  margin-bottom: 32px;
+  font-weight: 400;
+}
+
+.article-container .article-section {
+  margin-bottom: 36px;
+}
+
+/* H2 - Section titles with icon bar */
+.article-container h2,
+article h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--tiffany-dark);
+  margin: 48px 0 22px;
+  padding-left: 18px;
+  border-left: 5px solid var(--tiffany);
+  line-height: 1.45;
+}
+
+/* H3 - Subsection titles */
+.article-container h3,
+article h3 {
+  font-size: 19px;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin: 28px 0 14px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--tiffany-light);
+  display: inline-block;
+}
+
+/* Paragraphs */
+.article-container p,
+article p {
+  line-height: 1.85;
+  color: #3a3a3a;
+  margin-bottom: 14px;
+  font-size: 15.5px;
+}
+
+.article-container strong,
+article strong {
+  color: var(--text-dark);
+  font-weight: 600;
+}
+
+/* Lists */
+.article-container ul,
+.article-container ol,
+article ul,
+article ol {
+  margin: 12px 0 20px 0;
+  list-style: none;
+  padding: 0;
+}
+
+.article-container li,
+article li {
+  margin-bottom: 9px;
+  position: relative;
+  padding-left: 24px;
+  font-size: 15.5px;
+  line-height: 1.75;
+  color: #3a3a3a;
+}
+
+.article-container li::before,
+article li::before {
+  content: '▸';
+  color: var(--tiffany);
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+/* ========== ITINERARY TIMELINE (day-block format) ========== */
+.itinerary-timeline {
+  margin: 32px 0;
+  background: linear-gradient(135deg, #fffbf5 0%, #fff8ed 100%);
+  border-radius: 16px;
+  padding: 28px 24px;
+  border: 1px solid #f0d9b5;
+  box-shadow: 0 2px 12px rgba(240, 217, 181, 0.3);
+}
+
+.day-block {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  padding: 18px 0;
+  border-bottom: 1px dashed #f0d9b5;
+  transition: transform 0.2s ease;
+}
+.day-block:last-child { border-bottom: none; }
+.day-block:hover { transform: translateX(4px); }
+
+.day-label {
+  flex-shrink: 0;
+  width: 68px;
+  height: 34px;
+  background: linear-gradient(135deg, var(--tiffany), var(--tiffany-dark));
+  color: #fff;
+  border-radius: 17px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 8px rgba(10, 186, 181, 0.25);
+}
+
+.day-content {
+  flex: 1;
+  padding-top: 2px;
+}
+
+.day-content h3 {
+  font-size: 17px !important;
+  color: var(--text-dark) !important;
+  margin: 0 0 6px 0 !important;
+  padding: 0 !important;
+  border: none !important;
+  display: block !important;
+  font-weight: 600;
+}
+
+.day-content p {
+  margin: 0 !important;
+  font-size: 14.5px !important;
+  color: #666;
+  line-height: 1.65;
+}
+
+/* ========== CHECKLIST ========== */
+.checklist-container {
+  background: linear-gradient(135deg, #f8fbff 0%, #f0f7f7 100%);
+  border-radius: 16px;
+  padding: 24px 20px;
+  margin: 24px 0;
+  border: 1px solid var(--border);
+}
+
+.checklist-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 11px 14px;
+  margin-bottom: 8px;
+  background: #fff;
+  border-radius: 10px;
+  transition: all 0.2s ease;
+  border: 1px solid transparent;
+}
+.checklist-item:hover {
+  border-color: var(--tiffany-accent);
+  box-shadow: 0 2px 8px rgba(10, 186, 181, 0.08);
+  transform: translateX(3px);
+}
+.checklist-item:last-child { margin-bottom: 0; }
+
+.checklist-item input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  accent-color: var(--tiffany);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.checklist-item label {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #3a3a3a;
+  cursor: pointer;
+  font-weight: 400;
+}
+
+.checklist-item label strong {
+  color: var(--tiffany-dark);
+  font-weight: 600;
+}
+
+/* ========== DAY-CARD FORMAT (seoul/korea pages) ========== */
+.day-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 28px 30px 26px;
+  margin-bottom: 24px;
+  border: 1px solid var(--border);
+  box-shadow: 0 2px 14px var(--shadow);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+.day-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, var(--tiffany), var(--tiffany-accent));
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.day-card:hover {
+  box-shadow: 0 8px 32px rgba(10, 186, 181, 0.12);
+  transform: translateY(-3px);
+}
+.day-card:hover::before { opacity: 1; }
+
+.day-card h3 {
+  color: var(--tiffany-dark) !important;
+  margin: 0 0 14px 0 !important;
+  font-size: 20px !important;
+  padding-bottom: 10px !important;
+  border-bottom: 2px solid var(--tiffany-light) !important;
+  display: inline-block !important;
+}
+
+.day-tag {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--tiffany), var(--tiffany-dark));
+  color: #fff;
+  padding: 4px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  letter-spacing: 0.3px;
+  box-shadow: 0 2px 6px rgba(10, 186, 181, 0.2);
+}
+
+.day-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0 0 0;
+}
+.day-card li {
+  position: relative;
+  padding-left: 24px;
+  margin-bottom: 10px;
+  font-size: 15px;
+  line-height: 1.75;
+  color: #3a3a3a;
+}
+.day-card li::before {
+  content: '✦';
+  color: var(--tiffany);
+  position: absolute;
+  left: 0;
+  top: 1px;
+  font-size: 12px;
+}
+
+/* ========== TIP BOX ========== */
+.tip-box {
+  background: linear-gradient(135deg, #e0f7f7 0%, #f0faf9 100%);
+  border-left: 5px solid var(--tiffany);
+  padding: 20px 24px;
+  border-radius: 0 12px 12px 0;
+  margin: 20px 0;
+  font-size: 14.5px;
+  line-height: 1.8;
+  color: #444;
+  box-shadow: 0 2px 8px rgba(10, 186, 181, 0.06);
+}
+.tip-box strong { color: var(--tiffany-dark); }
+
+/* ========== ARTICLE HEADER (seoul/korea format) ========== */
+.article-header {
+  text-align: center;
+  margin-bottom: 36px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid var(--border);
+}
+
+.cat-tag {
+  display: inline-block;
+  background: linear-gradient(135deg, rgba(10,186,181,0.1), rgba(10,186,181,0.05));
+  color: var(--tiffany);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  padding: 5px 16px;
+  border-radius: 999px;
+  margin-bottom: 14px;
+  border: 1px solid rgba(10, 186, 181, 0.2);
+}
+
+.article-header h1 {
+  font-family: 'Noto Serif TC', serif;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.35;
+  color: var(--text-dark);
+  margin-bottom: 12px;
+  letter-spacing: 1px;
+}
+
+.article-meta {
+  font-size: 13px;
+  color: var(--text-light);
+  margin-bottom: 18px;
+  letter-spacing: 0.3px;
+}
+
+.hero-img {
+  width: 100%;
+  max-width: 700px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px var(--shadow);
+  margin: 0 auto;
+  display: block;
+}
+
+/* ========== INLINE TIP CALLOUTS (yellow gradient boxes) ========== */
+article > div[style*="FFF8E1"],
+article > div[style*="fff8e1"] {
+  background: linear-gradient(135deg, #FFF8E1 0%, #FFF3E0 100%) !important;
+  padding: 20px 24px !important;
+  border-radius: 12px !important;
+  margin: 24px 0 !important;
+  border-left: 4px solid #FF8F00 !important;
+  box-shadow: 0 2px 8px rgba(255, 143, 0, 0.08) !important;
+}
+article > div[style*="FFF8E1"] p,
+article > div[style*="fff8e1"] p {
+  margin: 0 !important;
+  color: #E65100 !important;
+  font-size: 14.5px !important;
+  line-height: 1.75 !important;
+}
+
+/* Green tip callouts */
+article > div[style*="e8f5e9"],
+article > div[style*="E8F5E9"] {
+  background: linear-gradient(135deg, #E8F5E9 0%, #F1F8E9 100%) !important;
+  padding: 20px 24px !important;
+  border-radius: 12px !important;
+  margin: 20px 0 !important;
+  border-left: 4px solid #0ABAB5 !important;
+  box-shadow: 0 2px 8px rgba(10, 186, 181, 0.08) !important;
+}
+
+/* ========== IMAGES IN ARTICLES ========== */
+article img {
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+  margin: 20px 0;
+  transition: transform 0.3s ease;
+}
+article img:hover { transform: scale(1.01); }
+
+/* Image captions (italic text below images) */
+article p[style*="font-style:italic"],
+article p[style*="italic"] {
+  color: var(--text-light) !important;
+  font-size: 13px !important;
+  line-height: 1.6 !important;
+  margin-top: 8px !important;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+  .main-content { padding: 24px 16px 40px; }
+  .article-container { padding: 0; }
+  .article-container h2, article h2 { font-size: 21px; }
+  .article-container h3, article h3 { font-size: 17px; }
+  .day-card { padding: 20px 18px; }
+  .itinerary-timeline { padding: 20px 16px; }
+  .day-block { flex-direction: column; gap: 8px; }
+  .day-label { width: fit-content; }
+  .article-header h1 { font-size: 24px; }
+  .hero-img { border-radius: 10px; }
+  .checklist-item { padding: 9px 10px; }
+  .checklist-item label { font-size: 14px; }
+}
