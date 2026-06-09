@@ -883,3 +883,29 @@ div[style*="max-width:900px;margin:0 auto 30px;padding:0 20px;"] {
   font-weight: 700 !important;
   cursor: pointer !important;
 }
+
+
+/* Footer Nav Row - 橫向連結列 */
+.footer-nav-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px 16px;
+  padding: 14px 0;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  margin-top: 16px;
+}
+.footer-nav-row a {
+  color: rgba(255,255,255,0.75);
+  text-decoration: none;
+  font-size: 13px;
+  transition: color 0.2s;
+}
+.footer-nav-row a:hover {
+  color: #4ecdc4;
+}
+.footer-nav-sep {
+  color: rgba(255,255,255,0.3);
+  font-size: 12px;
+}
