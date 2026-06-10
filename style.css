@@ -258,16 +258,17 @@ div[style*="max-width:900px;margin:0 auto 30px;padding:0 20px;"] {
 }
 
 .sidebar-card {
-  width: 250px; /* Adjusted fixed width for sidebars */
+  width: 250px;
   flex-shrink: 0;
-  position: sticky;
-  top: 80px; /* Adjusted top for sticky to clear topbar (52px topbar + ~28px margin) */
-  align-self: flex-start; /* Stop sticking when three-col-wrapper scrolls out */
+  position: fixed;
+  top: 80px;
+  /* Fixed left: center-aligned with col-center, min 20px from left edge */
+  left: max(20px, calc(50vw - 595px));
   border-radius: 14px;
   overflow: hidden;
   background: #fff;
-  /* box-shadow: 0 4px 24px rgba(0,0,0,0.1); Removed for flat two-column layout */
-  transition: box-shadow 0.3s;
+  transition: opacity 0.3s, box-shadow 0.3s;
+  z-index: 100;
 }
 .sidebar-card:hover { /* box-shadow: 0 6px 32px rgba(0,0,0,0.15); Removed for flat two-column layout */ }
 .sidebar-card a { display: block; text-decoration: none; color: inherit; }
