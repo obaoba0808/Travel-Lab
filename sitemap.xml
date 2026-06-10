@@ -1,339 +1,534 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://golightly.fun/about.html</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://golightly.fun/about.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://golightly.fun/about.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://golightly.fun/about.html"/>
     <lastmod>2026-06-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://golightly.fun/angkor-wat-2days.html</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://golightly.fun/angkor-wat-2days.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://golightly.fun/angkor-wat-2days.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://golightly.fun/angkor-wat-2days.html"/>
     <lastmod>2026-06-10</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://golightly.fun/bangkok-3days.html</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://golightly.fun/bangkok-3days.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://golightly.fun/bangkok-3days.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://golightly.fun/bangkok-3days.html"/>
     <lastmod>2026-06-10</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://golightly.fun/bangkok-4days.html</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://golightly.fun/bangkok-4days.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://golightly.fun/bangkok-4days.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://golightly.fun/bangkok-4days.html"/>
     <lastmod>2026-06-10</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://golightly.fun/bangkok-massage.html</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://golightly.fun/bangkok-massage.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://golightly.fun/bangkok-massage.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://golightly.fun/bangkok-massage.html"/>
     <lastmod>2026-06-10</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://golightly.fun/budget-airline-guide.html</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://golightly.fun/budget-airline-guide.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://golightly.fun/budget-airline-guide.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://golightly.fun/budget-airline-guide.html"/>
     <lastmod>2026-06-10</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://golightly.fun/budget-calculator.html</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://golightly.fun/budget-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://golightly.fun/budget-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://golightly.fun/budget-calculator.html"/>
     <lastmod>2026-06-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://golightly.fun/busan-4days.html</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://golightly.fun/busan-4days.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://golightly.fun/busan-4days.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://golightly.fun/busan-4days.html"/>
     <lastmod>2026-06-10</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://golightly.fun/busan-capsule.html</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://golightly.fun/busan-capsule.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://golightly.fun/busan-capsule.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://golightly.fun/busan-capsule.html"/>
     <lastmod>2026-06-10</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://golightly.fun/chiang-mai.html</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://golightly.fun/chiang-mai.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://golightly.fun/chiang-mai.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://golightly.fun/chiang-mai.html"/>
     <lastmod>2026-06-10</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://golightly.fun/contact.html</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://golightly.fun/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://golightly.fun/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://golightly.fun/contact.html"/>
     <lastmod>2026-06-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://golightly.fun/credit-card-miles-guide.html</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://golightly.fun/credit-card-miles-guide.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://golightly.fun/credit-card-miles-guide.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://golightly.fun/credit-card-miles-guide.html"/>
     <lastmod>2026-06-10</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://golightly.fun/disclaimer.html</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://golightly.fun/disclaimer.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://golightly.fun/disclaimer.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://golightly.fun/disclaimer.html"/>
+    <lastmod>2026-06-09</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://golightly.fun/esim-comparison.html</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://golightly.fun/esim-comparison.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://golightly.fun/esim-comparison.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://golightly.fun/esim-comparison.html"/>
     <lastmod>2026-06-10</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://golightly.fun/fukuoka-5days.html</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://golightly.fun/fukuoka-5days.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://golightly.fun/fukuoka-5days.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://golightly.fun/fukuoka-5days.html"/>
     <lastmod>2026-06-10</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://golightly.fun/hokkaido-winter.html</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://golightly.fun/hokkaido-winter.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://golightly.fun/hokkaido-winter.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://golightly.fun/hokkaido-winter.html"/>
     <lastmod>2026-06-10</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://golightly.fun/hualien-taitung.html</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://golightly.fun/hualien-taitung.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://golightly.fun/hualien-taitung.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://golightly.fun/hualien-taitung.html"/>
     <lastmod>2026-06-10</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://golightly.fun</loc>
+    <loc>https://golightly.fun/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://golightly.fun/"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://golightly.fun/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://golightly.fun/"/>
     <lastmod>2026-06-10</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://golightly.fun/japan-budget-guide.html</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://golightly.fun/japan-budget-guide.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://golightly.fun/japan-budget-guide.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://golightly.fun/japan-budget-guide.html"/>
     <lastmod>2026-06-10</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://golightly.fun/japan-cherry-blossom-season.html</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://golightly.fun/japan-cherry-blossom-season.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://golightly.fun/japan-cherry-blossom-season.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://golightly.fun/japan-cherry-blossom-season.html"/>
     <lastmod>2026-06-10</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://golightly.fun/japan-drugstore-checklist.html</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://golightly.fun/japan-drugstore-checklist.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://golightly.fun/japan-drugstore-checklist.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://golightly.fun/japan-drugstore-checklist.html"/>
     <lastmod>2026-06-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://golightly.fun/japan-money-saving-tips.html</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://golightly.fun/japan-money-saving-tips.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://golightly.fun/japan-money-saving-tips.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://golightly.fun/japan-money-saving-tips.html"/>
     <lastmod>2026-06-10</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://golightly.fun/japan-travel.html</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://golightly.fun/japan-travel.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://golightly.fun/japan-travel.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://golightly.fun/japan-travel.html"/>
     <lastmod>2026-06-10</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://golightly.fun/jeju-island.html</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://golightly.fun/jeju-island.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://golightly.fun/jeju-island.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://golightly.fun/jeju-island.html"/>
     <lastmod>2026-06-10</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://golightly.fun/jiufen.html</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://golightly.fun/jiufen.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://golightly.fun/jiufen.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://golightly.fun/jiufen.html"/>
     <lastmod>2026-06-10</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://golightly.fun/kansai-pass.html</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://golightly.fun/kansai-pass.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://golightly.fun/kansai-pass.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://golightly.fun/kansai-pass.html"/>
     <lastmod>2026-06-10</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://golightly.fun/kenting.html</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://golightly.fun/kenting.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://golightly.fun/kenting.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://golightly.fun/kenting.html"/>
     <lastmod>2026-06-10</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://golightly.fun/korea-budget.html</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://golightly.fun/korea-budget.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://golightly.fun/korea-budget.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://golightly.fun/korea-budget.html"/>
     <lastmod>2026-06-10</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://golightly.fun/korea-money-saving-tips.html</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://golightly.fun/korea-money-saving-tips.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://golightly.fun/korea-money-saving-tips.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://golightly.fun/korea-money-saving-tips.html"/>
     <lastmod>2026-06-10</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://golightly.fun/korea-transport.html</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://golightly.fun/korea-transport.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://golightly.fun/korea-transport.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://golightly.fun/korea-transport.html"/>
     <lastmod>2026-06-10</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://golightly.fun/korea-travel.html</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://golightly.fun/korea-travel.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://golightly.fun/korea-travel.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://golightly.fun/korea-travel.html"/>
     <lastmod>2026-06-10</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://golightly.fun/kualalumpur-3days.html</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://golightly.fun/kualalumpur-3days.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://golightly.fun/kualalumpur-3days.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://golightly.fun/kualalumpur-3days.html"/>
     <lastmod>2026-06-10</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://golightly.fun/kyoto-temples.html</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://golightly.fun/kyoto-temples.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://golightly.fun/kyoto-temples.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://golightly.fun/kyoto-temples.html"/>
     <lastmod>2026-06-10</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://golightly.fun/miles-calculator.html</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://golightly.fun/miles-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://golightly.fun/miles-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://golightly.fun/miles-calculator.html"/>
     <lastmod>2026-06-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://golightly.fun/notion-travel-template.html</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://golightly.fun/notion-travel-template.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://golightly.fun/notion-travel-template.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://golightly.fun/notion-travel-template.html"/>
     <lastmod>2026-06-10</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://golightly.fun/okinawa.html</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://golightly.fun/okinawa.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://golightly.fun/okinawa.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://golightly.fun/okinawa.html"/>
     <lastmod>2026-06-10</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://golightly.fun/osaka-food.html</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://golightly.fun/osaka-food.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://golightly.fun/osaka-food.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://golightly.fun/osaka-food.html"/>
     <lastmod>2026-06-10</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://golightly.fun/osaka-usj.html</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://golightly.fun/osaka-usj.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://golightly.fun/osaka-usj.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://golightly.fun/osaka-usj.html"/>
     <lastmod>2026-06-10</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://golightly.fun/packing-checklist.html</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://golightly.fun/packing-checklist.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://golightly.fun/packing-checklist.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://golightly.fun/packing-checklist.html"/>
     <lastmod>2026-06-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://golightly.fun/packing-list.html</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://golightly.fun/packing-list.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://golightly.fun/packing-list.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://golightly.fun/packing-list.html"/>
     <lastmod>2026-06-10</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://golightly.fun/power-plug-guide.html</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://golightly.fun/power-plug-guide.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://golightly.fun/power-plug-guide.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://golightly.fun/power-plug-guide.html"/>
     <lastmod>2026-06-10</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://golightly.fun/privacy.html</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://golightly.fun/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://golightly.fun/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://golightly.fun/privacy.html"/>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://golightly.fun/seasia-budget-travel-guide.html</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://golightly.fun/seasia-budget-travel-guide.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://golightly.fun/seasia-budget-travel-guide.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://golightly.fun/seasia-budget-travel-guide.html"/>
     <lastmod>2026-06-10</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://golightly.fun/seoul-5days.html</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://golightly.fun/seoul-5days.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://golightly.fun/seoul-5days.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://golightly.fun/seoul-5days.html"/>
     <lastmod>2026-06-10</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://golightly.fun/seoul-food-map.html</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://golightly.fun/seoul-food-map.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://golightly.fun/seoul-food-map.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://golightly.fun/seoul-food-map.html"/>
     <lastmod>2026-06-10</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://golightly.fun/seoul-food.html</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://golightly.fun/seoul-food.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://golightly.fun/seoul-food.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://golightly.fun/seoul-food.html"/>
     <lastmod>2026-06-10</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://golightly.fun/singapore-3days.html</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://golightly.fun/singapore-3days.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://golightly.fun/singapore-3days.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://golightly.fun/singapore-3days.html"/>
     <lastmod>2026-06-10</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://golightly.fun/southeast-asia.html</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://golightly.fun/southeast-asia.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://golightly.fun/southeast-asia.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://golightly.fun/southeast-asia.html"/>
     <lastmod>2026-06-10</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://golightly.fun/tainan-food.html</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://golightly.fun/tainan-food.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://golightly.fun/tainan-food.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://golightly.fun/tainan-food.html"/>
     <lastmod>2026-06-10</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://golightly.fun/taipei-food.html</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://golightly.fun/taipei-food.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://golightly.fun/taipei-food.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://golightly.fun/taipei-food.html"/>
     <lastmod>2026-06-10</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://golightly.fun/taiwan-travel.html</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://golightly.fun/taiwan-travel.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://golightly.fun/taiwan-travel.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://golightly.fun/taiwan-travel.html"/>
     <lastmod>2026-06-10</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://golightly.fun/tax-refund-calculator.html</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://golightly.fun/tax-refund-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://golightly.fun/tax-refund-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://golightly.fun/tax-refund-calculator.html"/>
     <lastmod>2026-06-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://golightly.fun/terms.html</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://golightly.fun/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://golightly.fun/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://golightly.fun/terms.html"/>
+    <lastmod>2026-06-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://golightly.fun/thailand-sim.html</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://golightly.fun/thailand-sim.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://golightly.fun/thailand-sim.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://golightly.fun/thailand-sim.html"/>
     <lastmod>2026-06-10</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://golightly.fun/tokyo-5days.html</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://golightly.fun/tokyo-5days.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://golightly.fun/tokyo-5days.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://golightly.fun/tokyo-5days.html"/>
     <lastmod>2026-06-10</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://golightly.fun/tokyo-accommodation.html</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://golightly.fun/tokyo-accommodation.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://golightly.fun/tokyo-accommodation.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://golightly.fun/tokyo-accommodation.html"/>
     <lastmod>2026-06-10</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://golightly.fun/travel-tools.html</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://golightly.fun/travel-tools.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://golightly.fun/travel-tools.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://golightly.fun/travel-tools.html"/>
     <lastmod>2026-06-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://golightly.fun/vietnam-danang.html</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://golightly.fun/vietnam-danang.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://golightly.fun/vietnam-danang.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://golightly.fun/vietnam-danang.html"/>
     <lastmod>2026-06-10</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://golightly.fun/vietnam-hochiminh.html</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://golightly.fun/vietnam-hochiminh.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://golightly.fun/vietnam-hochiminh.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://golightly.fun/vietnam-hochiminh.html"/>
     <lastmod>2026-06-10</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
   </url>
 </urlset>
