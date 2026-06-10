@@ -258,7 +258,7 @@ div[style*="max-width:900px;margin:0 auto 30px;padding:0 20px;"] {
 }
 
 .sidebar-card {
-  width: 250px; /* Adjusted fixed width for sidebars */
+  width: 280px; /* Updated to match block spec (~280px wide) */
   flex-shrink: 0;
   position: sticky;
   top: 80px; /* Adjusted top for sticky to clear topbar (52px topbar + ~28px margin) */
