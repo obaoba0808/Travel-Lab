@@ -251,7 +251,7 @@ div[style*="max-width:900px;margin:0 auto 30px;padding:0 20px;"] {
   display: flex;
   max-width: 1240px; /* Use your established max-width */
   margin: 30px auto 50px; /* Add top/bottom margin for spacing */
-  padding: 0 20px; /* Adjusted padding for consistency */
+  padding-left: 274px; padding-right: 20px; /* left=sidebar(250)+gap(24) for fixed sidebar */
   gap: 24px; /* Adjusted gap for consistency */
   align-items: flex-start;
   /* flex-wrap: wrap; Removed for initial desktop view to ensure three columns */
@@ -364,6 +364,7 @@ div[style*="max-width:900px;margin:0 auto 30px;padding:0 20px;"] {
 }
 
 .col-center {
+
   flex-grow: 1; /* Allow center column to take remaining space */
   min-width: 0; /* Prevents overflow with long content */
   background: var(--bg); /* Match your article container background */
