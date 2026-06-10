@@ -251,24 +251,22 @@ div[style*="max-width:900px;margin:0 auto 30px;padding:0 20px;"] {
   display: flex;
   max-width: 1240px; /* Use your established max-width */
   margin: 30px auto 50px; /* Add top/bottom margin for spacing */
-  padding-left: 274px; padding-right: 20px; /* left=sidebar(250)+gap(24) for fixed sidebar */
+  padding: 0 20px; /* Adjusted padding for consistency */
   gap: 24px; /* Adjusted gap for consistency */
   align-items: flex-start;
   /* flex-wrap: wrap; Removed for initial desktop view to ensure three columns */
 }
 
 .sidebar-card {
-  width: 250px;
+  width: 250px; /* Adjusted fixed width for sidebars */
   flex-shrink: 0;
-  position: fixed;
-  top: 80px;
-  /* Fixed left: center-aligned with col-center, min 20px from left edge */
-  left: max(20px, calc(50vw - 595px));
+  position: sticky;
+  top: 80px; /* Adjusted top for sticky to clear topbar (52px topbar + ~28px margin) */
   border-radius: 14px;
   overflow: hidden;
   background: #fff;
-  transition: opacity 0.3s, box-shadow 0.3s;
-  z-index: 100;
+  /* box-shadow: 0 4px 24px rgba(0,0,0,0.1); Removed for flat two-column layout */
+  transition: box-shadow 0.3s;
 }
 .sidebar-card:hover { /* box-shadow: 0 6px 32px rgba(0,0,0,0.15); Removed for flat two-column layout */ }
 .sidebar-card a { display: block; text-decoration: none; color: inherit; }
@@ -364,7 +362,6 @@ div[style*="max-width:900px;margin:0 auto 30px;padding:0 20px;"] {
 }
 
 .col-center {
-
   flex-grow: 1; /* Allow center column to take remaining space */
   min-width: 0; /* Prevents overflow with long content */
   background: var(--bg); /* Match your article container background */
