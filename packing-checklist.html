@@ -272,7 +272,7 @@ body{font-family:'Noto Sans TC',sans-serif;background:#f5f5f5;margin:0;padding:0
 <div class="pdf-section">
 <h3>📥 免費下載 PDF 版本</h3>
 <p>填寫 Email，立即收到完整打包清單 PDF</p>
-<form action="https://formspree.io/f/xredjjgb" class="pdf-form" method="POST">
+<form action="https://formspree.io/f/xredjjgb" class="pdf-form" method="POST" onsubmit="fetch('https://golightly-email-reply.happybird.workers.dev',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:this.elements.email.value,resource:'packing-checklist'})}).catch(function(){});" >
 <input name="email" placeholder="輸入你的 Email" required="" type="email"/>
 <input name="resource" type="hidden" value="packing-checklist"/>
 <button type="submit">免費下載 PDF</button>
