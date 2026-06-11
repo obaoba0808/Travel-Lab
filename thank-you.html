@@ -95,7 +95,7 @@
     <div class="countdown-bar"><div class="countdown-fill"></div></div>
     <p class="countdown-text"><strong id="countdownNum">5</strong> 秒後自動跳轉到下載專區</p>
     <div class="btn-group">
-      <a href="/downloads/" class="download-btn">📥 立即前往下載專區</a>
+      <a href="/downloads.html" class="download-btn">📥 立即前往下載專區</a>
       <button class="copy-btn" id="copyBtn" onclick="copyLink()">📋 複製下載連結</button>
     </div>
     <p class="note">若未自動跳轉，請點擊上方按鈕進入下載頁面</p>
@@ -106,7 +106,7 @@
     // 從 URL 參數讀取 resource，顯示對應標題
     const params = new URLSearchParams(window.location.search);
     const resource = params.get('resource') || '';
-    const downloadUrl = 'https://golightly.fun/downloads/';
+    const downloadUrl = 'https://golightly.fun/downloads.html';
 
     const titles = {
       'bangkok-food-map':      { title: '曼谷美食地圖已備好', emoji: '🥘' },
