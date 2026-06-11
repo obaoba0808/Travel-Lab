@@ -434,7 +434,7 @@ div[style*="max-width:900px;margin:0 auto 30px;padding:0 20px;"] {
 .card-body .read-more:hover { background:var(--tiffany); color:#fff; }
 
 /* ========== ARTICLE BODY (Now within col-center) ========== */
-.article-container { max-width:800px; margin:0 auto; padding:0 30px; }
+.article-container { max-width:800px; margin:0 auto; padding:0 30px; word-wrap:break-word; overflow-wrap:break-word; }
 .article-container h2 { font-size:23px; color:var(--tiffany-dark); margin:44px 0 18px; padding-left:18px; border-left:5px solid var(--tiffany); line-height:1.5; }
 .article-container h3 { font-size:19px; color:var(--text-dark); margin:28px 0 12px; padding-bottom:8px; border-bottom:2px solid var(--tiffany-light); display:inline-block; }
 .article-container p { margin-bottom:15px; }
@@ -506,7 +506,7 @@ div[style*="max-width:900px;margin:0 auto 30px;padding:0 20px;"] {
 .tool-btn:hover { opacity:0.85; }
 
 /* ========== FOOTER ========== */
-.site-footer { background:#1a1a1a; color:#ccc; padding:40px 0; margin-top:40px; /* Removed width:100vw and margins, let it behave normally within parent */ }
+.site-footer { background:#1a1a1a; color:#ccc; padding:40px 0; margin-top:40px; clear:both; /* Force footer to new line, below all floated/column elements */ }
 .footer-inner { max-width:1240px; margin:0 auto; display:grid; grid-template-columns: repeat(5, 1fr); gap:24px; padding: 0 20px; }
 @media(max-width:1024px){ .footer-inner{ grid-template-columns:repeat(3,1fr); } }
 @media(max-width:640px){ .footer-inner{ grid-template-columns:repeat(2,1fr); } }
