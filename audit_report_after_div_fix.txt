@@ -1,0 +1,540 @@
+﻿🔍 全站檢查開始：共 65 個 HTML 頁面
+================================================================================
+📊 平均文件大小: 28202 bytes
+📊 異常門檻: 14101 bytes (小於平均的 50%)
+================================================================================
+
+📄 檢查: 404.html (7340 bytes)
+   ⚠️  文件大小異常: 7340 bytes
+   📢 旅遊工具區塊出現 4 次
+
+📄 檢查: about.html (34249 bytes)
+   📢 旅遊工具區塊出現 7 次
+
+📄 檢查: angkor-wat-2days.html (35537 bytes)
+   📢 旅遊工具區塊出現 7 次
+
+📄 檢查: bangkok-3days.html (28230 bytes)
+   📢 Klook 推廣出現 4 次
+   📢 旅遊工具區塊出現 7 次
+   📢 延伸閱讀區塊出現 2 次
+
+📄 檢查: bangkok-4days.html (17275 bytes)
+   📢 旅遊工具區塊出現 7 次
+   🔧 div 不平衡: 45 開 vs 43 關
+
+📄 檢查: bangkok-massage.html (22576 bytes)
+   📢 Klook 推廣出現 6 次
+   📢 旅遊工具區塊出現 7 次
+   📢 延伸閱讀區塊出現 2 次
+
+📄 檢查: budget-airline-guide.html (35813 bytes)
+   📢 旅遊工具區塊出現 10 次
+
+📄 檢查: budget-calculator.html (20667 bytes)
+   📢 旅遊工具區塊出現 9 次
+
+📄 檢查: busan-4days.html (43862 bytes)
+   📢 旅遊工具區塊出現 7 次
+   🔧 div 不平衡: 201 開 vs 197 關
+
+📄 檢查: busan-capsule.html (26628 bytes)
+   📢 Klook 推廣出現 5 次
+   📢 旅遊工具區塊出現 9 次
+   📢 延伸閱讀區塊出現 2 次
+
+📄 檢查: chiang-mai.html (28855 bytes)
+   📢 Klook 推廣出現 5 次
+   📢 旅遊工具區塊出現 9 次
+   📢 延伸閱讀區塊出現 2 次
+
+📄 檢查: contact.html (63825 bytes)
+   📢 旅遊工具區塊出現 7 次
+
+📄 檢查: credit-card-miles-guide.html (33015 bytes)
+   📢 旅遊工具區塊出現 9 次
+
+📄 檢查: disclaimer.html (13561 bytes)
+   ⚠️  文件大小異常: 13561 bytes
+   📢 旅遊工具區塊出現 4 次
+
+📄 檢查: esim-comparison.html (44924 bytes)
+   📢 旅遊工具區塊出現 12 次
+
+📄 檢查: fukuoka-5days.html (33392 bytes)
+   📢 旅遊工具區塊出現 7 次
+   🔧 div 不平衡: 147 開 vs 143 關
+
+📄 檢查: hokkaido-winter.html (30771 bytes)
+   📢 Klook 推廣出現 5 次
+   📢 旅遊工具區塊出現 9 次
+   📢 延伸閱讀區塊出現 2 次
+
+📄 檢查: hualien-taitung.html (25870 bytes)
+   📢 Klook 推廣出現 4 次
+   📢 旅遊工具區塊出現 9 次
+   📢 延伸閱讀區塊出現 2 次
+
+📄 檢查: index.html (29943 bytes)
+   📢 Klook 推廣出現 3 次
+   📢 旅遊工具區塊出現 12 次
+
+📄 檢查: japan-budget-guide.html (26888 bytes)
+   📢 Klook 推廣出現 7 次
+   📢 旅遊工具區塊出現 7 次
+   📢 延伸閱讀區塊出現 2 次
+
+📄 檢查: japan-cherry-blossom-season.html (34164 bytes)
+   📢 旅遊工具區塊出現 7 次
+
+📄 檢查: japan-drugstore-checklist.html (33623 bytes)
+   📢 Klook 推廣出現 6 次
+   📢 旅遊工具區塊出現 9 次
+
+📄 檢查: japan-money-saving-tips.html (26994 bytes)
+   📢 旅遊工具區塊出現 7 次
+
+📄 檢查: japan-travel.html (27362 bytes)
+   📢 旅遊工具區塊出現 7 次
+
+📄 檢查: jeju-island.html (25973 bytes)
+   📢 Klook 推廣出現 6 次
+   📢 旅遊工具區塊出現 9 次
+   📢 延伸閱讀區塊出現 2 次
+
+📄 檢查: jiufen.html (24477 bytes)
+   📢 Klook 推廣出現 4 次
+   📢 旅遊工具區塊出現 7 次
+   📢 延伸閱讀區塊出現 2 次
+
+📄 檢查: kansai-pass.html (27219 bytes)
+   📢 Klook 推廣出現 13 次
+   📢 旅遊工具區塊出現 9 次
+   📢 延伸閱讀區塊出現 2 次
+
+📄 檢查: kenting.html (25104 bytes)
+   📢 Klook 推廣出現 3 次
+   📢 旅遊工具區塊出現 9 次
+   📢 延伸閱讀區塊出現 2 次
+
+📄 檢查: korea-budget-travel-guide.html (20428 bytes)
+
+📄 檢查: korea-budget.html (23691 bytes)
+   📢 Klook 推廣出現 5 次
+   📢 旅遊工具區塊出現 7 次
+   📢 延伸閱讀區塊出現 2 次
+
+📄 檢查: korea-money-saving-tips.html (26956 bytes)
+   📢 旅遊工具區塊出現 7 次
+
+📄 檢查: korea-transport.html (20193 bytes)
+   📢 旅遊工具區塊出現 7 次
+   🔧 div 不平衡: 44 開 vs 42 關
+
+📄 檢查: korea-travel.html (25065 bytes)
+   📢 旅遊工具區塊出現 7 次
+
+📄 檢查: kualalumpur-3days.html (43554 bytes)
+   📢 旅遊工具區塊出現 7 次
+
+📄 檢查: kyoto-temples.html (25401 bytes)
+   📢 Klook 推廣出現 5 次
+   📢 旅遊工具區塊出現 9 次
+   📢 延伸閱讀區塊出現 2 次
+
+📄 檢查: miles-calculator.html (28219 bytes)
+   📢 旅遊工具區塊出現 9 次
+
+📄 檢查: monthly-review.html (21980 bytes)
+   📢 Klook 推廣出現 3 次
+   📢 旅遊工具區塊出現 9 次
+
+📄 檢查: notion-travel-template.html (18683 bytes)
+   📢 旅遊工具區塊出現 12 次
+
+📄 檢查: okinawa.html (28578 bytes)
+   📢 旅遊工具區塊出現 9 次
+   📢 延伸閱讀區塊出現 2 次
+
+📄 檢查: osaka-food.html (27208 bytes)
+   📢 Klook 推廣出現 5 次
+   📢 旅遊工具區塊出現 7 次
+   📢 延伸閱讀區塊出現 2 次
+
+📄 檢查: osaka-usj.html (26773 bytes)
+   📢 Klook 推廣出現 21 次
+   📢 旅遊工具區塊出現 7 次
+   📢 延伸閱讀區塊出現 2 次
+
+📄 檢查: packing-checklist.html (30556 bytes)
+   📢 旅遊工具區塊出現 11 次
+
+📄 檢查: packing-list-online.html (24665 bytes)
+   📢 Klook 推廣出現 4 次
+   📢 旅遊工具區塊出現 13 次
+
+📄 檢查: packing-list.html (33676 bytes)
+   📢 旅遊工具區塊出現 13 次
+
+📄 檢查: power-plug-guide.html (28370 bytes)
+   📢 旅遊工具區塊出現 14 次
+
+📄 檢查: privacy.html (33597 bytes)
+   📢 旅遊工具區塊出現 7 次
+
+📄 檢查: seasia-budget-travel-guide.html (13165 bytes)
+   ⚠️  文件大小異常: 13165 bytes
+   📢 旅遊工具區塊出現 4 次
+
+📄 檢查: seoul-5days.html (21173 bytes)
+   📢 旅遊工具區塊出現 7 次
+   🔧 div 不平衡: 44 開 vs 42 關
+
+📄 檢查: seoul-food-map.html (34670 bytes)
+   📢 旅遊工具區塊出現 7 次
+   🔧 div 不平衡: 129 開 vs 125 關
+
+📄 檢查: seoul-food.html (29399 bytes)
+   📢 Klook 推廣出現 5 次
+   📢 旅遊工具區塊出現 9 次
+   📢 延伸閱讀區塊出現 2 次
+
+📄 檢查: singapore-3days.html (39026 bytes)
+   📢 旅遊工具區塊出現 7 次
+
+📄 檢查: southeast-asia.html (36603 bytes)
+   📢 旅遊工具區塊出現 8 次
+
+📄 檢查: tainan-food.html (25880 bytes)
+   📢 Klook 推廣出現 3 次
+   📢 旅遊工具區塊出現 9 次
+   📢 延伸閱讀區塊出現 2 次
+
+📄 檢查: taipei-food.html (20457 bytes)
+   📢 Klook 推廣出現 3 次
+   📢 旅遊工具區塊出現 7 次
+   📢 延伸閱讀區塊出現 2 次
+
+📄 檢查: taiwan-travel-guide.html (19139 bytes)
+
+📄 檢查: taiwan-travel.html (38782 bytes)
+   📢 旅遊工具區塊出現 9 次
+
+📄 檢查: tax-refund-calculator.html (28241 bytes)
+   📢 旅遊工具區塊出現 9 次
+
+📄 檢查: terms.html (12795 bytes)
+   ⚠️  文件大小異常: 12795 bytes
+   📢 旅遊工具區塊出現 4 次
+
+📄 檢查: thailand-sim.html (20153 bytes)
+   📢 旅遊工具區塊出現 8 次
+   🔧 div 不平衡: 48 開 vs 46 關
+
+📄 檢查: tokyo-5days.html (37462 bytes)
+   📢 Klook 推廣出現 15 次
+   📢 旅遊工具區塊出現 7 次
+   📢 延伸閱讀區塊出現 2 次
+
+📄 檢查: tokyo-accommodation.html (20845 bytes)
+   📢 旅遊工具區塊出現 7 次
+   🔧 div 不平衡: 47 開 vs 45 關
+
+📄 檢查: travel-tools.html (37612 bytes)
+   📢 旅遊工具區塊出現 25 次
+
+📄 檢查: vietnam-danang.html (23029 bytes)
+   📢 Klook 推廣出現 3 次
+   📢 旅遊工具區塊出現 7 次
+   📢 延伸閱讀區塊出現 2 次
+
+📄 檢查: vietnam-hochiminh.html (18954 bytes)
+   📢 旅遊工具區塊出現 7 次
+   🔧 div 不平衡: 45 開 vs 43 關
+
+📄 檢查: _live_index.html (39995 bytes)
+   📢 Klook 推廣出現 18 次
+   📢 旅遊工具區塊出現 11 次
+
+================================================================================
+📋 檢查總結：63 個頁面有問題
+================================================================================
+
+📝 問題清單：
+
+❌ 404.html
+   ⚠️  文件大小異常: 7340 bytes (平均 28202)
+   📢 旅遊工具區塊出現 4 次
+
+❌ _live_index.html
+   📢 Klook 推廣出現 18 次
+   📢 旅遊工具區塊出現 11 次
+
+❌ about.html
+   📢 旅遊工具區塊出現 7 次
+
+❌ angkor-wat-2days.html
+   📢 旅遊工具區塊出現 7 次
+
+❌ bangkok-3days.html
+   📢 Klook 推廣出現 4 次
+   📢 旅遊工具區塊出現 7 次
+   📢 延伸閱讀區塊出現 2 次
+
+❌ bangkok-4days.html
+   📢 旅遊工具區塊出現 7 次
+   🔧 div 不平衡: 45 開 vs 43 關
+
+❌ bangkok-massage.html
+   📢 Klook 推廣出現 6 次
+   📢 旅遊工具區塊出現 7 次
+   📢 延伸閱讀區塊出現 2 次
+
+❌ budget-airline-guide.html
+   📢 旅遊工具區塊出現 10 次
+
+❌ budget-calculator.html
+   📢 旅遊工具區塊出現 9 次
+
+❌ busan-4days.html
+   📢 旅遊工具區塊出現 7 次
+   🔧 div 不平衡: 201 開 vs 197 關
+
+❌ busan-capsule.html
+   📢 Klook 推廣出現 5 次
+   📢 旅遊工具區塊出現 9 次
+   📢 延伸閱讀區塊出現 2 次
+
+❌ chiang-mai.html
+   📢 Klook 推廣出現 5 次
+   📢 旅遊工具區塊出現 9 次
+   📢 延伸閱讀區塊出現 2 次
+
+❌ contact.html
+   📢 旅遊工具區塊出現 7 次
+
+❌ credit-card-miles-guide.html
+   📢 旅遊工具區塊出現 9 次
+
+❌ disclaimer.html
+   ⚠️  文件大小異常: 13561 bytes (平均 28202)
+   📢 旅遊工具區塊出現 4 次
+
+❌ esim-comparison.html
+   📢 旅遊工具區塊出現 12 次
+
+❌ fukuoka-5days.html
+   📢 旅遊工具區塊出現 7 次
+   🔧 div 不平衡: 147 開 vs 143 關
+
+❌ hokkaido-winter.html
+   📢 Klook 推廣出現 5 次
+   📢 旅遊工具區塊出現 9 次
+   📢 延伸閱讀區塊出現 2 次
+
+❌ hualien-taitung.html
+   📢 Klook 推廣出現 4 次
+   📢 旅遊工具區塊出現 9 次
+   📢 延伸閱讀區塊出現 2 次
+
+❌ index.html
+   📢 Klook 推廣出現 3 次
+   📢 旅遊工具區塊出現 12 次
+
+❌ japan-budget-guide.html
+   📢 Klook 推廣出現 7 次
+   📢 旅遊工具區塊出現 7 次
+   📢 延伸閱讀區塊出現 2 次
+
+❌ japan-cherry-blossom-season.html
+   📢 旅遊工具區塊出現 7 次
+
+❌ japan-drugstore-checklist.html
+   📢 Klook 推廣出現 6 次
+   📢 旅遊工具區塊出現 9 次
+
+❌ japan-money-saving-tips.html
+   📢 旅遊工具區塊出現 7 次
+
+❌ japan-travel.html
+   📢 旅遊工具區塊出現 7 次
+
+❌ jeju-island.html
+   📢 Klook 推廣出現 6 次
+   📢 旅遊工具區塊出現 9 次
+   📢 延伸閱讀區塊出現 2 次
+
+❌ jiufen.html
+   📢 Klook 推廣出現 4 次
+   📢 旅遊工具區塊出現 7 次
+   📢 延伸閱讀區塊出現 2 次
+
+❌ kansai-pass.html
+   📢 Klook 推廣出現 13 次
+   📢 旅遊工具區塊出現 9 次
+   📢 延伸閱讀區塊出現 2 次
+
+❌ kenting.html
+   📢 Klook 推廣出現 3 次
+   📢 旅遊工具區塊出現 9 次
+   📢 延伸閱讀區塊出現 2 次
+
+❌ korea-budget.html
+   📢 Klook 推廣出現 5 次
+   📢 旅遊工具區塊出現 7 次
+   📢 延伸閱讀區塊出現 2 次
+
+❌ korea-money-saving-tips.html
+   📢 旅遊工具區塊出現 7 次
+
+❌ korea-transport.html
+   📢 旅遊工具區塊出現 7 次
+   🔧 div 不平衡: 44 開 vs 42 關
+
+❌ korea-travel.html
+   📢 旅遊工具區塊出現 7 次
+
+❌ kualalumpur-3days.html
+   📢 旅遊工具區塊出現 7 次
+
+❌ kyoto-temples.html
+   📢 Klook 推廣出現 5 次
+   📢 旅遊工具區塊出現 9 次
+   📢 延伸閱讀區塊出現 2 次
+
+❌ miles-calculator.html
+   📢 旅遊工具區塊出現 9 次
+
+❌ monthly-review.html
+   📢 Klook 推廣出現 3 次
+   📢 旅遊工具區塊出現 9 次
+
+❌ notion-travel-template.html
+   📢 旅遊工具區塊出現 12 次
+
+❌ okinawa.html
+   📢 旅遊工具區塊出現 9 次
+   📢 延伸閱讀區塊出現 2 次
+
+❌ osaka-food.html
+   📢 Klook 推廣出現 5 次
+   📢 旅遊工具區塊出現 7 次
+   📢 延伸閱讀區塊出現 2 次
+
+❌ osaka-usj.html
+   📢 Klook 推廣出現 21 次
+   📢 旅遊工具區塊出現 7 次
+   📢 延伸閱讀區塊出現 2 次
+
+❌ packing-checklist.html
+   📢 旅遊工具區塊出現 11 次
+
+❌ packing-list-online.html
+   📢 Klook 推廣出現 4 次
+   📢 旅遊工具區塊出現 13 次
+
+❌ packing-list.html
+   📢 旅遊工具區塊出現 13 次
+
+❌ power-plug-guide.html
+   📢 旅遊工具區塊出現 14 次
+
+❌ privacy.html
+   📢 旅遊工具區塊出現 7 次
+
+❌ seasia-budget-travel-guide.html
+   ⚠️  文件大小異常: 13165 bytes (平均 28202)
+   📢 旅遊工具區塊出現 4 次
+
+❌ seoul-5days.html
+   📢 旅遊工具區塊出現 7 次
+   🔧 div 不平衡: 44 開 vs 42 關
+
+❌ seoul-food-map.html
+   📢 旅遊工具區塊出現 7 次
+   🔧 div 不平衡: 129 開 vs 125 關
+
+❌ seoul-food.html
+   📢 Klook 推廣出現 5 次
+   📢 旅遊工具區塊出現 9 次
+   📢 延伸閱讀區塊出現 2 次
+
+❌ singapore-3days.html
+   📢 旅遊工具區塊出現 7 次
+
+❌ southeast-asia.html
+   📢 旅遊工具區塊出現 8 次
+
+❌ tainan-food.html
+   📢 Klook 推廣出現 3 次
+   📢 旅遊工具區塊出現 9 次
+   📢 延伸閱讀區塊出現 2 次
+
+❌ taipei-food.html
+   📢 Klook 推廣出現 3 次
+   📢 旅遊工具區塊出現 7 次
+   📢 延伸閱讀區塊出現 2 次
+
+❌ taiwan-travel.html
+   📢 旅遊工具區塊出現 9 次
+
+❌ tax-refund-calculator.html
+   📢 旅遊工具區塊出現 9 次
+
+❌ terms.html
+   ⚠️  文件大小異常: 12795 bytes (平均 28202)
+   📢 旅遊工具區塊出現 4 次
+
+❌ thailand-sim.html
+   📢 旅遊工具區塊出現 8 次
+   🔧 div 不平衡: 48 開 vs 46 關
+
+❌ tokyo-5days.html
+   📢 Klook 推廣出現 15 次
+   📢 旅遊工具區塊出現 7 次
+   📢 延伸閱讀區塊出現 2 次
+
+❌ tokyo-accommodation.html
+   📢 旅遊工具區塊出現 7 次
+   🔧 div 不平衡: 47 開 vs 45 關
+
+❌ travel-tools.html
+   📢 旅遊工具區塊出現 25 次
+
+❌ vietnam-danang.html
+   📢 Klook 推廣出現 3 次
+   📢 旅遊工具區塊出現 7 次
+   📢 延伸閱讀區塊出現 2 次
+
+❌ vietnam-hochiminh.html
+   📢 旅遊工具區塊出現 7 次
+   🔧 div 不平衡: 45 開 vs 43 關
+
+
+================================================================================
+🔧 建議修復行動：
+================================================================================
+
+1. 文件大小異常 (4 頁):
+   → 從最後完整版本恢復這些頁面
+      - 404.html
+      - disclaimer.html
+      - seasia-budget-travel-guide.html
+      - terms.html
+
+3. HTML 結構問題 (9 頁):
+   → 修復 div/article-container 平衡
+      - bangkok-4days.html
+      - busan-4days.html
+      - fukuoka-5days.html
+      - korea-transport.html
+      - seoul-5days.html
+      - seoul-food-map.html
+      - thailand-sim.html
+      - tokyo-accommodation.html
+      - vietnam-hochiminh.html
+
+================================================================================
+✅ 建議先處理「文件大小異常」的頁面（內容可能被刪除）
+✅ 然後處理「重複內容/推廣」
+✅ 最後修復「HTML 結構問題」
