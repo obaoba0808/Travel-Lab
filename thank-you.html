@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>下載就緒｜Travel Lab 均在路上</title>
+  <meta name="robots" content="noindex, nofollow">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: linear-gradient(135deg, #0ABAB5 0%, #764ba2 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .card {
+      background: #fff;
+      border-radius: 20px;
+      padding: 48px 40px;
+      max-width: 520px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    }
+    .emoji { font-size: 64px; margin-bottom: 16px; }
+    h1 { font-size: 26px; color: #1a1a2e; margin-bottom: 12px; font-weight: 700; }
+    .subtitle { color: #666; font-size: 16px; margin-bottom: 32px; line-height: 1.6; }
+    .download-btn {
+      display: inline-block;
+      background: linear-gradient(135deg, #0ABAB5, #764ba2);
+      color: #fff;
+      padding: 16px 36px;
+      border-radius: 50px;
+      font-size: 18px;
+      font-weight: 700;
+      text-decoration: none;
+      margin-bottom: 20px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .download-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(10,186,181,0.4); }
+    .note { font-size: 13px; color: #999; margin-top: 20px; }
+    .hidden { display: none; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="emoji" id="emoji">📥</div>
+    <h1 id="title">資料下載就緒</h1>
+    <p class="subtitle" id="subtitle">感謝您訂閱 Travel Lab！<br>點擊下方按鈕即可免費下載攻略 PDF。</p>
+    <a href="/downloads/" class="download-btn" id="btn">📥 前往下載專區</a>
+    <p class="note">若未自動跳轉，請點擊上方按鈕進入下載頁面</p>
+  </div>
+
+  <script>
+    // 從 URL 參數讀取 resource，翻譯成中文顯示
+    const params = new URLSearchParams(window.location.search);
+    const resource = params.get('resource') || '';
+
+    const titles = {
+      'bangkok-food-map':     { title: '曼谷美食地圖已備好', emoji: '🥘' },
+      'bangkok-massage-map':  { title: '曼谷按摩地圖已備好', emoji: '💆' },
+      'seoul-food-map':       { title: '首爾美食地圖已備好', emoji: '🍖' },
+      'osaka-food-map':       { title: '大阪美食地圖已備好', emoji: '🍜' },
+      'taipei-food-map':      { title: '台北美食地圖已備好', emoji: '🥟' },
+      'tainan-food-map':      { title: '台南美食地圖已備好', emoji: '🦐' },
+      'tokyo-metro-map':      { title: '東京Metro攻略已備好', emoji: '🚇' },
+      'packing-checklist':    { title: '行李清單已備好', emoji: '🧳' },
+      'japan-budget-sheet':   { title: '日本預算表已備好', emoji: '💴' },
+      'korea-budget-sheet':   { title: '韓國預算表已備好', emoji: '🇰🇷' },
+      'sea-budget-sheet':     { title: '東南亞預算表已備好', emoji: '🌴' },
+      'chiang-mai-guide':     { title: '清邁攻略已備好', emoji: '🏯' },
+      'busan-capsule-guide':  { title: '釜山攻略已備好', emoji: '🏙' },
+      'danang-map':           { title: '峴港攻略已備好', emoji: '🏖' },
+      'jeju-driving-route':   { title: '濟州島自駕攻略已備好', emoji: '🚗' },
+      'hokkaido-packing-list':{ title: '北海道行李清單已備好', emoji: '❄' },
+      'hualien-itinerary':    { title: '花蓮行程已備好', emoji: '🌊' },
+      'jiufen-guide':         { title: '九份攻略已備好', emoji: '🏮' },
+      'kenting-night-market': { title: '墾丁夜市攻略已備好', emoji: '🦀' },
+      'kansai-pass-calculator':{ title: '關西周遊券攻略已備好', emoji: '🎫' },
+      'kyoto-momiji-schedule': { title: '京都紅葉schedule已備好', emoji: '🍁' },
+      'okinawa-driving-map':  { title: '沖繩自駕地圖已備好', emoji: '🌺' },
+      'usj-quick-pass':       { title: 'USJ快速通關攻略已備好', emoji: '🎢' },
+      'emergency-contact-card':{ title: '緊急聯絡卡已備好', emoji: '📋' },
+      'taiwan-travel':        { title: '台灣旅遊攻略已備好', emoji: '🇹🇼' },
+    };
+
+    const info = titles[resource] || { title: '資料下載就緒', emoji: '📥' };
+    document.getElementById('emoji').textContent = info.emoji;
+    document.getElementById('title').textContent = info.title;
+  </script>
+</body>
+</html>
