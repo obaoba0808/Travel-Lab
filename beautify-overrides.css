@@ -116,7 +116,7 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  /* justify-content removed - was causing footer to float to center on mobile */
   padding: 4px 0;
 }
 .related-card .post-body h3 {
@@ -194,7 +194,7 @@
 .site-footer {
   background: #111827;
   color: #ccc;
-  padding: 52px 0 0;
+  padding: 52px 0 70px; /* extra bottom padding to clear fixed toolbar on mobile */
   margin-top: 64px;
 }
 .footer-inner {
