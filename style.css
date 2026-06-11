@@ -578,6 +578,7 @@ div[style*="max-width:900px;margin:0 auto 30px;padding:0 20px;"] {
     align-items: stretch;
     gap: 15px;
     padding: 0 15px;
+    min-height: 100vh; /* Ensure wrapper takes full viewport height to push footer down */
   }
   .sidebar-card {
     width: 100%;
