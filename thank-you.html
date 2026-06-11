@@ -20,76 +20,170 @@
       background: #fff;
       border-radius: 20px;
       padding: 48px 40px;
-      max-width: 520px;
+      max-width: 540px;
       width: 100%;
       text-align: center;
       box-shadow: 0 20px 60px rgba(0,0,0,0.3);
     }
     .emoji { font-size: 64px; margin-bottom: 16px; }
     h1 { font-size: 26px; color: #1a1a2e; margin-bottom: 12px; font-weight: 700; }
-    .subtitle { color: #666; font-size: 16px; margin-bottom: 32px; line-height: 1.6; }
+    .subtitle { color: #666; font-size: 16px; margin-bottom: 24px; line-height: 1.6; }
+    .countdown-bar {
+      width: 100%;
+      height: 6px;
+      background: #eee;
+      border-radius: 3px;
+      margin-bottom: 20px;
+      overflow: hidden;
+    }
+    .countdown-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #0ABAB5, #764ba2);
+      border-radius: 3px;
+      width: 100%;
+      animation: shrink 5s linear forwards;
+    }
+    @keyframes shrink { from { width: 100%; } to { width: 0%; } }
+    .countdown-text { font-size: 14px; color: #999; margin-bottom: 20px; }
+    .countdown-text strong { color: #0ABAB5; font-size: 18px; }
+    .btn-group { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-bottom: 16px; }
     .download-btn {
       display: inline-block;
       background: linear-gradient(135deg, #0ABAB5, #764ba2);
       color: #fff;
-      padding: 16px 36px;
+      padding: 14px 32px;
       border-radius: 50px;
-      font-size: 18px;
+      font-size: 17px;
       font-weight: 700;
       text-decoration: none;
-      margin-bottom: 20px;
       transition: transform 0.2s, box-shadow 0.2s;
+      border: none;
+      cursor: pointer;
     }
     .download-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(10,186,181,0.4); }
-    .note { font-size: 13px; color: #999; margin-top: 20px; }
-    .hidden { display: none; }
+    .copy-btn {
+      display: inline-block;
+      background: #fff;
+      color: #0ABAB5;
+      border: 2px solid #0ABAB5;
+      padding: 14px 24px;
+      border-radius: 50px;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: transform 0.2s, background 0.2s;
+    }
+    .copy-btn:hover { transform: translateY(-2px); background: #f0faf9; }
+    .copy-btn.copied { background: #e6f9f0; border-color: #22c55e; color: #22c55e; }
+    .note { font-size: 13px; color: #999; margin-top: 12px; }
+    .toast {
+      position: fixed; bottom: 30px; left: 50%;
+      transform: translateX(-50%) translateY(100px);
+      background: #1a1a2e; color: #fff;
+      padding: 12px 24px; border-radius: 12px;
+      font-size: 14px; font-weight: 600;
+      opacity: 0; transition: all 0.3s ease; z-index: 9999;
+    }
+    .toast.show { transform: translateX(-50%) translateY(0); opacity: 1; }
   </style>
 </head>
 <body>
   <div class="card">
     <div class="emoji" id="emoji">📥</div>
     <h1 id="title">資料下載就緒</h1>
-    <p class="subtitle" id="subtitle">感謝您訂閱 Travel Lab！<br>點擊下方按鈕即可免費下載攻略 PDF。</p>
-    <a href="/downloads/" class="download-btn" id="btn">📥 前往下載專區</a>
+    <p class="subtitle" id="subtitle">感謝您填寫表單！<br>即將為您開啟下載專區……</p>
+    <div class="countdown-bar"><div class="countdown-fill"></div></div>
+    <p class="countdown-text"><strong id="countdownNum">5</strong> 秒後自動跳轉到下載專區</p>
+    <div class="btn-group">
+      <a href="/downloads/" class="download-btn">📥 立即前往下載專區</a>
+      <button class="copy-btn" id="copyBtn" onclick="copyLink()">📋 複製下載連結</button>
+    </div>
     <p class="note">若未自動跳轉，請點擊上方按鈕進入下載頁面</p>
   </div>
+  <div class="toast" id="toast"></div>
 
   <script>
-    // 從 URL 參數讀取 resource，翻譯成中文顯示
+    // 從 URL 參數讀取 resource，顯示對應標題
     const params = new URLSearchParams(window.location.search);
     const resource = params.get('resource') || '';
+    const downloadUrl = 'https://golightly.fun/downloads/';
 
     const titles = {
-      'bangkok-food-map':     { title: '曼谷美食地圖已備好', emoji: '🥘' },
-      'bangkok-massage-map':  { title: '曼谷按摩地圖已備好', emoji: '💆' },
-      'seoul-food-map':       { title: '首爾美食地圖已備好', emoji: '🍖' },
-      'osaka-food-map':       { title: '大阪美食地圖已備好', emoji: '🍜' },
-      'taipei-food-map':      { title: '台北美食地圖已備好', emoji: '🥟' },
-      'tainan-food-map':      { title: '台南美食地圖已備好', emoji: '🦐' },
-      'tokyo-metro-map':      { title: '東京Metro攻略已備好', emoji: '🚇' },
-      'packing-checklist':    { title: '行李清單已備好', emoji: '🧳' },
-      'japan-budget-sheet':   { title: '日本預算表已備好', emoji: '💴' },
-      'korea-budget-sheet':   { title: '韓國預算表已備好', emoji: '🇰🇷' },
-      'sea-budget-sheet':     { title: '東南亞預算表已備好', emoji: '🌴' },
-      'chiang-mai-guide':     { title: '清邁攻略已備好', emoji: '🏯' },
-      'busan-capsule-guide':  { title: '釜山攻略已備好', emoji: '🏙' },
-      'danang-map':           { title: '峴港攻略已備好', emoji: '🏖' },
-      'jeju-driving-route':   { title: '濟州島自駕攻略已備好', emoji: '🚗' },
-      'hokkaido-packing-list':{ title: '北海道行李清單已備好', emoji: '❄' },
-      'hualien-itinerary':    { title: '花蓮行程已備好', emoji: '🌊' },
-      'jiufen-guide':         { title: '九份攻略已備好', emoji: '🏮' },
-      'kenting-night-market': { title: '墾丁夜市攻略已備好', emoji: '🦀' },
+      'bangkok-food-map':      { title: '曼谷美食地圖已備好', emoji: '🥘' },
+      'bangkok-massage-map':   { title: '曼谷按摩地圖已備好', emoji: '💆' },
+      'seoul-food-map':        { title: '首爾美食地圖已備好', emoji: '🍖' },
+      'osaka-food-map':        { title: '大阪美食地圖已備好', emoji: '🍜' },
+      'taipei-food-map':       { title: '台北美食地圖已備好', emoji: '🥟' },
+      'tainan-food-map':       { title: '台南美食地圖已備好', emoji: '🦐' },
+      'tokyo-metro-map':       { title: '東京Metro攻略已備好', emoji: '🚇' },
+      'packing-checklist':     { title: '行李清單已備好', emoji: '🧳' },
+      'japan-budget-sheet':    { title: '日本預算表已備好', emoji: '💴' },
+      'korea-budget-sheet':    { title: '韓國預算表已備好', emoji: '🇰🇷' },
+      'sea-budget-sheet':      { title: '東南亞預算表已備好', emoji: '🌴' },
+      'chiang-mai-guide':      { title: '清邁攻略已備好', emoji: '🏯' },
+      'busan-capsule-guide':   { title: '釜山攻略已備好', emoji: '🏙' },
+      'danang-map':            { title: '峴港攻略已備好', emoji: '🏖' },
+      'jeju-driving-route':    { title: '濟州島自駕攻略已備好', emoji: '🚗' },
+      'hokkaido-packing-list': { title: '北海道行李清單已備好', emoji: '❄' },
+      'hualien-itinerary':     { title: '花蓮行程已備好', emoji: '🌊' },
+      'jiufen-guide':          { title: '九份攻略已備好', emoji: '🏮' },
+      'kenting-night-market':  { title: '墾丁夜市攻略已備好', emoji: '🦀' },
       'kansai-pass-calculator':{ title: '關西周遊券攻略已備好', emoji: '🎫' },
-      'kyoto-momiji-schedule': { title: '京都紅葉schedule已備好', emoji: '🍁' },
-      'okinawa-driving-map':  { title: '沖繩自駕地圖已備好', emoji: '🌺' },
-      'usj-quick-pass':       { title: 'USJ快速通關攻略已備好', emoji: '🎢' },
-      'emergency-contact-card':{ title: '緊急聯絡卡已備好', emoji: '📋' },
-      'taiwan-travel':        { title: '台灣旅遊攻略已備好', emoji: '🇹🇼' },
+      'kyoto-momiji-schedule': { title: '京都紅葉攻略已備好', emoji: '🍁' },
+      'okinawa-driving-map':   { title: '沖繩自駕地圖已備好', emoji: '🌺' },
+      'usj-quick-pass':        { title: 'USJ快速通關攻略已備好', emoji: '🎢' },
+      'emergency-contact-card': { title: '緊急聯絡卡已備好', emoji: '📋' },
+      'taiwan-travel':         { title: '台灣自由行攻略已備好', emoji: '🏰' },
+      'esim-comparison':       { title: 'eSIM比較攻略已備好', emoji: '📱' },
+      'packing-list':          { title: '行李表已備好', emoji: '🧳' }
     };
 
+    // 更新顯示標題和 emoji
     const info = titles[resource] || { title: '資料下載就緒', emoji: '📥' };
-    document.getElementById('emoji').textContent = info.emoji;
     document.getElementById('title').textContent = info.title;
+    document.getElementById('emoji').textContent = info.emoji;
+
+    // 複製下載連結功能
+    function copyLink() {
+      navigator.clipboard.writeText(downloadUrl).then(function() {
+        var btn = document.getElementById('copyBtn');
+        btn.textContent = '✓ 已複製！';
+        btn.classList.add('copied');
+        showToast('連結已複製到剪貼板！');
+        setTimeout(function() {
+          btn.textContent = '📋 複製下載連結';
+          btn.classList.remove('copied');
+        }, 3000);
+      }).catch(function() {
+        // fallback for older browsers
+        var ta = document.createElement('textarea');
+        ta.value = downloadUrl;
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        document.body.removeChild(ta);
+        showToast('連結已複製！');
+      });
+    }
+
+    function showToast(msg) {
+      var t = document.getElementById('toast');
+      t.textContent = msg;
+      t.classList.add('show');
+      setTimeout(function() { t.classList.remove('show'); }, 2500);
+    }
+
+    // 自動倒數跳轉，5秒後到下載專區
+    var seconds = 5;
+    var numEl = document.getElementById('countdownNum');
+    var interval = setInterval(function() {
+      seconds--;
+      numEl.textContent = seconds;
+      if (seconds <= 0) {
+        clearInterval(interval);
+        window.location.href = downloadUrl;
+      }
+    }, 1000);
   </script>
 </body>
 </html>
