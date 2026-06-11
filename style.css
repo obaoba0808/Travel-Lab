@@ -260,10 +260,9 @@ div[style*="max-width:900px;margin:0 auto 30px;padding:0 20px;"] {
 .sidebar-card {
   width: 280px; /* Updated to match block spec (~280px wide) */
   flex-shrink: 0;
+  align-self: flex-start; /* Prevent flex container from stretching sidebar height */
   position: sticky;
   top: 80px; /* Adjusted top for sticky to clear topbar (52px topbar + ~28px margin) */
-  max-height: calc(100vh - 100px); /* Prevent sidebar from extending into Footer area */
-  overflow-y: auto;
   border-radius: 14px;
   overflow: hidden;
   background: #fff;
