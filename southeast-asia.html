@@ -81,6 +81,10 @@
 (function(w){"use strict";if(!w.loadCSS){w.loadCSS=function(){}}
 var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.createElement("link").relList.supports("preload")}catch(e){ret=!1}return function(){return ret}})();rp.poly=function(){var link=w.document.getElementsByTagName("link");for(var i=0;i<link.length;i++){var lnk=link[i];if(lnk.rel==="preload"&&lnk.as==="style"&&!lnk.onload){lnk.onload=rp.poly;lnk.rel="stylesheet"}}};if(!rp.support()){rp.poly();var run=w.setInterval(rp.poly,500);if(w.addEventListener){w.addEventListener("load",function(){rp.poly();w.clearInterval(run)})}else if(w.attachEvent){w.attachEvent("onload",function(){rp.poly();w.clearInterval(run)})}}if(typeof exports!=="undefined"){exports.loadCSS=loadCSS}else{w.loadCSS=loadCSS}}(typeof global!=="undefined"?global:this));
 </script>
+  <!-- hreflang -->
+  <link rel="alternate" hreflang="zh-Hant" href="https://golightly.fun/southeast-asia.html"/>
+  <link rel="alternate" hreflang="zh-TW" href="https://golightly.fun/southeast-asia.html"/>
+  <link rel="alternate" hreflang="x-default" href="https://golightly.fun/southeast-asia.html"/>
 </head>
 <body>
     

@@ -6,3 +6,5 @@ Disallow: /backup/
 Disallow: /_backup_*/
 
 Sitemap: https://golightly.fun/sitemap.xml
+
+Sitemap: https://golightly.fun/sitemap.xml
