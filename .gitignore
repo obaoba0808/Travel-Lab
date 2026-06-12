@@ -1,0 +1,29 @@
+
+
+# Python scripts (generated/one-off)
+*.py
+
+# Backup files
+*.bak
+
+# Audit/debug artifacts
+audit_*.txt
+debug_*.txt
+*_report.txt
+directory_test_results.json
+p2_check_result.json
+
+# Test PDFs
+pdfs/test_*.pdf
+test_*.pdf
+
+# Test images
+test_*.webp
+test_*.jpg
+test_*.png
+
+# .DS_Store
+.DS_Store
+
+# Wrangler cache
+.wrangler/
