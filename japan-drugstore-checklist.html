@@ -671,6 +671,80 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 </a>
 </div>
 </div>
+<script>
+  // Track affiliate link clicks via GA4
+  document.addEventListener('click', function(e) {
+    var link = e.target.closest('[data-affiliate]');
+    if (link) {
+      if (typeof gtag === 'function') {
+        gtag('event', 'affiliate_click', {
+          affiliate: link.getAttribute('data-affiliate'),
+          page: window.location.pathname
+        });
+      }
+    }
+  });
+</script>
+<script defer="" src="js/monetization.js"></script>
+
+</div>
+
+  <!-- SEO Enhancement: Japan Drugstore - Extended Recommendations -->
+  <section class="mt-12 p-6 bg-gradient-to-br from-sky-50 to-blue-50 rounded-2xl">
+    <h2 class="text-2xl font-bold mb-4">💊 日本藥妝必買清單再加碼：這些你也該帶回家！</h2>
+
+    <h3 class="font-bold text-lg mb-3">麵膜區：CP值最高不能錯過</h3>
+    <div class="grid md:grid-cols-2 gap-3 mb-4">
+      <div class="bg-white rounded-xl p-4 shadow-sm">
+        <p class="font-bold text-blue-700">Saborino 早安面膜（朝面膜）</p>
+        <p class="text-sm text-gray-600">早上敷1分鐘即可出門，含精華液和妝前乳合一，28片裝約¥1,200。黃色包裝（蜂蜜）、綠色（薄荷）最熱賣。</p>
+      </div>
+      <div class="bg-white rounded-xl p-4 shadow-sm">
+        <p class="font-bold text-blue-700">Kracie 明色美白面膜</p>
+        <p class="text-sm text-gray-600">日本美白老牌，主打維生素C和胎盤素，30片裝約¥1,500，敷完明顯亮一階。</p>
+      </div>
+      <div class="bg-white rounded-xl p-4 shadow-sm">
+        <p class="font-bold text-blue-700">Utena 玻尿酸黃金果凍面膜</p>
+        <p class="text-sm text-gray-600">精華液是果凍質地，滋潤度極高，乾燥肌必備。 ¥900/5片，CP值普通但效果很好。</p>
+      </div>
+      <div class="bg-white rounded-xl p-4 shadow-sm">
+        <p class="font-bold text-blue-700">KOSE 膠原蛋白面膜系列</p>
+        <p class="text-sm text-gray-600">白色包裝基礎款、粉色抗老款、藍色保濕款，各年齡層都適合。約¥1,300/6片。</p>
+      </div>
+    </div>
+
+    <h3 class="font-bold text-lg mb-3">💧 眼藥水與腸胃藥推薦</h3>
+    <ul class="list-disc list-inside text-gray-700 space-y-1 mb-4">
+      <li><strong>參天 FX 眼藥水</strong>（Sante FX）：清涼感一極棒，緩解眼睛疲勞，¥700-900。銀色基本款、金の超清涼版</li>
+      <li><strong>樂敦 Lycee 小花眼藥水</strong>：可愛愛心瓶身，隱形眼鏡可用，¥650-800</li>
+      <li><strong>太田胃散</strong>：腸胃不適、宿醉克星，鋁罐包裝約¥1,200，胃弱的人必備</li>
+      <li><strong>大正製藥正露丸</strong>：旅行腹瀉救星，糖衣包裝不難吃，¥800-1,000</li>
+      <li><strong>Buffering Lunom 胃藥</strong>：新配方，吃太多燒肉可用，¥1,000</li>
+    </ul>
+
+    <h3 class="font-bold text-lg mb-3">🛒 哪裡買最划算？購買地點比一比</h3>
+    <div class="bg-white rounded-xl p-4 shadow-sm mb-4">
+      <table class="w-full text-sm">
+        <thead class="bg-blue-100">
+          <tr>
+            <th class="p-2 text-left">店鋪</th><th class="p-2 text-center">價格</th><th class="p-2 text-center">免稅</th><th class="p-2 text-left">特色</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-blue-50">
+          <tr><td class="p-2">Don Quijote（唐吉訶德）</td><td class="p-2 text-center">中</td><td class="p-2 text-center">✓（¥5,000起）</td><td class="p-2">品項最齊，24小時</td></tr>
+          <tr><td class="p-2">AINZ & TULPE</td><td class="p-2 text-center">中低</td><td class="p-2 text-center">✓</td><td class="p-2">外國人最愛，折扣券多</td></tr>
+          <tr><td class="p-2">鶴羽藥妝（Tsuruha）</td><td class="p-2 text-center">低</td><td class="p-2 text-center">✓</td><td class="p-2">北海道/東北門市多</td></tr>
+          <tr><td class="p-2">松本清（Matsumoto Kiyoshi）</td><td class="p-2 text-center">中</td><td class="p-2 text-center">✓</td><td class="p-2">東京門市密度最高</td></tr>
+          <tr><td class="p-2">驚安殿堂</td><td class="p-2 text-center">低</td><td class="p-2 text-center">✓</td><td class="p-2">零食藥妝玩具什麼都有</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="text-sm text-gray-500">🛍️ 延伸閱讀：<a href="japan-travel.html" class="text-blue-600 underline">日本自由行新手攻略</a>｜<a href="japan-money-saving-tips.html" class="text-blue-600 underline">日本省錢技巧</a>｜<a href="tax-refund-calculator.html" class="text-blue-600 underline">退稅計算機</a></p>
+  </section>
+
+<div class="mt-4 p-4 bg-indigo-50 rounded-lg" id="p5-patch"><p class="text-gray-700 text-sm leading-relaxed">日本藥妝店除了化妝品和藥品，還有很多值得買的生活用品。像是蒸氣眼罩、足貼、喉糖和退熱貼，這些在台灣買都比較貴，日本本地品牌的效果也更好。另外，日本的保健品種類非常豐富，從膠原蛋白到益生菌都有，價格比台灣便宜兩到三成。買藥妝時建議先在網路上查好要買的品項和價格，到了店裡直接找就不會被琳瑯滿目的商品搞混。松本清和鶴羽藥妝是最大的兩家連鎖店，幾乎每個車站附近都有分店，營業時間也長，很方便。最後提醒，藥妝店的免稅門檻是五千日圓，湊到這個金額就能省下百分之十的消費稅。</p></div>
+
 <footer class="site-footer">
 <div class="footer-inner">
 <div class="footer-col">
@@ -765,79 +839,5 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 </div>
 <p>© 2026 均在路上 Travel Lab. All Rights Reserved.</p>
 </div>
-</footer>
-<script>
-  // Track affiliate link clicks via GA4
-  document.addEventListener('click', function(e) {
-    var link = e.target.closest('[data-affiliate]');
-    if (link) {
-      if (typeof gtag === 'function') {
-        gtag('event', 'affiliate_click', {
-          affiliate: link.getAttribute('data-affiliate'),
-          page: window.location.pathname
-        });
-      }
-    }
-  });
-</script>
-<script defer="" src="js/monetization.js"></script>
-
-</div>
-
-  <!-- SEO Enhancement: Japan Drugstore - Extended Recommendations -->
-  <section class="mt-12 p-6 bg-gradient-to-br from-sky-50 to-blue-50 rounded-2xl">
-    <h2 class="text-2xl font-bold mb-4">💊 日本藥妝必買清單再加碼：這些你也該帶回家！</h2>
-
-    <h3 class="font-bold text-lg mb-3">麵膜區：CP值最高不能錯過</h3>
-    <div class="grid md:grid-cols-2 gap-3 mb-4">
-      <div class="bg-white rounded-xl p-4 shadow-sm">
-        <p class="font-bold text-blue-700">Saborino 早安面膜（朝面膜）</p>
-        <p class="text-sm text-gray-600">早上敷1分鐘即可出門，含精華液和妝前乳合一，28片裝約¥1,200。黃色包裝（蜂蜜）、綠色（薄荷）最熱賣。</p>
-      </div>
-      <div class="bg-white rounded-xl p-4 shadow-sm">
-        <p class="font-bold text-blue-700">Kracie 明色美白面膜</p>
-        <p class="text-sm text-gray-600">日本美白老牌，主打維生素C和胎盤素，30片裝約¥1,500，敷完明顯亮一階。</p>
-      </div>
-      <div class="bg-white rounded-xl p-4 shadow-sm">
-        <p class="font-bold text-blue-700">Utena 玻尿酸黃金果凍面膜</p>
-        <p class="text-sm text-gray-600">精華液是果凍質地，滋潤度極高，乾燥肌必備。 ¥900/5片，CP值普通但效果很好。</p>
-      </div>
-      <div class="bg-white rounded-xl p-4 shadow-sm">
-        <p class="font-bold text-blue-700">KOSE 膠原蛋白面膜系列</p>
-        <p class="text-sm text-gray-600">白色包裝基礎款、粉色抗老款、藍色保濕款，各年齡層都適合。約¥1,300/6片。</p>
-      </div>
-    </div>
-
-    <h3 class="font-bold text-lg mb-3">💧 眼藥水與腸胃藥推薦</h3>
-    <ul class="list-disc list-inside text-gray-700 space-y-1 mb-4">
-      <li><strong>參天 FX 眼藥水</strong>（Sante FX）：清涼感一極棒，緩解眼睛疲勞，¥700-900。銀色基本款、金の超清涼版</li>
-      <li><strong>樂敦 Lycee 小花眼藥水</strong>：可愛愛心瓶身，隱形眼鏡可用，¥650-800</li>
-      <li><strong>太田胃散</strong>：腸胃不適、宿醉克星，鋁罐包裝約¥1,200，胃弱的人必備</li>
-      <li><strong>大正製藥正露丸</strong>：旅行腹瀉救星，糖衣包裝不難吃，¥800-1,000</li>
-      <li><strong>Buffering Lunom 胃藥</strong>：新配方，吃太多燒肉可用，¥1,000</li>
-    </ul>
-
-    <h3 class="font-bold text-lg mb-3">🛒 哪裡買最划算？購買地點比一比</h3>
-    <div class="bg-white rounded-xl p-4 shadow-sm mb-4">
-      <table class="w-full text-sm">
-        <thead class="bg-blue-100">
-          <tr>
-            <th class="p-2 text-left">店鋪</th><th class="p-2 text-center">價格</th><th class="p-2 text-center">免稅</th><th class="p-2 text-left">特色</th>
-          </tr>
-        </thead>
-        <tbody class="divide-y divide-blue-50">
-          <tr><td class="p-2">Don Quijote（唐吉訶德）</td><td class="p-2 text-center">中</td><td class="p-2 text-center">✓（¥5,000起）</td><td class="p-2">品項最齊，24小時</td></tr>
-          <tr><td class="p-2">AINZ & TULPE</td><td class="p-2 text-center">中低</td><td class="p-2 text-center">✓</td><td class="p-2">外國人最愛，折扣券多</td></tr>
-          <tr><td class="p-2">鶴羽藥妝（Tsuruha）</td><td class="p-2 text-center">低</td><td class="p-2 text-center">✓</td><td class="p-2">北海道/東北門市多</td></tr>
-          <tr><td class="p-2">松本清（Matsumoto Kiyoshi）</td><td class="p-2 text-center">中</td><td class="p-2 text-center">✓</td><td class="p-2">東京門市密度最高</td></tr>
-          <tr><td class="p-2">驚安殿堂</td><td class="p-2 text-center">低</td><td class="p-2 text-center">✓</td><td class="p-2">零食藥妝玩具什麼都有</td></tr>
-        </tbody>
-      </table>
-    </div>
-
-    <p class="text-sm text-gray-500">🛍️ 延伸閱讀：<a href="japan-travel.html" class="text-blue-600 underline">日本自由行新手攻略</a>｜<a href="japan-money-saving-tips.html" class="text-blue-600 underline">日本省錢技巧</a>｜<a href="tax-refund-calculator.html" class="text-blue-600 underline">退稅計算機</a></p>
-  </section>
-
-<div class="mt-4 p-4 bg-indigo-50 rounded-lg" id="p5-patch"><p class="text-gray-700 text-sm leading-relaxed">日本藥妝店除了化妝品和藥品，還有很多值得買的生活用品。像是蒸氣眼罩、足貼、喉糖和退熱貼，這些在台灣買都比較貴，日本本地品牌的效果也更好。另外，日本的保健品種類非常豐富，從膠原蛋白到益生菌都有，價格比台灣便宜兩到三成。買藥妝時建議先在網路上查好要買的品項和價格，到了店裡直接找就不會被琳瑯滿目的商品搞混。松本清和鶴羽藥妝是最大的兩家連鎖店，幾乎每個車站附近都有分店，營業時間也長，很方便。最後提醒，藥妝店的免稅門檻是五千日圓，湊到這個金額就能省下百分之十的消費稅。</p></div>
-</body>
+</footer></body>
 </html>

@@ -448,6 +448,60 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 <!-- /col-center -->
 <!-- /three-col-wrapper -->
 <!-- FOOTER -->
+<script>
+  // Track affiliate link clicks via GA4
+  document.addEventListener('click', function(e) {
+    var link = e.target.closest('[data-affiliate]');
+    if (link) {
+      if (typeof gtag === 'function') {
+        gtag('event', 'affiliate_click', {
+          affiliate: link.getAttribute('data-affiliate'),
+          page: window.location.pathname
+        });
+      }
+    }
+  });
+</script>
+<script defer="" src="js/monetization.js"></script>
+
+  <!-- SEO Enhancement: Bangkok 3Days - Expanded Details -->
+  <section class="mt-12 p-6 bg-gradient-to-br from-yellow-50 to-amber-50 rounded-2xl">
+    <h2 class="text-2xl font-bold mb-4">🛕 曼谷3天行程景點詳解 × 美食地圖 × 交通攻略</h2>
+
+    <h3 class="font-bold text-lg mb-3">Day 1 景點深度攻略</h3>
+    <div class="space-y-3 mb-4">
+      <div class="bg-white rounded-xl p-4 shadow-sm">
+        <p class="font-semibold text-amber-700 mb-1">大皇宮 Grand Palace（฿500）</p>
+        <p class="text-sm text-gray-600">建議 08:30 開門就到，避開人潮。穿著規定嚴格：不能穿短褲、短裙、無袖上衣，鞋子要包鞋。參觀時間約 1.5-2 小時。</p>
+      </div>
+      <div class="bg-white rounded-xl p-4 shadow-sm">
+        <p class="font-semibold text-amber-700 mb-1">臥佛寺 Wat Pho（฿200）</p>
+        <p class="text-sm text-gray-600">就在大皇宮旁邊，步行 5 分鐘。臥佛像長 46 公尺非常壯觀，寺內還有傳統泰式按摩學校，可以現場預約一小時 Thai Massage（฿500-700）。</p>
+      </div>
+      <div class="bg-white rounded-xl p-4 shadow-sm">
+        <p class="font-semibold text-amber-700 mb-1">考山路 Khao San Road</p>
+        <p class="text-sm text-gray-600">下午逛完皇宮剛好走去，品嚐香蕉煎餅（฿30-50）、芒果糯米飯（฿40-60）。背包客天堂，也是《初戀那件小事》取景地。</p>
+      </div>
+    </div>
+
+    <h3 class="font-bold text-lg mb-3">🍜 曼谷必吃美食推薦</h3>
+    <ul class="list-disc list-inside text-gray-700 space-y-1 mb-4">
+      <li><strong>Siam Square 附近的 Kao Tom Pla</strong>：魚粥店，本地人排隊，一碗約฿60</li>
+      <li><strong>路邊烤肉串</strong>：สามย่าน、Silom 路邊攤，฿10-20/串，碳烤香氣超迷人</li>
+      <li><strong>恰圖恰市場附近的 Pad Thai</strong>：Thip Samai 被譽為曼谷最好吃炒河粉，約฿100</li>
+      <li><strong>拉差達火車夜市</strong>：火山排骨（酸辣豬脊椎）必吃，巨大一份฿350够两人吃</li>
+      <li><strong>手標泰式奶茶</strong>：ChaTraMue，฿45一杯，路邊攤版฿25也有</li>
+    </ul>
+
+    <h3 class="font-bold text-lg mb-3">🚇 BTS / MRT 交通攻略</h3>
+    <p class="text-gray-700 leading-relaxed mb-2">曼谷 BTS（空鐵）和 MRT（地鐵）是兩套獨立系統，儲值卡不相通。BTS 用 Rabbit Card，MRT 用 MRT Card，建議各別購買。公車便宜但沒有冷氣、報站不明，不建議首次遊客使用。BTS 推薦路線：Siam 是轉乘大站，Silom Line 和 Sukhumvit Line 在此交會。</p>
+
+    <p class="text-sm text-gray-500 mt-4">📌 延伸閱讀：<a href="bangkok-4days.html" class="text-amber-600 underline">曼谷4天3夜行程</a>｜<a href="bangkok-massage.html" class="text-amber-600 underline">曼谷按摩推薦</a>｜<a href="thailand-sim.html" class="text-amber-600 underline">泰國上網 SIM 卡</a></p>
+  </section>
+
+<div class="mt-4 p-4 bg-amber-50 rounded-lg" id="p5-patch"><p class="text-gray-700 text-sm leading-relaxed">曼谷三天行程的一個重要建議：不要排太多景點。曼谷的交通很容易塞車，尖峰時段從市區到大皇宮可能要花一小時以上。建議把相近的景點排在同一天，比如大皇宮和臥佛寺就在隔壁，半天就能逛完。另外，曼谷的 BTS 和 MRT 很方便，盡量安排靠地鐵站的景點可以省下很多交通時間。水上市場值得去體驗，但要選對時間，丹嫩沙多水上市場早上八點到十點人最少，中午過後就變成觀光客的天下了。最後，曼谷的天氣非常熱，隨身帶水和防曬乳，中午盡量待在室內，下午三點以後再出門活動。</p></div>
+<div class="mt-3 p-3 bg-amber-50/60 rounded-lg" id="p5-patch2"><p class="text-gray-700 text-xs leading-relaxed">曼谷還有一個必去的免費景點：鄭王廟。這座寺廟位於昭披耶河對岸，從大皇宮搭渡船過去只要台幣三塊錢。鄭王廟的特色是整座塔都貼滿了彩色的陶瓷碎片，在陽光下閃閃發光，非常壯觀。爬到塔頂可以俯瞰整個河岸景觀，是曼谷最好的拍照點之一。建議傍晚時分前往，日落時塔身被染成金色，配上河面上的倒影，美得像一幅畫。回程可以搭橘色旗的渡船到大皇宮碼頭，沿途還能看到河邊的傳統木屋和現代摩天大樓交錯的獨特城市風景。</p></div>
+
 <footer class="site-footer">
 <div class="footer-inner">
 <div class="footer-col">
@@ -542,58 +596,4 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 </div>
 <p>© 2026 均在路上 Travel Lab. All Rights Reserved.</p>
 </div>
-</footer>
-<script>
-  // Track affiliate link clicks via GA4
-  document.addEventListener('click', function(e) {
-    var link = e.target.closest('[data-affiliate]');
-    if (link) {
-      if (typeof gtag === 'function') {
-        gtag('event', 'affiliate_click', {
-          affiliate: link.getAttribute('data-affiliate'),
-          page: window.location.pathname
-        });
-      }
-    }
-  });
-</script>
-<script defer="" src="js/monetization.js"></script>
-
-  <!-- SEO Enhancement: Bangkok 3Days - Expanded Details -->
-  <section class="mt-12 p-6 bg-gradient-to-br from-yellow-50 to-amber-50 rounded-2xl">
-    <h2 class="text-2xl font-bold mb-4">🛕 曼谷3天行程景點詳解 × 美食地圖 × 交通攻略</h2>
-
-    <h3 class="font-bold text-lg mb-3">Day 1 景點深度攻略</h3>
-    <div class="space-y-3 mb-4">
-      <div class="bg-white rounded-xl p-4 shadow-sm">
-        <p class="font-semibold text-amber-700 mb-1">大皇宮 Grand Palace（฿500）</p>
-        <p class="text-sm text-gray-600">建議 08:30 開門就到，避開人潮。穿著規定嚴格：不能穿短褲、短裙、無袖上衣，鞋子要包鞋。參觀時間約 1.5-2 小時。</p>
-      </div>
-      <div class="bg-white rounded-xl p-4 shadow-sm">
-        <p class="font-semibold text-amber-700 mb-1">臥佛寺 Wat Pho（฿200）</p>
-        <p class="text-sm text-gray-600">就在大皇宮旁邊，步行 5 分鐘。臥佛像長 46 公尺非常壯觀，寺內還有傳統泰式按摩學校，可以現場預約一小時 Thai Massage（฿500-700）。</p>
-      </div>
-      <div class="bg-white rounded-xl p-4 shadow-sm">
-        <p class="font-semibold text-amber-700 mb-1">考山路 Khao San Road</p>
-        <p class="text-sm text-gray-600">下午逛完皇宮剛好走去，品嚐香蕉煎餅（฿30-50）、芒果糯米飯（฿40-60）。背包客天堂，也是《初戀那件小事》取景地。</p>
-      </div>
-    </div>
-
-    <h3 class="font-bold text-lg mb-3">🍜 曼谷必吃美食推薦</h3>
-    <ul class="list-disc list-inside text-gray-700 space-y-1 mb-4">
-      <li><strong>Siam Square 附近的 Kao Tom Pla</strong>：魚粥店，本地人排隊，一碗約฿60</li>
-      <li><strong>路邊烤肉串</strong>：สามย่าน、Silom 路邊攤，฿10-20/串，碳烤香氣超迷人</li>
-      <li><strong>恰圖恰市場附近的 Pad Thai</strong>：Thip Samai 被譽為曼谷最好吃炒河粉，約฿100</li>
-      <li><strong>拉差達火車夜市</strong>：火山排骨（酸辣豬脊椎）必吃，巨大一份฿350够两人吃</li>
-      <li><strong>手標泰式奶茶</strong>：ChaTraMue，฿45一杯，路邊攤版฿25也有</li>
-    </ul>
-
-    <h3 class="font-bold text-lg mb-3">🚇 BTS / MRT 交通攻略</h3>
-    <p class="text-gray-700 leading-relaxed mb-2">曼谷 BTS（空鐵）和 MRT（地鐵）是兩套獨立系統，儲值卡不相通。BTS 用 Rabbit Card，MRT 用 MRT Card，建議各別購買。公車便宜但沒有冷氣、報站不明，不建議首次遊客使用。BTS 推薦路線：Siam 是轉乘大站，Silom Line 和 Sukhumvit Line 在此交會。</p>
-
-    <p class="text-sm text-gray-500 mt-4">📌 延伸閱讀：<a href="bangkok-4days.html" class="text-amber-600 underline">曼谷4天3夜行程</a>｜<a href="bangkok-massage.html" class="text-amber-600 underline">曼谷按摩推薦</a>｜<a href="thailand-sim.html" class="text-amber-600 underline">泰國上網 SIM 卡</a></p>
-  </section>
-
-<div class="mt-4 p-4 bg-amber-50 rounded-lg" id="p5-patch"><p class="text-gray-700 text-sm leading-relaxed">曼谷三天行程的一個重要建議：不要排太多景點。曼谷的交通很容易塞車，尖峰時段從市區到大皇宮可能要花一小時以上。建議把相近的景點排在同一天，比如大皇宮和臥佛寺就在隔壁，半天就能逛完。另外，曼谷的 BTS 和 MRT 很方便，盡量安排靠地鐵站的景點可以省下很多交通時間。水上市場值得去體驗，但要選對時間，丹嫩沙多水上市場早上八點到十點人最少，中午過後就變成觀光客的天下了。最後，曼谷的天氣非常熱，隨身帶水和防曬乳，中午盡量待在室內，下午三點以後再出門活動。</p></div>
-<div class="mt-3 p-3 bg-amber-50/60 rounded-lg" id="p5-patch2"><p class="text-gray-700 text-xs leading-relaxed">曼谷還有一個必去的免費景點：鄭王廟。這座寺廟位於昭披耶河對岸，從大皇宮搭渡船過去只要台幣三塊錢。鄭王廟的特色是整座塔都貼滿了彩色的陶瓷碎片，在陽光下閃閃發光，非常壯觀。爬到塔頂可以俯瞰整個河岸景觀，是曼谷最好的拍照點之一。建議傍晚時分前往，日落時塔身被染成金色，配上河面上的倒影，美得像一幅畫。回程可以搭橘色旗的渡船到大皇宮碼頭，沿途還能看到河邊的傳統木屋和現代摩天大樓交錯的獨特城市風景。</p></div>
-</body></html>
+</footer></body></html>
