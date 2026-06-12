@@ -90,7 +90,43 @@ footer { margin-top: 3em; padding-top: 1em; border-top: 1px solid #ddd; color: #
         }
     ]
 }
-</script></head>
+</script>
+<style>
+/* 響應式表格 - 手機版優化 */
+.table-responsive {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 1rem 0;
+}
+.table-responsive table {
+  min-width: 600px;
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .table-responsive table {
+    font-size: 13px;
+  }
+  .table-responsive th,
+  .table-responsive td {
+    padding: 8px 6px;
+    white-space: nowrap;
+  }
+  .table-responsive td:last-child {
+    white-space: normal;
+    min-width: 120px;
+  }
+}
+@media (max-width: 480px) {
+  .table-responsive table {
+    font-size: 12px;
+  }
+  .table-responsive th,
+  .table-responsive td {
+    padding: 6px 4px;
+  }
+}
+</style>
+</head>
 <!-- TOP BAR NAVIGATION -->
 <div class="site-topbar">
 <div class="topbar-inner">
@@ -122,7 +158,7 @@ footer { margin-top: 3em; padding-top: 1em; border-top: 1px solid #ddd; color: #
 
 <div class="highlight-box">
 <h2 style="margin-top:0;">📊 快速預算總覽</h2>
-<table>
+<div class="table-responsive"><table>
 <tr><th>旅遊風格</th><th>機票</th><th>住宿/晚</th><th>餐費/天</th><th>5天4夜總預算</th></tr>
 <tr><td>經濟型（省錢派）</td><td>NT`$8,000-7,000</td><td>NT-1,000</td><td>NT-1,200</td><td><strong>NT`$8,000-20,000</strong></td></tr>
 <tr><td>舒適型（平衡派）</td><td>NT`$8,000-12,000</td><td>NT`$8,000-4,000</td><td>NT,400-2,400</td><td><strong>NT`$8,000-35,000</strong></td></tr>
@@ -319,7 +355,7 @@ footer { margin-top: 3em; padding-top: 1em; border-top: 1px solid #ddd; color: #
 <tr><td>明洞換錢所</td><td>最好</td><td>匯率比銀行高2-3%</td><td>需攜帶台幣現金</td></tr>
 <tr><td>機場換錢所</td><td>普通</td><td>方便，24小時營業</td><td>匯率比明洞差1-2%</td></tr>
 <tr><td>飯店換錢</td><td>最差</td><td>方便</td><td>匯率比銀行還差</td></tr>
-</table>
+</table></div>
 
 <h3>刷卡建議</h3>
 <ul>

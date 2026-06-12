@@ -33,7 +33,43 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" media="print" onload="this.media='all'" rel="stylesheet">
 <noscript><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet"></noscript>
 <link rel="stylesheet" href="article-beautify.css">
-    </head>
+    
+<style>
+/* 響應式表格 - 手機版優化 */
+.table-responsive {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 1rem 0;
+}
+.table-responsive table {
+  min-width: 600px;
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .table-responsive table {
+    font-size: 13px;
+  }
+  .table-responsive th,
+  .table-responsive td {
+    padding: 8px 6px;
+    white-space: nowrap;
+  }
+  .table-responsive td:last-child {
+    white-space: normal;
+    min-width: 120px;
+  }
+}
+@media (max-width: 480px) {
+  .table-responsive table {
+    font-size: 12px;
+  }
+  .table-responsive th,
+  .table-responsive td {
+    padding: 6px 4px;
+  }
+}
+</style>
+</head>
 <body>
     
 
@@ -321,7 +357,7 @@
 
             <section class="article-section">
                 <h2>💰 新加坡 3 天 2 夜預算表</h2>
-                <table class="data-table">
+                <div class="table-responsive"><table class="data-table">
                     <thead>
                         <tr><th>項目</th><th>經濟型</th><th>舒適型</th><th>說明</th></tr>
                     </thead>
@@ -334,7 +370,7 @@
                         <tr><td>購物/其他</td><td>NT$1,000-2,000</td><td>NT$3,000-5,000</td><td>黃金、藥妝、伴手禮</td></tr>
                         <tr><td><strong>合計（不含機票）</strong></td><td><strong>NT$7,400-12,600</strong></td><td><strong>NT$15,000-28,800</strong></td><td></td></tr>
                     </tbody>
-                </table>
+                </table></div>
                 <p><strong>省錢技巧：</strong></p>
                 <ul>
                     <li>選擇武吉士/芽籠住宿，比濱海灣便宜 50%</li>

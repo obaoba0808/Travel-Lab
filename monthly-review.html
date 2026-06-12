@@ -26,6 +26,42 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="beautify.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+/* 響應式表格 - 手機版優化 */
+.table-responsive {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 1rem 0;
+}
+.table-responsive table {
+  min-width: 600px;
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .table-responsive table {
+    font-size: 13px;
+  }
+  .table-responsive th,
+  .table-responsive td {
+    padding: 8px 6px;
+    white-space: nowrap;
+  }
+  .table-responsive td:last-child {
+    white-space: normal;
+    min-width: 120px;
+  }
+}
+@media (max-width: 480px) {
+  .table-responsive table {
+    font-size: 12px;
+  }
+  .table-responsive th,
+  .table-responsive td {
+    padding: 6px 4px;
+  }
+}
+</style>
 </head>
 <body>
     
@@ -222,7 +258,7 @@
 
             <section class="article-section">
                 <h2>📈 變現系統現況</h2>
-                <table class="data-table">
+                <div class="table-responsive"><table class="data-table">
                     <thead>
                         <tr><th>平台</th><th>狀態</th><th>聯盟ID</th><th>說明</th></tr>
                     </thead>
@@ -236,7 +272,7 @@
                         <tr><td>GetYourGuide</td><td>❌ 未申請</td><td>-</td><td>待申請</td></tr>
                         <tr><td>Email Lead Magnet</td><td>⚙️ 已部署</td><td>Cloudflare Worker</td><td>需端對端測試驗證</td></tr>
                     </tbody>
-                </table>
+                </table></div>
             </section>
 
             <section class="article-section">

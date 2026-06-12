@@ -28,6 +28,42 @@
     <link rel="stylesheet" href="hero-beautify.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" media="print" onload="this.media='all'" rel="stylesheet">
 <noscript><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet"></noscript>
+
+<style>
+/* 響應式表格 - 手機版優化 */
+.table-responsive {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 1rem 0;
+}
+.table-responsive table {
+  min-width: 600px;
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .table-responsive table {
+    font-size: 13px;
+  }
+  .table-responsive th,
+  .table-responsive td {
+    padding: 8px 6px;
+    white-space: nowrap;
+  }
+  .table-responsive td:last-child {
+    white-space: normal;
+    min-width: 120px;
+  }
+}
+@media (max-width: 480px) {
+  .table-responsive table {
+    font-size: 12px;
+  }
+  .table-responsive th,
+  .table-responsive td {
+    padding: 6px 4px;
+  }
+}
+</style>
 </head>
 <body>
     
@@ -258,7 +294,7 @@
 
             <section class="article-section">
                 <h2>📅 東南亞各國最佳旅遊時間</h2>
-                <table class="data-table">
+                <div class="table-responsive"><table class="data-table">
                     <thead>
                         <tr><th>國家</th><th>最佳月份</th><th>淡季/最便宜</th><th>旺季/最貴</th><th>雨季提醒</th></tr>
                     </thead>
@@ -359,7 +395,7 @@
                         <tr><td>吉隆坡（馬來西亞）</td><td>NT$25,000-40,000</td><td>★★★★☆（30-100 Mbps）</td><td>★★★★☆（30+ 共享空間）</td><td>★★★★★</td></tr>
                         <tr><td>胡志明市（越南）</td><td>NT$15,000-25,000</td><td>★★★★☆（30-100 Mbps）</td><td>★★★☆☆（20+ 共享空間）</td><td>★★☆☆☆</td></tr>
                     </tbody>
-                </table>
+                </table></div>
                 <h3>必備工具</h3>
                 <ul>
                     <li><strong>eSIM/當地 SIM 卡</strong>：泰國用 AIS/True；越南用 Viettel；馬來西亞用 Digi</li>

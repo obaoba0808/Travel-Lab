@@ -33,7 +33,43 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" media="print" onload="this.media='all'" rel="stylesheet">
 <noscript><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet"></noscript>
 <link rel="stylesheet" href="article-beautify.css">
-    </head>
+    
+<style>
+/* 響應式表格 - 手機版優化 */
+.table-responsive {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 1rem 0;
+}
+.table-responsive table {
+  min-width: 600px;
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .table-responsive table {
+    font-size: 13px;
+  }
+  .table-responsive th,
+  .table-responsive td {
+    padding: 8px 6px;
+    white-space: nowrap;
+  }
+  .table-responsive td:last-child {
+    white-space: normal;
+    min-width: 120px;
+  }
+}
+@media (max-width: 480px) {
+  .table-responsive table {
+    font-size: 12px;
+  }
+  .table-responsive th,
+  .table-responsive td {
+    padding: 6px 4px;
+  }
+}
+</style>
+</head>
 <body>
     
 
@@ -284,7 +320,7 @@
 
             <section class="article-section">
                 <h2>💰 吳哥窟 2 天 1 夜預算表</h2>
-                <table class="data-table">
+                <div class="table-responsive"><table class="data-table">
                     <thead>
                         <tr><th>項目</th><th>經濟型</th><th>舒適型</th><th>說明</th></tr>
                     </thead>
@@ -298,7 +334,7 @@
                         <tr><td>崩密列 + 日落票</td><td>NT$500</td><td>NT$500</td><td>US$5+5</td></tr>
                         <tr><td><strong>合計（不含機票）</strong></td><td><strong>NT$7,000-10,000</strong></td><td><strong>NT$10,000-15,000</strong></td><td></td></tr>
                     </tbody>
-                </table>
+                </table></div>
                 <p><strong>省錢技巧：</strong></p>
                 <ul>
                     <li>電子簽比落地簽貴 US$7，但省去機場排隊 30-60 分鐘的時間</li>

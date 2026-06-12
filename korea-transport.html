@@ -305,7 +305,43 @@
 
 <link rel="stylesheet" href="article-beautify.css">
 
-    </head>
+    
+<style>
+/* 響應式表格 - 手機版優化 */
+.table-responsive {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 1rem 0;
+}
+.table-responsive table {
+  min-width: 600px;
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .table-responsive table {
+    font-size: 13px;
+  }
+  .table-responsive th,
+  .table-responsive td {
+    padding: 8px 6px;
+    white-space: nowrap;
+  }
+  .table-responsive td:last-child {
+    white-space: normal;
+    min-width: 120px;
+  }
+}
+@media (max-width: 480px) {
+  .table-responsive table {
+    font-size: 12px;
+  }
+  .table-responsive th,
+  .table-responsive td {
+    padding: 6px 4px;
+  }
+}
+</style>
+</head>
 
 <body>
 
@@ -689,7 +725,7 @@
 
         <h3>Seoul Pass 種類與價格</h3>
 
-        <table style="width:100%;border-collapse:collapse;">
+        <div class="table-responsive"><table style="width:100%;border-collapse:collapse;">
 
           <tr style="border-bottom:2px solid var(--tiffany-light)">
 
@@ -917,7 +953,7 @@
 
         </tr>
 
-      </table>
+      </table></div>
 
 
 

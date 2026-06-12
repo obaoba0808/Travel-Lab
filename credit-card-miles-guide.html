@@ -81,6 +81,42 @@
   gtag('config', 'G-S7KQGHSD2R');
 </script>
 <link href="data:image/svg+xml,&lt;svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'&gt;&lt;text y='.9em' font-size='90'&gt;💳&lt;/text&gt;&lt;/svg&gt;" rel="icon"/>
+
+<style>
+/* 響應式表格 - 手機版優化 */
+.table-responsive {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 1rem 0;
+}
+.table-responsive table {
+  min-width: 600px;
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .table-responsive table {
+    font-size: 13px;
+  }
+  .table-responsive th,
+  .table-responsive td {
+    padding: 8px 6px;
+    white-space: nowrap;
+  }
+  .table-responsive td:last-child {
+    white-space: normal;
+    min-width: 120px;
+  }
+}
+@media (max-width: 480px) {
+  .table-responsive table {
+    font-size: 12px;
+  }
+  .table-responsive th,
+  .table-responsive td {
+    padding: 6px 4px;
+  }
+}
+</style>
 </head>
 <body>
 <!-- TOP BAR NAVIGATION -->
@@ -177,7 +213,7 @@
 </div>
 </div>
 </section><div class="portal-content"><div style="font-size:13px;color:var(--text-light);">✈ 用最少預算，走最多地方</div><h2>里程機票 vs 現金購票 差多少？</h2><div class="day-card">
-<table style="width:100%;border-collapse:collapse;font-size:13px;">
+<div class="table-responsive"><table style="width:100%;border-collapse:collapse;font-size:13px;">
 <tr style="border-bottom:2px solid var(--tiffany-light);background:#f0fdfa;">
 <th style="text-align:left;padding:8px;">航線</th>
 <th style="text-align:center;padding:8px;">現金票價</th>
@@ -264,7 +300,7 @@
 <tr style="border-bottom:1px solid #eee;"><td style="padding:8px;font-weight:700;">競價升艙（OTA Bid）</td><td style="padding:8px;">買票後收到email出價升艙，最低NT$3,000起（非旺季價格）</td><td style="text-align:center;padding:8px;">NT$3,000-8,000</td></tr>
 <tr style="border-bottom:1px solid #eee;"><td style="padding:8px;font-weight:700;">機場即時升艙</td><td style="padding:8px;">報到時詢問有無商務艙空位，有時現金補差價就能升</td><td style="text-align:center;padding:8px;">NT$5,000-15,000</td></tr>
 <tr><td style="padding:8px;font-weight:700;">航司精英會員升等</td><td style="padding:8px;">金卡/白金會員可免費候補升艙（長榮URC Gold、ANA SFC）</td><td style="text-align:center;padding:8px;">免費（候補）</td></tr>
-</table>
+</table></div>
 </div><h2>❓ 常見問題</h2><section class="faq-section">
 <div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q">台灣人推薦哪張里程信用卡？</div><div class="faq-a">新手推薦：①國泰世華「御璽卡」回饋無上限2%（1元=2紅利）②中國信託「LINE Pay卡」國外3%、國內1.5% ③花旗「寰宇現金回饋卡」國外3%無上限。進階玩家推薦美國運通 Platinum，年費NT$15,000但回饋最豐富。</div></div>
 <div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q">里程會過期嗎？</div><div class="faq-a">會！各家過期規則不同：①國泰世華：36個月內有刷卡就不會過期 ②中國信託：持續刷卡不會過期 ③花旗：帳戶活躍就不會過期。建議至少每半年刷一次維持帳戶活躍。星空聯盟/寰宇一家里程也建議在2-3年內使用。</div></div>

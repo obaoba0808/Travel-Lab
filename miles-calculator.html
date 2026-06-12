@@ -78,6 +78,42 @@
   gtag('config', 'G-S7KQGHSD2R');
 </script>
 <link href="data:image/svg+xml,&lt;svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'&gt;&lt;text y='.9em' font-size='90'&gt;📊&lt;/text&gt;&lt;/svg&gt;" rel="icon"/>
+
+<style>
+/* 響應式表格 - 手機版優化 */
+.table-responsive {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 1rem 0;
+}
+.table-responsive table {
+  min-width: 600px;
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .table-responsive table {
+    font-size: 13px;
+  }
+  .table-responsive th,
+  .table-responsive td {
+    padding: 8px 6px;
+    white-space: nowrap;
+  }
+  .table-responsive td:last-child {
+    white-space: normal;
+    min-width: 120px;
+  }
+}
+@media (max-width: 480px) {
+  .table-responsive table {
+    font-size: 12px;
+  }
+  .table-responsive th,
+  .table-responsive td {
+    padding: 6px 4px;
+  }
+}
+</style>
 </head>
 <body>
 <!-- TOP BAR NAVIGATION -->
@@ -230,7 +266,7 @@
 </div>
 </div>
 </div><h2>各航線里程需求速查（來回經濟艙）</h2><div class="day-card">
-<table style="width:100%;border-collapse:collapse;font-size:13px;">
+<div class="table-responsive"><table style="width:100%;border-collapse:collapse;font-size:13px;">
 <tr style="border-bottom:2px solid var(--tiffany-light);background:#f0fdfa;">
 <th style="text-align:left;padding:8px;">航線</th>
 <th style="text-align:center;padding:8px;">最低里程</th>
@@ -264,7 +300,7 @@
 <tr style="border-bottom:1px solid #eee;"><td style="padding:8px;font-weight:700;">花旗寰宇卡</td><td style="text-align:center;padding:8px;">1%</td><td style="text-align:center;padding:8px;">3%</td><td style="text-align:center;padding:8px;">1:0.5哩</td><td style="text-align:center;padding:8px;">NT$3,000</td><td style="padding:8px;">⭐⭐⭐⭐ 無上限</td></tr>
 <tr style="border-bottom:1px solid #eee;"><td style="padding:8px;font-weight:700;">美國運通Platinum</td><td style="text-align:center;padding:8px;">1x</td><td style="text-align:center;padding:8px;">2x</td><td style="text-align:center;padding:8px;">1:1哩</td><td style="text-align:center;padding:8px;">NT$15,000</td><td style="padding:8px;">⭐⭐⭐⭐⭐ 轉點最划算</td></tr>
 <tr><td style="padding:8px;font-weight:700;">玉山世界卡</td><td style="text-align:center;padding:8px;">1.5%</td><td style="text-align:center;padding:8px;">2.5%</td><td style="text-align:center;padding:8px;">1:0.33哩</td><td style="text-align:center;padding:8px;">免年費</td><td style="padding:8px;">⭐⭐⭐ 入門OK</td></tr>
-</table>
+</table></div>
 </div><h2>❓ 常見問題</h2><section class="faq-section">
 <div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q">刷卡多少錢能免費飛日本？</div><div class="faq-a">以國泰世華御璽卡（2%回饋）計算：每月刷卡NT$30,000 → 年累積2,400里程 → 需約6-8年。搭配3張卡+搭飛機累積+電商商城，最快2-3年可以免費飛一次日本經濟艙（需要20,000里程）。</div></div>
 <div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q">里程累積最快的方式是什麼？</div><div class="faq-a">①信用卡大額刷卡（繳稅/保費）②搭飛機每次3,000-5,000里程 ③電商購物（航空商城）④酒店住宿（聯盟酒店每次1,000-3,000）⑤開卡送里程+加倍里程活動。綜合最快：1年可累積10,000-20,000里程。</div></div>

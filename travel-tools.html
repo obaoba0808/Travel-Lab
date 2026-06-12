@@ -47,6 +47,42 @@
   gtag('config', 'G-S7KQGHSD2R');
 </script>
 <link href="data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22&gt;&lt;text y=%22.9em%22 font-size=%2290%22&gt;✈️&lt;/text&gt;&lt;/svg&gt;" rel="icon"/>
+
+<style>
+/* 響應式表格 - 手機版優化 */
+.table-responsive {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 1rem 0;
+}
+.table-responsive table {
+  min-width: 600px;
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .table-responsive table {
+    font-size: 13px;
+  }
+  .table-responsive th,
+  .table-responsive td {
+    padding: 8px 6px;
+    white-space: nowrap;
+  }
+  .table-responsive td:last-child {
+    white-space: normal;
+    min-width: 120px;
+  }
+}
+@media (max-width: 480px) {
+  .table-responsive table {
+    font-size: 12px;
+  }
+  .table-responsive th,
+  .table-responsive td {
+    padding: 6px 4px;
+  }
+}
+</style>
 </head>
 <body>
 <!-- TOP BAR NAVIGATION -->
@@ -245,7 +281,7 @@
 <li style="padding:10px 0; font-size:14px; color:#444; line-height:1.8;">⑥ <strong style="color:#F57F17;">預訂體驗活動</strong> — 熱門行程提前在 Trip.com 訂好，現場不一定有位</li>
 </ul>
 </div><h2 style="color:var(--tiffany-dark); margin:40px 0 24px; padding-left:15px; border-left:5px solid var(--tiffany);">📊 上網方案比較</h2><div style="overflow-x:auto; margin-bottom:40px;">
-<table style="width:100%; border-collapse:collapse; font-size:14px; background:#fff; border-radius:12px; overflow:hidden; box-shadow:0 4px 20px rgba(10,186,181,0.1);">
+<div class="table-responsive"><table style="width:100%; border-collapse:collapse; font-size:14px; background:#fff; border-radius:12px; overflow:hidden; box-shadow:0 4px 20px rgba(10,186,181,0.1);">
 <thead>
 <tr style="background:var(--tiffany); color:#fff;">
 <th style="padding:14px 16px; text-align:left;">方案</th>
@@ -285,7 +321,7 @@
 <td style="padding:12px 16px; font-size:13px;">✅ 到處都能用 ❌ 貴到爆炸，不推薦</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 </div><section class="faq-section" style="max-width:900px;margin:48px auto;padding:0 40px;">
 <h2 class="section-title">❓ 常見問題</h2>
 <div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q">出國旅行必備哪些 APP？</div><div class="faq-a">Google Maps（導航）、Google Translate（翻譯）、Trip.com（飯店、機票、體驗預訂）是出國必備三大 APP。出發前先下載離線地圖，落地就能用。另外推薦下載 XE Currency 查匯率、AccuWeather 看天氣。</div></div>

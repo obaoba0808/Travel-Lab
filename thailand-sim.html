@@ -90,6 +90,42 @@
   gtag('config', 'G-S7KQGHSD2R');
 </script>
 <link href="data:image/svg+xml,&lt;svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'&gt;&lt;text y='.9em' font-size='90'&gt;📱&lt;/text&gt;&lt;/svg&gt;" rel="icon"/>
+
+<style>
+/* 響應式表格 - 手機版優化 */
+.table-responsive {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 1rem 0;
+}
+.table-responsive table {
+  min-width: 600px;
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .table-responsive table {
+    font-size: 13px;
+  }
+  .table-responsive th,
+  .table-responsive td {
+    padding: 8px 6px;
+    white-space: nowrap;
+  }
+  .table-responsive td:last-child {
+    white-space: normal;
+    min-width: 120px;
+  }
+}
+@media (max-width: 480px) {
+  .table-responsive table {
+    font-size: 12px;
+  }
+  .table-responsive th,
+  .table-responsive td {
+    padding: 6px 4px;
+  }
+}
+</style>
 </head>
 <body>
 <!-- TOP BAR NAVIGATION -->
@@ -218,7 +254,7 @@
 <h2 id="三家比較">📊 泰國三大電信總覽</h2>
 <p>泰國主要有三家電信：<strong>AIS</strong>、<strong>TrueMove</strong>、<strong>DTAC</strong>。以下是他們的特色與適合場景：</p>
 <div class="day-card">
-<table style="width:100%;border-collapse:collapse;font-size:14px;">
+<div class="table-responsive"><table style="width:100%;border-collapse:collapse;font-size:14px;">
 <tr style="border-bottom:2px solid var(--tiffany-light);background:#f0fdfa;">
 <th style="text-align:left;padding:12px;">電信</th>
 <th style="text-align:center;padding:12px;">訊號覆蓋</th>
@@ -289,7 +325,7 @@
 <tr><td style="padding:10px;">8 天旅遊卡</td><td style="text-align:center;padding:10px;">199 泰銖</td><td style="padding:10px;">10GB 高速 + 無限降速</td></tr>
 <tr><td style="padding:10px;">15 天旅遊卡</td><td style="text-align:center;padding:10px;">349 泰銖</td><td style="padding:10px;">25GB 高速 + 無限降速</td></tr>
 <tr><td style="padding:10px;">30 天旅遊卡</td><td style="text-align:center;padding:10px;">499 泰銖</td><td style="padding:10px;">45GB 高速 + 無限降速</td></tr>
-</table>
+</table></div>
 </div>
 
 <div class="faq-section">

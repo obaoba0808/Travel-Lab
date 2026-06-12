@@ -62,7 +62,43 @@ footer { margin-top: 3em; padding-top: 1em; border-top: 1px solid #ddd; color: #
             }
     ]
 }
-</script></head>
+</script>
+<style>
+/* 響應式表格 - 手機版優化 */
+.table-responsive {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 1rem 0;
+}
+.table-responsive table {
+  min-width: 600px;
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .table-responsive table {
+    font-size: 13px;
+  }
+  .table-responsive th,
+  .table-responsive td {
+    padding: 8px 6px;
+    white-space: nowrap;
+  }
+  .table-responsive td:last-child {
+    white-space: normal;
+    min-width: 120px;
+  }
+}
+@media (max-width: 480px) {
+  .table-responsive table {
+    font-size: 12px;
+  }
+  .table-responsive th,
+  .table-responsive td {
+    padding: 6px 4px;
+  }
+}
+</style>
+</head>
 <!-- TOP BAR NAVIGATION -->
 <div class="site-topbar">
 <div class="topbar-inner">
@@ -114,13 +150,13 @@ footer { margin-top: 3em; padding-top: 1em; border-top: 1px solid #ddd; color: #
 <p>👉 詳細攻略：<a href="https://golightly.fun/hualien-taitung.html">花東三天兩夜攻略</a></p>
 
 <h2>🍜 台南美食推薦</h2>
-<table>
+<div class="table-responsive"><table>
 <tr><th>區域</th><th>必吃</th><th>價格</th></tr>
 <tr><td>國華街</td><td>鱔魚意麵</td><td>NT$80</td></tr>
 <tr><td>國華街</td><td>碗粿</td><td>NT$30</td></tr>
 <tr><td>保安路</td><td>牛肉湯</td><td>NT$100</td></tr>
 <tr><td>正興街</td><td>霜淇露</td><td>NT$50</td></tr>
-</table>
+</table></div>
 <p>👉 詳細攻略：<a href="https://golightly.fun/tainan-food.html">台南美食攻略</a></p>
 
 <h2>🏖️ 墾丁海景夜市</h2>

@@ -184,6 +184,42 @@
   margin-top: 8px;
 }
 </style>
+
+<style>
+/* 響應式表格 - 手機版優化 */
+.table-responsive {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 1rem 0;
+}
+.table-responsive table {
+  min-width: 600px;
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .table-responsive table {
+    font-size: 13px;
+  }
+  .table-responsive th,
+  .table-responsive td {
+    padding: 8px 6px;
+    white-space: nowrap;
+  }
+  .table-responsive td:last-child {
+    white-space: normal;
+    min-width: 120px;
+  }
+}
+@media (max-width: 480px) {
+  .table-responsive table {
+    font-size: 12px;
+  }
+  .table-responsive th,
+  .table-responsive td {
+    padding: 6px 4px;
+  }
+}
+</style>
 </head>
 <body>
 <!-- TOP BAR NAVIGATION -->
@@ -510,7 +546,7 @@
 </div>
 </div>
 </div><h2>📍 採買地點推薦</h2><div class="day-card">
-<table style="width:100%;border-collapse:collapse;font-size:14px;">
+<div class="table-responsive"><table style="width:100%;border-collapse:collapse;font-size:14px;">
 <tr style="border-bottom:2px solid var(--tiffany-light);background:#f0fdfa;">
 <th style="text-align:left;padding:12px;">店名</th>
 <th style="text-align:center;padding:12px;">特色</th>
@@ -541,7 +577,7 @@
 <td style="text-align:center;padding:12px;">-</td>
 <td style="text-align:center;padding:12px;">大量採買</td>
 </tr>
-</table>
+</table></div>
 </div><div class="klook-recommend-card" style="
         background: #E3F2FD;
         border-radius: 16px;

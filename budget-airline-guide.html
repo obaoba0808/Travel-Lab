@@ -81,6 +81,42 @@
   gtag('config', 'G-S7KQGHSD2R');
 </script>
 <link href="data:image/svg+xml,&lt;svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'&gt;&lt;text y='.9em' font-size='90'&gt;✈️&lt;/text&gt;&lt;/svg&gt;" rel="icon"/>
+
+<style>
+/* 響應式表格 - 手機版優化 */
+.table-responsive {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 1rem 0;
+}
+.table-responsive table {
+  min-width: 600px;
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .table-responsive table {
+    font-size: 13px;
+  }
+  .table-responsive th,
+  .table-responsive td {
+    padding: 8px 6px;
+    white-space: nowrap;
+  }
+  .table-responsive td:last-child {
+    white-space: normal;
+    min-width: 120px;
+  }
+}
+@media (max-width: 480px) {
+  .table-responsive table {
+    font-size: 12px;
+  }
+  .table-responsive th,
+  .table-responsive td {
+    padding: 6px 4px;
+  }
+}
+</style>
 </head>
 <body>
 <!-- TOP BAR NAVIGATION -->
@@ -177,7 +213,7 @@
 </div>
 </div>
 </section><div class="portal-content"><div style="font-size:13px;color:var(--text-light);">✈ 用最少預算，走最多地方</div><h2>三大廉航比較（台灣出發）</h2><div class="day-card">
-<table style="width:100%;border-collapse:collapse;font-size:13px;">
+<div class="table-responsive"><table style="width:100%;border-collapse:collapse;font-size:13px;">
 <tr style="border-bottom:2px solid var(--tiffany-light);background:#f0fdfa;">
 <th style="text-align:left;padding:8px;">比較項目</th>
 <th style="text-align:center;padding:8px;">🐯 虎航<br/><small>Tigerair Taiwan</small></th>
@@ -280,7 +316,7 @@
 <tr style="border-bottom:1px solid #eee;"><td style="padding:8px;">餐食×2趟</td><td style="text-align:center;padding:8px;">NT$600 (150×4)</td><td style="text-align:center;padding:8px;">NT$600</td></tr>
 <tr style="border-bottom:1px solid #eee;background:#f0fdfa;"><td style="padding:8px;font-weight:700;">總成本</td><td style="text-align:center;padding:8px;font-weight:700;color:green;">NT$4,998</td><td style="text-align:center;padding:8px;font-weight:700;">NT$8,000</td></tr>
 <tr><td style="padding:8px;font-weight:700;">對比傳統航空</td><td style="text-align:center;padding:8px;color:green;font-weight:700;">省NT$3,000+</td><td style="text-align:center;padding:8px;">差不多</td></tr>
-</table>
+</table></div>
 </div><h2>❓ 常見問題</h2><section class="faq-section">
 <div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q">廉航機票什麼時候買最便宜？</div><div class="faq-a">開賣後1-2週最便宜（促銷價）。一般航空公司提前2-3個月買。台灣出發的廉航：虎航提前1-2個月、樂桃提前2-3個月、酷航提前1-2個月。大促（雙11、黑色星期五、618）可以搶到NT$999-1,999單程。平日週二-週四出發最便宜。</div></div>
 <div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q">廉航行李要自己買嗎？</div><div class="faq-a">是的！廉航票價只含7kg手提行李（部分只有5kg）。托运行李需另外加購：虎航NT$500/5kg起、樂桃NT$600/5kg起、酷航NT$400/5kg起。建議：出國先加購15-20kg托運（NT$1,000-1,500），比到機場臨時買便宜50%以上。</div></div>

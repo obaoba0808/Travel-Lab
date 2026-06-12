@@ -77,6 +77,42 @@
   gtag('config', 'G-S7KQGHSD2R');
 </script>
 <link href="data:image/svg+xml,&lt;svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'&gt;&lt;text y='.9em' font-size='90'&gt;🇰🇷&lt;/text&gt;&lt;/svg&gt;" rel="icon"/>
+
+<style>
+/* 響應式表格 - 手機版優化 */
+.table-responsive {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 1rem 0;
+}
+.table-responsive table {
+  min-width: 600px;
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .table-responsive table {
+    font-size: 13px;
+  }
+  .table-responsive th,
+  .table-responsive td {
+    padding: 8px 6px;
+    white-space: nowrap;
+  }
+  .table-responsive td:last-child {
+    white-space: normal;
+    min-width: 120px;
+  }
+}
+@media (max-width: 480px) {
+  .table-responsive table {
+    font-size: 12px;
+  }
+  .table-responsive th,
+  .table-responsive td {
+    padding: 6px 4px;
+  }
+}
+</style>
 </head>
 <body>
 <!-- TOP BAR NAVIGATION -->
@@ -173,7 +209,7 @@
 </div>
 </div>
 </section><div class="portal-content"><div style="font-size:13px;color:var(--text-light);">✈ 用最少預算，走最多地方</div><h2>💱 換錢最划算指南</h2><div class="day-card">
-<table style="width:100%;border-collapse:collapse;font-size:13px;">
+<div class="table-responsive"><table style="width:100%;border-collapse:collapse;font-size:13px;">
 <tr style="border-bottom:2px solid var(--tiffany-light);background:#f0fdfa;">
 <th style="text-align:left;padding:8px;">換錢地點</th>
 <th style="text-align:center;padding:8px;">匯率品質</th>
@@ -225,7 +261,7 @@
 <tr style="border-bottom:1px solid #eee;"><td style="padding:8px;font-weight:700;">公車→地鐵轉乘</td><td style="text-align:center;padding:8px;">₩0</td><td style="text-align:center;padding:8px;">₩1,300-1,400</td><td style="text-align:center;padding:8px;color:green;font-weight:700;">全免</td></tr>
 <tr style="border-bottom:1px solid #eee;"><td style="padding:8px;font-weight:700;">地鐵→公車轉乘</td><td style="text-align:center;padding:8px;">₩0</td><td style="text-align:center;padding:8px;">₩1,300-1,400</td><td style="text-align:center;padding:8px;color:green;font-weight:700;">全免</td></tr>
 <tr><td style="padding:8px;font-weight:700;">便利商店消費</td><td style="text-align:center;padding:8px;">可扣款</td><td style="text-align:center;padding:8px;">現金/刷卡</td><td style="text-align:center;padding:8px;">—</td></tr>
-</table>
+</table></div>
 <div class="day-tips" style="margin-top:16px;">
 <strong>轉乘免費是最強優惠：</strong>30分鐘內地鐵↔公車互轉第2趟完全免費。例：公車₩1,300 → 轉地鐵₩0。一天搭4趟（2次轉乘）省₩200×2=₩400。5天下來省₩2,000（約NT$52）。建議買T-money自營卡（₩4,000含₩2,500儲值），在GS25/CU/7-Eleven都能充值。
       </div>

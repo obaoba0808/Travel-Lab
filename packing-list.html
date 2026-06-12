@@ -75,6 +75,42 @@ document.querySelectorAll('.check-item input[type="checkbox"]').forEach(cb => {
   });
 });
 </script>
+
+<style>
+/* 響應式表格 - 手機版優化 */
+.table-responsive {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 1rem 0;
+}
+.table-responsive table {
+  min-width: 600px;
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .table-responsive table {
+    font-size: 13px;
+  }
+  .table-responsive th,
+  .table-responsive td {
+    padding: 8px 6px;
+    white-space: nowrap;
+  }
+  .table-responsive td:last-child {
+    white-space: normal;
+    min-width: 120px;
+  }
+}
+@media (max-width: 480px) {
+  .table-responsive table {
+    font-size: 12px;
+  }
+  .table-responsive th,
+  .table-responsive td {
+    padding: 6px 4px;
+  }
+}
+</style>
 </head>
 <body>
 <div class="reading-progress" id="reading-progress"></div>
@@ -234,7 +270,7 @@ document.querySelectorAll('.check-item input[type="checkbox"]').forEach(cb => {
       <h2>衣物打包：根據「天數+季節」調整</h2>
       <p>日本四季分明，打包衣物前先確認<strong>出發月份+目的地（本州/北海道/沖繩）</strong>。以下是建議數量：</p>
 
-      <table class="info-table">
+      <div class="table-responsive"><table class="info-table">
         <thead>
           <tr>
             <th>天數</th>
@@ -333,7 +369,7 @@ document.querySelectorAll('.check-item input[type="checkbox"]').forEach(cb => {
             <td>🥾 鞋子（佔空間，建議穿最重的鞋上飛機）</td>
           </tr>
         </tbody>
-      </table>
+      </table></div>
 
       <h2>打包技巧：如何用「最小空間」裝最多東西？</h2>
       <ul class="checklist">

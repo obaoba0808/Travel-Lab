@@ -81,6 +81,42 @@
   gtag('config', 'G-S7KQGHSD2R');
 </script>
 <link href="data:image/svg+xml,&lt;svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'&gt;&lt;text y='.9em' font-size='90'&gt;💰&lt;/text&gt;&lt;/svg&gt;" rel="icon"/>
+
+<style>
+/* 響應式表格 - 手機版優化 */
+.table-responsive {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 1rem 0;
+}
+.table-responsive table {
+  min-width: 600px;
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .table-responsive table {
+    font-size: 13px;
+  }
+  .table-responsive th,
+  .table-responsive td {
+    padding: 8px 6px;
+    white-space: nowrap;
+  }
+  .table-responsive td:last-child {
+    white-space: normal;
+    min-width: 120px;
+  }
+}
+@media (max-width: 480px) {
+  .table-responsive table {
+    font-size: 12px;
+  }
+  .table-responsive th,
+  .table-responsive td {
+    padding: 6px 4px;
+  }
+}
+</style>
 </head>
 <body>
 <!-- TOP BAR NAVIGATION -->
@@ -211,7 +247,7 @@
 </div>
 </div>
 </div><h2>各國退稅比較一覽</h2><div class="day-card">
-<table style="width:100%;border-collapse:collapse;font-size:13px;">
+<div class="table-responsive"><table style="width:100%;border-collapse:collapse;font-size:13px;">
 <tr style="border-bottom:2px solid var(--tiffany-light);background:#f0fdfa;">
 <th style="text-align:left;padding:8px;">國家</th>
 <th style="text-align:center;padding:8px;">退稅率</th>
@@ -223,7 +259,7 @@
 <tr style="border-bottom:1px solid #eee;"><td style="padding:8px;font-weight:700;">日本</td><td style="text-align:center;padding:8px;">10%</td><td style="text-align:center;padding:8px;">¥5,000 (~NT$1,100)</td><td style="padding:8px;">店家直接免稅（免手續費）</td><td style="padding:8px;">護照正本需交店家影印</td></tr>
 <tr style="border-bottom:1px solid #eee;"><td style="padding:8px;font-weight:700;">泰國</td><td style="text-align:center;padding:8px;">7%</td><td style="text-align:center;padding:8px;">฿2,000 (~NT$1,900)</td><td style="padding:8px;">VAT Refund Office</td><td style="padding:8px;">30天內可退</td></tr>
 <tr><td style="padding:8px;font-weight:700;">越南</td><td style="text-align:center;padding:8px;">10%</td><td style="text-align:center;padding:8px;">200萬₫ (~NT$2,600)</td><td style="padding:8px;">機場 Viettel 櫃檯</td><td style="padding:8px;">15天內可退</td></tr>
-</table>
+</table></div>
 </div><h2>韓國退稅流程（KANTAR APP 推薦）</h2><div class="day-card">
 <div style="display:grid;grid-template-columns:50px 1fr;gap:12px;">
 <div style="text-align:center;font-size:24px;font-weight:700;color:var(--tiffany-dark);">1</div>

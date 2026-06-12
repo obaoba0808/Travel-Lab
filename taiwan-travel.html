@@ -76,6 +76,42 @@
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"台灣國內旅遊哪裡最推薦？","acceptedAnswer":{"@type":"Answer","text":"花東適合自然風景和慢活，台南適合美食和文化體驗，墾丁適合海邊和水上活動。不同需求選不同目的地。"}},{"@type":"Question","name":"台灣包車一天多少錢？","acceptedAnswer":{"@type":"Answer","text":"北部一日遊約 NT$5,000-8,000，花東兩天約 NT$12,000-18,000。含油資、過路費、司機費用。"}},{"@type":"Question","name":"花東怎麼去最方便？","acceptedAnswer":{"@type":"Answer","text":"自駕最自由，台北到花蓮約3小時。也可搭火車（台鐵自強號3.5小時），或搭飛機到花蓮/台東機場（50分鐘）。"}}]}
 </script>
 
+
+<style>
+/* 響應式表格 - 手機版優化 */
+.table-responsive {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 1rem 0;
+}
+.table-responsive table {
+  min-width: 600px;
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .table-responsive table {
+    font-size: 13px;
+  }
+  .table-responsive th,
+  .table-responsive td {
+    padding: 8px 6px;
+    white-space: nowrap;
+  }
+  .table-responsive td:last-child {
+    white-space: normal;
+    min-width: 120px;
+  }
+}
+@media (max-width: 480px) {
+  .table-responsive table {
+    font-size: 12px;
+  }
+  .table-responsive th,
+  .table-responsive td {
+    padding: 6px 4px;
+  }
+}
+</style>
 </head>
 <body>
 <!-- TOP BAR NAVIGATION -->
@@ -295,7 +331,7 @@
 <div style="max-width:900px;margin:40px auto;padding:0 40px;">
 <h2>我的台灣深度旅遊總結</h2>
 <p>走過這麼多次台灣深度旅遊，我整理了一個比較表，幫你快速找到最適合自己的路線：</p>
-<table style="width:100%;">
+<div class="table-responsive"><table style="width:100%;">
 <thead>
 <tr style="background:var(--tiffany);color:#fff;">
 <th>比較項目</th>
@@ -342,7 +378,7 @@
 <td>便利性 ⭐⭐⭐<br/>美食 ⭐⭐⭐⭐<br/>CP值 ⭐⭐⭐⭐</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p style="text-align:center;"><strong>💡 我的建議：</strong>如果你是第一次深度旅遊台灣，我會推薦「台北→台南」這條路線——先用台北當作適應期（交通方便、語言無障礙），再去台南吃美食。如果你已經去過台北和台南，那花東絕對是你的下一站！</p>
 </div>
 <section class="faq-section" style="max-width:900px;margin:40px auto;padding:0 40px;">

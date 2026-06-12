@@ -66,6 +66,42 @@
   gtag('config', 'G-S7KQGHSD2R');
 </script>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🇻🇳</text></svg>">
+
+<style>
+/* 響應式表格 - 手機版優化 */
+.table-responsive {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 1rem 0;
+}
+.table-responsive table {
+  min-width: 600px;
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .table-responsive table {
+    font-size: 13px;
+  }
+  .table-responsive th,
+  .table-responsive td {
+    padding: 8px 6px;
+    white-space: nowrap;
+  }
+  .table-responsive td:last-child {
+    white-space: normal;
+    min-width: 120px;
+  }
+}
+@media (max-width: 480px) {
+  .table-responsive table {
+    font-size: 12px;
+  }
+  .table-responsive th,
+  .table-responsive td {
+    padding: 6px 4px;
+  }
+}
+</style>
 </head>
 <body>
 
@@ -177,7 +213,7 @@
     <!-- 必吃美食 -->
     <h2>🍜 胡志明市必吃美食 8 選</h2>
     <div class="day-card">
-      <table style="width:100%;border-collapse:collapse;font-size:13px;">
+      <div class="table-responsive"><table style="width:100%;border-collapse:collapse;font-size:13px;">
         <tr style="border-bottom:2px solid var(--tiffany-light);background:#f0fdfa;">
           <th style="text-align:left;padding:8px;">美食</th>
           <th style="text-align:left;padding:8px;">推薦店家</th>
@@ -191,7 +227,7 @@
         <tr style="border-bottom:1px solid #eee;"><td style="padding:8px;font-weight:700;">Bun Cha（烤肉米粉）</td><td style="padding:8px;">Bun Cha 145</td><td style="text-align:center;padding:8px;">60-100 元</td></tr>
         <tr style="border-bottom:1px solid #eee;"><td style="padding:8px;font-weight:700;">Bia Hoi（生啤酒）</td><td style="padding:8px;">范老五街路邊攤</td><td style="text-align:center;padding:8px;">10-20 元/杯</td></tr>
         <tr><td style="padding:8px;font-weight:700;">Pizza 4P's（創意披薩）</td><td style="padding:8px;">多家分店</td><td style="text-align:center;padding:8px;">200-400 元</td></tr>
-      </table>
+      </table></div>
     </div>
 
     <!-- 住宿推薦 -->

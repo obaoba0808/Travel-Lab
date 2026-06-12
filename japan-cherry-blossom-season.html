@@ -81,6 +81,42 @@
   gtag('config', 'G-S7KQGHSD2R');
 </script>
 <link href="data:image/svg+xml,&lt;svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'&gt;&lt;text y='.9em' font-size='90'&gt;🌸&lt;/text&gt;&lt;/svg&gt;" rel="icon"/>
+
+<style>
+/* 響應式表格 - 手機版優化 */
+.table-responsive {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 1rem 0;
+}
+.table-responsive table {
+  min-width: 600px;
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .table-responsive table {
+    font-size: 13px;
+  }
+  .table-responsive th,
+  .table-responsive td {
+    padding: 8px 6px;
+    white-space: nowrap;
+  }
+  .table-responsive td:last-child {
+    white-space: normal;
+    min-width: 120px;
+  }
+}
+@media (max-width: 480px) {
+  .table-responsive table {
+    font-size: 12px;
+  }
+  .table-responsive th,
+  .table-responsive td {
+    padding: 6px 4px;
+  }
+}
+</style>
 </head>
 <body>
 <!-- TOP BAR NAVIGATION -->
@@ -184,7 +220,7 @@
 <div><div style="font-size:28px;">💰</div><div style="font-weight:700;color:#222;margin-top:6px;">省錢訂法</div><div style="font-size:12px;color:#888;">提前3-4個月</div></div>
 </div>
 </div><h2>🌸 賞櫻時期預測（每年略有不同）</h2><div class="day-card">
-<table style="width:100%;border-collapse:collapse;font-size:13px;">
+<div class="table-responsive"><table style="width:100%;border-collapse:collapse;font-size:13px;">
 <tr style="border-bottom:2px solid #ffc0cb;background:#fff0f5;">
 <th style="text-align:left;padding:8px;">地區</th>
 <th style="text-align:center;padding:8px;">開花</th>
@@ -216,7 +252,7 @@
 <tr style="border-bottom:1px solid #eee;"><td style="padding:8px;font-weight:700;">關西</td><td style="text-align:center;padding:8px;">11月上旬</td><td style="text-align:center;padding:8px;">11月中旬</td><td style="padding:8px;">嵐山、清水寺、永觀堂、東福寺</td></tr>
 <tr style="border-bottom:1px solid #eee;"><td style="padding:8px;font-weight:700;">中部</td><td style="text-align:center;padding:8px;">10月下旬</td><td style="text-align:center;padding:8px;">11月上中旬</td><td style="padding:8px;">白川鄉、上高地、金澤兼六園</td></tr>
 <tr><td style="padding:8px;font-weight:700;">九州</td><td style="text-align:center;padding:8px;">11月上旬</td><td style="text-align:center;padding:8px;">11月下旬-12月初</td><td style="padding:8px;">耶馬溪、雲仙岳、九重夢大吊橋</td></tr>
-</table>
+</table></div>
 <div class="day-tips" style="margin-top:16px;">
 <strong>賞楓比賞櫻好處：</strong>①楓紅持續約2-3週（櫻花只有7-10天）②人少30-40%③住宿便宜20-30%④可以搭配溫泉⑤賞楓限定美食（栗子、柿子、紅葉天婦羅）。
       </div>

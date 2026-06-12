@@ -75,6 +75,42 @@
   gtag('config', 'G-S7KQGHSD2R');
 </script>
 <link href="data:image/svg+xml,&lt;svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'&gt;&lt;text y='.9em' font-size='90'&gt;🔌&lt;/text&gt;&lt;/svg&gt;" rel="icon"/>
+
+<style>
+/* 響應式表格 - 手機版優化 */
+.table-responsive {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 1rem 0;
+}
+.table-responsive table {
+  min-width: 600px;
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .table-responsive table {
+    font-size: 13px;
+  }
+  .table-responsive th,
+  .table-responsive td {
+    padding: 8px 6px;
+    white-space: nowrap;
+  }
+  .table-responsive td:last-child {
+    white-space: normal;
+    min-width: 120px;
+  }
+}
+@media (max-width: 480px) {
+  .table-responsive table {
+    font-size: 12px;
+  }
+  .table-responsive th,
+  .table-responsive td {
+    padding: 6px 4px;
+  }
+}
+</style>
 </head>
 <body>
 <!-- TOP BAR NAVIGATION -->
@@ -174,7 +210,7 @@
 <strong>🏠 台灣標準：A型插頭（扁雙腳）| 110V | 60Hz</strong><br/>
 <span style="font-size:13px;">大部分手機/筆電充電器標示 100-240V，全球通用不需變壓器。看充電器背面標籤確認。</span>
 </div><img src="images/power-plug-comparison.webp" alt="各國插座類型對照表：A型、B型、C型、D型、E型、F型、G型、I型" style="width:100%;max-width:800px;border-radius:12px;margin:16px 0;display:block;" /><h2>🌏 亞洲各國插座對照</h2><div class="day-card">
-<table style="width:100%;border-collapse:collapse;font-size:13px;">
+<div class="table-responsive"><table style="width:100%;border-collapse:collapse;font-size:13px;">
 <tr style="border-bottom:2px solid var(--tiffany-light);background:#f0fdfa;">
 <th style="text-align:left;padding:8px;">國家</th>
 <th style="text-align:center;padding:8px;">插頭型號</th>
@@ -212,7 +248,7 @@
 <tr style="border-bottom:1px solid #eee;"><td style="padding:8px;font-weight:700;">🇩🇪 德國</td><td style="text-align:center;padding:8px;">C/F型</td><td style="text-align:center;padding:8px;">230V</td><td style="text-align:center;padding:8px;">50Hz</td><td style="text-align:center;padding:8px;">✅ 需要C型</td></tr>
 <tr style="border-bottom:1px solid #eee;"><td style="padding:8px;font-weight:700;">🇦🇺 澳洲</td><td style="text-align:center;padding:8px;">I型</td><td style="text-align:center;padding:8px;">230V</td><td style="text-align:center;padding:8px;">50Hz</td><td style="text-align:center;padding:8px;">✅ 需要I型</td></tr>
 <tr><td style="padding:8px;font-weight:700;">🇳🇿 紐西蘭</td><td style="text-align:center;padding:8px;">I型</td><td style="text-align:center;padding:8px;">230V</td><td style="text-align:center;padding:8px;">50Hz</td><td style="text-align:center;padding:8px;">✅ 需要I型</td></tr>
-</table>
+</table></div>
 </div><h2>🔧 轉接頭推薦</h2><div class="day-card">
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;">
 <div style="border:2px solid #eee;border-radius:12px;padding:16px;">
