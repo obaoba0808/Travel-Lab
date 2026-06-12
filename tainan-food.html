@@ -39,6 +39,11 @@
   }
 }
 </style>
+<script>
+/*! loadCSS rel=preload polyfill. [c]2017 Filament Group, Inc. MIT License */
+(function(w){"use strict";if(!w.loadCSS){w.loadCSS=function(){}}
+var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.createElement("link").relList.supports("preload")}catch(e){ret=!1}return function(){return ret}})();rp.poly=function(){var link=w.document.getElementsByTagName("link");for(var i=0;i<link.length;i++){var lnk=link[i];if(lnk.rel==="preload"&&lnk.as==="style"&&!lnk.onload){lnk.onload=rp.poly;lnk.rel="stylesheet"}}};if(!rp.support()){rp.poly();var run=w.setInterval(rp.poly,500);if(w.addEventListener){w.addEventListener("load",function(){rp.poly();w.clearInterval(run)})}else if(w.attachEvent){w.attachEvent("onload",function(){rp.poly();w.clearInterval(run)})}}if(typeof exports!=="undefined"){exports.loadCSS=loadCSS}else{w.loadCSS=loadCSS}}(typeof global!=="undefined"?global:this));
+</script>
 </head><body><meta content="台南美食,台南牛肉湯,國華街小吃,台南咖啡廳,老屋咖啡,赤崁樓,神農街,台南住宿" name="keywords"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <link href="https://golightly.fun/tainan-food.html" rel="canonical"/>
@@ -71,8 +76,10 @@
 <!-- Stylesheet -->
 <link as="style" href="style.css" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/>
 <noscript><link href="style.css" rel="stylesheet"/></noscript>
-<link href="beautify-overrides.css" rel="stylesheet"/>
-<link href="beautify.css" rel="stylesheet"/>
+<link href="beautify-overrides.css" as="style" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/>
+<noscript><link href="beautify-overrides.css" rel="stylesheet"/></noscript>
+<link href="beautify.css" as="style" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/>
+<noscript><link href="beautify.css" rel="stylesheet"/></noscript>
 <!-- Google Analytics 4 -->
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-S7KQGHSD2R"></script>
 <script>
@@ -196,7 +203,7 @@
 <div class="three-col-wrapper">
 <!-- CHARTER BANNER -->
 <div style="max-width:900px;margin:0 auto 30px;padding:0 20px;">
-<a href="about.html"><img alt="台灣包車自由行" height="722" src="images/charter-banner.webp" style="width:100%;border-radius:12px;display:block;" width="2179"/></a>
+<a href="about.html"><img loading="lazy" alt="台灣包車自由行" height="722" src="images/charter-banner.webp" style="width:100%;border-radius:12px;display:block;" width="2179"/></a>
 </div>
 <div class="sidebar-card">
 <a href="hualien-taitung.html">
@@ -206,7 +213,7 @@
 <div class="col-center">
 <div class="article-container">
 <!-- TRIP PROMO BANNER -->
-<div style="margin-bottom:24px;"><a data-affiliate="trip-com" href="https://tw.trip.com/sale/w/4823/hotel-deals.html?locale=zh-TW&amp;promo_referer=3952_4823_11&amp;Allianceid=8237671&amp;SID=312406690&amp;trip_sub1=&amp;trip_sub3=P17011507" rel="nofollow sponsored" target="_blank"><img alt="Trip.com 熱門優惠" src="images/trip-taiwan.webp" style="width:100%;border-radius:12px;display:block;"/></a></div>
+<div style="margin-bottom:24px;"><a data-affiliate="trip-com" href="https://tw.trip.com/sale/w/4823/hotel-deals.html?locale=zh-TW&amp;promo_referer=3952_4823_11&amp;Allianceid=8237671&amp;SID=312406690&amp;trip_sub1=&amp;trip_sub3=P17011507" rel="nofollow sponsored" target="_blank"><img loading="lazy" alt="Trip.com 熱門優惠" src="images/trip-taiwan.webp" style="width:100%;border-radius:12px;display:block;"/></a></div>
 <h2>🥩 5家必喝溫體牛肉湯</h2>
 <p>台南牛肉湯的靈魂是「溫體牛」— 當天現宰、不冷凍，熱湯一沖，鮮甜肉汁瞬間鎖住。凌晨去吃最新鮮！</p>
 <div class="day-card">

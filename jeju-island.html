@@ -39,6 +39,11 @@
   }
 }
 </style>
+<script>
+/*! loadCSS rel=preload polyfill. [c]2017 Filament Group, Inc. MIT License */
+(function(w){"use strict";if(!w.loadCSS){w.loadCSS=function(){}}
+var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.createElement("link").relList.supports("preload")}catch(e){ret=!1}return function(){return ret}})();rp.poly=function(){var link=w.document.getElementsByTagName("link");for(var i=0;i<link.length;i++){var lnk=link[i];if(lnk.rel==="preload"&&lnk.as==="style"&&!lnk.onload){lnk.onload=rp.poly;lnk.rel="stylesheet"}}};if(!rp.support()){rp.poly();var run=w.setInterval(rp.poly,500);if(w.addEventListener){w.addEventListener("load",function(){rp.poly();w.clearInterval(run)})}else if(w.attachEvent){w.attachEvent("onload",function(){rp.poly();w.clearInterval(run)})}}if(typeof exports!=="undefined"){exports.loadCSS=loadCSS}else{w.loadCSS=loadCSS}}(typeof global!=="undefined"?global:this));
+</script>
 </head><body><meta content="濟州島自由行,濟州島自駕,漢拏山,城山日出峰,牛島,濟州租車,濟州黑豬肉,濟州行程" name="keywords"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <link href="https://golightly.fun/jeju-island.html" rel="canonical"/>
@@ -107,8 +112,10 @@
 <!-- Stylesheet -->
 <link as="style" href="style.css" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/>
 <noscript><link href="style.css" rel="stylesheet"/></noscript>
-<link href="beautify-overrides.css" rel="stylesheet"/>
-<link href="beautify.css" rel="stylesheet"/>
+<link href="beautify-overrides.css" as="style" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/>
+<noscript><link href="beautify-overrides.css" rel="stylesheet"/></noscript>
+<link href="beautify.css" as="style" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/>
+<noscript><link href="beautify.css" rel="stylesheet"/></noscript>
 <!-- Google Analytics 4 -->
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-S7KQGHSD2R"></script>
 <script>
@@ -232,7 +239,7 @@
 <div class="three-col-wrapper">
 <!-- CHARTER BANNER -->
 <div style="max-width:900px;margin:0 auto 30px;padding:0 20px;">
-<a href="about.html"><img alt="台灣包車自由行" height="722" src="images/charter-banner.webp" style="width:100%;border-radius:12px;display:block;" width="2179"/></a>
+<a href="about.html"><img loading="lazy" alt="台灣包車自由行" height="722" src="images/charter-banner.webp" style="width:100%;border-radius:12px;display:block;" width="2179"/></a>
 </div>
 <div class="sidebar-card">
 <a href="busan-capsule.html">
@@ -242,7 +249,7 @@
 <div class="col-center">
 <div class="article-container">
 <!-- TRIP PROMO BANNER -->
-<div style="margin-bottom:24px;"><a data-affiliate="trip-com" href="https://tw.trip.com/sale/w/4337/southkorea-destination.html?locale=zh-TW&amp;promo_referer=3952_4337_8&amp;Allianceid=8237671&amp;SID=312406690&amp;trip_sub1=&amp;trip_sub3=P17011353" rel="nofollow sponsored" target="_blank"><img alt="Trip.com 熱門優惠" src="images/trip-korea.webp" style="width:100%;border-radius:12px;display:block;"/></a></div>
+<div style="margin-bottom:24px;"><a data-affiliate="trip-com" href="https://tw.trip.com/sale/w/4337/southkorea-destination.html?locale=zh-TW&amp;promo_referer=3952_4337_8&amp;Allianceid=8237671&amp;SID=312406690&amp;trip_sub1=&amp;trip_sub3=P17011353" rel="nofollow sponsored" target="_blank"><img loading="lazy" alt="Trip.com 熱門優惠" src="images/trip-korea.webp" style="width:100%;border-radius:12px;display:block;"/></a></div>
 <h2>🚗 濟州租車與駕照</h2>
 <p>濟州島大眾運輸班次少，自駕是最有效率的方式。環島一圈約200公里，3天可從容走完。</p>
 <ul>
@@ -308,7 +315,7 @@
 <h2>🍽️ 濟州必吃5大美食</h2>
 <!-- 實戰推薦配圖 -->
 <div style="text-align:center;margin:28px 0;">
-<img alt="濟州島美食實戰心得：黑豬肉烤肉、鮑魚粥、漢拏峰柑橘" src="images/ollieyu-jeju.webp" style="width:100%;max-width:600px;border-radius:16px;box-shadow:0 4px 12px rgba(0,0,0,0.1);"/>
+<img loading="lazy" alt="濟州島美食實戰心得：黑豬肉烤肉、鮑魚粥、漢拏峰柑橘" src="images/ollieyu-jeju.webp" style="width:100%;max-width:600px;border-radius:16px;box-shadow:0 4px 12px rgba(0,0,0,0.1);"/>
 </div>
 <ul>
 <li><strong>黑豬肉烤肉（흑돼지）</strong>：濟州特產，肉質Q彈無腥味，一人 ₩15,000-25,000</li>

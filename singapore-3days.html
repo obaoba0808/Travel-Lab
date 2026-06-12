@@ -35,12 +35,16 @@
     <script type="application/ld+json">
     {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"新加坡3天2夜要多少預算？","acceptedAnswer":{"@type":"Answer","text":"經濟型：NT$18,000-25,000（含機票）；舒適型：NT$25,000-35,000。住宿是最大支出，星幣兌台幣約1:24。淡季（5-8月）機票+飯店比旺季省30%。"}},{"@type":"Question","name":"台灣人去新加坡需要簽證嗎？","acceptedAnswer":{"@type":"Answer","text":"免簽！持台灣護照可免簽停留30天，直接帶護照即可入境，最長可延至90天。"}},{"@type":"Question","name":"新加坡使用什麼語言和貨幣？","acceptedAnswer":{"@type":"Answer","text":"官方語言：英語、華語、馬來語、淡米爾語。通用貨幣：新加坡幣（SGD），星幣兌台幣約1:24。絕大多數地方接受信用卡，但小販中心以現金為主。"}},{"@type":"Question","name":"新加坡交通怎麼解決？","acceptedAnswer":{"@type":"Answer","text":"地鐵（MRT）+ 巴士（SBST/SBS）覆蓋全島。建議買 EZ-Link 卡（押金S$5不可退），儲值後地鐵+巴士通用，單程約S$0.9-2.1。機場到市區：地鐵約S$2.1（約30分鐘）。"}},{"@type":"Question","name":"新加坡天氣怎麼樣？","acceptedAnswer":{"@type":"Answer","text":"全年炎熱潮濕，氣溫26-32度。每天下午2-4點有雷陣雨，5-8月是相對乾季。室內冷氣極強（18-20度），建議帶薄外套。地鐵/商場無敵冷。"}},{"@type":"Question","name":"新加坡美食推薦哪些？","acceptedAnswer":{"@type":"Answer","text":"必吃：海南雞飯（天天海南雞飯）、辣椒蟹（珍寶海鮮）、肉骨茶（松發/發計人）、喇沙（結了尾/阿旺）、咖椰吐司（亞坤）、沙爹（沙爹皇朝）。平均每餐S$5-15。"}},{"@type":"Question","name":"新加坡機票怎麼買最便宜？","acceptedAnswer":{"@type":"Answer","text":"廉航（酷航 Scoot、捷星 Jetstar）來回含稅約NT$5,000-9,000；星宇/長榮/華航傳統航空來回約NT$8,000-14,000。提前6-8週預訂、選週二出发最便宜。"}},{"@type":"Question","name":"新加坡住宿推薦哪一區？","acceptedAnswer":{"@type":"Answer","text":"第一次去推薦住武吉士（Bugis）/ 阿拉伯區：地鐵直達、飯店多、距離主要景點近。預算有限可選芽籠（Geylang）或克拉碼頭（膠囊旅館）。平均每晚S$80-200。"}}]}
     </script>
-    <link rel="stylesheet" href="style.css">
-<link href="beautify-overrides.css" rel="stylesheet"/>
-    <link rel="stylesheet" href="beautify.css">
+    <link as="style" onload="this.onload=null;this.rel='stylesheet'" rel="preload" href="style.css">
+<noscript><link rel="stylesheet" href="style.css"></noscript>
+<link href="beautify-overrides.css" as="style" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/>
+<noscript><link href="beautify-overrides.css" rel="stylesheet"/></noscript>
+    <link as="style" onload="this.onload=null;this.rel='stylesheet'" rel="preload" href="beautify.css">
+<noscript><link rel="stylesheet" href="beautify.css"></noscript>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" media="print" onload="this.media='all'" rel="stylesheet">
 <noscript><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet"></noscript>
-<link rel="stylesheet" href="article-beautify.css">
+<link as="style" onload="this.onload=null;this.rel='stylesheet'" rel="preload" href="article-beautify.css">
+<noscript><link rel="stylesheet" href="article-beautify.css"></noscript>
     
 <style>
 /* 響應式表格 - 手機版優化 */
@@ -77,6 +81,11 @@
   }
 }
 </style>
+<script>
+/*! loadCSS rel=preload polyfill. [c]2017 Filament Group, Inc. MIT License */
+(function(w){"use strict";if(!w.loadCSS){w.loadCSS=function(){}}
+var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.createElement("link").relList.supports("preload")}catch(e){ret=!1}return function(){return ret}})();rp.poly=function(){var link=w.document.getElementsByTagName("link");for(var i=0;i<link.length;i++){var lnk=link[i];if(lnk.rel==="preload"&&lnk.as==="style"&&!lnk.onload){lnk.onload=rp.poly;lnk.rel="stylesheet"}}};if(!rp.support()){rp.poly();var run=w.setInterval(rp.poly,500);if(w.addEventListener){w.addEventListener("load",function(){rp.poly();w.clearInterval(run)})}else if(w.attachEvent){w.attachEvent("onload",function(){rp.poly();w.clearInterval(run)})}}if(typeof exports!=="undefined"){exports.loadCSS=loadCSS}else{w.loadCSS=loadCSS}}(typeof global!=="undefined"?global:this));
+</script>
 </head>
 <body>
     

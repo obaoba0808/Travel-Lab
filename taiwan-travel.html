@@ -61,8 +61,10 @@
 <!-- Stylesheet -->
 <link as="style" href="style.css" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/>
 <noscript><link href="style.css" rel="stylesheet"/></noscript>
-<link href="beautify-overrides.css" rel="stylesheet"/>
-<link href="beautify.css" rel="stylesheet"/>
+<link href="beautify-overrides.css" as="style" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/>
+<noscript><link href="beautify-overrides.css" rel="stylesheet"/></noscript>
+<link href="beautify.css" as="style" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/>
+<noscript><link href="beautify.css" rel="stylesheet"/></noscript>
 <!-- Google Analytics 4 -->
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-S7KQGHSD2R"></script>
 <script>
@@ -112,6 +114,11 @@
   }
 }
 </style>
+<script>
+/*! loadCSS rel=preload polyfill. [c]2017 Filament Group, Inc. MIT License */
+(function(w){"use strict";if(!w.loadCSS){w.loadCSS=function(){}}
+var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.createElement("link").relList.supports("preload")}catch(e){ret=!1}return function(){return ret}})();rp.poly=function(){var link=w.document.getElementsByTagName("link");for(var i=0;i<link.length;i++){var lnk=link[i];if(lnk.rel==="preload"&&lnk.as==="style"&&!lnk.onload){lnk.onload=rp.poly;lnk.rel="stylesheet"}}};if(!rp.support()){rp.poly();var run=w.setInterval(rp.poly,500);if(w.addEventListener){w.addEventListener("load",function(){rp.poly();w.clearInterval(run)})}else if(w.attachEvent){w.attachEvent("onload",function(){rp.poly();w.clearInterval(run)})}}if(typeof exports!=="undefined"){exports.loadCSS=loadCSS}else{w.loadCSS=loadCSS}}(typeof global!=="undefined"?global:this));
+</script>
 </head>
 <body>
 <!-- TOP BAR NAVIGATION -->
@@ -218,7 +225,7 @@
 <div class="section-divider">
 <!-- TRIP PROMO BANNER -->
 <div style="position:relative;max-width:1200px;margin:0 auto 32px;">
-<a data-affiliate="trip-com" href="https://tw.trip.com/sale/w/4823/hotel-deals.html?locale=zh-TW&amp;promo_referer=3952_4823_11&amp;Allianceid=8237671&amp;SID=312406690&amp;trip_sub1=&amp;trip_sub3=P17011507" rel="nofollow sponsored" target="_blank"><img alt="Trip.com 熱門優惠" src="images/trip-taiwan.webp" style="width:100%;border-radius:12px;display:block;"/></a>
+<a data-affiliate="trip-com" href="https://tw.trip.com/sale/w/4823/hotel-deals.html?locale=zh-TW&amp;promo_referer=3952_4823_11&amp;Allianceid=8237671&amp;SID=312406690&amp;trip_sub1=&amp;trip_sub3=P17011507" rel="nofollow sponsored" target="_blank"><img loading="lazy" alt="Trip.com 熱門優惠" src="images/trip-taiwan.webp" style="width:100%;border-radius:12px;display:block;"/></a>
 <div style="position:absolute;bottom:12px;right:12px;background:rgba(0,0,0,0.75);color:#fff;padding:8px 18px;border-radius:20px;font-size:13px;font-weight:600;backdrop-filter:blur(4px);">🔥 点此查看最新優惠 →</div>
 </div>
 <h2>🏝️ 台灣旅遊文章</h2>
@@ -227,7 +234,7 @@
 </div>
 <div class="hub-grid-wrap"><div class="card-grid">
 <article class="card">
-<a href="hualien-taitung.html"><img alt="花東三天兩夜縱谷慢旅行" height="1024" src="images/hualien-hero.webp" style="display:block;margin-left:auto;margin-right:auto;;display:block;margin-left:auto;margin-right:auto;" width="1536"/></a>
+<a href="hualien-taitung.html"><img loading="lazy" alt="花東三天兩夜縱谷慢旅行" height="1024" src="images/hualien-hero.webp" style="display:block;margin-left:auto;margin-right:auto;;display:block;margin-left:auto;margin-right:auto;" width="1536"/></a>
 <div class="card-body">
 <a class="cat-tag" href="taiwan-travel.html">台灣旅遊</a>
 <h3><a href="hualien-taitung.html">【花东三天兩夜】縱谷慢旅行</a></h3>
@@ -236,7 +243,7 @@
 </div>
 </article>
 <article class="card">
-<a href="tainan-food.html"><img alt="台南美食牛肉湯與國華街" height="1024" src="images/tainan-hero.webp" style="display:block;margin-left:auto;margin-right:auto;;display:block;margin-left:auto;margin-right:auto;" width="1536"/></a>
+<a href="tainan-food.html"><img loading="lazy" alt="台南美食牛肉湯與國華街" height="1024" src="images/tainan-hero.webp" style="display:block;margin-left:auto;margin-right:auto;;display:block;margin-left:auto;margin-right:auto;" width="1536"/></a>
 <div class="card-body">
 <a class="cat-tag" href="taiwan-travel.html">台灣旅遊</a>
 <h3><a href="tainan-food.html">【台南美食】牛肉湯與國華街</a></h3>
@@ -245,7 +252,7 @@
 </div>
 </article>
 <article class="card">
-<a href="kenting.html"><img alt="墾丁三天兩夜海景與夜市" height="1024" src="images/kenting-hero.webp" style="display:block;margin-left:auto;margin-right:auto;;display:block;margin-left:auto;margin-right:auto;" width="1536"/></a>
+<a href="kenting.html"><img loading="lazy" alt="墾丁三天兩夜海景與夜市" height="1024" src="images/kenting-hero.webp" style="display:block;margin-left:auto;margin-right:auto;;display:block;margin-left:auto;margin-right:auto;" width="1536"/></a>
 <div class="card-body">
 <a class="cat-tag" href="taiwan-travel.html">台灣旅遊</a>
 <h3><a href="kenting.html">【墾丁三天兩夜】海景與夜市</a></h3>
@@ -254,7 +261,7 @@
 </div>
 </article>
 <article class="card">
-<a href="taipei-food.html"><img alt="台北美食地圖精選" height="1024" src="images/taipei-food-hero.webp" style="display:block;margin-left:auto;margin-right:auto;;display:block;margin-left:auto;margin-right:auto;" width="1536"/></a>
+<a href="taipei-food.html"><img loading="lazy" alt="台北美食地圖精選" height="1024" src="images/taipei-food-hero.webp" style="display:block;margin-left:auto;margin-right:auto;;display:block;margin-left:auto;margin-right:auto;" width="1536"/></a>
 <div class="card-body">
 <a class="cat-tag" href="taiwan-travel.html">台灣旅遊</a>
 <h3><a href="taipei-food.html">【台北美食地圖】精選推薦</a></h3>
@@ -263,7 +270,7 @@
 </div>
 </article>
 <article class="card">
-<a href="jiufen.html"><img alt="九份老街攻略" height="1024" src="images/jiufen-hero.webp" style="display:block;margin-left:auto;margin-right:auto;;display:block;margin-left:auto;margin-right:auto;" width="1536"/></a>
+<a href="jiufen.html"><img loading="lazy" alt="九份老街攻略" height="1024" src="images/jiufen-hero.webp" style="display:block;margin-left:auto;margin-right:auto;;display:block;margin-left:auto;margin-right:auto;" width="1536"/></a>
 <div class="card-body">
 <a class="cat-tag" href="taiwan-travel.html">台灣旅遊</a>
 <h3><a href="jiufen.html">【九份老街】一日遊攻略</a></h3>

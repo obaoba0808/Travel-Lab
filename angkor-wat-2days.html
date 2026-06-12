@@ -35,12 +35,16 @@
     <script type="application/ld+json">
     {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"吳哥窟門票多少錢？","acceptedAnswer":{"@type":"Answer","text":"吳哥窟門票分為：1日票 US$37、3日票 US$62、7日票 US$72。建議買3日票，可參觀吳哥窟的所有景點。現場或官網 buyangkorticket.com 購買。"}},{"@type":"Question","name":"吳哥窟要安排幾天？","acceptedAnswer":{"@type":"Answer","text":"最少需要2天。經典的2天1夜足以看完小吳哥日出、巴戎寺、塔普倫寺、女皇宮等主要景點。如果想深度遊覽或拍照，3天更從容。"}},{"@type":"Question","name":"台灣人去吳哥窟需要簽證嗎？","acceptedAnswer":{"@type":"Answer","text":"需要簽證。落地簽 US$30（機場排隊約30-60分鐘）或電子簽證 e-Visa US$37（evisa.gov.kh，3個工作天，線上填表，落地快速通關）。建議辦電子簽，省時省心。"}},{"@type":"Question","name":"吳哥窟最佳旅遊時間？","acceptedAnswer":{"@type":"Answer","text":"11月-3月是涼爽旱季，雨水少，是最佳旅遊季節。12月-2月天氣最舒適，但也是旺季，遊客較多。4-5月最熱（35-40度），不建議。6-10月雨季，景點較綠但濕熱。"}},{"@type":"Question","name":"吳哥窟怎麼去？","acceptedAnswer":{"@type":"Answer","text":"從台灣沒有直飛吳哥窟的航班，需經胡志明市或金邊轉機至暹粒機場（PSA）。胡志明市→暹粒約1小時，越捷航空來回約US$50-100。機場到市區約30分鐘，tuk-tuk車 US$8-15。"}},{"@type":"Question","name":"吳哥窟要包車嗎？","acceptedAnswer":{"@type":"Answer","text":"強烈建議包嘟嘟車（Tuk-tuk）或汽車。景點分散，包車省時省力。一天 Tuk-tuk 約 US$20-30，汽車約 US$35-50，含司機。推薦透過飯店預訂，比較有保障。"}},{"@type":"Question","name":"小吳哥日出值得看嗎？","acceptedAnswer":{"@type":"Answer","text":"非常值得！小吳哥日出的倒影是全球最經典的日出場景之一。建議清晨4:30抵達入口（第一個排隊），5:00前進入。旱季（11月-3月）天空色彩最美。雨季的日出有雲層覆蓋，效果稍遜。"}},{"@type":"Question","name":"吳哥窟附近住哪裡？","acceptedAnswer":{"@type":"Answer","text":"推薦住在暹粒市中心（Old Market / Pub Street 附近），餐廳、按摩店、超市齊全，距離吳哥窟約30分鐘車程。中檔飯店每晚 US$30-80，性價比極高。"}}]}
     </script>
-    <link rel="stylesheet" href="style.css">
-<link href="beautify-overrides.css" rel="stylesheet"/>
-    <link rel="stylesheet" href="beautify.css">
+    <link as="style" onload="this.onload=null;this.rel='stylesheet'" rel="preload" href="style.css">
+<noscript><link rel="stylesheet" href="style.css"></noscript>
+<link href="beautify-overrides.css" as="style" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/>
+<noscript><link href="beautify-overrides.css" rel="stylesheet"/></noscript>
+    <link as="style" onload="this.onload=null;this.rel='stylesheet'" rel="preload" href="beautify.css">
+<noscript><link rel="stylesheet" href="beautify.css"></noscript>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" media="print" onload="this.media='all'" rel="stylesheet">
 <noscript><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet"></noscript>
-<link rel="stylesheet" href="article-beautify.css">
+<link as="style" onload="this.onload=null;this.rel='stylesheet'" rel="preload" href="article-beautify.css">
+<noscript><link rel="stylesheet" href="article-beautify.css"></noscript>
     
 <style>
 /* 響應式表格 - 手機版優化 */
@@ -77,6 +81,11 @@
   }
 }
 </style>
+<script>
+/*! loadCSS rel=preload polyfill. [c]2017 Filament Group, Inc. MIT License */
+(function(w){"use strict";if(!w.loadCSS){w.loadCSS=function(){}}
+var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.createElement("link").relList.supports("preload")}catch(e){ret=!1}return function(){return ret}})();rp.poly=function(){var link=w.document.getElementsByTagName("link");for(var i=0;i<link.length;i++){var lnk=link[i];if(lnk.rel==="preload"&&lnk.as==="style"&&!lnk.onload){lnk.onload=rp.poly;lnk.rel="stylesheet"}}};if(!rp.support()){rp.poly();var run=w.setInterval(rp.poly,500);if(w.addEventListener){w.addEventListener("load",function(){rp.poly();w.clearInterval(run)})}else if(w.attachEvent){w.attachEvent("onload",function(){rp.poly();w.clearInterval(run)})}}if(typeof exports!=="undefined"){exports.loadCSS=loadCSS}else{w.loadCSS=loadCSS}}(typeof global!=="undefined"?global:this));
+</script>
 </head>
 <body>
     

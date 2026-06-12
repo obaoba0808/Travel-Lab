@@ -1,0 +1,84 @@
+:root{--tiffany:#0ABAB5;--tiffany-dark:#078E8A;--tiffany-light:#B2E8E6}
+*{box-sizing:border-box}
+body{font-family:'Noto Sans TC',sans-serif;background:#f5f5f5;margin:0;padding:0;color:#333}
+.container{max-width:900px;margin:0 auto;padding:20px}
+
+/* Header */
+.header{text-align:center;padding:40px 20px;background:linear-gradient(135deg,var(--tiffany),var(--tiffany-dark));color:#fff;border-radius:0 0 30px 30px;margin-bottom:30px}
+.header h1{font-size:28px;margin:0 0 12px}
+.header p{font-size:16px;opacity:0.9;margin:0}
+
+/* Selection Cards */
+.selector-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-bottom:30px}
+.selector-card{background:#fff;border-radius:16px;padding:24px;box-shadow:0 2px 12px rgba(0,0,0,0.08)}
+.selector-card h3{font-size:14px;color:#888;margin:0 0 12px;text-transform:uppercase;letter-spacing:1px}
+.option-btns{display:flex;flex-wrap:wrap;gap:8px}
+.option-btn{padding:10px 16px;border:2px solid #e0e0e0;border-radius:50px;background:#fff;cursor:pointer;font-size:14px;transition:all 0.2s}
+.option-btn:hover{border-color:var(--tiffany);background:#f0fdfa}
+.option-btn.active{border-color:var(--tiffany);background:var(--tiffany);color:#fff;font-weight:700}
+.option-btn.selected{border-color:var(--tiffany);background:var(--tiffany);color:#fff}
+
+/* Generate Button */
+.generate-btn{width:100%;padding:18px;border:none;border-radius:50px;background:linear-gradient(135deg,var(--tiffany),var(--tiffany-dark));color:#fff;font-size:18px;font-weight:700;cursor:pointer;transition:transform 0.2s,box-shadow 0.2s;margin-bottom:30px}
+.generate-btn:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(10,186,181,0.4)}
+.generate-btn:disabled{background:#ccc;cursor:not-allowed;transform:none;box-shadow:none}
+
+/* Checklist Container */
+.checklist-container{background:#fff;border-radius:20px;padding:30px;box-shadow:0 2px 12px rgba(0,0,0,0.08);display:none}
+.checklist-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:24px;padding-bottom:16px;border-bottom:2px solid #f0f0f0}
+.checklist-header h2{font-size:22px;margin:0;color:var(--tiffany-dark)}
+.header-actions{display:flex;gap:10px}
+.action-btn{padding:10px 20px;border:2px solid var(--tiffany);border-radius:50px;background:#fff;color:var(--tiffany);font-size:14px;font-weight:600;cursor:pointer;transition:all 0.2s}
+.action-btn:hover{background:var(--tiffany);color:#fff}
+
+/* Progress Bar */
+.progress-section{margin-bottom:24px}
+.progress-bar-bg{height:12px;background:#e0e0e0;border-radius:50px;overflow:hidden}
+.progress-bar-fill{height:100%;background:linear-gradient(90deg,var(--tiffany),var(--tiffany-dark));border-radius:50px;transition:width 0.3s}
+.progress-text{text-align:center;font-size:14px;color:#666;margin-top:8px}
+.progress-text strong{color:var(--tiffany-dark);font-size:20px}
+
+/* Category Section */
+.category{margin-bottom:28px}
+.category-header{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+.category-icon{font-size:24px}
+.category-title{font-size:18px;font-weight:700;color:#333}
+.category-count{margin-left:auto;font-size:13px;color:#888;background:#f0f0f0;padding:4px 12px;border-radius:50px}
+
+/* Checklist Items */
+.check-items{display:flex;flex-direction:column;gap:8px}
+.check-item{display:flex;align-items:center;padding:12px 16px;background:#f8f9fa;border-radius:12px;cursor:pointer;transition:all 0.2s}
+.check-item:hover{background:#f0fdfa}
+.check-item.checked{background:#e8f5e9}
+.check-item.checked .item-text{text-decoration:line-through;color:#888}
+.check-item input[type="checkbox"]{width:22px;height:22px;margin-right:12px;accent-color:var(--tiffany);cursor:pointer}
+.item-text{flex:1;font-size:15px}
+.item-note{font-size:12px;color:#888;margin-left:8px}
+
+/* PDF Download Section */
+.pdf-section{background:linear-gradient(135deg,#667eea,#764ba2);border-radius:20px;padding:32px;text-align:center;color:#fff;margin-top:30px}
+.pdf-section h3{font-size:20px;margin:0 0 8px}
+.pdf-section p{font-size:14px;opacity:0.9;margin:0 0 20px}
+.pdf-form{display:flex;flex-direction:column;align-items:center;gap:10px;max-width:360px;margin:0 auto}
+.pdf-form input[type="email"]{width:100%;padding:14px 20px;border:none;border-radius:50px;font-size:15px}
+.pdf-form button{width:100%;padding:14px 40px;border:none;border-radius:50px;background:#fff;color:#764ba2;font-size:16px;font-weight:700;cursor:pointer}
+.pdf-note{font-size:12px;opacity:0.7;margin-top:12px}
+
+/* Footer */
+.footer{text-align:center;padding:30px;color:#888;font-size:13px}
+
+/* Print Styles */
+@media print{
+  .selector-grid,.generate-btn,.header-actions,.pdf-section,.footer{display:none!important}
+  .checklist-container{display:block!important;box-shadow:none;border:1px solid #ddd}
+  .check-item{break-inside:avoid}
+}
+
+/* Responsive */
+@media(max-width:600px){
+  .header h1{font-size:22px}
+  .selector-grid{grid-template-columns:1fr}
+  .checklist-header{flex-direction:column;gap:12px;align-items:flex-start}
+  .header-actions{width:100%}
+  .action-btn{flex:1;text-align:center}
+}

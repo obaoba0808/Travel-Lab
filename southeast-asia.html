@@ -30,10 +30,14 @@
     <script type="application/ld+json">
     {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"東南亞自由行哪裡最便宜？","acceptedAnswer":{"@type":"Answer","text":"泰國清邁和越南是CP值最高的目的地。清邁一個月生活費約NT$15,000-30,000，曼谷3天2夜約NT$8,000-15,000。"}},{"@type":"Question","name":"台灣人去東南亞需要簽證嗎？","acceptedAnswer":{"@type":"Answer","text":"泰國、新加坡免簽（泰國60天）。馬來西亞免簽30天。越南需電子簽證（約US$25）。柬埔寨需落地簽（US$30）。"}},{"@type":"Question","name":"東南亞哪裡適合數位遊牧？","acceptedAnswer":{"@type":"Answer","text":"清邁是亞洲數位遊牧大本營，咖啡廳多、物價低、社群活躍。曼谷和吉隆坡也是熱門選擇。"}},{"@type":"Question","name":"東南亞旅遊要注意哪些安全問題？","acceptedAnswer":{"@type":"Answer","text":"選擇評價好的住宿、夜間避免偏僻地區、用Grab取代街邊計程車、貴重物品放保險箱、喝瓶裝水不喝生水、注意交通安全。整體旅遊危險性不高。"}},{"@type":"Question","name":"東南亞自由行機票怎麼買最便宜？","acceptedAnswer":{"@type":"Answer","text":"提前2-3個月訂票、選週二週三出發、用Skyscanner比價。廉航（越捷、亞航、酷航、馬印航空）比傳統航空便宜50%以上。"}}]}
     </script>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="beautify.css">
-    <link rel="stylesheet" href="article-beautify.css">
-    <link rel="stylesheet" href="hero-beautify.css">
+    <link as="style" onload="this.onload=null;this.rel='stylesheet'" rel="preload" href="style.css">
+<noscript><link rel="stylesheet" href="style.css"></noscript>
+    <link as="style" onload="this.onload=null;this.rel='stylesheet'" rel="preload" href="beautify.css">
+<noscript><link rel="stylesheet" href="beautify.css"></noscript>
+    <link as="style" onload="this.onload=null;this.rel='stylesheet'" rel="preload" href="article-beautify.css">
+<noscript><link rel="stylesheet" href="article-beautify.css"></noscript>
+    <link as="style" onload="this.onload=null;this.rel='stylesheet'" rel="preload" href="hero-beautify.css">
+<noscript><link rel="stylesheet" href="hero-beautify.css"></noscript>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" media="print" onload="this.media='all'" rel="stylesheet">
 <noscript><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet"></noscript>
 
@@ -72,6 +76,11 @@
   }
 }
 </style>
+<script>
+/*! loadCSS rel=preload polyfill. [c]2017 Filament Group, Inc. MIT License */
+(function(w){"use strict";if(!w.loadCSS){w.loadCSS=function(){}}
+var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.createElement("link").relList.supports("preload")}catch(e){ret=!1}return function(){return ret}})();rp.poly=function(){var link=w.document.getElementsByTagName("link");for(var i=0;i<link.length;i++){var lnk=link[i];if(lnk.rel==="preload"&&lnk.as==="style"&&!lnk.onload){lnk.onload=rp.poly;lnk.rel="stylesheet"}}};if(!rp.support()){rp.poly();var run=w.setInterval(rp.poly,500);if(w.addEventListener){w.addEventListener("load",function(){rp.poly();w.clearInterval(run)})}else if(w.attachEvent){w.attachEvent("onload",function(){rp.poly();w.clearInterval(run)})}}if(typeof exports!=="undefined"){exports.loadCSS=loadCSS}else{w.loadCSS=loadCSS}}(typeof global!=="undefined"?global:this));
+</script>
 </head>
 <body>
     
@@ -226,7 +235,7 @@
                 <h2>📖 最新攻略文章</h2>
                 <div class="card-grid">
                     <div class="card">
-                        <a href="chiang-mai.html"><img src="images/chiangmai-hero.webp" alt="清邁數位遊牧生活" width="400" height="267"></a>
+                        <a href="chiang-mai.html"><img loading="lazy" src="images/chiangmai-hero.webp" alt="清邁數位遊牧生活" width="400" height="267"></a>
                         <div class="card-body">
                             <span class="cat-tag">🇹🇭 泰國</span>
                             <h3><a href="chiang-mai.html">清邁數位遊牧 7 天生活指南</a></h3>
@@ -235,7 +244,7 @@
                         </div>
                     </div>
                     <div class="card">
-                        <a href="bangkok-3days.html"><img src="images/bangkok-hero.webp" alt="曼谷3天2夜吃貨攻略" width="400" height="267"></a>
+                        <a href="bangkok-3days.html"><img loading="lazy" src="images/bangkok-hero.webp" alt="曼谷3天2夜吃貨攻略" width="400" height="267"></a>
                         <div class="card-body">
                             <span class="cat-tag">🇹🇭 泰國</span>
                             <h3><a href="bangkok-3days.html">曼谷 3 天 2 夜吃貨攻略</a></h3>
@@ -244,7 +253,7 @@
                         </div>
                     </div>
                     <div class="card">
-                        <a href="bangkok-4days.html"><img src="images/bangkok-hero.webp" alt="曼谷4天3夜攻略" width="400" height="267"></a>
+                        <a href="bangkok-4days.html"><img loading="lazy" src="images/bangkok-hero.webp" alt="曼谷4天3夜攻略" width="400" height="267"></a>
                         <div class="card-body">
                             <span class="cat-tag">🇹🇭 泰國</span>
                             <h3><a href="bangkok-4days.html">曼谷 4 天 3 夜完整攻略</a></h3>
@@ -253,7 +262,7 @@
                         </div>
                     </div>
                     <div class="card">
-                        <a href="bangkok-massage.html"><img src="images/bangkok-massage-hero.webp" alt="曼谷按摩推薦" width="400" height="267"></a>
+                        <a href="bangkok-massage.html"><img loading="lazy" src="images/bangkok-massage-hero.webp" alt="曼谷按摩推薦" width="400" height="267"></a>
                         <div class="card-body">
                             <span class="cat-tag">🇹🇭 泰國</span>
                             <h3><a href="bangkok-massage.html">曼谷按摩推薦 2026｜平價到高端</a></h3>
@@ -262,7 +271,7 @@
                         </div>
                     </div>
                     <div class="card">
-                        <a href="vietnam-danang.html"><img src="images/vietnam-danang-hero.webp" alt="越南峴港3天2夜攻略" width="400" height="267"></a>
+                        <a href="vietnam-danang.html"><img loading="lazy" src="images/vietnam-danang-hero.webp" alt="越南峴港3天2夜攻略" width="400" height="267"></a>
                         <div class="card-body">
                             <span class="cat-tag">🇻🇳 越南</span>
                             <h3><a href="vietnam-danang.html">越南峴港 3 天 2 夜全攻略</a></h3>
@@ -271,7 +280,7 @@
                         </div>
                     </div>
                     <div class="card">
-                        <a href="vietnam-hochiminh.html"><img src="images/vietnam-danang-hero.webp" alt="胡志明市3天2夜攻略" width="400" height="267"></a>
+                        <a href="vietnam-hochiminh.html"><img loading="lazy" src="images/vietnam-danang-hero.webp" alt="胡志明市3天2夜攻略" width="400" height="267"></a>
                         <div class="card-body">
                             <span class="cat-tag">🇻🇳 越南</span>
                             <h3><a href="vietnam-hochiminh.html">胡志明市 3 天 2 夜攻略</a></h3>
@@ -280,7 +289,7 @@
                         </div>
                     </div>
                     <div class="card">
-                        <a href="kualalumpur-3days.html"><img src="images/southeast-asia-hero.webp" alt="吉隆坡3天2夜攻略" width="400" height="267"></a>
+                        <a href="kualalumpur-3days.html"><img loading="lazy" src="images/southeast-asia-hero.webp" alt="吉隆坡3天2夜攻略" width="400" height="267"></a>
                         <div class="card-body">
                             <span class="cat-tag">🇲🇾 馬來西亞</span>
                             <h3><a href="kualalumpur-3days.html">吉隆坡 3 天 2 夜攻略</a></h3>
@@ -289,7 +298,7 @@
                         </div>
                     </div>
                     <div class="card">
-                        <a href="budget-calculator.html"><img src="images/packing-list.webp" alt="東南亞旅遊預算試算器" width="400" height="267"></a>
+                        <a href="budget-calculator.html"><img loading="lazy" src="images/packing-list.webp" alt="東南亞旅遊預算試算器" width="400" height="267"></a>
                         <div class="card-body">
                             <span class="cat-tag">🛠️ 旅遊工具</span>
                             <h3><a href="budget-calculator.html">東南亞旅遊預算試算器</a></h3>

@@ -47,8 +47,10 @@
 <noscript><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&amp;family=Noto+Serif+TC:wght@400;700&amp;display=swap" rel="stylesheet"/></noscript></noscript>
 <link as="style" href="style.css" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/>
 <noscript><link href="style.css" rel="stylesheet"/></noscript>
-<link href="beautify-overrides.css" rel="stylesheet"/>
-<link href="beautify.css" rel="stylesheet"/>
+<link href="beautify-overrides.css" as="style" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/>
+<noscript><link href="beautify-overrides.css" rel="stylesheet"/></noscript>
+<link href="beautify.css" as="style" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/>
+<noscript><link href="beautify.css" rel="stylesheet"/></noscript>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-S7KQGHSD2R"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -122,6 +124,11 @@ document.querySelectorAll('.check-item input[type="checkbox"]').forEach(cb => {
   }
 }
 </style>
+<script>
+/*! loadCSS rel=preload polyfill. [c]2017 Filament Group, Inc. MIT License */
+(function(w){"use strict";if(!w.loadCSS){w.loadCSS=function(){}}
+var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.createElement("link").relList.supports("preload")}catch(e){ret=!1}return function(){return ret}})();rp.poly=function(){var link=w.document.getElementsByTagName("link");for(var i=0;i<link.length;i++){var lnk=link[i];if(lnk.rel==="preload"&&lnk.as==="style"&&!lnk.onload){lnk.onload=rp.poly;lnk.rel="stylesheet"}}};if(!rp.support()){rp.poly();var run=w.setInterval(rp.poly,500);if(w.addEventListener){w.addEventListener("load",function(){rp.poly();w.clearInterval(run)})}else if(w.attachEvent){w.attachEvent("onload",function(){rp.poly();w.clearInterval(run)})}}if(typeof exports!=="undefined"){exports.loadCSS=loadCSS}else{w.loadCSS=loadCSS}}(typeof global!=="undefined"?global:this));
+</script>
 </head>
 <body>
 <div class="reading-progress" id="reading-progress"></div>

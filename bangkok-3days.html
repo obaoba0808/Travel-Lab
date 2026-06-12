@@ -39,6 +39,11 @@
   }
 }
 </style>
+<script>
+/*! loadCSS rel=preload polyfill. [c]2017 Filament Group, Inc. MIT License */
+(function(w){"use strict";if(!w.loadCSS){w.loadCSS=function(){}}
+var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.createElement("link").relList.supports("preload")}catch(e){ret=!1}return function(){return ret}})();rp.poly=function(){var link=w.document.getElementsByTagName("link");for(var i=0;i<link.length;i++){var lnk=link[i];if(lnk.rel==="preload"&&lnk.as==="style"&&!lnk.onload){lnk.onload=rp.poly;lnk.rel="stylesheet"}}};if(!rp.support()){rp.poly();var run=w.setInterval(rp.poly,500);if(w.addEventListener){w.addEventListener("load",function(){rp.poly();w.clearInterval(run)})}else if(w.attachEvent){w.attachEvent("onload",function(){rp.poly();w.clearInterval(run)})}}if(typeof exports!=="undefined"){exports.loadCSS=loadCSS}else{w.loadCSS=loadCSS}}(typeof global!=="undefined"?global:this));
+</script>
 </head><body><meta content="曼谷自由行,曼谷美食,洽圖洽,唐人街,水門市場,BTS,曼谷行程,曼谷小吃,泰式料理" name="keywords"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <link href="https://golightly.fun/bangkok-3days.html" rel="canonical"/>
@@ -107,8 +112,10 @@
 <!-- Stylesheet -->
 <link as="style" href="style.css" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/>
 <noscript><link href="style.css" rel="stylesheet"/></noscript>
-<link href="beautify-overrides.css" rel="stylesheet"/>
-<link href="beautify.css" rel="stylesheet"/>
+<link href="beautify-overrides.css" as="style" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/>
+<noscript><link href="beautify-overrides.css" rel="stylesheet"/></noscript>
+<link href="beautify.css" as="style" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/>
+<noscript><link href="beautify.css" rel="stylesheet"/></noscript>
 <!-- Google Analytics 4 -->
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-S7KQGHSD2R"></script>
 <script>
@@ -232,7 +239,7 @@
 <div class="three-col-wrapper">
 <!-- CHARTER BANNER -->
 <div style="max-width:900px;margin:0 auto 30px;padding:0 20px;">
-<a href="about.html"><img alt="台灣包車自由行" height="722" src="images/charter-banner.webp" style="width:100%;border-radius:12px;display:block;" width="2179"/></a>
+<a href="about.html"><img loading="lazy" alt="台灣包車自由行" height="722" src="images/charter-banner.webp" style="width:100%;border-radius:12px;display:block;" width="2179"/></a>
 </div>
 <div class="sidebar-card">
 <a href="chiang-mai.html">
@@ -242,7 +249,7 @@
 <div class="col-center">
 <div class="article-container">
 <!-- TRIP PROMO BANNER -->
-<div style="margin-bottom:24px;"><a data-affiliate="trip-com" href="https://tw.trip.com/sale/w/26497/go-thailand.html?locale=zh-tw&amp;curr=twd&amp;promo_referer=3952_26497_7&amp;Allianceid=8237671&amp;SID=312406690&amp;trip_sub1=&amp;trip_sub3=P17078987" rel="nofollow sponsored" target="_blank"><img alt="Trip.com 熱門優惠" src="images/trip-thailand.webp" style="width:100%;border-radius:12px;display:block;"/></a></div>
+<div style="margin-bottom:24px;"><a data-affiliate="trip-com" href="https://tw.trip.com/sale/w/26497/go-thailand.html?locale=zh-tw&amp;curr=twd&amp;promo_referer=3952_26497_7&amp;Allianceid=8237671&amp;SID=312406690&amp;trip_sub1=&amp;trip_sub3=P17078987" rel="nofollow sponsored" target="_blank"><img loading="lazy" alt="Trip.com 熱門優惠" src="images/trip-thailand.webp" style="width:100%;border-radius:12px;display:block;"/></a></div>
 <h2>🚇 曼谷交通：BTS + MRT 最省心</h2>
 <p>曼谷塞車世界有名，善用空鐵和地鐵是最聰明的選擇：</p>
 <ul>
@@ -261,7 +268,7 @@
 <h3>老城區：大皇宮 → 臥佛寺 → 唐人街美食</h3>
 <!-- 實戰推薦配圖 -->
 <div style="text-align:center;margin:28px 0;">
-<img alt="曼谷3天2夜實戰心得：大皇宮、臥佛寺、唐人街美食" src="images/ollieyu-bangkok-3days.webp" style="width:100%;max-width:600px;border-radius:16px;box-shadow:0 4px 12px rgba(0,0,0,0.1);"/>
+<img loading="lazy" alt="曼谷3天2夜實戰心得：大皇宮、臥佛寺、唐人街美食" src="images/ollieyu-bangkok-3days.webp" style="width:100%;max-width:600px;border-radius:16px;box-shadow:0 4px 12px rgba(0,0,0,0.1);"/>
 </div>
 <ul>
 <li>早上 <strong>大皇宮</strong>（門票 ฿500），參觀玉佛寺，穿著需遮肩膝</li>

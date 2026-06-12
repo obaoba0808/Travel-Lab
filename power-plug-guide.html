@@ -65,8 +65,10 @@
 <noscript><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&amp;display=swap" rel="stylesheet"/></noscript>
 <link as="style" href="style.css" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/>
 <noscript><link href="style.css" rel="stylesheet"/></noscript>
-<link href="beautify-overrides.css" rel="stylesheet"/>
-<link href="beautify.css" rel="stylesheet"/>
+<link href="beautify-overrides.css" as="style" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/>
+<noscript><link href="beautify-overrides.css" rel="stylesheet"/></noscript>
+<link href="beautify.css" as="style" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/>
+<noscript><link href="beautify.css" rel="stylesheet"/></noscript>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-S7KQGHSD2R"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -111,6 +113,11 @@
   }
 }
 </style>
+<script>
+/*! loadCSS rel=preload polyfill. [c]2017 Filament Group, Inc. MIT License */
+(function(w){"use strict";if(!w.loadCSS){w.loadCSS=function(){}}
+var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.createElement("link").relList.supports("preload")}catch(e){ret=!1}return function(){return ret}})();rp.poly=function(){var link=w.document.getElementsByTagName("link");for(var i=0;i<link.length;i++){var lnk=link[i];if(lnk.rel==="preload"&&lnk.as==="style"&&!lnk.onload){lnk.onload=rp.poly;lnk.rel="stylesheet"}}};if(!rp.support()){rp.poly();var run=w.setInterval(rp.poly,500);if(w.addEventListener){w.addEventListener("load",function(){rp.poly();w.clearInterval(run)})}else if(w.attachEvent){w.attachEvent("onload",function(){rp.poly();w.clearInterval(run)})}}if(typeof exports!=="undefined"){exports.loadCSS=loadCSS}else{w.loadCSS=loadCSS}}(typeof global!=="undefined"?global:this));
+</script>
 </head>
 <body>
 <!-- TOP BAR NAVIGATION -->
@@ -209,7 +216,7 @@
 </section><div class="portal-content"><div style="font-size:13px;color:var(--text-light);">✈ 用最少預算，走最多地方</div><div class="day-card" style="margin-bottom:24px;background:#fff3e0;border-left:4px solid #ff9800;">
 <strong>🏠 台灣標準：A型插頭（扁雙腳）| 110V | 60Hz</strong><br/>
 <span style="font-size:13px;">大部分手機/筆電充電器標示 100-240V，全球通用不需變壓器。看充電器背面標籤確認。</span>
-</div><img src="images/power-plug-comparison.webp" alt="各國插座類型對照表：A型、B型、C型、D型、E型、F型、G型、I型" style="width:100%;max-width:800px;border-radius:12px;margin:16px 0;display:block;" /><h2>🌏 亞洲各國插座對照</h2><div class="day-card">
+</div><img loading="lazy" src="images/power-plug-comparison.webp" alt="各國插座類型對照表：A型、B型、C型、D型、E型、F型、G型、I型" style="width:100%;max-width:800px;border-radius:12px;margin:16px 0;display:block;" /><h2>🌏 亞洲各國插座對照</h2><div class="day-card">
 <div class="table-responsive"><table style="width:100%;border-collapse:collapse;font-size:13px;">
 <tr style="border-bottom:2px solid var(--tiffany-light);background:#f0fdfa;">
 <th style="text-align:left;padding:8px;">國家</th>

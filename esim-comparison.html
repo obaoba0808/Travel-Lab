@@ -113,8 +113,10 @@
 <noscript><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&amp;family=Noto+Serif+TC:wght@400;700&amp;display=swap" rel="stylesheet"/></noscript></noscript>
 <link as="style" href="style.css" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/>
 <noscript><link href="style.css" rel="stylesheet"/></noscript>
-<link href="beautify-overrides.css" rel="stylesheet"/>
-<link href="beautify.css" rel="stylesheet"/>
+<link href="beautify-overrides.css" as="style" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/>
+<noscript><link href="beautify-overrides.css" rel="stylesheet"/></noscript>
+<link href="beautify.css" as="style" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/>
+<noscript><link href="beautify.css" rel="stylesheet"/></noscript>
 <link href="data:image/svg+xml,&lt;svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'&gt;&lt;text y='.9em' font-size='90'&gt;✈&lt;/text&gt;&lt;/svg&gt;" rel="icon"/>
 
 
@@ -153,6 +155,11 @@
   }
 }
 </style>
+<script>
+/*! loadCSS rel=preload polyfill. [c]2017 Filament Group, Inc. MIT License */
+(function(w){"use strict";if(!w.loadCSS){w.loadCSS=function(){}}
+var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.createElement("link").relList.supports("preload")}catch(e){ret=!1}return function(){return ret}})();rp.poly=function(){var link=w.document.getElementsByTagName("link");for(var i=0;i<link.length;i++){var lnk=link[i];if(lnk.rel==="preload"&&lnk.as==="style"&&!lnk.onload){lnk.onload=rp.poly;lnk.rel="stylesheet"}}};if(!rp.support()){rp.poly();var run=w.setInterval(rp.poly,500);if(w.addEventListener){w.addEventListener("load",function(){rp.poly();w.clearInterval(run)})}else if(w.attachEvent){w.attachEvent("onload",function(){rp.poly();w.clearInterval(run)})}}if(typeof exports!=="undefined"){exports.loadCSS=loadCSS}else{w.loadCSS=loadCSS}}(typeof global!=="undefined"?global:this));
+</script>
 </head>
 <body>
 <div class="reading-progress" id="reading-progress"></div>
@@ -250,7 +257,7 @@
 </div>
 </div>
 </section><div class="portal-content"><div style="font-size:13px;color:var(--text-light);">✈ 用最少預算，走最多地方</div><div style="position:relative;margin-bottom:24px;">
-<a data-affiliate="trip-com" href="https://tw.trip.com/sale/w/4823/flight-deals.html?locale=zh-TW&amp;promo_referer=3952_4823_6&amp;Allianceid=8237671&amp;SID=312406690&amp;trip_sub1=&amp;trip_sub3=P17078938" rel="nofollow sponsored" target="_blank"><img alt="Trip.com 熱門優惠" src="images/trip-flights.webp" style="width:100%;border-radius:12px;display:block;"/></a>
+<a data-affiliate="trip-com" href="https://tw.trip.com/sale/w/4823/flight-deals.html?locale=zh-TW&amp;promo_referer=3952_4823_6&amp;Allianceid=8237671&amp;SID=312406690&amp;trip_sub1=&amp;trip_sub3=P17078938" rel="nofollow sponsored" target="_blank"><img loading="lazy" alt="Trip.com 熱門優惠" src="images/trip-flights.webp" style="width:100%;border-radius:12px;display:block;"/></a>
 <div style="position:absolute;bottom:12px;right:12px;background:rgba(0,0,0,0.75);color:#fff;padding:8px 18px;border-radius:20px;font-size:13px;font-weight:600;backdrop-filter:blur(4px);">🔥 点此查看最新優惠 →</div>
 </div><h2>2026年主流eSIM服務商比較</h2><p style="margin-bottom:20px">市場上 eSIM 品牌這麼多，到底要選哪一家？以下根據我們實際使用經驗，整理 4 大主流品牌的功能、價格、覆蓋率、速度比較，幫你快速做出選擇。</p><h2>💰 eSIM 價格比較表（2026年最新）</h2><div style="overflow-x:auto;margin:24px 0;">
 <div class="table-responsive"><table style="width:100%;border-collapse:collapse;font-size:14px;background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,0.08);">
