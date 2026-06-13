@@ -426,21 +426,6 @@ a.dropdown-toggle::after {
   </p>
 </div>
 
-<!-- EMAIL LEAD MAGNET -->
-<div style="background:linear-gradient(135deg,#0ABAB5,#764ba2);border-radius:16px;padding:32px 24px;margin:32px 0;text-align:center;color:#fff">
-<div style="display:inline-block;background:rgba(255,255,255,0.2);border-radius:20px;padding:4px 14px;font-size:13px;margin-bottom:16px">🔥 限時免費：本月底前下載</div>
-<div style="font-size:40px;margin-bottom:12px">🍢</div>
-<h2 style="font-size:24px;margin:0 0 8px;color:#fff">小編獨家 首爾美食地圖 價值$299</h2>
-<p style="margin:0 0 24px;opacity:0.9;font-size:16px">填 Email 免費領取，精選 40+ 首爾必吃美食，含明洞、弘大、江南等區域分類</p>
-<form action="https://formspree.io/f/xredjjgb" method="POST" style="display:flex;flex-direction:column;align-items:center;gap:10px;max-width:360px;margin:0 auto" onsubmit="fetch('https://golightly-email-reply.happybird.workers.dev',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:this.elements.email.value,resource:'seoul-food-map'})}).catch(function(){});" >
-<input type="email" name="email" placeholder="輸入你的 Email" required style="width:100%;padding:14px 20px;border:none;border-radius:50px;font-size:15px;box-sizing:border-box">
-<input type="hidden" name="resource" value="seoul-food-map">
-<button type="submit" style="background:#fff;color:#764ba2;padding:14px 40px;border:none;border-radius:50px;font-size:16px;font-weight:700;cursor:pointer;width:100%">免費領取 首爾美食地圖</button>
-</form>
-<p style="font-size:13px;margin:12px 0 0;opacity:0.7">🔒 不會發送垃圾郵件，隨時可取消訂閱</p>
-</div>
-
-
 <!-- 補充內容：各區美食地圖 × 必吃店家實測 -->
   <div class="article-section" style="margin:36px 0 0;">
     <h2 style="font-size:22px;font-weight:700;margin:0 0 20px;color:var(--text);border-left:4px solid var(--coral);padding-left:14px;">🍖 各區美食地圖 × 必吃店家實測</h2>
@@ -472,22 +457,94 @@ a.dropdown-toggle::after {
       </div>
     </div>
 
-    <h3 style="font-size:17px;font-weight:700;margin:0 0 14px;color:var(--text);">🍰 甜點咖啡廳推薦（首爾限定）</h3>
+    <h3 style="font-size:17px;font-weight:700;margin:0 0 14px;color:var(--text);">🍖 烤肉一條街實測（弘大地區）</h3>
+    <div class="tip-box" style="margin-bottom:20px;"><strong>💡 吃烤肉省錢密技：</strong>梨大「肉倉庫」午間套餐₩12,000，附8樣小菜。弘大「Myth 豬腳」套餐₩18,000，份量足。晚餐時段排隊嚴重，建議 17:30 前到或用 Kakao T 排隊。</div>
     <ul style="margin:0 0 24px;padding-left:20px;line-height:2;font-size:14px;color:var(--text-light);">
-      <li><strong style="color:var(--text);">延南洞：</strong>Le Bureau（Burrata Toast ₩14,000）｜MUME（創意韓食）｜Basuracao（西班牙料理）</li>
-      <li><strong style="color:var(--text);">聖水洞：</strong>On ne sait jamais（千層派 ₩8,000）｜大林倉庫咖啡街（廢墟工業風）</li>
-      <li><strong style="color:var(--text);">乙支路入口：</strong>益善洞傳統甜品（紅豆年糕 ₩5,000）｜Seongmo 紅豆冰（₩7,000）</li>
-      <li><strong style="color:var(--text);">三清洞：</strong>雲硯宮（傳統年糕甜點）｜三清洞 Gallery Cafe</li>
+      <li><strong style="color:var(--text);">Maple Tree House（弘大店）：</strong>韓國知名烤肉連鎖，品質穩定，豬五花₩18,000/份，午間套餐₩14,000。外國人友善，菜單有圖片。</li>
+      <li><strong style="color:var(--text);">姜虎東烤肉（弘大店）：</strong>艺人姜虎東經營，性價比高，豬五花₩15,000/份，附免費泡菜鍋。</li>
+      <li><strong style="color:var(--text);">Doo Re 烤肉：</strong>在地人推薦隱藏版，位於弘大正門市場內，豬腸₩12,000、香腸₩10,000，學生票選第一名。</li>
+      <li><strong style="color:var(--text);">Soi 21 烤肉：</strong>泰式海南雞飯與韓式烤肉融合，份量偏小但調味特別，₩16,000/人。</li>
     </ul>
 
-    <div class="tip-box" style="margin-bottom:20px;"><strong>💡 吃烤肉省錢密技：</strong>梨大「肉倉庫」午間套餐₩9,900，附8樣小菜！新村「七次燒肉」午間商業套餐₩8,500，不用人擠人排晚餐。</div>
+    <h3 style="font-size:17px;font-weight:700;margin:0 0 14px;color:var(--text);">🦀 醬油螃蟹 — 江南論峴洞必吃</h3>
+    <div class="tip-box" style="margin-bottom:20px;"><strong>⚠️ 預訂提醒：</strong>論峴洞醬油螃蟹名店建議提前 1 天致電預約，晚間 19:00 後現場排隊多需等 1.5 小時以上。</div>
+    <ul style="margin:0 0 24px;padding-left:20px;line-height:2;font-size:14px;color:var(--text-light);">
+      <li><strong style="color:var(--text);">咸興大明（論峴洞本店）：</strong>50年老店，螃蟹個頭大、醬油鹹甜適中，附無限續的蟹膏飯。建議點「特大」尺寸，₩65,000/份。</li>
+      <li><strong style="color:var(--text);">元祖PRO醬螃蟹（新沙洞）：</strong>裝潢新穎、螃蟹較小但肉質嫩，₩45,000/份，配自助式小菜吧台。</li>
+      <li><strong style="color:var(--text);">論峴食堂（論峴洞）：</strong>CP值最高，本地人比例約70%，₩38,000/份。</li>
+    </ul>
 
-    <p style="font-size:13px;color:var(--text-light);margin:0;">🗺️ 美食地圖：<a href="seoul-5days.html" style="color:var(--coral);font-weight:600;">首爾5天行程</a>｜<a href="seoul-food-map.html" style="color:var(--coral);font-weight:600;">首爾美食地圖</a>｜<a href="korea-budget.html" style="color:var(--coral);font-weight:600;">韓國預算規劃</a></p>
+    <h3 style="font-size:17px;font-weight:700;margin:0 0 14px;color:var(--text);">🥟 傳統市場美食地圖</h3>
+    <p style="font-size:14px;color:var(--text-light);line-height:1.8;margin:0 0 16px;">傳統市場是體驗首爾飲食文化最好的地方。建議早上 9-11 點去最道地，很多攤位下午 3 點就收攤。</p>
+    <ul style="margin:0 0 24px;padding-left:20px;line-height:2;font-size:14px;color:var(--text-light);">
+      <li><strong style="color:var(--text);">廣藏市場（地鐵1號線・廣藏站 1號出口）：</strong>首選！必吃：①綠豆煎餅（₩3,000）②麻藥紫菜包飯（₩2,000）③生拌牛肉（₩8,000）④燒麥（₩1,000/5個）⑤辣炒年糕（₩3,000）。建議綠豆煎餅配燒麥 combo，₩4,000 吃很飽。</li>
+      <li><strong style="color:var(--text);">孔德市場（地鐵5號線・孔德站 1號出口）：</strong>早餐聖地，燒麥（₩1,000/5個）＋冷麵（₩5,000）combo 是經典組合。營業時間：05:00-20:00。</li>
+      <li><strong style="color:var(--text);">新堂洞炒年糕一條街（地鐵2號線・新堂站 12號出口）：</strong>「麻藥年糕」發源地。傳統鐵板炒年糕₩5,000/份，加魚板₩1,000，建議兩人合吃一份。</li>
+      <li><strong style="color:var(--text);">南大門市場（地鐵4號線・會賢站）：</strong>美食區在 B1，煎餅（₩3,000）、牛血湯（₩6,000）、刀削麵（₩7,000）。早上6點就有攤位。</li>
+      <li><strong style="color:var(--text);">黃鶴大樓地下商場（地鐵1號線・鐘路3街站）：</strong>2024年重新翻修，美食攤位超過50家。地下2樓辣炒五花肉定食（₩9,000）和炸醬麵（₩6,000）。</li>
+    </ul>
+
+    <h3 style="font-size:17px;font-weight:700;margin:0 0 14px;color:var(--text);">☕ 甜點咖啡廳（三清洞・聖水洞・益善洞）</h3>
+    <p style="font-size:14px;color:var(--text-light);line-height:1.8;margin:0 0 16px;">首爾的咖啡廳密度全球第一。三清洞、聖水洞、益善洞是最推薦的文青美食散步路線，步行串聯剛好半天行程。</p>
+    <ul style="margin:0 0 24px;padding-left:20px;line-height:2;font-size:14px;color:var(--text-light);">
+      <li><strong style="color:var(--text);">聖水洞・On ne sait jamais：</strong>千層派₩8,000，千層酥皮細緻不甜膩。週末排隊30分鐘起。</li>
+      <li><strong style="color:var(--text);">聖水洞・大林倉庫咖啡街：</strong>廢墟工業風咖啡廳聚集地，Cafe Onion 是代表作。</li>
+      <li><strong style="color:var(--text);">延南洞・Le Bureau：</strong>Burrata Toast ₩14,000，義式與韓式融合，MUME 也是創意韓食代表。</li>
+      <li><strong style="color:var(--text);">三清洞・雲硯宮：</strong>40年傳統年糕老店，紅豆餅（₩3,000）和艾草餅（₩3,000），只收現金，週末排隊30分鐘起跳。</li>
+      <li><strong style="color:var(--text);">益善洞・Seongmo 紅豆冰：</strong>首爾最好吃的紅豆冰之一，紅豆餡不死甜。季節限定草莓紅豆冰（₩9,000）只在12-3月供應。</li>
+      <li><strong style="color:var(--text);">益善洞・Arma 烤魚定食：</strong>₩13,000 烤青花魚定食，白飯、泡菜、湯可免費續，在地人最愛。</li>
+    </ul>
+
+    <h3 style="font-size:17px;font-weight:700;margin:0 0 14px;color:var(--text);">🧾 首爾美食省錢完整攻略</h3>
+    <div class="tip-box" style="margin-bottom:20px;"><strong>💰 每日餐費分級：</strong>早餐 ₩3,000-5,000（路邊吐司/燒麥攤）｜午餐 ₩8,000-12,000（傳統市場/連鎖快餐）｜晚餐 ₩15,000-30,000（烤肉/海鮮）｜甜點 ₩5,000-8,000。每日控制在 ₩40,000 以內就能吃得很豐盛。</div>
+    <ul style="margin:0 0 24px;padding-left:20px;line-height:2;font-size:14px;color:var(--text-light);">
+      <li><strong style="color:var(--text);">便利商店美食：</strong>CU/GS25/7-Eleven 即食食品是省錢救星，炸醬杯麵（₩2,500）、三角紫菜包飯（₩2,000）、烤雞（₩5,000）。便利商店微波爐免費使用。</li>
+      <li><strong style="color:var(--text);">大學生商圈：</strong>梨大、新村、延世大學周邊餐廳價格比觀光區便宜30-40%。梨大美食街刀削麵（₩7,000）和血腸湯（₩8,000）是最推薦的平價午餐。</li>
+      <li><strong style="color:var(--text);">一人用餐友善：</strong>傳統市場小吃、路邊攤、便利商店都可以一人用餐。烤肉、醬油螃蟹、豬腳建議兩人以上分食以控制預算。</li>
+      <li><strong style="color:var(--text);">信用卡回饋：</strong>餐廳消費建議刷卡（LINE Pay、Naver Pay 回饋最高5%）。傳統市場只收現金，建議每天隨身帶₩30,000現金備用。</li>
+    </ul>
+
+    <h3 style="font-size:17px;font-weight:700;margin:0 0 14px;color:var(--text);">📱 首爾美食預約・實用APP與支付方式</h3>
+    <div class="tip-box" style="margin-bottom:20px;"><strong>💡 APP 必備清單：</strong>Kakao T（排隊預約）、Naver Map（找路導航）、YOGIYO（外賣平台）、CATCHTABLE（餐廳預約），建議行前全部下載並註冊好帳號。</div>
+    <ul style="margin:0 0 24px;padding-left:20px;line-height:2;font-size:14px;color:var(--text-light);">
+      <li><strong style="color:var(--text);">Kakao T（카카오택시）：</strong>不只叫車，烤肉店排隊預約功能超實用。首爾熱門烤肉店排隊 1.5 小時是常態，事先用 APP 拿號碼牌可省下排隊時間。</li>
+      <li><strong style="color:var(--text);">Naver Map（네이버지도）：</strong>比 Google Map 精準 10 倍，餐廳地址、營業時間、評分都有。建議搭配 Papago 翻譯軟體，路上招牌可以即時翻譯。</li>
+      <li><strong style="color:var(--text);">YOGIYO（요기요）：</strong>韓國版外賣平台，炸雞、烤肉、炸醬麵都能送到酒店。支援英文界面，付款可用信用卡。</li>
+      <li><strong style="color:var(--text);">CATCHTABLE（캐치테이블）：</strong>熱門餐廳線上預約系統，烤肉、咖啡廳、甜點店都能預約，部分餐廳支援當日預約。</li>
+    </ul>
+    <p style="font-size:14px;color:var(--text-light);line-height:1.8;margin:0 0 16px;">支付方式：大部分餐廳接受信用卡（Visa/Mastercard 通用），但傳統市場、路邊攤只收現金。建議攜帶有新台幣國外消費回饋的信用卡（LINE Bank、滙豐銀行最高 5%）。便利商店購物可用 Samsung Pay 或 Apple Pay。</p>
+
+    <h3 style="font-size:17px;font-weight:700;margin:0 0 14px;color:var(--text);">🍜 首爾必吃麵食：刀削麵・冷麵・炸醬麵</h3>
+    <p style="font-size:14px;color:var(--text-light);line-height:1.8;margin:0 0 16px;">首爾的麵食文化是韓國料理中最被低估的一環。從路邊小店到米其林推薦餐廳，處處都有令人驚艷的麵食。</p>
+    <ul style="margin:0 0 24px;padding-left:20px;line-height:2;font-size:14px;color:var(--text-light);">
+      <li><strong style="color:var(--text);">明洞刀削麵（명동칼국수）：</strong>明洞街上的小店，刀削麵₩7,000、餃子₩8,000，湯頭鮮美。營業到凌晨 1 點，是逛完明洞後的宵夜好選擇。</li>
+      <li><strong style="color:var(--text);">咸興冷麵（함흥냉면）：</strong>道地咸興式冷麵，蕎麥麵條有嚼勁，配上牛肉冷湯，夏天消暑聖品。推薦店家：咸興麵屋（市政廳站），₩12,000/份。</li>
+      <li><strong style="color:var(--text);">孔德市場燒麥（공덕시장 꿩만두）：</strong>韓戰時期從中國引進的獨特小吃，現在只剩孔德市場還吃得到。₩1,000/5個，配辣味蘸醬。</li>
+      <li><strong style="color:var(--text);">新村刀削麵街（新村站 2 號出口）：</strong>延世大學側門一帶，學生平價美食聚集，刀削麵₩6,500、血腸湯₩8,000、煎餅₩4,000，是體驗大學生前線的最佳地點。</li>
+    </ul>
+
+    <h3 style="font-size:17px;font-weight:700;margin:0 0 14px;color:var(--text);">🍗 炸雞・宵夜文化</h3>
+    <div class="tip-box" style="margin-bottom:20px;"><strong>🎉 炸雞配啤酒文化：</strong>首爾的「炸雞啤酒（치킨맥주）」文化是外國旅客最愛體驗的項目之一。BHC 炸雞（明洞/弘大）、橋村炸雞（弘大）、校村炸雞（江南）是三大連鎖。</div>
+    <ul style="margin:0 0 24px;padding-left:20px;line-height:2;font-size:14px;color:var(--text-light);">
+      <li><strong style="color:var(--text);">BHC 炸雞（弘大店）：</strong>洋釘炸雞₩14,000、起司炸雞₩16,000。弘大店 24 小時營業，是深夜看完演唱會或夜店的宵夜首選。</li>
+      <li><strong style="color:var(--text);">橋村炸雞（弘大店）：</strong>蜂蜜炸雞是招牌，₩15,000。可以打電話外送，部分旅宿飯店可以幫忙叫炸雞。</li>
+      <li><strong style="color:var(--text);">首爾路邊小吃夜市：</strong>弘大停車場公園夜市（週五六 18:00-23:00）、東廟跳蚤市場夜市、江南帔沙里路邊攤。夜市必吃：辣炒年糕串、烤串、烤魷魚、鯛魚燒、草莓大福。</li>
+      <li><strong style="color:var(--text);">廣藏市場晚餐時段：</strong>廣藏市場雖然是早市，但部分攤位下午 4 點開始賣生拌牛肉和烤肉套餐。建議午餐去吃燒麥，晚餐去吃生牛肉，完美一日行程。</li>
+    </ul>
+
+    <h3 style="font-size:17px;font-weight:700;margin:0 0 14px;color:var(--text);">🌸 季節限定：首爾四季美食攻略</h3>
+    <ul style="margin:0 0 24px;padding-left:20px;line-height:2;font-size:14px;color:var(--text-light);">
+      <li><strong style="color:var(--text);">春季（3-5月）：</strong>草莓季！各大咖啡廳推出草莓季甜點，弘大「MEISSEN」草莓蛋糕（₩12,000）。廣藏市場有草莓攤（₩5,000/盒）。路邊的草莓大福（₩3,000）是春天限定。</li>
+      <li><strong style="color:var(--text);">夏季（6-8月）：</strong>冷麥和拌麵季節。咸興冷麵（蕎麥₩12,000）、豆漿冷麵（₩10,000）。首爾熱浪可達 35 度，便利商店的冰杯麵和西瓜是降溫利器。</li>
+      <li><strong style="color:var(--text);">秋季（9-11月）：</strong>秋刀魚（꺼치）和松茸季節。南大門市場的鹽烤秋刀魚（₩8,000）是老饕最愛。弘大益善洞的紅柿漢堡（₩6,000）是秋天限定。</li>
+      <li><strong style="color:var(--text);">冬季（12-2月）：</strong>火鍋和熱湯季節。陳玉華一隻雞（₩20,000/兩人份）是冬日必吃。首爾市區到處都有路邊的鯛魚燒（₩1,000）和烤栗子（₩5,000）。</li>
+    </ul>
+
+    <h3 style="font-size:17px;font-weight:700;margin:0 0 14px;color:var(--text);">🗺️ 美食散步路線推薦</h3>
+    <div class="tip-box" style="margin-bottom:20px;"><strong>🚶 一日美食散步路線：</strong>09:00 孔德市場燒麥 → 11:00 廣藏市場綠豆煎餅 → 13:00 明洞刀削麵 → 15:00 三清洞・益善洞咖啡散步 → 18:00 弘大烤肉一條街 → 22:00 BHC 炸雞弘大店宵夜。整條路線步行可達，不用交通費。</div>
+    <p style="font-size:14px;color:var(--text-light);line-height:1.8;margin:0;">這條路線結合了傳統市場（孔德、廣藏）、逛街美食（明洞）、文青咖啡街（益善洞）和年輕人夜生活（弘大），完美展現首爾多元的美食面向。如果時間有限，優先選孔德市場（早餐）+ 弘大烤肉（晚餐），這兩個地方體驗最完整。</p>
   </div>
 
-  <div style="margin-top:20px;padding:16px 20px;background:linear-gradient(135deg,#fff5f5,#fff9f0);border-radius:14px;border:1px solid #fde8e8;font-size:14px;line-height:1.8;color:var(--text-light);">
-    <p style="margin:0;">首爾美食還有一些隱藏版推薦。廣藏市場是首爾最有傳統味道的市場，裡面有賣生章魚、綠豆煎餅和麻藥紫菜飯捲，價格便宜又有特色。弘大的小區裡有很多大學生開的小餐館，一頓飯只要台幣80-120元，份量還特別大。如果想喝咖啡，首爾的咖啡廳密度全球第一，從傳統的茶館到網美打卡店都有。特別推薦益善洞的韓屋咖啡廳，在百年老屋裡喝一杯拿鐵，時光彷彿倒流到幾百年前的朝鮮時代，非常難忘的體驗。</p>
-  </div>
 
 <section class="faq-section">
 <h2>❓ 常見問題</h2>
@@ -497,6 +554,25 @@ a.dropdown-toggle::after {
 <div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q">首爾街頭小吃必吃？</div><div class="faq-a">①辣炒年糕（₩3,000）②魚糕串（₩1,000）③韓式煎餅（₩5,000）④紫菜包飯（₩2,000）⑤旋轉烤雞（₩8,000）。廣藏市場和明洞街頭小吃最多最集中。</div></div>
 <div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q">韓國有用餐禮儀嗎？</div><div class="faq-a">長輩先動筷、不要用筷子插飯、喝酒要轉頭用手遮擋、吃烤肉時幫旁邊的人夾菜。基本禮儀不難，韓國人對外國人很包容，不用太緊張。</div></div>
 <div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q">首爾有素食選擇嗎？</div><div class="faq-a">比以前多很多！弘大有純素食韓餐店，仁寺洞有素食寺院料理。用HappyCow APP可以搜到素食餐廳。便利商店有豆腐沙拉和蔬菜饭团可以備用。</div></div>
+
+
+<!-- EMAIL LEAD MAGNET -->
+<div style="background:linear-gradient(135deg,#0ABAB5,#764ba2);border-radius:16px;padding:32px 24px;margin:32px 0;text-align:center;color:#fff">
+<div style="display:inline-block;background:rgba(255,255,255,0.2);border-radius:20px;padding:4px 14px;font-size:13px;margin-bottom:16px">🔥 限時免費：本月底前下載</div>
+<div style="font-size:40px;margin-bottom:12px">🍢</div>
+<h2 style="font-size:24px;margin:0 0 8px;color:#fff">小編獨家 首爾美食地圖 價值$299</h2>
+<p style="margin:0 0 24px;opacity:0.9;font-size:16px">填 Email 免費領取，精選 40+ 首爾必吃美食，含明洞、弘大、江南等區域分類</p>
+<form action="https://formspree.io/f/xredjjgb" method="POST" style="display:flex;flex-direction:column;align-items:center;gap:10px;max-width:360px;margin:0 auto" onsubmit="fetch('https://golightly-email-reply.happybird.workers.dev',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:this.elements.email.value,resource:'seoul-food-map'})}).catch(function(){});" >
+<input type="email" name="email" placeholder="輸入你的 Email" required style="width:100%;padding:14px 20px;border:none;border-radius:50px;font-size:15px;box-sizing:border-box">
+<input type="hidden" name="resource" value="seoul-food-map">
+<button type="submit" style="background:#fff;color:#764ba2;padding:14px 40px;border:none;border-radius:50px;font-size:16px;font-weight:700;cursor:pointer;width:100%">免費領取 首爾美食地圖</button>
+</form>
+<p style="font-size:13px;margin:12px 0 0;opacity:0.7">🔒 不會發送垃圾郵件，隨時可取消訂閱</p>
+</div>
+
+
+
+
 <!-- KLOOK 動態橫幅： -->
 <div class="klook-dynamic-banner" style="max-width:468px;margin:32px auto;text-align:center;">
 <ins class="klk-aff-widget" data-adid="1282023" data-amount="3" data-cardh="126" data-cid="13" data-currency="TWD" data-edgevalue="655" data-lang="zh-TW" data-lgh="470" data-padding="92" data-prod="dynamic_widget" data-tid="-1"><a href="//www.klook.com/">Klook.com</a></ins> <script type="text/javascript"> (function (d, sc, u) { var s = d.createElement(sc), p = d.getElementsByTagName(sc)[0]; s.type = "text/javascript"; s.async = true; s.src = u; p.parentNode.insertBefore(s, p); })( document, "script", "https://affiliate.klook.com/widget/fetch-iframe-init.js" ); </script>
@@ -642,4 +718,86 @@ a.dropdown-toggle::after {
 </div>
 <p>© 2026 均在路上 Travel Lab. All Rights Reserved.</p>
 </div>
-</footer></body></html>
+</footer></body></html
+    <h3 style="font-size:17px;font-weight:700;margin:0 0 14px;color:var(--text);">📱 首爾美食預約・實用APP與支付方式</h3>
+    <div class="tip-box" style="margin-bottom:20px;"><strong>💡 APP 必備清單：</strong>Kakao T（排隊預約）、Naver Map（找路導航）、YOGIYO（外賣平台）、CATCHTABLE（餐廳預約），建議行前全部下載並註冊好帳號。</div>
+    <ul style="margin:0 0 24px;padding-left:20px;line-height:2;font-size:14px;color:var(--text-light);">
+      <li><strong style="color:var(--text);">Kakao T（카카오택시）：</strong>不只叫車，烤肉店排隊預約功能超實用。首爾熱門烤肉店排隊 1.5 小時是常態，事先用 APP 拿號碼牌可省下排隊時間。部分店家支援線上預約。</li>
+      <li><strong style="color:var(--text);">Naver Map（네이버지도）：</strong>比 Google Map 精準 10 倍，餐廳地址、營業時間、評分都有。建議搭配 Papago 翻譯軟體，路上招牌可以即時翻譯。</li>
+      <li><strong style="color:var(--text);">YOGIYO（요기요）：</strong>韓國版 Uber Eats，外賣選擇多。炸雞、烤肉、炸醬麵都能送到酒店。支援英文界面，付款可用信用卡。</li>
+      <li><strong style="color:var(--text);">CATCHTABLE（캐치테이블）：</strong>熱門餐廳線上預約系統，烤肉、咖啡廳、甜點店都能預約。部分餐廳支援當日預約。</li>
+    </ul>
+    <p style="font-size:14px;color:var(--text-light);line-height:1.8;margin:0 0 16px;">支付方式：大部分餐廳接受信用卡（Visa/Mastercard 通用），但傳統市場、路邊攤只收現金。建議攜帶一張有新台幣現金回饋的信用卡（如 LINE Bank、滙豐銀行），國外消費回饋最高 5%。便利商店購物可用行動支付（Samsung Pay/Apple Pay）。</p>
+
+    <h3 style="font-size:17px;font-weight:700;margin:0 0 14px;color:var(--text);">🍜 首爾必吃麵食：刀削麵・冷麵・炸醬麵</h3>
+    <p style="font-size:14px;color:var(--text-light);line-height:1.8;margin:0 0 16px;">首爾的麵食文化是韓國料理中最被低估的一環。從路邊小店到米其林推薦餐廳，處處都有令人驚艷的麵食。</p>
+    <ul style="margin:0 0 24px;padding-left:20px;line-height:2;font-size:14px;color:var(--text-light);">
+      <li><strong style="color:var(--text);">明洞刀削麵（명동칼국수）：</strong>明洞街上的小店，刀削麵₩7,000、餃子₩8,000。湯頭鮮美，牛肉麵是招牌。營業到凌晨 1 點，是逛完明洞後的宵夜好選擇。</li>
+      <li><strong style="color:var(--text);">咸興冷麵（함흥냉면）：</strong>道地咸興式冷麵，蕎麥麵條有嚼勁，配上牛肉冷湯，夏天消暑聖品。推薦店家：咸興麵屋（市政廳站），₩12,000/份。</li>
+      <li><strong style="color:var(--text);">孔德市場燒麥（공덕시장 꿩만두）：</strong>韓戰時期從中國引進的獨特小吃，現在只剩孔德市場還吃得到。₩1,000/5個，配辣味蘸醬，韓國年輕人也會特地來排隊。</li>
+      <li><strong style="color:var(--text);">明洞炸醬麵（명동짬뽕）：</strong>首爾式炸醬麵特色是黑豆炸醬，配上手工麵條。明洞「明洞炸醬麵」是創始店，₩8,000一碗，份量足。</li>
+      <li><strong style="color:var(--text);">新村刀削麵街（新村站 2 號出口）：</strong>延世大學側門一帶，學生平價美食聚集。刀削麵₩6,500、血腸湯₩8,000、煎餅₩4,000，是體驗大學生前線的最佳地點。</li>
+    </ul>
+
+    <h3 style="font-size:17px;font-weight:700;margin:0 0 14px;color:var(--text);">🍗 炸雞・宵夜文化與韓國獨有體驗</h3>
+    <div class="tip-box" style="margin-bottom:20px;"><strong>🎉 炸雞配啤酒文化：</strong>首爾的「炸雞啤酒（치킨맥주）」文化是外國旅客最愛體驗的項目之一。BHC 炸雞（明洞/弘大）、橋村炸雞（弘大）、校村炸雞（江南）是三大連鎖，BHC 的洋釘炸雞（양념치킨）是招牌。</div>
+    <ul style="margin:0 0 24px;padding-left:20px;line-height:2;font-size:14px;color:var(--text-light);">
+      <li><strong style="color:var(--text);">BHC 炸雞（弘大店）：</strong>洋釘炸釘炸雞（醬料炸雞）₩14,000、起司炸雞₩16,000。弘大店 24 小時營業，是深夜看完演唱會或夜店的宵夜首選。</li>
+      <li><strong style="color:var(--text);">橋村炸雞（弘大店）：</strong>代言人李孝利，蜂蜜炸雞是招牌，₩15,000。可以打電話外送，有些旅宿飯店可以幫忙叫炸雞。</li>
+      <li><strong style="color:var(--text);">首爾路邊小吃夜市：</strong>首爾市區有多個知名夜市：①弘大停車場公園夜市（週五六 18:00-23:00）②東廟跳蚤市場夜市③江南帔沙里路邊攤。夜市必吃：辣炒年糕串、烤魷魚、鯛魚燒、草莓大福。</li>
+      <li><strong style="color:var(--text);">廣藏市場晚餐時段：</strong>廣藏市場雖然是早市，但部分攤位下午 4 點開始賣生拌牛肉和烤肉套餐。建議午餐去吃燒麥，晚餐去吃生牛肉，完美一日行程。</li>
+      <li><strong style="color:var(--text);">首爾塔天空觀景台晚餐：</strong>南山首爾塔觀景台有景觀餐廳，晚餐套餐₩35,000 起。但性價比不高，建議只去觀景台看夜景（纜車來回₩17,000），在明洞吃完飯再去。</li>
+    </ul>
+
+    <h3 style="font-size:17px;font-weight:700;margin:0 0 14px;color:var(--text);">🌸 季節限定：首爾四季美食攻略</h3>
+    <ul style="margin:0 0 24px;padding-left:20px;line-height:2;font-size:14px;color:var(--text-light);">
+      <li><strong style="color:var(--text);">春季（3-5月）：</strong>草莓季！各大咖啡廳推出草莓季甜點，弘大「MEISSEN」草莓蛋糕（₩12,000）。廣藏市場有草莓攤（₩5,000/盒）。路邊的草莓大福（₩3,000）是春天限定。</li>
+      <li><strong style="color:var(--text);">夏季（6-8月）：</strong>冷麥和拌麵季節。咸興冷麵（蕎麥₩12,000）、豆漿冷麵（₩10,000）。首爾熱浪可達 35 度，便利商店的冰杯麵和西瓜是降溫利器。</li>
+      <li><strong style="color:var(--text);">秋季（9-11月）：</strong>秋刀魚（꺼치）和松茸季節。南大門市場的鹽烤秋刀魚（₩8,000）是老饕最愛。弘大益善洞的紅柿漢堡（₩6,000）是秋天限定。</li>
+      <li><strong style="color:var(--text);">冬季（12-2月）：</strong>火鍋和熱湯季節。陳玉華一隻雞（₩20,000/兩人份）是冬日必吃。首爾市區到處都有路邊的鯛魚燒（₩1,000）和烤栗子（₩5,000）。</li>
+    </ul>
+
+    <h3 style="font-size:17px;font-weight:700;margin:0 0 14px;color:var(--text);">🗺️ 美食散步路線推薦</h3>
+    <div class="tip-box" style="margin-bottom:20px;"><strong>🚶 一日美食散步路線：</strong>09:00 孔德市場燒麥 → 11:00 廣藏市場綠豆煎餅 → 13:00 明洞刀削麵 → 15:00 三清洞・益善洞咖啡散步 → 18:00 弘大烤肉一條街 → 22:00 BHC 炸雞弘大店宵夜。整條路線步行可達，不用交通費。</div>
+    <p style="font-size:14px;color:var(--text-light);line-height:1.8;margin:0;">這條路線結合了傳統市場（孔德、廣藏）、逛街美食（明洞）、文青咖啡街（益善洞）和年輕人夜生活（弘大），完美展現首爾多元的美食面向。整個行程走路就能完成，建議穿舒適的鞋子。如果時間有限，優先選孔德市場（早餐）+ 弘大烤肉（晚餐），這兩個地方體驗最完整。</p>
+
+    <h3 style="font-size:17px;font-weight:700;margin:0 0 14px;color:var(--text);">📱 首爾美食預約・實用APP與支付方式</h3>
+    <div class="tip-box" style="margin-bottom:20px;"><strong>💡 APP 必備清單：</strong>Kakao T（排隊預約）、Naver Map（找路導航）、YOGIYO（外賣平台）、CATCHTABLE（餐廳預約），建議行前全部下載並註冊好帳號。</div>
+    <ul style="margin:0 0 24px;padding-left:20px;line-height:2;font-size:14px;color:var(--text-light);">
+      <li><strong style="color:var(--text);">Kakao T（카카오택시）：</strong>不只叫車，烤肉店排隊預約功能超實用。首爾熱門烤肉店排隊 1.5 小時是常態，事先用 APP 拿號碼牌可省下排隊時間。</li>
+      <li><strong style="color:var(--text);">Naver Map（네이버지도）：</strong>比 Google Map 精準 10 倍，餐廳地址、營業時間、評分都有。建議搭配 Papago 翻譯軟體，路上招牌可以即時翻譯。</li>
+      <li><strong style="color:var(--text);">YOGIYO（요기요）：</strong>韓國版外賣平台，炸雞、烤肉、炸醬麵都能送到酒店。支援英文界面，付款可用信用卡。</li>
+      <li><strong style="color:var(--text);">CATCHTABLE（캐치테이블）：</strong>熱門餐廳線上預約系統，烤肉、咖啡廳、甜點店都能預約，部分餐廳支援當日預約。</li>
+    </ul>
+    <p style="font-size:14px;color:var(--text-light);line-height:1.8;margin:0 0 16px;">支付方式：大部分餐廳接受信用卡（Visa/Mastercard 通用），但傳統市場、路邊攤只收現金。建議攜帶有新台幣國外消費回饋的信用卡（LINE Bank、滙豐銀行最高 5%）。便利商店購物可用 Samsung Pay 或 Apple Pay。</p>
+
+    <h3 style="font-size:17px;font-weight:700;margin:0 0 14px;color:var(--text);">🍜 首爾必吃麵食：刀削麵・冷麵・炸醬麵</h3>
+    <p style="font-size:14px;color:var(--text-light);line-height:1.8;margin:0 0 16px;">首爾的麵食文化是韓國料理中最被低估的一環。從路邊小店到米其林推薦餐廳，處處都有令人驚艷的麵食。</p>
+    <ul style="margin:0 0 24px;padding-left:20px;line-height:2;font-size:14px;color:var(--text-light);">
+      <li><strong style="color:var(--text);">明洞刀削麵（명동칼국수）：</strong>明洞街上的小店，刀削麵₩7,000、餃子₩8,000，湯頭鮮美。營業到凌晨 1 點，是逛完明洞後的宵夜好選擇。</li>
+      <li><strong style="color:var(--text);">咸興冷麵（함흥냉면）：</strong>道地咸興式冷麵，蕎麥麵條有嚼勁，配上牛肉冷湯，夏天消暑聖品。推薦店家：咸興麵屋（市政廳站），₩12,000/份。</li>
+      <li><strong style="color:var(--text);">孔德市場燒麥（공덕시장 꿩만두）：</strong>韓戰時期從中國引進的獨特小吃，現在只剩孔德市場還吃得到。₩1,000/5個，配辣味蘸醬。</li>
+      <li><strong style="color:var(--text);">新村刀削麵街（新村站 2 號出口）：</strong>延世大學側門一帶，學生平價美食聚集，刀削麵₩6,500、血腸湯₩8,000、煎餅₩4,000，是體驗大學生前線的最佳地點。</li>
+    </ul>
+
+    <h3 style="font-size:17px;font-weight:700;margin:0 0 14px;color:var(--text);">🍗 炸雞・宵夜文化</h3>
+    <div class="tip-box" style="margin-bottom:20px;"><strong>🎉 炸雞配啤酒文化：</strong>首爾的「炸雞啤酒（치킨맥주）」文化是外國旅客最愛體驗的項目之一。BHC 炸雞（明洞/弘大）、橋村炸雞（弘大）、校村炸雞（江南）是三大連鎖。</div>
+    <ul style="margin:0 0 24px;padding-left:20px;line-height:2;font-size:14px;color:var(--text-light);">
+      <li><strong style="color:var(--text);">BHC 炸雞（弘大店）：</strong>洋釘炸雞₩14,000、起司炸雞₩16,000。弘大店 24 小時營業，是深夜看完演唱會或夜店的宵夜首選。</li>
+      <li><strong style="color:var(--text);">橋村炸雞（弘大店）：</strong>蜂蜜炸雞是招牌，₩15,000。可以打電話外送，部分旅宿飯店可以幫忙叫炸雞。</li>
+      <li><strong style="color:var(--text);">首爾路邊小吃夜市：</strong>弘大停車場公園夜市（週五六 18:00-23:00）、東廟跳蚤市場夜市、江南帔沙里路邊攤。夜市必吃：辣炒年糕串、烤串、烤魷魚、鯛魚燒、草莓大福。</li>
+      <li><strong style="color:var(--text);">廣藏市場晚餐時段：</strong>廣藏市場雖然是早市，但部分攤位下午 4 點開始賣生拌牛肉和烤肉套餐。建議午餐去吃燒麥，晚餐去吃生牛肉，完美一日行程。</li>
+    </ul>
+
+    <h3 style="font-size:17px;font-weight:700;margin:0 0 14px;color:var(--text);">🌸 季節限定：首爾四季美食攻略</h3>
+    <ul style="margin:0 0 24px;padding-left:20px;line-height:2;font-size:14px;color:var(--text-light);">
+      <li><strong style="color:var(--text);">春季（3-5月）：</strong>草莓季！各大咖啡廳推出草莓季甜點，弘大「MEISSEN」草莓蛋糕（₩12,000）。廣藏市場有草莓攤（₩5,000/盒）。路邊的草莓大福（₩3,000）是春天限定。</li>
+      <li><strong style="color:var(--text);">夏季（6-8月）：</strong>冷麥和拌麵季節。咸興冷麵（蕎麥₩12,000）、豆漿冷麵（₩10,000）。首爾熱浪可達 35 度，便利商店的冰杯麵和西瓜是降溫利器。</li>
+      <li><strong style="color:var(--text);">秋季（9-11月）：</strong>秋刀魚（꺼치）和松茸季節。南大門市場的鹽烤秋刀魚（₩8,000）是老饕最愛。弘大益善洞的紅柿漢堡（₩6,000）是秋天限定。</li>
+      <li><strong style="color:var(--text);">冬季（12-2月）：</strong>火鍋和熱湯季節。陳玉華一隻雞（₩20,000/兩人份）是冬日必吃。首爾市區到處都有路邊的鯛魚燒（₩1,000）和烤栗子（₩5,000）。</li>
+    </ul>
+
+    <h3 style="font-size:17px;font-weight:700;margin:0 0 14px;color:var(--text);">🗺️ 美食散步路線推薦</h3>
+    <div class="tip-box" style="margin-bottom:20px;"><strong>🚶 一日美食散步路線：</strong>09:00 孔德市場燒麥 → 11:00 廣藏市場綠豆煎餅 → 13:00 明洞刀削麵 → 15:00 三清洞・益善洞咖啡散步 → 18:00 弘大烤肉一條街 → 22:00 BHC 炸雞弘大店宵夜。整條路線步行可達，不用交通費。</div>
+    <p style="font-size:14px;color:var(--text-light);line-height:1.8;margin:0;">這條路線結合了傳統市場（孔德、廣藏）、逛街美食（明洞）、文青咖啡街（益善洞）和年輕人夜生活（弘大），完美展現首爾多元的美食面向。如果時間有限，優先選孔德市場（早餐）+ 弘大烤肉（晚餐），這兩個地方體驗最完整。</p>
+>
