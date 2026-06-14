@@ -60,7 +60,8 @@
 <link as="style" onload="this.onload=null;this.rel='stylesheet'" rel="preload" href="beautify-overrides.css">
 <noscript><link rel="stylesheet" href="beautify-overrides.css"></noscript>
 <link as="style" onload="this.onload=null;this.rel='stylesheet'" rel="preload" href="beautify.css">
-<noscript><link rel="stylesheet" href="beautify.css"></noscript>
+<noscript><link rel="stylesheet" href="beautify.css">
+<link rel="stylesheet" href="layout-standard.css"/></noscript>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-S7KQGHSD2R"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -160,18 +161,61 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 
 <div class="site-content" style="max-width:1100px;">
   <div class="three-col-wrapper" style="display:flex;gap:32px;max-width:1240px;margin:0 auto;padding:0 16px;">
-<!-- 左側邊欄：越南行程卡片 --><div class="sidebar-card"> <a href="vietnam-hochiminh.html"> <img alt="胡志明市行程" class="sb-hero-img" loading="lazy" src="images/vietnam.webp"/> </a></div><div class="col-center" style="flex:1;min-width:0;">
+<aside class="ls-sidebar">
+<div class="ls-sidebar-card">
+<a href="vietnam-hochiminh.html">
+<img alt="胡志明攻略" class="ls-sidebar-hero" loading="lazy" src="images/vietnam-hochiminh.webp"/>
+</a>
+<div class="ls-sidebar-header">
+<div class="ls-sidebar-city">胡志明</div>
+<div class="ls-sidebar-sub">自由行攻略</div>
+</div>
+<nav class="ls-sidebar-nav">
+    <a class="ls-sidebar-nav-item" href="#景點">
+      <span class="ls-sidebar-nav-icon">🏛️</span>
+      <span class="ls-sidebar-nav-label">景點</span>
+    </a>
+    <a class="ls-sidebar-nav-item" href="#美食">
+      <span class="ls-sidebar-nav-icon">🍜</span>
+      <span class="ls-sidebar-nav-label">美食</span>
+    </a>
+    <a class="ls-sidebar-nav-item" href="#購物">
+      <span class="ls-sidebar-nav-icon">🛍️</span>
+      <span class="ls-sidebar-nav-label">購物</span>
+    </a>
+    <a class="ls-sidebar-nav-item" href="#交通">
+      <span class="ls-sidebar-nav-icon">🚆</span>
+      <span class="ls-sidebar-nav-label">交通</span>
+    </a>
+    <a class="ls-sidebar-nav-item" href="#住宿">
+      <span class="ls-sidebar-nav-icon">🏨</span>
+      <span class="ls-sidebar-nav-label">住宿</span>
+    </a>
+    <a class="ls-sidebar-nav-item" href="#實用資訊">
+      <span class="ls-sidebar-nav-icon">💡</span>
+      <span class="ls-sidebar-nav-label">實用資訊</span>
+    </a>
+</nav>
+<div class="ls-sidebar-qr">
+<div class="ls-sidebar-qr-title">📱 追蹤我們</div>
+<img alt="LINE QR" src="images/line-qr.webp"/>
+<div class="ls-sidebar-qr-desc">掃描 LINE 取得最新旅遊資訊</div>
+</div>
+<a class="ls-sidebar-cta" href="travel-tools.html">📂 下載攻略 PDF</a>
+</div>
+</aside>
+<div class="col-center" style="flex:1;min-width:0;">
 <!-- TRIP PROMO BANNER -->
 <div style="position:relative;margin-bottom:24px;">
 <a data-affiliate="trip-com" href="https://tw.trip.com/sale/w/26497/go-vietnam.html?locale=zh-tw&amp;curr=twd&amp;promo_referer=3952_26497_7&amp;Allianceid=8237671&amp;SID=312406690&amp;trip_sub1=&amp;trip_sub3=P17078987" rel="nofollow sponsored" target="_blank"><img loading="lazy" alt="Trip.com 越南熱門優惠" src="images/trip-vietnam.webp" style="width:100%;border-radius:12px;display:block;"/></a>
 <div style="position:absolute;bottom:12px;right:12px;background:rgba(0,0,0,0.75);color:#fff;padding:8px 18px;border-radius:20px;font-size:13px;font-weight:600;backdrop-filter:blur(4px);">🔥 點此查看最新優惠 →</div>
 </div>
 
-<div class="article-container" style="max-width:720px;">
+<div class="article-container ls-article-content" style="max-width:720px;">
 
     <!-- Day 1 -->
     <h2>📅 Day 1：抵達 + 范老五街 + 濱城市場</h2>
-    <div class="day-card">
+    <div class="day-card ls-day-card">
       <div style="display:grid;grid-template-columns:auto 1fr;gap:8px 16px;font-size:14px;align-items:center;">
         <div style="color:var(--tiffany-dark);font-weight:700;">08:00</div><div>抵達新山一國際機場（Tan Son Nhat），辦電信卡（Viettel/Vinaphone）</div>
         <div style="color:var(--tiffany-dark);font-weight:700;">10:00</div><div>搭 Grab Car 到范老五街（Pham Ngu Lao）飯店 check-in</div>
@@ -187,7 +231,7 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 
     <!-- Day 2 -->
     <h2>📅 Day 2：戰爭遺跡博物館 + 湄公河三角洲一日遊</h2>
-    <div class="day-card">
+    <div class="day-card ls-day-card">
       <div style="display:grid;grid-template-columns:auto 1fr;gap:8px 16px;font-size:14px;align-items:center;">
         <div style="color:var(--tiffany-dark);font-weight:700;">07:00</div><div>早上出發：湄公河三角洲一日遊（Klook 或當地旅行社，NT$ 800-1,200）</div>
         <div style="color:var(--tiffany-dark);font-weight:700;">09:00</div><div>抵達美拖（My Tho）— 搭乘小船遊湄公河、参観水果園、蜂蜜農場</div>
@@ -203,7 +247,7 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 
     <!-- Day 3 -->
     <h2>📅 Day 3：古芝地道 + 最後採購</h2>
-    <div class="day-card">
+    <div class="day-card ls-day-card">
       <div style="display:grid;grid-template-columns:auto 1fr;gap:8px 16px;font-size:14px;align-items:center;">
         <div style="color:var(--tiffany-dark);font-weight:700;">08:00</div><div>古芝地道（Cu Chi Tunnels）— 越共地下道遺址，可鑽地道、打靶場體驗</div>
         <div style="color:var(--tiffany-dark);font-weight:700;">12:00</div><div>回到市區，午餐：Banh Mi 11（越南三明治，50-80 元，超值）</div>
@@ -219,7 +263,7 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 
     <!-- 必吃美食 -->
     <h2>🍜 胡志明市必吃美食 8 選</h2>
-    <div class="day-card">
+    <div class="day-card ls-day-card">
       <div class="table-responsive"><table style="width:100%;border-collapse:collapse;font-size:13px;">
         <tr style="border-bottom:2px solid var(--tiffany-light);background:#f0fdfa;">
           <th style="text-align:left;padding:8px;">美食</th>
@@ -239,7 +283,7 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 
     <!-- 住宿推薦 -->
     <h2>🏨 住宿區域推薦</h2>
-    <div class="day-card">
+    <div class="day-card ls-day-card">
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;">
         <div style="border:2px solid #e0f2f1;border-radius:12px;padding:16px;">
           <div style="font-weight:700;font-size:15px;margin-bottom:8px;">🎒 范老五街（Pham Ngu Lao）— 背包客首選</div>
@@ -277,15 +321,15 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
   </main
 
 
-<section class="faq-section">
-      <div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q">胡志明市3天2夜預算多少？</div><div class="faq-a">經濟型：NT$15,000-22,000/人（含機票）。舒適型：NT$25,000-35,000/人。越南物價約台灣50%，住宿500-1,500元/晚，餐飲50-200元/餐。</div></div>
-      <div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q">胡志明市必去景點？</div><div class="faq-a">①范老五街 — 背包客區。②戰爭遺跡博物館 — 越戰史料。③湄公河三角洲一日遊 — 小船水果園。④統一宮 — 歷史建築。⑤濱城市場 — 法式建築逛街。</div></div>
-      <div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q">去胡志明市要注意什麼？</div><div class="faq-a">①交通安全：機車多，過馬路慢慢走。②詐騙：Grab最安全，計程車跳表。③天氣：11-4月乾季最佳。④簽證：需辦E-visa（25美元）。⑤飲水：不要喝生水。</div></div>
-      <div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q">胡志明市美食推薦？</div><div class="faq-a">Pho（河粉）、Banh Mi（三明治）、Goi Cuon（春捲）、Cà phê sữa đá（冰咖啡）、Hu Tieu（粿條湯）、Bun Cha（烤肉米粉）、Bia Hoi（生啤酒）。</div></div>
-      <div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q">需要辦簽證嗎？</div><div class="faq-a">需要！推薦提前辦E-visa（官網申請，25美元，3-5工作天，可停留90天）。落地簽需提前申請核准函，較麻煩。</div></div>
-      <div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q">胡志明市最佳旅遊季節？</div><div class="faq-a">最佳：11月-次年4月（乾季，涼爽少雨）。避開：5-10月（雨季，悶熱多雨）。12-2月最涼爽（20-28°C）。</div></div>
-      <div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q">可以在胡志明市換錢嗎？</div><div class="faq-a">可以！推薦帶美金去換（匯率最好）。范老五街換錢攤比銀行好2-3%。ATM領現有手續費。建議帶美金現鈔去換最划算。</div></div>
-      <div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q">胡志明市有哪些必買伴手禮？</div><div class="faq-a">①越南咖啡（Trung Nguyen）。②腰果（各口味）。③越南河粉包。④手工藝品（漆器、絲綢）。⑤越南泡麵（Hao Hao）。</div></div>
+<section class="faq-section ls-faq">
+      <div class="faq-item ls-faq-item" onclick="this.classList.toggle('open')"><div class="faq-q ls-faq-q">胡志明市3天2夜預算多少？</div><div class="faq-a ls-faq-a">經濟型：NT$15,000-22,000/人（含機票）。舒適型：NT$25,000-35,000/人。越南物價約台灣50%，住宿500-1,500元/晚，餐飲50-200元/餐。</div></div>
+      <div class="faq-item ls-faq-item" onclick="this.classList.toggle('open')"><div class="faq-q ls-faq-q">胡志明市必去景點？</div><div class="faq-a ls-faq-a">①范老五街 — 背包客區。②戰爭遺跡博物館 — 越戰史料。③湄公河三角洲一日遊 — 小船水果園。④統一宮 — 歷史建築。⑤濱城市場 — 法式建築逛街。</div></div>
+      <div class="faq-item ls-faq-item" onclick="this.classList.toggle('open')"><div class="faq-q ls-faq-q">去胡志明市要注意什麼？</div><div class="faq-a ls-faq-a">①交通安全：機車多，過馬路慢慢走。②詐騙：Grab最安全，計程車跳表。③天氣：11-4月乾季最佳。④簽證：需辦E-visa（25美元）。⑤飲水：不要喝生水。</div></div>
+      <div class="faq-item ls-faq-item" onclick="this.classList.toggle('open')"><div class="faq-q ls-faq-q">胡志明市美食推薦？</div><div class="faq-a ls-faq-a">Pho（河粉）、Banh Mi（三明治）、Goi Cuon（春捲）、Cà phê sữa đá（冰咖啡）、Hu Tieu（粿條湯）、Bun Cha（烤肉米粉）、Bia Hoi（生啤酒）。</div></div>
+      <div class="faq-item ls-faq-item" onclick="this.classList.toggle('open')"><div class="faq-q ls-faq-q">需要辦簽證嗎？</div><div class="faq-a ls-faq-a">需要！推薦提前辦E-visa（官網申請，25美元，3-5工作天，可停留90天）。落地簽需提前申請核准函，較麻煩。</div></div>
+      <div class="faq-item ls-faq-item" onclick="this.classList.toggle('open')"><div class="faq-q ls-faq-q">胡志明市最佳旅遊季節？</div><div class="faq-a ls-faq-a">最佳：11月-次年4月（乾季，涼爽少雨）。避開：5-10月（雨季，悶熱多雨）。12-2月最涼爽（20-28°C）。</div></div>
+      <div class="faq-item ls-faq-item" onclick="this.classList.toggle('open')"><div class="faq-q ls-faq-q">可以在胡志明市換錢嗎？</div><div class="faq-a ls-faq-a">可以！推薦帶美金去換（匯率最好）。范老五街換錢攤比銀行好2-3%。ATM領現有手續費。建議帶美金現鈔去換最划算。</div></div>
+      <div class="faq-item ls-faq-item" onclick="this.classList.toggle('open')"><div class="faq-q ls-faq-q">胡志明市有哪些必買伴手禮？</div><div class="faq-a ls-faq-a">①越南咖啡（Trung Nguyen）。②腰果（各口味）。③越南河粉包。④手工藝品（漆器、絲綢）。⑤越南泡麵（Hao Hao）。</div></div>
     </section>
 
 <div class="lead-magnet" style="background:linear-gradient(135deg,#0ABAB5,#0891b2);color:#fff;padding:32px 24px;border-radius:16px;margin:32px 0;text-align:center;">
@@ -348,7 +392,7 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 <p class="text-gray-700 leading-relaxed mb-2">胡志明市是越南的購物天堂，從傳統市場到精品百貨都有。濱城市場是必去的景點，一樓賣乾貨和紀念品，二樓賣布料和裁縫服務。在這裡可以買到越南咖啡豆、腰果、芒果乾和手工刺繡，記得殺價，開價通常是實際價格的兩到三倍。如果想買精品，Bitexco Financial Tower 附近的購物中心有國際品牌，價格比台灣便宜一些。另一個推薦是越南的定制服裝，胡志明市有很多裁縫店可以量身訂做西裝和洋裝，一套西裝大約台幣三千到五千，品質不輸百貨公司的成衣，兩三天就能取件，很多人專程來做。</p>
 </div>
 
-<footer class="site-footer">
+<footer class="site-footer ls-footer">
 <div class="footer-inner">
 <div class="footer-col">
 <h4>🇯🇵 日本自由行</h4>

@@ -102,6 +102,7 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 <link href="beautify-overrides.css" as="style" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/>
 <noscript><link href="beautify-overrides.css" rel="stylesheet"/></noscript>
 <link href="beautify.css" as="style" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/>
+<link href="layout-standard.css" rel="stylesheet"/>
 <noscript><link href="beautify.css" rel="stylesheet"/></noscript>
 <link href="data:image/svg+xml,&lt;svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'&gt;&lt;text y='.9em' font-size='90'&gt;✈&lt;/text&gt;&lt;/svg&gt;" rel="icon"/>
 </p>
@@ -212,13 +213,51 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 </div>
 </section>
 <div class="three-col-wrapper">
-<div class="sidebar-card">
-<a href="bangkok-3days.html">
-<img alt="峴港風景" class="sb-hero-img" height="300" loading="lazy" src="images/vietnam-danang-sidebar.webp" width="600"/>
+<aside class="ls-sidebar">
+<div class="ls-sidebar-card">
+<a href="vietnam-danang.html">
+<img alt="峴港攻略" class="ls-sidebar-hero" loading="lazy" src="images/danang-sidebar.webp"/>
 </a>
+<div class="ls-sidebar-header">
+<div class="ls-sidebar-city">峴港</div>
+<div class="ls-sidebar-sub">自由行攻略</div>
 </div>
-<div class="col-center"><div class="article-container">
-<div class="day-card">
+<nav class="ls-sidebar-nav">
+    <a class="ls-sidebar-nav-item" href="#景點">
+      <span class="ls-sidebar-nav-icon">🏛️</span>
+      <span class="ls-sidebar-nav-label">景點</span>
+    </a>
+    <a class="ls-sidebar-nav-item" href="#美食">
+      <span class="ls-sidebar-nav-icon">🍜</span>
+      <span class="ls-sidebar-nav-label">美食</span>
+    </a>
+    <a class="ls-sidebar-nav-item" href="#購物">
+      <span class="ls-sidebar-nav-icon">🛍️</span>
+      <span class="ls-sidebar-nav-label">購物</span>
+    </a>
+    <a class="ls-sidebar-nav-item" href="#交通">
+      <span class="ls-sidebar-nav-icon">🚆</span>
+      <span class="ls-sidebar-nav-label">交通</span>
+    </a>
+    <a class="ls-sidebar-nav-item" href="#住宿">
+      <span class="ls-sidebar-nav-icon">🏨</span>
+      <span class="ls-sidebar-nav-label">住宿</span>
+    </a>
+    <a class="ls-sidebar-nav-item" href="#實用資訊">
+      <span class="ls-sidebar-nav-icon">💡</span>
+      <span class="ls-sidebar-nav-label">實用資訊</span>
+    </a>
+</nav>
+<div class="ls-sidebar-qr">
+<div class="ls-sidebar-qr-title">📱 追蹤我們</div>
+<img alt="LINE QR" src="images/line-qr.webp"/>
+<div class="ls-sidebar-qr-desc">掃描 LINE 取得最新旅遊資訊</div>
+</div>
+<a class="ls-sidebar-cta" href="travel-tools.html">📂 下載攻略 PDF</a>
+</div>
+</aside>
+<div class="col-center"><div class="article-container ls-article-content">
+<div class="day-card ls-day-card">
 <span class="day-tag">💡實戰攻略精華</span>
 <h3>💡 實戰攻略精華</h3>
 <p>越南中部城市峴港（Da Nang）近年來成為台灣旅客的新寵，不僅因為有越南最優質的海灘，更因為豐富的歷史文化與自然景觀。這篇3天2夜攻略幫你把峴港最好玩的全部收錄。</p>
@@ -226,19 +265,19 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 <!-- TRIP PROMO BANNER -->
 <div style="margin-bottom:24px;"><a data-affiliate="trip-com" href="https://tw.trip.com/sale/w/26497/go-thailand.html?locale=zh-tw&amp;curr=twd&amp;promo_referer=3952_26497_7&amp;Allianceid=8237671&amp;SID=312406690&amp;trip_sub1=&amp;trip_sub3=P17078987" rel="nofollow sponsored" target="_blank"><img alt="Trip.com 熱門優惠" loading="lazy" src="images/trip-thailand.webp" style="width:100%;border-radius:12px;display:block;"/></a></div>
 <h2>峴港基本資訊</h2>
-<div class="day-card">
+<div class="day-card ls-day-card">
 <span class="day-tag">簽證：</span>
 <p><strong>簽證：</strong>台灣護照可享落地簽（機場填表，費用約US$25），或提前申請電子落地簽（E-Visa）更方便。</p>
 </div>
-<div class="day-card">
+<div class="day-card ls-day-card">
 <span class="day-tag">時差：</span>
 <p><strong>時差：</strong>比台灣慢1小時（GMT+7）</p>
 </div>
-<div class="day-card">
+<div class="day-card ls-day-card">
 <span class="day-tag">匯率：</span>
 <p><strong>匯率：</strong>1台幣≈580越南盾（VND），消費極低，一碗河粉約₫50,000-80,000（NT$86-138）</p>
 </div>
-<div class="day-card">
+<div class="day-card ls-day-card">
 <span class="day-tag">最佳旅遊時間：</span>
 <p><strong>最佳旅遊時間：</strong>2-5月天氣最穩定，6-9月為雨季但人少</p>
 </div>
@@ -247,7 +286,7 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 <div style="text-align:center;margin:28px 0;">
 <img loading="lazy" alt="越南峴港實戰心得：巴拿山纜車、佛手橋" src="images/ollieyu-vietnam.webp" style="width:100%;max-width:600px;border-radius:16px;box-shadow:0 4px 12px rgba(0,0,0,0.1);"/>
 </div>
-<div class="day-card">
+<div class="day-card ls-day-card">
 <span class="day-tag">世界最長單線纜車</span>
 <h3>世界最長單線纜車</h3>
 <p>乘坐全球最長的單線纜車（5,801公尺），直達海拔1,487公尺的巴拿山。纜車票含園區門票約₫750,000（NT$1,293），建議提前在Klook購買享優惠。</p>
@@ -262,7 +301,7 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 <p><strong>必逛：</strong>日本廊橋、會安古城廣場。夜市燈籠街非常浪漫。</p>
 <p><strong>必吃：</strong>會安高樓麵（Cao Lau）₫40,000、白玫瑰（Banh Vac）₫30,000。</p>
 <h2>預算參考（3天2夜）</h2>
-<div class="day-card">
+<div class="day-card ls-day-card">
 <span class="day-tag">總預算約NT80</span>
 <h3>總預算約 NT$8,000-15,000（不含機票）</h3>
 <p>機票來回NT$5,000-8,000｜住宿（海景飯店）₫1,500,000/2晚｜餐費₫1,500,000｜門票與交通₫1,200,000</p>
@@ -276,9 +315,9 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 
 
 
-<div class="related-posts">
+<div class="related-posts ls-related">
 <h2 class="section-title">📖 延伸閱讀</h2>
-<div class="related-list">
+<div class="related-list ls-related-grid">
 <a class="related-card" href="chiang-mai.html">
 <div class="post-thumb"><img alt="清邁古城雙龍寺山景｜泰國清邁數位遊牧推薦" height="1024" loading="lazy" src="images/chiangmai-hero.webp" width="1536"/></div>
 <div class="post-body">
@@ -359,7 +398,7 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 <h3 class="font-bold text-lg mb-2">🌅 峴港日出與日落推薦</h3>
 <p class="text-gray-700 leading-relaxed mb-2">峴港面東，所以日出在海邊看最美。推薦清晨五點半到美溪沙灘，找一張躺椅坐下，看太陽從海平面升起。整個過程大約三十分鐘，天空的顏色從深藍變成粉紅再變成金黃，非常震撼。日落的話，山茶半島的觀景台是最佳位置，可以看到太陽慢慢沉入西邊的山脈，整個城市被染成橙紅色。如果不想跑太遠，龍橋附近的河岸也是看日落的好地方，傍晚時分很多當地人在這裡散步和運動，很有生活氣息。每週末晚上龍橋還會噴火噴水，是峴港最有名的免費表演，大約晚上九點開始，持續十五分鐘左右。</p>
 
-<div class="faq-section">
+<div class="faq-section ls-faq">
 <!-- 住宿推薦（Trip.com 聯盟） -->
 <div class="trip-recommend-card" style="
     background: #E8F8F7;
@@ -400,25 +439,25 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
   </p>
 </div>
 <h2>常見問題 FAQ</h2>
-<div class="faq-item">
-<div class="faq-q">巴拿山門票多少錢？<span class="arrow">▼</span></div>
-<div class="faq-a">標準套票₫750,000（來回纜車＋園區門票），Klook優惠價約NT$1,100，含來回交通的套裝約NT$1,500（詳見上文「Day 1：巴拿山（Ba Na Hills）」章節）</div>
+<div class="faq-item ls-faq-item">
+<div class="faq-q ls-faq-q">巴拿山門票多少錢？<span class="arrow">▼</span></div>
+<div class="faq-a ls-faq-a">標準套票₫750,000（來回纜車＋園區門票），Klook優惠價約NT$1,100，含來回交通的套裝約NT$1,500（詳見上文「Day 1：巴拿山（Ba Na Hills）」章節）</div>
 </div>
-<div class="faq-item">
-<div class="faq-q">峴港會安要安排幾天？<span class="arrow">▼</span></div>
-<div class="faq-a">建議至少3天2夜：Day1巴拿山（需要一整天）、Day2海灘＋五行山＋龍橋夜市、Day3會安古鎮（詳見上方文章內容）</div>
+<div class="faq-item ls-faq-item">
+<div class="faq-q ls-faq-q">峴港會安要安排幾天？<span class="arrow">▼</span></div>
+<div class="faq-a ls-faq-a">建議至少3天2夜：Day1巴拿山（需要一整天）、Day2海灘＋五行山＋龍橋夜市、Day3會安古鎮（詳見上方文章內容）</div>
 </div>
-<div class="faq-item">
-<div class="faq-q">會安古鎮門票多少？<span class="arrow">▼</span></div>
-<div class="faq-a">會安古鎮門票₫120,000（外國觀光客），含5個景點參觀（詳見上文「Day 3：會安古鎮一日遊」章節）</div>
+<div class="faq-item ls-faq-item">
+<div class="faq-q ls-faq-q">會安古鎮門票多少？<span class="arrow">▼</span></div>
+<div class="faq-a ls-faq-a">會安古鎮門票₫120,000（外國觀光客），含5個景點參觀（詳見上文「Day 3：會安古鎮一日遊」章節）</div>
 </div>
-<div class="faq-item">
-<div class="faq-q">峴港有什麼值得買的特產？<span class="arrow">▼</span></div>
-<div class="faq-a">① 越南咖啡（中原咖啡、Vinacafe）② 腰果與乾果 ③ 客制化鞋子與衣服（會安）④ 越南魚露 ⑤ 沉香相關製品（詳見上方文章內容）</div>
+<div class="faq-item ls-faq-item">
+<div class="faq-q ls-faq-q">峴港有什麼值得買的特產？<span class="arrow">▼</span></div>
+<div class="faq-a ls-faq-a">① 越南咖啡（中原咖啡、Vinacafe）② 腰果與乾果 ③ 客制化鞋子與衣服（會安）④ 越南魚露 ⑤ 沉香相關製品（詳見上方文章內容）</div>
 </div>
-<div class="faq-item">
-<div class="faq-q">峴港安全嗎？女生可以獨旅嗎？<span class="arrow">▼</span></div>
-<div class="faq-a">峴港是越南最安全的旅遊城市之一，女生獨旅非常適合（詳見上方文章內容）</div>
+<div class="faq-item ls-faq-item">
+<div class="faq-q ls-faq-q">峴港安全嗎？女生可以獨旅嗎？<span class="arrow">▼</span></div>
+<div class="faq-a ls-faq-a">峴港是越南最安全的旅遊城市之一，女生獨旅非常適合（詳見上方文章內容）</div>
 </div>
 </div>
 
@@ -445,7 +484,7 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 </div><!-- /article-container --></div>
 </div><!-- /article-container --><!-- /col-center --></div><!-- /three-col-wrapper --><!-- FOOTER -->
 <div style="display:none"><div style="display:none"><div style="display:none"><div style="display:none">
-<footer class="site-footer">
+<footer class="site-footer ls-footer">
 <div class="footer-inner">
 <div class="footer-col">
 <h4>🇯🇵 日本自由行</h4>

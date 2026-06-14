@@ -115,6 +115,7 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 <link href="beautify-overrides.css" as="style" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/>
 <noscript><link href="beautify-overrides.css" rel="stylesheet"/></noscript>
 <link href="beautify.css" as="style" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/>
+<link href="layout-standard.css" rel="stylesheet"/>
 <noscript><link href="beautify.css" rel="stylesheet"/></noscript>
 <!-- Google Analytics 4 -->
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-S7KQGHSD2R"></script>
@@ -241,13 +242,51 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 <div style="max-width:900px;margin:0 auto 30px;padding:0 20px;">
 <a href="about.html"><img loading="lazy" alt="台灣包車自由行" height="722" src="images/charter-banner.webp" style="width:100%;border-radius:12px;display:block;" width="2179"/></a>
 </div>
-<div class="sidebar-card">
-<a href="hokkaido-winter.html">
-<img alt="沖繩海灘" class="sb-hero-img" loading="lazy" src="images/okinawa-sidebar.webp"/>
+<aside class="ls-sidebar">
+<div class="ls-sidebar-card">
+<a href="okinawa.html">
+<img alt="沖繩攻略" class="ls-sidebar-hero" loading="lazy" src="images/okinawa-sidebar.webp"/>
 </a>
+<div class="ls-sidebar-header">
+<div class="ls-sidebar-city">沖繩</div>
+<div class="ls-sidebar-sub">自由行攻略</div>
 </div>
+<nav class="ls-sidebar-nav">
+    <a class="ls-sidebar-nav-item" href="#景點">
+      <span class="ls-sidebar-nav-icon">🏛️</span>
+      <span class="ls-sidebar-nav-label">景點</span>
+    </a>
+    <a class="ls-sidebar-nav-item" href="#美食">
+      <span class="ls-sidebar-nav-icon">🍜</span>
+      <span class="ls-sidebar-nav-label">美食</span>
+    </a>
+    <a class="ls-sidebar-nav-item" href="#購物">
+      <span class="ls-sidebar-nav-icon">🛍️</span>
+      <span class="ls-sidebar-nav-label">購物</span>
+    </a>
+    <a class="ls-sidebar-nav-item" href="#交通">
+      <span class="ls-sidebar-nav-icon">🚆</span>
+      <span class="ls-sidebar-nav-label">交通</span>
+    </a>
+    <a class="ls-sidebar-nav-item" href="#住宿">
+      <span class="ls-sidebar-nav-icon">🏨</span>
+      <span class="ls-sidebar-nav-label">住宿</span>
+    </a>
+    <a class="ls-sidebar-nav-item" href="#實用資訊">
+      <span class="ls-sidebar-nav-icon">💡</span>
+      <span class="ls-sidebar-nav-label">實用資訊</span>
+    </a>
+</nav>
+<div class="ls-sidebar-qr">
+<div class="ls-sidebar-qr-title">📱 追蹤我們</div>
+<img alt="LINE QR" src="images/line-qr.webp"/>
+<div class="ls-sidebar-qr-desc">掃描 LINE 取得最新旅遊資訊</div>
+</div>
+<a class="ls-sidebar-cta" href="travel-tools.html">📂 下載攻略 PDF</a>
+</div>
+</aside>
 <div class="col-center">
-<div class="article-container">
+<div class="article-container ls-article-content">
 <!-- TRIP PROMO BANNER -->
 <div style="margin-bottom:24px;"><a data-affiliate="trip-com" href="https://tw.trip.com/sale/w/17859/okinawapromotion.html?locale=zh-TW&amp;promo_referer=3952_17859_2&amp;Allianceid=8237671&amp;SID=312406690&amp;trip_sub1=&amp;trip_sub3=P17011395" rel="nofollow sponsored" target="_blank"><img loading="lazy" alt="Trip.com 熱門優惠" src="images/trip-okinawa.webp" style="width:100%;border-radius:12px;display:block;"/></a></div>
 <h2>🚗 沖繩租車全指南</h2>
@@ -259,11 +298,11 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 <li><strong>導航</strong>：租車內建GPS輸入電話號碼即可導航，比Google Maps更準確</li>
 <li><strong>加油</strong>：還車前加滿油（自助加油用信用卡），regular汽油即可</li>
 </ul>
-<div class="tip-box">
+<div class="tip-box ls-tip-box">
 <strong>💡 省錢秘訣：</strong>租 K-Car（輕自動車）最划算，油費低且沖繩路窄好停車。660cc 雖小但冷氣夠力，4天油費約 ¥5,000。
   </div>
 <h2>🗓️ 4天3夜行程安排</h2>
-<div class="day-card">
+<div class="day-card ls-day-card">
 <span class="day-tag">Day 1</span>
 <h3>那霸機場 → 國際通 → 首里城</h3>
 <ul>
@@ -279,7 +318,7 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 <img alt="首里城公園金色城牆暮光" loading="lazy" src="images/castle-twilight.webp" style="width:100%;max-width:600px;border-radius:16px;box-shadow:0 4px 12px rgba(0,0,0,0.1);cursor:pointer;"/>
 <p style="margin:10px 0 0 0;font-size:13px;color:#0ABAB5;line-height:1.6;font-style:italic;text-align:left;">📝 小編個人體驗：首里城的日落真的很美！金色城牆配上晚霞，拍照超有fu。建議傍晚4-5點到，既能看到白天的城牆，又能等到日落的magic hour。登城費用 ¥820，但很值得！</p>
 </div>
-<div class="day-card">
+<div class="day-card ls-day-card">
 <span class="day-tag">Day 2</span>
 <h3>北部自駕：美麗海水族館 → 古宇利島</h3>
 <ul>
@@ -290,7 +329,7 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 <li>古宇利島 <strong>心形岩</strong> 打卡 + 海灘散步</li>
 <li>回程途中在 <strong>恩納村</strong> 海景咖啡廳喝下午茶</li>
 </ul>
-<div class="tip-box">
+<div class="tip-box ls-tip-box">
 <strong>💡 建議：</strong>北部路程較遠，建議早上8點前出發。水族館上午人少，下午1點後旅遊團湧入會很擠。
     </div>
 </div>
@@ -298,7 +337,7 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 <div style="text-align:center;margin:28px 0;">
 <img loading="lazy" alt="沖繩自駕實戰心得：美麗海水族館、古宇利島、心形岩" src="images/ollieyu-okinawa.webp" style="width:100%;max-width:600px;border-radius:16px;box-shadow:0 4px 12px rgba(0,0,0,0.1);"/>
 </div>
-<div class="day-card">
+<div class="day-card ls-day-card">
 <span class="day-tag">Day 3</span>
 <h3>中部：美國村 → 勝連城跡 → 海中道路</h3>
 <ul>
@@ -313,7 +352,7 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 <img alt="沖繩海上道路drive-thru" loading="lazy" src="images/kai-chu-doro.webp" style="width:100%;max-width:600px;border-radius:16px;box-shadow:0 4px 12px rgba(0,0,0,0.1);cursor:pointer;"/>
 <p style="margin:10px 0 0 0;font-size:13px;color:#0ABAB5;line-height:1.6;font-style:italic;text-align:left;">📝 小編個人體驗：海中道路开车可以直接停在海上!旁边就是浅滩，可以下去玩水。记得带换洗衣服，夏天超多人在这裡戏水。这里也是电影「女友男友」的取景地!</p>
 </div>
-<div class="day-card">
+<div class="day-card ls-day-card">
 <span class="day-tag">Day 4</span>
 <h3>南部：平和祈念公園 → 瀨長島 → 回程</h3>
 <ul>
@@ -323,7 +362,7 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 <li>瀨長島 <strong>UMIKAJI TERRACE</strong> 午餐 + 海景下午茶</li>
 <li>回那霸機場還車，搭機回台</li>
 </ul>
-<div class="tip-box">
+<div class="tip-box ls-tip-box">
 <strong>💡 注意：</strong>還車需提前1.5小時到機場，包含還車檢查和搭接駁車時間。
     </div><!-- 實戰推薦配圖 -->
 <div onmouseout="this.style.transform='scale(1)'" onmouseover="this.style.transform='scale(1.02)'" style="text-align:center;margin:28px 0;transition:transform 0.2s;">
@@ -332,7 +371,7 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 </div>
 </div>
 <h2>💰 4天3夜預算參考</h2>
-<div class="day-card">
+<div class="day-card ls-day-card">
 <div class="table-responsive"><table style="width:100%;border-collapse:collapse;">
 <tr style="border-bottom:2px solid var(--coral-light);"><th style="text-align:left;padding:8px;">項目</th><th style="text-align:right;padding:8px;">預算 (NT$)</th></tr>
 <tr style="border-bottom:1px solid #eee;"><td style="padding:8px;">來回機票（廉航）</td><td style="text-align:right;padding:8px;">4,000-7,000</td></tr>
@@ -367,27 +406,27 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 
 
 
-<section class="faq-section">
+<section class="faq-section ls-faq">
 <h2>❓ 常見問題</h2>
-<div class="faq-item" onclick="this.classList.toggle('open')">
-<div class="faq-q">沖繩租車要什麼證件？</div>
-<div class="faq-a">需要台灣護照、台灣駕照 + 日文譯本（可在全台監理站或代辦辦理，約 NT$100）。部分租車公司接受台灣駕照 + 國際駕照，但日文譯本最保險。</div>
+<div class="faq-item ls-faq-item" onclick="this.classList.toggle('open')">
+<div class="faq-q ls-faq-q">沖繩租車要什麼證件？</div>
+<div class="faq-a ls-faq-a">需要台灣護照、台灣駕照 + 日文譯本（可在全台監理站或代辦辦理，約 NT$100）。部分租車公司接受台灣駕照 + 國際駕照，但日文譯本最保險。</div>
 </div>
-<div class="faq-item" onclick="this.classList.toggle('open')">
-<div class="faq-q">沖繩4天3夜花多少錢？</div>
-<div class="faq-a">不含機票約 NT$18,000-25,000（租車3天 NT$3,000-5,000、住宿3晚 NT$6,000-12,000、餐食 NT$5,000、門票 NT$2,000-3,000、加油 NT$1,500）。</div>
+<div class="faq-item ls-faq-item" onclick="this.classList.toggle('open')">
+<div class="faq-q ls-faq-q">沖繩4天3夜花多少錢？</div>
+<div class="faq-a ls-faq-a">不含機票約 NT$18,000-25,000（租車3天 NT$3,000-5,000、住宿3晚 NT$6,000-12,000、餐食 NT$5,000、門票 NT$2,000-3,000、加油 NT$1,500）。</div>
 </div>
-<div class="faq-item" onclick="this.classList.toggle('open')">
-<div class="faq-q">沖繩開車要注意什麼？</div>
-<div class="faq-a">1. 日本靠左行駛 2. 速限一般道路50km/h、高速公路80km/h 3. 酒駕零容忍 4. 沖繩道路較窄，建議租K-Car輕自動車 5. GPS導航建議用租車公司內建系統。</div>
+<div class="faq-item ls-faq-item" onclick="this.classList.toggle('open')">
+<div class="faq-q ls-faq-q">沖繩開車要注意什麼？</div>
+<div class="faq-a ls-faq-a">1. 日本靠左行駛 2. 速限一般道路50km/h、高速公路80km/h 3. 酒駕零容忍 4. 沖繩道路較窄，建議租K-Car輕自動車 5. GPS導航建議用租車公司內建系統。</div>
 </div>
-<div class="faq-item" onclick="this.classList.toggle('open')">
-<div class="faq-q">美麗海水族館值得去嗎？</div>
-<div class="faq-a">非常值得！黑潮之海巨大水槽是世界最大之一，鯨鯊與鬼蝠魟近距離觀看超震撼。門票大人 ¥2,180，建議上午去避開人潮，下午可順遊附近翡翠海灘。</div>
+<div class="faq-item ls-faq-item" onclick="this.classList.toggle('open')">
+<div class="faq-q ls-faq-q">美麗海水族館值得去嗎？</div>
+<div class="faq-a ls-faq-a">非常值得！黑潮之海巨大水槽是世界最大之一，鯨鯊與鬼蝠魟近距離觀看超震撼。門票大人 ¥2,180，建議上午去避開人潮，下午可順遊附近翡翠海灘。</div>
 </div>
-<div class="faq-item" onclick="this.classList.toggle('open')">
-<div class="faq-q">沖繩必吃美食有哪些？</div>
-<div class="faq-a">沖繩蕎麥麵（ソーキそば）、阿古豬火鍋、海葡萄、苦瓜炒蛋（ゴーヤチャンプルー）、Orion啤酒、藍色冰淇淋（ブルーシール）。國際通和牧志公設市場是美食集中地。</div>
+<div class="faq-item ls-faq-item" onclick="this.classList.toggle('open')">
+<div class="faq-q ls-faq-q">沖繩必吃美食有哪些？</div>
+<div class="faq-a ls-faq-a">沖繩蕎麥麵（ソーキそば）、阿古豬火鍋、海葡萄、苦瓜炒蛋（ゴーヤチャンプルー）、Orion啤酒、藍色冰淇淋（ブルーシール）。國際通和牧志公設市場是美食集中地。</div>
 </div>
 </section>
 
@@ -404,9 +443,9 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 <p style="font-size:13px;margin:12px 0 0;opacity:0.7">🔒 不會發送垃圾郵件，隨時可取消訂閱</p>
 </div>
 
-<div class="related-posts">
+<div class="related-posts ls-related">
 <h2 class="section-title">📖 延伸閱讀</h2>
-<div class="related-list">
+<div class="related-list ls-related-grid">
 <a class="related-card" href="tokyo-5days.html">
 <div class="post-thumb"><img alt="東京自由行" height="1024" loading="lazy" src="images/tokyo-hero.webp" width="1536"/></div>
 <div class="post-body">
@@ -434,7 +473,7 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 </div><!-- /article-container --><!-- /col-center -->
 </div><!-- /three-col-wrapper -->
 <!-- FOOTER -->
-<footer class="site-footer">
+<footer class="site-footer ls-footer">
 <div class="footer-inner">
 <div class="footer-col">
 <h4>🇯🇵 日本自由行</h4>

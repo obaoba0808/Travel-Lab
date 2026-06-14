@@ -115,6 +115,7 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 <link href="beautify-overrides.css" as="style" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/>
 <noscript><link href="beautify-overrides.css" rel="stylesheet"/></noscript>
 <link href="beautify.css" as="style" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/>
+<link href="layout-standard.css" rel="stylesheet"/>
 <noscript><link href="beautify.css" rel="stylesheet"/></noscript>
 <!-- Google Analytics 4 -->
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-S7KQGHSD2R"></script>
@@ -241,13 +242,51 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 <div style="max-width:900px;margin:0 auto 30px;padding:0 20px;">
 <a href="about.html"><img loading="lazy" alt="台灣包車自由行" height="722" src="images/charter-banner.webp" style="width:100%;border-radius:12px;display:block;" width="2179"/></a>
 </div>
-<div class="sidebar-card">
-<a href="bangkok-3days.html">
-<img alt="清邁古城" class="sb-hero-img" loading="lazy" src="images/chiangmai-sidebar.webp"/>
+<aside class="ls-sidebar">
+<div class="ls-sidebar-card">
+<a href="chiang-mai.html">
+<img alt="清邁攻略" class="ls-sidebar-hero" loading="lazy" src="images/chiang-mai-sidebar.webp"/>
 </a>
+<div class="ls-sidebar-header">
+<div class="ls-sidebar-city">清邁</div>
+<div class="ls-sidebar-sub">自由行攻略</div>
 </div>
+<nav class="ls-sidebar-nav">
+    <a class="ls-sidebar-nav-item" href="#景點">
+      <span class="ls-sidebar-nav-icon">🏛️</span>
+      <span class="ls-sidebar-nav-label">景點</span>
+    </a>
+    <a class="ls-sidebar-nav-item" href="#美食">
+      <span class="ls-sidebar-nav-icon">🍜</span>
+      <span class="ls-sidebar-nav-label">美食</span>
+    </a>
+    <a class="ls-sidebar-nav-item" href="#購物">
+      <span class="ls-sidebar-nav-icon">🛍️</span>
+      <span class="ls-sidebar-nav-label">購物</span>
+    </a>
+    <a class="ls-sidebar-nav-item" href="#交通">
+      <span class="ls-sidebar-nav-icon">🚆</span>
+      <span class="ls-sidebar-nav-label">交通</span>
+    </a>
+    <a class="ls-sidebar-nav-item" href="#住宿">
+      <span class="ls-sidebar-nav-icon">🏨</span>
+      <span class="ls-sidebar-nav-label">住宿</span>
+    </a>
+    <a class="ls-sidebar-nav-item" href="#實用資訊">
+      <span class="ls-sidebar-nav-icon">💡</span>
+      <span class="ls-sidebar-nav-label">實用資訊</span>
+    </a>
+</nav>
+<div class="ls-sidebar-qr">
+<div class="ls-sidebar-qr-title">📱 追蹤我們</div>
+<img alt="LINE QR" src="images/line-qr.webp"/>
+<div class="ls-sidebar-qr-desc">掃描 LINE 取得最新旅遊資訊</div>
+</div>
+<a class="ls-sidebar-cta" href="travel-tools.html">📂 下載攻略 PDF</a>
+</div>
+</aside>
 <div class="col-center">
-<div class="article-container">
+<div class="article-container ls-article-content">
 <!-- TRIP PROMO BANNER -->
 <div style="margin-bottom:24px;"><a data-affiliate="trip-com" href="https://tw.trip.com/sale/w/26497/go-thailand.html?locale=zh-tw&amp;curr=twd&amp;promo_referer=3952_26497_7&amp;Allianceid=8237671&amp;SID=312406690&amp;trip_sub1=&amp;trip_sub3=P17078987" rel="nofollow sponsored" target="_blank"><img loading="lazy" alt="Trip.com 熱門優惠" src="images/trip-thailand.webp" style="width:100%;border-radius:12px;display:block;"/></a></div>
 <h2>💻 為什麼選清邁當數位遊牧基地？</h2>
@@ -259,7 +298,7 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 <li><strong>國際社群</strong>：Nimman區聚集各國數位遊牧者，容易交朋友</li>
 <li><strong>生活品質</strong>：泰式按摩1小時 ฿250（NT$220）、健身房月費 ฿800</li>
 </ul>
-<div class="tip-box">
+<div class="tip-box ls-tip-box">
 <strong>💡 注意：</strong>每年2-4月是清邁燒稻季（煙霧嚴重），PM2.5爆表，不建議這段時間長住。最佳時期是11月-1月（涼季）和7-10月（雨季但空氣好）。
   </div>
 <h2>📋 簽證與實用資訊</h2>
@@ -286,7 +325,7 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 <li><strong>尋租管道</strong>：Facebook「Chiang Mai Housing」社團、Line群組、Walk-in問公寓櫃檯</li>
 </ul>
 <h2>🗓️ 7天探索行程</h2>
-<div class="day-card">
+<div class="day-card ls-day-card">
 <span class="day-tag">Day 1-2</span>
 <h3>老城區寺廟 + 週日夜市</h3>
 <!-- 實戰推薦配圖 -->
@@ -300,7 +339,7 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 <li>必吃：芒果糯米飯 ฿50、炸昆蟲體驗 ฿20、手工奶茶 ฿30</li>
 </ul>
 </div>
-<div class="day-card">
+<div class="day-card ls-day-card">
 <span class="day-tag">Day 3-4</span>
 <h3>素貼山 + Nimman咖啡廳巡禮</h3>
 <ul>
@@ -310,7 +349,7 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 <li>晚上 <strong>Maya商場</strong> 週五夜市或長康路夜市</li>
 </ul>
 </div>
-<div class="day-card">
+<div class="day-card ls-day-card">
 <span class="day-tag">Day 5-6</span>
 <h3>清萊一日遊 + 泰式按摩</h3>
 <ul>
@@ -319,11 +358,11 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 <li>傍晚回清邁，做2小時 <strong>泰式按摩</strong>（฿400-600）</li>
 <li>晚上去 <strong>周六夜市</strong>（Wua Lai Road），手作攤位多</li>
 </ul>
-<div class="tip-box">
+<div class="tip-box ls-tip-box">
 <strong>💡 提示：</strong>白廟非常壯觀但距離清邁3小時車程，暈車的人記得吃藥。藍廟較近且人少，拍照更美。
     </div>
 </div>
-<div class="day-card">
+<div class="day-card ls-day-card">
 <span class="day-tag">Day 7</span>
 <h3>泰式料理課 + 回程</h3>
 <ul>
@@ -333,7 +372,7 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 </ul>
 </div>
 <h2>💰 一個月生活費參考</h2>
-<div class="day-card">
+<div class="day-card ls-day-card">
 <div class="table-responsive"><table style="width:100%;border-collapse:collapse;">
 <tr style="border-bottom:2px solid var(--coral-light);"><th style="text-align:left;padding:8px;">項目</th><th style="text-align:right;padding:8px;">月費 (NT$)</th></tr>
 <tr style="border-bottom:1px solid #eee;"><td style="padding:8px;">公寓月租（含水電）</td><td style="text-align:right;padding:8px;">5,000-10,000</td></tr>
@@ -395,30 +434,30 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 <script type="text/javascript"> (function (d, sc, u) { var s = d.createElement(sc), p = d.getElementsByTagName(sc)[0]; s.type = "text/javascript"; s.async = true; s.src = u; p.parentNode.insertBefore(s, p); })( document, "script", "https://affiliate.klook.com/widget/fetch-iframe-init.js" ); </script>
 </div>
 
-<section class="faq-section">
+<section class="faq-section ls-faq">
 
 <!-- EMAIL LEAD MAGNET -->
 
 <h2>❓ 常見問題</h2>
-<div class="faq-item" onclick="this.classList.toggle('open')">
-<div class="faq-q">清邁一個月生活費多少？</div>
-<div class="faq-a">一個月約 NT$15,000-25,000（公寓月租 NT$5,000-10,000、餐食 NT$6,000-9,000、交通 NT$1,500、按摩休閒 NT$2,000-3,000、簽證與保險 NT$1,500）。比台北便宜一半以上。</div>
+<div class="faq-item ls-faq-item" onclick="this.classList.toggle('open')">
+<div class="faq-q ls-faq-q">清邁一個月生活費多少？</div>
+<div class="faq-a ls-faq-a">一個月約 NT$15,000-25,000（公寓月租 NT$5,000-10,000、餐食 NT$6,000-9,000、交通 NT$1,500、按摩休閒 NT$2,000-3,000、簽證與保險 NT$1,500）。比台北便宜一半以上。</div>
 </div>
-<div class="faq-item" onclick="this.classList.toggle('open')">
-<div class="faq-q">清邁簽證怎麼辦？</div>
-<div class="faq-a">台灣護照免簽30天。想待更久：1. 延簽一次（30天，฿1,900）2. 簽證跑跳到清萊或曼谷重入境 3. 申請泰國DTV數位遊牧簽證（5年效期，需遠端工作證明）。</div>
+<div class="faq-item ls-faq-item" onclick="this.classList.toggle('open')">
+<div class="faq-q ls-faq-q">清邁簽證怎麼辦？</div>
+<div class="faq-a ls-faq-a">台灣護照免簽30天。想待更久：1. 延簽一次（30天，฿1,900）2. 簽證跑跳到清萊或曼谷重入境 3. 申請泰國DTV數位遊牧簽證（5年效期，需遠端工作證明）。</div>
 </div>
-<div class="faq-item" onclick="this.classList.toggle('open')">
-<div class="faq-q">清邁哪裡適合遠端工作？</div>
-<div class="faq-a">首推CAMP（Amari商場頂樓，24小時免費）、Punspace（多據點 coworking space）、Ristr8to Lab（冠軍拉花咖啡+插座）、Akha Ama Cafe（安靜適合寫作）。</div>
+<div class="faq-item ls-faq-item" onclick="this.classList.toggle('open')">
+<div class="faq-q ls-faq-q">清邁哪裡適合遠端工作？</div>
+<div class="faq-a ls-faq-a">首推CAMP（Amari商場頂樓，24小時免費）、Punspace（多據點 coworking space）、Ristr8to Lab（冠軍拉花咖啡+插座）、Akha Ama Cafe（安靜適合寫作）。</div>
 </div>
-<div class="faq-item" onclick="this.classList.toggle('open')">
-<div class="faq-q">清邁夜市哪個最推？</div>
-<div class="faq-a">週日步行街（Sunday Walking Street）最大最熱鬧、週六夜市（Wua Lai）文青手作多、長康路夜市每晚都有。想吃最便宜去清邁大學門口夜市。</div>
+<div class="faq-item ls-faq-item" onclick="this.classList.toggle('open')">
+<div class="faq-q ls-faq-q">清邁夜市哪個最推？</div>
+<div class="faq-a ls-faq-a">週日步行街（Sunday Walking Street）最大最熱鬧、週六夜市（Wua Lai）文青手作多、長康路夜市每晚都有。想吃最便宜去清邁大學門口夜市。</div>
 </div>
-<div class="faq-item" onclick="this.classList.toggle('open')">
-<div class="faq-q">清邁和曼谷差在哪？</div>
-<div class="faq-a">清邁步調慢、物價低、空氣好（非燒季）、適合長住工作。曼谷交通方便、夜生活豐富、國際化程度高、適合短期旅遊。數位遊牧首選清邁，逛街購物首選曼谷。</div>
+<div class="faq-item ls-faq-item" onclick="this.classList.toggle('open')">
+<div class="faq-q ls-faq-q">清邁和曼谷差在哪？</div>
+<div class="faq-a ls-faq-a">清邁步調慢、物價低、空氣好（非燒季）、適合長住工作。曼谷交通方便、夜生活豐富、國際化程度高、適合短期旅遊。數位遊牧首選清邁，逛街購物首選曼谷。</div>
 </div>
 </section>
 
@@ -435,9 +474,9 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 <p style="font-size:13px;margin:12px 0 0;opacity:0.7">🔒 不會發送垃圾郵件，隨時可取消訂閱</p>
 </div>
 
-<div class="related-posts">
+<div class="related-posts ls-related">
 <h2 class="section-title">📖 延伸閱讀</h2>
-<div class="related-list">
+<div class="related-list ls-related-grid">
 <a class="related-card" href="bangkok-3days.html">
 <div class="post-thumb"><img alt="曼谷大皇宮與昭披耶河夜景｜泰國曼谷自由行必訪景點" height="1024" loading="lazy" src="images/bangkok-hero.webp" width="1536"/></div>
 <div class="post-body">
@@ -469,7 +508,7 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 <!-- /col-center -->
 <!-- /three-col-wrapper -->
 <!-- FOOTER -->
-<footer class="site-footer">
+<footer class="site-footer ls-footer">
 <div class="footer-inner">
 <div class="footer-col">
 <h4>🇯🇵 日本自由行</h4>

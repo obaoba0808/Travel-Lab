@@ -79,6 +79,7 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 <link href="beautify-overrides.css" as="style" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/>
 <noscript><link href="beautify-overrides.css" rel="stylesheet"/></noscript>
 <link href="beautify.css" as="style" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/>
+<link href="layout-standard.css" rel="stylesheet"/>
 <noscript><link href="beautify.css" rel="stylesheet"/></noscript>
 <!-- Google Analytics 4 -->
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-S7KQGHSD2R"></script>
@@ -205,13 +206,51 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 <div style="max-width:900px;margin:0 auto 30px;padding:0 20px;">
 <a href="about.html"><img loading="lazy" alt="台灣包車自由行" height="722" src="images/charter-banner.webp" style="width:100%;border-radius:12px;display:block;" width="2179"/></a>
 </div>
-<div class="sidebar-card">
-<a href="tokyo-5days.html">
-<img alt="北海道雪景" class="sb-hero-img" loading="lazy" src="images/hokkaido-sidebar.webp"/>
+<aside class="ls-sidebar">
+<div class="ls-sidebar-card">
+<a href="hokkaido-winter.html">
+<img alt="北海道攻略" class="ls-sidebar-hero" loading="lazy" src="images/hokkaido-sidebar.webp"/>
 </a>
+<div class="ls-sidebar-header">
+<div class="ls-sidebar-city">北海道</div>
+<div class="ls-sidebar-sub">自由行攻略</div>
 </div>
+<nav class="ls-sidebar-nav">
+    <a class="ls-sidebar-nav-item" href="#景點">
+      <span class="ls-sidebar-nav-icon">🏛️</span>
+      <span class="ls-sidebar-nav-label">景點</span>
+    </a>
+    <a class="ls-sidebar-nav-item" href="#美食">
+      <span class="ls-sidebar-nav-icon">🍜</span>
+      <span class="ls-sidebar-nav-label">美食</span>
+    </a>
+    <a class="ls-sidebar-nav-item" href="#購物">
+      <span class="ls-sidebar-nav-icon">🛍️</span>
+      <span class="ls-sidebar-nav-label">購物</span>
+    </a>
+    <a class="ls-sidebar-nav-item" href="#交通">
+      <span class="ls-sidebar-nav-icon">🚆</span>
+      <span class="ls-sidebar-nav-label">交通</span>
+    </a>
+    <a class="ls-sidebar-nav-item" href="#住宿">
+      <span class="ls-sidebar-nav-icon">🏨</span>
+      <span class="ls-sidebar-nav-label">住宿</span>
+    </a>
+    <a class="ls-sidebar-nav-item" href="#實用資訊">
+      <span class="ls-sidebar-nav-icon">💡</span>
+      <span class="ls-sidebar-nav-label">實用資訊</span>
+    </a>
+</nav>
+<div class="ls-sidebar-qr">
+<div class="ls-sidebar-qr-title">📱 追蹤我們</div>
+<img alt="LINE QR" src="images/line-qr.webp"/>
+<div class="ls-sidebar-qr-desc">掃描 LINE 取得最新旅遊資訊</div>
+</div>
+<a class="ls-sidebar-cta" href="travel-tools.html">📂 下載攻略 PDF</a>
+</div>
+</aside>
 <div class="col-center">
-<div class="article-container">
+<div class="article-container ls-article-content">
 <!-- TRIP PROMO BANNER -->
 <div style="margin-bottom:24px;"><a data-affiliate="trip-com" href="https://tw.trip.com/sale/w/4217/japan-travel.html?locale=zh_tw&amp;promo_referer=3952_4217_9&amp;Allianceid=8237671&amp;SID=312406690&amp;trip_sub1=&amp;trip_sub3=P17078945n" rel="nofollow sponsored" target="_blank"><img loading="lazy" alt="Trip.com 熱門優惠" src="images/trip-japan.webp" style="width:100%;border-radius:12px;display:block;"/></a></div>
 <h2>🏔️ 必去景點 Top 5</h2>
@@ -219,9 +258,9 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 <div style="text-align:center;margin:28px 0;">
 <img loading="lazy" alt="北海道冬季實戰心得：必去景點Top5、雪祭、露天溫泉" src="images/ollieyu-hokkaido.webp" style="width:100%;max-width:600px;border-radius:16px;box-shadow:0 4px 12px rgba(0,0,0,0.1);"/>
 </div>
-<div class="day-card">
+<div class="day-card ls-day-card">
 <span class="day-tag">No.1</span>
-<div class="day-card">
+<div class="day-card ls-day-card">
 <span class="day-tag">小樽運河雪中</span>
 <h3>小樽運河 — 雪中浪漫散步</h3>
 <p>冬天的小樽運河是北海道最經典的雪景。運河兩旁的紅磚倉庫覆蓋白雪，搭配瓦斯燈倒影，走在石板路上彷彿穿越時空。</p>
@@ -236,9 +275,9 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 <p style="margin:10px 0 0 0;font-size:13px;color:#0ABAB5;line-height:1.6;font-style:italic;text-align:left;">📝 小編個人體驗：小樽運河的黃昏超級浪漫！瓦斯燈點亮時，搭配運河上的雪景氛圍，我站在運河邊看了半小時都不想走。推薦傍晚4點到，这样可以看到天色从蓝变成橘黄的渐变过程。</p>
 </div>
 </div>
-<div class="day-card">
+<div class="day-card ls-day-card">
 <span class="day-tag">No.2</span>
-<div class="day-card">
+<div class="day-card ls-day-card">
 <span class="day-tag">札幌雪祭世界</span>
 <h3>札幌雪祭 — 世界級冰雕盛典</h3>
 <p>每年2月上旬舉辦，大通會場展出超過100座大型雪雕，夜間搭配燈光秀超壯觀。TSUDOME會場有雪上溜滑梯等免費體驗。</p>
@@ -253,9 +292,9 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 <p style="margin:10px 0 0 0;font-size:13px;color:#0ABAB5;line-height:1.6;font-style:italic;text-align:left;">📝 小編個人體驗：札幌雪祭的规模真的很震撼！100多座雪雕，最夸张的一座高达15米。我在現場凍了3小時，但看到夜间点灯的那一刻，真的觉得一切都值得了。建议穿夠保暖衣物!</p>
 </div>
 </div>
-<div class="day-card">
+<div class="day-card ls-day-card">
 <span class="day-tag">No.3</span>
-<div class="day-card">
+<div class="day-card ls-day-card">
 <span class="day-tag">函館山百萬夜</span>
 <h3>函館山 — 百萬夜景</h3>
 <p>函館山夜景被譽為「世界三大夜景」之一，冬天積雪的市街兩側閃爍燈光，宛如散落的寶石。搭纜車3分鐘即達山頂。</p>
@@ -265,7 +304,7 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 <li><strong>注意</strong>：冬季纜車可能因強風停駛，出發前確認官網</li>
 </ul>
 </div>
-<div class="day-card">
+<div class="day-card ls-day-card">
 <span class="day-tag">No.4</span>
 <h3>旭山動物園 — 企鵝散步</h3>
 <p>冬天最人氣的活動就是看企鵝排隊散步！國王企鵝每天兩次在園區內自由行走，超萌畫面讓人融化。還有北極熊跳水、海豹旋轉泳等行為展示。</p>
@@ -280,9 +319,9 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 <p style="margin:10px 0 0 0;font-size:13px;color:#0ABAB5;line-height:1.6;font-style:italic;text-align:left;">📝 小編個人體驗：企鹅散步根本是北海道冬天的招牌！看企鹅摇摇晃晃走路，我笑到肚子痛。每天两场(11:00和14:30)，建议提早30分钟排队抢前面的位置，才能拍到近照!</p>
 </div>
 </div>
-<div class="day-card">
+<div class="day-card ls-day-card">
 <span class="day-tag">No.5</span>
-<div class="day-card">
+<div class="day-card ls-day-card">
 <span class="day-tag">登別地獄谷雪</span>
 <h3>登別地獄谷 — 雪景露天風呂</h3>
 <p>火山地熱讓登別一年四季都有溫泉，冬天泡露天風呂一邊看雪花飄落，一邊感受熱氣蒸騰，冰火交融的體驗超難忘。</p>
@@ -297,7 +336,7 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 </div>
 </div>
 <h2>🧥 禦寒穿搭清單</h2>
-<div class="day-card">
+<div class="day-card ls-day-card">
 <p>北海道1-2月氣溫 -5 到 -15°C，旭川可能低於 -20°C。洋蔥式穿法是關鍵：</p>
 <ul>
 <li><strong>上半身</strong>：UNIQLO發熱衣 → 刷毛中層 → 防風防水外套（羽絨或化纖）</li>
@@ -306,28 +345,28 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 <li><strong>配件</strong>：毛帽（耳朵要蓋住）、圍巾、觸控手套、暖暖貼</li>
 </ul>
 </div>
-<div class="tip-box"><strong>💡 暖暖貼使用技巧：</strong>貼在後腰和腳底最有效！不要直接貼皮膚，隔一層衣服。便利店和藥妝店都能買到（日文：カイロ）。</div>
+<div class="tip-box ls-tip-box"><strong>💡 暖暖貼使用技巧：</strong>貼在後腰和腳底最有效！不要直接貼皮膚，隔一層衣服。便利店和藥妝店都能買到（日文：カイロ）。</div>
 <h2>🚗 冬季自駕注意事項</h2>
-<div class="tip-box"><p>如果你考慮在北海道冬天自駕，請先評估：</p></div>
-<div class="day-card">
+<div class="tip-box ls-tip-box"><p>如果你考慮在北海道冬天自駕，請先評估：</p></div>
+<div class="day-card ls-day-card">
 <span class="day-tag">必須租雪胎車</span>
 <p><strong>必須租雪胎車</strong>：日本法律規定冬季必須使用雪胎，租車公司通常已配備</p>
 </div>
-<div class="day-card">
+<div class="day-card ls-day-card">
 <span class="day-tag">結冰路面</span>
 <p><strong>結冰路面</strong>：即使沒下雪，路面也可能結黑冰，肉眼幾乎看不出來</p>
 </div>
-<div class="day-card">
+<div class="day-card ls-day-card">
 <span class="day-tag">視線不良</span>
 <p><strong>視線不良</strong>：暴風雪時能見度可能不到10公尺</p>
 </div>
-<div class="day-card">
+<div class="day-card ls-day-card">
 <span class="day-tag">建議替代方案</span>
 <p><strong>建議替代方案</strong>：JR北海道鐵路周遊券 + 當地一日遊巴士，安全又省心</p>
 </div>
-<div class="tip-box"><strong>⚠️ 重要提醒：</strong>沒有雪地駕駛經驗強烈不建議自駕！每年都有台灣遊客在北海道因結冰打滑出事故。JR+巴士完全夠用。</div>
+<div class="tip-box ls-tip-box"><strong>⚠️ 重要提醒：</strong>沒有雪地駕駛經驗強烈不建議自駕！每年都有台灣遊客在北海道因結冰打滑出事故。JR+巴士完全夠用。</div>
 <h2>♨️ 溫泉推薦</h2>
-<div class="day-card">
+<div class="day-card ls-day-card">
 <div class="table-responsive"><table style="width:100%;border-collapse:collapse">
 <tr style="border-bottom:2px solid var(--coral-light)"><th style="text-align:left;padding:8px">溫泉區</th><th style="padding:8px">特色</th><th style="padding:8px">從札幌</th></tr>
 <tr style="border-bottom:1px solid #eee"><td style="padding:8px;font-weight:700">登別溫泉</td><td style="padding:8px">9種泉質、地獄谷雪景</td><td style="padding:8px">JR 1.5hr</td></tr>
@@ -376,14 +415,14 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
   </p>
 </div>
 
-<section class="faq-section">
+<section class="faq-section ls-faq">
 <h2>❓ 常見問題</h2>
-<div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q">北海道冬天幾度？</div><div class="faq-a">1-2月平均氣溫-5到-15°C，旭川可低至-20°C。體感溫度更低，需做好防風防寒準備。</div></div>
-<div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q">北海道冬天幾天夠玩？</div><div class="faq-a">最少5天4夜：札幌2天+小樽1天+富良野或旭川1天（詳見上方文章內容）</div></div>
-<div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q">北海道冬天租車安全嗎？</div><div class="faq-a">有雪地駕駛經驗可以租車，車行會提供雪胎（詳見上文「🚗 冬季自駕注意事項」章節）</div></div>
-<div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q">札幌雪祭什麼時候？</div><div class="faq-a">每年2月上旬（通常2月5-12日），在大通公園舉行（詳見上方文章內容）</div></div>
-<div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q">北海道冬天要帶什麼裝備？</div><div class="faq-a">必帶：防風羽絨外套、保暖內衣（Heattech）、防滑雪靴、毛帽圍巾手套、暖暖包（詳見上方文章內容）</div></div>
-<div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q">北海道有什麼必吃美食？</div><div class="faq-a">①味噌拉麵（札幌）②海鮮丼（函館朝市）③湯咖喱（札幌）④成吉思汗烤肉（旭川）⑤白色戀人冰淇淋（小樽）⑥札幌啤酒（詳見上方文章內容）</div></div>
+<div class="faq-item ls-faq-item" onclick="this.classList.toggle('open')"><div class="faq-q ls-faq-q">北海道冬天幾度？</div><div class="faq-a ls-faq-a">1-2月平均氣溫-5到-15°C，旭川可低至-20°C。體感溫度更低，需做好防風防寒準備。</div></div>
+<div class="faq-item ls-faq-item" onclick="this.classList.toggle('open')"><div class="faq-q ls-faq-q">北海道冬天幾天夠玩？</div><div class="faq-a ls-faq-a">最少5天4夜：札幌2天+小樽1天+富良野或旭川1天（詳見上方文章內容）</div></div>
+<div class="faq-item ls-faq-item" onclick="this.classList.toggle('open')"><div class="faq-q ls-faq-q">北海道冬天租車安全嗎？</div><div class="faq-a ls-faq-a">有雪地駕駛經驗可以租車，車行會提供雪胎（詳見上文「🚗 冬季自駕注意事項」章節）</div></div>
+<div class="faq-item ls-faq-item" onclick="this.classList.toggle('open')"><div class="faq-q ls-faq-q">札幌雪祭什麼時候？</div><div class="faq-a ls-faq-a">每年2月上旬（通常2月5-12日），在大通公園舉行（詳見上方文章內容）</div></div>
+<div class="faq-item ls-faq-item" onclick="this.classList.toggle('open')"><div class="faq-q ls-faq-q">北海道冬天要帶什麼裝備？</div><div class="faq-a ls-faq-a">必帶：防風羽絨外套、保暖內衣（Heattech）、防滑雪靴、毛帽圍巾手套、暖暖包（詳見上方文章內容）</div></div>
+<div class="faq-item ls-faq-item" onclick="this.classList.toggle('open')"><div class="faq-q ls-faq-q">北海道有什麼必吃美食？</div><div class="faq-a ls-faq-a">①味噌拉麵（札幌）②海鮮丼（函館朝市）③湯咖喱（札幌）④成吉思汗烤肉（旭川）⑤白色戀人冰淇淋（小樽）⑥札幌啤酒（詳見上方文章內容）</div></div>
 <!-- KLOOK 動態橫幅： -->
 <div class="klook-dynamic-banner" style="max-width:468px;margin:32px auto;text-align:center;">
 <ins class="klk-aff-widget" data-adid="1282007" data-amount="3" data-cardh="126" data-cid="32" data-currency="TWD" data-edgevalue="655" data-lang="zh-TW" data-lgh="470" data-padding="92" data-prod="dynamic_widget" data-tid="-1"><a href="//www.klook.com/">Klook.com</a></ins> <script type="text/javascript"> (function (d, sc, u) { var s = d.createElement(sc), p = d.getElementsByTagName(sc)[0]; s.type = "text/javascript"; s.async = true; s.src = u; p.parentNode.insertBefore(s, p); })( document, "script", "https://affiliate.klook.com/widget/fetch-iframe-init.js" ); </script>
@@ -408,9 +447,9 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 <p style="font-size:13px;margin:12px 0 0;opacity:0.7">🔒 不會發送垃圾郵件，隨時可取消訂閱</p>
 </div>
 
-<div class="related-posts">
+<div class="related-posts ls-related">
 <h2 class="section-title">📖 延伸閱讀</h2>
-<div class="related-list">
+<div class="related-list ls-related-grid">
 <a class="related-card" href="tokyo-5days.html">
 <div class="post-thumb"><img alt="東京自由行" height="1024" loading="lazy" src="images/tokyo-hero.webp" width="1536"/></div>
 <div class="post-body">
@@ -438,7 +477,7 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 </div><!-- /article-container --><!-- /col-center -->
 </div><!-- /three-col-wrapper -->
 <!-- FOOTER -->
-<footer class="site-footer">
+<footer class="site-footer ls-footer">
 <div class="footer-inner">
 <div class="footer-col">
 <h4>🇯🇵 日本自由行</h4>

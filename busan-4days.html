@@ -80,6 +80,7 @@
 <link href="beautify-overrides.css" as="style" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/>
 <noscript><link href="beautify-overrides.css" rel="stylesheet"/></noscript>
 <link href="beautify.css" as="style" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/>
+<link href="layout-standard.css" rel="stylesheet"/>
 <noscript><link href="beautify.css" rel="stylesheet"/></noscript>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-S7KQGHSD2R"></script>
 <script>
@@ -236,13 +237,51 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 <div style="max-width:900px;margin:0 auto 30px;padding:0 20px;">
 <a href="about.html"><img loading="lazy" alt="台灣包車自由行" height="722" src="images/charter-banner.webp" style="width:100%;border-radius:12px;display:block;" width="2179"/></a>
 </div>
-<div class="sidebar-card">
-<a href="seoul-food.html">
-<img alt="釜山海雲台" class="sb-hero-img" loading="lazy" src="images/busan-sidebar.webp"/>
+<aside class="ls-sidebar">
+<div class="ls-sidebar-card">
+<a href="busan-4days.html">
+<img alt="釜山攻略" class="ls-sidebar-hero" loading="lazy" src="images/busan-sidebar.webp"/>
 </a>
+<div class="ls-sidebar-header">
+<div class="ls-sidebar-city">釜山</div>
+<div class="ls-sidebar-sub">自由行攻略</div>
 </div>
+<nav class="ls-sidebar-nav">
+    <a class="ls-sidebar-nav-item" href="#景點">
+      <span class="ls-sidebar-nav-icon">🏛️</span>
+      <span class="ls-sidebar-nav-label">景點</span>
+    </a>
+    <a class="ls-sidebar-nav-item" href="#美食">
+      <span class="ls-sidebar-nav-icon">🍜</span>
+      <span class="ls-sidebar-nav-label">美食</span>
+    </a>
+    <a class="ls-sidebar-nav-item" href="#購物">
+      <span class="ls-sidebar-nav-icon">🛍️</span>
+      <span class="ls-sidebar-nav-label">購物</span>
+    </a>
+    <a class="ls-sidebar-nav-item" href="#交通">
+      <span class="ls-sidebar-nav-icon">🚆</span>
+      <span class="ls-sidebar-nav-label">交通</span>
+    </a>
+    <a class="ls-sidebar-nav-item" href="#住宿">
+      <span class="ls-sidebar-nav-icon">🏨</span>
+      <span class="ls-sidebar-nav-label">住宿</span>
+    </a>
+    <a class="ls-sidebar-nav-item" href="#實用資訊">
+      <span class="ls-sidebar-nav-icon">💡</span>
+      <span class="ls-sidebar-nav-label">實用資訊</span>
+    </a>
+</nav>
+<div class="ls-sidebar-qr">
+<div class="ls-sidebar-qr-title">📱 追蹤我們</div>
+<img alt="LINE QR" src="images/line-qr.webp"/>
+<div class="ls-sidebar-qr-desc">掃描 LINE 取得最新旅遊資訊</div>
+</div>
+<a class="ls-sidebar-cta" href="travel-tools.html">📂 下載攻略 PDF</a>
+</div>
+</aside>
 <div class="col-center">
-<div class="article-container">
+<div class="article-container ls-article-content">
 <!-- TRIP PROMO BANNER -->
 <div style="position:relative;margin-bottom:24px;">
 <a data-affiliate="trip-com" href="https://tw.trip.com/sale/w/26497/go-korea.html?locale=zh-tw&curr=twd&promo_referer=3952_26497_7&Allianceid=8237671&SID=312406690&trip_sub1=&trip_sub3=P17078987" rel="nofollow sponsored" target="_blank"><img loading="lazy" alt="Trip.com 熱門優惠" src="images/trip-korea.webp" style="width:100%;border-radius:12px;display:block;"/></a>
@@ -280,7 +319,7 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 </div>
 <!-- 行前準備 -->
 <h2>📋 行前準備：釜山基本資訊</h2>
-<div class="day-card">
+<div class="day-card ls-day-card">
 <div class="table-responsive"><table style="width:100%;border-collapse:collapse;font-size:14px;">
 <tr style="border-bottom:2px solid var(--tiffany-light);background:#f0fdfa;">
 <th style="text-align:left;padding:10px 12px;">項目</th>
@@ -298,7 +337,7 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 </div>
 <!-- DAY 1 -->
 <h2 id="day1">🌅 Day 1：抵達釜山 → 海雲台</h2>
-<div class="day-card">
+<div class="day-card ls-day-card">
 <div class="day-time-tag" style="background:var(--tiffany);color:#fff;">第一天行程</div>
 <div style="display:grid;grid-template-columns:70px 1fr;gap:12px;margin-top:16px;">
 <div style="text-align:center;color:#888;font-size:12px;line-height:1.3;">
@@ -353,7 +392,7 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 </div>
 <!-- DAY 2 -->
 <h2 id="day2">🏘️ Day 2：甘川洞文化村 → 南浦洞 → 札嗶其</h2>
-<div class="day-card">
+<div class="day-card ls-day-card">
 <div class="day-time-tag" style="background:#ff6b35;color:#fff;">第二天行程</div>
 <div style="display:grid;grid-template-columns:70px 1fr;gap:12px;margin-top:16px;">
 <div style="text-align:center;color:#888;font-size:12px;line-height:1.3;">
@@ -401,7 +440,7 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 </div>
 <!-- DAY 3 -->
 <h2 id="day3">🚠 Day 3：太宗台 → 影島 → 廣安里</h2>
-<div class="day-card">
+<div class="day-card ls-day-card">
 <div class="day-time-tag" style="background:#6c5ce7;color:#fff;">第三天行程</div>
 <div style="display:grid;grid-template-columns:70px 1fr;gap:12px;margin-top:16px;">
 <div style="text-align:center;color:#888;font-size:12px;line-height:1.3;">
@@ -457,7 +496,7 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 </div>
 <!-- DAY 4 -->
 <h2 id="day4">🛍️ Day 4：西面地下街 → 免稅店 → 回程</h2>
-<div class="day-card">
+<div class="day-card ls-day-card">
 <div class="day-time-tag" style="background:#e74c3c;color:#fff;">第四天行程</div>
 <div style="display:grid;grid-template-columns:70px 1fr;gap:12px;margin-top:16px;">
 <div style="text-align:center;color:#888;font-size:12px;line-height:1.3;">
@@ -494,7 +533,7 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 </div>
 <!-- 住宿推薦 -->
 <h2 id="住宿">🏨 釜山住宿推薦</h2>
-<div class="day-card">
+<div class="day-card ls-day-card">
 <table style="width:100%;border-collapse:collapse;font-size:13px;">
 <tr style="border-bottom:2px solid var(--tiffany-light);background:#f0fdfa;">
 <th style="text-align:left;padding:10px 12px;">區域</th>
@@ -552,7 +591,7 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 </div>
 <!-- 釜山交通攻略 -->
 <h2 id="交通">🚇 釜山交通攻略</h2>
-<div class="day-card">
+<div class="day-card ls-day-card">
 <h3 style="margin-top:0;">地鐵</h3>
 <p>釜山地鐵有4條線，主要觀光區都能到。票價₩1,500-1,800，換乘免費。建議購買 <strong>T-money 卡</strong>（₩2,500含押金）並加值，搭地鐵享優惠。<br/><br/>
 <strong>實用路線：</strong><br/>
@@ -569,7 +608,7 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 </div>
 <!-- 預算表 -->
 <h2 id="預算">💰 釜山4天3夜預算參考</h2>
-<div class="day-card">
+<div class="day-card ls-day-card">
 <table style="width:100%;border-collapse:collapse;font-size:14px;">
 <tr style="border-bottom:2px solid var(--tiffany-light);background:#f0fdfa;">
 <th style="text-align:left;padding:10px 12px;">項目</th>
@@ -598,38 +637,38 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 <p style="font-size:13px;margin:12px 0 0;opacity:0.7">🔒 不會發送垃圾郵件，隨時可取消訂閱</p>
 
 
-<section class="faq-section">
-<div class="faq-item" onclick="this.classList.toggle('open')">
-<div class="faq-q">釜山4天3夜夠嗎？</div>
-<div class="faq-a">足夠（詳見上文「💰 釜山4天3夜預算參考」章節）</div>
+<section class="faq-section ls-faq">
+<div class="faq-item ls-faq-item" onclick="this.classList.toggle('open')">
+<div class="faq-q ls-faq-q">釜山4天3夜夠嗎？</div>
+<div class="faq-a ls-faq-a">足夠（詳見上文「💰 釜山4天3夜預算參考」章節）</div>
 </div>
-<div class="faq-item" onclick="this.classList.toggle('open')">
-<div class="faq-q">釜山機票多少錢？</div>
-<div class="faq-a">台灣出發廉航來回含行李約 NT$4,000-8,000，傳統航空約 NT$8,000-15,000（詳見上方文章內容）</div>
+<div class="faq-item ls-faq-item" onclick="this.classList.toggle('open')">
+<div class="faq-q ls-faq-q">釜山機票多少錢？</div>
+<div class="faq-a ls-faq-a">台灣出發廉航來回含行李約 NT$4,000-8,000，傳統航空約 NT$8,000-15,000（詳見上方文章內容）</div>
 </div>
-<div class="faq-item" onclick="this.classList.toggle('open')">
-<div class="faq-q">釜山住哪裡最方便？</div>
-<div class="faq-a">推薦住在海雲台（海景飯店多，適合放鬆）或南浦洞（交通方便，靠近購物區）（詳見上文「🏨 釜山住宿推薦」章節）</div>
+<div class="faq-item ls-faq-item" onclick="this.classList.toggle('open')">
+<div class="faq-q ls-faq-q">釜山住哪裡最方便？</div>
+<div class="faq-a ls-faq-a">推薦住在海雲台（海景飯店多，適合放鬆）或南浦洞（交通方便，靠近購物區）（詳見上文「🏨 釜山住宿推薦」章節）</div>
 </div>
-<div class="faq-item" onclick="this.classList.toggle('open')">
-<div class="faq-q">釜山交通卡怎麼用？</div>
-<div class="faq-a">使用 T-money 卡或 Wow Pass，適用於地鐵、公交、部分便利商店（詳見上文「🚇 釜山交通攻略」章節）</div>
+<div class="faq-item ls-faq-item" onclick="this.classList.toggle('open')">
+<div class="faq-q ls-faq-q">釜山交通卡怎麼用？</div>
+<div class="faq-a ls-faq-a">使用 T-money 卡或 Wow Pass，適用於地鐵、公交、部分便利商店（詳見上文「🚇 釜山交通攻略」章節）</div>
 </div>
-<div class="faq-item" onclick="this.classList.toggle('open')">
-<div class="faq-q">釜山美食有哪些必吃？</div>
-<div class="faq-a">豬肉湯飯（札嗶其）、生猛海鮮（影島）、烤盲鰻（西面）、花生霜淇淋（甘川洞）、生魚片（多大浦），還有廣安里海邊的烤海鮮攤（詳見上方文章內容）</div>
+<div class="faq-item ls-faq-item" onclick="this.classList.toggle('open')">
+<div class="faq-q ls-faq-q">釜山美食有哪些必吃？</div>
+<div class="faq-a ls-faq-a">豬肉湯飯（札嗶其）、生猛海鮮（影島）、烤盲鰻（西面）、花生霜淇淋（甘川洞）、生魚片（多大浦），還有廣安里海邊的烤海鮮攤（詳見上方文章內容）</div>
 </div>
-<div class="faq-item" onclick="this.classList.toggle('open')">
-<div class="faq-q">甘川洞文化村怎麼玩最省力？</div>
-<div class="faq-a">從地鐵1號線土城站（札嗶其站前一站）搭計程車上山，約₩3,000（詳見上文「🏘️ Day 2：甘川洞文化村 → 南浦洞 → 札嗶其」章節）</div>
+<div class="faq-item ls-faq-item" onclick="this.classList.toggle('open')">
+<div class="faq-q ls-faq-q">甘川洞文化村怎麼玩最省力？</div>
+<div class="faq-a ls-faq-a">從地鐵1號線土城站（札嗶其站前一站）搭計程車上山，約₩3,000（詳見上文「🏘️ Day 2：甘川洞文化村 → 南浦洞 → 札嗶其」章節）</div>
 </div>
-<div class="faq-item" onclick="this.classList.toggle('open')">
-<div class="faq-q">釜山要去幾月最適合？</div>
-<div class="faq-a">春天（4-5月）賞櫻+杜鵑花，夏天（6-8月）海雲台海水浴場玩水，秋天的9-11月天氣涼爽最舒服，冬天12-2月可以看西面聖誕燈飾但海風冷（詳見上方文章內容）</div>
+<div class="faq-item ls-faq-item" onclick="this.classList.toggle('open')">
+<div class="faq-q ls-faq-q">釜山要去幾月最適合？</div>
+<div class="faq-a ls-faq-a">春天（4-5月）賞櫻+杜鵑花，夏天（6-8月）海雲台海水浴場玩水，秋天的9-11月天氣涼爽最舒服，冬天12-2月可以看西面聖誕燈飾但海風冷（詳見上方文章內容）</div>
 </div>
-<div class="faq-item" onclick="this.classList.toggle('open')">
-<div class="faq-q">釜山來回機票+4天預算多少？</div>
-<div class="faq-a">經濟型：機票 NT$5,000 + 住宿 NT$6,000 + 餐食 NT$3,000 + 交通 NT$1,000 + 門票 NT$500 = 約 NT$15,500（詳見上文「💰 釜山4天3夜預算參考」章節）</div>
+<div class="faq-item ls-faq-item" onclick="this.classList.toggle('open')">
+<div class="faq-q ls-faq-q">釜山來回機票+4天預算多少？</div>
+<div class="faq-a ls-faq-a">經濟型：機票 NT$5,000 + 住宿 NT$6,000 + 餐食 NT$3,000 + 交通 NT$1,000 + 門票 NT$500 = 約 NT$15,500（詳見上文「💰 釜山4天3夜預算參考」章節）</div>
 </div>
 </section>
 
@@ -657,7 +696,7 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 <!-- 相關文章推薦 -->
 <div class="related-section">
 <h2 class="section-title">📖 延伸閱讀</h2>
-<div class="related-list">
+<div class="related-list ls-related-grid">
 <a class="related-card" href="seoul-5days.html">
 <div class="post-thumb"><img alt="首爾5天4夜行程｜明洞×弘大×梨大×北村" height="1024" loading="lazy" src="images/seoul-hero.webp" width="1536"/></div>
 <div class="post-body">
@@ -685,7 +724,7 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 
 </div><!-- /article-container --><!-- /col-center --></div><!-- /three-col-wrapper --><!-- FOOTER -->
 <div style="display:none"><div style="display:none"><div style="display:none"><div style="display:none"><div style="display:none"><div style="display:none">
-<footer class="site-footer">
+<footer class="site-footer ls-footer">
 <div class="footer-inner">
 <div class="footer-col">
 <h4>🇯🇵 日本自由行</h4>

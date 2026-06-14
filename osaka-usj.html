@@ -48,6 +48,7 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 <link href="beautify-overrides.css" as="style" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/>
 <noscript><link href="beautify-overrides.css" rel="stylesheet"/></noscript>
 <link href="beautify.css" as="style" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/>
+<link href="layout-standard.css" rel="stylesheet"/>
 <noscript><link href="beautify.css" rel="stylesheet"/></noscript>
 <link href="data:image/svg+xml,&lt;svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'&gt;&lt;text y='.9em' font-size='90'&gt;✈&lt;/text&gt;&lt;/svg&gt;" rel="icon"/>
 </p>
@@ -158,13 +159,51 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 </div>
 </section>
 <div class="three-col-wrapper">
-<div class="sidebar-card">
-<a href="osaka-food.html">
-<img alt="大阪環球影城" class="sb-hero-img" loading="lazy" src="images/osaka-usj-sidebar.webp"/>
+<aside class="ls-sidebar">
+<div class="ls-sidebar-card">
+<a href="osaka-usj.html">
+<img alt="大阪攻略" class="ls-sidebar-hero" loading="lazy" src="images/osaka-usj-sidebar.webp"/>
 </a>
+<div class="ls-sidebar-header">
+<div class="ls-sidebar-city">大阪</div>
+<div class="ls-sidebar-sub">自由行攻略</div>
 </div>
-<div class="col-center"><div class="article-container">
-<div class="day-card">
+<nav class="ls-sidebar-nav">
+    <a class="ls-sidebar-nav-item" href="#景點">
+      <span class="ls-sidebar-nav-icon">🏛️</span>
+      <span class="ls-sidebar-nav-label">景點</span>
+    </a>
+    <a class="ls-sidebar-nav-item" href="#美食">
+      <span class="ls-sidebar-nav-icon">🍜</span>
+      <span class="ls-sidebar-nav-label">美食</span>
+    </a>
+    <a class="ls-sidebar-nav-item" href="#購物">
+      <span class="ls-sidebar-nav-icon">🛍️</span>
+      <span class="ls-sidebar-nav-label">購物</span>
+    </a>
+    <a class="ls-sidebar-nav-item" href="#交通">
+      <span class="ls-sidebar-nav-icon">🚆</span>
+      <span class="ls-sidebar-nav-label">交通</span>
+    </a>
+    <a class="ls-sidebar-nav-item" href="#住宿">
+      <span class="ls-sidebar-nav-icon">🏨</span>
+      <span class="ls-sidebar-nav-label">住宿</span>
+    </a>
+    <a class="ls-sidebar-nav-item" href="#實用資訊">
+      <span class="ls-sidebar-nav-icon">💡</span>
+      <span class="ls-sidebar-nav-label">實用資訊</span>
+    </a>
+</nav>
+<div class="ls-sidebar-qr">
+<div class="ls-sidebar-qr-title">📱 追蹤我們</div>
+<img alt="LINE QR" src="images/line-qr.webp"/>
+<div class="ls-sidebar-qr-desc">掃描 LINE 取得最新旅遊資訊</div>
+</div>
+<a class="ls-sidebar-cta" href="travel-tools.html">📂 下載攻略 PDF</a>
+</div>
+</aside>
+<div class="col-center"><div class="article-container ls-article-content">
+<div class="day-card ls-day-card">
 <span class="day-tag">💡實戰攻略精華</span>
 <h3>💡 實戰攻略精華</h3>
 <p>大阪環球影城（USJ）是關西最受歡迎的主題樂園，從超級任天堂樂園到哈利波特魔法世界，再到最新的咒術迴戰設施，這篇幫你用最高效率玩遍所有重點。</p>
@@ -172,15 +211,15 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 <!-- TRIP PROMO BANNER -->
 <div style="margin-bottom:24px;"><a data-affiliate="trip-com" href="https://tw.trip.com/sale/w/4217/japan-travel.html?locale=zh_tw&amp;promo_referer=3952_4217_9&amp;Allianceid=8237671&amp;SID=312406690&amp;trip_sub1=&amp;trip_sub3=P17078945n" rel="nofollow sponsored" target="_blank"><img loading="lazy" alt="Trip.com 熱門優惠" src="images/trip-japan.webp" style="width:100%;border-radius:12px;display:block;"/></a></div>
 <h2>門票種類解析</h2>
-<div class="day-card">
+<div class="day-card ls-day-card">
 <span class="day-tag">一日護照（1-D</span>
 <p><strong>一日護照（1-Day Passport）</strong> — ¥4,200-9,700，依淡旺季浮動。含所有園區基本遊樂設施。</p>
 </div>
-<div class="day-card">
+<div class="day-card ls-day-card">
 <span class="day-tag">快速通關券（Ex</span>
 <p><strong>快速通關券（Express Pass）</strong> — ¥2,000-9,000，可免除指定設施排隊時間。有4項、7項、VIP不同版本。</p>
 </div>
-<div class="day-card">
+<div class="day-card ls-day-card">
 <span class="day-tag">超級任天堂樂園通</span>
 <p><strong>超級任天堂樂園通行證</strong> — ¥2,000-5,000，必須另外購買，不含在一般門票內。</p>
 </div>
@@ -189,12 +228,12 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 <div style="text-align:center;margin:28px 0;">
 <img loading="lazy" alt="大阪環球影城必玩設施實戰心得" src="images/ollieyu-osaka-usj.webp" style="width:100%;max-width:600px;border-radius:16px;box-shadow:0 4px 12px rgba(0,0,0,0.1);"/>
 </div>
-<div class="day-card">
+<div class="day-card ls-day-card">
 <span class="day-tag">🔥超人氣排隊23</span>
 <h3>🔥 超人氣（排隊2-3小時）</h3>
 <p>① 飛天翼龍（過山車）② 咒術迴戰 ③ 好萊塢夢幻雲霄飛車 ④ 蜘蛛人驚魂歷險 ⑤ 哈利波特禁忌之旅</p>
 </div>
-<div class="day-card">
+<div class="day-card ls-day-card">
 <span class="day-tag">⭐推薦排隊306</span>
 <h3>⭐ 推薦（排隊30-60分鐘）</h3>
 <p>⑥ 迷你兵團鬧翻天 ⑦ 大白鯊 ⑧ 浴火赤子情 ⑨ 飛天史努比 ⑩ 小小兵樂園</p>
@@ -247,12 +286,12 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 <p><strong>14:00-16:00 好萊塢園區</strong> — 飛天翼龍、好萊塢雲霄飛車</p>
 <p><strong>16:00-18:00 環球奇境＋小兵團</strong> — 適合全家同樂</p>
 <h2>快速通關券哪種最划算？</h2>
-<div class="day-card">
+<div class="day-card ls-day-card">
 <span class="day-tag">一般遊客推薦</span>
 <h3>一般遊客推薦</h3>
 <p>快速通關券4（¥2,000-4,000），選擇4項最熱門的設施，省下排隊時間2-4小時，性價比最高。</p>
 </div>
-<div class="day-card">
+<div class="day-card ls-day-card">
 <span class="day-tag">深度玩家推薦</span>
 <h3>深度玩家推薦</h3>
 <p>快速通關券7（¥4,000-6,000），一次玩遍所有熱門設施，節省排隊總時間約6小時。</p>
@@ -266,9 +305,9 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 
 
 
-<div class="related-posts">
+<div class="related-posts ls-related">
 <h2 class="section-title">📖 延伸閱讀</h2>
-<div class="related-list">
+<div class="related-list ls-related-grid">
 <a class="related-card" href="tokyo-5days.html">
 <div class="post-thumb"><img alt="東京鐵塔與澀谷十字路口｜東京5天4夜自由行" height="1024" loading="lazy" src="images/tokyo-hero.webp" width="1536"/></div>
 <div class="post-body">
@@ -332,7 +371,7 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 <p class="text-gray-700 leading-relaxed mb-3">下午就是看遊行和撿漏的時間。環球影城的遊行通常在下午兩三點舉行，值得花三十分鐘看一次。遊行結束後很多人會離開，這時候熱門設施的排隊時間會縮短。晚上的夜間遊行和燈光秀也很精彩，記得提前十五分鐘去佔位置。一整天下來，如果路線規劃得好，至少可以玩到八到十個設施，非常充實。</p>
 <p class="mt-2 text-xs text-gray-500">更多：<a href="osaka-food.html" class="text-purple-600 underline">大阪美食</a> · <a href="kansai-pass.html" class="text-purple-600 underline">關西周遊券</a> · <a href="japan-budget-guide.html" class="text-purple-600 underline">日本預算</a></p>
 
-<div class="faq-section">
+<div class="faq-section ls-faq">
 <!-- 住宿推薦（Trip.com 聯盟） -->
 <div class="trip-recommend-card" style="
     background: #E8F8F7;
@@ -373,25 +412,25 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
   </p>
 </div>
 <h2>常見問題 FAQ</h2>
-<div class="faq-item">
-<div class="faq-q">任天堂樂園需要另外買票嗎？<span class="arrow">▼</span></div>
-<div class="faq-a">是的（詳見上方文章內容）</div>
+<div class="faq-item ls-faq-item">
+<div class="faq-q ls-faq-q">任天堂樂園需要另外買票嗎？<span class="arrow">▼</span></div>
+<div class="faq-a ls-faq-a">是的（詳見上方文章內容）</div>
 </div>
-<div class="faq-item">
-<div class="faq-q">大阪環球影城要排多久？<span class="arrow">▼</span></div>
-<div class="faq-a">一般排隊30-90分鐘，熱門設施（如飛天翼龍、咒術迴戰）在旺季可能達2-3小時（詳見上方文章內容）</div>
+<div class="faq-item ls-faq-item">
+<div class="faq-q ls-faq-q">大阪環球影城要排多久？<span class="arrow">▼</span></div>
+<div class="faq-a ls-faq-a">一般排隊30-90分鐘，熱門設施（如飛天翼龍、咒術迴戰）在旺季可能達2-3小時（詳見上方文章內容）</div>
 </div>
-<div class="faq-item">
-<div class="faq-q">可以帶食物進去嗎？<span class="arrow">▼</span></div>
-<div class="faq-a">可以自己攜帶食物和飲料（玻璃容器除外）（詳見上方文章內容）</div>
+<div class="faq-item ls-faq-item">
+<div class="faq-q ls-faq-q">可以帶食物進去嗎？<span class="arrow">▼</span></div>
+<div class="faq-a ls-faq-a">可以自己攜帶食物和飲料（玻璃容器除外）（詳見上方文章內容）</div>
 </div>
-<div class="faq-item">
-<div class="faq-q">什麼時候去最好？<span class="arrow">▼</span></div>
-<div class="faq-a">平日（非周末、非假期）是最佳選擇。12月聖誕季節園區會有特別活動，但人也最多。</div>
+<div class="faq-item ls-faq-item">
+<div class="faq-q ls-faq-q">什麼時候去最好？<span class="arrow">▼</span></div>
+<div class="faq-a ls-faq-a">平日（非周末、非假期）是最佳選擇。12月聖誕季節園區會有特別活動，但人也最多。</div>
 </div>
-<div class="faq-item">
-<div class="faq-q">快速通關券值得買嗎？<span class="arrow">▼</span></div>
-<div class="faq-a">值得（詳見上文「快速通關券哪種最划算？」章節）</div>
+<div class="faq-item ls-faq-item">
+<div class="faq-q ls-faq-q">快速通關券值得買嗎？<span class="arrow">▼</span></div>
+<div class="faq-a ls-faq-a">值得（詳見上文「快速通關券哪種最划算？」章節）</div>
 </div>
 </div>
 
@@ -419,7 +458,7 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 </div>
 </div><!-- /article-container --><!-- /col-center --></div><!-- /three-col-wrapper --><!-- FOOTER -->
 <div style="display:none"><div style="display:none"><div style="display:none"><div style="display:none">
-<footer class="site-footer">
+<footer class="site-footer ls-footer">
 <div class="footer-inner">
 <div class="footer-col">
 <h4>🇯🇵 日本自由行</h4>

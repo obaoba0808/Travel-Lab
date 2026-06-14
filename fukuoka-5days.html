@@ -73,6 +73,7 @@
 <link href="beautify-overrides.css" as="style" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/>
 <noscript><link href="beautify-overrides.css" rel="stylesheet"/></noscript>
 <link href="beautify.css" as="style" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/>
+<link href="layout-standard.css" rel="stylesheet"/>
 <noscript><link href="beautify.css" rel="stylesheet"/></noscript>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-S7KQGHSD2R"></script>
 <script>
@@ -229,13 +230,51 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 <div style="max-width:900px;margin:0 auto 30px;padding:0 20px;">
 <a href="about.html"><img loading="lazy" alt="台灣包車自由行" height="722" src="images/charter-banner.webp" style="width:100%;border-radius:12px;display:block;" width="2179"/></a>
 </div>
-<div class="sidebar-card">
-<a href="tokyo-5days.html">
-<img alt="福岡街景" class="sb-hero-img" loading="lazy" src="images/Fukuoka-sidebar.webp"/>
+<aside class="ls-sidebar">
+<div class="ls-sidebar-card">
+<a href="fukuoka-5days.html">
+<img alt="福岡攻略" class="ls-sidebar-hero" loading="lazy" src="images/fukuoka-sidebar.webp"/>
 </a>
+<div class="ls-sidebar-header">
+<div class="ls-sidebar-city">福岡</div>
+<div class="ls-sidebar-sub">自由行攻略</div>
 </div>
+<nav class="ls-sidebar-nav">
+    <a class="ls-sidebar-nav-item" href="#景點">
+      <span class="ls-sidebar-nav-icon">🏛️</span>
+      <span class="ls-sidebar-nav-label">景點</span>
+    </a>
+    <a class="ls-sidebar-nav-item" href="#美食">
+      <span class="ls-sidebar-nav-icon">🍜</span>
+      <span class="ls-sidebar-nav-label">美食</span>
+    </a>
+    <a class="ls-sidebar-nav-item" href="#購物">
+      <span class="ls-sidebar-nav-icon">🛍️</span>
+      <span class="ls-sidebar-nav-label">購物</span>
+    </a>
+    <a class="ls-sidebar-nav-item" href="#交通">
+      <span class="ls-sidebar-nav-icon">🚆</span>
+      <span class="ls-sidebar-nav-label">交通</span>
+    </a>
+    <a class="ls-sidebar-nav-item" href="#住宿">
+      <span class="ls-sidebar-nav-icon">🏨</span>
+      <span class="ls-sidebar-nav-label">住宿</span>
+    </a>
+    <a class="ls-sidebar-nav-item" href="#實用資訊">
+      <span class="ls-sidebar-nav-icon">💡</span>
+      <span class="ls-sidebar-nav-label">實用資訊</span>
+    </a>
+</nav>
+<div class="ls-sidebar-qr">
+<div class="ls-sidebar-qr-title">📱 追蹤我們</div>
+<img alt="LINE QR" src="images/line-qr.webp"/>
+<div class="ls-sidebar-qr-desc">掃描 LINE 取得最新旅遊資訊</div>
+</div>
+<a class="ls-sidebar-cta" href="travel-tools.html">📂 下載攻略 PDF</a>
+</div>
+</aside>
 <div class="col-center">
-<div class="article-container">
+<div class="article-container ls-article-content">
 <!-- TRIP PROMO BANNER -->
 <div style="position:relative;margin-bottom:24px;">
 <a data-affiliate="trip-com" href="https://tw.trip.com/sale/w/26497/go-japan.html?locale=zh-tw&curr=twd&promo_referer=3952_26497_7&Allianceid=8237671&SID=312406690&trip_sub1=&trip_sub3=P17078987" rel="nofollow sponsored" target="_blank"><img loading="lazy" alt="Trip.com 熱門優惠" src="images/trip-japan.webp" style="width:100%;border-radius:12px;display:block;"/></a>
@@ -243,7 +282,7 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 </div>
 <!-- 基本資訊 -->
 <h2>福岡基本資訊</h2>
-<div class="day-card">
+<div class="day-card ls-day-card">
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:12px;font-size:13px;">
 <div><strong>語言</strong><br/>日文（觀光區有中文標示）</div>
 <div><strong>貨幣</strong><br/>日圓（¥1≈NT$0.22）</div>
@@ -257,7 +296,7 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 </div>
 <!-- Day 1-5 行程 -->
 <h2>5 天行程規劃</h2>
-<div class="day-card">
+<div class="day-card ls-day-card">
 <h3 style="margin-top:0;color:#ff6b35;">Day 1：抵達博多 → 中洲屋台</h3>
 <div style="display:grid;grid-template-columns:auto 1fr;gap:12px;font-size:14px;">
 <div><strong>14:00</strong></div><div>抵達福岡機場 → 搭地下鐵（¥260，約5分鐘）到博多站 → 飯店寄放行李</div>
@@ -267,7 +306,7 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 <div><strong>21:00</strong></div><div>福岡塔看夜景（¥800，開放到21:30），或回飯店休息</div>
 </div>
 </div>
-<div class="day-card">
+<div class="day-card ls-day-card">
 <h3 style="margin-top:0;color:#ff6b35;">Day 2：博多拉麵巡禮 → 天神逛街</h3>
 <div style="display:grid;grid-template-columns:auto 1fr;gap:12px;font-size:14px;">
 <div><strong>08:00</strong></div><div>早餐：<span style="color:var(--tiffany-dark);font-weight:600;">一蘭拉麵博多本店</span>（¥890，24小時營業，建議早上8點前排隊人少）</div>
@@ -278,7 +317,7 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 <div><strong>18:30</strong></div><div>晚餐：天神附近的<span style="color:var(--tiffany-dark);font-weight:600;">「もつ鍋」</span>（牛腸鍋，福岡名物，¥2,000-2,500/人）</div>
 </div>
 </div>
-<div class="day-card">
+<div class="day-card ls-day-card">
 <h3 style="margin-top:0;color:#ff6b35;">Day 3：太宰府天滿宮 → 福岡市美術館</h3>
 <div style="display:grid;grid-template-columns:auto 1fr;gap:12px;font-size:14px;">
 <div><strong>08:30</strong></div><div>博多站搭<span style="color:var(--tiffany-dark);font-weight:600;">西鐵電車</span>到「太宰府站」（¥400，約30分鐘）</div>
@@ -290,7 +329,7 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 <div><strong>18:00</strong></div><div>晚餐：博多站附近<span style="color:var(--tiffany-dark);font-weight:600;">「川端もつ鍋」</span>或<span style="color:var(--tiffany-dark);font-weight:600;">「博多華味鳥」水炊き</span>（博多風雞肉火鍋，¥2,500/人）</div>
 </div>
 </div>
-<div class="day-card">
+<div class="day-card ls-day-card">
 <h3 style="margin-top:0;color:#ff6b35;">Day 4：門司港懷舊之旅（北九州）</h3>
 <div style="display:grid;grid-template-columns:auto 1fr;gap:12px;font-size:14px;">
 <div><strong>08:00</strong></div><div>博多站搭<span style="color:var(--tiffany-dark);font-weight:600;">JR鹿兒島本線特急</span>到門司港站（¥1,700，約50分鐘，持JR PASS免費）</div>
@@ -303,7 +342,7 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 <div><strong>19:00</strong></div><div>回博多後去<span style="color:var(--tiffany-dark);font-weight:600;">屋台</span>喝一杯啤酒，最後一晚放鬆</div>
 </div>
 </div>
-<div class="day-card">
+<div class="day-card ls-day-card">
 <h3 style="margin-top:0;color:#ff6b35;">Day 5：柳川運河 → 採購 → 回程</h3>
 <div style="display:grid;grid-template-columns:auto 1fr;gap:12px;font-size:14px;">
 <div><strong>08:00</strong></div><div>博多站搭JR到<span style="color:var(--tiffany-dark);font-weight:600;">柳川站</span>（¥840，約1小時）</div>
@@ -316,7 +355,7 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 </div>
 <!-- 博多拉麵 -->
 <h2>博多拉麵 10 碗推薦</h2>
-<div class="day-card">
+<div class="day-card ls-day-card">
 <div class="table-responsive"><table style="width:100%;border-collapse:collapse;font-size:13px;">
 <tr style="border-bottom:2px solid var(--tiffany-light);background:#f0fdfa;">
 <th style="text-align:left;padding:6px;">店名</th>
@@ -338,7 +377,7 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 </div>
 <!-- 預算 -->
 <h2>5天4夜預算參考</h2>
-<div class="day-card">
+<div class="day-card ls-day-card">
 <table style="width:100%;border-collapse:collapse;font-size:13px;">
 <tr style="border-bottom:2px solid var(--tiffany-light);background:#f0fdfa;">
 <th style="text-align:left;padding:8px;">項目</th>
@@ -360,7 +399,7 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 <h2>❓ 常見問題</h2>
 
 <h2 class="section-title">📖 延伸閱讀</h2>
-<div class="related-list">
+<div class="related-list ls-related-grid">
 <a class="related-card" href="tokyo-5days.html">
 <div class="post-thumb"><img alt="東京5天4夜行程｜地鐵教學×景點推薦" height="1024" loading="lazy" src="images/tokyo-hero.webp" width="1536"/></div>
 <div class="post-body">
@@ -384,7 +423,7 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 </a>
 </div>
 <div style="display:none"><div style="display:none"><div style="display:none">
-<footer class="site-footer">
+<footer class="site-footer ls-footer">
 <div class="footer-inner">
 <div class="footer-col">
 <h4>🇯🇵 日本自由行</h4>
@@ -498,13 +537,13 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 
 
 
-<section class="faq-section">
-<div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q">福岡值得去幾天？</div><div class="faq-a">推薦3-5天。福岡市區2天（博多、天神、中洲）＋太宰府1天＋門司港/柳川1天＝4-5天最完美。如果時間不夠，至少3天（市區＋太宰府）也能玩得很好。</div></div>
-<div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q">從台灣怎麼去福岡？</div><div class="faq-a">直飛最方便！虎航TPE→FUK直飛約2.5小時，單程促銷價NT$999起。星宇航空也有直飛。也可以搭廉航到大阪再轉新幹線（約2.5小時到博多，¥16,000）。</div></div>
-<div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q">福岡博多拉麵哪碗最好吃？</div><div class="faq-a">福岡是日本拉麵之都。必吃：①一蘭拉麵（博多本店，24小時營業）②一風堂（濃厚豚骨）③博多一幸（超濃白湯）④麵匠群（魚介豚骨）⑤甚兵衛（薄切叉燒）。中洲屋台的屋台拉麵也是獨特體驗。</div></div>
-<div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q">福岡住宿住哪裡方便？</div><div class="faq-a">推薦三區：①博多站周邊（交通最方便，到機場5分鐘，¥8,000-15,000）②天神商圈（逛街最方便，¥10,000-20,000）③中洲/川端（夜生活區，屋台集中，¥6,000-12,000）。推薦住博多站附近。</div></div>
-<div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q">福岡市區交通怎麼規劃？</div><div class="faq-a">福岡市區適合步行！博多→天神走路15-20分鐘（或地下鐵1站¥210）。推薦買福岡市地下鐵1日券¥820。到太宰府搭西鐵電車（¥400，約30分鐘）。到門司港搭JR特急（約50分鐘，¥1,700）。</div></div>
-<div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q">福岡有什麼必買伴手禮？</div><div class="faq-a">①博多拉麵伴手禮（一蘭、一風堂包裝版，¥500-800）②明太子（博多名物，¥1,000-2,000/條）③博多人形（傳統工藝品，¥2,000-5,000）④草莓（福岡草莓品質全日本數一數二）⑤博多和果子（梅枝餅¥150/個）。博多站地下街和天神地下街是採購集中地。</div></div>
+<section class="faq-section ls-faq">
+<div class="faq-item ls-faq-item" onclick="this.classList.toggle('open')"><div class="faq-q ls-faq-q">福岡值得去幾天？</div><div class="faq-a ls-faq-a">推薦3-5天。福岡市區2天（博多、天神、中洲）＋太宰府1天＋門司港/柳川1天＝4-5天最完美。如果時間不夠，至少3天（市區＋太宰府）也能玩得很好。</div></div>
+<div class="faq-item ls-faq-item" onclick="this.classList.toggle('open')"><div class="faq-q ls-faq-q">從台灣怎麼去福岡？</div><div class="faq-a ls-faq-a">直飛最方便！虎航TPE→FUK直飛約2.5小時，單程促銷價NT$999起。星宇航空也有直飛。也可以搭廉航到大阪再轉新幹線（約2.5小時到博多，¥16,000）。</div></div>
+<div class="faq-item ls-faq-item" onclick="this.classList.toggle('open')"><div class="faq-q ls-faq-q">福岡博多拉麵哪碗最好吃？</div><div class="faq-a ls-faq-a">福岡是日本拉麵之都。必吃：①一蘭拉麵（博多本店，24小時營業）②一風堂（濃厚豚骨）③博多一幸（超濃白湯）④麵匠群（魚介豚骨）⑤甚兵衛（薄切叉燒）。中洲屋台的屋台拉麵也是獨特體驗。</div></div>
+<div class="faq-item ls-faq-item" onclick="this.classList.toggle('open')"><div class="faq-q ls-faq-q">福岡住宿住哪裡方便？</div><div class="faq-a ls-faq-a">推薦三區：①博多站周邊（交通最方便，到機場5分鐘，¥8,000-15,000）②天神商圈（逛街最方便，¥10,000-20,000）③中洲/川端（夜生活區，屋台集中，¥6,000-12,000）。推薦住博多站附近。</div></div>
+<div class="faq-item ls-faq-item" onclick="this.classList.toggle('open')"><div class="faq-q ls-faq-q">福岡市區交通怎麼規劃？</div><div class="faq-a ls-faq-a">福岡市區適合步行！博多→天神走路15-20分鐘（或地下鐵1站¥210）。推薦買福岡市地下鐵1日券¥820。到太宰府搭西鐵電車（¥400，約30分鐘）。到門司港搭JR特急（約50分鐘，¥1,700）。</div></div>
+<div class="faq-item ls-faq-item" onclick="this.classList.toggle('open')"><div class="faq-q ls-faq-q">福岡有什麼必買伴手禮？</div><div class="faq-a ls-faq-a">①博多拉麵伴手禮（一蘭、一風堂包裝版，¥500-800）②明太子（博多名物，¥1,000-2,000/條）③博多人形（傳統工藝品，¥2,000-5,000）④草莓（福岡草莓品質全日本數一數二）⑤博多和果子（梅枝餅¥150/個）。博多站地下街和天神地下街是採購集中地。</div></div>
 </section>
 
 <div style="background:linear-gradient(135deg,#0ABAB5,#764ba2);border-radius:16px;padding:32px 24px;margin:32px 0;text-align:center;color:#fff">

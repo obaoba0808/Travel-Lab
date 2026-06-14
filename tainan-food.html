@@ -79,6 +79,7 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 <link href="beautify-overrides.css" as="style" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/>
 <noscript><link href="beautify-overrides.css" rel="stylesheet"/></noscript>
 <link href="beautify.css" as="style" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/>
+<link href="layout-standard.css" rel="stylesheet"/>
 <noscript><link href="beautify.css" rel="stylesheet"/></noscript>
 <!-- Google Analytics 4 -->
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-S7KQGHSD2R"></script>
@@ -205,18 +206,56 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 <div style="max-width:900px;margin:0 auto 30px;padding:0 20px;">
 <a href="about.html"><img loading="lazy" alt="台灣包車自由行" height="722" src="images/charter-banner.webp" style="width:100%;border-radius:12px;display:block;" width="2179"/></a>
 </div>
-<div class="sidebar-card">
-<a href="hualien-taitung.html">
-<img alt="台南美食" class="sb-hero-img" loading="lazy" src="images/tainan-sidebar.webp"/>
+<aside class="ls-sidebar">
+<div class="ls-sidebar-card">
+<a href="tainan-food.html">
+<img alt="台南攻略" class="ls-sidebar-hero" loading="lazy" src="images/tainan-food.webp"/>
 </a>
+<div class="ls-sidebar-header">
+<div class="ls-sidebar-city">台南</div>
+<div class="ls-sidebar-sub">自由行攻略</div>
 </div>
+<nav class="ls-sidebar-nav">
+    <a class="ls-sidebar-nav-item" href="#景點">
+      <span class="ls-sidebar-nav-icon">🏛️</span>
+      <span class="ls-sidebar-nav-label">景點</span>
+    </a>
+    <a class="ls-sidebar-nav-item" href="#美食">
+      <span class="ls-sidebar-nav-icon">🍜</span>
+      <span class="ls-sidebar-nav-label">美食</span>
+    </a>
+    <a class="ls-sidebar-nav-item" href="#購物">
+      <span class="ls-sidebar-nav-icon">🛍️</span>
+      <span class="ls-sidebar-nav-label">購物</span>
+    </a>
+    <a class="ls-sidebar-nav-item" href="#交通">
+      <span class="ls-sidebar-nav-icon">🚆</span>
+      <span class="ls-sidebar-nav-label">交通</span>
+    </a>
+    <a class="ls-sidebar-nav-item" href="#住宿">
+      <span class="ls-sidebar-nav-icon">🏨</span>
+      <span class="ls-sidebar-nav-label">住宿</span>
+    </a>
+    <a class="ls-sidebar-nav-item" href="#實用資訊">
+      <span class="ls-sidebar-nav-icon">💡</span>
+      <span class="ls-sidebar-nav-label">實用資訊</span>
+    </a>
+</nav>
+<div class="ls-sidebar-qr">
+<div class="ls-sidebar-qr-title">📱 追蹤我們</div>
+<img alt="LINE QR" src="images/line-qr.webp"/>
+<div class="ls-sidebar-qr-desc">掃描 LINE 取得最新旅遊資訊</div>
+</div>
+<a class="ls-sidebar-cta" href="travel-tools.html">📂 下載攻略 PDF</a>
+</div>
+</aside>
 <div class="col-center">
-<div class="article-container">
+<div class="article-container ls-article-content">
 <!-- TRIP PROMO BANNER -->
 <div style="margin-bottom:24px;"><a data-affiliate="trip-com" href="https://tw.trip.com/sale/w/4823/hotel-deals.html?locale=zh-TW&amp;promo_referer=3952_4823_11&amp;Allianceid=8237671&amp;SID=312406690&amp;trip_sub1=&amp;trip_sub3=P17011507" rel="nofollow sponsored" target="_blank"><img loading="lazy" alt="Trip.com 熱門優惠" src="images/trip-taiwan.webp" style="width:100%;border-radius:12px;display:block;"/></a></div>
 <h2>🥩 5家必喝溫體牛肉湯</h2>
 <p>台南牛肉湯的靈魂是「溫體牛」— 當天現宰、不冷凍，熱湯一沖，鮮甜肉汁瞬間鎖住。凌晨去吃最新鮮！</p>
-<div class="day-card">
+<div class="day-card ls-day-card">
 <span class="day-tag">No.1</span>
 <h3>文章牛肉湯</h3>
 <ul>
@@ -226,7 +265,7 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 <li><strong>地址</strong>：安平區安平路300號</li>
 </ul>
 </div>
-<div class="day-card">
+<div class="day-card ls-day-card">
 <span class="day-tag">No.2</span>
 <h3>阿村牛肉湯</h3>
 <ul>
@@ -236,7 +275,7 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 <li><strong>地址</strong>：中西區保安路36號</li>
 </ul>
 </div>
-<div class="day-card">
+<div class="day-card ls-day-card">
 <span class="day-tag">No.3</span>
 <h3>六千牛肉湯</h3>
 <ul>
@@ -245,7 +284,7 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 <li><strong>必點</strong>：牛肉湯 NT$150</li>
 </ul>
 </div>
-<div class="day-card">
+<div class="day-card ls-day-card">
 <span class="day-tag">No.4</span>
 <h3>旗哥牛肉湯</h3>
 <ul>
@@ -253,7 +292,7 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 <li><strong>必點</strong>：牛肉湯 NT$100 + 牛肉炒芥藍</li>
 </ul>
 </div>
-<div class="day-card">
+<div class="day-card ls-day-card">
 <span class="day-tag">No.5</span>
 <h3>助仔牛肉湯</h3>
 <ul>
@@ -261,10 +300,10 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 <li><strong>必點</strong>：牛肉湯 NT$120 + 麻油牛肝</li>
 </ul>
 </div>
-<div class="tip-box"><strong>💡 牛肉湯吃法：</strong>先喝一口原味湯頭，再沾醬油膏+薑絲吃肉。加點肉燥飯是台南人的標配！很多店凌晨4-5點最新鮮，早起的人有福了。</div>
+<div class="tip-box ls-tip-box"><strong>💡 牛肉湯吃法：</strong>先喝一口原味湯頭，再沾醬油膏+薑絲吃肉。加點肉燥飯是台南人的標配！很多店凌晨4-5點最新鮮，早起的人有福了。</div>
 <h2>🛒 國華街小吃地圖</h2>
 <p>一條街吃遍台南經典，全程步行500公尺搞定午餐：</p>
-<div class="day-card">
+<div class="day-card ls-day-card">
 <ol>
 <li><strong>富盛號碗粿</strong>（NT$35）：米漿蒸的碗粿，醬油膏+蒜泥一絕</li>
 <li><strong>金得春捲</strong>（NT$45）：花生粉+高麗菜+蛋酥，清爽不膩</li>
@@ -275,24 +314,24 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 </div>
 <h2>☕ 老屋咖啡廳推薦</h2>
 <p>台南的老屋咖啡不是噱頭，是真正在百年建築裡慢下來的體驗：</p>
-<div class="day-card">
+<div class="day-card ls-day-card">
 <h3>Kadoya 喫茶店</h3>
 <p>日式老屋改建，木質調空間搭配手沖咖啡，門口的老榕樹超好拍。拿鐵 NT$150、手沖 NT$180起。</p>
 </div>
-<div class="day-card">
+<div class="day-card ls-day-card">
 <h3>窄門咖啡</h3>
 <p>如其名，入口只有一扇窄門，爬上二樓豁然開朗。老宅氛圍濃厚，窗邊座位看巷弄街景超愜意。</p>
 </div>
-<div class="day-card">
+<div class="day-card ls-day-card">
 <h3>奉茶十八卯</h3>
 <p>百年茶行改建，台灣茶為主角。冷泡茶 NT$120起，配手工茶點。喜歡茶香大於咖啡的人必來。</p>
 </div>
-<div class="day-card">
+<div class="day-card ls-day-card">
 <h3>StableNice</h3>
 <p>老穀倉改建的極簡風咖啡廳，拿鐵拉花精緻，甜點每日限量。適合帶筆電工作或安靜閱讀。</p>
 </div>
 <h2>🏛️ 散步路線：赤崁樓 → 神農街</h2>
-<div class="day-card">
+<div class="day-card ls-day-card">
 <p>吃完午餐後最好的活動就是散步消食：</p>
 <ol>
 <li><strong>赤崁樓</strong>（門票 NT$50）：荷蘭時期古蹟，九隻贔屭碑是亮點</li>
@@ -301,9 +340,9 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 <li><strong>神農街</strong>：清領時期老街，夜間燈籠點亮後超有氣氛</li>
 </ol>
 </div>
-<div class="tip-box"><strong>💡 最佳時間：</strong>神農街建議傍晚5點後去，燈籠亮起來最有味道。白天是老街，晚上是酒吧一條街，兩種風情都值得體驗。</div>
+<div class="tip-box ls-tip-box"><strong>💡 最佳時間：</strong>神農街建議傍晚5點後去，燈籠亮起來最有味道。白天是老街，晚上是酒吧一條街，兩種風情都值得體驗。</div>
 <h2>🏨 住宿推薦區域</h2>
-<div class="day-card">
+<div class="day-card ls-day-card">
 <div class="table-responsive"><table style="width:100%;border-collapse:collapse">
 <tr style="border-bottom:2px solid var(--coral-light)"><th style="text-align:left;padding:8px">區域</th><th style="padding:8px">優點</th><th style="padding:8px">適合誰</th></tr>
 <tr style="border-bottom:1px solid #eee"><td style="padding:8px;font-weight:700">中西區</td><td style="padding:8px">步行到國華街、赤崁樓</td><td style="padding:8px">吃貨首選</td></tr>
@@ -315,14 +354,14 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 
 <!-- EMAIL LEAD MAGNET -->
 
-<section class="faq-section">
+<section class="faq-section ls-faq">
 <h2>❓ 常見問題</h2>
-<div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q">台南牛肉湯幾點去最好？</div><div class="faq-a">溫體牛肉湯凌晨4-5點最新鮮！很多名店5點開門，7點前肉質最佳。不想早起也沒關係，大部分店家營業到下午。</div></div>
-<div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q">台南哪裡可以吃到虱目魚粥？</div><div class="faq-a">安平區「周氏蝦捲」旁邊就有好幾家，市區「阿霞飯店」的虱目魚粥最有名但價格較高。平價選擇推薦永福路上的路邊攤，一碗NT$50-80超新鮮。</div></div>
-<div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q">台南甜湯推薦哪家？</div><div class="faq-a">①「台南舊市場冰店」豆花和芋圓 ②「阿明冰店」芒果冰 ③「洪媽媽湯圓」花生湯 ④「新market湯圓」芝麻湯圓。夏天必吃冰，冬天喝熱湯圓，各有各的好。</div></div>
-<div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q">台南牛肉湯哪一家最好？</div><div class="faq-a">「阿村牛肉湯」和「布莊牛肉湯」是兩大經典。阿村湯頭清甜、布莊肉質軟嫩。另外「南門牛肉湯」和「世合牛肉湯」也很受歡迎。每家風格不同，建議都試試。</div></div>
-<div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q">台南美食怎麼安排一天？</div><div class="faq-a">早上5點吃牛肉湯→早餐後逛安平古堡→午餐吃蝦捲虱目魚→下午喝冰飲逛神農街→晚餐吃台南小吃（棺材板、碗粿、魚粥）→消夜割包或牛肉湯。一天吃5-6餐剛剛好。</div></div>
-<div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q">台南美食區域推薦？</div><div class="faq-a">①安平區（蝦捲、蚵仔煎、海產粥）②西門路一帶（牛肉湯、鱔魚意麵）③國華街（小吃集中地）④神農街（文青咖啡+老屋）⑤花園夜市（週四六日）。不同區域不同風味。</div></div>
+<div class="faq-item ls-faq-item" onclick="this.classList.toggle('open')"><div class="faq-q ls-faq-q">台南牛肉湯幾點去最好？</div><div class="faq-a ls-faq-a">溫體牛肉湯凌晨4-5點最新鮮！很多名店5點開門，7點前肉質最佳。不想早起也沒關係，大部分店家營業到下午。</div></div>
+<div class="faq-item ls-faq-item" onclick="this.classList.toggle('open')"><div class="faq-q ls-faq-q">台南哪裡可以吃到虱目魚粥？</div><div class="faq-a ls-faq-a">安平區「周氏蝦捲」旁邊就有好幾家，市區「阿霞飯店」的虱目魚粥最有名但價格較高。平價選擇推薦永福路上的路邊攤，一碗NT$50-80超新鮮。</div></div>
+<div class="faq-item ls-faq-item" onclick="this.classList.toggle('open')"><div class="faq-q ls-faq-q">台南甜湯推薦哪家？</div><div class="faq-a ls-faq-a">①「台南舊市場冰店」豆花和芋圓 ②「阿明冰店」芒果冰 ③「洪媽媽湯圓」花生湯 ④「新market湯圓」芝麻湯圓。夏天必吃冰，冬天喝熱湯圓，各有各的好。</div></div>
+<div class="faq-item ls-faq-item" onclick="this.classList.toggle('open')"><div class="faq-q ls-faq-q">台南牛肉湯哪一家最好？</div><div class="faq-a ls-faq-a">「阿村牛肉湯」和「布莊牛肉湯」是兩大經典。阿村湯頭清甜、布莊肉質軟嫩。另外「南門牛肉湯」和「世合牛肉湯」也很受歡迎。每家風格不同，建議都試試。</div></div>
+<div class="faq-item ls-faq-item" onclick="this.classList.toggle('open')"><div class="faq-q ls-faq-q">台南美食怎麼安排一天？</div><div class="faq-a ls-faq-a">早上5點吃牛肉湯→早餐後逛安平古堡→午餐吃蝦捲虱目魚→下午喝冰飲逛神農街→晚餐吃台南小吃（棺材板、碗粿、魚粥）→消夜割包或牛肉湯。一天吃5-6餐剛剛好。</div></div>
+<div class="faq-item ls-faq-item" onclick="this.classList.toggle('open')"><div class="faq-q ls-faq-q">台南美食區域推薦？</div><div class="faq-a ls-faq-a">①安平區（蝦捲、蚵仔煎、海產粥）②西門路一帶（牛肉湯、鱔魚意麵）③國華街（小吃集中地）④神農街（文青咖啡+老屋）⑤花園夜市（週四六日）。不同區域不同風味。</div></div>
 <ins class="klk-aff-widget" data-adid="1282376" data-amount="3" data-cardh="126" data-cid="164" data-currency="TWD" data-edgevalue="655" data-lang="zh-TW" data-lgh="470" data-padding="92" data-prod="hotel_dynamic_widget" data-tid=""><a href="//www.klook.com/">Klook.com</a></ins>
 <script type="text/javascript">
   (function (d, sc, u) {
@@ -355,9 +394,9 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 <p style="font-size:13px;margin:12px 0 0;opacity:0.7">🔒 不會發送垃圾郵件，隨時可取消訂閱</p>
 </div>
 
-<div class="related-posts">
+<div class="related-posts ls-related">
 <h2 class="section-title">📖 延伸閱讀</h2>
-<div class="related-list">
+<div class="related-list ls-related-grid">
 <a class="related-card" href="hualien-taitung.html">
 <div class="post-thumb"><img alt="花蓮太魯閣國家公園峽谷｜台灣花東自駕推薦" height="1024" loading="lazy" src="images/hualien-hero.webp" width="1536"/></div>
 <div class="post-body">
@@ -385,7 +424,7 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 </div><!-- /article-container --><!-- /col-center -->
 </div><!-- /three-col-wrapper -->
 <!-- FOOTER -->
-<footer class="site-footer">
+<footer class="site-footer ls-footer">
 <div class="footer-inner">
 <div class="footer-col">
 <h4>🇯🇵 日本自由行</h4>

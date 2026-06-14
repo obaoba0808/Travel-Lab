@@ -10,6 +10,7 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 <link href="beautify-overrides.css" as="style" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/>
 <noscript><link href="beautify-overrides.css" rel="stylesheet"/></noscript>
 <link href="beautify.css" as="style" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/>
+<link href="layout-standard.css" rel="stylesheet"/>
 <noscript><link href="beautify.css" rel="stylesheet"/></noscript><!-- Google Analytics 4 --><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-S7KQGHSD2R"></script><script>  window.dataLayer = window.dataLayer || [];  function gtag(){dataLayer.push(arguments);}  gtag('js', new Date());  gtag('config', 'G-S7KQGHSD2R');</script><link href="data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22&gt;&lt;text y=%22.9em%22 font-size=%2290%22&gt;✈️&lt;/text&gt;&lt;/svg&gt;" rel="icon"/><style>.trip-promo-inline {  margin: 32px 0;  border-radius: 14px;  overflow: hidden;  box-shadow: 0 2px 12px rgba(0,0,0,0.06);  transition: transform 0.2s, box-shadow 0.2s;}.trip-promo-inline:hover {  transform: translateY(-3px);  box-shadow: 0 6px 24px rgba(0,0,0,0.12);}.trip-promo-inline a { display: block; }.trip-promo-inline img { width: 100%; height: auto; display: block; }
 /* Dropdown arrow - CSS only, no Unicode dependency */
 a.dropdown-toggle::after {
@@ -132,35 +133,78 @@ a.dropdown-toggle::after {
 </section>
 
 <div class="breadcrumb-bar"><a href="index.html">首頁</a><span class="sep">›</span><a class="dropdown-toggle" href="japan-travel.html">日本自由行</a><span class="sep">›</span>東京5天4夜</div>
-<!-- CHARTER BANNER --><div style="max-width:900px;margin:0 auto 30px;padding:0 20px;"> <a href="about.html"><img loading="lazy" alt="台灣包車自由行" height="722" src="images/charter-banner.webp" style="width:100%;border-radius:12px;display:block;" width="2179"/></a></div><div class="three-col-wrapper"><!-- 左側邊欄：北海道多圖卡片 --><div class="sidebar-card"> <a href="hokkaido-winter.html"> <img alt="東京街景" class="sb-hero-img" loading="lazy" src="images/tokyo-sidebar.webp"/> </a></div><div class="col-center"><div class="article-container">
+<!-- CHARTER BANNER --><div style="max-width:900px;margin:0 auto 30px;padding:0 20px;"> <a href="about.html"><img loading="lazy" alt="台灣包車自由行" height="722" src="images/charter-banner.webp" style="width:100%;border-radius:12px;display:block;" width="2179"/></a></div><div class="three-col-wrapper"><!-- 左側邊欄：北海道多圖卡片 --><aside class="ls-sidebar">
+<div class="ls-sidebar-card">
+<a href="tokyo-5days.html">
+<img alt="東京攻略" class="ls-sidebar-hero" loading="lazy" src="images/tokyo-sidebar.webp"/>
+</a>
+<div class="ls-sidebar-header">
+<div class="ls-sidebar-city">東京</div>
+<div class="ls-sidebar-sub">自由行攻略</div>
+</div>
+<nav class="ls-sidebar-nav">
+    <a class="ls-sidebar-nav-item" href="#景點">
+      <span class="ls-sidebar-nav-icon">🏛️</span>
+      <span class="ls-sidebar-nav-label">景點</span>
+    </a>
+    <a class="ls-sidebar-nav-item" href="#美食">
+      <span class="ls-sidebar-nav-icon">🍜</span>
+      <span class="ls-sidebar-nav-label">美食</span>
+    </a>
+    <a class="ls-sidebar-nav-item" href="#購物">
+      <span class="ls-sidebar-nav-icon">🛍️</span>
+      <span class="ls-sidebar-nav-label">購物</span>
+    </a>
+    <a class="ls-sidebar-nav-item" href="#交通">
+      <span class="ls-sidebar-nav-icon">🚆</span>
+      <span class="ls-sidebar-nav-label">交通</span>
+    </a>
+    <a class="ls-sidebar-nav-item" href="#住宿">
+      <span class="ls-sidebar-nav-icon">🏨</span>
+      <span class="ls-sidebar-nav-label">住宿</span>
+    </a>
+    <a class="ls-sidebar-nav-item" href="#實用資訊">
+      <span class="ls-sidebar-nav-icon">💡</span>
+      <span class="ls-sidebar-nav-label">實用資訊</span>
+    </a>
+</nav>
+<div class="ls-sidebar-qr">
+<div class="ls-sidebar-qr-title">📱 追蹤我們</div>
+<img alt="LINE QR" src="images/line-qr.webp"/>
+<div class="ls-sidebar-qr-desc">掃描 LINE 取得最新旅遊資訊</div>
+</div>
+<a class="ls-sidebar-cta" href="travel-tools.html">📂 下載攻略 PDF</a>
+</div>
+</aside>
+<div class="col-center"><div class="article-container ls-article-content">
 <!-- TRIP PROMO BANNER -->
 <div style="margin-bottom:24px;"><a data-affiliate="trip-com" href="https://tw.trip.com/sale/w/4217/japan-travel.html?locale=zh_tw&amp;promo_referer=3952_4217_9&amp;Allianceid=8237671&amp;SID=312406690&amp;trip_sub1=&amp;trip_sub3=P17078945n" rel="nofollow sponsored" target="_blank"><img loading="lazy" alt="Trip.com 熱門優惠" src="images/trip-japan.webp" style="width:100%;border-radius:12px;display:block;"/></a></div>
 <h2>📋 行前準備清單</h2>
-<div class="tip-box"><p>出發前搞定這些，到了東京不慌張：</p></div>
-<div class="day-card">
+<div class="tip-box ls-tip-box"><p>出發前搞定這些，到了東京不慌張：</p></div>
+<div class="day-card ls-day-card">
 <span class="day-tag">護照</span>
 <p><strong>護照</strong>：效期6個月以上，台灣護照免簽90天</p>
 </div>
-<div class="day-card">
+<div class="day-card ls-day-card">
 <span class="day-tag">機票</span>
 <p><strong>機票</strong>：桃園→成田/羽田，早買廉航來回 NT$5,000-8,000</p>
 </div>
-<div class="day-card">
+<div class="day-card ls-day-card">
 <span class="day-tag">住宿</span>
 <p><strong>住宿</strong>：新宿、上野、池袋三選一，Agoda比價最划算</p>
 </div>
-<div class="day-card">
+<div class="day-card ls-day-card">
 <span class="day-tag">網路</span>
 <p><strong>網路</strong>：eSIM或Wi-Fi分享器，推薦5天4GB eSIM約 NT$200</p>
 </div>
-<div class="day-card">
+<div class="day-card ls-day-card">
 <span class="day-tag">交通票券</span>
 <p><strong>交通票券</strong>：Tokyo Subway 72小時券 ¥1,500（約 NT$330）</p>
 </div>
-<div class="day-card">
+<div class="day-card ls-day-card">
 <span class="day-tag">日幣</span>
 <p><strong>日幣</strong>：先換 ¥30,000 現金，不夠再去便利店ATM提款</p>
-</div> <div class="tip-box"> <strong>💡 省錢秘訣：</strong>攜帶台灣護照在藥妝店、百貨公司消費滿 ¥5,000 即可辦理免稅（10%），結帳時出示護照即可。  </div> <h2>🗓️ 每日行程詳解</h2>
+</div> <div class="tip-box ls-tip-box"> <strong>💡 省錢秘訣：</strong>攜帶台灣護照在藥妝店、百貨公司消費滿 ¥5,000 即可辦理免稅（10%），結帳時出示護照即可。  </div> <h2>🗓️ 每日行程詳解</h2>
 <!-- KLOOK 聯盟推薦 -->
 <div class="klook-recommend-card" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 4px 16px rgba(0,0,0,0.06)'" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 6px 24px rgba(0,0,0,0.12)'" style="
     background: #E3F2FD;
@@ -200,24 +244,24 @@ a.dropdown-toggle::after {
     （我自己是預算旅行者，會優先選擇方便又不用算車資的票券，Tokyo Subway Ticket 真的省超多！）
   </p>
 </div>
-<div class="day-card"> <span class="day-tag">Day 1</span> <div class="day-card">
+<div class="day-card ls-day-card"> <span class="day-tag">Day 1</span> <div class="day-card ls-day-card">
 <span class="day-tag">抵達東京淺草</span>
 <h3>抵達東京 → 淺草 → 東京晴空塔</h3>
 <!-- 實戰推薦配圖 -->
 <div style="text-align:center;margin:28px 0;">
 <img loading="lazy" alt="東京5天4夜實戰心得：抵達東京、淺草寺、東京晴空塔" src="images/ollieyu-tokyo.webp" style="width:100%;max-width:600px;border-radius:16px;box-shadow:0 4px 12px rgba(0,0,0,0.1);"/>
 </div>
-<ul> <li>午後抵達成田機場，搭 <strong>Skyliner</strong> 到上野（約40分鐘，¥2,520）</li> <li>飯店放行李後，前往 <strong>淺草寺</strong> 逛雷門與仲見世通</li> <li>傍晚步行至 <strong>東京晴空塔</strong>，建議提前買黃昏時段門票</li> <li>晚餐：淺草周邊居酒屋，人均 ¥1,500-2,000</li> </ul> </div> <div class="day-card"> <span class="day-tag">Day 2</span> <h3>明治神宮 → 原宿 → 澀谷</h3>
+<ul> <li>午後抵達成田機場，搭 <strong>Skyliner</strong> 到上野（約40分鐘，¥2,520）</li> <li>飯店放行李後，前往 <strong>淺草寺</strong> 逛雷門與仲見世通</li> <li>傍晚步行至 <strong>東京晴空塔</strong>，建議提前買黃昏時段門票</li> <li>晚餐：淺草周邊居酒屋，人均 ¥1,500-2,000</li> </ul> </div> <div class="day-card ls-day-card"> <span class="day-tag">Day 2</span> <h3>明治神宮 → 原宿 → 澀谷</h3>
 <ul><li>早上 <strong>明治神宮</strong> 散步（免門票，約1小時）</li> <li>中午 <strong>竹下通</strong> 吃可麗餅、逛古著店</li> <li>下午 <strong>澀谷十字路口</strong> 打卡 + <strong>Shibuya Sky</strong> 觀景台</li> <li>晚上澀谷 <strong>Center街</strong> 尋找隱藏居酒屋</li></ul>
-</div> <div class="tip-box"> <strong>💡 提示：</strong>Shibuya Sky 建議提前上 Klook 購票，現場常售罄。黃昏時段看夕陽最美！    </div> </div>
+</div> <div class="tip-box ls-tip-box"> <strong>💡 提示：</strong>Shibuya Sky 建議提前上 Klook 購票，現場常售罄。黃昏時段看夕陽最美！    </div> </div>
 <!-- 實戰推薦配圖 -->
 <div onmouseout="this.style.transform='scale(1)'" onmouseover="this.style.transform='scale(1.02)'" style="text-align:center;margin:28px 0; transition:transform 0.2s;">
 <img alt="澀谷十字路口與 Shibuya Sky 實戰心得" loading="lazy" src="images/shibuya-sky.webp" style="width:100%;max-width:600px;border-radius:16px;box-shadow:0 4px 12px rgba(0,0,0,0.1);cursor:pointer;"/>
 <p style="margin:10px 0 0 0;font-size:13px;color:#0ABAB5;line-height:1.6;font-style:italic;text-align:left;">📝 小編個人體驗：澀谷十字路口下午 3-5 點人最多，想拍空景建議早上 9 點前！Shibuya Sky 黃昏時段（16:00-18:00）超難搶，我上次提前 2 週在 Klook 上買，現場很多人當場買不到。</p>
 </div>
-<div class="day-card">
+<div class="day-card ls-day-card">
 <span class="day-tag">Day 3</span>
-<div class="day-card">
+<div class="day-card ls-day-card">
 <span class="day-tag">築地市場銀座</span>
 <h3>築地市場 → 銀座 → 秋葉原</h3>
 <ul><li>早上前往 <strong>豊洲市場</strong>（築地已搬遷！別跑錯地方），5:00-6:00 看金槍魚拍賣（需提前網路預約）</li>
@@ -226,7 +270,7 @@ a.dropdown-toggle::after {
 <li>下午 <strong>銀座線</strong> 到 <strong>秋葉原</strong>，逛電器店、動漫周邊，推薦 <strong>Super Potato</strong> retro 遊戲店</li>
 <li>晚上在秋葉原吃 <strong>女僕咖啡廳</strong>（如果你敢的話），或去 <strong>筑土神防</strong> 看夜景</li></ul>
 </div>
-<div class="tip-box">
+<div class="tip-box ls-tip-box">
 <strong>💡 個人觀點：</strong>豊洲市場的壽司排隊真的久，但如果你不想排隊，可以改去市場內的 <strong>Uogashi Nihon-ichi</strong>，一樣新鮮但人少很多。另外，銀座的 <strong>Itoya 文具店</strong> 有7層樓，買明信片寄回台灣超有紀念價值！
     </div>
 </div>
@@ -235,9 +279,9 @@ a.dropdown-toggle::after {
 <img alt="豊洲市場（築地市場搬遷後）壽司實戰心得" loading="lazy" src="images/tsukiji-market.webp" style="width:100%;max-width:600px;border-radius:16px;box-shadow:0 4px 12px rgba(0,0,0,0.1);cursor:pointer;"/>
 <p style="margin:10px 0 0 0;font-size:13px;color:#0ABAB5;line-height:1.6;font-style:italic;text-align:left;">📝 小編個人體驗：築地（現在是豊洲）的壽司真的超新鮮！Sushi Dai 排隊 2 小時起跳，但吃第一口就覺得值得。如果你不想排隊，Uogashi Nihon-ichi 是人少很多的選擇，一樣是市場內的壽司店。</p>
 </div>
-<div class="day-card">
+<div class="day-card ls-day-card">
 <span class="day-tag">Day 4</span>
-<div class="day-card">
+<div class="day-card ls-day-card">
 <span class="day-tag">鎌倉一日遊江</span>
 <h3>鎌倉一日遊 → 江之島 → 小町通</h3>
 <ul><li>早上從新宿搭 <strong>JR 湘南新宿線</strong> 到鎌倉（約1小時，¥940）</li>
@@ -247,7 +291,7 @@ a.dropdown-toggle::after {
 <li>下午走到 <strong>江之島</strong>，參觀嚴島神社，黃昏時在島上看出海夕陽超級美</li>
 <li>回程在鎌倉站買 <strong>鎌倉啤酒</strong>（當地釀造，超好喝）</li></ul>
 </div>
-<div class="tip-box">
+<div class="tip-box ls-tip-box">
 <strong>💡 個人觀點：</strong>鎌倉週末人超多，<strong>強烈建議平日去</strong>。如果只能週末去，早上7:00前就要從東京出發，才能避開人潮。另外，江之電是路面電車，沒有車門自動關閉，可以在行駛中把頭伸出車窗拍照（但注意安全）！這是我去過最chill的電車體驗。
     </div>
 </div>
@@ -256,9 +300,9 @@ a.dropdown-toggle::after {
 <img alt="鎌倉一站買當地釀造啤酒實戰心得" loading="lazy" src="images/kamakura-beer.webp" style="width:100%;max-width:600px;border-radius:16px;box-shadow:0 4px 12px rgba(0,0,0,0.1);cursor:pointer;"/>
 <p style="margin:10px 0 0 0;font-size:13px;color:#0ABAB5;line-height:1.6;font-style:italic;text-align:left;">📝 小編個人體驗：鎌倉一站買的當地釀造啤酒超好喝！晚上在車站附近的小酒吧喝，配著鎌倉的夕陽回憶一整天，超有感的。推薦買「鎌倉啤酒 IPA」，苦味剛好不會太重。</p>
 </div>
-<div class="day-card">
+<div class="day-card ls-day-card">
 <span class="day-tag">Day 5</span>
-<div class="day-card">
+<div class="day-card ls-day-card">
 <span class="day-tag">最後採購最後</span>
 <h3>最後採購 → 最後一刻的東京</h3>
 <ul><li>早上 <strong>新宿御苑</strong> 散步（¥500），如果剛好是櫻花季或紅葉季，這裡比上野公園人少很多</li>
@@ -267,7 +311,7 @@ a.dropdown-toggle::after {
 <li>16:00 前回到飯店拿行李，搭 <strong>Narita Express</strong> 或 <strong>Skyliner</strong> 到機場</li>
 <li>在成田/羽田機場最後領 <strong>Last call</strong>：用剩餘日圓買 <strong>Royce生巧克力</strong>（只有機場有賣）和 <strong>東京Banana</strong></li></ul>
 </div>
-<div class="tip-box">
+<div class="tip-box ls-tip-box">
 <strong>💡 個人觀點：</strong>最後一天不要安排太遠的地方，我上次因為去上野逛太久而錯過機場快車，差點沒趕上飛機。建議最後一天就待在飯店附近逛街，輕鬆一點。另外，如果你有剩餘的硬幣（日圓硬幣），可以在機場的 <strong>自動販賣機</strong> 買飲料喝完再安檢，日本安檢不能帶超過100ml液體上飛機。
     </div>
 </div>
@@ -315,7 +359,7 @@ a.dropdown-toggle::after {
     （我自己是預算旅行者，會優先選擇乾淨舒服又不會太貴的住宿，這間目前我還是很推薦的）
   </p>
 </div>
-<section class="faq-section"> <h2>❓ 常見問題</h2> <div class="faq-item" onclick="this.classList.toggle('open')"> <div class="faq-q">東京自由行5天花多少錢？</div> <div class="faq-a">不含機票，5天4夜約 NT$25,000-35,000。我上次去（2025年11月）實際花費：住宿 NT$10,000（新宿膠囊旅館4晚）、交通 NT$2,500（含Narita Express + Subway券）、餐食 NT$9,000（平均每餐NT$450，早餐吃便利店超便宜）、購物 NT$8,000（藥妝+零食+伴手禮）。如果你想省錢，早餐可以吃便利店的飯糰（¥110-150），既便宜又能體驗日本便利店文化。</div> </div> <div class="faq-item" onclick="this.classList.toggle('open')"> <div class="faq-q">東京住哪裡最方便？</div> <div class="faq-a">首推<strong>新宿</strong>，交通超方便且晚上可以吃喝玩樂。但我個人現在更喜歡住<strong>上野</strong>——房價比新宿便宜20-30%，而且步行10分鐘就到淺草寺，早上可以去看日出時的雷門（完全沒遊客！）。池袋適合喜歡逛街的人，太陽城60大樓展望台只要¥620，比晴空塔便宜一半。</div> </div> <div class="faq-item" onclick="this.classList.toggle('open')"> <div class="faq-q">東京地鐵怎麼搭最省錢？</div> <div class="faq-a">一天搭3次以上就買Tokyo Subway 72小時券（¥1,500）。但有一個陷阱：<strong>這張券不能搭JR</strong>（包含山手線！）。如果你需要搭JR，建議改用<strong>IC卡（Suica或Pasmo）</strong>，在任何地鐵站都可以買，押金¥500可退還。我個人建議：前3天買Subway券，後2天用IC卡，這樣最划算。</div> </div> <div class="faq-item" onclick="this.classList.toggle('open')"> <div class="faq-q">第一次去東京要注意什麼？</div> <div class="faq-a">1. <strong>搭手扶梯靠左站立</strong>（東京靠左、大阪靠右，別站錯邊）。2. <strong>電車內禁止講電話</strong>，就算有急事也要下車再打。3. <strong>垃圾分類丟棄</strong>，日本路上很少垃圾桶，我都是帶回飯店丟。4. <strong>便利店超強</strong>，可以換零錢、領現金、買車票、寄包裹，甚至列印文件！5. <strong>攜帶護照</strong>可享免稅，結帳時主動出示。</div> </div> <div class="faq-item" onclick="this.classList.toggle('open')"> <div class="faq-q">東京哪些景點需要提前預約？</div> <div class="faq-a">1. <strong>teamLab Planets</strong>（不是Borderless！Borderless已經搬到麻布台）建議提前1個月網購。2. <strong>東京晴空塔</strong>，黃昏時段最搶手。3. <strong>吉卜力美術館</strong>，每個月10號開放下個月的預約，超難搶。4. <strong>澀谷Sky</strong>，現場常售罄，Klook上買比較穩。5. <strong>築地市場金槍魚拍賣</strong>，需要提前在網路上抽籤，每天名額有限。</div> </div> <div class="faq-item" onclick="this.classList.toggle('open')"> <div class="faq-q">東京便利店有哪些必買？</div> <div class="faq-a">我每次去東京都要掃一遍便利店：1. <strong>飯糰（Onigiri）</strong>——7-11的鮭魚飯糰（¥130）是我的最愛。2. <strong>FamilyMart的炸雞</strong>（¥280）——比台灣的咸酥雞還好吃！3. <strong>Lawson的三角飯糰</strong>——包裝上有加熱指示，可以請店員微波。4. <strong>明治巧克力</strong>（¥200-300）——日本當地賣的比台灣便宜一半。5. <strong>罐裝咖啡（Boss或Georgia）</strong>——自動販賣機買 ¥120，超便宜。</div> </div> </section>
+<section class="faq-section ls-faq"> <h2>❓ 常見問題</h2> <div class="faq-item ls-faq-item" onclick="this.classList.toggle('open')"> <div class="faq-q ls-faq-q">東京自由行5天花多少錢？</div> <div class="faq-a ls-faq-a">不含機票，5天4夜約 NT$25,000-35,000。我上次去（2025年11月）實際花費：住宿 NT$10,000（新宿膠囊旅館4晚）、交通 NT$2,500（含Narita Express + Subway券）、餐食 NT$9,000（平均每餐NT$450，早餐吃便利店超便宜）、購物 NT$8,000（藥妝+零食+伴手禮）。如果你想省錢，早餐可以吃便利店的飯糰（¥110-150），既便宜又能體驗日本便利店文化。</div> </div> <div class="faq-item ls-faq-item" onclick="this.classList.toggle('open')"> <div class="faq-q ls-faq-q">東京住哪裡最方便？</div> <div class="faq-a ls-faq-a">首推<strong>新宿</strong>，交通超方便且晚上可以吃喝玩樂。但我個人現在更喜歡住<strong>上野</strong>——房價比新宿便宜20-30%，而且步行10分鐘就到淺草寺，早上可以去看日出時的雷門（完全沒遊客！）。池袋適合喜歡逛街的人，太陽城60大樓展望台只要¥620，比晴空塔便宜一半。</div> </div> <div class="faq-item ls-faq-item" onclick="this.classList.toggle('open')"> <div class="faq-q ls-faq-q">東京地鐵怎麼搭最省錢？</div> <div class="faq-a ls-faq-a">一天搭3次以上就買Tokyo Subway 72小時券（¥1,500）。但有一個陷阱：<strong>這張券不能搭JR</strong>（包含山手線！）。如果你需要搭JR，建議改用<strong>IC卡（Suica或Pasmo）</strong>，在任何地鐵站都可以買，押金¥500可退還。我個人建議：前3天買Subway券，後2天用IC卡，這樣最划算。</div> </div> <div class="faq-item ls-faq-item" onclick="this.classList.toggle('open')"> <div class="faq-q ls-faq-q">第一次去東京要注意什麼？</div> <div class="faq-a ls-faq-a">1. <strong>搭手扶梯靠左站立</strong>（東京靠左、大阪靠右，別站錯邊）。2. <strong>電車內禁止講電話</strong>，就算有急事也要下車再打。3. <strong>垃圾分類丟棄</strong>，日本路上很少垃圾桶，我都是帶回飯店丟。4. <strong>便利店超強</strong>，可以換零錢、領現金、買車票、寄包裹，甚至列印文件！5. <strong>攜帶護照</strong>可享免稅，結帳時主動出示。</div> </div> <div class="faq-item ls-faq-item" onclick="this.classList.toggle('open')"> <div class="faq-q ls-faq-q">東京哪些景點需要提前預約？</div> <div class="faq-a ls-faq-a">1. <strong>teamLab Planets</strong>（不是Borderless！Borderless已經搬到麻布台）建議提前1個月網購。2. <strong>東京晴空塔</strong>，黃昏時段最搶手。3. <strong>吉卜力美術館</strong>，每個月10號開放下個月的預約，超難搶。4. <strong>澀谷Sky</strong>，現場常售罄，Klook上買比較穩。5. <strong>築地市場金槍魚拍賣</strong>，需要提前在網路上抽籤，每天名額有限。</div> </div> <div class="faq-item ls-faq-item" onclick="this.classList.toggle('open')"> <div class="faq-q ls-faq-q">東京便利店有哪些必買？</div> <div class="faq-a ls-faq-a">我每次去東京都要掃一遍便利店：1. <strong>飯糰（Onigiri）</strong>——7-11的鮭魚飯糰（¥130）是我的最愛。2. <strong>FamilyMart的炸雞</strong>（¥280）——比台灣的咸酥雞還好吃！3. <strong>Lawson的三角飯糰</strong>——包裝上有加熱指示，可以請店員微波。4. <strong>明治巧克力</strong>（¥200-300）——日本當地賣的比台灣便宜一半。5. <strong>罐裝咖啡（Boss或Georgia）</strong>——自動販賣機買 ¥120，超便宜。</div> </div> </section>
 <!-- PDF Lead Magnet -->
 <div style="background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);border-radius:16px;padding:40px 24px;margin:48px 0;text-align:center;color:#fff">
 <div style="display:inline-block;background:rgba(255,255,255,0.2);border-radius:20px;padding:4px 14px;font-size:13px;margin-bottom:16px">🔥 限時免費：本月底前下載</div>
@@ -341,9 +385,9 @@ a.dropdown-toggle::after {
 <img loading="lazy" alt="東京機票+飯店優惠" src="images/Yokohama - Flight + Hotel.webp" style="width:100%;border-radius:8px;"/>
 </a>
 </div>
-<div class="related-posts"> <h2 class="section-title">📖 延伸閱讀</h2> <div class="related-list"> <a class="related-card" href="kansai-pass.html"> <div class="post-thumb"><img alt="關西交通票券" height="1024" loading="lazy" src="images/kansai-hero.webp" width="1536"/></div> <div class="post-body"> <span class="cat-tag">日本自由行</span> <h3>關西交通票券指南｜JR Pass省錢攻略</h3> </div> </a> <a class="related-card" href="hokkaido-winter.html"> <div class="post-thumb"><img alt="北海道冬季" height="1024" loading="lazy" src="images/hokkaido-hero.webp" width="1536"/></div> <div class="post-body"> <span class="cat-tag">日本自由行</span> <h3>北海道冬季賞雪｜5大景點+溫泉推薦</h3> </div> </a> <a class="related-card" href="okinawa.html"> <div class="post-thumb"><img alt="沖繩美麗海水族館｜沖繩自駕必訪景點" height="1024" loading="lazy" src="images/okinawa-hero.webp" width="1536"/></div> <div class="post-body"> <span class="cat-tag">日本自由行</span> <h3>沖繩自駕4天3夜｜美麗海水族館+古宇利島</h3> </div> </a> </div></div></div>
+<div class="related-posts ls-related"> <h2 class="section-title">📖 延伸閱讀</h2> <div class="related-list ls-related-grid"> <a class="related-card" href="kansai-pass.html"> <div class="post-thumb"><img alt="關西交通票券" height="1024" loading="lazy" src="images/kansai-hero.webp" width="1536"/></div> <div class="post-body"> <span class="cat-tag">日本自由行</span> <h3>關西交通票券指南｜JR Pass省錢攻略</h3> </div> </a> <a class="related-card" href="hokkaido-winter.html"> <div class="post-thumb"><img alt="北海道冬季" height="1024" loading="lazy" src="images/hokkaido-hero.webp" width="1536"/></div> <div class="post-body"> <span class="cat-tag">日本自由行</span> <h3>北海道冬季賞雪｜5大景點+溫泉推薦</h3> </div> </a> <a class="related-card" href="okinawa.html"> <div class="post-thumb"><img alt="沖繩美麗海水族館｜沖繩自駕必訪景點" height="1024" loading="lazy" src="images/okinawa-hero.webp" width="1536"/></div> <div class="post-body"> <span class="cat-tag">日本自由行</span> <h3>沖繩自駕4天3夜｜美麗海水族館+古宇利島</h3> </div> </a> </div></div></div>
 </div><!-- /article-container --><!-- /col-center --></div><!-- /three-col-wrapper --><!-- FOOTER -->
-<footer class="site-footer">
+<footer class="site-footer ls-footer">
 <div class="footer-inner">
 <div class="footer-col">
 <h4>🇯🇵 日本自由行</h4>

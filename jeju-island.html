@@ -115,6 +115,7 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 <link href="beautify-overrides.css" as="style" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/>
 <noscript><link href="beautify-overrides.css" rel="stylesheet"/></noscript>
 <link href="beautify.css" as="style" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/>
+<link href="layout-standard.css" rel="stylesheet"/>
 <noscript><link href="beautify.css" rel="stylesheet"/></noscript>
 <!-- Google Analytics 4 -->
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-S7KQGHSD2R"></script>
@@ -241,13 +242,51 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 <div style="max-width:900px;margin:0 auto 30px;padding:0 20px;">
 <a href="about.html"><img loading="lazy" alt="台灣包車自由行" height="722" src="images/charter-banner.webp" style="width:100%;border-radius:12px;display:block;" width="2179"/></a>
 </div>
-<div class="sidebar-card">
-<a href="busan-capsule.html">
-<img alt="濟州島風光" class="sb-hero-img" loading="lazy" src="images/jeju-sidebar.webp"/>
+<aside class="ls-sidebar">
+<div class="ls-sidebar-card">
+<a href="jeju-island.html">
+<img alt="濟州島攻略" class="ls-sidebar-hero" loading="lazy" src="images/jeju-sidebar.webp"/>
 </a>
+<div class="ls-sidebar-header">
+<div class="ls-sidebar-city">濟州島</div>
+<div class="ls-sidebar-sub">自由行攻略</div>
 </div>
+<nav class="ls-sidebar-nav">
+    <a class="ls-sidebar-nav-item" href="#景點">
+      <span class="ls-sidebar-nav-icon">🏛️</span>
+      <span class="ls-sidebar-nav-label">景點</span>
+    </a>
+    <a class="ls-sidebar-nav-item" href="#美食">
+      <span class="ls-sidebar-nav-icon">🍜</span>
+      <span class="ls-sidebar-nav-label">美食</span>
+    </a>
+    <a class="ls-sidebar-nav-item" href="#購物">
+      <span class="ls-sidebar-nav-icon">🛍️</span>
+      <span class="ls-sidebar-nav-label">購物</span>
+    </a>
+    <a class="ls-sidebar-nav-item" href="#交通">
+      <span class="ls-sidebar-nav-icon">🚆</span>
+      <span class="ls-sidebar-nav-label">交通</span>
+    </a>
+    <a class="ls-sidebar-nav-item" href="#住宿">
+      <span class="ls-sidebar-nav-icon">🏨</span>
+      <span class="ls-sidebar-nav-label">住宿</span>
+    </a>
+    <a class="ls-sidebar-nav-item" href="#實用資訊">
+      <span class="ls-sidebar-nav-icon">💡</span>
+      <span class="ls-sidebar-nav-label">實用資訊</span>
+    </a>
+</nav>
+<div class="ls-sidebar-qr">
+<div class="ls-sidebar-qr-title">📱 追蹤我們</div>
+<img alt="LINE QR" src="images/line-qr.webp"/>
+<div class="ls-sidebar-qr-desc">掃描 LINE 取得最新旅遊資訊</div>
+</div>
+<a class="ls-sidebar-cta" href="travel-tools.html">📂 下載攻略 PDF</a>
+</div>
+</aside>
 <div class="col-center">
-<div class="article-container">
+<div class="article-container ls-article-content">
 <!-- TRIP PROMO BANNER -->
 <div style="margin-bottom:24px;"><a data-affiliate="trip-com" href="https://tw.trip.com/sale/w/4337/southkorea-destination.html?locale=zh-TW&amp;promo_referer=3952_4337_8&amp;Allianceid=8237671&amp;SID=312406690&amp;trip_sub1=&amp;trip_sub3=P17011353" rel="nofollow sponsored" target="_blank"><img loading="lazy" alt="Trip.com 熱門優惠" src="images/trip-korea.webp" style="width:100%;border-radius:12px;display:block;"/></a></div>
 <h2>🚗 濟州租車與駕照</h2>
@@ -259,11 +298,11 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 <li><strong>導航</strong>：用 KakaoMap 或 Naver Map，輸入電話號碼導航最準</li>
 <li><strong>加油</strong>：還車前加滿油，自助加油可刷卡</li>
 </ul>
-<div class="tip-box">
+<div class="tip-box ls-tip-box">
 <strong>💡 省錢秘訣：</strong>濟州機場取車最方便，提前在 Klook 預訂比現場便宜15-20%。秋季和冬季是淡季，租車價格更低。
   </div>
 <h2>🗓️ 3天2夜環島行程</h2>
-<div class="day-card">
+<div class="day-card ls-day-card">
 <span class="day-tag">Day 1</span>
 <h3>東部：城山日出峰 → 牛島 → 涉地可支</h3>
 <ul>
@@ -273,11 +312,11 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 <li>下午回本島，前往 <strong>涉地可支</strong>，燈塔與草原的絕美海岸</li>
 <li>晚餐：城山附近 <strong>黑豬肉烤肉</strong>，一人大約 ₩15,000-20,000</li>
 </ul>
-<div class="tip-box">
+<div class="tip-box ls-tip-box">
 <strong>💡 提示：</strong>城山日出峰如果想看日出，需早上5點前到。一般遊客早上9-10點去即可，天氣好時視野超棒。
     </div>
 </div>
-<div class="day-card">
+<div class="day-card ls-day-card">
 <span class="day-tag">Day 2</span>
 <h3>中部：漢拏山 → 山房山 → 中文觀光團地</h3>
 <ul>
@@ -288,7 +327,7 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 <li>晚餐：西歸浦 <strong>海鮮鍋</strong>，新鮮鮑魚、海螺、螃蟹一鍋煮</li>
 </ul>
 </div>
-<div class="day-card">
+<div class="day-card ls-day-card">
 <span class="day-tag">Day 3</span>
 <h3>西部：翰林公園 → 挾才海灘 → 東門市場 → 回程</h3>
 <ul>
@@ -300,7 +339,7 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 </ul>
 </div>
 <h2>💰 3天2夜預算參考</h2>
-<div class="day-card">
+<div class="day-card ls-day-card">
 <div class="table-responsive"><table style="width:100%;border-collapse:collapse;">
 <tr style="border-bottom:2px solid var(--coral-light);"><th style="text-align:left;padding:8px;">項目</th><th style="text-align:right;padding:8px;">預算 (NT$)</th></tr>
 <tr style="border-bottom:1px solid #eee;"><td style="padding:8px;">來回機票（廉航首爾轉機）</td><td style="text-align:right;padding:8px;">5,000-8,000</td></tr>
@@ -329,7 +368,7 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 <p style="margin:10px 0;">透過以下連結預訂機票與住宿，不用多花錢就能支持我們繼續寫攻略</p>
 <a class="btn" href="travel-tools.html">旅遊工具推薦｜eSIM、換匯、行李秤</a>
 </div>
-<section class="faq-section">
+<section class="faq-section ls-faq">
 
 <!-- EMAIL LEAD MAGNET -->
 <div style="background:linear-gradient(135deg,#0ABAB5,#764ba2);border-radius:16px;padding:32px 24px;margin:32px 0;text-align:center;color:#fff">
@@ -345,32 +384,32 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 <p style="font-size:13px;margin:12px 0 0;opacity:0.7">🔒 不會發送垃圾郵件，隨時可取消訂閱</p>
 </div>
 <h2>❓ 常見問題</h2>
-<div class="faq-item" onclick="this.classList.toggle('open')">
-<div class="faq-q">濟州島租車需要國際駕照嗎？</div>
-<div class="faq-a">台灣駕照需要附上韓文公證譯本，可在台灣外交部或駐台北韓國代表部辦理。部分租車公司如LOTTE接受台灣駕照+英文公證，建議出發前確認。</div>
+<div class="faq-item ls-faq-item" onclick="this.classList.toggle('open')">
+<div class="faq-q ls-faq-q">濟州島租車需要國際駕照嗎？</div>
+<div class="faq-a ls-faq-a">台灣駕照需要附上韓文公證譯本，可在台灣外交部或駐台北韓國代表部辦理。部分租車公司如LOTTE接受台灣駕照+英文公證，建議出發前確認。</div>
 </div>
-<div class="faq-item" onclick="this.classList.toggle('open')">
-<div class="faq-q">濟州島3天2夜夠嗎？</div>
-<div class="faq-a">3天2夜可走完主要景點（城山日出峰、牛島、漢拏山擇一），但會比較趕。建議4天3夜比較充裕，可以加上南部中文觀光團地和西歸浦。</div>
+<div class="faq-item ls-faq-item" onclick="this.classList.toggle('open')">
+<div class="faq-q ls-faq-q">濟州島3天2夜夠嗎？</div>
+<div class="faq-a ls-faq-a">3天2夜可走完主要景點（城山日出峰、牛島、漢拏山擇一），但會比較趕。建議4天3夜比較充裕，可以加上南部中文觀光團地和西歸浦。</div>
 </div>
-<div class="faq-item" onclick="this.classList.toggle('open')">
-<div class="faq-q">濟州島什麼季節去最好？</div>
-<div class="faq-a">春季（4月）油菜花盛開、夏季（7-8月）海灘戲水、秋季（10月）芒草與紅葉、冬季（12-2月）漢拏山雪景。秋季氣候最舒適，是旅遊旺季。</div>
+<div class="faq-item ls-faq-item" onclick="this.classList.toggle('open')">
+<div class="faq-q ls-faq-q">濟州島什麼季節去最好？</div>
+<div class="faq-a ls-faq-a">春季（4月）油菜花盛開、夏季（7-8月）海灘戲水、秋季（10月）芒草與紅葉、冬季（12-2月）漢拏山雪景。秋季氣候最舒適，是旅遊旺季。</div>
 </div>
-<div class="faq-item" onclick="this.classList.toggle('open')">
-<div class="faq-q">濟州島必吃美食？</div>
-<div class="faq-a">黑豬肉烤肉（흑돼지）、鮑魚粥（전복죽）、柑橘（한라봉）、海鮮鍋（해물탕）、綠茶甜點（오설록）。黑豬肉一人大約 ₩15,000-25,000。</div>
+<div class="faq-item ls-faq-item" onclick="this.classList.toggle('open')">
+<div class="faq-q ls-faq-q">濟州島必吃美食？</div>
+<div class="faq-a ls-faq-a">黑豬肉烤肉（흑돼지）、鮑魚粥（전복죽）、柑橘（한라봉）、海鮮鍋（해물탕）、綠茶甜點（오설록）。黑豬肉一人大約 ₩15,000-25,000。</div>
 </div>
-<div class="faq-item" onclick="this.classList.toggle('open')">
-<div class="faq-q">牛島怎麼去？</div>
-<div class="faq-a">從城山港搭渡輪約15分鐘到牛島，船票來回 ₩3,500。島上租電動車（需國際駕照）或腳踏車，繞島一圈約2-3小時。渡輪每30分鐘一班。</div>
+<div class="faq-item ls-faq-item" onclick="this.classList.toggle('open')">
+<div class="faq-q ls-faq-q">牛島怎麼去？</div>
+<div class="faq-a ls-faq-a">從城山港搭渡輪約15分鐘到牛島，船票來回 ₩3,500。島上租電動車（需國際駕照）或腳踏車，繞島一圈約2-3小時。渡輪每30分鐘一班。</div>
 <!-- KLOOK 動態橫幅： -->
 <div class="klook-dynamic-banner" style="max-width:468px;margin:32px auto;text-align:center;">
 <ins class="klk-aff-widget" data-adid="1282026" data-amount="3" data-cardh="126" data-cid="20544" data-currency="TWD" data-edgevalue="655" data-lang="zh-TW" data-lgh="470" data-padding="92" data-prod="dynamic_widget" data-tid="-1"><a href="//www.klook.com/">Klook.com</a></ins> <script type="text/javascript"> (function (d, sc, u) { var s = d.createElement(sc), p = d.getElementsByTagName(sc)[0]; s.type = "text/javascript"; s.async = true; s.src = u; p.parentNode.insertBefore(s, p); })( document, "script", "https://affiliate.klook.com/widget/fetch-iframe-init.js" ); </script>
 </div>
-<div class="related-posts">
+<div class="related-posts ls-related">
 <h2 class="section-title">📖 延伸閱讀</h2>
-<div class="related-list">
+<div class="related-list ls-related-grid">
 <a class="related-card" href="seoul-food.html">
 <div class="post-thumb"><img alt="首爾景福宮夜景｜韓國首爾自由行必去景點" height="1024" loading="lazy" src="images/seoul-hero.webp" width="1536"/></div>
 <div class="post-body">
@@ -400,7 +439,7 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 </div><!-- /col-center -->
 <!-- /three-col-wrapper -->
 <!-- FOOTER -->
-<footer class="site-footer">
+<footer class="site-footer ls-footer">
 <div class="footer-inner">
 <div class="footer-col">
 <h4>🇯🇵 日本自由行</h4>

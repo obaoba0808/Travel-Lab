@@ -79,6 +79,7 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 <link href="beautify-overrides.css" as="style" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/>
 <noscript><link href="beautify-overrides.css" rel="stylesheet"/></noscript>
 <link href="beautify.css" as="style" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/>
+<link href="layout-standard.css" rel="stylesheet"/>
 <noscript><link href="beautify.css" rel="stylesheet"/></noscript>
 <!-- Google Analytics 4 -->
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-S7KQGHSD2R"></script>
@@ -205,17 +206,55 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 <div style="max-width:900px;margin:0 auto 30px;padding:0 20px;">
 <a href="about.html"><img loading="lazy" alt="台灣包車自由行" height="722" src="images/charter-banner.webp" style="width:100%;border-radius:12px;display:block;" width="2179"/></a>
 </div>
-<div class="sidebar-card">
-<a href="tainan-food.html">
-<img alt="花蓮海景" class="sb-hero-img" loading="lazy" src="images/hualien-sidebar.webp"/>
+<aside class="ls-sidebar">
+<div class="ls-sidebar-card">
+<a href="hualien-taitung.html">
+<img alt="花東攻略" class="ls-sidebar-hero" loading="lazy" src="images/hualien-sidebar.webp"/>
 </a>
+<div class="ls-sidebar-header">
+<div class="ls-sidebar-city">花東</div>
+<div class="ls-sidebar-sub">自由行攻略</div>
 </div>
+<nav class="ls-sidebar-nav">
+    <a class="ls-sidebar-nav-item" href="#景點">
+      <span class="ls-sidebar-nav-icon">🏛️</span>
+      <span class="ls-sidebar-nav-label">景點</span>
+    </a>
+    <a class="ls-sidebar-nav-item" href="#美食">
+      <span class="ls-sidebar-nav-icon">🍜</span>
+      <span class="ls-sidebar-nav-label">美食</span>
+    </a>
+    <a class="ls-sidebar-nav-item" href="#購物">
+      <span class="ls-sidebar-nav-icon">🛍️</span>
+      <span class="ls-sidebar-nav-label">購物</span>
+    </a>
+    <a class="ls-sidebar-nav-item" href="#交通">
+      <span class="ls-sidebar-nav-icon">🚆</span>
+      <span class="ls-sidebar-nav-label">交通</span>
+    </a>
+    <a class="ls-sidebar-nav-item" href="#住宿">
+      <span class="ls-sidebar-nav-icon">🏨</span>
+      <span class="ls-sidebar-nav-label">住宿</span>
+    </a>
+    <a class="ls-sidebar-nav-item" href="#實用資訊">
+      <span class="ls-sidebar-nav-icon">💡</span>
+      <span class="ls-sidebar-nav-label">實用資訊</span>
+    </a>
+</nav>
+<div class="ls-sidebar-qr">
+<div class="ls-sidebar-qr-title">📱 追蹤我們</div>
+<img alt="LINE QR" src="images/line-qr.webp"/>
+<div class="ls-sidebar-qr-desc">掃描 LINE 取得最新旅遊資訊</div>
+</div>
+<a class="ls-sidebar-cta" href="travel-tools.html">📂 下載攻略 PDF</a>
+</div>
+</aside>
 <div class="col-center">
-<div class="article-container">
+<div class="article-container ls-article-content">
 <!-- TRIP PROMO BANNER -->
 <div style="margin-bottom:24px;"><a data-affiliate="trip-com" href="https://tw.trip.com/sale/w/4823/hotel-deals.html?locale=zh-TW&amp;promo_referer=3952_4823_11&amp;Allianceid=8237671&amp;SID=312406690&amp;trip_sub1=&amp;trip_sub3=P17011507" rel="nofollow sponsored" target="_blank"><img loading="lazy" alt="Trip.com 熱門優惠" src="images/trip-taiwan.webp" style="width:100%;border-radius:12px;display:block;"/></a></div>
 <h2>🗓️ 三天兩夜行程建議</h2>
-<div class="day-card">
+<div class="day-card ls-day-card">
 <span class="day-tag">Day 1</span>
 <h3>花蓮市區 → 太魯閣 → 七星潭</h3>
 <ul>
@@ -227,7 +266,7 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 <li>晚餐：花蓮市區 <strong>東大門夜市</strong> 掃街</li>
 </ul>
 </div>
-<div class="day-card">
+<div class="day-card ls-day-card">
 <span class="day-tag">Day 2</span>
 <h3>台11線海岸公路 → 石梯坪 → 豐濱秘境</h3>
 <ul>
@@ -239,7 +278,7 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 <li>晚餐：台東 <strong>正氣路夜市</strong> 或 <strong>榕樹下米苔目</strong></li>
 </ul>
 </div>
-<div class="day-card">
+<div class="day-card ls-day-card">
 <span class="day-tag">Day 3</span>
 <h3>台東市區 → 多良車站 → 回程</h3>
 <ul>
@@ -250,7 +289,7 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 </ul>
 </div>
 <h2>🏔️ 太魯閣步道推薦</h2>
-<div class="day-card">
+<div class="day-card ls-day-card">
 <div class="table-responsive"><table style="width:100%;border-collapse:collapse">
 <tr style="border-bottom:2px solid var(--coral-light)"><th style="text-align:left;padding:8px">步道</th><th style="padding:8px">難度</th><th style="padding:8px">時間</th><th style="padding:8px">特色</th></tr>
 <tr style="border-bottom:1px solid #eee"><td style="padding:8px;font-weight:700">砂卡礑</td><td style="padding:8px">★☆☆</td><td style="padding:8px">2hr</td><td style="padding:8px">碧綠溪水、好走</td></tr>
@@ -259,9 +298,9 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 <tr><td style="padding:8px;font-weight:700">綠水步道</td><td style="padding:8px">★☆☆</td><td style="padding:8px">1hr</td><td style="padding:8px">合歡越嶺古道遺跡</td></tr>
 </table></div>
 </div>
-<div class="tip-box"><strong>💡 太魯閣注意：</strong>2024年0403地震後部分步道封閉修復中，出發前務必上太魯閣國家公園官網確認開放狀態。白楊步道和錐麓古道需提前線上申請入園許可。</div>
+<div class="tip-box ls-tip-box"><strong>💡 太魯閣注意：</strong>2024年0403地震後部分步道封閉修復中，出發前務必上太魯閣國家公園官網確認開放狀態。白楊步道和錐麓古道需提前線上申請入園許可。</div>
 <h2>🏠 海景民宿推薦</h2>
-<div class="day-card">
+<div class="day-card ls-day-card">
 <ul>
 <li><strong>花蓮 聖托里尼民宿</strong>：希臘風白色建築，陽台直面太平洋，雙人房 NT$2,200起</li>
 <li><strong>花蓮 海中天會館</strong>：七星潭旁，躺在床上看海日出，雙人房 NT$2,800起</li>
@@ -270,7 +309,7 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 </ul>
 </div>
 <h2>🍜 必吃美食清單</h2>
-<div class="day-card">
+<div class="day-card ls-day-card">
 <h3>花蓮</h3>
 <ul>
 <li><strong>炸蛋蔥油餅</strong>：黃車/藍車，花蓮必吃排隊美食（NT$35）</li>
@@ -296,14 +335,14 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 
 <!-- EMAIL LEAD MAGNET -->
 
-<section class="faq-section">
+<section class="faq-section ls-faq">
 <h2>❓ 常見問題</h2>
-<div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q">花蓮台東適合開車還是騎機車？</div><div class="faq-a">3天2夜建議租機車（125cc約NT$500/天），機動性高且停車方便。開車適合4人以上或帶長輩，但台11線有些路段狹窄需小心。</div></div>
-<div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q">花蓮台東幾天最合適？</div><div class="faq-a">最少3天2夜：Day1花蓮（太魯閣+七星潭）→Day2花東公路南下（清水斷崖+瑞穗牧場+伯朗大道）→Day3台東（綠島或都蘭）→回程。想玩更深度建議4-5天。</div></div>
-<div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q">花東自駕要注意什麼？</div><div class="faq-a">①蘇花公路注意落石，下雨天別走 ②台11線部分路段窄，禮讓大型車 ③花東不少路段無手機信號，提前下載離線地圖 ④日落後避免走山路 ⑤加油站的間隔較遠，見到加油站就加滿。</div></div>
-<div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q">花蓮有什麼必吃美食？</div><div class="faq-a">①公正街包子（早上排隊名店）②廟口紅茶③花蓮薯（扁鵲醬油旁邊）④原住民石板烤肉⑤海鮮（七星潭附近）⑥液香扁食。公正街和自強夜市是美食集中區。</div></div>
-<div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q">台東有什麼好玩的？</div><div class="faq-a">①綠島（浮潛+溫泉+梅花鹿）②蘭嶼（潛水+環島）③都蘭海岸④池上便當（便當博物館）⑤多良車站（最美海景車站）⑥红叶温泉。台東適合慢活，不要排太滿行程。</div></div>
-<div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q">花蓮台東住宿推薦？</div><div class="faq-a">花蓮：市區（交通便利、餐廳多）、七星潭（海景民宿）、太魯閣附近（山景靜謐）。台東：市區（平價）、都蘭（文青背包客）、綠島民宿（需提前預約）。花蓮住宿選擇比台東多，旺季務必提前1個月訂房。</div></div>
+<div class="faq-item ls-faq-item" onclick="this.classList.toggle('open')"><div class="faq-q ls-faq-q">花蓮台東適合開車還是騎機車？</div><div class="faq-a ls-faq-a">3天2夜建議租機車（125cc約NT$500/天），機動性高且停車方便。開車適合4人以上或帶長輩，但台11線有些路段狹窄需小心。</div></div>
+<div class="faq-item ls-faq-item" onclick="this.classList.toggle('open')"><div class="faq-q ls-faq-q">花蓮台東幾天最合適？</div><div class="faq-a ls-faq-a">最少3天2夜：Day1花蓮（太魯閣+七星潭）→Day2花東公路南下（清水斷崖+瑞穗牧場+伯朗大道）→Day3台東（綠島或都蘭）→回程。想玩更深度建議4-5天。</div></div>
+<div class="faq-item ls-faq-item" onclick="this.classList.toggle('open')"><div class="faq-q ls-faq-q">花東自駕要注意什麼？</div><div class="faq-a ls-faq-a">①蘇花公路注意落石，下雨天別走 ②台11線部分路段窄，禮讓大型車 ③花東不少路段無手機信號，提前下載離線地圖 ④日落後避免走山路 ⑤加油站的間隔較遠，見到加油站就加滿。</div></div>
+<div class="faq-item ls-faq-item" onclick="this.classList.toggle('open')"><div class="faq-q ls-faq-q">花蓮有什麼必吃美食？</div><div class="faq-a ls-faq-a">①公正街包子（早上排隊名店）②廟口紅茶③花蓮薯（扁鵲醬油旁邊）④原住民石板烤肉⑤海鮮（七星潭附近）⑥液香扁食。公正街和自強夜市是美食集中區。</div></div>
+<div class="faq-item ls-faq-item" onclick="this.classList.toggle('open')"><div class="faq-q ls-faq-q">台東有什麼好玩的？</div><div class="faq-a ls-faq-a">①綠島（浮潛+溫泉+梅花鹿）②蘭嶼（潛水+環島）③都蘭海岸④池上便當（便當博物館）⑤多良車站（最美海景車站）⑥红叶温泉。台東適合慢活，不要排太滿行程。</div></div>
+<div class="faq-item ls-faq-item" onclick="this.classList.toggle('open')"><div class="faq-q ls-faq-q">花蓮台東住宿推薦？</div><div class="faq-a ls-faq-a">花蓮：市區（交通便利、餐廳多）、七星潭（海景民宿）、太魯閣附近（山景靜謐）。台東：市區（平價）、都蘭（文青背包客）、綠島民宿（需提前預約）。花蓮住宿選擇比台東多，旺季務必提前1個月訂房。</div></div>
 <!-- 花東KLOOK 動態橫幅： -->
 <ins class="klk-aff-widget" data-adid="1282375" data-amount="3" data-cardh="126" data-cid="20" data-currency="TWD" data-edgevalue="655" data-lang="zh-TW" data-lgh="470" data-padding="92" data-prod="hotel_dynamic_widget" data-tid=""><a href="//www.klook.com/">Klook.com</a></ins>
 <script type="text/javascript">
@@ -337,9 +376,9 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 <p style="font-size:13px;margin:12px 0 0;opacity:0.7">🔒 不會發送垃圾郵件，隨時可取消訂閱</p>
 </div>
 
-<div class="related-posts">
+<div class="related-posts ls-related">
 <h2 class="section-title">📖 延伸閱讀</h2>
-<div class="related-list">
+<div class="related-list ls-related-grid">
 <a class="related-card" href="tainan-food.html">
 <div class="post-thumb"><img alt="台南赤崁樓古蹟｜台南美食旅遊推薦" height="1024" loading="lazy" src="images/tainan-hero.webp" width="1536"/></div>
 <div class="post-body">
@@ -367,7 +406,7 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 </div><!-- /article-container --><!-- /col-center -->
 </div><!-- /three-col-wrapper -->
 <!-- FOOTER -->
-<footer class="site-footer">
+<footer class="site-footer ls-footer">
 <div class="footer-inner">
 <div class="footer-col">
 <h4>🇯🇵 日本自由行</h4>

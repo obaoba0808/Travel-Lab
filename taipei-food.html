@@ -48,6 +48,7 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 <link href="beautify-overrides.css" as="style" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/>
 <noscript><link href="beautify-overrides.css" rel="stylesheet"/></noscript>
 <link href="beautify.css" as="style" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/>
+<link href="layout-standard.css" rel="stylesheet"/>
 <noscript><link href="beautify.css" rel="stylesheet"/></noscript>
 <link href="data:image/svg+xml,&lt;svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'&gt;&lt;text y='.9em' font-size='90'&gt;✈&lt;/text&gt;&lt;/svg&gt;" rel="icon"/>
 </p>
@@ -158,13 +159,51 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 </div>
 </section>
 <div class="three-col-wrapper">
-<div class="sidebar-card">
-<a href="tainan-food.html">
-<img alt="台北鼎泰豐與牛肉麵｜台北旅遊美食推薦" class="sb-hero-img" loading="lazy" src="images/taipei-food-sidebar.webp"/>
+<aside class="ls-sidebar">
+<div class="ls-sidebar-card">
+<a href="taipei-food.html">
+<img alt="台北攻略" class="ls-sidebar-hero" loading="lazy" src="images/taipei-food.webp"/>
 </a>
+<div class="ls-sidebar-header">
+<div class="ls-sidebar-city">台北</div>
+<div class="ls-sidebar-sub">自由行攻略</div>
 </div>
-<div class="col-center"><div class="article-container">
-<div class="day-card">
+<nav class="ls-sidebar-nav">
+    <a class="ls-sidebar-nav-item" href="#景點">
+      <span class="ls-sidebar-nav-icon">🏛️</span>
+      <span class="ls-sidebar-nav-label">景點</span>
+    </a>
+    <a class="ls-sidebar-nav-item" href="#美食">
+      <span class="ls-sidebar-nav-icon">🍜</span>
+      <span class="ls-sidebar-nav-label">美食</span>
+    </a>
+    <a class="ls-sidebar-nav-item" href="#購物">
+      <span class="ls-sidebar-nav-icon">🛍️</span>
+      <span class="ls-sidebar-nav-label">購物</span>
+    </a>
+    <a class="ls-sidebar-nav-item" href="#交通">
+      <span class="ls-sidebar-nav-icon">🚆</span>
+      <span class="ls-sidebar-nav-label">交通</span>
+    </a>
+    <a class="ls-sidebar-nav-item" href="#住宿">
+      <span class="ls-sidebar-nav-icon">🏨</span>
+      <span class="ls-sidebar-nav-label">住宿</span>
+    </a>
+    <a class="ls-sidebar-nav-item" href="#實用資訊">
+      <span class="ls-sidebar-nav-icon">💡</span>
+      <span class="ls-sidebar-nav-label">實用資訊</span>
+    </a>
+</nav>
+<div class="ls-sidebar-qr">
+<div class="ls-sidebar-qr-title">📱 追蹤我們</div>
+<img alt="LINE QR" src="images/line-qr.webp"/>
+<div class="ls-sidebar-qr-desc">掃描 LINE 取得最新旅遊資訊</div>
+</div>
+<a class="ls-sidebar-cta" href="travel-tools.html">📂 下載攻略 PDF</a>
+</div>
+</aside>
+<div class="col-center"><div class="article-container ls-article-content">
+<div class="day-card ls-day-card">
 <span class="day-tag">💡實戰攻略精華</span>
 <h3>💡 實戰攻略精華</h3>
 <p>台北是美食密度最高的城市之一，從米其林星級餐廳到巷弄隱藏小吃，從早午餐咖啡廳到深夜居酒屋，這篇幫你用5天時間把台北美食精華全部收集。</p>
@@ -172,67 +211,67 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 <!-- TRIP PROMO BANNER -->
 <div style="margin-bottom:24px;"><a data-affiliate="trip-com" href="https://tw.trip.com/sale/w/4823/hotel-deals.html?locale=zh-TW&amp;promo_referer=3952_4823_11&amp;Allianceid=8237671&amp;SID=312406690&amp;trip_sub1=&amp;trip_sub3=P17011507" rel="nofollow sponsored" target="_blank"><img loading="lazy" alt="Trip.com 熱門優惠" src="images/trip-taiwan.webp" style="width:100%;border-radius:12px;display:block;"/></a></div>
 <h2>大安區｜台北美食的心臟</h2>
-<div class="day-card">
+<div class="day-card ls-day-card">
 <span class="day-tag">永康街牛肉麵</span>
 <p><strong>永康街牛肉麵</strong> — NT$180-250，高雄牛肉麵、鼎泰豐、老王記</p>
 </div>
-<div class="day-card">
+<div class="day-card ls-day-card">
 <span class="day-tag">師大夜市</span>
 <p><strong>師大夜市</strong> — 燒麻糬、師園鹹酥雞、好好喝奶茶</p>
 </div>
-<div class="day-card">
+<div class="day-card ls-day-card">
 <span class="day-tag">科技大樓站咖啡街</span>
 <p><strong>科技大樓站咖啡街</strong> — 溫州街老宅咖啡：Ruins Coffee、March</p>
 </div>
 <h2>信義區｜米其林與觀光美食</h2>
-<div class="day-card">
+<div class="day-card ls-day-card">
 <span class="day-tag">鼎泰豐（信義店）</span>
 <p><strong>鼎泰豐（信義店）</strong> — 小籠包NT$268，需排隊30分鐘以上</p>
 </div>
-<div class="day-card">
+<div class="day-card ls-day-card">
 <span class="day-tag">市政府微風廣場</span>
 <p><strong>市政府微風廣場</strong> — 各國料理匯集，高樓景觀餐廳</p>
 </div>
-<div class="day-card">
+<div class="day-card ls-day-card">
 <span class="day-tag">象山步道</span>
 <p><strong>象山步道</strong> — 爬完吃吳興街老店筒仔米糕</p>
 </div>
 <h2>士林區｜夜市與傳統小吃</h2>
-<div class="day-card">
+<div class="day-card ls-day-card">
 <span class="day-tag">士林夜市</span>
 <p><strong>士林夜市</strong> — 大香腸、士林大牛排、蚵仔煎、泡泡冰</p>
 </div>
-<div class="day-card">
+<div class="day-card ls-day-card">
 <span class="day-tag">士林市場</span>
 <p><strong>士林市場</strong> — 2樓大香腸＋蚵仔煎最經典組合</p>
 </div>
-<div class="day-card">
+<div class="day-card ls-day-card">
 <span class="day-tag">至誠路豆花</span>
 <p><strong>至誠路豆花</strong> — 傳統豆花NT$45，料多實在</p>
 </div>
 <h2>大同區｜老台北的味道</h2>
-<div class="day-card">
+<div class="day-card ls-day-card">
 <span class="day-tag">寧夏夜市</span>
 <p><strong>寧夏夜市</strong> — 在地人摯愛，蚵仔煎、雞肉飯、魯肉飯</p>
 </div>
-<div class="day-card">
+<div class="day-card ls-day-card">
 <span class="day-tag">迪化街老街</span>
 <p><strong>迪化街老街</strong> — 年貨大街，霞海城隍廟月老，老宅咖啡：ASW</p>
 </div>
-<div class="day-card">
+<div class="day-card ls-day-card">
 <span class="day-tag">大稻埕</span>
 <p><strong>大稻埕</strong> — 傳統中藥行改建咖啡廳、布料街上吃米苔目冰</p>
 </div>
 <h2>萬華區｜西區美食復興</h2>
-<div class="day-card">
+<div class="day-card ls-day-card">
 <span class="day-tag">龍山寺夜市</span>
 <p><strong>龍山寺夜市</strong> — 滷肉飯、碗粿、割包、牛肉湯</p>
 </div>
-<div class="day-card">
+<div class="day-card ls-day-card">
 <span class="day-tag">西門町</span>
 <p><strong>西門町</strong> — 觀光客美食天堂：阿宗麵線、蜂大咖啡</p>
 </div>
-<div class="day-card">
+<div class="day-card ls-day-card">
 <span class="day-tag">南機場夜市</span>
 <p><strong>南機場夜市</strong> — 最在地的夜市，土耳其冰淇淋、臭豆腐</p>
 </div>
@@ -245,9 +284,9 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 
 
 
-<div class="related-posts">
+<div class="related-posts ls-related">
 <h2 class="section-title">📖 延伸閱讀</h2>
-<div class="related-list">
+<div class="related-list ls-related-grid">
 <a class="related-card" href="tainan-food.html">
 <div class="post-thumb"><img alt="台南赤崁樓古蹟｜台南美食旅遊推薦" height="1024" loading="lazy" src="images/tainan-hero.webp" width="1536"/></div>
 <div class="post-body">
@@ -361,27 +400,27 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 
 <div class="mt-4 p-4 bg-orange-50 rounded-lg" id="p5-expand4"><p class="text-gray-700 text-sm leading-relaxed">台北的美食文化深受閩南、日本和各省眷村影響，融合出獨特的口味。牛肉麵是最具代表性的台灣美食之一，紅燒和清燉兩大流派各有擁護者。滷肉飯則是台灣人的日常，一碗白飯淋上滷肉醬，簡單卻滿足。另外，台灣的便當文化也很特別，一個排骨便當大約台幣八十到一百二，主菜加三到四樣配菜，既經濟又美味。來台北一定要試試這些日常美食，比高級餐廳更能感受真正的台灣味。</p></div>
 
-<div class="faq-section">
+<div class="faq-section ls-faq">
 <h2>常見問題 FAQ</h2>
-<div class="faq-item">
-<div class="faq-q">台北米其林餐廳哪幾家值得去？<span class="arrow">▼</span></div>
-<div class="faq-a">必比登推薦：鼎泰豐（信義店）、宋柏林、雙月食品、小王小黃（詳見上文「大安區｜台北美食的心臟」章節）</div>
+<div class="faq-item ls-faq-item">
+<div class="faq-q ls-faq-q">台北米其林餐廳哪幾家值得去？<span class="arrow">▼</span></div>
+<div class="faq-a ls-faq-a">必比登推薦：鼎泰豐（信義店）、宋柏林、雙月食品、小王小黃（詳見上文「大安區｜台北美食的心臟」章節）</div>
 </div>
-<div class="faq-item">
-<div class="faq-q">台北夜市哪個最好吃？<span class="arrow">▼</span></div>
-<div class="faq-a">士林夜市（最大型，觀光客多）、寧夏夜市（在地人最愛，蚵仔煎、雞肉飯、魯肉飯）、南機場夜市（最在地，便宜實惠）、饒河街（胡椒餅、藥燉排骨）（詳見上文「大安區｜台北美食的心臟」章節）</div>
+<div class="faq-item ls-faq-item">
+<div class="faq-q ls-faq-q">台北夜市哪個最好吃？<span class="arrow">▼</span></div>
+<div class="faq-a ls-faq-a">士林夜市（最大型，觀光客多）、寧夏夜市（在地人最愛，蚵仔煎、雞肉飯、魯肉飯）、南機場夜市（最在地，便宜實惠）、饒河街（胡椒餅、藥燉排骨）（詳見上文「大安區｜台北美食的心臟」章節）</div>
 </div>
-<div class="faq-item">
-<div class="faq-q">台北美食要花多少預算？<span class="arrow">▼</span></div>
-<div class="faq-a">小吃：NT$50-150/餐；一般餐廳：NT$300-600/人；米其林：NT$1,000-3,000/人（詳見上方文章內容）</div>
+<div class="faq-item ls-faq-item">
+<div class="faq-q ls-faq-q">台北美食要花多少預算？<span class="arrow">▼</span></div>
+<div class="faq-a ls-faq-a">小吃：NT$50-150/餐；一般餐廳：NT$300-600/人；米其林：NT$1,000-3,000/人（詳見上方文章內容）</div>
 </div>
-<div class="faq-item">
-<div class="faq-q">台北美食怎麼安排路線最有效率？<span class="arrow">▼</span></div>
-<div class="faq-a">Day1：大安區（永康街牛肉麵+師大夜市）Day2：士林區（士林夜市+故宮）Day3：大同區（寧夏夜市+迪化街）Day4：信義區（鼎泰豐+象山步道）Day5：萬華區（龍山寺+南機場夜市）（詳見上文「大安區｜台北美食的心臟」章節）</div>
+<div class="faq-item ls-faq-item">
+<div class="faq-q ls-faq-q">台北美食怎麼安排路線最有效率？<span class="arrow">▼</span></div>
+<div class="faq-a ls-faq-a">Day1：大安區（永康街牛肉麵+師大夜市）Day2：士林區（士林夜市+故宮）Day3：大同區（寧夏夜市+迪化街）Day4：信義區（鼎泰豐+象山步道）Day5：萬華區（龍山寺+南機場夜市）（詳見上文「大安區｜台北美食的心臟」章節）</div>
 </div>
-<div class="faq-item">
-<div class="faq-q">台北有什麼隱藏版美食？<span class="arrow">▼</span></div>
-<div class="faq-a">① 永康街「永康15」芒果冰（非鼎泰豐那條巷子）② 大安區「段純貞」牛肉麵 ③ 中山區「喫飯食堂」定食 ④ 松山區「阜杭豆漿」（5點就要排）⑤ 萬華區「合江街」平價便當（詳見上文「大安區｜台北美食的心臟」章節）</div>
+<div class="faq-item ls-faq-item">
+<div class="faq-q ls-faq-q">台北有什麼隱藏版美食？<span class="arrow">▼</span></div>
+<div class="faq-a ls-faq-a">① 永康街「永康15」芒果冰（非鼎泰豐那條巷子）② 大安區「段純貞」牛肉麵 ③ 中山區「喫飯食堂」定食 ④ 松山區「阜杭豆漿」（5點就要排）⑤ 萬華區「合江街」平價便當（詳見上文「大安區｜台北美食的心臟」章節）</div>
 </div>
 </div>
 
@@ -408,7 +447,7 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 </div><!-- /article-container --></div>
 </div><!-- /article-container --><!-- /col-center --></div><!-- /three-col-wrapper --><!-- FOOTER -->
 <div style="display:none"><div style="display:none"><div style="display:none"><div style="display:none">
-<footer class="site-footer">
+<footer class="site-footer ls-footer">
 <div class="footer-inner">
 <div class="footer-col">
 <h4>🇯🇵 日本自由行</h4>

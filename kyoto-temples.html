@@ -79,6 +79,7 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 <link href="beautify-overrides.css" as="style" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/>
 <noscript><link href="beautify-overrides.css" rel="stylesheet"/></noscript>
 <link href="beautify.css" as="style" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/>
+<link href="layout-standard.css" rel="stylesheet"/>
 <noscript><link href="beautify.css" rel="stylesheet"/></noscript>
 <!-- Google Analytics 4 -->
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-S7KQGHSD2R"></script>
@@ -205,13 +206,51 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 <div style="max-width:900px;margin:0 auto 30px;padding:0 20px;">
 <a href="about.html"><img loading="lazy" alt="台灣包車自由行" height="722" src="images/charter-banner.webp" style="width:100%;border-radius:12px;display:block;" width="2179"/></a>
 </div>
-<div class="sidebar-card">
-<a href="kansai-pass.html">
-<img alt="京都寺廟" class="sb-hero-img" loading="lazy" src="images/kyoto-temples-sidebar.webp"/>
+<aside class="ls-sidebar">
+<div class="ls-sidebar-card">
+<a href="kyoto-temples.html">
+<img alt="京都攻略" class="ls-sidebar-hero" loading="lazy" src="images/kyoto-sidebar.webp"/>
 </a>
+<div class="ls-sidebar-header">
+<div class="ls-sidebar-city">京都</div>
+<div class="ls-sidebar-sub">自由行攻略</div>
 </div>
+<nav class="ls-sidebar-nav">
+    <a class="ls-sidebar-nav-item" href="#景點">
+      <span class="ls-sidebar-nav-icon">🏛️</span>
+      <span class="ls-sidebar-nav-label">景點</span>
+    </a>
+    <a class="ls-sidebar-nav-item" href="#美食">
+      <span class="ls-sidebar-nav-icon">🍜</span>
+      <span class="ls-sidebar-nav-label">美食</span>
+    </a>
+    <a class="ls-sidebar-nav-item" href="#購物">
+      <span class="ls-sidebar-nav-icon">🛍️</span>
+      <span class="ls-sidebar-nav-label">購物</span>
+    </a>
+    <a class="ls-sidebar-nav-item" href="#交通">
+      <span class="ls-sidebar-nav-icon">🚆</span>
+      <span class="ls-sidebar-nav-label">交通</span>
+    </a>
+    <a class="ls-sidebar-nav-item" href="#住宿">
+      <span class="ls-sidebar-nav-icon">🏨</span>
+      <span class="ls-sidebar-nav-label">住宿</span>
+    </a>
+    <a class="ls-sidebar-nav-item" href="#實用資訊">
+      <span class="ls-sidebar-nav-icon">💡</span>
+      <span class="ls-sidebar-nav-label">實用資訊</span>
+    </a>
+</nav>
+<div class="ls-sidebar-qr">
+<div class="ls-sidebar-qr-title">📱 追蹤我們</div>
+<img alt="LINE QR" src="images/line-qr.webp"/>
+<div class="ls-sidebar-qr-desc">掃描 LINE 取得最新旅遊資訊</div>
+</div>
+<a class="ls-sidebar-cta" href="travel-tools.html">📂 下載攻略 PDF</a>
+</div>
+</aside>
 <div class="col-center">
-<div class="article-container">
+<div class="article-container ls-article-content">
 <!-- TRIP PROMO BANNER -->
 <div style="margin-bottom:24px;"><a data-affiliate="trip-com" href="https://tw.trip.com/sale/w/4217/japan-travel.html?locale=zh_tw&amp;promo_referer=3952_4217_9&amp;Allianceid=8237671&amp;SID=312406690&amp;trip_sub1=&amp;trip_sub3=P17078945n" rel="nofollow sponsored" target="_blank"><img loading="lazy" alt="Trip.com 熱門優惠" src="images/trip-japan.webp" style="width:100%;border-radius:12px;display:block;"/></a></div>
 <h2>🏯 京都3大寺廟散步路線</h2>
@@ -219,7 +258,7 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 <div style="text-align:center;margin:28px 0;">
 <img loading="lazy" alt="京都3大寺廟散步路線實戰心得" src="images/ollieyu-tokyo.webp" style="width:100%;max-width:600px;border-radius:16px;box-shadow:0 4px 12px rgba(0,0,0,0.1);"/>
 </div>
-<div class="day-card">
+<div class="day-card ls-day-card">
 <span class="day-tag">路線 A</span>
 <h3>東山路线：清水寺 → 二年坂三年坂 → 八坂神社 → 祇園</h3>
 <p>最經典的京都散步行程，全程約3公里，沿著古街慢慢走，感受千年古都氛圍。</p>
@@ -229,11 +268,11 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 <li><strong>八坂神社</strong>：免門票，祇園祭的主場，舞殿提燈超美</li>
 <li><strong>祇園花見小路</strong>：運氣好可遇到藝妓，傍晚氣氛最佳</li>
 </ul>
-<div class="tip-box">
+<div class="tip-box ls-tip-box">
 <strong>💡 建議：</strong>清水寺早上8點前到可避開人潮，從清水寺往八坂神社方向走是下坡，比較輕鬆。
     </div>
 </div>
-<div class="day-card">
+<div class="day-card ls-day-card">
 <span class="day-tag">路線 B</span>
 <h3>北山路線：金閣寺 → 龍安寺 → 仁和寺 → 嵐山</h3>
 <p>金閣寺的耀眼金色與嵐山竹林的翠綠，一條路線看盡京都兩種美。</p>
@@ -244,7 +283,7 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 <li><strong>渡月橋</strong>：嵐山地標，秋楓期間橋面兩側一片火紅</li>
 </ul>
 </div>
-<div class="day-card">
+<div class="day-card ls-day-card">
 <span class="day-tag">路線 C</span>
 <h3>南邊路線：伏見稻荷 → 東福寺 → 宇治</h3>
 <p>千本鳥居的震撼與宇治抹茶的甘甜，加碼東福寺的紅葉絕景。</p>
@@ -253,7 +292,7 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 <li><strong>東福寺</strong>（門票 ¥400）：京都賞楓No.1，通天橋看整片紅葉地毯</li>
 <li><strong>宇治</strong>：搭JR約20分鐘，中村藤吉本店吃抹茶聖代、平等院參觀</li>
 </ul>
-<div class="tip-box">
+<div class="tip-box ls-tip-box">
 <strong>💡 省錢提示：</strong>伏見稻荷24小時開放，免門票！清晨5-6點去幾乎包場，拍照不用等。山頂來回約2小時。
     </div>
 </div>
@@ -298,27 +337,27 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 <a class="btn-white" href="https://line.me/ti/g/NbNGnW4Eh6" rel="noopener noreferrer" target="_blank">🗺️ 幫我規劃台灣行程</a>
 
 
-<section class="faq-section">
+<section class="faq-section ls-faq">
 <h2>❓ 常見問題</h2>
-<div class="faq-item" onclick="this.classList.toggle('open')">
-<div class="faq-q">京都賞楓什麼時候最美？</div>
-<div class="faq-a">最佳賞楓期通常在11月中旬至12月初。清水寺和永觀堂夜楓點燈約11月中旬開始，建議平日前往避開週末人潮。</div>
+<div class="faq-item ls-faq-item" onclick="this.classList.toggle('open')">
+<div class="faq-q ls-faq-q">京都賞楓什麼時候最美？</div>
+<div class="faq-a ls-faq-a">最佳賞楓期通常在11月中旬至12月初。清水寺和永觀堂夜楓點燈約11月中旬開始，建議平日前往避開週末人潮。</div>
 </div>
-<div class="faq-item" onclick="this.classList.toggle('open')">
-<div class="faq-q">京都寺廟需要門票嗎？</div>
-<div class="faq-a">大部分知名寺廟需門票：清水寺 ¥400、金閣寺 ¥500、伏見稻荷免費、銀閣寺 ¥500。建議買京都巴士一日券 ¥700 搭公車移動。</div>
+<div class="faq-item ls-faq-item" onclick="this.classList.toggle('open')">
+<div class="faq-q ls-faq-q">京都寺廟需要門票嗎？</div>
+<div class="faq-a ls-faq-a">大部分知名寺廟需門票：清水寺 ¥400、金閣寺 ¥500、伏見稻荷免費、銀閣寺 ¥500。建議買京都巴士一日券 ¥700 搭公車移動。</div>
 </div>
-<div class="faq-item" onclick="this.classList.toggle('open')">
-<div class="faq-q">京都怎麼避開人潮？</div>
-<div class="faq-a">1. 早上8點前到清水寺（9點後旅遊團湧入）2. 選擇非熱門寺廟如大德寺、詩仙堂 3. 平日去伏見稻荷 4. 秋季夜楓選週四或週五 5. 避開日本連假。</div>
+<div class="faq-item ls-faq-item" onclick="this.classList.toggle('open')">
+<div class="faq-q ls-faq-q">京都怎麼避開人潮？</div>
+<div class="faq-a ls-faq-a">1. 早上8點前到清水寺（9點後旅遊團湧入）2. 選擇非熱門寺廟如大德寺、詩仙堂 3. 平日去伏見稻荷 4. 秋季夜楓選週四或週五 5. 避開日本連假。</div>
 </div>
-<div class="faq-item" onclick="this.classList.toggle('open')">
-<div class="faq-q">京都推薦住哪裡？</div>
-<div class="faq-a">首推四條河原町附近，逛街吃飯都方便。預算夠可選嵐山溫泉旅館。京都車站附近交通方便但比較無聊，祇園區域最有京都氛圍但房價偏高。</div>
+<div class="faq-item ls-faq-item" onclick="this.classList.toggle('open')">
+<div class="faq-q ls-faq-q">京都推薦住哪裡？</div>
+<div class="faq-a ls-faq-a">首推四條河原町附近，逛街吃飯都方便。預算夠可選嵐山溫泉旅館。京都車站附近交通方便但比較無聊，祇園區域最有京都氛圍但房價偏高。</div>
 </div>
-<div class="faq-item" onclick="this.classList.toggle('open')">
-<div class="faq-q">京都必吃美食有哪些？</div>
-<div class="faq-a">京料理（懷石料理）、抹茶甜點（中村藤吉、茶寮都路里）、湯豆腐（南禪寺順正）、生八橋（伴手禮首選）、錦市場各式小吃。預算有限可選午餐套餐，約 ¥2,000-3,000。</div>
+<div class="faq-item ls-faq-item" onclick="this.classList.toggle('open')">
+<div class="faq-q ls-faq-q">京都必吃美食有哪些？</div>
+<div class="faq-a ls-faq-a">京料理（懷石料理）、抹茶甜點（中村藤吉、茶寮都路里）、湯豆腐（南禪寺順正）、生八橋（伴手禮首選）、錦市場各式小吃。預算有限可選午餐套餐，約 ¥2,000-3,000。</div>
 </div>
 </section>
 
@@ -335,9 +374,9 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 <p style="font-size:13px;margin:12px 0 0;opacity:0.7">🔒 不會發送垃圾郵件，隨時可取消訂閱</p>
 </div>
 
-<div class="related-posts">
+<div class="related-posts ls-related">
 <h2 class="section-title">📖 延伸閱讀</h2>
-<div class="related-list">
+<div class="related-list ls-related-grid">
 <a class="related-card" href="tokyo-5days.html">
 <div class="post-thumb"><img alt="東京自由行" height="1024" loading="lazy" src="images/tokyo-hero.webp" width="1536"/></div>
 <div class="post-body">
@@ -365,7 +404,7 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 </div><!-- /article-container -->
 </div><!-- /three-col-wrapper -->
 <!-- FOOTER -->
-<footer class="site-footer">
+<footer class="site-footer ls-footer">
 <div class="footer-inner">
 <div class="footer-col">
 <h4>🇯🇵 日本自由行</h4>

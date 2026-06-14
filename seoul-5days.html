@@ -38,6 +38,7 @@
 <link href="beautify-overrides.css" as="style" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/>
 <noscript><link href="beautify-overrides.css" rel="stylesheet"/></noscript>
 <link href="beautify.css" as="style" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/>
+<link href="layout-standard.css" rel="stylesheet"/>
 <noscript><link href="beautify.css" rel="stylesheet"/></noscript>
   
   <!-- JSON-LD -->
@@ -274,13 +275,51 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 <a href="about.html"><img loading="lazy" alt="台灣包車自由行" height="722" src="images/charter-banner.webp" style="width:100%;border-radius:12px;display:block;" width="2179"/></a>
 </div>
 <div class="three-col-wrapper">
-<div class="sidebar-card">
-<a href="seoul-food.html">
-<img alt="首爾街景" class="sb-hero-img" loading="lazy" src="images/seoul-sidebar.webp"/>
+<aside class="ls-sidebar">
+<div class="ls-sidebar-card">
+<a href="seoul-5days.html">
+<img alt="首爾攻略" class="ls-sidebar-hero" loading="lazy" src="images/seoul-sidebar.webp"/>
 </a>
+<div class="ls-sidebar-header">
+<div class="ls-sidebar-city">首爾</div>
+<div class="ls-sidebar-sub">自由行攻略</div>
 </div>
+<nav class="ls-sidebar-nav">
+    <a class="ls-sidebar-nav-item" href="#景點">
+      <span class="ls-sidebar-nav-icon">🏛️</span>
+      <span class="ls-sidebar-nav-label">景點</span>
+    </a>
+    <a class="ls-sidebar-nav-item" href="#美食">
+      <span class="ls-sidebar-nav-icon">🍜</span>
+      <span class="ls-sidebar-nav-label">美食</span>
+    </a>
+    <a class="ls-sidebar-nav-item" href="#購物">
+      <span class="ls-sidebar-nav-icon">🛍️</span>
+      <span class="ls-sidebar-nav-label">購物</span>
+    </a>
+    <a class="ls-sidebar-nav-item" href="#交通">
+      <span class="ls-sidebar-nav-icon">🚆</span>
+      <span class="ls-sidebar-nav-label">交通</span>
+    </a>
+    <a class="ls-sidebar-nav-item" href="#住宿">
+      <span class="ls-sidebar-nav-icon">🏨</span>
+      <span class="ls-sidebar-nav-label">住宿</span>
+    </a>
+    <a class="ls-sidebar-nav-item" href="#實用資訊">
+      <span class="ls-sidebar-nav-icon">💡</span>
+      <span class="ls-sidebar-nav-label">實用資訊</span>
+    </a>
+</nav>
+<div class="ls-sidebar-qr">
+<div class="ls-sidebar-qr-title">📱 追蹤我們</div>
+<img alt="LINE QR" src="images/line-qr.webp"/>
+<div class="ls-sidebar-qr-desc">掃描 LINE 取得最新旅遊資訊</div>
+</div>
+<a class="ls-sidebar-cta" href="travel-tools.html">📂 下載攻略 PDF</a>
+</div>
+</aside>
 <div class="col-center">
-<div class="article-container">
+<div class="article-container ls-article-content">
 <!-- TRIP PROMO BANNER -->
 <div style="position:relative;margin-bottom:24px;">
 <a data-affiliate="trip-com" href="https://tw.trip.com/sale/w/26497/go-korea.html?locale=zh-tw&curr=twd&promo_referer=3952_26497_7&Allianceid=8237671&SID=312406690&trip_sub1=&trip_sub3=P17078987" rel="nofollow sponsored" target="_blank"><img loading="lazy" alt="Trip.com 熱門優惠" src="images/trip-korea.webp" style="width:100%;border-radius:12px;display:block;"/></a>
@@ -303,7 +342,7 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 
       <!-- 5天4夜行程總覽 -->
       <h2>🗓️ 5天4夜行程總覽</h2>
-      <div class="day-card">
+      <div class="day-card ls-day-card">
         <span class="day-tag">Day 1</span>
         <h3>抵達 → 明洞購物 → 明洞聖堂夜景</h3>
         <ul>
@@ -313,12 +352,12 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
           <li>傍晚：<strong>明洞聖堂</strong>（免費，哥德式建築，夜景超美）</li>
           <li>晚上：明洞街邊攤吃晚餐（炒年糕、魚板、糖餅）</li>
         </ul>
-        <div class="tip-box">
+        <div class="tip-box ls-tip-box">
           <strong>💡 提示：</strong>明洞購物街人潮最多是週末下午，建議平日早上 10-12 點去，店員比較有時間介紹產品，還可以試妝。
         </div>
       </div>
 
-      <div class="day-card">
+      <div class="day-card ls-day-card">
         <span class="day-tag">Day 2</span>
         <h3>景福宮 → 北村韓屋 → 三清洞咖啡廳 → 仁寺洞</h3>
         <ul>
@@ -335,7 +374,7 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
         </div>
       </div>
 
-      <div class="day-card">
+      <div class="day-card ls-day-card">
         <span class="day-tag">Day 3</span>
         <h3>弘大商圈 → 梨大 → 新村 → 弘大夜生活</h3>
         <ul>
@@ -345,12 +384,12 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
           <li>步行到<strong>新村</strong>（炒年糕一條街，自己動手炒，₩15,000/人）</li>
           <li>晚上：<strong>弘大夜生活</strong>（Live Club、酒吧、街頭表演）</li>
         </ul>
-        <div class="tip-box">
+        <div class="tip-box ls-tip-box">
           <strong>💡 提示：</strong>弘大週末晚上最熱鬧，但有點吵。喜歡安靜的人建議週日-週四去，一樣有街頭表演但人潮較少。
         </div>
       </div>
 
-      <div class="day-card">
+      <div class="day-card ls-day-card">
         <span class="day-tag">Day 4</span>
         <h3>南山塔 → 東大門設計廣場 → 東大門批發市場</h3>
         <ul>
@@ -362,7 +401,7 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
         </ul>
       </div>
 
-      <div class="day-card">
+      <div class="day-card ls-day-card">
         <span class="day-tag">Day 5</span>
         <h3>聖水洞咖啡街 → 免稅店補貨 → 機場返程</h3>
         <ul>
@@ -381,14 +420,14 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
       <!-- 交通完整攻略 -->
       <h2>🚇 首爾交通完整攻略</h2>
       
-      <div class="tip-box">
+      <div class="tip-box ls-tip-box">
         <div class="hb-title">T-money 卡怎麼買？</div>
         <p>便利商店（CU/7-Eleven/GS25）有賣，空卡 ₩2,500（約 NT$57），加值 ₩5,000 起。搭地鐵享折扣（單程 ₩1,500 → 用 T-money ₩1,250），公車也有折扣。退卡地點：便利商店（餘額 ₩30,000 以下可退）。</p>
       </div>
 
       <p style="margin:16px 0;">首爾地鐵系統非常發達，有 22 條路線，覆蓋整個首爾市區和近郊。以下是最常用的路線：</p>
       
-      <div class="day-card">
+      <div class="day-card ls-day-card">
         <h3>地鐵常用路線</h3>
         <ul>
           <li><strong>1號線（藍色）</strong>：連接首爾站、鐘路、市廳、仁川方向</li>
@@ -399,7 +438,7 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
         </ul>
       </div>
 
-      <div class="day-card">
+      <div class="day-card ls-day-card">
         <h3>機場到市區交通</h3>
         <ul>
           <li><strong>AREX 機場快線</strong>：仁川機場 ↔ 首爾站，直達無停靠，₩9,500，約 43 分鐘。最推薦！</li>
@@ -409,35 +448,35 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
         </ul>
       </div>
 
-      <div class="tip-box">
+      <div class="tip-box ls-tip-box">
         <strong>💡 省錢秘訣：</strong>從機場到市區，強烈推薦搭 AREX 機場快線！比巴士快、比計程車便宜。另外，首爾地鐵有「地鐵一日券」（₩15,000，約 NT$340），一天搭 4 次以上就回本，適合行程密集的人。
       </div>
 
       <!-- 住宿推薦 -->
       <h2>🏨 首爾住宿推薦區域</h2>
       
-      <div class="day-card">
+      <div class="day-card ls-day-card">
         <h3>明洞區（Myeong-dong）</h3>
         <p><strong>優點：</strong>購物最方便，步行到明洞街，地鐵 2 號線明洞站。適合第一次去首爾、喜歡購物的人。</p>
         <p><strong>缺點：</strong>價格較高，週末和連假常滿房。</p>
         <p><strong>預算：</strong>雙人房 NT$2,000-4,000/晚。</p>
       </div>
 
-      <div class="day-card">
+      <div class="day-card ls-day-card">
         <h3>弘大區（Hongdae）</h3>
         <p><strong>優點：</strong>年輕人區域，夜生活豐富，地鐵 2 號線弘大入口站。適合喜歡夜生活、預算有限的人。</p>
         <p><strong>缺點：</strong>週末晚上較吵，不適合喜歡安靜的人。</p>
         <p><strong>預算：</strong>雙人房 NT$1,500-3,000/晚。</p>
       </div>
 
-      <div class="day-card">
+      <div class="day-card ls-day-card">
         <h3>江南區（Gangnam）</h3>
         <p><strong>優點：</strong>高級區域，咖啡廳和餐廳品質好，地鐵 2 號線/新盆唐線。適合預算較高、喜歡高級氛圍的人。</p>
         <p><strong>缺點：</strong>離觀光景點較遠，交通時間較長。</p>
         <p><strong>預算：</strong>雙人房 NT$3,000-6,000/晚。</p>
       </div>
 
-      <div class="day-card">
+      <div class="day-card ls-day-card">
         <h3>東大門區（Dongdaemun）</h3>
         <p><strong>優點：</strong>批發市場區，適合喜歡便宜購物的人，地鐵 1/2/4 號線。晚上 8 點後市場才開始營業。</p>
         <p><strong>缺點：</strong>晚上較吵，白天沒什麼特色。</p>
@@ -447,27 +486,27 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
       <!-- 美食推薦 -->
       <h2>🍖 首爾必吃美食推薦</h2>
       
-      <div class="day-card">
+      <div class="day-card ls-day-card">
         <h3>烤肉（한고기）</h3>
         <p>韓國代表性美食，推薦「往五郎」連鎖店，一人約 ₩30,000-50,000（約 NT$680-1,130）。點餐後店員會協助烤肉，不用自己動手。搭配生菜包肉、蒜頭、辣椒，超級滿足！</p>
       </div>
 
-      <div class="day-card">
+      <div class="day-card ls-day-card">
         <h3>参雞雞（삼게탕）</h3>
         <p>人蔘雞湯，補身首選，一人約 ₩15,000-20,000（約 NT$340-450）。整隻小雞肚子裡塞滿糯米和人蔘，湯頭鮮甜營養。推薦「土俗村参雞雞」，很多明星都去吃過。</p>
       </div>
 
-      <div class="day-card">
+      <div class="day-card ls-day-card">
         <h3>石鍋拌飯（돌솥비빔밥）</h3>
         <p>熱石鍋配韓式小菜，一人約 ₩10,000-15,000（約 NT$230-340）。鍋巴超好吃，記得拌均勻後等 2 分鐘讓鍋巴形成。推薦「全州中央會館」，石鍋拌飯發源地。</p>
       </div>
 
-      <div class="day-card">
+      <div class="day-card ls-day-card">
         <h3>炒年糕（떡볶이）</h3>
         <p>辣炒年糕，路邊攤約 ₩3,000-5,000（約 NT$68-113）。新村「炒年糕一條街」可以自己動手炒，₩15,000/人，超有趣的體驗！</p>
       </div>
 
-      <div class="day-card">
+      <div class="day-card ls-day-card">
         <h3>炸雞啤酒（치킨맥주）</h3>
         <p>韓劇帶動的吃法，炸雞半隻約 ₩18,000-25,000（約 NT$410-565）。推薦「BBQ」或「kyochon」連鎖店，外皮酥脆、肉質多汁。搭配啤酒（맥주），就是韓國人的「Chimaek」文化！</p>
       </div>
@@ -475,7 +514,7 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
       <!-- 預算試算 -->
       <h2>💰 首爾 5天4夜預算試算</h2>
       
-      <div class="tip-box">
+      <div class="tip-box ls-tip-box">
         <div class="hb-title">總預算約 NT$15,000-25,000（不含機票）</div>
         <p>住宿 4 晚：NT$6,000-12,000（明洞雙人房 NT$2,000-4,000/晚 × 4 晚）｜ 餐食：NT$3,000-5,000（平價小吃一餐 ₩8,000-15,000，烤肉大餐一人 ₩30,000-50,000）｜ 交通：NT$1,500-2,500（地鐵+T-money+機場快線）｜ 購物：NT$3,000-8,000（化妝品、服飾、免稅品）｜ 門票：NT$500-1,500（景福宮 ₩3,000、南山塔 ₩27,000）</p>
       </div>
@@ -492,7 +531,7 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
       <!-- 注意事項 -->
       <h2>⚠️ 首爾旅遊注意事項</h2>
       
-      <div class="day-card">
+      <div class="day-card ls-day-card">
         <h3>氣溫與穿衣指南</h3>
         <ul>
           <li><strong>春天（3-5月）</strong>：10-20°C，建議洋蔥式穿搭（薄外套+長袖+T恤）</li>
@@ -502,7 +541,7 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
         </ul>
       </div>
 
-      <div class="day-card">
+      <div class="day-card ls-day-card">
         <h3>語言與溝通</h3>
         <ul>
           <li>韓國人英文普遍不好，但便利商店和百貨公司有會說英文的店員。</li>
@@ -511,7 +550,7 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
         </ul>
       </div>
 
-      <div class="day-card">
+      <div class="day-card ls-day-card">
         <h3>退稅與免稅</h3>
         <ul>
           <li>單筆消費滿 ₩30,000（約 NT$680）可退稅 7-8%。</li>
@@ -520,7 +559,7 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
         </ul>
       </div>
 
-      <div class="day-card">
+      <div class="day-card ls-day-card">
         <h3>網路與上網</h3>
         <ul>
           <li>推薦購買<strong>韓國 eSIM</strong>（提前在台灣購買，下飛機就有網路）。</li>
@@ -567,54 +606,54 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 
     
 
-<section class="faq-section">
+<section class="faq-section ls-faq">
         <h2>❓ 常見問題</h2>
         
-        <div class="faq-item" onclick="this.classList.toggle('open')">
-          <div class="faq-q">首爾5天4夜花多少錢？<span class="arrow">▼</span></div>
-          <div class="faq-a">不含機票約 NT$15,000-25,000（住宿4晚 NT$6,000-12,000、餐食 NT$3,000-5,000、交通 NT$1,500-2,500、購物 NT$3,000-8,000、門票 NT$500-1,500）（詳見上文「💰 首爾 5天4夜預算試算」章節）</div>
+        <div class="faq-item ls-faq-item" onclick="this.classList.toggle('open')">
+          <div class="faq-q ls-faq-q">首爾5天4夜花多少錢？<span class="arrow">▼</span></div>
+          <div class="faq-a ls-faq-a">不含機票約 NT$15,000-25,000（住宿4晚 NT$6,000-12,000、餐食 NT$3,000-5,000、交通 NT$1,500-2,500、購物 NT$3,000-8,000、門票 NT$500-1,500）（詳見上文「💰 首爾 5天4夜預算試算」章節）</div>
         </div>
 
-        <div class="faq-item" onclick="this.classList.toggle('open')">
-          <div class="faq-q">首爾怎麼移動最方便？<span class="arrow">▼</span></div>
-          <div class="faq-a">首選地鐵（Subway），有中文語音播報（詳見上文「🚇 首爾交通完整攻略」章節）</div>
+        <div class="faq-item ls-faq-item" onclick="this.classList.toggle('open')">
+          <div class="faq-q ls-faq-q">首爾怎麼移動最方便？<span class="arrow">▼</span></div>
+          <div class="faq-a ls-faq-a">首選地鐵（Subway），有中文語音播報（詳見上文「🚇 首爾交通完整攻略」章節）</div>
         </div>
 
-        <div class="faq-item" onclick="this.classList.toggle('open')">
-          <div class="faq-q">首爾什麼季節去最好？<span class="arrow">▼</span></div>
-          <div class="faq-a">3-5月是春天，櫻花盛開（4月中），氣溫 10-20°C（詳見上方文章內容）</div>
+        <div class="faq-item ls-faq-item" onclick="this.classList.toggle('open')">
+          <div class="faq-q ls-faq-q">首爾什麼季節去最好？<span class="arrow">▼</span></div>
+          <div class="faq-a ls-faq-a">3-5月是春天，櫻花盛開（4月中），氣溫 10-20°C（詳見上方文章內容）</div>
         </div>
 
-        <div class="faq-item" onclick="this.classList.toggle('open')">
-          <div class="faq-q">首爾住宿推薦哪個區域？<span class="arrow">▼</span></div>
-          <div class="faq-a">明洞（Myeong-dong）：購物最方便，步行到明洞街，但價格較高（詳見上文「🏨 首爾住宿推薦區域」章節）</div>
+        <div class="faq-item ls-faq-item" onclick="this.classList.toggle('open')">
+          <div class="faq-q ls-faq-q">首爾住宿推薦哪個區域？<span class="arrow">▼</span></div>
+          <div class="faq-a ls-faq-a">明洞（Myeong-dong）：購物最方便，步行到明洞街，但價格較高（詳見上文「🏨 首爾住宿推薦區域」章節）</div>
         </div>
 
-        <div class="faq-item" onclick="this.classList.toggle('open')">
-          <div class="faq-q">首爾必吃美食有哪些？<span class="arrow">▼</span></div>
-          <div class="faq-a">烤肉（한고기）：韓國代表性美食，推薦「往五郎」連鎖店，一人約 ₩30,000-50,000（詳見上文「🍖 首爾必吃美食推薦」章節）</div>
+        <div class="faq-item ls-faq-item" onclick="this.classList.toggle('open')">
+          <div class="faq-q ls-faq-q">首爾必吃美食有哪些？<span class="arrow">▼</span></div>
+          <div class="faq-a ls-faq-a">烤肉（한고기）：韓國代表性美食，推薦「往五郎」連鎖店，一人約 ₩30,000-50,000（詳見上文「🍖 首爾必吃美食推薦」章節）</div>
         </div>
 
-        <div class="faq-item" onclick="this.classList.toggle('open')">
-          <div class="faq-q">首爾必去景點有哪些？<span class="arrow">▼</span></div>
-          <div class="faq-a">景福宮（경복궁）：朝鮮時代王宮，門票 ₩3,000，守衛交接儀式 10:00/14:00（詳見上文「🗓️ 5天4夜行程總覽」章節）</div>
+        <div class="faq-item ls-faq-item" onclick="this.classList.toggle('open')">
+          <div class="faq-q ls-faq-q">首爾必去景點有哪些？<span class="arrow">▼</span></div>
+          <div class="faq-a ls-faq-a">景福宮（경복궁）：朝鮮時代王宮，門票 ₩3,000，守衛交接儀式 10:00/14:00（詳見上文「🗓️ 5天4夜行程總覽」章節）</div>
         </div>
 
-        <div class="faq-item" onclick="this.classList.toggle('open')">
-          <div class="faq-q">首爾怎麼買免稅品最划算？<span class="arrow">▼</span></div>
-          <div class="faq-a">① 機場免稅店（線上預購，價格較便宜）② 市區免稅店（新羅免稅店、樂天免稅店，現場逛+直接提貨）③ 明洞街邊櫃位（開放時間營業，價格較高但方便）（詳見上方文章內容）</div>
+        <div class="faq-item ls-faq-item" onclick="this.classList.toggle('open')">
+          <div class="faq-q ls-faq-q">首爾怎麼買免稅品最划算？<span class="arrow">▼</span></div>
+          <div class="faq-a ls-faq-a">① 機場免稅店（線上預購，價格較便宜）② 市區免稅店（新羅免稅店、樂天免稅店，現場逛+直接提貨）③ 明洞街邊櫃位（開放時間營業，價格較高但方便）（詳見上方文章內容）</div>
         </div>
 
-        <div class="faq-item" onclick="this.classList.toggle('open')">
-          <div class="faq-q">首爾有哪些隱藏版體驗？<span class="arrow">▼</span></div>
-          <div class="faq-a">① 韓服體驗（北村韓屋租借韓服，₩20,000-30,000/2小時，可免費進入景福宮）② 炒年糕體驗（新村「炒年糕一條街」，自己動手炒，₩15,000/人）③ 韓式汗蒸幕（江南「黃金汗蒸幕」，全身去角質+按摩，₩120,000/3小時）④...（詳見上文「⚠️ 首爾旅遊注意事項」章節）</div>
+        <div class="faq-item ls-faq-item" onclick="this.classList.toggle('open')">
+          <div class="faq-q ls-faq-q">首爾有哪些隱藏版體驗？<span class="arrow">▼</span></div>
+          <div class="faq-a ls-faq-a">① 韓服體驗（北村韓屋租借韓服，₩20,000-30,000/2小時，可免費進入景福宮）② 炒年糕體驗（新村「炒年糕一條街」，自己動手炒，₩15,000/人）③ 韓式汗蒸幕（江南「黃金汗蒸幕」，全身去角質+按摩，₩120,000/3小時）④...（詳見上文「⚠️ 首爾旅遊注意事項」章節）</div>
         </div>
 
       </section>
 
 </div><!-- /article-container --><!-- /col-center --></div><!-- /three-col-wrapper --><!-- FOOTER -->
 </div>
-<footer class="site-footer">
+<footer class="site-footer ls-footer">
 <div class="footer-inner">
 <div class="footer-col">
 <h4>🇯🇵 日本自由行</h4>
