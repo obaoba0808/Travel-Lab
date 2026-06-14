@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="zh-Hant-TW">
 <head>
 <meta charset="utf-8"/>
@@ -341,7 +341,7 @@ footer { margin-top: 3em; padding-top: 1em; border-top: 1px solid #ddd; color: #
 <div class="ls-lead-magnet-icon">📄</div>
 <h3>免費下載完整攻略</h3>
 <p>輸入 Email 免費取得台灣旅遊攻略，包含完整行程表、美食地圖與優惠券。</p>
-<form action="https://formspree.io/f/xredjjgb" method="POST" onsubmit="fetch('https://golightly-email-reply.happybird.workers.dev',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:this.elements.email.value,resource:'emergency-contact-card'})}).catch(function(){});">
+<form action="https://formspree.io/f/xredjjgb" method="POST" >
 <input type="email" name="email" placeholder="輸入你的 Email" required/>
 <input type="hidden" name="resource" value="emergency-contact-card"/>
 <button type="submit">免費下載</button>
