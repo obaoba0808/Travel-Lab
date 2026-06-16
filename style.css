@@ -984,3 +984,23 @@ div[style*="max-width:900px;margin:0 auto 30px;padding:0 20px;"] {
 .hero-stats-bar strong{font-size:18px;font-weight:700;color:#fff;margin-right:4px}
 .hero-stats-bar .stats-dot{color:rgba(255,255,255,0.5);font-weight:300}
 @media(max-width:768px){.hero-landing-full{height:55vh;min-height:380px;margin-bottom:24px}.hero-full-title{font-size:30px}.hero-stats-bar{flex-wrap:wrap;gap:12px;padding:10px 20px;border-radius:25px;font-size:13px}.hero-stats-bar strong{font-size:16px}}
+/* ========== CHARTER BANNER (台灣包車) ========== */
+.ls-charter-banner {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.ls-charter-banner a {
+    display: block;
+    width: 100%;
+}
+
+.ls-charter-banner img {
+    max-width: 100%;
+    height: auto;
+    width: 100%;
+    display: block;
+}
