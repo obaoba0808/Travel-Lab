@@ -1,11 +1,23 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-S7KQGHSD2R"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-S7KQGHSD2R');
+  </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta content="noindex, nofollow" name="robots"/>
     <title>2026年6月月度回顧｜golightly.fun</title>
     <meta name="description" content="golightly.fun 2026年6月工作回顧：SEO修復完成、內容大幅擴充、旅行工具上線、變現系統整合。含W14-W15工作計畫。">
     <link rel="canonical" href="https://golightly.fun/monthly-review.html">
+<link href="https://golightly.fun/monthly-review.html" hreflang="zh-Hant" rel="alternate"/>
+<link href="https://golightly.fun/monthly-review.html" hreflang="zh-TW" rel="alternate"/>
+<link href="https://golightly.fun/monthly-review.html" hreflang="x-default" rel="alternate"/>
     <meta property="og:title" content="2026年6月月度回顧｜golightly.fun">
     <meta property="og:description" content="golightly.fun 2026年6月工作回顧：SEO修復完成、內容大幅擴充、旅行工具上線、變現系統整合。">
     <meta property="og:type" content="article">
@@ -19,9 +31,52 @@
     <script type="application/ld+json">
     {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"首頁","item":"https://golightly.fun/"},{"@type":"ListItem","position":2,"name":"2026年6月月度回顧","item":"https://golightly.fun/monthly-review.html"}]}
     </script>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="beautify.css">
+    <link as="style" onload="this.onload=null;this.rel='stylesheet'" rel="preload" href="style.css">
+<noscript><link rel="stylesheet" href="style.css"></noscript>
+    <link as="style" onload="this.onload=null;this.rel='stylesheet'" rel="preload" href="beautify.css">
+<noscript><link rel="stylesheet" href="beautify.css"></noscript>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+/* 響應式表格 - 手機版優化 */
+.table-responsive {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 1rem 0;
+}
+.table-responsive table {
+  min-width: 600px;
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .table-responsive table {
+    font-size: 13px;
+  }
+  .table-responsive th,
+  .table-responsive td {
+    padding: 8px 6px;
+    white-space: nowrap;
+  }
+  .table-responsive td:last-child {
+    white-space: normal;
+    min-width: 120px;
+  }
+}
+@media (max-width: 480px) {
+  .table-responsive table {
+    font-size: 12px;
+  }
+  .table-responsive th,
+  .table-responsive td {
+    padding: 6px 4px;
+  }
+}
+</style>
+<script>
+/*! loadCSS rel=preload polyfill. [c]2017 Filament Group, Inc. MIT License */
+(function(w){"use strict";if(!w.loadCSS){w.loadCSS=function(){}}
+var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.createElement("link").relList.supports("preload")}catch(e){ret=!1}return function(){return ret}})();rp.poly=function(){var link=w.document.getElementsByTagName("link");for(var i=0;i<link.length;i++){var lnk=link[i];if(lnk.rel==="preload"&&lnk.as==="style"&&!lnk.onload){lnk.onload=rp.poly;lnk.rel="stylesheet"}}};if(!rp.support()){rp.poly();var run=w.setInterval(rp.poly,500);if(w.addEventListener){w.addEventListener("load",function(){rp.poly();w.clearInterval(run)})}else if(w.attachEvent){w.attachEvent("onload",function(){rp.poly();w.clearInterval(run)})}}if(typeof exports!=="undefined"){exports.loadCSS=loadCSS}else{w.loadCSS=loadCSS}}(typeof global!=="undefined"?global:this));
+</script>
 </head>
 <body>
     
@@ -136,7 +191,17 @@
                     <div class="stat-card">
                         <div class="stat-number">13</div>
                         <div class="stat-label">新增/擴充頁面</div>
-                    </div>
+                    
+
+<div class="three-col-wrapper">
+<div class="sidebar-card">
+  <a href="budget-airline-guide.html">
+    <img alt="月報" class="sb-hero-img" loading="lazy" src="images/monthly-sidebar.webp"/>
+  </a>
+</div>
+<div class="col-center">
+<div class="article-container">
+</div>
                     <div class="stat-card">
                         <div class="stat-number">~62</div>
                         <div class="stat-label">全站 URL 總數</div>
@@ -218,7 +283,7 @@
 
             <section class="article-section">
                 <h2>📈 變現系統現況</h2>
-                <table class="data-table">
+                <div class="table-responsive"><table class="data-table">
                     <thead>
                         <tr><th>平台</th><th>狀態</th><th>聯盟ID</th><th>說明</th></tr>
                     </thead>
@@ -232,7 +297,7 @@
                         <tr><td>GetYourGuide</td><td>❌ 未申請</td><td>-</td><td>待申請</td></tr>
                         <tr><td>Email Lead Magnet</td><td>⚙️ 已部署</td><td>Cloudflare Worker</td><td>需端對端測試驗證</td></tr>
                     </tbody>
-                </table>
+                </table></div>
             </section>
 
             <section class="article-section">
@@ -301,26 +366,48 @@
 
         </article>
 
-        <aside class="sidebar">
-            <div class="sidebar-card">
-                <h3>📅 月度回顧</h3>
-                <ul class="sidebar-links">
-                    <li><a href="monthly-review.html">2026年6月回顧</a></li>
-                </ul>
-            </div>
-            <div class="sidebar-card">
-                <h3>🛠️ 旅遊工具</h3>
-                <ul class="sidebar-links">
-                    <li><a href="budget-calculator.html">預算試算器</a></li>
-                    <li><a href="interactive-packing-list.html">互動式打包清單</a></li>
-                    <li><a href="power-plug-guide.html">各國插頭電壓</a></li>
-                    <li><a href="emergency-contact-card.html">緊急聯絡卡 PDF</a></li>
-                </ul>
-            </div>
-        </aside>
+        
     </main>
 
-    <footer class="site-footer">
+    
+
+<div class="mt-12 p-6 bg-gradient-to-br from-violet-50 to-fuchsia-50 rounded-2xl" id="p5-expand">
+<h2 class="text-2xl font-bold mb-4">📅 每月旅遊趨勢與推薦</h2>
+<p class="text-gray-700 leading-relaxed mb-4">每個月都有最適合去的目的地！以下依照季節整理各月份的旅遊推薦，讓你選對時間出發。</p>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-3 mb-4">
+<div class="bg-white rounded-lg p-3 shadow-sm"><strong>1-2月</strong><br><span class="text-sm text-gray-600">❄️ 北海道滑雪、韓國滑雪、溫泉</span></div>
+<div class="bg-white rounded-lg p-3 shadow-sm"><strong>3-4月</strong><br><span class="text-sm text-gray-600">🌸 日本櫻花、韓國櫻花、九族文化村</span></div>
+<div class="bg-white rounded-lg p-3 shadow-sm"><strong>5-6月</strong><br><span class="text-sm text-gray-600">🏝 沖繩海灘、泰國雨季前、關島</span></div>
+<div class="bg-white rounded-lg p-3 shadow-sm"><strong>7-8月</strong><br><span class="text-sm text-gray-600">🌊 峇里島、長灘島、薄荷島潛水</span></div>
+<div class="bg-white rounded-lg p-3 shadow-sm"><strong>9-10月</strong><br><span class="text-sm text-gray-600">🍂 韓國楓葉、日本紅葉、清邁</span></div>
+<div class="bg-white rounded-lg p-3 shadow-sm"><strong>11-12月</strong><br><span class="text-sm text-gray-600">⛷ 日本滑雪、曼谷涼季、吳哥窟</span></div>
+</div>
+<p class="mt-2 text-xs text-gray-500">更多：<a href="japan-travel.html" class="text-violet-600 underline">日本攻略</a> · <a href="korea-travel.html" class="text-violet-600 underline">韓國攻略</a> · <a href="southeast-asia.html" class="text-violet-600 underline">東南亞攻略</a></p>
+</div>
+
+
+<div class="mt-8 p-6 bg-gradient-to-br from-fuchsia-50 to-violet-50 rounded-2xl" id="p5-expand2">
+<h2 class="text-2xl font-bold mb-4">📊 旅遊趨勢觀察</h2>
+<p class="text-gray-700 leading-relaxed mb-3">二零二六年上半年的旅遊趨勢有幾個明顯的變化。首先是日幣持續走低，日本旅遊的熱度完全不減，尤其是福岡和沖繩這兩個短途路線，成為台灣人的週末度假首選。福岡因為飛行時間只要兩小時、物價比東京大阪便宜三成，越來越多人選擇去福岡吃屋台、逛太宰府，而不是擠在東京的人潮裡。</p>
+<p class="text-gray-700 leading-relaxed mb-3">韓國方面，釜山的討論度明顯上升。過去大家去韓國只想到首爾，但現在越來越多人發現釜山的魅力：海雲台海灘、甘川文化村、天空艙，加上物價比首爾便宜兩到三成，很適合想要慢節奏旅行的人。另外，濟州島自駕旅遊也在台灣的旅行圈子裡爆紅，因為駕照互認的關係，台灣人可以直接在濟州島租車，非常方便。</p>
+<p class="text-gray-700 leading-relaxed mb-3">東南亞部分，越南峴港的成長最為顯著。直飛航班增加、物價低廉、海灘品質優良，讓峴港成為繼曼谷和清邁之後的第三大東南亞熱門目的地。尤其對於預算有限的小資族來說，峴港三天兩夜含機票住宿只要台幣八千到一萬二，比去一趟墾丁還便宜，非常划算。</p>
+<p class="text-gray-700 leading-relaxed mb-3">最後是旅行方式的改變。越來越多人開始採用「慢旅行」的模式，也就是一個城市待五到七天，而不是三四天衝五個景點。這種旅行方式的好處是能更深入體驗當地生活，也不會那麼累。搭配遠距工作的趨勢，數位遊牧的生活方式也越來越受歡迎，清邁和峴港是亞洲最熱門的數位遊牧據點。</p>
+<p class="mt-2 text-xs text-gray-500">延伸閱讀：<a href="japan-travel.html" class="text-fuchsia-600 underline">日本攻略</a> · <a href="korea-travel.html" class="text-fuchsia-600 underline">韓國攻略</a> · <a href="southeast-asia.html" class="text-fuchsia-600 underline">東南亞攻略</a></p>
+</div>
+
+
+<div class="mt-6 p-5 bg-white/70 rounded-xl" id="p5-expand3">
+<h3 class="font-bold text-lg mb-2">✈️ 機票價格走勢觀察</h3>
+<p class="text-gray-700 leading-relaxed mb-2">二零二六年的機票價格整體比前兩年穩定，廉航的競價讓傳統航空也不敢定價太高。台北飛東京的廉航來回票大約台幣四千到七千，飛首爾大約三千五到六千，飛曼谷大約三千到五千。傳統航空則貴兩到三成，但含行李和餐食的總價其實差不多。一個值得注意的趨勢是紅眼航班的增加，虎航和酷航都在增加深夜出發的航班，價格比白天的航班便宜兩到三成，適合不介意熬夜的年輕旅人。建議訂閱航空公司和比價網站的降價通知，遇到促銷時果斷出手，好的票價通常只維持幾個小時。</p>
+</div>
+
+<div class="mt-4 p-4 bg-violet-50 rounded-lg" id="p5-expand4"><p class="text-gray-700 text-sm leading-relaxed">展望二零二六年下半年，日本仍然是台灣人最愛的旅遊目的地，但韓國和東南亞的成長速度很快。特別值得注意的是越南，台越之間的直飛航班持續增加，峴港和胡志明市的旅遊基礎設施也在快速改善。泰國方面，清邁的數位遊牧社群越來越活躍，很多咖啡廳和共享辦公空間開始提供長期方案。國內旅遊部分，花東和墾丁在暑假旺季的訂房率已經超過九成，建議至少提前一個月預訂。無論你選擇去哪裡，提早規劃永遠是省錢的第一步。</p></div>
+</div><!-- /article-container -->
+</div><!-- /col-center -->
+</div><!-- /three-col-wrapper -->
+
+<!-- FOOTER -->
+<footer class="site-footer ls-footer">
 <div class="footer-inner">
 <div class="footer-col">
 <h4>🇯🇵 日本自由行</h4>
@@ -413,12 +500,7 @@
   <a href="disclaimer.html">免責聲明</a>
 </div>
 <p>© 2026 均在路上 Travel Lab. All Rights Reserved.</p>
-<div style="margin-top:8px;font-size:12px;">
-<a href="about.html" style="color:inherit;margin-right:12px;">關於我們</a>
-<a href="privacy.html" style="color:inherit;margin-right:12px;">隱私權政策</a>
-<a href="terms.html" style="color:inherit;margin-right:12px;">使用條款</a>
-<a href="disclaimer.html" style="color:inherit;">免責聲明</a>
-</div></div>
+</div>
 </footer>
 
 
@@ -436,7 +518,9 @@
     }
   });
 </script>
-<script src="js/monetization.js" defer defer></script>
+<script src="js/monetization.js" defer></script>
+
+
 
 </body>
 </html>

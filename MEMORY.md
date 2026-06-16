@@ -629,6 +629,15 @@ WordPress.com, Reddit, Pinterest, Pearltrees, Instapaper, GitHub Profile README
 - FB粉專+LINE群社交連結全站 footer 覆蓋
 - Trip.com/Klook/Agoda/Skyscanner/Airalo 聯盟已上線
 
+
+
+## seoul-food.html 修復完成（2026-06-13 14:40 commit ac9442f）
+- 補充內容：760→2232 中文字（目標 ~2500，達標）
+- 區塊順序修復：Lead Magnet 從「文章→LM→補充→FAQ」改為「文章→補充→FAQ→LM」（符合區塊 0-15 規格）
+- 新增 5 大內容區段：APP/支付方式、麵食文化、炸雞宵夜、四季攻略、美食散步路線
+- div 平衡：103/103，diff=0
+- Git commit：ac9442f（34cad5b → ac9442f）
+
 *下次對話時：
 - 均在路上 Travel Lab：GSC sitemap 提交確認（用戶手動操作）
 - 均在路上 Travel Lab：外鏈建設自動化完成（2026-05-26）
@@ -703,8 +712,97 @@ WordPress.com, Reddit, Pinterest, Pearltrees, Instapaper, GitHub Profile README
 - Python 寫入：加 -X utf8 參數解決 Windows cp950 編碼問題
 - write 工具：不能用於最終目標檔案，用 Python 腳本
 
+
+
+## seoul-food.html 修復完成（2026-06-13 14:40 commit ac9442f）
+- 補充內容：760→2232 中文字（目標 ~2500，達標）
+- 區塊順序修復：Lead Magnet 從「文章→LM→補充→FAQ」改為「文章→補充→FAQ→LM」（符合區塊 0-15 規格）
+- 新增 5 大內容區段：APP/支付方式、麵食文化、炸雞宵夜、四季攻略、美食散步路線
+- div 平衡：103/103，diff=0
+- Git commit：ac9442f（34cad5b → ac9442f）
+
 *下次對話時：
 - 確認 golightly.fun 在 Google Search Console 的收錄狀態
 - 申請 Booking.com 聯盟
 - 申請 GetYourGuide 聯盟
 - 設定 Cloudflare Worker RESEND_API_KEY 完成 Email Lead Magnet
+
+
+## 🔧 全站 Lead Magnet / FAQ 順序修復完成（2026-06-13）
+
+### 問題發現
+- `seoul-food.html` 補充內容重複出現（文章內與 footer 後各一次）
+- 全站掃描發現 32 個頁面有類似問題（footer 後有餘內容）
+- 批次修復後，發現 **28 個頁面** Lead Magnet 區塊在 FAQ **之前**（錯誤順序）
+
+### 正確順序（區塊 0-15 規格）
+文章內容 → 補充內容 → FAQ → **Lead Magnet** → Klook → footer
+
+### 修復過程
+1. **嘗試 1：Python 直接解析 HTML 結構** → 失敗（頁面 HTML 結構不一致，LM div 嵌套在 FAQ section 內）
+2. **嘗試 2：BeautifulSoup DOM 解析** → 失敗（BeautifulSoup 對 HTML comment 處理方式與預期不同）
+3. **嘗試 3：字串手術（成功）** → 用 `🔒` 文字定位 LM 終點，用 `</div>` 定位 FAQ 終點，直接剪下 + 貼上
+
+### 最終狀態（2026-06-13 晚間）
+```
+✅ OK (LM after FAQ): 35
+❌ BAD (LM before FAQ): 0
+⚠️ NO_LM: 13  ← 工具/實用頁面（不需 Lead Magnet）
+⚠️ NO_FAQ: 4  ← 工具頁面（不需 FAQ）
+```
+
+### Git 提交記錄
+- `8f0c937`: 12 頁 Tailwind 粉色→Tiffany 綠配色轉換
+- `5926bbc`: fukuoka-5days.html 重複內容移除
+- `60cb536`: 全站 19 頁補充內容移入 article-container
+- `e242113`: **全站 Lead Magnet 移至 FAQ 後方**（32 檔案變更，+2365/-930 行）
+
+### 技術筆記
+- **問題根因**：頁面模板生成時，Lead Magnet 區塊被置於 FAQ 之前
+- **解決方案**：用獨特標記（`` 和 `🔒`）定位 LM 區塊，用啟發式規則定位 FAQ 終點
+- **教訓**：不要試圖精確解析 HTML 結構 → 用字串匹配 + 啟發式規則更快
+
+---
+
+*下次對話時：
+- 確認 golightly.fun 在 Google Search Console 的收錄狀態
+- 申請 Booking.com 聯盟
+- 申請 GetYourGuide 聯盟
+- 設定 Cloudflare Worker RESEND_API_KEY 完成 Email Lead Magnet
+
+## Promoted From Short-Term Memory (2026-06-15)
+
+- kualalumpur-3days, singapore-3days, angkor-wat-2days, seasia-budget-travel-guide, korea-transport, bangkok-4days, chiang-mai, packing-list
+- | Page | Old Image | New Image | |------|-----------|----------| | angkor-wat-2days.html | southeast-asia-hero.webp | angkor-wat-hero.webp | | budget-airline-guide.html | japan-hero.webp | budget-airline-hero.webp |
+
+## Promoted From Short-Term Memory (2026-06-16)
+
+- **問題描述**：用户反映部分页面左上角出现 `>>>>>` 符号。经检查发现 20 个 HTML 文件在 `<body>` 开头有 `<p>&gt;</p>` 或 `<p>&gt;\n<meta>` 的错误结构。
+- **受影響文件**（20 个）：
+- **修復方式**：Node.js 脚本批量替换 `<p>&gt;` 为 `<p>`（处理换行和空白情况）
+
+## Promoted From Short-Term Memory (2026-06-16)
+
+- **结果**：19/20 文件修复成功（tokyo-5days 已在之前的运行中修复）
+
+---
+## 全站 Lead Magnet 升級完成（2026-06-17 commit bef3183）
+
+### 問題
+- 24 個頁面有舊式紫色漸層「小編獨家」Lead Magnet 區塊（無 Formspree 表單）
+- 3 個頁面有真正重複問題（tokyo-accommodation、thailand-sim、seoul-food）
+
+### 修復
+- ✅ 3 個真正重複頁面：移除重複 block
+- ✅ 24 個頁面：舊紫色漸層 → ls-lead-magnet 新樣式（統一 Formspree 表單）
+- ✅ 提交：`bef3183`，26 檔案變更（+278/-693 行）
+
+### 全站最終狀態（2026-06-17 01:30）
+- OK（ls-lead-magnet）：44 頁
+- NO_LM（工具頁）：22 頁（無需 Lead Magnet）
+- OLD（舊 block）：0 頁 ✅
+
+### 修復紀錄
+- ⚠️ 第一次嘗試（commit bef3183）：regex 過於貪婪，誤刪 24 個頁面的 Related Posts 區塊
+- ✅ 第二次修復（commit f902469）：還原受影響檔案，改用精確的 div 計數法配對，成功保留 Related Posts
+- 舊 gradient 格式變體：#667eea 0%,#764ba2 100% 也一併處理

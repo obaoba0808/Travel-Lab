@@ -74,11 +74,14 @@
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&amp;display=swap" media="print" onload="this.media='all'" rel="stylesheet">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&amp;display=swap" rel="stylesheet"/></noscript>
 <!-- Stylesheet -->
 <link href="style.css?v=202606051545" rel="stylesheet"/>
-<link href="beautify-overrides.css" rel="stylesheet"/>
-<link href="beautify.css" rel="stylesheet"/>
+<link href="beautify-overrides.css" as="style" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/>
+<noscript><link href="beautify-overrides.css" rel="stylesheet"/></noscript>
+<link href="beautify.css" as="style" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/>
+<noscript><link href="beautify.css" rel="stylesheet"/></noscript>
 <!-- Google Analytics 4 -->
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-S7KQGHSD2R"></script>
 <script>
@@ -195,6 +198,11 @@
   margin-top: 16px;
 }
 </style>
+<script>
+/*! loadCSS rel=preload polyfill. [c]2017 Filament Group, Inc. MIT License */
+(function(w){"use strict";if(!w.loadCSS){w.loadCSS=function(){}}
+var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.createElement("link").relList.supports("preload")}catch(e){ret=!1}return function(){return ret}})();rp.poly=function(){var link=w.document.getElementsByTagName("link");for(var i=0;i<link.length;i++){var lnk=link[i];if(lnk.rel==="preload"&&lnk.as==="style"&&!lnk.onload){lnk.onload=rp.poly;lnk.rel="stylesheet"}}};if(!rp.support()){rp.poly();var run=w.setInterval(rp.poly,500);if(w.addEventListener){w.addEventListener("load",function(){rp.poly();w.clearInterval(run)})}else if(w.attachEvent){w.attachEvent("onload",function(){rp.poly();w.clearInterval(run)})}}if(typeof exports!=="undefined"){exports.loadCSS=loadCSS}else{w.loadCSS=loadCSS}}(typeof global!=="undefined"?global:this));
+</script>
 </head>
 <body>
 <!-- TOP BAR NAVIGATION -->
@@ -278,9 +286,16 @@
 <div style="font-size:13px;color:var(--text-light);">✈ 用最少預算，走最多地方</div>
 </div>
 </div>
+<div class="three-col-wrapper">
+<div class="sidebar-card">
+<a href="travel-tools.html">
+<img alt="Notion旅遊模板" class="sb-hero-img" loading="lazy" src="images/notion-sidebar.webp"/>
+</a>
+</div>
+<div class="col-center"><div class="article-container">
 <section class="hero-region-new">
 <div class="hero-image-wrapper">
-<img alt="免費 Notion 旅行規劃模板下載" loading="eager" src="images/travel-tools-hero.webp"/>
+<img alt="免費 Notion 旅行規劃模板下載" loading="eager" src="images/notion-travel.webp"/>
 </div>
 <div class="hero-title-below">
 <span class="hero-region-tag">📒 旅遊模板</span>
@@ -293,104 +308,36 @@
 </section><div class="portal-content"><div style="font-size:13px;color:var(--text-light);">✈ 用最少預算，走最多地方</div><div class="template-preview">
 <img alt="Notion 旅行規劃模板預覽截圖" loading="lazy" src="images/notion-template-preview.webp"/>
 <p style="color:#666;text-align:center;margin:0;">這個模板包含了我在 10+ 次自由行中不斷優化的精華，現在免費分享給你。</p>
-</div><h2 style="color:#078E8A;margin:40px 0 20px;">🎯 模板包含什麼？</h2><div class="feature-grid">
-<div class="feature-card">
-<h3>📅 行程時間軸</h3>
-<p>每天早午晚三時段規劃，自動計算交通時間，再也不怕行程卡關。</p>
 </div>
-<div class="feature-card">
-<h3>💰 預算追蹤器</h3>
-<p>出發前設定預算，旅途中記帳，自動剩餘金額提醒，花錢更有感。</p>
+<h2 class="section-title">📖 延伸閱讀</h2>
+<div class="related-list">
+<a class="related-card" href="packing-checklist.html">
+<div class="post-thumb"><img alt="行李清單｜打包技巧大全" height="1024" loading="lazy" src="images/packing-list.webp" width="1536"/></div>
+<div class="post-body">
+<span class="cat-tag">旅遊工具</span>
+<h3>行李清單｜打包技巧大全</h3>
 </div>
-<div class="feature-card">
-<h3>🎒 打包清單</h3>
-<p>分類打包項目，出國前逐一打勾，再也不會忘記帶轉接頭。</p>
+</a>
+<a class="related-card" href="budget-calculator.html">
+<div class="post-thumb"><img alt="旅遊預算試算器｜出國花費一次算清楚" height="1024" loading="lazy" src="images/budget-airline.webp" width="1536"/></div>
+<div class="post-body">
+<span class="cat-tag">旅遊工具</span>
+<h3>旅遊預算試算器｜出國花費一次算清楚</h3>
 </div>
-<div class="feature-card">
-<h3>🏨 住宿筆記</h3>
-<p>訂房資訊、地址、Check-in 指南集中管理，飯店找得到、住得進去。</p>
+</a>
+<a class="related-card" href="esim-comparison.html">
+<div class="post-thumb"><img alt="各國eSIM比較｜旅行上網卡選購指南" height="1024" loading="lazy" src="images/esim-hero.webp" width="1536"/></div>
+<div class="post-body">
+<span class="cat-tag">旅遊工具</span>
+<h3>各國eSIM比較｜旅行上網卡選購指南</h3>
 </div>
-<div class="feature-card">
-<h3>🍜 美食願望清單</h3>
-<p>搜集 IG、PTT 推薦店家，加上評分與營業時間，踩雷機率降低 80%。</p>
+</a>
 </div>
-<div class="feature-card">
-<h3>📱 手機同步</h3>
-<p>Notion 支援 iOS/Android，出國用手機隨時查行程、打勾打包清單。</p>
 </div>
-</div><div class="download-section">
-<h2>📥 免費下載 Notion 模板</h2>
-<p>填入 Email，立即獲得模板連結（支援 Notion 免費版）</p>
-<form action="https://formspree.io/f/xredjjgb" class="email-form" method="POST">
-<input name="email" placeholder="你的 Email 信箱" required="" type="email"/>
-<input name="resource" type="hidden" value="notion-travel-template"/>
-<button type="submit">索取免費模板 →</button>
-<p class="privacy-note">🔒 我們尊重你的隱私，Email 僅用於發送模板連結與旅遊電子報，可隨時退訂。</p>
-</form>
-</div><h2 style="color:#078E8A;margin:40px 0 20px;">📖 如何使用這個模板？</h2><div class="day-card">
-<span class="day-tag">Step 1</span>
-<h3>複製到你的 Notion</h3>
-<p>收到 Email 後，點擊連結 → 點擊右上角「Duplicate」→ 選擇你的 Notion 工作區，模板就複製完成。</p>
-</div><div class="day-card">
-<span class="day-tag">Step 2</span>
-<h3>修改成你的行程</h3>
-<p>把範例內容換成你的實際行程：修改日期、新增景點、設定預算上限、加入你想吃的餐廳。</p>
-</div><div class="day-card">
-<span class="day-tag">Step 3</span>
-<h3>手機 App 同步</h3>
-<p>下載 Notion App（iOS/Android），登入後就能用手機查看行程、打勾打包清單，出國超方便。</p>
-</div><div class="tip-box" style="margin-top:30px;">
-<strong>💡 小編真心話：</strong>這個模板是我用了兩年、經過 10+ 次自由行不斷優化的成果。一開始只是簡單的行程表，後來發現每次都會忘記帶轉接頭、超支不知道花到哪裡去，才陸續加上打包清單與預算追蹤。現在分享給你，希望能讓你的旅行更順利！
-  </div><div style="background:#f5f5f5;padding:20px;border-radius:12px;margin:24px 0;">
-<h4 style="margin:0 0 12px;color:#333;">📖 旅遊工具延伸閱讀</h4>
-<ul style="margin:0;padding-left:20px;line-height:1.8;">
-<li><a href="packing-checklist.html" style="color:#078E8A;font-weight:600;">互動式打包清單｜選擇目的地自動生成</a></li>
-<li><a href="budget-calculator.html" style="color:#078E8A;font-weight:600;">旅遊預算試算器｜出國花費一次算清楚</a></li>
-<li><a href="travel-tools.html" style="color:#078E8A;font-weight:600;">旅遊工具推薦｜eSIM、換匯、行李秤</a></li>
-<li><a href="tokyo-5days.html" style="color:#078E8A;font-weight:600;">東京5天4夜行程｜地鐵教學×景點推薦</a></li>
-</ul>
-</div><section class="faq-section">
-<h2>❓ 常見問題</h2>
-<div class="faq-item" onclick="this.classList.toggle('open')">
-<div class="faq-q">Notion 旅行模板是免費的嗎？</div>
-<div class="faq-a">是的！這個模板完全免費，只要填入 Email 就能獲得下載連結。</div>
-</div>
-<div class="faq-item" onclick="this.classList.toggle('open')">
-<div class="faq-q">我不會用 Notion 怎麼辦？</div>
-<div class="faq-a">模板內附詳細使用說明，加上 Notion 介面直覺，5 分鐘就能上手。也有 YouTube 教學影片連結。</div>
-</div>
-<div class="faq-item" onclick="this.classList.toggle('open')">
-<div class="faq-q">模板可以在手機上用嗎？</div>
-<div class="faq-a">可以！Notion 支援 iOS/Android App，出國時用手機隨時查看行程、打勾打包清單。</div>
-</div>
-<div class="faq-item" onclick="this.classList.toggle('open')">
-<div class="faq-q">我可以修改模板嗎？</div>
-<div class="faq-a">完全可以！複製到自己的 Notion 後，你可以自由調整欄位、增加頁面，客製成你最順眼的樣子。</div>
-</div>
-<div class="faq-item" onclick="this.classList.toggle('open')">
-<div class="faq-q">下載後會收到什麼？</div>
-<div class="faq-a">你會收到一個 Notion 模板連結，點擊即可複製到你的 Notion 工作區。同時會訂閱我們的旅遊電子報（可隨時退訂）。</div>
-</div>
-</section></div>
-
-<!-- 模板預覽 -->
-
-<!-- 功能亮點 -->
-
-
-<!-- 下載區塊 -->
-
-<!-- 使用說明 -->
-
-
-
-
-
-<!-- 相關文章推薦 -->
-
-<!-- FAQ -->
-
-<footer class="site-footer">
+</div><!-- /col-center -->
+</div><!-- /three-col-wrapper -->
+<!-- FOOTER -->
+<footer class="site-footer ls-footer">
 <div class="footer-inner">
 <div class="footer-col">
 <h4>🇯🇵 日本自由行</h4>
@@ -483,12 +430,7 @@
   <a href="disclaimer.html">免責聲明</a>
 </div>
 <p>© 2026 均在路上 Travel Lab. All Rights Reserved.</p>
-<div style="margin-top:8px;font-size:12px;">
-<a href="about.html" style="color:inherit;margin-right:12px;">關於我們</a>
-<a href="privacy.html" style="color:inherit;margin-right:12px;">隱私權政策</a>
-<a href="terms.html" style="color:inherit;margin-right:12px;">使用條款</a>
-<a href="disclaimer.html" style="color:inherit;">免責聲明</a>
-</div></div>
+</div>
 </footer>
 <script>
   // Track affiliate link clicks via GA4
@@ -505,5 +447,177 @@
   });
 </script>
 <script defer="" src="js/monetization.js"></script>
+
+</div>
+
+<div class="mt-12 p-8 bg-gradient-to-br from-teal-50 to-cyan-50 rounded-2xl">
+  <h2 class="text-2xl font-bold mb-6 text-gray-800">📋 Notion 模板使用教學（5步驟快速上手）</h2>
+  <p class="text-gray-600 leading-relaxed mb-6">第一次用 Notion 別擔心，照著這 5 個步驟做，5 分鐘內就能開始規劃你的旅程：</p>
+  
+  <div class="space-y-4">
+    <div class="bg-white rounded-xl p-5 shadow-sm flex gap-4 items-start">
+      <span class="text-2xl font-bold text-teal-600 bg-teal-100 w-10 h-10 rounded-full flex items-center justify-center shrink-0">1</span>
+      <div>
+        <h3 class="font-bold text-lg text-gray-800 mb-2">註冊 Notion 帳號</h3>
+        <p class="text-gray-600 leading-relaxed">到 <a href="https://notion.so" class="text-teal-600 underline" target="_blank">notion.so</a> 註冊免費帳號，可用 Google 帳號直接登入，不用另外記密碼。免費版就很夠用了，不用升級付費版。</p>
+      </div>
+    </div>
+    
+    <div class="bg-white rounded-xl p-5 shadow-sm flex gap-4 items-start">
+      <span class="text-2xl font-bold text-teal-600 bg-teal-100 w-10 h-10 rounded-full flex items-center justify-center shrink-0">2</span>
+      <div>
+        <h3 class="font-bold text-lg text-gray-800 mb-2">點擊下載連結，複製模板</h3>
+        <p class="text-gray-600 leading-relaxed">填完 Email 後會收到下載連結，點進去會看到完整的 Notion 模板頁面。右上角有「Duplicate」按鈕，點下去就會複製到你的工作區。</p>
+      </div>
+    </div>
+    
+    <div class="bg-white rounded-xl p-5 shadow-sm flex gap-4 items-start">
+      <span class="text-2xl font-bold text-teal-600 bg-teal-100 w-10 h-10 rounded-full flex items-center justify-center shrink-0">3</span>
+      <div>
+        <h3 class="font-bold text-lg text-gray-800 mb-2">修改標題與基本資訊</h3>
+        <p class="text-gray-600 leading-relaxed">複製過來後，先把標題改成你的旅行名稱（例如「2026 東京五天四夜」），然後填入出發日期、同行人數、預算上限等基本資訊。</p>
+      </div>
+    </div>
+    
+    <div class="bg-white rounded-xl p-5 shadow-sm flex gap-4 items-start">
+      <span class="text-2xl font-bold text-teal-600 bg-teal-100 w-10 h-10 rounded-full flex items-center justify-center shrink-0">4</span>
+      <div>
+        <h3 class="font-bold text-lg text-gray-800 mb-2">填寫每日行程表</h3>
+        <p class="text-gray-600 leading-relaxed">模板內有每日行程區塊，可以填入景點名稱、交通方式、預計停留時間、門票費用等。建議先用 Google Maps 確認路線順序，再填進 Notion。</p>
+      </div>
+    </div>
+    
+    <div class="bg-white rounded-xl p-5 shadow-sm flex gap-4 items-start">
+      <span class="text-2xl font-bold text-teal-600 bg-teal-100 w-10 h-10 rounded-full flex items-center justify-center shrink-0">5</span>
+      <div>
+        <h3 class="font-bold text-lg text-gray-800 mb-2">下載 App 隨時查看</h3>
+        <p class="text-gray-600 leading-relaxed">出國前記得下載 Notion App（iOS/Android 都支援），這樣在飛機上、沒網路時也能離線查看行程。打勾打包清單也很方便，不用另外帶紙筆。</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="mt-12 p-8 bg-gradient-to-br from-indigo-50 to-blue-50 rounded-2xl">
+  <h2 class="text-2xl font-bold mb-6 text-gray-800">👥 這個模板適合誰用？</h2>
+  <p class="text-gray-600 leading-relaxed mb-6">這個模板是為自由行旅人設計的，特別適合以下幾種人：</p>
+  
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+    <div class="bg-white rounded-xl p-5 shadow-sm border-l-4 border-indigo-400">
+      <h3 class="font-bold text-gray-800 mb-2">🎒 自由行新手</h3>
+      <p class="text-gray-600 text-sm leading-relaxed">第一次自己規劃行程，不知道從哪裡開始？模板裡的架構幫你把該想的都列出來了，照著填就不會漏。從簽證、機票、住宿到每日行程，全部有條理地整理好。</p>
+    </div>
+    
+    <div class="bg-white rounded-xl p-5 shadow-sm border-l-4 border-purple-400">
+      <h3 class="font-bold text-gray-800 mb-2">📋 喜歡條列整理的人</h3>
+      <p class="text-gray-600 text-sm leading-relaxed">如果你習慣把事情寫成清單、喜歡打勾完成的快感，這個模板很適合你。打包清單、景點待訪清單、美食口袋清單，全部都可以打勾。</p>
+    </div>
+    
+    <div class="bg-white rounded-xl p-5 shadow-sm border-l-4 border-pink-400">
+      <h3 class="font-bold text-gray-800 mb-2">👨‍👩‍👧‍👦 多人旅行主揪</h3>
+      <p class="text-gray-600 text-sm leading-relaxed">跟朋友或家人出國，你是負責規劃的那個人？這個模板可以分享給同行者，大家一起編輯、留言討論，不用一直傳訊息問「那天的行程是什麼？」</p>
+    </div>
+    
+    <div class="bg-white rounded-xl p-5 shadow-sm border-l-4 border-orange-400">
+      <h3 class="font-bold text-gray-800 mb-2">✈️ 常出國的旅人</h3>
+      <p class="text-gray-600 text-sm leading-relaxed">如果你一年出國好幾次，每次都要重新開檔案規劃很麻煩。這個模板可以複製後改名，建立屬於你的旅行資料庫，下次出國直接複製貼上修改。</p>
+    </div>
+  </div>
+</div>
+
+<div class="mt-12 p-8 bg-gradient-to-br from-amber-50 to-yellow-50 rounded-2xl">
+  <h2 class="text-2xl font-bold mb-6 text-gray-800">💡 Notion 模板進階技巧</h2>
+  <p class="text-gray-600 leading-relaxed mb-6">學會這幾招，讓你的旅行規劃更上一層樓：</p>
+  
+  <div class="space-y-4">
+    <div class="bg-white rounded-xl p-5 shadow-sm">
+      <h3 class="font-bold text-gray-800 mb-2 flex items-center gap-2">📍 技巧一：嵌入 Google Maps</h3>
+      <p class="text-gray-600 leading-relaxed">在 Notion 打上「/map」可以嵌入 Google Maps，把當天的景點地圖直接放進行程表，不用再切換視窗查地圖。作法是先在 Google Maps 建好景點清單，然後複製分享連結貼到 Notion。</p>
+    </div>
+    
+    <div class="bg-white rounded-xl p-5 shadow-sm">
+      <h3 class="font-bold text-gray-800 mb-2 flex items-center gap-2">📸 技巧二：加入景點照片</h3>
+      <p class="text-gray-600 leading-relaxed">把想去的景點照片貼進 Notion，這樣看到照片就會提醒自己「啊！這個景點要去！」也可以把餐廳的菜單照片存進去，點餐時直接參考。</p>
+    </div>
+    
+    <div class="bg-white rounded-xl p-5 shadow-sm">
+      <h3 class="font-bold text-gray-800 mb-2 flex items-center gap-2">💰 技巧三：用公式算總花費</h3>
+      <p class="text-gray-600 leading-relaxed">Notion 支援簡單的公式功能，可以幫你加總每日預算。在預算欄位設定數字格式，然後用公式「prop("費用")」加總，就不用自己拿計算機按了。</p>
+    </div>
+    
+    <div class="bg-white rounded-xl p-5 shadow-sm">
+      <h3 class="font-bold text-gray-800 mb-2 flex items-center gap-2">🔗 技巧四：建立內部連結</h3>
+      <p class="text-gray-600 leading-relaxed">如果你有多趟旅行計畫，可以建立一個「旅行總個「旅行總覽」頁面，用「[[」語法連結到各趟旅行的頁面。這樣所有旅行紀錄都在同一個地方，方便回顧。</p>
+    </div>
+    
+    <div class="bg-white rounded-xl p-5 shadow-sm">
+      <h3 class="font-bold text-gray-800 mb-2 flex items-center gap-2">📱 技巧五：手機桌面捷徑</h3>
+      <p class="text-gray-600 leading-relaxed">iOS 用戶可以把 Notion 頁面加到主畫面，像 App 一樣一鍵開啟。做法是在 Safari 開啟該頁面，點分享按鈕，選「加入主畫面」。這樣出國時查行程超快。</p>
+    </div>
+  </div>
+</div>
+
+<div class="mt-12 p-8 bg-gradient-to-br from-rose-50 to-pink-50 rounded-2xl">
+  <h2 class="text-2xl font-bold mb-6 text-gray-800">❓ Notion 模板常見問題 FAQ</h2>
+  
+  <div class="space-y-4">
+    <div class="bg-white rounded-xl p-5 shadow-sm">
+      <h3 class="font-bold text-lg mb-2 text-gray-800">Q1：模板支援哪些語言？</h3>
+      <p class="text-gray-600 leading-relaxed">模板內容是繁體中文，但 Notion 本身支援多種語言介面。你可以把介面切換成英文、日文或其他語言，模板內容不會受影響。如果你想把模板翻譯成其他語言，也可以直接編輯文字內容。</p>
+    </div>
+    
+    <div class="bg-white rounded-xl p-5 shadow-sm">
+      <h3 class="font-bold text-lg mb-2 text-gray-800">Q2：模板可以離線使用嗎？</h3>
+      <p class="text-gray-600 leading-relaxed">可以！Notion 有離線模式，只要你曾經開啟過該頁面，內容會快取在裝置上。出國時就算沒網路也能查看行程。但要注意，第一次開啟頁面時需要網路連線，之後才能離線查看。建議出發前先確認所有頁面都開過一次。</p>
+    </div>
+    
+    <div class="bg-white rounded-xl p-5 shadow-sm">
+      <h3 class="font-bold text-lg mb-2 text-gray-800">Q3：可以分享給旅伴一起編輯嗎？</h3>
+      <p class="text-gray-600 leading-relaxed">可以！Notion 支援多人協作功能。你可以把頁面分享給旅伴，設定編輯權限，這樣大家都可以即時編輯行程、留言討論。免費版最多可以邀請 10 位協作者，對一般旅行團來說已經很夠用了。</p>
+    </div>
+    
+    <div class="bg-white rounded-xl p-5 shadow-sm">
+      <h3 class="font-bold text-lg mb-2 text-gray-800">Q4：模板會佔用多少 Notion 容量？</h3>
+      <p class="text-gray-600 leading-relaxed">Notion 免費版沒有容量限制，但單一檔案上傳限制 5MB。這個模板主要是文字和表格，不佔什麼空間。如果你要上傳很多照片，建議用外部連結（如 Google Drive）而不是直接上傳到 Notion。</p>
+    </div>
+    
+    <div class="bg-white rounded-xl p-5 shadow-sm">
+      <h3 class="font-bold text-lg mb-2 text-gray-800">Q5：模板會持續更新嗎？</h3>
+      <p class="text-gray-600 leading-relaxed">會的！我們會根據使用者回饋持續優化模板內容。如果有重大更新，會透過電子報通知大家。已經複製到自己 Notion 的版本不會自動更新，但你可以重新下載最新版本，或手動新增我們新增的功能區塊。</p>
+    </div>
+  </div>
+</div>
+
+<div class="mt-12 p-8 bg-gradient-to-br from-emerald-50 to-green-50 rounded-2xl">
+  <h2 class="text-2xl font-bold mb-6 text-gray-800">🔗 相關旅遊工具推薦</h2>
+  <p class="text-gray-600 leading-relaxed mb-6">規劃旅行除了 Notion 模板，這些工具也能幫你更順利完成準備：</p>
+  
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+    <a href="https://golightly.fun/packing-list.html" class="bg-white rounded-xl p-4 shadow-sm hover:shadow-md transition flex items-center gap-3 group">
+      <span class="text-3xl">🧳</span>
+      <div>
+        <h4 class="font-bold text-gray-800 group-hover:text-emerald-600 transition">行李打包清單</h4>
+        <p class="text-sm text-gray-500">不同目的地打包技巧</p>
+      </div>
+    </a>
+    
+    <a href="https://golightly.fun/budget-calculator.html" class="bg-white rounded-xl p-4 shadow-sm hover:shadow-md transition flex items-center gap-3 group">
+      <span class="text-3xl">💰</span>
+      <div>
+        <h4 class="font-bold text-gray-800 group-hover:text-emerald-600 transition">旅遊預算試算器</h4>
+        <p class="text-sm text-gray-500">出國花費一次算清楚</p>
+      </div>
+    </a>
+    
+    <a href="https://golightly.fun/travel-tools.html" class="bg-white rounded-xl p-4 shadow-sm hover:shadow-md transition flex items-center gap-3 group">
+      <span class="text-3xl">🛠️</span>
+      <div>
+        <h4 class="font-bold text-gray-800 group-hover:text-emerald-600 transition">實用旅遊工具</h4>
+        <p class="text-sm text-gray-500">APP、網站、小物整理</p>
+      </div>
+    </a>
+  </div>
+</div>
+<div class="mt-4 p-4 bg-violet-50 rounded-lg" id="p5-patch"><p class="text-gray-700 text-sm leading-relaxed">Notion 旅行模板的好處不只是記錄行程，更重要的是讓你在出發前就把所有資訊整理好。很多人出國時才在手機裡翻找飯店地址和航班資訊，浪費很多時間。如果提前把這些資料都輸入 Notion，出門時只需要打開一個頁面就能看到所有資訊，非常方便。另外，Notion 的資料庫功能很適合用來管理旅行開銷，每筆花費記錄下來後可以自動計算總額和分類統計，回來後做旅遊回顧也很有參考價值。建議每次旅行結束後，在模板裡加一個回顧區塊，記錄哪些景點值得再去、哪些餐廳不推薦，下次出發時就能避免踩雷。</p></div>
+<div class="mt-3 p-3 bg-violet-50/60 rounded-lg" id="p5-patch2"><p class="text-gray-700 text-xs leading-relaxed">如果你還沒用過 Notion，不用擔心太複雜。Notion 的介面非常直覺，就像在寫筆記一樣簡單。我們的旅行模板已經把所有需要的欄位都設定好了，你只需要填入自己的行程資訊就好。從航班和住宿的確認信中複製重要資訊貼上去，不到三十分鐘就能完成一個完整的旅行計畫頁面。如果想要更進階的用法，可以試試 Notion 的關聯資料庫功能，把行程、住宿和餐廳分成三個資料庫互相連結，管理起來更清楚。</p></div>
 </body>
 </html>

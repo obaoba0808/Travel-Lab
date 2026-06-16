@@ -1,12 +1,23 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="zh-Hant-TW">
 <head>
 <meta charset="utf-8"/>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-S7KQGHSD2R"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-S7KQGHSD2R');
+  </script>
 <meta content="均在路上" name="author"/>
 <title>互動式打包清單｜選擇目的地自動生成｜均在路上 Travel Lab</title>
 <meta content="互動式出國打包清單工具：選擇目的地（日本/韓國/東南亞）、天數、季節，自動生成客製化清單，支援勾選進度追蹤、列印功能。" name="description"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <link href="https://golightly.fun/packing-checklist.html" rel="canonical"/>
+<link href="https://golightly.fun/packing-checklist.html" hreflang="zh-Hant" rel="alternate"/>
+<link href="https://golightly.fun/packing-checklist.html" hreflang="zh-TW" rel="alternate"/>
+<link href="https://golightly.fun/packing-checklist.html" hreflang="x-default" rel="alternate"/>
 <meta content="index, follow" name="robots"/>
 <meta content="互動式打包清單｜選擇目的地自動生成｜均在路上 Travel Lab" property="og:title"/>
 <meta content="互動式出國打包清單工具：選擇目的地、天數、季節，自動生成客製化清單，支援勾選與列印。" property="og:description"/>
@@ -15,6 +26,17 @@
 <meta content="https://golightly.fun/images/og/og-packing-checklist.jpg" property="og:image"/>
 <meta content="均在路上 Travel Lab" property="og:site_name"/>
 <meta content="summary_large_image" name="twitter:card"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "首頁", "item": "https://golightly.fun/index.html"},
+    {"@type": "ListItem", "position": 2, "name": "旅遊工具", "item": "https://golightly.fun/travel-tools.html"},
+    {"@type": "ListItem", "position": 3, "name": "打包清單生成器"}
+  ]
+}
+</script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -29,96 +51,88 @@
 </script>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&amp;display=swap" rel="stylesheet"/>
-<link href="style.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&amp;display=swap" media="print" onload="this.media='all'" rel="stylesheet">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&amp;display=swap" rel="stylesheet"/></noscript>
+<link as="style" href="style.css" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/>
+<noscript><link href="style.css" rel="stylesheet"/></noscript>
 <link href="data:image/svg+xml,&lt;svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'&gt;&lt;text y='.9em' font-size='90'&gt;✈&lt;/text&gt;&lt;/svg&gt;" rel="icon"/>
-<style>
-:root{--tiffany:#0ABAB5;--tiffany-dark:#078E8A;--tiffany-light:#B2E8E6}
-*{box-sizing:border-box}
-body{font-family:'Noto Sans TC',sans-serif;background:#f5f5f5;margin:0;padding:0;color:#333}
-.container{max-width:900px;margin:0 auto;padding:20px}
+<link rel="stylesheet" href="packing-checklist-inline.css">
 
-/* Header */
-.header{text-align:center;padding:40px 20px;background:linear-gradient(135deg,var(--tiffany),var(--tiffany-dark));color:#fff;border-radius:0 0 30px 30px;margin-bottom:30px}
-.header h1{font-size:28px;margin:0 0 12px}
-.header p{font-size:16px;opacity:0.9;margin:0}
-
-/* Selection Cards */
-.selector-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-bottom:30px}
-.selector-card{background:#fff;border-radius:16px;padding:24px;box-shadow:0 2px 12px rgba(0,0,0,0.08)}
-.selector-card h3{font-size:14px;color:#888;margin:0 0 12px;text-transform:uppercase;letter-spacing:1px}
-.option-btns{display:flex;flex-wrap:wrap;gap:8px}
-.option-btn{padding:10px 16px;border:2px solid #e0e0e0;border-radius:50px;background:#fff;cursor:pointer;font-size:14px;transition:all 0.2s}
-.option-btn:hover{border-color:var(--tiffany);background:#f0fdfa}
-.option-btn.active{border-color:var(--tiffany);background:var(--tiffany);color:#fff;font-weight:700}
-.option-btn.selected{border-color:var(--tiffany);background:var(--tiffany);color:#fff}
-
-/* Generate Button */
-.generate-btn{width:100%;padding:18px;border:none;border-radius:50px;background:linear-gradient(135deg,var(--tiffany),var(--tiffany-dark));color:#fff;font-size:18px;font-weight:700;cursor:pointer;transition:transform 0.2s,box-shadow 0.2s;margin-bottom:30px}
-.generate-btn:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(10,186,181,0.4)}
-.generate-btn:disabled{background:#ccc;cursor:not-allowed;transform:none;box-shadow:none}
-
-/* Checklist Container */
-.checklist-container{background:#fff;border-radius:20px;padding:30px;box-shadow:0 2px 12px rgba(0,0,0,0.08);display:none}
-.checklist-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:24px;padding-bottom:16px;border-bottom:2px solid #f0f0f0}
-.checklist-header h2{font-size:22px;margin:0;color:var(--tiffany-dark)}
-.header-actions{display:flex;gap:10px}
-.action-btn{padding:10px 20px;border:2px solid var(--tiffany);border-radius:50px;background:#fff;color:var(--tiffany);font-size:14px;font-weight:600;cursor:pointer;transition:all 0.2s}
-.action-btn:hover{background:var(--tiffany);color:#fff}
-
-/* Progress Bar */
-.progress-section{margin-bottom:24px}
-.progress-bar-bg{height:12px;background:#e0e0e0;border-radius:50px;overflow:hidden}
-.progress-bar-fill{height:100%;background:linear-gradient(90deg,var(--tiffany),var(--tiffany-dark));border-radius:50px;transition:width 0.3s}
-.progress-text{text-align:center;font-size:14px;color:#666;margin-top:8px}
-.progress-text strong{color:var(--tiffany-dark);font-size:20px}
-
-/* Category Section */
-.category{margin-bottom:28px}
-.category-header{display:flex;align-items:center;gap:12px;margin-bottom:12px}
-.category-icon{font-size:24px}
-.category-title{font-size:18px;font-weight:700;color:#333}
-.category-count{margin-left:auto;font-size:13px;color:#888;background:#f0f0f0;padding:4px 12px;border-radius:50px}
-
-/* Checklist Items */
-.check-items{display:flex;flex-direction:column;gap:8px}
-.check-item{display:flex;align-items:center;padding:12px 16px;background:#f8f9fa;border-radius:12px;cursor:pointer;transition:all 0.2s}
-.check-item:hover{background:#f0fdfa}
-.check-item.checked{background:#e8f5e9}
-.check-item.checked .item-text{text-decoration:line-through;color:#888}
-.check-item input[type="checkbox"]{width:22px;height:22px;margin-right:12px;accent-color:var(--tiffany);cursor:pointer}
-.item-text{flex:1;font-size:15px}
-.item-note{font-size:12px;color:#888;margin-left:8px}
-
-/* PDF Download Section */
-.pdf-section{background:linear-gradient(135deg,#667eea,#764ba2);border-radius:20px;padding:32px;text-align:center;color:#fff;margin-top:30px}
-.pdf-section h3{font-size:20px;margin:0 0 8px}
-.pdf-section p{font-size:14px;opacity:0.9;margin:0 0 20px}
-.pdf-form{display:flex;flex-direction:column;align-items:center;gap:10px;max-width:360px;margin:0 auto}
-.pdf-form input[type="email"]{width:100%;padding:14px 20px;border:none;border-radius:50px;font-size:15px}
-.pdf-form button{width:100%;padding:14px 40px;border:none;border-radius:50px;background:#fff;color:#764ba2;font-size:16px;font-weight:700;cursor:pointer}
-.pdf-note{font-size:12px;opacity:0.7;margin-top:12px}
-
-/* Footer */
-.footer{text-align:center;padding:30px;color:#888;font-size:13px}
-
-/* Print Styles */
-@media print{
-  .selector-grid,.generate-btn,.header-actions,.pdf-section,.footer{display:none!important}
-  .checklist-container{display:block!important;box-shadow:none;border:1px solid #ddd}
-  .check-item{break-inside:avoid}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "互動式打包清單｜選擇目的地自動生成｜均在路上 Travel Lab",
+  "description": "",
+  "url": "https://golightly.fun/packing-checklist.html",
+  "datePublished": "2026-06-12",
+  "dateModified": "2026-06-12",
+  "author": {
+    "@type": "Person",
+    "name": "均在路上"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "均在路上 Travel Lab",
+    "url": "https://golightly.fun/"
+  }
 }
+</script>
 
-/* Responsive */
-@media(max-width:600px){
-  .header h1{font-size:22px}
-  .selector-grid{grid-template-columns:1fr}
-  .checklist-header{flex-direction:column;gap:12px;align-items:flex-start}
-  .header-actions{width:100%}
-  .action-btn{flex:1;text-align:center}
+<script>
+/*! loadCSS rel=preload polyfill. [c]2017 Filament Group, Inc. MIT License */
+(function(w){"use strict";if(!w.loadCSS){w.loadCSS=function(){}}
+var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.createElement("link").relList.supports("preload")}catch(e){ret=!1}return function(){return ret}})();rp.poly=function(){var link=w.document.getElementsByTagName("link");for(var i=0;i<link.length;i++){var lnk=link[i];if(lnk.rel==="preload"&&lnk.as==="style"&&!lnk.onload){lnk.onload=rp.poly;lnk.rel="stylesheet"}}};if(!rp.support()){rp.poly();var run=w.setInterval(rp.poly,500);if(w.addEventListener){w.addEventListener("load",function(){rp.poly();w.clearInterval(run)})}else if(w.attachEvent){w.attachEvent("onload",function(){rp.poly();w.clearInterval(run)})}}if(typeof exports!=="undefined"){exports.loadCSS=loadCSS}else{w.loadCSS=loadCSS}}(typeof global!=="undefined"?global:this));
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "衣服帶太多，行李箱塞不下怎麼辦？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "建議採用「一衣多穿」原則：上衣和褲子可以互相搭配，選擇顏色相近的單品。另外，可以帶舊衣服去，穿完就丟，回來行李箱還能空出空間裝戰利品。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "保養品瓶瓶罐罐帶太多很重，怎麼簡化？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "買分裝瓶把保養品分裝成旅行用量，或直接用旅行組。很多品牌都有推出旅行套組，比正貨便宜又輕便。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "行動電源可以放行李箱嗎？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "絕對不行！行動電源必須隨身攜帶，不能托運。這是航空公司的規定，違反可能被沒收甚至罰款。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "出國才發現忘了帶重要東西怎麼辦？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "大部分東西當地都買得到。日本、韓國的藥妝店什麼都有，東南亞的便利商店也很方便。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "怎麼判斷行李重量會不會超重？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "出發前用體重計量一下行李箱重量。廉航通常限重 7kg（隨身）或 15-20kg（托運），建議留 1-2kg 的彈性空間。"
+      }
+    }
+  ]
 }
-</style>
-</head>
+</script></head>
 <body>
 <!-- TOP BAR NAVIGATION -->
 <div class="site-topbar">
@@ -201,6 +215,13 @@ body{font-family:'Noto Sans TC',sans-serif;background:#f5f5f5;margin:0;padding:0
 <div style="font-size:13px;color:var(--text-light);">✈ 用最少預算，走最多地方</div>
 </div>
 </div>
+<div class="three-col-wrapper">
+<div class="sidebar-card">
+<a href="packing-list.html">
+<img alt="" class="sb-hero-img" loading="lazy" src="images/packing-sidebar.webp"/>
+</a>
+</div>
+<div class="col-center"><div class="article-container">
 <section class="hero-region-new">
 <div class="hero-image-wrapper">
 <img alt="行李清單｜打包技巧大全" loading="eager" src="images/travel-tools-hero.webp"/>
@@ -214,7 +235,7 @@ body{font-family:'Noto Sans TC',sans-serif;background:#f5f5f5;margin:0;padding:0
 </div>
 </div>
 </section><div class="portal-content"><div class="header">
-<h1>🧳 互動式打包清單</h1>
+
 <p>選擇目的地、天數、季節，自動生成你的專屬清單</p>
 </div><div class="container">
 <!-- Selection Section -->
@@ -267,7 +288,7 @@ body{font-family:'Noto Sans TC',sans-serif;background:#f5f5f5;margin:0;padding:0
 <div class="pdf-section">
 <h3>📥 免費下載 PDF 版本</h3>
 <p>填寫 Email，立即收到完整打包清單 PDF</p>
-<form action="https://formspree.io/f/xredjjgb" class="pdf-form" method="POST">
+<form action="https://formspree.io/f/xredjjgb" class="pdf-form" method="POST"  >
 <input name="email" placeholder="輸入你的 Email" required="" type="email"/>
 <input name="resource" type="hidden" value="packing-checklist"/>
 <button type="submit">免費下載 PDF</button>
@@ -569,7 +590,96 @@ function resetChecklist() {
 // Initialize
 updateGenerateBtn();
 </script>
-<footer class="site-footer">
+<h2 class="section-title">📖 延伸閱讀</h2>
+<div class="related-list">
+<a class="related-card" href="packing-list.html">
+<div class="post-thumb"><img alt="行李清單｜打包技巧大全" height="1024" loading="lazy" src="images/packing-list.webp" width="1536"/></div>
+<div class="post-body">
+<span class="cat-tag">旅遊工具</span>
+<h3>行李清單｜打包技巧大全</h3>
+</div>
+</a>
+<a class="related-card" href="notion-travel-template.html">
+<div class="post-thumb"><img alt="Notion旅遊模板｜行程規劃×預算管理" height="1024" loading="lazy" src="images/notion-travel.webp" width="1536"/></div>
+<div class="post-body">
+<span class="cat-tag">旅遊工具</span>
+<h3>Notion旅遊模板｜行程規劃×預算管理</h3>
+</div>
+</a>
+<a class="related-card" href="budget-calculator.html">
+<div class="post-thumb"><img alt="旅遊預算試算器｜出國花費一次算清楚" height="1024" loading="lazy" src="images/budget-airline.webp" width="1536"/></div>
+<div class="post-body">
+<span class="cat-tag">旅遊工具</span>
+<h3>旅遊預算試算器｜出國花費一次算清楚</h3>
+</div>
+</a>
+</div>
+
+
+<div class="mt-12 p-6 bg-gradient-to-br from-slate-50 to-gray-100 rounded-2xl" id="p5-expand">
+<h2 class="text-2xl font-bold mb-4">🧳 不同目的地打包建議</h2>
+<p class="text-gray-700 leading-relaxed mb-4">每個目的地的氣候和文化不同，打包清單也要調整。以下是 4 種常見旅行場景的打包重點。</p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+<div class="bg-white rounded-xl p-4 shadow-sm">
+<h3 class="font-bold mb-2">❄️ 日本冬季</h3>
+<ul class="text-gray-700 space-y-1 text-sm">
+<li>🧥 羽絨外套（必帶！-10°C）</li>
+<li>🧣 圍巾+毛帽+手套</li>
+<li>👢 防滑靴（雪地超滑）</li>
+<li>🧴 乳液+護唇膏（超乾）</li>
+<li>🔥 暖暖包（小空買最便宜）</li>
+</ul>
+</div>
+<div class="bg-white rounded-xl p-4 shadow-sm">
+<h3 class="font-bold mb-2">🍂 韓國秋季</h3>
+<ul class="text-gray-700 space-y-1 text-sm">
+<li>🧥 洋蔥式穿搭（10-25°C）</li>
+<li>👟 好走的鞋（逛很多路）</li>
+<li>🧴 保濕產品（風很乾）</li>
+<li>🌂 折疊傘（秋風+陣雨）</li>
+<li>🔌 圓腳轉接頭（必帶！）</li>
+</ul>
+</div>
+<div class="bg-white rounded-xl p-4 shadow-sm">
+<h3 class="font-bold mb-2">🌴 東南亞夏季</h3>
+<ul class="text-gray-700 space-y-1 text-sm">
+<li>👕 輕薄透氣衣物</li>
+<li>🩴 夾腳拖（海灘+室內）</li>
+<li>🧴 防曬係數 50+ 防曬乳</li>
+<li>💊 腸胃藥+防蚊液</li>
+<li>🎒 防盜包（觀光區必備）</li>
+</ul>
+</div>
+<div class="bg-white rounded-xl p-4 shadow-sm">
+<h3 class="font-bold mb-2">🏝 海島度假</h3>
+<ul class="text-gray-700 space-y-1 text-sm">
+<li>🤿 浮潛裝備（自己帶最衛生）</li>
+<li>🩱 防磨水母衣</li>
+<li>📱 防水袋（手機防鹽水）</li>
+<li>🧴 蘆薈膠（曬後修復）</li>
+<li>🎒 乾濕分離袋</li>
+</ul>
+</div>
+</div>
+<p class="mt-2 text-xs text-gray-500">更多：<a href="packing-list.html" class="text-slate-600 underline">完整打包清單</a> · <a href="japan-travel.html" class="text-slate-600 underline">日本攻略</a> · <a href="korea-travel.html" class="text-slate-600 underline">韓國攻略</a></p>
+</div>
+
+
+<div class="mt-8 p-6 bg-gradient-to-br from-slate-50 to-gray-100 rounded-2xl" id="p5-expand2">
+<h2 class="text-2xl font-bold mb-4">🎯 打包常見錯誤與解法</h2>
+<p class="text-gray-700 leading-relaxed mb-3">每次出國都帶太多東西是台灣人的通病。根據統計，旅客平均只用到打包物品的六成，剩下的四成完全沒動過。以下是幾個最常見的打包錯誤和解決方案。</p>
+<p class="text-gray-700 leading-relaxed mb-3">第一大錯誤是「以防萬一心態」。很多人會想「萬一下雨呢？萬一變冷呢？萬一要去正式場合呢？」然後塞了雨衣、厚外套和皮鞋，結果全程都用不上。正確做法是查好目的地的天氣預報和活動安排，只帶確定會用的東西。如果真的遇到突發狀況，在當地買一件也比帶著佔行李空間划算。</p>
+<p class="text-gray-700 leading-relaxed mb-3">第二大錯誤是鞋子帶太多。鞋子是行李箱裡最佔空間的物品，一雙運動鞋就吃掉四分之一的空間。其實出國只需要三雙鞋：一双好走的運動鞋、一雙拖鞋和一雙稍微正式的鞋。如果你去海島，連正式鞋都可以省了，兩雙就夠。重點是新鞋一定要在出發前穿過幾次，不要帶全新的鞋出國，磨腳的痛苦會毀了整趟旅行。</p>
+<p class="text-gray-700 leading-relaxed mb-3">第三大錯誤是保養品和化妝品帶太多。瓶瓶罐罐加起來很重，而且很多國家對隨身液體有容量限制。建議全部用分裝瓶裝，只帶旅行天數需要的量。更省事的方法是出發前買旅行組合包，很多品牌都有出十五毫升的小包裝，幾天份剛好。洗髮精和沐浴乳更不用帶，九成的飯店和民宿都有提供。</p>
+<p class="text-gray-700 leading-relaxed mb-3">第四大錯誤是忘記帶關鍵小物。充電線和轉接頭是最常被忘記的，到了當地才發現手機充不了電。建議出發前一天就把所有電子產品的充電器集中放在一個袋子裡，然後在行李清單上打勾確認。護照和簽證的影本也要準備一份，放在跟正本不同的地方，以防遺失時能快速補辦。</p>
+<p class="text-gray-700 leading-relaxed mb-3">最後一個建議：行李箱永遠留三分之一的空間。你一定會在當地買東西，不管是紀念品、藥妝還是零食。如果出發時行李箱就已經塞滿，回程的時候就得再買一個行李箱，那又是額外的開銷。帶少一點，回來的時候自然有地方裝戰利品。</p>
+<p class="mt-2 text-xs text-gray-500">更多：<a href="packing-list.html" class="text-slate-600 underline">完整打包清單</a> · <a href="power-plug-guide.html" class="text-slate-600 underline">插座電壓指南</a> · <a href="travel-tools.html" class="text-slate-600 underline">旅遊工具</a></p>
+</div>
+</div>
+</div><!-- /col-center -->
+</div><!-- /three-col-wrapper -->
+<!-- FOOTER -->
+<footer class="site-footer ls-footer">
 <div class="footer-inner">
 <div class="footer-col">
 <h4>🇯🇵 日本自由行</h4>
@@ -662,12 +772,7 @@ updateGenerateBtn();
   <a href="disclaimer.html">免責聲明</a>
 </div>
 <p>© 2026 均在路上 Travel Lab. All Rights Reserved.</p>
-<div style="margin-top:8px;font-size:12px;">
-<a href="about.html" style="color:inherit;margin-right:12px;">關於我們</a>
-<a href="privacy.html" style="color:inherit;margin-right:12px;">隱私權政策</a>
-<a href="terms.html" style="color:inherit;margin-right:12px;">使用條款</a>
-<a href="disclaimer.html" style="color:inherit;">免責聲明</a>
-</div></div>
+</div>
 </footer>
 <script>
   // Track affiliate link clicks via GA4
@@ -684,5 +789,181 @@ updateGenerateBtn();
   });
 </script>
 <script defer="" src="js/monetization.js"></script>
+
+<div class="mt-12 p-8 bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl">
+  <h2 class="text-2xl font-bold mb-6 text-gray-800">🧳 不同季節與目的地的打包攻略</h2>
+  <p class="text-gray-600 leading-relaxed mb-6">不同季節、不同目的地，打包重點差很多！以下是針對常見情境的打包建議，讓你不用帶一堆用不到的東西：</p>
+  
+  <div class="space-y-6">
+    <div class="bg-white rounded-xl p-6 shadow-sm border-l-4 border-blue-500">
+      <h3 class="font-bold text-xl text-gray-800 mb-4 flex items-center gap-2">❄️ 日本冬季（12月-2月）</h3>
+      <p class="text-gray-600 leading-relaxed mb-4">日本冬天尤其是北海道、東北地區，溫度可能低到零下十幾度。保暖是第一優先，但也別帶太多，因為室內暖氣很強。</p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>
+          <h4 class="font-bold text-gray-700 mb-2">必帶物品：</h4>
+          <ul class="text-gray-600 text-sm space-y-1 list-disc pl-5">
+            <li>羽絨外套（建議到膝蓋的長版）</li>
+            <li>發熱衣、發熱褲（Uniqlo HEATTECH 就很好用）</li>
+            <li>毛帽、圍巾、手套（沒帶會後悔）</li>
+            <li>防滑雪靴（日本路面可能結冰）</li>
+            <li>保濕乳液、護唇膏（空氣超乾）</li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold text-gray-700 mb-2">穿搭技巧：</h4>
+          <ul class="text-gray-600 text-sm space-y-1 list-disc pl-5">
+            <li>洋蔥式穿法：內層發熱衣+中層毛衣+外層羽絨</li>
+            <li>室內暖氣強，內層別穿太厚</li>
+            <li>圍巾很重要，脖子保暖全身都暖</li>
+            <li>腳底貼暖暖包，走路一整天不冷</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <div class="bg-white rounded-xl p-6 shadow-sm border-l-4 border-orange-500">
+      <h3 class="font-bold text-xl text-gray-800 mb-4 flex items-center gap-2">🍂 韓國秋季（9月-11月）</h3>
+      <p class="text-gray-600 leading-relaxed mb-4">韓國秋天是賞楓旺季，天氣舒適但早晚溫差大。首爾、釜山、濟州島都適合這時候去，打包重點是方便穿脫的衣物。</p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>
+          <h4 class="font-bold text-gray-700 mb-2">必帶物品：</h4>
+          <ul class="text-gray-600 text-sm space-y-1 list-disc pl-5">
+            <li>薄外套或針織衫（早晚要穿）</li>
+            <li>長袖上衣、薄長褲</li>
+            <li>舒適好走的鞋子（韓國很多坡路）</li>
+            <li>輕便雨傘（秋天偶爾下雨）</li>
+            <li>護唇膏（韓國空氣偏乾）</li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold text-gray-700 mb-2">注意事項：</h4>
+          <ul class="text-gray-600 text-sm space-y-1 list-disc pl-5">
+            <li>11月開始變冷，要帶厚一點的外套</li>
+            <li>濟州島風大，要帶防風外套</li>
+            <li>韓國很多餐廳要脫鞋，襪子要穿好看的</li>
+            <li>顏色選大地色系，拍照跟楓葉比較搭</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <div class="bg-white rounded-xl p-6 shadow-sm border-l-4 border-yellow-500">
+      <h3 class="font-bold text-xl text-gray-800 mb-4 flex items-center gap-2">☀️ 東南亞夏季（全年適用）</h3>
+      <p class="text-gray-600 leading-relaxed mb-4">泰國、越南、馬來西亞這些東南亞國家，一年四季都很熱。打包重點是輕便、透氣、防曬，還有防蚊蟲！</p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>
+          <h4 class="font-bold text-gray-700 mb-2">必帶物品：</h4>
+          <ul class="text-gray-600 text-sm space-y-1 list-disc pl-5">
+            <li>透氣短袖、短褲（多帶幾套，流汗要換）</li>
+            <li>防曬乳 SPF50+（必備！紫外線很強）</li>
+            <li>防蚊液（登革熱要注意）</li>
+            <li>涼鞋或拖鞋（走路兼玩水）</li>
+            <li>輕便雨衣（午後雷陣雨多）</li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold text-gray-700 mb-2">注意事項：</h4>
+          <ul class="text-gray-600 text-sm space-y-1 list-disc pl-5">
+            <li>寺廟參觀要穿有袖上衣、長褲或長裙</li>
+            <li>帶一套正式一點的衣服，高級餐廳可能要</li>
+            <li>腸胃藥必備，飲食習慣不同容易拉肚子</li>
+            <li>行李盡量輕便，廉航行李限重較嚴</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <div class="bg-white rounded-xl p-6 shadow-sm border-l-4 border-cyan-500">
+      <h3 class="font-bold text-xl text-gray-800 mb-4 flex items-center gap-2">🏝️ 海島度假（沖（沖繩、峇里島、長灘島）</h3>
+      <p class="text-gray-600 leading-relaxed mb-4">海島度假主打放鬆，打包重點是泳裝、防曬和防水用品。別帶太多正式衣服，海島氛圍就是要休閒。</p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>
+          <h4 class="font-bold text-gray-700 mb-2">必帶物品：</h4>
+          <ul class="text-gray-600 text-sm space-y-1 list-disc pl-5">
+            <li>泳衣（建議帶兩套，一套乾一套穿）</li>
+            <li>海灘拖鞋、防水手機袋</li>
+            <li>防曬乳、蘆薈蘆薈膠（曬後修復）</li>
+            <li>太陽眼鏡、海灘帽</li>
+            <li>輕便沙龍或罩衫（防曬兼拍照好看）</li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold text-gray-700 mb-2">注意事項：</h4>
+          <ul class="text-gray-600 text-sm space-y-1 list-disc pl-5">
+            <li>浮潛裝備當地可租，不用自己帶</li>
+            <li>帶個防水後背包，玩水時裝東西</li>
+            <li>晚上海邊可能有風，帶件薄外套</li>
+            <li>比基尼很好看，但記得先刮毛 XD</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="mt-12 p-8 bg-gradient-to-br from-rose-50 to-pink-50 rounded-2xl">
+  <h2 class="text-2xl font-bold mb-6 text-gray-800">❓ 打包常見錯誤 FAQ</h2>
+  <p class="text-gray-600 leading-relaxed mb-6">新手打包最容易犯的錯誤，這裡幫你整理出來，避免踩雷：</p>
+  
+  <div class="space-y-4">
+    <div class="bg-white rounded-xl p-5 shadow-sm">
+      <h3 class="font-bold text-lg mb-2 text-gray-800">Q1：衣服帶太多，行李箱塞不下怎麼辦？</h3>
+      <p class="text-gray-600 leading-relaxed">這是最常見的問題！建議採用「一衣多穿」原則：上衣和褲子可以互相搭配，選擇顏色相近的單品。另外，可以帶舊衣服去，穿完就丟，回來行李箱還能空出空間裝戰利品。</p>
+    </div>
+    
+    <div class="bg-white rounded-xl p-5 shadow-sm">
+      <h3 class="font-bold text-lg mb-2 text-gray-800">Q2：保養品瓶瓶罐罐帶太多很重，怎麼簡化？</h3>
+      <p class="text-gray-600 leading-relaxed">買分裝瓶把保養品分裝成旅行用量，或直接用旅行組。很多品牌都有推出旅行套組，比正貨便宜又輕便。如果不介意，當地藥妝店買小包裝的也行。</p>
+    </div>
+    
+    <div class="bg-white rounded-xl p-5 shadow-sm">
+      <h3 class="font-bold text-lg mb-2 text-gray-800">Q3：行動電源可以放行李箱嗎？</h3>
+      <p class="text-gray-600 leading-relaxed">絕對不行！行動電源必須隨身攜帶，不能托運。這是航空公司的規定，違反可能被沒收甚至罰款。另外，行動電源容量不能超過 20,000mAh（有些航空限制更嚴格，建議出發前確認）。</p>
+    </div>
+    
+    <div class="bg-white rounded-xl p-5 shadow-sm">
+      <h3 class="font-bold text-lg mb-2 text-gray-800">Q4：出國才發現忘了帶重要東西怎麼辦？</h3>
+      <p class="text-gray-600 leading-relaxed">先別緊張，大部分東西當地都買得到。日本、韓國的藥妝店什麼都有，東南亞的便利商店也很方便。如果是藥品這種比較個人化的東西，可以找當地的藥局說明症狀，通常能找到類似的藥。</p>
+    </div>
+    
+    <div class="bg-white rounded-xl p-5 shadow-sm">
+      <h3 class="font-bold text-lg mb-2 text-gray-800">Q5：怎麼判斷行李重量會不會超重？</h3>
+      <p class="text-gray-600 leading-relaxed">出發前用體重計量一下行李箱重量。廉航通常限重 7kg（隨身）或 15-20kg（托運），傳統航空托運可能是 20-30kg。建議留 1-2kg 的彈性空間，因為回來可能會買東西。如果真的超重，現場加買行李額度比罰款便宜。</p>
+    </div>
+  </div>
+</div>
+
+<div class="mt-12 p-8 bg-gradient-to-br from-emerald-50 to-teal-50 rounded-2xl">
+  <h2 class="text-2xl font-bold mb-6 text-gray-800">🔗 延伸閱讀推薦</h2>
+  <p class="text-gray-600 leading-relaxed mb-6">打包前後，這些攻略能幫你更順利完成準備：</p>
+  
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+    <a href="https://golightly.fun/packing-list.html" class="bg-white rounded-xl p-4 shadow-sm hover:shadow-md transition flex items-center gap-3 group">
+      <span class="text-3xl">🧳</span>
+      <div>
+        <h4 class="font-bold text-gray-800 group-hover:text-teal-600 transition">行李打包終極指南</h4>
+        <p class="text-sm text-gray-500">打包技巧與省空間密技</p>
+      </div>
+    </a>
+    
+    <a href="https://golightly.fun/japan-travel.html" class="bg-white rounded-xl p-4 shadow-sm hover:shadow-md transition flex items-center gap-3 group">
+      <span class="text-3xl">🇯🇵</span>
+      <div>
+        <h4 class="font-bold text-gray-800 group-hover:text-teal-600 transition">日本自由行攻略</h4>
+        <p class="text-sm text-gray-500">簽證、交通、行程全包</p>
+      </div>
+    </a>
+    
+    <a href="https://golightly.fun/korea-travel.html" class="bg-white rounded-xl p-4 shadow-sm hover:shadow-md transition flex items-center gap-3 group">
+      <span class="text-3xl">🇰🇷</span>
+      <div>
+        <h4 class="font-bold text-gray-800 group-hover:text-teal-600 transition">韓國自由行攻略</h4>
+        <p class="text-sm text-gray-500">首爾釜山濟州行程推薦</p>
+      </div>
+    </a>
+  </div>
+</div>
+
+
 </body>
 </html>

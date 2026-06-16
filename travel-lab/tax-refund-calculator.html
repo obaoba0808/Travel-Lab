@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="zh-Hant-TW">
 <head>
 <meta charset="utf-8"/>
@@ -67,10 +67,14 @@
 </script>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&amp;display=swap" rel="stylesheet"/>
-<link href="style.css" rel="stylesheet"/>
-<link href="beautify-overrides.css" rel="stylesheet"/>
-<link href="beautify.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&amp;display=swap" media="print" onload="this.media='all'" rel="stylesheet">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&amp;display=swap" rel="stylesheet"/></noscript>
+<link as="style" href="style.css" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/>
+<noscript><link href="style.css" rel="stylesheet"/></noscript>
+<link href="beautify-overrides.css" as="style" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/>
+<noscript><link href="beautify-overrides.css" rel="stylesheet"/></noscript>
+<link href="beautify.css" as="style" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/>
+<noscript><link href="beautify.css" rel="stylesheet"/></noscript>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-S7KQGHSD2R"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -79,6 +83,47 @@
   gtag('config', 'G-S7KQGHSD2R');
 </script>
 <link href="data:image/svg+xml,&lt;svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'&gt;&lt;text y='.9em' font-size='90'&gt;💰&lt;/text&gt;&lt;/svg&gt;" rel="icon"/>
+
+<style>
+/* 響應式表格 - 手機版優化 */
+.table-responsive {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 1rem 0;
+}
+.table-responsive table {
+  min-width: 600px;
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .table-responsive table {
+    font-size: 13px;
+  }
+  .table-responsive th,
+  .table-responsive td {
+    padding: 8px 6px;
+    white-space: nowrap;
+  }
+  .table-responsive td:last-child {
+    white-space: normal;
+    min-width: 120px;
+  }
+}
+@media (max-width: 480px) {
+  .table-responsive table {
+    font-size: 12px;
+  }
+  .table-responsive th,
+  .table-responsive td {
+    padding: 6px 4px;
+  }
+}
+</style>
+<script>
+/*! loadCSS rel=preload polyfill. [c]2017 Filament Group, Inc. MIT License */
+(function(w){"use strict";if(!w.loadCSS){w.loadCSS=function(){}}
+var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.createElement("link").relList.supports("preload")}catch(e){ret=!1}return function(){return ret}})();rp.poly=function(){var link=w.document.getElementsByTagName("link");for(var i=0;i<link.length;i++){var lnk=link[i];if(lnk.rel==="preload"&&lnk.as==="style"&&!lnk.onload){lnk.onload=rp.poly;lnk.rel="stylesheet"}}};if(!rp.support()){rp.poly();var run=w.setInterval(rp.poly,500);if(w.addEventListener){w.addEventListener("load",function(){rp.poly();w.clearInterval(run)})}else if(w.attachEvent){w.attachEvent("onload",function(){rp.poly();w.clearInterval(run)})}}if(typeof exports!=="undefined"){exports.loadCSS=loadCSS}else{w.loadCSS=loadCSS}}(typeof global!=="undefined"?global:this));
+</script>
 </head>
 <body>
 <!-- TOP BAR NAVIGATION -->
@@ -164,7 +209,7 @@
 </div>
 <section class="hero-region-new">
 <div class="hero-image-wrapper">
-<img alt="免稅店退稅試算器2026" loading="eager" src="images/japan-hero.webp"/>
+<img alt="免稅店退稅試算器2026" loading="eager" src="images/miles.webp"/>
 </div>
 <div class="hero-title-below">
 <span class="hero-region-tag">💸 退稅</span>
@@ -174,7 +219,17 @@
 <span>✈️ 均在路上</span>
 </div>
 </div>
-</section><div class="portal-content"><div style="font-size:13px;color:var(--text-light);">✈ 用最少預算，走最多地方</div><h2>免稅退稅金額試算</h2><div class="day-card" style="margin-bottom:32px;">
+</section>
+
+<div class="three-col-wrapper">
+<div class="sidebar-card">
+  <a href="budget-airline-guide.html">
+    <img alt="退稅試算" class="sb-hero-img" loading="lazy" src="images/tax-refund-sidebar.webp"/>
+  </a>
+</div>
+<div class="col-center">
+<div class="article-container">
+<div class="portal-content"><div style="font-size:13px;color:var(--text-light);">✈ 用最少預算，走最多地方</div><h2>免稅退稅金額試算</h2><div class="day-card" style="margin-bottom:32px;">
 <div style="max-width:500px;margin:0 auto;">
 <div style="margin-bottom:16px;">
 <label style="font-weight:700;display:block;margin-bottom:6px;">選擇國家</label>
@@ -209,7 +264,7 @@
 </div>
 </div>
 </div><h2>各國退稅比較一覽</h2><div class="day-card">
-<table style="width:100%;border-collapse:collapse;font-size:13px;">
+<div class="table-responsive"><table style="width:100%;border-collapse:collapse;font-size:13px;">
 <tr style="border-bottom:2px solid var(--tiffany-light);background:#f0fdfa;">
 <th style="text-align:left;padding:8px;">國家</th>
 <th style="text-align:center;padding:8px;">退稅率</th>
@@ -221,7 +276,7 @@
 <tr style="border-bottom:1px solid #eee;"><td style="padding:8px;font-weight:700;">日本</td><td style="text-align:center;padding:8px;">10%</td><td style="text-align:center;padding:8px;">¥5,000 (~NT$1,100)</td><td style="padding:8px;">店家直接免稅（免手續費）</td><td style="padding:8px;">護照正本需交店家影印</td></tr>
 <tr style="border-bottom:1px solid #eee;"><td style="padding:8px;font-weight:700;">泰國</td><td style="text-align:center;padding:8px;">7%</td><td style="text-align:center;padding:8px;">฿2,000 (~NT$1,900)</td><td style="padding:8px;">VAT Refund Office</td><td style="padding:8px;">30天內可退</td></tr>
 <tr><td style="padding:8px;font-weight:700;">越南</td><td style="text-align:center;padding:8px;">10%</td><td style="text-align:center;padding:8px;">200萬₫ (~NT$2,600)</td><td style="padding:8px;">機場 Viettel 櫃檯</td><td style="padding:8px;">15天內可退</td></tr>
-</table>
+</table></div>
 </div><h2>韓國退稅流程（KANTAR APP 推薦）</h2><div class="day-card">
 <div style="display:grid;grid-template-columns:50px 1fr;gap:12px;">
 <div style="text-align:center;font-size:24px;font-weight:700;color:var(--tiffany-dark);">1</div>
@@ -281,51 +336,106 @@
 <span style="font-size:13px;color:#555;">通過安檢後到候機區的「VAT Refund Counter」領取現金泰銖或信用卡退款。信用卡約 14 天入帳。</span>
 </div>
 </div>
-</div><h2>❓ 常見問題</h2><section class="faq-section">
-<div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q">退稅最低消費額度是多少？</div><div class="faq-a">韓國₩15,000（約NT$360）、日本¥5,000（約NT$1,100）、泰國฿2,000（約NT$1,900）、越南200萬₫（約NT$2,600）。未達門檻無法退稅。</div></div>
-<div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q">退稅手續費多少？</div><div class="faq-a">Global Blue手續費約退稅額的15-25%、Tax Free Easy約20%。機場自辦退稅無手續費但需排隊。韓國「KANTAR」APP掃QRcode退稅免手續費（推薦）。</div></div>
-<div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q">機場退稅需要多久？</div><div class="faq-a">建議航班起飛前90-120分鐘到達機場。退稅櫃檯排隊約10-30分鐘，旺季（連假）可能要45分鐘。韓國用KANTAR APP可以免排隊。</div></div>
-<div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q">消費當天就要辦退稅嗎？</div><div class="faq-a">是的！必須在消費當天（或離境前30天內，依國家而定）在店家填寫退稅單。日本和韓國要求當日填，泰國可30天內，越南15天內。</div></div>
-<div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q">退稅錢怎麼領？</div><div class="faq-a">三種方式：①機場現金領取（當地貨幣或美元）②信用卡退款（7-14天入帳）③Global Blue支票（需郵寄兌換，不推薦）。推薦信用卡退款最方便。</div></div>
-<div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q">哪些東西不能退稅？</div><div class="faq-a">一般不可退稅：①餐飲（在店內吃完的食物飲料）②服務費、小費、酒店住宿費 ③已拆封使用的商品 ④超過限量的菸酒。可退稅：①化妝品、藥妝 ②服飾、包包 ③電子產品 ④食品（未拆封）⑤紀念品。</div></div>
-<div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q">韓國KANTAR退稅APP怎麼用？</div><div class="faq-a">①在店家消費時出示KANTAR APP QRcode讓店員掃描 ②APP自動記錄消費明細 ③機場打開APP→點擊「退稅申請」→選信用卡退款或現金 ④免排隊、免手續費，最推薦的方式。</div></div>
-<div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q">日本免稅店和一般店家差在哪？</div><div class="faq-a">日本免稅店（Japan Duty Free / 樂天免稅）商品一律免消費稅10%。一般店家也可以退稅（同店消費¥5,000以上），結帳時告知店員「Tax Free」，出示護照即可。</div></div>
-</section><div style="background:#f5f5f5;padding:20px;border-radius:12px;margin:24px 0;">
-<h4 style="margin:0 0 12px;color:#333;">📖 延伸閱讀</h4>
-<ul style="margin:0;padding-left:20px;line-height:1.8;">
-<li><a href="japan-drugstore-checklist.html" style="color:#078E8A;font-weight:600;">日本藥妝必買清單35款</a></li>
-<li><a href="seoul-food-map.html" style="color:#078E8A;font-weight:600;">首爾弘大明洞美食地圖20家推薦</a></li>
-<li><a href="korea-budget.html" style="color:#078E8A;font-weight:600;">韓國預算解析｜機票×住宿×餐食</a></li>
-<li><a href="budget-calculator.html" style="color:#078E8A;font-weight:600;">旅遊預算試算器</a></li>
+</div><h2>❓ 常見問題</h2>
+
+<div class="mt-12 p-6 bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl" id="p5-expand">
+<h2 class="text-2xl font-bold mb-4">💴 各國退稅制度詳解</h2>
+<p class="text-gray-700 leading-relaxed mb-4">出國購物最爽的就是退稅！日本、韓國、泰國都有退稅制度，搞懂規則能省下不少錢。</p>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+<div class="bg-white rounded-xl p-4 shadow-sm">
+<h3 class="font-bold mb-2">🇯🇵 日本退稅</h3>
+<ul class="text-gray-700 space-y-1 text-sm">
+<li>📋 消費稅 10%</li>
+<li>🛍 免稅門檻：5,000 日圓</li>
+<li>🏪 藥妝店/百貨皆可退</li>
+<li>✈️ 機場免稅店直接免稅</li>
+<li>📱 部分商店電子退稅</li>
 </ul>
-</div><div class="cta-box">
-<h3>出國前先算好退稅，省下的錢多吃一頓烤肉</h3>
-<p style="margin:10px 0;">收藏此頁，到了國外隨時查退稅門檻</p>
-<a class="btn" href="travel-tools.html">更多旅遊工具</a>
-</div></div>
+</div>
+<div class="bg-white rounded-xl p-4 shadow-sm">
+<h3 class="font-bold mb-2">🇰🇷 韓國退稅</h3>
+<ul class="text-gray-700 space-y-1 text-sm">
+<li>📋 附加稅 10%</li>
+<li>🛍 免稅門檻：15,000 韓元</li>
+<li>🏪 樂天/新羅免稅店最方便</li>
+<li>✈️ 仁川機場退稅櫃檯</li>
+<li>📱 KIOSK 自助退稅超快</li>
+</ul>
+</div>
+<div class="bg-white rounded-xl p-4 shadow-sm">
+<h3 class="font-bold mb-2">🇹🇭 泰國退稅</h3>
+<ul class="text-gray-700 space-y-1 text-sm">
+<li>📋 VAT 7%</li>
+<li>🛍 退稅門檻：2,000 泰銖</li>
+<li>🏪 要找 VAT Refund 標誌</li>
+<li>✈️ 機場退稅需排隊 30-60 分鐘</li>
+<li>💸 退稅手續費 100 泰銖</li>
+</ul>
+</div>
+</div>
+<h3 class="font-bold text-lg mb-2">💡 退稅小技巧</h3>
+<ul class="text-gray-700 space-y-2 text-sm">
+<li>🧾 <strong>收據保管好</strong>：每張都要留，缺一不可</li>
+<li>⏰ <strong>預留時間</strong>：機場退稅要排隊，至少提前 2.5 小時到</li>
+<li>💳 <strong>信用卡退稅</strong>：比現金退稅快，手續費也低</li>
+</ul>
+<p class="mt-4 text-xs text-gray-500">更多：<a href="japan-travel.html" class="text-green-600 underline">日本攻略</a> · <a href="korea-travel.html" class="text-green-600 underline">韓國攻略</a> · <a href="budget-calculator.html" class="text-green-600 underline">預算計算機</a></p>
+</div>
 
-<!-- 試算器 -->
+<div class="mt-8 p-6 bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl" id="p5-expand2">
+<h2 class="text-2xl font-bold mb-4">📝 退稅流程實戰教學</h2>
+<p class="text-gray-700 leading-relaxed mb-3">退稅聽起來很麻煩，但其實步驟很簡單，而且省下來的錢足夠多吃好幾餐。以下以日本和韓國為例，詳細說明退稅流程。</p>
+<p class="text-gray-700 leading-relaxed mb-3">日本退稅有兩種方式：當場免稅和機場退稅。現在大多數藥妝店和百貨公司都提供當場免稅，結帳時出示護照，店員會直接扣掉消費稅。非常簡單，不需要額外跑機場退稅櫃檯。但要注意，當場免稅的商品原則上不能在日本境內使用，雖然實際上沒有人會檢查，但規定是這樣寫的。另外，單筆消費要滿五千日圓才能免稅，不同類別的商品（一般品和消耗品）要分開計算。</p>
+<p class="text-gray-700 leading-relaxed mb-3">韓國的退稅方式比較多元。大型免稅店如樂天和新羅可以當場免稅，結帳時出示護照和出境機票就行。一般的零售店則需要在商品上貼退稅標籤，然後在機場的退稅櫃檯或自助退稅機辦理。仁川機場的自助退稅機很方便，刷護照和收據上的條碼就能完成，全程不用兩分鐘。退稅金額可以選擇退到信用卡或領現金，信用卡退稅通常比較快。</p>
+<p class="text-gray-700 leading-relaxed mb-3">泰國的退稅稍微麻煩一點。首先，購物時要找有 VAT Refund 標誌的商店，結帳時告知店員你要退稅，店員會開一張黃色的退稅單。在機場時要先去海關蓋章驗證，再到退稅櫃檯領錢。整個流程大約需要三十分鐘到一小時，所以至少要提前兩個半小時到機場。退稅金額超過三萬泰銖的話，手續費要一百泰銖，而且只能退到信用卡。</p>
+<p class="text-gray-700 leading-relaxed mb-3">最後一個重要提醒：所有退稅商品的收據和退稅單一定要保管好，缺一張就不能退。建議準備一個資料夾專門放收據，每天整理一次。另外，有些國家會要求查驗退稅商品，所以不要把退稅商品放進託運行李，隨身帶著比較保險。</p>
+<p class="mt-2 text-xs text-gray-500">更多：<a href="japan-travel.html" class="text-green-600 underline">日本攻略</a> · <a href="korea-travel.html" class="text-green-600 underline">韓國攻略</a> · <a href="budget-calculator.html" class="text-green-600 underline">預算計算機</a></p>
+</div>
+</div><!-- /article-container -->
 
 
-<!-- 各國退稅比較 -->
+<section class="faq-section">
+<div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q">退稅最低消費額度是多少？</div><div class="faq-a">韓國₩15,000（約NT$360）、日本¥5,000（約NT$1,100）、泰國฿2,000（約NT$1,900）、越南200萬₫（約NT$2,600）（詳見上文「免稅退稅金額試算」章節）</div></div>
+<div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q">退稅手續費多少？</div><div class="faq-a">Global Blue手續費約退稅額的15-25%、Tax Free Easy約20%（詳見上文「免稅退稅金額試算」章節）</div></div>
+<div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q">機場退稅需要多久？</div><div class="faq-a">建議航班起飛前90-120分鐘到達機場（詳見上文「免稅退稅金額試算」章節）</div></div>
+<div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q">消費當天就要辦退稅嗎？</div><div class="faq-a">是的（詳見上文「免稅退稅金額試算」章節）</div></div>
+<div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q">退稅錢怎麼領？</div><div class="faq-a">三種方式：①機場現金領取（當地貨幣或美元）②信用卡退款（7-14天入帳）③Global Blue支票（需郵寄兌換，不推薦）（詳見上文「免稅退稅金額試算」章節）</div></div>
+<div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q">哪些東西不能退稅？</div><div class="faq-a">一般不可退稅：①餐飲（在店內吃完的食物飲料）②服務費、小費、酒店住宿費 ③已拆封使用的商品 ④超過限量的菸酒（詳見上文「免稅退稅金額試算」章節）</div></div>
+<div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q">韓國KANTAR退稅APP怎麼用？</div><div class="faq-a">①在店家消費時出示KANTAR APP QRcode讓店員掃描 ②APP自動記錄消費明細 ③機場打開APP→點擊「退稅申請」→選信用卡退款或現金 ④免排隊、免手續費，最推薦的方式（詳見上文「免稅退稅金額試算」章節）</div></div>
+<div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q">日本免稅店和一般店家差在哪？</div><div class="faq-a">日本免稅店（Japan Duty Free / 樂天免稅）商品一律免消費稅10%（詳見上文「免稅退稅金額試算」章節）</div></div>
+</section>
 
+<div class="related-posts">
+<h2 class="section-title">📖 延伸閱讀</h2>
+<div class="related-list">
+<a class="related-card" href="japan-drugstore-checklist.html">
+<div class="post-thumb"><img alt="日本藥妝必買清單｜松本清/大国藥妝掃貨攻略" height="1024" loading="lazy" src="images/Japanese drugstore cosmetics.webp" width="1536"/></div>
+<div class="post-body">
+<span class="cat-tag">日本自由行</span>
+<h3>日本藥妝必買清單｜松本清/大国藥妝掃貨攻略</h3>
+</div>
+</a>
+<a class="related-card" href="korea-money-saving-tips.html">
+<div class="post-thumb"><img alt="韓國省錢密技｜免費景點×平價美食×交通優惠" height="1024" loading="lazy" src="images/korea-budget-hero.webp" width="1536"/></div>
+<div class="post-body">
+<span class="cat-tag">預算攻略</span>
+<h3>韓國省錢密技｜免費景點×平價美食×交通優惠</h3>
+</div>
+</a>
+<a class="related-card" href="japan-money-saving-tips.html">
+<div class="post-thumb"><img alt="日本省錢密技20招｜交通×美食×免費景點" height="1024" loading="lazy" src="images/Save money in Japan 20.webp" width="1536"/></div>
+<div class="post-body">
+<span class="cat-tag">預算攻略</span>
+<h3>日本省錢密技20招｜交通×美食×免費景點</h3>
+</div>
+</a>
+</div>
+</div>
+</div><!-- /col-center -->
+</div><!-- /three-col-wrapper -->
 
-<!-- 韓國退稅教學 -->
-
-
-<!-- 日本退稅教學 -->
-
-
-<!-- 泰國退稅教學 -->
-
-
-<!-- FAQ -->
-
-
-<!-- 延伸閱讀 -->
-
-
-<footer class="site-footer">
+<!-- FOOTER -->
+<footer class="site-footer ls-footer">
 <div class="footer-inner">
 <div class="footer-col">
 <h4>🇯🇵 日本自由行</h4>
@@ -418,12 +528,7 @@
   <a href="disclaimer.html">免責聲明</a>
 </div>
 <p>© 2026 均在路上 Travel Lab. All Rights Reserved.</p>
-<div style="margin-top:8px;font-size:12px;">
-<a href="about.html" style="color:inherit;margin-right:12px;">關於我們</a>
-<a href="privacy.html" style="color:inherit;margin-right:12px;">隱私權政策</a>
-<a href="terms.html" style="color:inherit;margin-right:12px;">使用條款</a>
-<a href="disclaimer.html" style="color:inherit;">免責聲明</a>
-</div></div>
+</div>
 </footer>
 <script>
   // Track affiliate link clicks via GA4
@@ -440,5 +545,9 @@
   });
 </script>
 <script defer="" src="js/monetization.js"></script>
+
+</div>
+
+
 </body>
 </html>

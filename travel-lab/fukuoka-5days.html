@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 
 <html lang="zh-Hant-TW">
 <head>
@@ -66,10 +66,15 @@
 </script>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&amp;display=swap" rel="stylesheet"/>
-<link href="style.css" rel="stylesheet"/>
-<link href="beautify-overrides.css" rel="stylesheet"/>
-<link href="beautify.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&amp;display=swap" media="print" onload="this.media='all'" rel="stylesheet">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&amp;display=swap" rel="stylesheet"/></noscript>
+<link as="style" href="style.css" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/>
+<noscript><link href="style.css" rel="stylesheet"/></noscript>
+<link href="beautify-overrides.css" as="style" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/>
+<noscript><link href="beautify-overrides.css" rel="stylesheet"/></noscript>
+<link href="beautify.css" as="style" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/>
+<link href="layout-standard.css" rel="stylesheet"/>
+<noscript><link href="beautify.css" rel="stylesheet"/></noscript>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-S7KQGHSD2R"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -78,6 +83,47 @@
   gtag('config', 'G-S7KQGHSD2R');
 </script>
 <link href="data:image/svg+xml,&lt;svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'&gt;&lt;text y='.9em' font-size='90'&gt;🍜&lt;/text&gt;&lt;/svg&gt;" rel="icon"/>
+
+<style>
+/* 響應式表格 - 手機版優化 */
+.table-responsive {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 1rem 0;
+}
+.table-responsive table {
+  min-width: 600px;
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .table-responsive table {
+    font-size: 13px;
+  }
+  .table-responsive th,
+  .table-responsive td {
+    padding: 8px 6px;
+    white-space: nowrap;
+  }
+  .table-responsive td:last-child {
+    white-space: normal;
+    min-width: 120px;
+  }
+}
+@media (max-width: 480px) {
+  .table-responsive table {
+    font-size: 12px;
+  }
+  .table-responsive th,
+  .table-responsive td {
+    padding: 6px 4px;
+  }
+}
+</style>
+<script>
+/*! loadCSS rel=preload polyfill. [c]2017 Filament Group, Inc. MIT License */
+(function(w){"use strict";if(!w.loadCSS){w.loadCSS=function(){}}
+var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.createElement("link").relList.supports("preload")}catch(e){ret=!1}return function(){return ret}})();rp.poly=function(){var link=w.document.getElementsByTagName("link");for(var i=0;i<link.length;i++){var lnk=link[i];if(lnk.rel==="preload"&&lnk.as==="style"&&!lnk.onload){lnk.onload=rp.poly;lnk.rel="stylesheet"}}};if(!rp.support()){rp.poly();var run=w.setInterval(rp.poly,500);if(w.addEventListener){w.addEventListener("load",function(){rp.poly();w.clearInterval(run)})}else if(w.attachEvent){w.attachEvent("onload",function(){rp.poly();w.clearInterval(run)})}}if(typeof exports!=="undefined"){exports.loadCSS=loadCSS}else{w.loadCSS=loadCSS}}(typeof global!=="undefined"?global:this));
+</script>
 </head>
 <body>
 <!-- TOP BAR NAVIGATION -->
@@ -163,7 +209,7 @@
 </div>
 <section class="hero-region-new">
   <div class="hero-image-wrapper">
-    <img src="images/japan-hero.webp" alt="福岡5天4夜自由行攻略2026" loading="eager">
+    <img src="images/Fukuoka.webp" alt="福岡5天4夜自由行攻略2026" loading="eager">
   </div>
   <div class="hero-title-below">
     <span class="hero-region-tag">🇯🇵 福岡</span>
@@ -175,29 +221,68 @@
   </div>
 </section>
 
-<div style="font-size:13px;color:var(--text-light);">✈ 用最少預算，走最多地方</div>
+
 </div>
 </div>
+
+<div class="three-col-wrapper">
 <!-- CHARTER BANNER -->
 <div style="max-width:900px;margin:0 auto 30px;padding:0 20px;">
-<a href="about.html"><img alt="台灣包車自由行" height="722" src="images/charter-banner.webp" style="width:100%;border-radius:12px;display:block;" width="2179"/></a>
+<a href="about.html"><img loading="lazy" alt="台灣包車自由行" height="722" src="images/charter-banner.webp" style="width:100%;border-radius:12px;display:block;" width="2179"/></a>
 </div>
-<div class="three-col-wrapper">
-<div class="sidebar-card">
-<a href="tokyo-5days.html">
-<img alt="福岡街景" class="sb-hero-img" loading="lazy" src="images/fukuoka-sidebar.webp"/>
+<aside class="ls-sidebar">
+<div class="ls-sidebar-card">
+<a href="fukuoka-5days.html">
+<img alt="福岡攻略" class="ls-sidebar-hero" loading="lazy" src="images/fukuoka-sidebar.webp"/>
 </a>
+<div class="ls-sidebar-header">
+<div class="ls-sidebar-city">福岡</div>
+<div class="ls-sidebar-sub">自由行攻略</div>
 </div>
+<nav class="ls-sidebar-nav">
+    <a class="ls-sidebar-nav-item" href="#景點">
+      <span class="ls-sidebar-nav-icon">🏛️</span>
+      <span class="ls-sidebar-nav-label">景點</span>
+    </a>
+    <a class="ls-sidebar-nav-item" href="#美食">
+      <span class="ls-sidebar-nav-icon">🍜</span>
+      <span class="ls-sidebar-nav-label">美食</span>
+    </a>
+    <a class="ls-sidebar-nav-item" href="#購物">
+      <span class="ls-sidebar-nav-icon">🛍️</span>
+      <span class="ls-sidebar-nav-label">購物</span>
+    </a>
+    <a class="ls-sidebar-nav-item" href="#交通">
+      <span class="ls-sidebar-nav-icon">🚆</span>
+      <span class="ls-sidebar-nav-label">交通</span>
+    </a>
+    <a class="ls-sidebar-nav-item" href="#住宿">
+      <span class="ls-sidebar-nav-icon">🏨</span>
+      <span class="ls-sidebar-nav-label">住宿</span>
+    </a>
+    <a class="ls-sidebar-nav-item" href="#實用資訊">
+      <span class="ls-sidebar-nav-icon">💡</span>
+      <span class="ls-sidebar-nav-label">實用資訊</span>
+    </a>
+</nav>
+<div class="ls-sidebar-qr">
+<div class="ls-sidebar-qr-title">📱 追蹤我們</div>
+<img alt="LINE QR" src="images/line-qr.webp"/>
+<div class="ls-sidebar-qr-desc">掃描 LINE 取得最新旅遊資訊</div>
+</div>
+<a class="ls-sidebar-cta" href="travel-tools.html">📂 下載攻略 PDF</a>
+</div>
+</aside>
 <div class="col-center">
-<div class="article-container">
+<div class="article-container ls-article-content">
 <!-- TRIP PROMO BANNER -->
 <div style="position:relative;margin-bottom:24px;">
-<a data-affiliate="trip-com" href="https://tw.trip.com/sale/w/26497/go-japan.html?locale=zh-tw&curr=twd&promo_referer=3952_26497_7&Allianceid=8237671&SID=312406690&trip_sub1=&trip_sub3=P17078987" rel="nofollow sponsored" target="_blank"><img alt="Trip.com 熱門優惠" src="images/trip-japan.webp" style="width:100%;border-radius:12px;display:block;"/></a>
+<a data-affiliate="trip-com" href="https://tw.trip.com/sale/w/26497/go-japan.html?locale=zh-tw&curr=twd&promo_referer=3952_26497_7&Allianceid=8237671&SID=312406690&trip_sub1=&trip_sub3=P17078987" rel="nofollow sponsored" target="_blank"><img loading="lazy" alt="Trip.com 熱門優惠" src="images/trip-japan.webp" style="width:100%;border-radius:12px;display:block;"/></a>
 <div style="position:absolute;bottom:12px;right:12px;background:rgba(0,0,0,0.75);color:#fff;padding:8px 18px;border-radius:20px;font-size:13px;font-weight:600;backdrop-filter:blur(4px);">🔥 点此查看最新優惠 →</div>
 </div>
 <!-- 基本資訊 -->
 <h2>福岡基本資訊</h2>
-<div class="day-card">
+<div class="day-card ls-day-card">
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:12px;font-size:13px;">
 <div><strong>語言</strong><br/>日文（觀光區有中文標示）</div>
 <div><strong>貨幣</strong><br/>日圓（¥1≈NT$0.22）</div>
@@ -211,7 +296,7 @@
 </div>
 <!-- Day 1-5 行程 -->
 <h2>5 天行程規劃</h2>
-<div class="day-card">
+<div class="day-card ls-day-card">
 <h3 style="margin-top:0;color:#ff6b35;">Day 1：抵達博多 → 中洲屋台</h3>
 <div style="display:grid;grid-template-columns:auto 1fr;gap:12px;font-size:14px;">
 <div><strong>14:00</strong></div><div>抵達福岡機場 → 搭地下鐵（¥260，約5分鐘）到博多站 → 飯店寄放行李</div>
@@ -221,7 +306,7 @@
 <div><strong>21:00</strong></div><div>福岡塔看夜景（¥800，開放到21:30），或回飯店休息</div>
 </div>
 </div>
-<div class="day-card">
+<div class="day-card ls-day-card">
 <h3 style="margin-top:0;color:#ff6b35;">Day 2：博多拉麵巡禮 → 天神逛街</h3>
 <div style="display:grid;grid-template-columns:auto 1fr;gap:12px;font-size:14px;">
 <div><strong>08:00</strong></div><div>早餐：<span style="color:var(--tiffany-dark);font-weight:600;">一蘭拉麵博多本店</span>（¥890，24小時營業，建議早上8點前排隊人少）</div>
@@ -232,7 +317,7 @@
 <div><strong>18:30</strong></div><div>晚餐：天神附近的<span style="color:var(--tiffany-dark);font-weight:600;">「もつ鍋」</span>（牛腸鍋，福岡名物，¥2,000-2,500/人）</div>
 </div>
 </div>
-<div class="day-card">
+<div class="day-card ls-day-card">
 <h3 style="margin-top:0;color:#ff6b35;">Day 3：太宰府天滿宮 → 福岡市美術館</h3>
 <div style="display:grid;grid-template-columns:auto 1fr;gap:12px;font-size:14px;">
 <div><strong>08:30</strong></div><div>博多站搭<span style="color:var(--tiffany-dark);font-weight:600;">西鐵電車</span>到「太宰府站」（¥400，約30分鐘）</div>
@@ -244,7 +329,7 @@
 <div><strong>18:00</strong></div><div>晚餐：博多站附近<span style="color:var(--tiffany-dark);font-weight:600;">「川端もつ鍋」</span>或<span style="color:var(--tiffany-dark);font-weight:600;">「博多華味鳥」水炊き</span>（博多風雞肉火鍋，¥2,500/人）</div>
 </div>
 </div>
-<div class="day-card">
+<div class="day-card ls-day-card">
 <h3 style="margin-top:0;color:#ff6b35;">Day 4：門司港懷舊之旅（北九州）</h3>
 <div style="display:grid;grid-template-columns:auto 1fr;gap:12px;font-size:14px;">
 <div><strong>08:00</strong></div><div>博多站搭<span style="color:var(--tiffany-dark);font-weight:600;">JR鹿兒島本線特急</span>到門司港站（¥1,700，約50分鐘，持JR PASS免費）</div>
@@ -257,7 +342,7 @@
 <div><strong>19:00</strong></div><div>回博多後去<span style="color:var(--tiffany-dark);font-weight:600;">屋台</span>喝一杯啤酒，最後一晚放鬆</div>
 </div>
 </div>
-<div class="day-card">
+<div class="day-card ls-day-card">
 <h3 style="margin-top:0;color:#ff6b35;">Day 5：柳川運河 → 採購 → 回程</h3>
 <div style="display:grid;grid-template-columns:auto 1fr;gap:12px;font-size:14px;">
 <div><strong>08:00</strong></div><div>博多站搭JR到<span style="color:var(--tiffany-dark);font-weight:600;">柳川站</span>（¥840，約1小時）</div>
@@ -270,8 +355,8 @@
 </div>
 <!-- 博多拉麵 -->
 <h2>博多拉麵 10 碗推薦</h2>
-<div class="day-card">
-<table style="width:100%;border-collapse:collapse;font-size:13px;">
+<div class="day-card ls-day-card">
+<div class="table-responsive"><table style="width:100%;border-collapse:collapse;font-size:13px;">
 <tr style="border-bottom:2px solid var(--tiffany-light);background:#f0fdfa;">
 <th style="text-align:left;padding:6px;">店名</th>
 <th style="text-align:center;padding:6px;">特色</th>
@@ -292,7 +377,7 @@
 </div>
 <!-- 預算 -->
 <h2>5天4夜預算參考</h2>
-<div class="day-card">
+<div class="day-card ls-day-card">
 <table style="width:100%;border-collapse:collapse;font-size:13px;">
 <tr style="border-bottom:2px solid var(--tiffany-light);background:#f0fdfa;">
 <th style="text-align:left;padding:8px;">項目</th>
@@ -305,69 +390,65 @@
 <tr style="border-bottom:1px solid #eee;"><td style="padding:8px;font-weight:700;">交通</td><td style="text-align:center;padding:8px;">¥5,000</td><td style="text-align:center;padding:8px;">¥8,000</td></tr>
 <tr style="border-bottom:1px solid #eee;"><td style="padding:8px;font-weight:700;">門票/體驗</td><td style="text-align:center;padding:8px;">¥3,000</td><td style="text-align:center;padding:8px;">¥5,000</td></tr>
 <tr style="background:#f0fdfa;"><td style="padding:8px;font-weight:700;">合計（不含機票）</td><td style="text-align:center;padding:8px;font-weight:700;">¥47,000 ≈ NT$10,300</td><td style="text-align:center;padding:8px;font-weight:700;">¥98,000 ≈ NT$21,600</td></tr>
-</table>
+</table></div>
 </div>
 <!-- FAQ -->
-<h2>❓ 常見問題</h2>
-<section class="faq-section">
-<div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q">福岡值得去幾天？</div><div class="faq-a">推薦3-5天。福岡市區2天（博多、天神、中洲）＋太宰府1天＋門司港/柳川1天＝4-5天最完美。如果時間不夠，至少3天（市區＋太宰府）也能玩得很好。</div></div>
-<div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q">從台灣怎麼去福岡？</div><div class="faq-a">直飛最方便！虎航TPE→FUK直飛約2.5小時，單程促銷價NT$999起。星宇航空也有直飛。也可以搭廉航到大阪再轉新幹線（約2.5小時到博多，¥16,000）。</div></div>
-<div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q">福岡博多拉麵哪碗最好吃？</div><div class="faq-a">福岡是日本拉麵之都。必吃：①一蘭拉麵（博多本店，24小時營業）②一風堂（濃厚豚骨）③博多一幸（超濃白湯）④麵匠群（魚介豚骨）⑤甚兵衛（薄切叉燒）。中洲屋台的屋台拉麵也是獨特體驗。</div></div>
-<div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q">福岡住宿住哪裡方便？</div><div class="faq-a">推薦三區：①博多站周邊（交通最方便，到機場5分鐘，¥8,000-15,000）②天神商圈（逛街最方便，¥10,000-20,000）③中洲/川端（夜生活區，屋台集中，¥6,000-12,000）。推薦住博多站附近。</div></div>
-<div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q">福岡市區交通怎麼規劃？</div><div class="faq-a">福岡市區適合步行！博多→天神走路15-20分鐘（或地下鐵1站¥210）。推薦買福岡市地下鐵1日券¥820。到太宰府搭西鐵電車（¥400，約30分鐘）。到門司港搭JR特急（約50分鐘，¥1,700）。</div></div>
-<div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q">福岡有什麼必買伴手禮？</div><div class="faq-a">①博多拉麵伴手禮（一蘭、一風堂包裝版，¥500-800）②明太子（博多名物，¥1,000-2,000/條）③博多人形（傳統工藝品，¥2,000-5,000）④草莓（福岡草莓品質全日本數一數二）⑤博多和果子（梅枝餅¥150/個）。博多站地下街和天神地下街是採購集中地。</div></div>
-</section>
-<!-- 延伸閱讀 -->
-<div style="background:#f5f5f5;padding:20px;border-radius:12px;margin:24px 0;">
-<h4 style="margin:0 0 12px;color:#333;">📖 日本自由行延伸閱讀</h4>
-<ul style="margin:0;padding-left:20px;line-height:1.8;">
-<li><a href="japan-budget-guide.html" style="color:#078E8A;font-weight:600;">日本旅遊預算指南</a></li>
-<li><a href="budget-airline-guide.html" style="color:#078E8A;font-weight:600;">廉航搶票攻略｜酷航樂桃虎航比價</a></li>
-<li><a href="credit-card-miles-guide.html" style="color:#078E8A;font-weight:600;">信用卡里程兌換機票教學</a></li>
-<li><a href="japan-drugstore-checklist.html" style="color:#078E8A;font-weight:600;">日本藥妝必買清單35款</a></li>
-</ul>
+
+<!-- EMAIL LEAD MAGNET -->
+<div class="ls-lead-magnet">
+<div class="ls-lead-magnet-icon">📄</div>
+<h3>免費下載完整攻略</h3>
+<p>輸入 Email 免費取得完整攻略。</p>
+<form action="https://formspree.io/f/xredjjgb" method="POST">
+<input type="email" name="email" placeholder="輸入你的 Email" required/>
+<button type="submit">免費下載</button>
+</form>
+<div class="ls-lead-magnet-note">🔒 我們重視隱私，絕不發送垃圾郵件</div>
 </div>
-<div class="cta-box">
-<h3>福岡：日本最被低估的美食城市</h3>
-<p style="margin:10px 0;">2.5小時直飛，拉麵天堂等你來</p>
-<a class="btn" data-affiliate="trip-com" href="https://www.trip.com/t/RWHD5HiZpU2" rel="nofollow sponsored" target="_blank">用 Trip.com 查福岡飯店</a>
+
+
 </div>
-<!-- TRIP.COM 住宿推薦 -->
-<div class="trip-recommend" style="margin:24px 0;padding:20px;background:#e3f2fd;border-radius:12px;border-left:4px solid #1976d2;">
-<h3 style="margin:0 0 10px;font-size:16px;">🏨 住宿比價推薦</h3>
-<p style="margin:0 0 14px;font-size:14px;color:#666;">Trip.com 比價找最便宜住宿，專屬優惠碼持續更新</p>
-<a href="https://tw.trip.com/hotels/?locale=zh-tw&curr=twd&promo_referer=3952_26497_7&Allianceid=8237671&SID=312406690" rel="nofollow sponsored" target="_blank" style="display:inline-block;padding:10px 24px;background:#1976d2;color:#fff;border-radius:8px;font-weight:600;text-decoration:none;font-size:14px;">Trip.com 住宿比價 →</a>
 </div>
-<!-- LEAD MAGNET INLINE -->
-<div class="lead-inline" style="margin:28px 0;padding:24px;background:linear-gradient(135deg,#e8f5e9,#c8e6c9);border-radius:16px;text-align:center;">
-<h3 style="margin:0 0 12px;font-size:18px;">📥 免費下載：旅遊打包清單 PDF</h3>
-<p style="margin:0 0 16px;font-size:14px;color:#555;">輸入 Email 立即獲取完整版打包清單，適用所有目的地。</p>
-<div style="display:flex;gap:8px;max-width:360px;margin:0 auto;">
-<input id="leadEmail" placeholder="your@email.com" style="flex:1;padding:10px 14px;border:1px solid #a5d6a7;border-radius:8px;font-size:14px;" type="email"/>
-<button id="leadSubmitBtn" onclick="submitLeadInline()" style="padding:10px 20px;background:#2e7d32;color:#fff;border:none;border-radius:8px;font-size:14px;font-weight:600;cursor:pointer;white-space:nowrap;">免費下載</button>
 </div>
-<div id="leadMsg" style="margin-top:10px;font-size:13px;"></div>
 </div>
-<!-- KLOOK AD -->
-<div class="klk-aff-widget" style="margin:24px 0;padding:20px;background:#fff3e0;border-radius:12px;border-left:4px solid #ff9800;">
-<h3 style="margin:0 0 10px;font-size:16px;">🏷️ 東京・大阪・京都 Klook必買</h3>
-<p style="margin:0 0 14px;font-size:14px;color:#666;">交通票券、美食套餐、景點門票一站購買</p>
-<a href="https://www.klook.com/zh-TW/?aff_id=26497&lang=zh-TW" rel="nofollow sponsored" target="_blank" style="display:inline-block;padding:10px 24px;background:#ff9800;color:#fff;border-radius:8px;font-weight:600;text-decoration:none;font-size:14px;">前往 Klook 選購 →</a>
+
+<!-- p5-batch4 -->
+<div class="mt-12 p-6 bg-gradient-to-br from-pink-50 to-rose-50 rounded-2xl border border-pink-100">
+  <h2 class="text-2xl font-bold mb-4 text-pink-800">🎋 福岡深度攻略｜太宰府、博多運河城、屋台夜市完整解析</h2>
+  <p class="text-gray-700 leading-relaxed mb-4">
+    福岡（Fukuoka）是九州的玄關口，也是很多旅人愛上日本的理由之一。這裡有東京大阪沒有的悠閒步調、超值的屋台路邊攤、方便的地下鐵系統，以及往來台灣的直飛航班超多（虎航、樂桃、星宇都有）。福岡不只是轉運站，本身就是值得深度玩上好幾天的城市。
+  </p>
+  <h3 class="text-xl font-semibold mb-2 text-pink-700">🏯 太宰府：九州最古老的神社城市</h3>
+  <p class="text-gray-700 leading-relaxed mb-4">
+    <span class="font-semibold">太宰府</span>距離福岡市中心地鐵約 30 分鐘，是九州最具代表性的歷史景點。<span class="font-semibold">太宰府天滿宮</span>供奉著學問之神菅原道真，日本人考生在考前都會來此參拜祈願，境內到處可見「合格」御守和絵馬。<br><br>
+    從太宰府站走到天滿宫的路上，有一家必訪的<span class="font-semibold">星巴克太宰府店</span>，由建築大師隈研吾設計，用 2000 根杉木棍交錯編織成牆面，被譽為「全世界最美星巴克之一」，即使不喝咖啡也值得進去看看建築。<br><br>
+    太宰府必吃：<span class="font-semibold">梅枝餅</span>（以為是餅乾，其實是包紅豆餡的烤米餅，是太宰府限定美食）、<span class="font-semibold">一蘭拉麵總本店</span>（在太宰府，五角形碗的發源地）。建議安排半天時間，慢慢走慢慢逛。
+  </p>
+  <h3 class="text-xl font-semibold mb-2 text-pink-700">🛍️ 博多運河城：複合式商場的血拼聖地</h3>
+  <p class="text-gray-700 leading-relaxed mb-4">
+    <span class="font-semibold">博多運河城（キャナルシティ博多）</span>是福岡最大的複合式商場，以運河為中心軸線建造，每天晚上 8 點的<span class="font-semibold">運河水舞表演</span>是必看的免費節目（地點在商場中央的噴水池，約 10 分鐘）。<br><br>
+    商場內有超過 250 間店鋪，包括<span class="font-semibold">無印良品</span>（日本最大旗艦店之一）、<span class="font-semibold">迪士尼商店</span>、<span class="font-semibold">多家藥妝店</span>（松本清、大國、ains）以及深受年輕人喜愛的<span class="font-semibold">UA 旗艦店</span>。<br><br>
+    逛累了可以到五樓的<span class="font-semibold">la Cite 美食街</span>補充能量，推薦<span class="font-semibold">牛腸鍋（もつ鍋）</span>——福岡博多的靈魂美食，用牛大腸、高麗菜、韭菜和味噌一起燉煮，濃郁到不行！博多運河城距離天神、中洲川端都很近，可以安排在同一天購物。
+  </p>
+  <h3 class="text-xl font-semibold mb-2 text-pink-700">🍢 屋台夜市：體驗最道地的福岡夜晚</h3>
+  <p class="text-gray-700 leading-relaxed mb-4">
+    <span class="font-semibold">屋台</span>是福岡最有特色的飲食文化——路邊攤！在寒冷的夜晚，坐在小攤前吃一碗熱騰騰的拉麵配一杯啤酒，旁邊是陌生人聊著天，這種體驗東京大阪根本找不到。<br><br>
+    屋台最集中的地方是<span class="font-semibold">中洲</span>和<span class="font-semibold">天神濱河公園</span>一帶，尤其是<span class="font-semibold">中洲屋台村</span>，大約有 30 間屋台一字排開，場面相當壯觀。<span class="font-semibold">長濱屋台</span>（營業到凌晨 3 點）和<span class="font-semibold">黑田中洲屋台</span>都是在地人常去的老店。<br><br>
+    屋台必點：<span class="font-semibold">博多拉麵</span>（細麵、配料簡單但湯頭極濃）、<span class="font-semibold">烤雞肉串</span>（燒鳥）、<span class="font-semibold">お好み燒</span>（大阪燒，福岡版本叫「明石燒」或「豚玉燒」）。注意：大部分屋台只收現金，不接受信用卡喔！
+  </p>
+  <div class="bg-pink-100 rounded-xl p-4 mt-4">
+    <p class="text-pink-800 font-semibold text-sm">💡 延伸閱讀</p>
+    <p class="text-pink-700 text-sm mt-1">
+      日本旅遊入門：<a href="japan-travel.html" class="underline hover:text-pink-900">日本自由行新手攻略</a>，從機票到行程規劃一篇就會。<br>
+      關西 Pass 全攻略：<a href="kansai-pass.html" class="underline hover:text-pink-900">關西周遊券完整攻略</a>，JR Pass 與私鐵票券怎麼選？<br>
+      日本省錢必讀：<a href="japan-budget-guide.html" class="underline hover:text-pink-900">日本預算旅遊完整攻略</a>，機＋酒＋吃＋玩怎麼省？
+    </p>
+  </div>
 </div>
-<!-- RELATED POSTS -->
-<div class="related-posts" style="margin:24px 0;">
-<h3 style="margin:0 0 14px;font-size:18px;">📚 延伸閱讀</h3>
-<a href="tokyo-5days.html" style="display:block;text-decoration:none;color:inherit;padding:12px;background:#f5f5f5;border-radius:10px;margin-bottom:8px;">
-<span style="font-size:14px;font-weight:600;">📖 東京5天4夜攻略</span></a>
-<a href="okinawa.html" style="display:block;text-decoration:none;color:inherit;padding:12px;background:#f5f5f5;border-radius:10px;margin-bottom:8px;">
-<span style="font-size:14px;font-weight:600;">📖 沖繩自駕攻略</span></a>
-<a href="osaka-food.html" style="display:block;text-decoration:none;color:inherit;padding:12px;background:#f5f5f5;border-radius:10px;margin-bottom:8px;">
-<span style="font-size:14px;font-weight:600;">📖 大阪美食攻略</span></a></div>
-</div><!-- /article-container -->
-</div><!-- /col-center -->
-</div><!-- /three-col-wrapper -->
-<!-- site-footer -->
-<footer class="site-footer">
+
+
+<!-- FOOTER -->
+<footer class="site-footer ls-footer">
 <div class="footer-inner">
 <div class="footer-col">
 <h4>🇯🇵 日本自由行</h4>
@@ -460,30 +541,7 @@
   <a href="disclaimer.html">免責聲明</a>
 </div>
 <p>© 2026 均在路上 Travel Lab. All Rights Reserved.</p>
-<div style="margin-top:8px;font-size:12px;">
-<a href="about.html" style="color:inherit;margin-right:12px;">關於我們</a>
-<a href="privacy.html" style="color:inherit;margin-right:12px;">隱私權政策</a>
-<a href="terms.html" style="color:inherit;margin-right:12px;">使用條款</a>
-<a href="disclaimer.html" style="color:inherit;">免責聲明</a>
-</div></div>
+</div>
 </footer>
-
-
-<script>
-  // Track affiliate link clicks via GA4
-  document.addEventListener('click', function(e) {
-    var link = e.target.closest('[data-affiliate]');
-    if (link) {
-      if (typeof gtag === 'function') {
-        gtag('event', 'affiliate_click', {
-          affiliate: link.getAttribute('data-affiliate'),
-          page: window.location.pathname
-        });
-      }
-    }
-  });
-</script>
-<script src="js/monetization.js" defer defer></script>
-
 </body>
 </html>
