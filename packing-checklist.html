@@ -53,6 +53,9 @@
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&amp;display=swap" media="print" onload="this.media='all'" rel="stylesheet">
 <noscript><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&amp;display=swap" rel="stylesheet"/></noscript>
+
+<link rel="stylesheet" href="layout-standard.css"/>
+<link rel="stylesheet" href="beautify.css"/>
 <link as="style" href="style.css" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/>
 <noscript><link href="style.css" rel="stylesheet"/></noscript>
 <link href="data:image/svg+xml,&lt;svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'&gt;&lt;text y='.9em' font-size='90'&gt;✈&lt;/text&gt;&lt;/svg&gt;" rel="icon"/>
@@ -216,11 +219,49 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 </div>
 </div>
 <div class="three-col-wrapper">
-<div class="sidebar-card">
-<a href="packing-list.html">
-<img alt="" class="sb-hero-img" loading="lazy" src="images/packing-sidebar.webp"/>
+<aside class="ls-sidebar">
+<div class="ls-sidebar-card">
+<a href="tokyo-5days.html">
+<img alt="東京攻略" class="ls-sidebar-hero" loading="lazy" src="images/tokyo-sidebar.webp"/>
 </a>
+<div class="ls-sidebar-header">
+<div class="ls-sidebar-city">東京</div>
+<div class="ls-sidebar-sub">自由行攻略</div>
 </div>
+<nav class="ls-sidebar-nav">
+    <a class="ls-sidebar-nav-item" href="#景點">
+      <span class="ls-sidebar-nav-icon">🏛️</span>
+      <span class="ls-sidebar-nav-label">景點</span>
+    </a>
+    <a class="ls-sidebar-nav-item" href="#美食">
+      <span class="ls-sidebar-nav-icon">🍜</span>
+      <span class="ls-sidebar-nav-label">美食</span>
+    </a>
+    <a class="ls-sidebar-nav-item" href="#購物">
+      <span class="ls-sidebar-nav-icon">🛍️</span>
+      <span class="ls-sidebar-nav-label">購物</span>
+    </a>
+    <a class="ls-sidebar-nav-item" href="#交通">
+      <span class="ls-sidebar-nav-icon">🚆</span>
+      <span class="ls-sidebar-nav-label">交通</span>
+    </a>
+    <a class="ls-sidebar-nav-item" href="#住宿">
+      <span class="ls-sidebar-nav-icon">🏨</span>
+      <span class="ls-sidebar-nav-label">住宿</span>
+    </a>
+    <a class="ls-sidebar-nav-item" href="#實用資訊">
+      <span class="ls-sidebar-nav-icon">💡</span>
+      <span class="ls-sidebar-nav-label">實用資訊</span>
+    </a>
+</nav>
+<div class="ls-sidebar-qr">
+<div class="ls-sidebar-qr-title">📱 追蹤我們</div>
+<img alt="LINE QR" src="images/line-qr.webp"/>
+<div class="ls-sidebar-qr-desc">掃描 LINE 取得最新旅遊資訊</div>
+</div>
+<a class="ls-sidebar-cta" href="travel-tools.html">📂 下載攻略 PDF</a>
+</div>
+</aside>
 <div class="col-center"><div class="article-container">
 <section class="hero-region-new">
 <div class="hero-image-wrapper">
@@ -791,39 +832,29 @@ updateGenerateBtn();
   </div>
 </div>
 
-<div class="mt-12 p-8 bg-gradient-to-br from-rose-50 to-pink-50 rounded-2xl">
-  <h2 class="text-2xl font-bold mb-6 text-gray-800">❓ 打包常見錯誤 FAQ</h2>
-  <p class="text-gray-600 leading-relaxed mb-6">新手打包最容易犯的錯誤，這裡幫你整理出來，避免踩雷：</p>
-  
-  <div class="space-y-4">
-    <div class="bg-white rounded-xl p-5 shadow-sm">
-      <h3 class="font-bold text-lg mb-2 text-gray-800">Q1：衣服帶太多，行李箱塞不下怎麼辦？</h3>
-      <p class="text-gray-600 leading-relaxed">這是最常見的問題！建議採用「一衣多穿」原則：上衣和褲子可以互相搭配，選擇顏色相近的單品。另外，可以帶舊衣服去，穿完就丟，回來行李箱還能空出空間裝戰利品。</p>
-    </div>
-    
-    <div class="bg-white rounded-xl p-5 shadow-sm">
-      <h3 class="font-bold text-lg mb-2 text-gray-800">Q2：保養品瓶瓶罐罐帶太多很重，怎麼簡化？</h3>
-      <p class="text-gray-600 leading-relaxed">買分裝瓶把保養品分裝成旅行用量，或直接用旅行組。很多品牌都有推出旅行套組，比正貨便宜又輕便。如果不介意，當地藥妝店買小包裝的也行。</p>
-    </div>
-    
-    <div class="bg-white rounded-xl p-5 shadow-sm">
-      <h3 class="font-bold text-lg mb-2 text-gray-800">Q3：行動電源可以放行李箱嗎？</h3>
-      <p class="text-gray-600 leading-relaxed">絕對不行！行動電源必須隨身攜帶，不能托運。這是航空公司的規定，違反可能被沒收甚至罰款。另外，行動電源容量不能超過 20,000mAh（有些航空限制更嚴格，建議出發前確認）。</p>
-    </div>
-    
-    <div class="bg-white rounded-xl p-5 shadow-sm">
-      <h3 class="font-bold text-lg mb-2 text-gray-800">Q4：出國才發現忘了帶重要東西怎麼辦？</h3>
-      <p class="text-gray-600 leading-relaxed">先別緊張，大部分東西當地都買得到。日本、韓國的藥妝店什麼都有，東南亞的便利商店也很方便。如果是藥品這種比較個人化的東西，可以找當地的藥局說明症狀，通常能找到類似的藥。</p>
-    </div>
-    
-    <div class="bg-white rounded-xl p-5 shadow-sm">
-      <h3 class="font-bold text-lg mb-2 text-gray-800">Q5：怎麼判斷行李重量會不會超重？</h3>
-      <p class="text-gray-600 leading-relaxed">出發前用體重計量一下行李箱重量。廉航通常限重 7kg（隨身）或 15-20kg（托運），傳統航空托運可能是 20-30kg。建議留 1-2kg 的彈性空間，因為回來可能會買東西。如果真的超重，現場加買行李額度比罰款便宜。</p>
-    </div>
-  </div>
+<div class="faq-section">
+<h2>❓ 常見問題</h2>
+<div class="faq-item">
+  <div class="faq-q">Q: 衣服帶太多，行李箱塞不下怎麼辦？</div>
+  <div class="faq-a">這是最常見的問題！建議採用「一衣多穿」原則：上衣和褲子可以互相搭配，選擇顏色相近的單品。另外，可以帶舊衣服去，穿完就丟，回來行李箱還能空出空間裝戰利品。</div>
 </div>
-
-<div class="mt-12 p-8 bg-gradient-to-br from-emerald-50 to-teal-50 rounded-2xl">
+<div class="faq-item">
+  <div class="faq-q">Q: 保養品瓶瓶罐罐帶太多很重，怎麼簡化？</div>
+  <div class="faq-a">買分裝瓶把保養品分裝成旅行用量，或直接用旅行組。很多品牌都有推出旅行套組，比正貨便宜又輕便。如果不介意，當地藥妝店買小包裝的也行。</div>
+</div>
+<div class="faq-item">
+  <div class="faq-q">Q: 行動電源可以放行李箱嗎？</div>
+  <div class="faq-a">絕對不行！行動電源必須隨身攜帶，不能托運。這是航空公司的規定，違反可能被沒收甚至罰款。另外，行動電源容量不能超過 20,000mAh（有些航空限制更嚴格，建議出發前確認）。</div>
+</div>
+<div class="faq-item">
+  <div class="faq-q">Q: 出國才發現忘了帶重要東西怎麼辦？</div>
+  <div class="faq-a">先別緊張，大部分東西當地都買得到。日本、韓國的藥妝店什麼都有，東南亞的便利商店也很方便。如果是藥品這種比較個人化的東西，可以找當地的藥局說明症狀，通常能找到類似的藥。</div>
+</div>
+<div class="faq-item">
+  <div class="faq-q">Q: 怎麼判斷行李重量會不會超重？</div>
+  <div class="faq-a">出發前用體重計量一下行李箱重量。廉航通常限重 7kg（隨身）或 15-20kg（托運），傳統航空托運可能是 20-30kg。建議留 1-2kg 的彈性空間，因為回來可能會買東西。如果真的超重，現場加買行李額度比罰款便宜。</div>
+</div>
+</div><div class="mt-12 p-8 bg-gradient-to-br from-emerald-50 to-teal-50 rounded-2xl">
   <h2 class="text-2xl font-bold mb-6 text-gray-800">🔗 延伸閱讀推薦</h2>
   <p class="text-gray-600 leading-relaxed mb-6">打包前後，這些攻略能幫你更順利完成準備：</p>
   
