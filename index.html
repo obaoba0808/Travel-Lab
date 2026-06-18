@@ -74,6 +74,8 @@
 .region-card{border-radius:16px;overflow:hidden;box-shadow:0 4px 16px rgba(0,0,0,0.08);transition:all .3s;background:#fff}
 .region-card:hover{transform:translateY(-4px);box-shadow:0 8px 32px rgba(0,0,0,0.12)}
 .region-card-img{position:relative;height:180px;overflow:hidden}
+.region-card-img-link{display:block;position:relative;height:180px;overflow:hidden;cursor:pointer;text-decoration:none}
+.region-card-img-link:hover .region-card-img img{transform:scale(1.05)}
 .region-card-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
 .region-card:hover .region-card-img img{transform:scale(1.05)}
 .region-card-img .region-badge{position:absolute;top:12px;left:12px;background:#0ABAB5;color:#fff;padding:6px 14px;border-radius:20px;font-size:13px;font-weight:600}
@@ -215,10 +217,10 @@
 </div>
 <div class="region-grid">
 <div class="region-card">
-<div class="region-card-img">
+<a href="tokyo-5days.html" class="region-card-img-link"><div class="region-card-img">
 <img alt="東京自由行5天4夜行程攻略" loading="lazy" src="images/tokyo-hero.webp"/>
 <span class="region-badge">🔥 熱門</span>
-</div>
+</div></a>
 <div class="region-card-body">
 <h3>東京5天4夜省錢行程攻略</h3>
 <p>淺草、新宿、澀谷路線規劃，地鐵搭乘教學與住宿推薦，5天預算 NT$25,000 起。</p>
@@ -230,10 +232,10 @@
 </div>
 </div>
 <div class="region-card">
-<div class="region-card-img">
+<a href="kyoto-temples.html" class="region-card-img-link"><div class="region-card-img">
 <img alt="京都寺廟散步地圖" loading="lazy" src="images/kyoto-hero.webp"/>
 <span class="region-badge">賞楓</span>
-</div>
+</div></a>
 <div class="region-card-body">
 <h3>京都寺廟散步地圖</h3>
 <p>清水寺、金閣寺、伏見稻荷3大路線，千年古都的靜謐之美。</p>
@@ -245,10 +247,10 @@
 </div>
 </div>
 <div class="region-card">
-<div class="region-card-img">
+<a href="okinawa.html" class="region-card-img-link"><div class="region-card-img">
 <img alt="沖繩自駕4天3夜攻略" loading="lazy" src="images/okinawa-hero.webp"/>
 <span class="region-badge">自駕</span>
-</div>
+</div></a>
 <div class="region-card-body">
 <h3>沖繩自駕4天3夜攻略</h3>
 <p>美麗海水族館、古宇利島、美國村，租車比價與自駕注意事項。</p>
@@ -266,10 +268,10 @@
 </div>
 <div class="region-grid">
 <div class="region-card">
-<div class="region-card-img">
+<a href="seoul-food.html" class="region-card-img-link"><div class="region-card-img">
 <img alt="首爾必吃美食攻略" loading="lazy" src="images/seoul-hero.webp"/>
 <span class="region-badge">🔥 熱門</span>
-</div>
+</div></a>
 <div class="region-card-body">
 <h3>首爾必吃美食攻略</h3>
 <p>韓式烤肉、醬蟹、炸雞、部隊鍋5大必吃，附換錢攻略和T-money教學。</p>
@@ -280,9 +282,9 @@
 </div>
 </div>
 <div class="region-card">
-<div class="region-card-img">
+<a href="busan-capsule.html" class="region-card-img-link"><div class="region-card-img">
 <img alt="釜山膠囊列車預約" loading="lazy" src="images/busan-hero.webp"/>
-</div>
+</div></a>
 <div class="region-card-body">
 <h3>釜山海雲台膠囊列車</h3>
 <p>海景咖啡廳、膠囊列車預約教學，廣安里看海住宿推薦。</p>
@@ -293,10 +295,10 @@
 </div>
 </div>
 <div class="region-card">
-<div class="region-card-img">
+<a href="jeju-island.html" class="region-card-img-link"><div class="region-card-img">
 <img alt="濟州島自駕環島攻略" loading="lazy" src="images/jeju-hero.webp"/>
 <span class="region-badge">自駕</span>
-</div>
+</div></a>
 <div class="region-card-body">
 <h3>濟州島自駕環島攻略</h3>
 <p>火山口、海岸公路、黑毛豬烤肉，5天4夜自駕路線規劃。</p>
@@ -314,9 +316,9 @@
 </div>
 <div class="region-grid">
 <div class="region-card">
-<div class="region-card-img">
+<a href="hualien-taitung.html" class="region-card-img-link"><div class="region-card-img">
 <img alt="花東三天兩夜攻略" loading="lazy" src="images/hualien-hero.webp"/>
-</div>
+</div></a>
 <div class="region-card-body">
 <h3>花東三天兩夜攻略</h3>
 <p>太魯閣步道、池上自行車道、太平洋海景民宿，台灣最美的東海岸線。</p>
@@ -328,9 +330,9 @@
 </div>
 </div>
 <div class="region-card">
-<div class="region-card-img">
+<a href="kenting.html" class="region-card-img-link"><div class="region-card-img">
 <img alt="墾丁海景夜市攻略" loading="lazy" src="images/kenting-hero.webp"/>
-</div>
+</div></a>
 <div class="region-card-body">
 <h3>墾丁三天兩夜海景攻略</h3>
 <p>南灣戲水、龍磐看海、墾丁大街夜市，國境之南的陽光沙灘。</p>
@@ -341,10 +343,10 @@
 </div>
 </div>
 <div class="region-card">
-<div class="region-card-img">
+<a href="tainan-food.html" class="region-card-img-link"><div class="region-card-img">
 <img alt="台南美食牛肉湯攻略" loading="lazy" src="images/tainan-hero.webp"/>
 <span class="region-badge">美食</span>
-</div>
+</div></a>
 <div class="region-card-body">
 <h3>台南美食牛肉湯攻略</h3>
 <p>正宗牛肉湯、擔仔麵、蝦捲、芒果冰，台南必吃美食地圖。</p>
@@ -362,9 +364,9 @@
 </div>
 <div class="region-grid">
 <div class="region-card">
-<div class="region-card-img">
+<a href="chiang-mai.html" class="region-card-img-link"><div class="region-card-img">
 <img alt="清邁數位遊牧指南" loading="lazy" src="images/chiangmai-hero.webp"/>
-</div>
+</div></a>
 <div class="region-card-body">
 <h3>清邁7天數位遊牧指南</h3>
 <p>遠端工作咖啡廳、長租公寓、月費參考，帶著筆電去泰國工作！</p>
@@ -375,9 +377,9 @@
 </div>
 </div>
 <div class="region-card">
-<div class="region-card-img">
+<a href="vietnam-danang.html" class="region-card-img-link"><div class="region-card-img">
 <img alt="越南峴港攻略" loading="lazy" src="images/vietnam-danang-hero.webp"/>
-</div>
+</div></a>
 <div class="region-card-body">
 <h3>越南峴港3天2夜攻略</h3>
 <p>巴拿山、會安古鎮、美溪海灘，NT$8,000-15,000 的越南之旅。</p>
@@ -388,10 +390,10 @@
 </div>
 </div>
 <div class="region-card">
-<div class="region-card-img">
+<a href="bangkok-4days.html" class="region-card-img-link"><div class="region-card-img">
 <img alt="曼谷4天3夜攻略" loading="lazy" src="images/bangkok-hero.webp"/>
 <span class="region-badge">🔥 熱門</span>
-</div>
+</div></a>
 <div class="region-card-body">
 <h3>曼谷4天3夜攻略</h3>
 <p>大皇宮、臥佛寺、恰圖恰週末市集，NT$12,000 起的泰國之旅。</p>
