@@ -940,7 +940,7 @@
   .ls-article-layout {
     flex-direction: column;
     gap: 24px;
-    padding: 0 16px;
+    padding: 0 20px;
   }
   .ls-sidebar {
     width: 100%;
@@ -999,8 +999,27 @@
 
 /* ========== RESPONSIVE: SMALL PHONE (< 480px) ========== */
 @media (max-width: 480px) {
-  .ls-charter-banner { padding: 0 12px; }
-  .ls-article-content { padding: 20px 16px; }
+  .ls-charter-banner { padding: 0 16px; }
+  .ls-article-content { padding: 20px 20px; }
+  .ls-article-content h2 { font-size: 19px; }
+  .ls-day-card { padding: 18px 16px; }
+  .ls-tools-grid { grid-template-columns: 1fr; }
+  .ls-footer-inner { padding: 0 16px; }
+  .ls-footer-col { flex-basis: calc(50% - 18px); }
+  .ls-footer-bottom { padding: 16px 16px; }
+}
+
+/* ========== EXTRA SMALL PHONE (< 380px) ========== */
+@media (max-width: 380px) {
+  .ls-article-layout { padding: 0 12px; }
+  .ls-article-content { padding: 18px 16px; }
+  .ls-article-content h2 { font-size: 18px; }
+  .ls-article-content p { font-size: 14px; }
+  .ls-article-content li { font-size: 14px; }
+  .ls-day-card { padding: 16px 14px; }
+  .ls-lead-magnet { padding: 24px 16px; }
+  .ls-faq-q { padding: 14px 16px; }
+  .ls-faq-a { padding: 0 16px 16px; font-size: 13px; }
   .ls-article-content h2 { font-size: 19px; }
   .ls-day-card { padding: 18px 16px; }
   .ls-tools-grid { grid-template-columns: 1fr; }
