@@ -1,5 +1,5 @@
-﻿# ai.txt - AI Crawler Directives for Travel Lab
-# https://obaoba0808.github.io/Travel-Lab/
+# ai.txt - AI Crawler Directives for Travel Lab
+# https://golightly.fun/
 
 User-agent: *
 Allow: /
@@ -27,4 +27,4 @@ Disallow: /checkout.html
 # Site info
 Name: 均在路上 Travel Lab
 Description: 實戰旅遊攻略網站
-URL: https://obaoba0808.github.io/Travel-Lab/
+URL: https://golightly.fun/
