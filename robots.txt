@@ -1,10 +1,9 @@
 User-agent: *
 Allow: /
 Disallow: /monthly-review.html
-Disallow: /travel-lab/
-Disallow: /backup/
+Disallow: /thank-you.html
+Disallow: /404.html
 Disallow: /_backup_*/
-
-Sitemap: https://golightly.fun/sitemap.xml
+Disallow: /backup/
 
 Sitemap: https://golightly.fun/sitemap.xml
