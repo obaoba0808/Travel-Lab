@@ -949,7 +949,7 @@
     position: static;
   }
   .ls-sidebar-card { margin-bottom: 0; }
-  .ls-main-content { width: 100%; }
+  .ls-main-content { width: 100%; padding: 0 16px; }
 
   .ls-charter-banner { padding: 0 16px; margin-bottom: 20px; }
   .ls-charter-banner img { border-radius: 10px; }
@@ -1000,6 +1000,7 @@
 /* ========== RESPONSIVE: SMALL PHONE (< 480px) ========== */
 @media (max-width: 480px) {
   .ls-charter-banner { padding: 0 16px; }
+  .ls-main-content { padding: 0 12px; }
   .ls-article-content { padding: 20px 20px; }
   .ls-article-content h2 { font-size: 19px; }
   .ls-day-card { padding: 18px 16px; }
