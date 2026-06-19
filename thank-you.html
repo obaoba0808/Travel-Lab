@@ -1,10 +1,10 @@
-ï»¿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="zh-TW">
 <head>
   <meta charset="UTF-8">
   <link rel="canonical" href="https://golightly.fun/thank-you.html">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ä¸‹è¼‰å°±ç·’ï½œTravel Lab å‡åœ¨è·¯ä¸Š</title>
+  <title>¤U¸ü´Nºü¡UTravel Lab §¡¦b¸ô¤W</title>
   <meta name="robots" content="noindex, nofollow">
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-S7KQGHSD2R"></script>
@@ -100,78 +100,78 @@
 {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "name": "æ„Ÿè¬è¨‚é–±ï½œå‡åœ¨è·¯ä¸Š Travel Lab",
+  "name": "·PÁÂ­q¾\¡U§¡¦b¸ô¤W Travel Lab",
   "url": "https://golightly.fun/thank-you.html",
-  "description": "æ„Ÿè¬æ‚¨è¨‚é–±å‡åœ¨è·¯ä¸Š Travel Lab çš„æ—…éŠæƒ…å ±ï¼Œå°‡å®šæœŸæ”¶åˆ°æœ€æ–°è¡Œç¨‹æ”»ç•¥èˆ‡çœéŒ¢æŠ€å·§ã€‚"
+  "description": "·PÁÂ±z­q¾\§¡¦b¸ô¤W Travel Lab ªº®È¹C±¡³ø¡A±N©w´Á¦¬¨ì³Ì·s¦æµ{§ğ²¤»P¬Ù¿ú§Ş¥©¡C"
 }
 </script>
   <meta property="og:image" content="https://golightly.fun/images/og-thankyou.jpg">
 </head>
 <body>
   <div class="card">
-    <div class="emoji" id="emoji">ğŸ“¥</div>
-    <h1 id="title">è³‡æ–™ä¸‹è¼‰å°±ç·’</h1>
-    <p class="subtitle" id="subtitle">æ„Ÿè¬æ‚¨å¡«å¯«è¡¨å–®ï¼<br>å³å°‡ç‚ºæ‚¨é–‹å•Ÿä¸‹è¼‰å°ˆå€â€¦â€¦</p>
+    <div class="emoji" id="emoji">??</div>
+    <h1 id="title">¸ê®Æ¤U¸ü´Nºü</h1>
+    <p class="subtitle" id="subtitle">·PÁÂ±z¶ñ¼gªí³æ¡I<br>§Y±N¬°±z¶}±Ò¤U¸ü±M°Ï¡K¡K</p>
     <div class="countdown-bar"><div class="countdown-fill"></div></div>
-    <p class="countdown-text"><strong id="countdownNum">5</strong> ç§’å¾Œè‡ªå‹•è·³è½‰åˆ°ä¸‹è¼‰å°ˆå€</p>
+    <p class="countdown-text"><strong id="countdownNum">5</strong> ¬í«á¦Û°Ê¸õÂà¨ì¤U¸ü±M°Ï</p>
     <div class="btn-group">
-      <a href="/downloads.html" class="download-btn">ğŸ“¥ ç«‹å³å‰å¾€ä¸‹è¼‰å°ˆå€</a>
-      <button class="copy-btn" id="copyBtn" onclick="copyLink()">ğŸ“‹ è¤‡è£½ä¸‹è¼‰é€£çµ</button>
+      <a href="/downloads.html" class="download-btn">?? ¥ß§Y«e©¹¤U¸ü±M°Ï</a>
+      <button class="copy-btn" id="copyBtn" onclick="copyLink()">?? ½Æ»s¤U¸ü³sµ²</button>
     </div>
-    <p class="note">è‹¥æœªè‡ªå‹•è·³è½‰ï¼Œè«‹é»æ“Šä¸Šæ–¹æŒ‰éˆ•é€²å…¥ä¸‹è¼‰é é¢</p>
+    <p class="note">­Y¥¼¦Û°Ê¸õÂà¡A½ĞÂIÀ»¤W¤è«ö¶s¶i¤J¤U¸ü­¶­±</p>
   </div>
   <div class="toast" id="toast"></div>
 
   <script>
-    // å¾ URL åƒæ•¸è®€å– resourceï¼Œé¡¯ç¤ºå°æ‡‰æ¨™é¡Œ
+    // ±q URL °Ñ¼ÆÅª¨ú resource¡AÅã¥Ü¹ïÀ³¼ĞÃD
     const params = new URLSearchParams(window.location.search);
     const resource = params.get('resource') || '';
     const downloadUrl = 'https://golightly.fun/downloads.html';
 
     const titles = {
-      'bangkok-food-map':      { title: 'æ›¼è°·ç¾é£Ÿåœ°åœ–å·²å‚™å¥½', emoji: 'ğŸ¥˜' },
-      'bangkok-massage-map':   { title: 'æ›¼è°·æŒ‰æ‘©åœ°åœ–å·²å‚™å¥½', emoji: 'ğŸ’†' },
-      'seoul-food-map':        { title: 'é¦–çˆ¾ç¾é£Ÿåœ°åœ–å·²å‚™å¥½', emoji: 'ğŸ–' },
-      'osaka-food-map':        { title: 'å¤§é˜ªç¾é£Ÿåœ°åœ–å·²å‚™å¥½', emoji: 'ğŸœ' },
-      'taipei-food-map':       { title: 'å°åŒ—ç¾é£Ÿåœ°åœ–å·²å‚™å¥½', emoji: 'ğŸ¥Ÿ' },
-      'tainan-food-map':       { title: 'å°å—ç¾é£Ÿåœ°åœ–å·²å‚™å¥½', emoji: 'ğŸ¦' },
-      'tokyo-metro-map':       { title: 'æ±äº¬Metroæ”»ç•¥å·²å‚™å¥½', emoji: 'ğŸš‡' },
-      'packing-checklist':     { title: 'è¡Œææ¸…å–®å·²å‚™å¥½', emoji: 'ğŸ§³' },
-      'japan-budget-sheet':    { title: 'æ—¥æœ¬é ç®—è¡¨å·²å‚™å¥½', emoji: 'ğŸ’´' },
-      'korea-budget-sheet':    { title: 'éŸ“åœ‹é ç®—è¡¨å·²å‚™å¥½', emoji: 'ğŸ‡°ğŸ‡·' },
-      'sea-budget-sheet':      { title: 'æ±å—äºé ç®—è¡¨å·²å‚™å¥½', emoji: 'ğŸŒ´' },
-      'chiang-mai-guide':      { title: 'æ¸…é‚æ”»ç•¥å·²å‚™å¥½', emoji: 'ğŸ¯' },
-      'busan-capsule-guide':   { title: 'é‡œå±±æ”»ç•¥å·²å‚™å¥½', emoji: 'ğŸ™' },
-      'danang-map':            { title: 'å³´æ¸¯æ”»ç•¥å·²å‚™å¥½', emoji: 'ğŸ–' },
-      'jeju-driving-route':    { title: 'æ¿Ÿå·å³¶è‡ªé§•æ”»ç•¥å·²å‚™å¥½', emoji: 'ğŸš—' },
-      'hokkaido-packing-list': { title: 'åŒ—æµ·é“è¡Œææ¸…å–®å·²å‚™å¥½', emoji: 'â„' },
-      'hualien-itinerary':     { title: 'èŠ±è“®è¡Œç¨‹å·²å‚™å¥½', emoji: 'ğŸŒŠ' },
-      'jiufen-guide':          { title: 'ä¹ä»½æ”»ç•¥å·²å‚™å¥½', emoji: 'ğŸ®' },
-      'kenting-night-market':  { title: 'å¢¾ä¸å¤œå¸‚æ”»ç•¥å·²å‚™å¥½', emoji: 'ğŸ¦€' },
-      'kansai-pass-calculator':{ title: 'é—œè¥¿å‘¨éŠåˆ¸æ”»ç•¥å·²å‚™å¥½', emoji: 'ğŸ«' },
-      'kyoto-momiji-schedule': { title: 'äº¬éƒ½ç´…è‘‰æ”»ç•¥å·²å‚™å¥½', emoji: 'ğŸ' },
-      'okinawa-driving-map':   { title: 'æ²–ç¹©è‡ªé§•åœ°åœ–å·²å‚™å¥½', emoji: 'ğŸŒº' },
-      'usj-quick-pass':        { title: 'USJå¿«é€Ÿé€šé—œæ”»ç•¥å·²å‚™å¥½', emoji: 'ğŸ¢' },
-      'emergency-contact-card': { title: 'ç·Šæ€¥è¯çµ¡å¡å·²å‚™å¥½', emoji: 'ğŸ“‹' },
-      'taiwan-travel':         { title: 'å°ç£è‡ªç”±è¡Œæ”»ç•¥å·²å‚™å¥½', emoji: 'ğŸ°' },
-      'esim-comparison':       { title: 'eSIMæ¯”è¼ƒæ”»ç•¥å·²å‚™å¥½', emoji: 'ğŸ“±' },
-      'packing-list':          { title: 'è¡Œæè¡¨å·²å‚™å¥½', emoji: 'ğŸ§³' }
+      'bangkok-food-map':      { title: '°Ò¨¦¬ü­¹¦a¹Ï¤w³Æ¦n', emoji: '??' },
+      'bangkok-massage-map':   { title: '°Ò¨¦«ö¼¯¦a¹Ï¤w³Æ¦n', emoji: '??' },
+      'seoul-food-map':        { title: '­ºº¸¬ü­¹¦a¹Ï¤w³Æ¦n', emoji: '??' },
+      'osaka-food-map':        { title: '¤j¨Á¬ü­¹¦a¹Ï¤w³Æ¦n', emoji: '??' },
+      'taipei-food-map':       { title: '¥x¥_¬ü­¹¦a¹Ï¤w³Æ¦n', emoji: '??' },
+      'tainan-food-map':       { title: '¥x«n¬ü­¹¦a¹Ï¤w³Æ¦n', emoji: '??' },
+      'tokyo-metro-map':       { title: 'ªF¨ÊMetro§ğ²¤¤w³Æ¦n', emoji: '??' },
+      'packing-checklist':     { title: '¦æ§õ²M³æ¤w³Æ¦n', emoji: '??' },
+      'japan-budget-sheet':    { title: '¤é¥»¹wºâªí¤w³Æ¦n', emoji: '??' },
+      'korea-budget-sheet':    { title: 'Áú°ê¹wºâªí¤w³Æ¦n', emoji: '????' },
+      'sea-budget-sheet':      { title: 'ªF«n¨È¹wºâªí¤w³Æ¦n', emoji: '??' },
+      'chiang-mai-guide':      { title: '²MÁÚ§ğ²¤¤w³Æ¦n', emoji: '??' },
+      'busan-capsule-guide':   { title: '°y¤s§ğ²¤¤w³Æ¦n', emoji: '??' },
+      'danang-map':            { title: '®s´ä§ğ²¤¤w³Æ¦n', emoji: '??' },
+      'jeju-driving-route':    { title: 'ÀÙ¦{®q¦Û¾r§ğ²¤¤w³Æ¦n', emoji: '??' },
+      'hokkaido-packing-list': { title: '¥_®ü¹D¦æ§õ²M³æ¤w³Æ¦n', emoji: '?' },
+      'hualien-itinerary':     { title: 'ªá½¬¦æµ{¤w³Æ¦n', emoji: '??' },
+      'jiufen-guide':          { title: '¤E¥÷§ğ²¤¤w³Æ¦n', emoji: '??' },
+      'kenting-night-market':  { title: '¾Á¤B©]¥«§ğ²¤¤w³Æ¦n', emoji: '??' },
+      'kansai-pass-calculator':{ title: 'Ãö¦è©P¹C¨é§ğ²¤¤w³Æ¦n', emoji: '??' },
+      'kyoto-momiji-schedule': { title: '¨Ê³£¬õ¸­§ğ²¤¤w³Æ¦n', emoji: '??' },
+      'okinawa-driving-map':   { title: '¨RÃ·¦Û¾r¦a¹Ï¤w³Æ¦n', emoji: '??' },
+      'usj-quick-pass':        { title: 'USJ§Ö³t³qÃö§ğ²¤¤w³Æ¦n', emoji: '??' },
+      'emergency-contact-card': { title: 'ºò«æÁpµ¸¥d¤w³Æ¦n', emoji: '??' },
+      'taiwan-travel':         { title: '¥xÆW¦Û¥Ñ¦æ§ğ²¤¤w³Æ¦n', emoji: '??' },
+      'esim-comparison':       { title: 'eSIM¤ñ¸û§ğ²¤¤w³Æ¦n', emoji: '??' },
+      'packing-list':          { title: '¦æ§õªí¤w³Æ¦n', emoji: '??' }
     };
 
-    // æ›´æ–°é¡¯ç¤ºæ¨™é¡Œå’Œ emoji
-    const info = titles[resource] || { title: 'è³‡æ–™ä¸‹è¼‰å°±ç·’', emoji: 'ğŸ“¥' };
+    // §ó·sÅã¥Ü¼ĞÃD©M emoji
+    const info = titles[resource] || { title: '¸ê®Æ¤U¸ü´Nºü', emoji: '??' };
     document.getElementById('title').textContent = info.title;
     document.getElementById('emoji').textContent = info.emoji;
 
-    // è¤‡è£½ä¸‹è¼‰é€£çµåŠŸèƒ½
+    // ½Æ»s¤U¸ü³sµ²¥\¯à
     function copyLink() {
       navigator.clipboard.writeText(downloadUrl).then(function() {
         var btn = document.getElementById('copyBtn');
-        btn.textContent = 'âœ“ å·²è¤‡è£½ï¼';
+        btn.textContent = '? ¤w½Æ»s¡I';
         btn.classList.add('copied');
-        showToast('é€£çµå·²è¤‡è£½åˆ°å‰ªè²¼æ¿ï¼');
+        showToast('³sµ²¤w½Æ»s¨ì°Å¶KªO¡I');
         setTimeout(function() {
-          btn.textContent = 'ğŸ“‹ è¤‡è£½ä¸‹è¼‰é€£çµ';
+          btn.textContent = '?? ½Æ»s¤U¸ü³sµ²';
           btn.classList.remove('copied');
         }, 3000);
       }).catch(function() {
@@ -182,7 +182,7 @@
         ta.select();
         document.execCommand('copy');
         document.body.removeChild(ta);
-        showToast('é€£çµå·²è¤‡è£½ï¼');
+        showToast('³sµ²¤w½Æ»s¡I');
       });
     }
 
@@ -193,7 +193,7 @@
       setTimeout(function() { t.classList.remove('show'); }, 2500);
     }
 
-    // è‡ªå‹•å€’æ•¸è·³è½‰ï¼Œ5ç§’å¾Œåˆ°ä¸‹è¼‰å°ˆå€
+    // ¦Û°Ê­Ë¼Æ¸õÂà¡A5¬í«á¨ì¤U¸ü±M°Ï
     var seconds = 5;
     var numEl = document.getElementById('countdownNum');
     var interval = setInterval(function() {
@@ -210,96 +210,96 @@
 <footer class="site-footer ls-footer">
 <div class="footer-inner">
 <div class="footer-col">
-<h4>ğŸ‡¯ğŸ‡µ æ—¥æœ¬è‡ªç”±è¡Œ</h4>
-<a href="tokyo-5days.html">æ±äº¬5å¤©4å¤œè¡Œç¨‹</a>
-<a href="tokyo-accommodation.html">æ±äº¬ä½å®¿æ¨è–¦</a>
-<a href="japan-drugstore-checklist.html">æ—¥æœ¬è—¥å¦å¿…è²·æ¸…å–®</a>
-<a href="kansai-pass.html">é—œè¥¿äº¤é€šç¥¨åˆ¸æŒ‡å—</a>
-<a href="hokkaido-winter.html">åŒ—æµ·é“å†¬å­£è³é›ª</a>
-<a href="okinawa.html">æ²–ç¹©è‡ªé§•æ”»ç•¥</a>
-<a href="kyoto-temples.html">äº¬éƒ½å¯ºå»Ÿæ•£æ­¥åœ°åœ–</a>
-<a href="osaka-food.html">å¤§é˜ªç¾é£Ÿæ”»ç•¥</a>
-<a href="osaka-usj.html">å¤§é˜ªç’°çƒå½±åŸ</a>
-<a href="japan-budget-guide.html">æ—¥æœ¬é ç®—æŒ‡å—</a>
-<a href="fukuoka-5days.html">ç¦å²¡5å¤©4å¤œæ”»ç•¥</a>
-<a href="japan-cherry-blossom-season.html">æ—¥æœ¬è³æ«»å­£æ”»ç•¥</a>
-<a href="japan-money-saving-tips.html">æ—¥æœ¬çœéŒ¢å¯†æŠ€</a>
+<h4>???? ¤é¥»¦Û¥Ñ¦æ</h4>
+<a href="tokyo-5days.html">ªF¨Ê5¤Ñ4©]¦æµ{</a>
+<a href="tokyo-accommodation.html">ªF¨Ê¦í±J±ÀÂË</a>
+<a href="japan-drugstore-checklist.html">¤é¥»ÃÄ§©¥²¶R²M³æ</a>
+<a href="kansai-pass.html">Ãö¦è¥æ³q²¼¨é«ü«n</a>
+<a href="hokkaido-winter.html">¥_®ü¹D¥V©u½à³·</a>
+<a href="okinawa.html">¨RÃ·¦Û¾r§ğ²¤</a>
+<a href="kyoto-temples.html">¨Ê³£¦x¼q´²¨B¦a¹Ï</a>
+<a href="osaka-food.html">¤j¨Á¬ü­¹§ğ²¤</a>
+<a href="osaka-usj.html">¤j¨ÁÀô²y¼v«°</a>
+<a href="japan-budget-guide.html">¤é¥»¹wºâ«ü«n</a>
+<a href="fukuoka-5days.html">ºÖ©£5¤Ñ4©]§ğ²¤</a>
+<a href="japan-cherry-blossom-season.html">¤é¥»½àÄå©u§ğ²¤</a>
+<a href="japan-money-saving-tips.html">¤é¥»¬Ù¿ú±K§Ş</a>
 </div>
 <div class="footer-col">
-<h4>ğŸ‡°ğŸ‡· éŸ“åœ‹è‡ªç”±è¡Œ</h4>
-<a href="seoul-food.html">é¦–çˆ¾å¿…åƒç¾é£Ÿæ”»ç•¥</a>
-<a href="busan-capsule.html">é‡œå±±è† å›Šåˆ—è»Šé ç´„</a>
-<a href="busan-4days.html">é‡œå±±4å¤©3å¤œæ”»ç•¥</a>
-<a href="jeju-island.html">æ¿Ÿå·å³¶è‡ªé§•ç’°å³¶</a>
-<a href="korea-budget.html">éŸ“åœ‹é ç®—è§£æ</a>
-<a href="seoul-5days.html">é¦–çˆ¾5å¤©4å¤œæ”»ç•¥</a>
-<a href="korea-transport.html">éŸ“åœ‹äº¤é€šæ”»ç•¥</a>
-<a href="korea-money-saving-tips.html">éŸ“åœ‹çœéŒ¢å¯†æŠ€</a>
-<a href="seoul-food-map.html">é¦–çˆ¾ç¾é£Ÿåœ°åœ–</a>
+<h4>???? Áú°ê¦Û¥Ñ¦æ</h4>
+<a href="seoul-food.html">­ºº¸¥²¦Y¬ü­¹§ğ²¤</a>
+<a href="busan-capsule.html">°y¤s½¦Ån¦C¨®¹w¬ù</a>
+<a href="busan-4days.html">°y¤s4¤Ñ3©]§ğ²¤</a>
+<a href="jeju-island.html">ÀÙ¦{®q¦Û¾rÀô®q</a>
+<a href="korea-budget.html">Áú°ê¹wºâ¸ÑªR</a>
+<a href="seoul-5days.html">­ºº¸5¤Ñ4©]§ğ²¤</a>
+<a href="korea-transport.html">Áú°ê¥æ³q§ğ²¤</a>
+<a href="korea-money-saving-tips.html">Áú°ê¬Ù¿ú±K§Ş</a>
+<a href="seoul-food-map.html">­ºº¸¬ü­¹¦a¹Ï</a>
 </div>
 <div class="footer-col">
-<h4>ğŸ‡¹ğŸ‡¼ å°ç£æ—…éŠ</h4>
-<a href="hualien-taitung.html">èŠ±æ±ä¸‰å¤©å…©å¤œ</a>
-<a href="tainan-food.html">å°å—ç¾é£Ÿç‰›è‚‰æ¹¯</a>
-<a href="kenting.html">å¢¾ä¸æµ·æ™¯å¤œå¸‚æ”»ç•¥</a>
-<a href="taipei-food.html">å°åŒ—ç¾é£Ÿåœ°åœ–</a>
-<a href="jiufen.html">ä¹ä»½è€è¡—æ”»ç•¥</a>
+<h4>???? ¥xÆW®È¹C</h4>
+<a href="hualien-taitung.html">ªáªF¤T¤Ñ¨â©]</a>
+<a href="tainan-food.html">¥x«n¬ü­¹¤û¦×´ö</a>
+<a href="kenting.html">¾Á¤B®ü´º©]¥«§ğ²¤</a>
+<a href="taipei-food.html">¥x¥_¬ü­¹¦a¹Ï</a>
+<a href="jiufen.html">¤E¥÷¦Ñµó§ğ²¤</a>
 </div>
 <div class="footer-col">
-<h4>ğŸŒ æ±å—äºè‡ªç”±è¡Œ</h4>
-<a href="chiang-mai.html">æ¸…é‚æ•¸ä½éŠç‰§æŒ‡å—</a>
-<a href="bangkok-3days.html">æ›¼è°·åƒè²¨æ”»ç•¥</a>
-<a href="bangkok-massage.html">æ›¼è°·æŒ‰æ‘©æ¨è–¦</a>
-<a href="vietnam-danang.html">è¶Šå—å³´æ¸¯æ”»ç•¥</a>
-<a href="singapore-3days.html">æ–°åŠ å¡3å¤©2å¤œæ”»ç•¥</a>
-<a href="kualalumpur-3days.html">å‰éš†å¡3å¤©2å¤œæ”»ç•¥</a>
-<a href="angkor-wat-2days.html">å³å“¥çªŸ2å¤©1å¤œæ”»ç•¥</a>
-<a href="thailand-sim.html">æ³°åœ‹eSIMæŒ‡å—</a>
-<a href="seasia-budget-travel-guide.html">æ±å—äºé ç®—æ”»ç•¥</a>
-<a href="vietnam-hochiminh.html">èƒ¡å¿—æ˜å¸‚3å¤©2å¤œ</a>
+<h4>?? ªF«n¨È¦Û¥Ñ¦æ</h4>
+<a href="chiang-mai.html">²MÁÚ¼Æ¦ì¹Cªª«ü«n</a>
+<a href="bangkok-3days.html">°Ò¨¦¦Y³f§ğ²¤</a>
+<a href="bangkok-massage.html">°Ò¨¦«ö¼¯±ÀÂË</a>
+<a href="vietnam-danang.html">¶V«n®s´ä§ğ²¤</a>
+<a href="singapore-3days.html">·s¥[©Y3¤Ñ2©]§ğ²¤</a>
+<a href="kualalumpur-3days.html">¦N¶©©Y3¤Ñ2©]§ğ²¤</a>
+<a href="angkor-wat-2days.html">§d­ô¸]2¤Ñ1©]§ğ²¤</a>
+<a href="thailand-sim.html">®õ°êeSIM«ü«n</a>
+<a href="seasia-budget-travel-guide.html">ªF«n¨È¹wºâ§ğ²¤</a>
+<a href="vietnam-hochiminh.html">­J§Ó©ú¥«3¤Ñ2©]</a>
 </div>
 
 <div class="footer-col">
-<h4>ğŸ”§ æ—…éŠå·¥å…·</h4>
-<a href="packing-list.html">å‡ºåœ‹æ‰“åŒ…æ¸…å–®</a>
-<a href="esim-comparison.html">eSIMæ¯”è¼ƒæ¨è–¦</a>
-<a href="travel-tools.html">æ—…éŠå·¥å…·åˆé›†</a>
-<a href="power-plug-guide.html">å„åœ‹æ’åº§é›»å£“æŒ‡å—</a>
-<a href="budget-airline-guide.html">å»‰èˆªæ¶ç¥¨æ”»ç•¥</a>
-<a href="miles-calculator.html">é‡Œç¨‹ç´¯ç©è©¦ç®—å™¨</a>
-<a href="tax-refund-calculator.html">å…ç¨…é€€ç¨…è©¦ç®—å™¨</a>
-<a href="notion-travel-template.html">Notionæ—…éŠæ¨¡æ¿</a>
+<h4>?? ®È¹C¤u¨ã</h4>
+<a href="packing-list.html">¥X°ê¥´¥]²M³æ</a>
+<a href="esim-comparison.html">eSIM¤ñ¸û±ÀÂË</a>
+<a href="travel-tools.html">®È¹C¤u¨ã¦X¶°</a>
+<a href="power-plug-guide.html">¦U°ê´¡®y¹qÀ£«ü«n</a>
+<a href="budget-airline-guide.html">·G¯è·m²¼§ğ²¤</a>
+<a href="miles-calculator.html">¨½µ{²Ö¿n¸Õºâ¾¹</a>
+<a href="tax-refund-calculator.html">§Kµ|°hµ|¸Õºâ¾¹</a>
+<a href="notion-travel-template.html">Notion®È¹C¼ÒªO</a>
 </div>
 </div>
-<!-- ç¤¾ç¾¤é€£çµ -->
+<!-- ªÀ¸s³sµ² -->
 <div class="footer-social">
 <div class="footer-social-inner">
 <div>
-<div class="footer-social-title">è¿½è¹¤æˆ‘å€‘ ğŸ“¢</div>
-<p class="footer-social-sub">æœ€æ–°æ—…éŠæ”»ç•¥ã€å„ªæƒ è³‡è¨Šä¸æ¼æ¥</p>
+<div class="footer-social-title">°lÂÜ§Ú­Ì ??</div>
+<p class="footer-social-sub">³Ì·s®È¹C§ğ²¤¡BÀu´f¸ê°T¤£º|±µ</p>
 </div>
 <div class="footer-social-links">
 <a class="footer-social-btn footer-social-fb" href="https://www.facebook.com/profile.php?id=61590076012361" rel="noopener" target="_blank">
-          ğŸ“˜ Facebook ç²‰å°ˆ
+          ?? Facebook ¯»±M
         </a>
 <a class="footer-social-btn footer-social-line" href="https://line.me/ti/g/NbNGnW4Eh6" rel="noopener" target="_blank">
-          ğŸ’¬ LINE ç¾¤çµ„
+          ?? LINE ¸s²Õ
         </a>
 </div>
 </div>
 </div>
 <div class="footer-bottom"><div class="footer-nav-row">
-  <a href="about.html">é—œæ–¼å‡åœ¨è·¯ä¸Š</a>
-  <span class="footer-nav-sep">Â·</span>
-  <a href="contact.html">è¯çµ¡æˆ‘å€‘</a>
-  <span class="footer-nav-sep">Â·</span>
-  <a href="privacy.html">éš±ç§æ¬Šæ”¿ç­–</a>
-  <span class="footer-nav-sep">Â·</span>
-  <a href="terms.html">ä½¿ç”¨æ¢æ¬¾</a>
-  <span class="footer-nav-sep">Â·</span>
-  <a href="disclaimer.html">å…è²¬è²æ˜</a>
+  <a href="about.html">Ãö©ó§¡¦b¸ô¤W</a>
+  <span class="footer-nav-sep">¡P</span>
+  <a href="contact.html">Ápµ¸§Ú­Ì</a>
+  <span class="footer-nav-sep">¡P</span>
+  <a href="privacy.html">Áô¨pÅv¬Fµ¦</a>
+  <span class="footer-nav-sep">¡P</span>
+  <a href="terms.html">¨Ï¥Î±ø´Ú</a>
+  <span class="footer-nav-sep">¡P</span>
+  <a href="disclaimer.html">§K³dÁn©ú</a>
 </div>
-<p>Â© 2026 å‡åœ¨è·¯ä¸Š Travel Lab. All Rights Reserved.</p>
+<p>c 2026 §¡¦b¸ô¤W Travel Lab. All Rights Reserved.</p>
 </div>
 </footer>
 </body>

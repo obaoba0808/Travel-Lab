@@ -32,7 +32,7 @@ ul { list-style:none; }
 
 /* ========== BRANDING (text-only, logo in topbar only) ========== */
 .site-branding { text-align:center; padding:30px 20px 25px; background:var(--bg); }
-.site-branding h1 { font-family:'Noto Serif TC',serif; font-size:32px; font-weight:700; color:var(--text-dark); margin-bottom:6px; }
+.site-branding h1 { font-family:'Noto Sans TC',sans-serif; font-size:32px; font-weight:700; color:var(--text-dark); margin-bottom:6px; }
 .site-branding h1 span { color:var(--tiffany); }
 .site-branding p { font-size:14px; color:var(--text-gray); letter-spacing:1px; }
 
@@ -131,7 +131,7 @@ ul { list-style:none; }
 .category-hero { position:relative; overflow:hidden; }
 .category-hero img { width:100%; height:auto; object-fit:contain; display:block; }
 .category-hero .overlay { position:absolute; inset:0; display:flex; align-items:flex-end; padding:40px; color:#fff; text-shadow:0 1px 4px rgba(0,0,0,0.6); }
-.category-hero .overlay h2 { color:#fff; font-family:'Noto Serif TC',serif; font-size:32px; font-weight:700; }
+.category-hero .overlay h2 { color:#fff; font-family:'Noto Sans TC',sans-serif; font-size:32px; font-weight:700; }
 .category-hero .overlay p { color:rgba(255,255,255,0.85); font-size:15px; margin-top:6px; }
 
 /* ========== FULL-BLEED HERO (image + title below) ========== */
@@ -182,7 +182,7 @@ ul { list-style:none; }
   box-shadow: 0 2px 8px rgba(10,186,181,0.3);
 }
 .hero-main-title {
-  font-family: 'Noto Serif TC', serif;
+  font-family: 'Noto Sans TC', sans-serif;
   font-size: 36px;
   font-weight: 700;
   color: #1a1a2e;
@@ -221,7 +221,7 @@ ul { list-style:none; }
 .hero-img { width:100%; height:auto; display:block; } /* Added object-fit */
 .hero-title { text-align:center; padding:28px 20px 20px 20px; }
 .hero-title h1 { /* Changed from h2 to h1 to match HTML */
-    font-family:'Noto Serif TC',serif;
+    font-family:'Noto Sans TC',sans-serif;
     font-size:32px; /* Adjusted font size for main H1 */
     font-weight:700;
     line-height:1.4;
@@ -235,7 +235,7 @@ ul { list-style:none; }
 .article-hero img { width:100%; height:100%; object-fit:cover; }
 .article-hero .overlay { position:absolute; inset:0; display:flex; flex-direction:column; justify-content:flex-end; padding:40px; max-width:820px; color:#fff; text-shadow:0 1px 4px rgba(0,0,0,0.6); }
 .article-hero .overlay .cat-tag { display:inline-block; background:var(--tiffany); color:#fff; font-size:11px; font-weight:500; padding:3px 10px; border-radius:3px; margin-bottom:10px; width:fit-content; }
-.article-hero .overlay h2 { color:#fff; font-family:'Noto Serif TC',serif; font-size:28px; font-weight:700; line-height:1.4; }
+.article-hero .overlay h2 { color:#fff; font-family:'Noto Sans TC',sans-serif; font-size:28px; font-weight:700; line-height:1.4; }
 .article-hero .overlay .meta { color:rgba(255,255,255,0.75); font-size:13px; margin-top:8px; }
 
 /* CHARTER BANNER - Apply max-width and centering */
@@ -500,7 +500,7 @@ div[style*="max-width:900px;margin:0 auto 30px;padding:0 20px;"] {
 
 /* ========== SECTION DIVIDER ========== */
 .section-divider { text-align:center; padding:10px 0 30px; }
-.section-divider h2 { font-family:'Noto Serif TC',serif; font-size:22px; font-weight:700; position:relative; display:inline-block; }
+.section-divider h2 { font-family:'Noto Sans TC',sans-serif; font-size:22px; font-weight:700; position:relative; display:inline-block; }
 .section-divider h2::after { content:''; position:absolute; bottom:-8px; left:50%; transform:translateX(-50%); width:50px; height:3px; background:var(--tiffany); border-radius:2px; }
 
 /* ========== SIDEBAR (Your existing .widget styles, ensure no conflict) ========== */
@@ -930,7 +930,7 @@ div[style*="max-width:900px;margin:0 auto 30px;padding:0 20px;"] {
 /* === Portal Homepage Styles (from index-inline.css) === */
 .hero-landing{background:#fff;color:#1a1a2e;padding:80px 20px 60px;text-align:center;position:relative;overflow:hidden}
 .hero-landing::before{content:"";position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:radial-gradient(ellipse at 30% 50%,rgba(90,207,207,0.15) 0%,transparent 70%)}
-.hero-landing h1{font-family:"Noto Serif TC",serif;font-size:42px;font-weight:700;margin-bottom:12px;position:relative;color:#0ABAB5}
+.hero-landing h1{font-family:'Noto Sans TC',sans-serif;font-size:42px;font-weight:700;margin-bottom:12px;position:relative;color:#0ABAB5}
 .hero-landing .hero-sub{font-size:18px;color:#444;margin-bottom:8px;position:relative}
 .hero-landing .hero-tagline{font-size:15px;color:#666;margin-bottom:32px;position:relative}
 .hero-cta-group{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;position:relative}
@@ -979,7 +979,7 @@ div[style*="max-width:900px;margin:0 auto 30px;padding:0 20px;"] {
 .hero-full-content{position:relative;z-index:2;text-align:center;padding:0 20px;max-width:800px}
 .hero-full-divider{width:40px;height:3px;background:linear-gradient(90deg,var(--tiffany),var(--tiffany-dark));border-radius:2px;margin:0 auto 20px}
 .hero-landing-full .hero-region-tag{font-size:15px;padding:10px 28px;border-radius:30px;margin-bottom:20px;display:inline-flex;letter-spacing:1.5px;background:linear-gradient(135deg,#00838f,#00ACC1);color:#fff;font-weight:600;text-shadow:0 1px 3px rgba(0,0,0,0.3)}
-.hero-full-title{font-family:'Noto Serif TC',serif;font-size:48px;font-weight:700;margin-bottom:28px;line-height:1.3}.title-zh{display:inline-block;transform:skewX(-10deg)}.title-zh-text{display:inline-block;transform:skewX(10deg);color:#1fc1b9;font-family:'Noto Sans TC',sans-serif;font-style:italic;font-weight:900;letter-spacing:2px;text-shadow:0 2px 4px rgba(0,0,0,0.3)}.title-en{color:#1a1a2e!important;font-family:'Noto Sans TC',sans-serif;font-style:italic;font-weight:900;letter-spacing:2px}
+.hero-full-title{font-family:'Noto Sans TC',sans-serif;font-size:48px;font-weight:700;margin-bottom:28px;line-height:1.3}.title-zh{display:inline-block;transform:skewX(-10deg)}.title-zh-text{display:inline-block;transform:skewX(10deg);color:#1fc1b9;font-family:'Noto Sans TC',sans-serif;font-style:italic;font-weight:900;letter-spacing:2px;text-shadow:0 2px 4px rgba(0,0,0,0.3)}.title-en{color:#1a1a2e!important;font-family:'Noto Sans TC',sans-serif;font-style:italic;font-weight:900;letter-spacing:2px}
 .hero-stats-bar{display:inline-flex;align-items:center;gap:16px;background:rgba(26,26,46,0.82);backdrop-filter:blur(10px);padding:12px 28px;border-radius:50px;color:#fff;font-size:14px}
 .hero-stats-bar strong{font-size:18px;font-weight:700;color:#fff;margin-right:4px}
 .hero-stats-bar .stats-dot{color:rgba(255,255,255,0.5);font-weight:300}
