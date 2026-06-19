@@ -1,4 +1,4 @@
-Ôªø/* ========== Travel Lab Design System (Tiffany Green Palette) ========== */
+/* ========== Travel Lab Design System (Tiffany Green Palette) ========== */
 :root {
   --tiffany: #0ABAB5;
   --tiffany-dark: #078E8A;
@@ -486,8 +486,8 @@ div[style*="max-width:900px;margin:0 auto 30px;padding:0 20px;"] {
 .faq-section { margin-top:50px; }
 .faq-item { background: #fff; border-radius:12px; margin-bottom:14px; overflow:hidden; border:1px solid var(--border); box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
 .faq-q { padding:16px 20px; font-weight:500; cursor:pointer; display:flex; justify-content:space-between; align-items:center; }
-.faq-q::after { content:'Âöó?; font-size:18px; color:var(--tiffany); transition:0.3s; }
-.faq-item.open .faq-q::after { content:'Âöó?; transform: rotate(180deg); /* Rotate for minus sign effect */ }
+.faq-q::after { content:'Ôº?; font-size:18px; color:var(--tiffany); transition:0.3s; }
+.faq-item.open .faq-q::after { content:'Ôº?; transform: rotate(180deg); /* Rotate for minus sign effect */ }
 .faq-a { padding:0 20px; max-height:0; overflow:hidden; transition: max-height 0.3s ease-out, padding-bottom 0.3s ease-out; color:var(--text-gray); line-height:1.8; } /* Added transition for height */
 .faq-item.open .faq-a { padding:0 20px 18px; max-height:500px; /* Large enough value to show content */ }
 
@@ -719,7 +719,7 @@ div[style*="max-width:900px;margin:0 auto 30px;padding:0 20px;"] {
   .scroll-hint { display:none; }
 }
 
-/* ========== KLOOK WIDGET Ê©´ÂºèÈ°ØÁ§∫ ========== */
+/* ========== KLOOK WIDGET æÓ¶°≈„•‹ ========== */
 .klook-dynamic-banner {
   max-width: 100% !important;
   width: 100%;
@@ -902,7 +902,7 @@ div[style*="max-width:900px;margin:0 auto 30px;padding:0 20px;"] {
 }
 
 
-/* Footer Nav Row - Ê©´ÂêëÈÄ£ÁµêÂàó */
+/* Footer Nav Row - æÓ¶V≥sµ≤¶C */
 .footer-nav-row {
   display: flex;
   justify-content: center;
@@ -976,7 +976,6 @@ div[style*="max-width:900px;margin:0 auto 30px;padding:0 20px;"] {
 /* === Hero Full Background (Landing Page) === */
 .hero-landing-full{position:relative;width:100%;height:70vh;min-height:450px;max-height:600px;overflow:hidden;display:flex;align-items:center;justify-content:center;margin-bottom:40px}
 .hero-full-bg{position:absolute;inset:0;background-size:cover;background-position:center;background-repeat:no-repeat}
-.hero-full-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(0,0,0,0.35) 0%,rgba(0,0,0,0.15) 50%,rgba(0,0,0,0.25) 100%);z-index:1}
 .hero-full-content{position:relative;z-index:2;text-align:center;padding:0 20px;max-width:800px}
 .hero-full-divider{width:40px;height:3px;background:linear-gradient(90deg,var(--tiffany),var(--tiffany-dark));border-radius:2px;margin:0 auto 20px}
 .hero-landing-full .hero-region-tag{font-size:15px;padding:10px 28px;border-radius:30px;margin-bottom:20px;display:inline-flex;letter-spacing:1.5px;background:linear-gradient(135deg,#00838f,#00ACC1);color:#fff;font-weight:600;text-shadow:0 1px 3px rgba(0,0,0,0.3)}
@@ -985,7 +984,7 @@ div[style*="max-width:900px;margin:0 auto 30px;padding:0 20px;"] {
 .hero-stats-bar strong{font-size:18px;font-weight:700;color:#fff;margin-right:4px}
 .hero-stats-bar .stats-dot{color:rgba(255,255,255,0.5);font-weight:300}
 @media(max-width:768px){.hero-landing-full{height:55vh;min-height:380px;margin-bottom:24px}.hero-full-title{font-size:30px}.hero-stats-bar{flex-wrap:wrap;gap:12px;padding:10px 20px;border-radius:25px;font-size:13px}.hero-stats-bar strong{font-size:16px}}
-/* ========== CHARTER BANNER (Âè∞ÁÅ£ÂåÖËªä) ========== */
+/* ========== CHARTER BANNER (•x∆W•]®Æ) ========== */
 .ls-charter-banner {
     width: 100%;
     max-width: 100%;
