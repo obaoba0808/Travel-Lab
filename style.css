@@ -486,8 +486,8 @@ div[style*="max-width:900px;margin:0 auto 30px;padding:0 20px;"] {
 .faq-section { margin-top:50px; }
 .faq-item { background: #fff; border-radius:12px; margin-bottom:14px; overflow:hidden; border:1px solid var(--border); box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
 .faq-q { padding:16px 20px; font-weight:500; cursor:pointer; display:flex; justify-content:space-between; align-items:center; }
-.faq-q::after { content:'ï¼?; font-size:18px; color:var(--tiffany); transition:0.3s; }
-.faq-item.open .faq-q::after { content:'ï¼?; transform: rotate(180deg); /* Rotate for minus sign effect */ }
+.faq-q::after { content:'ï¿½?; font-size:18px; color:var(--tiffany); transition:0.3s; }
+.faq-item.open .faq-q::after { content:'ï¿½?; transform: rotate(180deg); /* Rotate for minus sign effect */ }
 .faq-a { padding:0 20px; max-height:0; overflow:hidden; transition: max-height 0.3s ease-out, padding-bottom 0.3s ease-out; color:var(--text-gray); line-height:1.8; } /* Added transition for height */
 .faq-item.open .faq-a { padding:0 20px 18px; max-height:500px; /* Large enough value to show content */ }
 
@@ -719,7 +719,7 @@ div[style*="max-width:900px;margin:0 auto 30px;padding:0 20px;"] {
   .scroll-hint { display:none; }
 }
 
-/* ========== KLOOK WIDGET ¾î¦¡Åã¥Ü ========== */
+/* ========== KLOOK WIDGET ï¿½î¦¡ï¿½ï¿½ï¿½ ========== */
 .klook-dynamic-banner {
   max-width: 100% !important;
   width: 100%;
@@ -902,7 +902,7 @@ div[style*="max-width:900px;margin:0 auto 30px;padding:0 20px;"] {
 }
 
 
-/* Footer Nav Row - ¾î¦V³sµ²¦C */
+/* Footer Nav Row - ï¿½ï¿½Vï¿½sï¿½ï¿½ï¿½C */
 .footer-nav-row {
   display: flex;
   justify-content: center;
@@ -979,12 +979,12 @@ div[style*="max-width:900px;margin:0 auto 30px;padding:0 20px;"] {
 .hero-full-content{position:relative;z-index:2;text-align:center;padding:0 20px;max-width:800px}
 .hero-full-divider{width:40px;height:3px;background:linear-gradient(90deg,var(--tiffany),var(--tiffany-dark));border-radius:2px;margin:0 auto 20px}
 .hero-landing-full .hero-region-tag{font-size:15px;padding:10px 28px;border-radius:30px;margin-bottom:20px;display:inline-flex;letter-spacing:1.5px;background:linear-gradient(135deg,#00838f,#00ACC1);color:#fff;font-weight:600;text-shadow:0 1px 3px rgba(0,0,0,0.3)}
-.hero-full-title{font-family:'Noto Serif TC',serif;font-size:48px;font-weight:700;color:#fff;margin-bottom:28px;line-height:1.3;text-shadow:0 2px 12px rgba(0,0,0,0.5)}.title-zh{color:#1a1a2e;text-shadow:0 2px 12px rgba(0,0,0,0.3)}.title-en{color:#fff;text-shadow:0 2px 12px rgba(0,0,0,0.5)}
+.hero-full-title{font-family:'Noto Serif TC',serif;font-size:48px;font-weight:700;color:#fff;margin-bottom:28px;line-height:1.3;text-shadow:0 2px 12px rgba(0,0,0,0.5)}.title-zh{color:#1a1a2e;text-shadow:0 2px 12px rgba(0,0,0,0.3);background-color:#30f2c5;padding:8px 20px;border-radius:10px;display:inline-block}.title-en{color:#fff;text-shadow:0 2px 12px rgba(0,0,0,0.5)}
 .hero-stats-bar{display:inline-flex;align-items:center;gap:16px;background:rgba(26,26,46,0.82);backdrop-filter:blur(10px);padding:12px 28px;border-radius:50px;color:#fff;font-size:14px}
 .hero-stats-bar strong{font-size:18px;font-weight:700;color:#fff;margin-right:4px}
 .hero-stats-bar .stats-dot{color:rgba(255,255,255,0.5);font-weight:300}
 @media(max-width:768px){.hero-landing-full{height:55vh;min-height:380px;margin-bottom:24px}.hero-full-title{font-size:30px}.hero-stats-bar{flex-wrap:wrap;gap:12px;padding:10px 20px;border-radius:25px;font-size:13px}.hero-stats-bar strong{font-size:16px}}
-/* ========== CHARTER BANNER (¥xÆW¥]¨®) ========== */
+/* ========== CHARTER BANNER (ï¿½xï¿½Wï¿½]ï¿½ï¿½) ========== */
 .ls-charter-banner {
     width: 100%;
     max-width: 100%;
