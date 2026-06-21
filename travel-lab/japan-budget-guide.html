@@ -53,8 +53,10 @@
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&amp;display=swap" media="print" onload="this.media='all'" rel="stylesheet"/>
 <noscript><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&amp;display=swap" rel="stylesheet"/></noscript>
 <link href="style.css" rel="stylesheet"/>
-<link href="beautify-overrides.css" rel="stylesheet"/>
-<link href="beautify.css" rel="stylesheet"/>
+<link rel="preload" href="beautify-overrides.css" as="style" onload="this.onload=null;this.rel=\'stylesheet\'"/>
+<noscript><link href="beautify-overrides.css" rel="stylesheet"/></noscript>
+<link rel="preload" href="beautify.css" as="style" onload="this.onload=null;this.rel=\'stylesheet\'"/>
+<noscript><link href="beautify.css" rel="stylesheet"/></noscript>
 <link href="article-beautify.css" rel="stylesheet"/>
 <!-- ★★★ Layout Standard CSS ★★★ -->
 <link href="layout-standard.css?v=2fb7975" rel="stylesheet"/>

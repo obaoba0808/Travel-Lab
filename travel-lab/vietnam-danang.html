@@ -100,10 +100,12 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 <link as="style" href="style.css" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/>
 <noscript><link href="style.css" rel="stylesheet"/></noscript>
 <link href="beautify-overrides.css" as="style" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/>
-<noscript><link href="beautify-overrides.css" rel="stylesheet"/></noscript>
+<noscript><link rel="preload" href="beautify-overrides.css" as="style" onload="this.onload=null;this.rel=\'stylesheet\'"/>
+<noscript><link href="beautify-overrides.css" rel="stylesheet"/></noscript></noscript>
 <link href="beautify.css" as="style" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/>
 <link href="layout-standard.css?v=2fb7975" rel="stylesheet"/>
-<noscript><link href="beautify.css" rel="stylesheet"/></noscript>
+<noscript><link rel="preload" href="beautify.css" as="style" onload="this.onload=null;this.rel=\'stylesheet\'"/>
+<noscript><link href="beautify.css" rel="stylesheet"/></noscript></noscript>
 <link href="data:image/svg+xml,&lt;svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'&gt;&lt;text y='.9em' font-size='90'&gt;✈&lt;/text&gt;&lt;/svg&gt;" rel="icon"/>
 </p>
 <div class="reading-progress" id="reading-progress"></div>
