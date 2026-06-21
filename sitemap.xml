@@ -10,15 +10,6 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://golightly.fun/index.html</loc>
-    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://golightly.fun/index.html" />
-    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://golightly.fun/index.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://golightly.fun/index.html" />
-    <lastmod>2026-06-21</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
     <loc>https://golightly.fun/tokyo-5days.html</loc>
     <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://golightly.fun/tokyo-5days.html" />
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://golightly.fun/tokyo-5days.html" />
