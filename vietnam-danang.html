@@ -664,21 +664,7 @@ page: window.location.pathname
 });
 </script>
 <script defer="" src="js/monetization.js"></script>
-<script>
-  // Track affiliate link clicks via GA4
-  document.addEventListener('click', function(e) {
-    var link = e.target.closest('[data-affiliate]');
-    if (link) {
-      if (typeof gtag === 'function') {
-        gtag('event', 'affiliate_click', {
-          affiliate: link.getAttribute('data-affiliate'),
-          page: window.location.pathname
-        });
-      }
-    }
-  });
-</script>
-<script defer="" src="js/monetization.js"></script>
+
 
 
 cial-line" href="https://line.me/ti/g/NbNGnW4Eh6" rel="noopener" target="_blank">
@@ -701,21 +687,7 @@ cial-line" href="https://line.me/ti/g/NbNGnW4Eh6" rel="noopener" target="_blank"
 <p>© 2026 均在路上 Travel Lab. All Rights Reserved.</p>
 </div>
 </footer>
-<script>
-  // Track affiliate link clicks via GA4
-  document.addEventListener('click', function(e) {
-    var link = e.target.closest('[data-affiliate]');
-    if (link) {
-      if (typeof gtag === 'function') {
-        gtag('event', 'affiliate_click', {
-          affiliate: link.getAttribute('data-affiliate'),
-          page: window.location.pathname
-        });
-      }
-    }
-  });
-</script>
-<script defer="" src="js/monetization.js"></script>
+
 
 
 </body></html>

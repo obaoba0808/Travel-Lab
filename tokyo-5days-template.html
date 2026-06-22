@@ -523,21 +523,7 @@ page: window.location.pathname
 });
 </script>
 <script defer="" src="js/monetization.js"></script>
-<script>
-  // Track affiliate link clicks via GA4
-  document.addEventListener('click', function(e) {
-    var link = e.target.closest('[data-affiliate]');
-    if (link) {
-      if (typeof gtag === 'function') {
-        gtag('event', 'affiliate_click', {
-          affiliate: link.getAttribute('data-affiliate'),
-          page: window.location.pathname
-        });
-      }
-    }
-  });
-</script>
-<script defer="" src="js/monetization.js"></script>
+
 我們 📢</div>
 <p class="footer-social-sub">最新旅遊攻略、優惠資訊不漏接</p>
 </div>
@@ -565,19 +551,5 @@ page: window.location.pathname
 <p>© 2026 均在路上 Travel Lab. All Rights Reserved.</p>
 </div>
 </footer>
-<script>
-  // Track affiliate link clicks via GA4
-  document.addEventListener('click', function(e) {
-    var link = e.target.closest('[data-affiliate]');
-    if (link) {
-      if (typeof gtag === 'function') {
-        gtag('event', 'affiliate_click', {
-          affiliate: link.getAttribute('data-affiliate'),
-          page: window.location.pathname
-        });
-      }
-    }
-  });
-</script>
-<script defer="" src="js/monetization.js"></script>
+
 </body></html>
