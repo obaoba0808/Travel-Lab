@@ -438,32 +438,85 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 <ins class="klk-aff-widget" data-adid="1282013" data-lang="zh-TW" data-currency="TWD" data-cardH="126" data-padding="92" data-lgH="470" data-edgeValue="655" data-cid="29" data-tid="-1" data-amount="3" data-prod="dynamic_widget"><a href="//www.klook.com/">Klook.com</a></ins> <script type="text/javascript"> (function (d, sc, u) { var s = d.createElement(sc), p = d.getElementsByTagName(sc)[0]; s.type = "text/javascript"; s.async = true; s.src = u; p.parentNode.insertBefore(s, p); })( document, "script", "https://affiliate.klook.com/widget/fetch-iframe-init.js" ); </script>
 
 
-<!-- BLOCK 13: RELATED -->
-<div class="related-posts ls-related">
-<h2 class="section-title">&#x1F4D6; &#x5EF6;&#x4F38;&#x95B1;&#x8B80;</h2>
-<div class="related-list ls-related-grid">
-<a class="related-card" href="kyoto-temples.html">
-<div class="post-thumb"><img alt="&#x4EAC;&#x90FD;&#x5BFA;&#x5EC;&#x6563;&#x6B65;&#x5730;&#x5716;" height="1024" loading="lazy" src="images/kyoto-hero.webp" width="1536"/></div>
-<div class="post-body">
-<span class="cat-tag">&#x65E5;&#x672C;&#x81EA;&#x7531;&#x884C;</span>
-<h3>&#x4EAC;&#x90FD;&#x5BFA;&#x5EC;&#x6563;&#x6B65;&#x5730;&#x5716;&#xFF5C;&#x6DF5;&#x6C34;&#x5BFA;&#x3001;&#x91D1;&#x968A;&#x5BFA;&#x3001;&#x4F0A;&#x5957;&#x7AF9;&#x8349;</h3>
-</div>
-</a>
-<a class="related-card" href="kansai-pass.html">
-<div class="post-thumb"><img alt="&#x95DC;&#x897F;&#x4EA4;&#x901A;&#x7968;&#x5238;&#x6307;&#x5357;" height="1024" loading="lazy" src="images/kansai-hero.webp" width="1536"/></div>
-<div class="post-body">
-<span class="cat-tag">&#x65E5;&#x672C;&#x81EA;&#x7531;&#x884C;</span>
-<h3>&#x95DC;&#x897F;&#x4EA4;&#x901A;&#x7968;&#x5238;&#x6307;&#x5357;&#xFF5C;JR Pass&#x7701;&#x9322;&#x653B;&#x7565;</h3>
-</div>
-</a>
-<a class="related-card" href="osaka-usj.html">
-<div class="post-thumb"><img alt="&#x5927;&#x962A;&#x74B0;&#x7403;&#x5F71;&#x57CE;&#x653B;&#x7565;" height="1024" loading="lazy" src="images/osaka-usj-hero.webp" width="1536"/></div>
-<div class="post-body">
-<span class="cat-tag">&#x65E5;&#x672C;&#x81EA;&#x7531;&#x884C;</span>
-<h3>&#x5927;&#x962A;&#x74B0;&#x7403;&#x5F71;&#x57CE; USJ &#x653B;&#x7565;&#xFF5C;&#x5FEB;&#x901F;&#x901A;&#x95DC;</h3>
-</div>
-</a>
-</div>
+<!-- BLOCK 13: RELATED - Optimized Version -->
+<section class="related-posts ls-related" aria-labelledby="related-heading">
+  <h2 id="related-heading" class="section-title">📚 延伸閱讀</h2>
+  
+  <div class="related-list ls-related-grid" role="list">
+    <!-- Article 1: Kyoto Temples -->
+    <article class="related-card" role="listitem">
+      <a href="kyoto-temples.html" class="related-link">
+        <figure class="post-thumb">
+          <img 
+            alt="京都寺院散步地圖" 
+            height="1024" 
+            width="1536"
+            loading="lazy"
+            decoding="async"
+            src="images/kyoto-hero.webp"
+            srcset="images/kyoto-hero-480.webp 480w,
+                    images/kyoto-hero-768.webp 768w,
+                    images/kyoto-hero.webp 1536w"
+            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+          />
+        </figure>
+        <div class="post-body">
+          <span class="cat-tag" aria-label="分類">日本自由行</span>
+          <h3 class="post-title">京都寺院散步地圖｜淺水寺、金閣寺、伊套竹草</h3>
+        </div>
+      </a>
+    </article>
+    
+    <!-- Article 2: Kansai Pass -->
+    <article class="related-card" role="listitem">
+      <a href="kansai-pass.html" class="related-link">
+        <figure class="post-thumb">
+          <img 
+            alt="關西交通券指南" 
+            height="1024" 
+            width="1536"
+            loading="lazy"
+            decoding="async"
+            src="images/kansai-hero.webp"
+            srcset="images/kansai-hero-480.webp 480w,
+                    images/kansai-hero-768.webp 768w,
+                    images/kansai-hero.webp 1536w"
+            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+          />
+        </figure>
+        <div class="post-body">
+          <span class="cat-tag" aria-label="分類">日本自由行</span>
+          <h3 class="post-title">關西交通券指南｜JR Pass 省錢攻略</h3>
+        </div>
+      </a>
+    </article>
+    
+    <!-- Article 3: Osaka USJ -->
+    <article class="related-card" role="listitem">
+      <a href="osaka-usj.html" class="related-link">
+        <figure class="post-thumb">
+          <img 
+            alt="大阪環球影城攻略" 
+            height="1024" 
+            width="1536"
+            loading="lazy"
+            decoding="async"
+            src="images/osaka-usj-hero.webp"
+            srcset="images/osaka-usj-hero-480.webp 480w,
+                    images/osaka-usj-hero-768.webp 768w,
+                    images/osaka-usj-hero.webp 1536w"
+            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+          />
+        </figure>
+        <div class="post-body">
+          <span class="cat-tag" aria-label="分類">日本自由行</span>
+          <h3 class="post-title">大阪環球影城 USJ 攻略｜快速通關</h3>
+        </div>
+      </a>
+    </article>
+  </div>
+</section>
+
 
 
 
