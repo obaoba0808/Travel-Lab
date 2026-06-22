@@ -438,32 +438,49 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 <div class="footer-social-inner">
 <div>
 <div class="footer-social-title">追蹤我們 📢</div>
-<p class="footer-social-sub">最新旅遊攻略、優惠資訊不漏接</p>
+最新旅遊攻略、優惠資訊不漏接
+
 </div>
 <div class="footer-social-links">
 <a class="footer-social-btn footer-social-fb" href="https://www.facebook.com/profile.php?id=61590076012361" rel="noopener" target="_blank">
-          📘 Facebook 粉專
-        </a>
+📘 Facebook 粉專
+</a>
 <a class="footer-social-btn footer-social-line" href="https://line.me/ti/g/NbNGnW4Eh6" rel="noopener" target="_blank">
-          💬 LINE 群組
-        </a>
+💬 LINE 群組
+</a>
 </div>
 </div>
 </div>
 <div class="footer-bottom"><div class="footer-nav-row">
-  <a href="about.html">關於均在路上</a>
-  <span class="footer-nav-sep">·</span>
-  <a href="contact.html">聯絡我們</a>
-  <span class="footer-nav-sep">·</span>
-  <a href="privacy.html">隱私權政策</a>
-  <span class="footer-nav-sep">·</span>
-  <a href="terms.html">使用條款</a>
-  <span class="footer-nav-sep">·</span>
-  <a href="disclaimer.html">免責聲明</a>
+<a href="about.html">關於均在路上</a>
+<span class="footer-nav-sep">·</span>
+<a href="contact.html">聯絡我們</a>
+<span class="footer-nav-sep">·</span>
+<a href="privacy.html">隱私權政策</a>
+<span class="footer-nav-sep">·</span>
+<a href="terms.html">使用條款</a>
+<span class="footer-nav-sep">·</span>
+<a href="disclaimer.html">免責聲明</a>
 </div>
-<p>© 2026 均在路上 Travel Lab. All Rights Reserved.</p>
+© 2026 均在路上 Travel Lab. All Rights Reserved.
+
 </div>
 </footer>
+<script>
+// Track affiliate link clicks via GA4
+document.addEventListener('click', function(e) {
+var link = e.target.closest('[data-affiliate]');
+if (link) {
+if (typeof gtag === 'function') {
+gtag('event', 'affiliate_click', {
+affiliate: link.getAttribute('data-affiliate'),
+page: window.location.pathname
+});
+}
+}
+});
+</script>
+<script defer="" src="js/monetization.js"></script>
 <script>
   // Track affiliate link clicks via GA4
   document.addEventListener('click', function(e) {
