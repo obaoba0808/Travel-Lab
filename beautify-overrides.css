@@ -1372,6 +1372,8 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
+  background: none;
+  color: #fff;
 }
 .hero-title-below .hero-stats span:not(:last-child)::after {
   content: '•';
