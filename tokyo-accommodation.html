@@ -609,7 +609,6 @@
 </main><!-- end ls-main-content -->
 </div><!-- end ls-article-layout -->
 <!-- ========== BLOCK 14: FOOTER ========== -->
-<!-- FOOTER -->
 <footer class="site-footer ls-footer">
 <div class="footer-inner">
 <div class="footer-col">
@@ -721,33 +720,5 @@ page: window.location.pathname
 }
 });
 </script>
-
-<a class="ls-back-to-top" href="#" id="lsBackToTop" title="回到頂部">↑</a>
-<script>
-// FAQ Accordion
-document.querySelectorAll('.ls-faq-item').forEach(function(item) {
-  item.querySelector('.ls-faq-q').addEventListener('click', function() {
-    item.classList.toggle('open');
-  });
-});
-// Back to Top
-var btn = document.getElementById('lsBackToTop');
-window.addEventListener('scroll', function() {
-  if (window.scrollY > 300) { btn.classList.add('visible'); }
-  else { btn.classList.remove('visible'); }
-});
-btn.addEventListener('click', function(e) {
-  e.preventDefault();
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-});
-// Track affiliate clicks
-document.addEventListener('click', function(e) {
-  var link = e.target.closest('[data-affiliate]');
-  if (link && typeof gtag === 'function') {
-    gtag('event', 'affiliate_click', { affiliate: link.getAttribute('data-affiliate'), page: window.location.pathname });
-  }
-});
-</script>
-
 </body>
 </html>
