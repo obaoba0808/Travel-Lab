@@ -89,14 +89,16 @@
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&amp;display=swap" media="print" onload="this.media='all'" rel="stylesheet">
 <noscript><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&amp;display=swap" rel="stylesheet"/></noscript>
 <!-- Stylesheet -->
-<link href="style.css?v=202606051545" rel="stylesheet"/>
+<link as="style" href="style.css" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/>
+<noscript><link href="style.css" rel="stylesheet"/></noscript>
 <link href="beautify-overrides.css" as="style" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/>
-<noscript><link rel="preload" href="beautify-overrides.css" as="style" onload="this.onload=null;this.rel=\'stylesheet\'"/>
-<noscript><link rel="preload" href="beautify-overrides.css" as="style" onload="this.onload=null;this.rel=\'stylesheet\'"/>
+<noscript><link rel="preload" href="beautify-overrides.css" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
+<noscript><link rel="preload" href="beautify-overrides.css" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
 <noscript><link href="beautify-overrides.css" rel="stylesheet"/></noscript></noscript></noscript>
 <link href="beautify.css" as="style" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/>
-<noscript><link rel="preload" href="beautify.css" as="style" onload="this.onload=null;this.rel=\'stylesheet\'"/>
-<noscript><link rel="preload" href="beautify.css" as="style" onload="this.onload=null;this.rel=\'stylesheet\'"/>
+<link href="layout-standard.css?v=ae368dc" rel="stylesheet"/>
+<noscript><link rel="preload" href="beautify.css" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
+<noscript><link rel="preload" href="beautify.css" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
 <noscript><link href="beautify.css" rel="stylesheet"/></noscript></noscript></noscript>
 <!-- Google Analytics 4 -->
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-S7KQGHSD2R"></script>
@@ -303,18 +305,30 @@ var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.c
 </a>
 </div>
 <div class="col-center"><div class="article-container">
-<section class="hero-region-new">
-<div class="hero-image-wrapper">
-<img width="1600" height="643" alt="免費 Notion 旅行規劃模板下載" loading="eager" src="images/notion-travel.webp"/>
-</div>
-<div class="hero-title-below">
-<span class="hero-region-tag">📒 旅遊模板</span>
-<h1>免費 Notion 旅行規劃模板下載</h1>
-<div class="hero-stats">
-<span>📅 2026年最新</span>
-<span>✈️ 均在路上</span>
-</div>
-</div>
+<section class="hero-region-new">
+
+<div class="hero-image-wrapper">
+
+<img width="1600" height="643" alt="免費 Notion 旅行規劃模板下載" loading="eager" src="images/notion-travel.webp"/>
+
+</div>
+
+<div class="hero-title-below">
+
+<span class="hero-region-tag">📒 旅遊模板</span>
+
+<h1>免費 Notion 旅行規劃模板下載</h1>
+
+<div class="hero-stats">
+
+<span>📅 2026年最新</span>
+
+<span>✈️ 均在路上</span>
+
+</div>
+
+</div>
+
 </section><div class="portal-content"><div style="font-size:13px;color:var(--text-light);">✈ 用最少預算，走最多地方</div><div class="template-preview">
 <img alt="Notion 旅行規劃模板預覽截圖" loading="lazy" src="images/notion-template-preview.webp"/>
 <p style="color:#666;text-align:center;margin:0;">這個模板包含了我在 10+ 次自由行中不斷優化的精華，現在免費分享給你。</p>
