@@ -607,5 +607,117 @@ export const customPages: CustomPageData[] = [
       "探索生活",
       "聯絡我們"
     ]
+  },
+  {
+    "id": "japan-travel",
+    "title": "日本自由行終極攻略指南 2026｜最新行程安排、必讀景點、櫻花季與藥妝省錢攻略｜均在路上 Travel Lab",
+    "category": "日本自由行",
+    "url": "japan-travel.html",
+    "coverImage": "/images/japan-travel.webp",
+    "intro": "2026最專業的日本自由行全攻略中心！整合東京、福岡、北海道等熱門都市的五天四夜行程規劃、住宿推薦、櫻花季預測與藥妝免稅必買清單。內置「日本行程路線與預算動態精算工具」，助您輕鬆省時、性價比玩轉日本！",
+    "tags": [
+      "日本攻略",
+      "行程規劃",
+      "櫻花季",
+      "藥妝清單"
+    ]
+  },
+  {
+    "id": "korea-travel",
+    "title": "韓國自由行全攻略 2026｜首爾釜山濟州島一站搞定｜均在路上 Travel Lab",
+    "category": "韓國自由行",
+    "url": "korea-travel.html",
+    "coverImage": "/images/korea-travel.webp",
+    "intro": "2026韓國自由行完整攻略！含簽證機票搶票、T-money交通卡購買、明洞換錢退稅秘技、必買化妝品精選，以及首爾、釜山、濟州島各大熱門目的地行程規劃與索引，出發前必看！",
+    "tags": [
+      "韓國攻略",
+      "首爾釜山",
+      "濟州島",
+      "退稅秘技"
+    ]
+  },
+  {
+    "id": "southeast-asia",
+    "title": "東南亞自由行終極攻略指南 2026｜最新行程安排、必讀景點、泰國與越南省錢攻略｜均在路上 Travel Lab",
+    "category": "東南亞自由行",
+    "url": "southeast-asia.html",
+    "coverImage": "/images/southeast-asia.webp",
+    "intro": "2026最專業的東南亞自由行全攻略中心！整合泰國曼谷、越南峴港、胡志明市等熱門城市的行程規劃、按摩Spa推薦、上網網卡實測與熱門景點省錢攻略。內置「東南亞行程與預算動態精算工具」，輕鬆控預算、性價比玩轉東南亞！",
+    "tags": [
+      "東南亞攻略",
+      "泰國越南",
+      "行程規劃",
+      "省錢攻略"
+    ]
+  },
+  {
+    "id": "taiwan-travel",
+    "title": "台灣旅遊攻略｜均在路上 Travel Lab",
+    "category": "台灣旅遊",
+    "url": "taiwan-travel.html",
+    "coverImage": "/images/taiwan-travel.webp",
+    "intro": "台灣深度旅遊提案2026：花東縱谷三天兩夜、台南美食牛肉湯、墾丁海景夜市，在地人帶路私房景點。",
+    "tags": [
+      "台灣旅遊",
+      "花東縱谷",
+      "台南美食",
+      "墾丁"
+    ]
+  },
+  {
+    "id": "bangkok-4days",
+    "title": "曼谷4天3夜攻略2026｜超詳盡行程表+必吃美食+按摩精選+預算試算｜均在路上",
+    "category": "東南亞自由行",
+    "url": "bangkok-4days.html",
+    "coverImage": "/images/bangkok-hero.webp",
+    "intro": "2026年最新曼谷4天3夜自由行攻略！包含每日推薦行程時間線、三大住宿區域深度解析、十大人氣美食、正統泰式按摩推薦、BTS/MRT交通攻略以及詳細的經濟與舒適型預算試算。第一次去泰國必看！",
+    "tags": [
+      "曼谷攻略",
+      "4天3夜",
+      "泰式美食",
+      "預算試算"
+    ]
+  },
+  {
+    "id": "budget-calculator",
+    "title": "出國旅遊預算試算器2026｜機票飯店花費一鍵試算｜均在路上 Travel Lab",
+    "category": "旅遊工具",
+    "url": "budget-calculator.html",
+    "coverImage": "/images/japan-budget-hero.webp",
+    "intro": "出國旅遊預算試算器：輸入國家、天數與人數，自動幫你計算機票、住宿、餐飲、交通與購物等預算花費。內含日本、韓國、泰國、歐洲與美國最新小資省錢技巧。",
+    "tags": [
+      "預算試算",
+      "機票飯店",
+      "省錢技巧",
+      "旅遊工具"
+    ]
+  },
+  {
+    "id": "contact",
+    "title": "聯絡窗口｜均在路上 Travel Lab",
+    "category": "關於我們",
+    "url": "contact.html",
+    "coverImage": "/images/about-hero.webp",
+    "intro": "聯絡均在路上 Travel Lab｜LINE 即時詢問(@938nzmjr)與 Email 來信，常見問題24小時內回覆。旅遊行程規劃、合作提案、網站功能建議歡迎聯絡，我們樂意協助。",
+    "tags": [
+      "聯絡我們",
+      "LINE詢問",
+      "合作提案",
+      "旅遊諮詢"
+    ]
+  },
+  {
+    "id": "downloads",
+    "title": "免費下載專區｜Travel Lab 均在路上",
+    "category": "旅遊工具",
+    "url": "downloads.html",
+    "coverImage": "/images/notion-travel.webp",
+    "intro": "均在路上 Travel Lab 免費旅遊資源下載中心｜打包清單模板、旅遊預算試算表、行程規劃表、機票比價技巧PDF等實用工具免費下載，出國前一次備齊所有準備。",
+    "tags": [
+      "免費下載",
+      "打包清單",
+      "預算試算表",
+      "行程規劃"
+    ]
   }
 ];
