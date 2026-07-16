@@ -683,7 +683,7 @@ export const customPages: CustomPageData[] = [
     "title": "出國旅遊預算試算器2026｜機票飯店花費一鍵試算｜均在路上 Travel Lab",
     "category": "旅遊工具",
     "url": "budget-calculator.html",
-    "coverImage": "/images/japan-budget-hero.webp",
+    "coverImage": "/images/miles-calculator.webp",
     "intro": "出國旅遊預算試算器：輸入國家、天數與人數，自動幫你計算機票、住宿、餐飲、交通與購物等預算花費。內含日本、韓國、泰國、歐洲與美國最新小資省錢技巧。",
     "tags": [
       "預算試算",
