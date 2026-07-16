@@ -597,7 +597,7 @@ export const customPages: CustomPageData[] = [
   },
   {
     "id": "about",
-    "title": "關於我們：均在路上 Travel Lab — 傾聽靈魂深處的探險足音",
+    "title": "關於我們",
     "category": "關於我們",
     "url": "about.html",
     "coverImage": "/images/about-hero.webp",
@@ -708,7 +708,7 @@ export const customPages: CustomPageData[] = [
   },
   {
     "id": "downloads",
-    "title": "免費下載專區｜Travel Lab 均在路上",
+    "title": "免費下載專區",
     "category": "旅遊工具",
     "url": "downloads.html",
     "coverImage": "/images/notion-travel.webp",
