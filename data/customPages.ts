@@ -184,7 +184,7 @@ export const customPages: CustomPageData[] = [
     "title": "首爾必吃美食攻略：一隻雞、烤肉、醬蟹吃貨天堂",
     "category": "韓國自由行",
     "url": "seoul-food.html",
-    "coverImage": "/images/seoul-hero.webp",
+    "coverImage": "/images/seoul-hero1.webp",
     "intro": "首爾美食饕客指南！孔陵一隻雞、明洞神仙雪濃湯、弘大荒謬的生肉、廣藏市場生拌牛肉與綠豆煎餅，不踩雷在地推薦。",
     "tags": [
       "首爾美食",
@@ -470,7 +470,7 @@ export const customPages: CustomPageData[] = [
     "title": "東南亞預算攻略：泰越馬新四國，極致省錢高 CP 玩樂法",
     "category": "東南亞自由行",
     "url": "seasia-budget-travel-guide.html",
-    "coverImage": "/images/budget-airline.webp",
+    "coverImage": "/images/seasia-budget-travel-guide.webp",
     "intro": "教你如何分配東南亞旅行預算！從超便宜的越南街頭美食、泰國嘟嘟車議價密技、到如何利用大眾運輸玩轉昂貴的新加坡。",
     "tags": [
       "東南亞預算",
@@ -683,7 +683,7 @@ export const customPages: CustomPageData[] = [
     "title": "出國旅遊預算試算器2026｜機票飯店花費一鍵試算｜均在路上 Travel Lab",
     "category": "旅遊工具",
     "url": "budget-calculator.html",
-    "coverImage": "/images/miles-calculator.webp",
+    "coverImage": "/images/budget-calculator.webp",
     "intro": "出國旅遊預算試算器：輸入國家、天數與人數，自動幫你計算機票、住宿、餐飲、交通與購物等預算花費。內含日本、韓國、泰國、歐洲與美國最新小資省錢技巧。",
     "tags": [
       "預算試算",
