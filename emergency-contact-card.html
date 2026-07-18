@@ -1,0 +1,1331 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW" class="scroll-smooth">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EDPEJH91EL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-EDPEJH91EL');
+  </script>
+  
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="均在路上 Travel Lab"/>
+  
+  <title>各國旅遊隨身緊急聯絡卡產生器：線上工具爆款自救錢包卡｜均在路上Travel Lab</title>
+  <meta name="description" content="2026出國安全必備！一鍵客製化生成各國旅遊緊急聯絡卡，涵蓋日韓、東南亞緊急求助熱線與代表處電話。自由編輯個人醫療、聯絡人、保險與飯店資訊，支援離線下載、列印與另存PDF。" />
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="各國旅遊隨身緊急聯絡卡產生器：線上工具爆款自救錢包卡｜均在路上Travel Lab" />
+  <meta property="og:description" content="2026出國安全必備！一鍵客製化生成各國旅遊緊急聯絡卡，涵蓋日韓、東南亞緊急求助熱線與代表處電話。自由編輯個人醫療、聯絡人、保險與飯店資訊，支援離線下載、列印與另存PDF。" />
+  <meta property="og:image" content="https://golightly.fun/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="旅遊各國緊急聯絡卡產生器" />
+  <meta property="og:url" content="https://golightly.fun/emergency-contact-card.html"/>
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="均在路上 Travel Lab"/>
+  <meta property="og:locale" content="zh_TW" />
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="各國旅遊隨身緊急聯絡卡產生器：線上工具爆款自救錢包卡｜均在路上Travel Lab" />
+  <meta name="twitter:description" content="2026出國安全必備！一鍵客製化生成各國旅遊緊急聯絡卡，涵蓋日韓、東南亞緊急求助熱線與代表處電話。自由編輯個人醫療、聯絡人、保險與飯店資訊，支援離線下載、列印與另存PDF。" />
+  <meta name="twitter:image" content="https://golightly.fun/og-image.jpg"/>
+  
+  <!-- Canonical -->
+  <link href="https://golightly.fun/emergency-contact-card.html" rel="canonical"/>
+  <link href="https://golightly.fun/emergency-contact-card.html" hreflang="zh-Hant" rel="alternate"/>
+  <link href="https://golightly.fun/emergency-contact-card.html" hreflang="zh-TW" rel="alternate"/>
+  <link href="https://golightly.fun/emergency-contact-card.html" hreflang="x-default" rel="alternate"/>
+  
+  <!-- Google Fonts & Tailwind CDN -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" crossorigin href="/assets/index-1Lv386il.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=Noto+Sans+TC:wght@400;500;700;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+    <link href="/favicon.ico" rel="shortcut icon"/>
+  <link href="/favicon.svg" rel="icon" type="image/svg+xml"/>
+  <link href="/favicon.png" rel="icon" sizes="32x32" type="image/png"/>
+  <link href="/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+  <link href="/android-chrome-192x192.png" rel="icon" sizes="192x192" type="image/png"/>
+  <link href="/android-chrome-512x512.png" rel="icon" sizes="512x512" type="image/png"/>
+  <link href="/site.webmanifest" rel="manifest"/>
+
+  <style>
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #020617;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #1e293b;
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #e63946;
+    }
+    
+    /* FAQ transition utilities */
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .faq-item.active .faq-answer {
+      max-height: 1000px;
+    }
+    .faq-item.active .faq-icon {
+      transform: rotate(180deg);
+    }
+
+    /* Print styles */
+    @media print {
+      body {
+        background-color: white !important;
+        color: black !important;
+        margin: 0 !important;
+        padding: 0 !important;
+      }
+      .no-print {
+        display: none !important;
+      }
+      .print-only {
+        display: block !important;
+      }
+      .print-container {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        height: 100vh !important;
+        background: white !important;
+        padding: 20mm !important;
+      }
+      /* Card dimensions for standard ISO wallet-card (approx 85.6mm x 53.98mm) or double sized for folding */
+      .printable-card-wrapper {
+        border: 1px dashed #cbd5e1 !important;
+        padding: 10mm !important;
+        background: white !important;
+        color: black !important;
+        display: inline-block !important;
+        box-shadow: none !important;
+        page-break-inside: avoid !important;
+      }
+      .card-face {
+        width: 85.6mm !important;
+        height: 53.98mm !important;
+        border: 1px solid #000000 !important;
+        padding: 4mm !important;
+        box-sizing: border-box !important;
+        background: white !important;
+        color: black !important;
+        overflow: hidden !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: space-between !important;
+      }
+      .card-face * {
+        color: black !important;
+        border-color: #64748b !important;
+      }
+      .card-accent-bar {
+        background: #000000 !important;
+        color: white !important;
+      }
+      .card-accent-bar * {
+        color: white !important;
+      }
+    }
+  </style>
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "各國旅遊隨身緊急聯絡卡產生器｜均在在路上 Travel Lab",
+    "url": "https://golightly.fun/emergency-contact-card.html",
+    "description": "一鍵客製化生成各國旅遊緊急聯絡卡，涵蓋日韓、東南亞緊急求助熱線與代表處電話，可自由編輯個人醫療、聯絡人、保險與飯店資訊，支援離線下載、列印與另存PDF。",
+    "applicationCategory": "TravelApplication",
+    "operatingSystem": "Any",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "TWD"
+    },
+    "provider": {
+      "@type": "Organization",
+      "name": "均在在路上 Travel Lab",
+      "url": "https://golightly.fun/"
+    }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "首頁", "item": "https://golightly.fun/"},
+      {"@type": "ListItem", "position": 2, "name": "旅遊工具", "item": "https://golightly.fun/travel-tools.html"},
+      {"@type": "ListItem", "position": 3, "name": "各國旅遊緊急聯絡卡產生器", "item": "https://golightly.fun/emergency-contact-card.html"}
+    ]
+  }
+  </script>
+  <link rel="canonical" href="https://golightly.fun/emergency-contact-card.html" />
+<meta name="keywords" content="各國旅遊隨身緊急聯絡卡產生器：線上工具爆款自救錢包卡, 自由行, 旅遊攻略, 均在路上" />
+    <meta name="robots" content="index, follow" />
+</head>
+<body class="bg-tiffany-cream text-slate-800 font-sans leading-relaxed antialiased selection:bg-tiffany selection:text-white">
+
+  <!-- UNIFIED HEADER -->
+  <script src="/global-header.js?v=20260718_v1" defer></script>
+
+  <!-- EDITORIAL HERO REGION - DEEP DARK #020617 -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8 sm:mb-12 no-print">
+    <div class="bg-gradient-to-r from-tiffany-obsidian via-[#0c1329] to-tiffany-obsidian text-white rounded-b-[2.5rem] md:rounded-b-[4.5rem] py-16 px-6 md:px-12 text-center shadow-2xl space-y-5 border-b border-slate-800">
+      <div class="inline-flex items-center justify-center">
+        <span class="inline-block bg-tiffany/10 text-tiffany text-[10px] font-display font-bold uppercase tracking-[0.25em] px-4 py-1.5 rounded-full border border-tiffany/20">
+          🚨 TRAVEL SAFETY HUB
+        </span>
+      </div>
+      <h1 class="font-serif text-3xl sm:text-4xl md:text-5xl font-black tracking-tight max-w-4xl mx-auto leading-tight">
+        各國旅遊隨身緊急聯絡卡 <br class="hidden sm:inline" />
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-tiffany to-rose-400">爆款自救產生器</span>
+      </h1>
+      <p class="text-sm md:text-base text-slate-400 max-w-2xl mx-auto leading-relaxed">
+        出國旅遊最怕手機沒電、弄丟、或在突發急難時因驚慌而找不到求助號碼。輸入您的個人急難資料，一鍵為自己和家人生成「雙面可折疊」實體皮夾安全卡，完美兼顧安全保障與便攜美感。
+      </p>
+      
+      <!-- DYNAMIC STATS -->
+      <div class="flex flex-wrap justify-center items-center gap-6 text-xs text-slate-400 pt-2 font-display">
+        <div class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800">
+          <span class="text-emerald-400">●</span> 支援熱門國家及全球漫遊專線
+        </div>
+        <div class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800">
+          <span class="text-tiffany">★</span> 錢包尺寸設計（85.6mm × 54mm）
+        </div>
+        <div class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800">
+          <span class="text-rose-400">✦</span> 100% 離線隱私安全 (數據不儲存於伺服器)
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN CATALOG & INTERACTIVE GENERATOR -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 space-y-12 no-print">
+    
+    <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+      <a href="/travel-tools.html" class="inline-flex items-center gap-2 text-tiffany hover:text-tiffany-dark font-bold text-sm transition-colors">
+        <span>← 返回旅遊工具箱</span>
+      </a>
+      
+      <div class="bg-amber-50 border border-amber-200 text-amber-900 text-xs md:text-sm px-4 py-3 rounded-2xl flex items-center gap-2 max-w-2xl">
+        <span>💡</span>
+        <span><b>安全承諾：</b>此工具完全在您的瀏覽器端運行，所有輸入的敏感個人資訊絕不會上傳或儲存到任何伺服器。</span>
+      </div>
+    </div>
+
+    <!-- MAIN TWO-COLUMN CONTAINER -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+      
+      <!-- LEFT: CUSTOMIZATION FORM (COL SPAN 5) -->
+      <div class="lg:col-span-5 bg-white border border-slate-200/80 rounded-3xl p-6 md:p-8 shadow-sm space-y-6">
+        <div class="border-b border-slate-100 pb-4">
+          <h2 class="text-lg font-bold text-slate-950 flex items-center gap-2">
+            <span class="text-xl">✍️</span> 步驟一：填寫卡片資訊
+          </h2>
+          <p class="text-xs text-slate-500 mt-1">請填寫您的基本聯絡人與救急資料，右側會即時同步預覽。</p>
+        </div>
+
+        <!-- country selection & theme -->
+        <div class="space-y-4">
+          <div>
+            <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">目的國家/地區</label>
+            <select id="country-select" onchange="updateCountryData()" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm font-medium text-slate-800 focus:outline-none focus:border-tiffany focus:bg-white transition-all">
+              <option value="japan">🇯🇵 日本 (Japan)</option>
+              <option value="korea">🇰🇷 韓國 (South Korea)</option>
+              <option value="thailand">🇹🇭 泰國 (Thailand)</option>
+              <option value="vietnam">🇻🇳 越南 (Vietnam)</option>
+              <option value="singapore">🇸🇬 新加坡 (Singapore)</option>
+              <option value="malaysia">🇲🇾 馬來西亞 (Malaysia)</option>
+              <option value="taiwan">🇹🇼 台灣 (Taiwan)</option>
+              <option value="global">🌐 全球通用 / 其他國家 (Global/Other)</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">卡片主題配色</label>
+            <div class="grid grid-cols-4 gap-2">
+              <button onclick="setTheme('midnight')" class="theme-btn relative border-2 border-slate-950 bg-slate-950 text-white rounded-xl py-2 px-1 text-xs font-bold flex flex-col items-center gap-1 active-theme">
+                <span class="w-4 h-4 rounded-full bg-slate-800 border border-slate-700"></span>
+                <span>墨黑</span>
+              </button>
+              <button onclick="setTheme('ruby')" class="theme-btn relative border-2 border-slate-200 bg-white text-slate-800 rounded-xl py-2 px-1 text-xs font-bold flex flex-col items-center gap-1">
+                <span class="w-4 h-4 rounded-full bg-rose-600 border border-rose-500"></span>
+                <span>烈紅</span>
+              </button>
+              <button onclick="setTheme('teal')" class="theme-btn relative border-2 border-slate-200 bg-white text-slate-800 rounded-xl py-2 px-1 text-xs font-bold flex flex-col items-center gap-1">
+                <span class="w-4 h-4 rounded-full bg-emerald-700 border border-emerald-600"></span>
+                <span>松綠</span>
+              </button>
+              <button onclick="setTheme('gold')" class="theme-btn relative border-2 border-slate-200 bg-white text-slate-800 rounded-xl py-2 px-1 text-xs font-bold flex flex-col items-center gap-1">
+                <span class="w-4 h-4 rounded-full bg-amber-600 border border-amber-500"></span>
+                <span>琥珀</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="space-y-4 pt-2">
+          <div class="border-t border-slate-100 pt-4">
+            <h3 class="text-xs font-black text-slate-400 uppercase tracking-widest mb-3">👤 旅行者個人急救檔案</h3>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-[11px] font-bold text-slate-600 mb-1">英文/中文全名</label>
+              <input type="text" id="input-name" placeholder="如：CHEN, MEI-LING" oninput="syncCard()" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2 text-xs font-medium text-slate-800 focus:outline-none focus:border-tiffany focus:bg-white transition-all"/>
+            </div>
+            <div>
+              <label class="block text-[11px] font-bold text-slate-600 mb-1">護照號碼</label>
+              <input type="text" id="input-passport" placeholder="如：358XXXXXX" oninput="syncCard()" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2 text-xs font-medium text-slate-800 focus:outline-none focus:border-tiffany focus:bg-white transition-all"/>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-[11px] font-bold text-slate-600 mb-1">緊急聯絡人姓名</label>
+              <input type="text" id="input-emergency-name" placeholder="如：張阿民 (父親)" oninput="syncCard()" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2 text-xs font-medium text-slate-800 focus:outline-none focus:border-tiffany focus:bg-white transition-all"/>
+            </div>
+            <div>
+              <label class="block text-[11px] font-bold text-slate-600 mb-1">聯絡人電話</label>
+              <input type="text" id="input-emergency-phone" placeholder="如：+886-912-345-678" oninput="syncCard()" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2 text-xs font-medium text-slate-800 focus:outline-none focus:border-tiffany focus:bg-white transition-all"/>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-3 gap-2">
+            <div class="col-span-1">
+              <label class="block text-[11px] font-bold text-slate-600 mb-1">血型</label>
+              <select id="input-blood" onchange="syncCard()" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2 text-xs font-medium text-slate-800 focus:outline-none focus:border-tiffany focus:bg-white transition-all">
+                <option value="">請選擇</option>
+                <option value="A">A 型</option>
+                <option value="B">B 型</option>
+                <option value="O">O 型</option>
+                <option value="AB">AB 型</option>
+                <option value="Unknown">未知</option>
+              </select>
+            </div>
+            <div class="col-span-2">
+              <label class="block text-[11px] font-bold text-slate-600 mb-1">藥物或食物過敏</label>
+              <input type="text" id="input-allergies" placeholder="無，或如：盤尼西林、堅果" oninput="syncCard()" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2 text-xs font-medium text-slate-800 focus:outline-none focus:border-tiffany focus:bg-white transition-all"/>
+            </div>
+          </div>
+
+          <div class="border-t border-slate-100 pt-4">
+            <h3 class="text-xs font-black text-slate-400 uppercase tracking-widest mb-3">🛡️ 海外旅遊保險資訊</h3>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-[11px] font-bold text-slate-600 mb-1">保險公司名稱</label>
+              <input type="text" id="input-insurance-company" placeholder="如：富邦產險 / 國泰人壽" oninput="syncCard()" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2 text-xs font-medium text-slate-800 focus:outline-none focus:border-tiffany focus:bg-white transition-all"/>
+            </div>
+            <div>
+              <label class="block text-[11px] font-bold text-slate-600 mb-1">保單號碼</label>
+              <input type="text" id="input-insurance-policy" placeholder="如：TA-115894392" oninput="syncCard()" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2 text-xs font-medium text-slate-800 focus:outline-none focus:border-tiffany focus:bg-white transition-all"/>
+            </div>
+          </div>
+          <div>
+            <label class="block text-[11px] font-bold text-slate-600 mb-1">保險急難救助專線</label>
+            <input type="text" id="input-insurance-hotline" placeholder="如：+886-2-2100-2468" oninput="syncCard()" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2 text-xs font-medium text-slate-800 focus:outline-none focus:border-tiffany focus:bg-white transition-all"/>
+          </div>
+
+          <div class="border-t border-slate-100 pt-4">
+            <h3 class="text-xs font-black text-slate-400 uppercase tracking-widest mb-3">🏨 當地住宿與備註</h3>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-[11px] font-bold text-slate-600 mb-1">主要入住飯店名稱</label>
+              <input type="text" id="input-hotel" placeholder="如：APA Hotel Shinjuku" oninput="syncCard()" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2 text-xs font-medium text-slate-800 focus:outline-none focus:border-tiffany focus:bg-white transition-all"/>
+            </div>
+            <div>
+              <label class="block text-[11px] font-bold text-slate-600 mb-1">飯店聯絡電話</label>
+              <input type="text" id="input-hotel-phone" placeholder="如：+81-3-XXXX-XXXX" oninput="syncCard()" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2 text-xs font-medium text-slate-800 focus:outline-none focus:border-tiffany focus:bg-white transition-all"/>
+            </div>
+          </div>
+          
+          <div>
+            <label class="block text-[11px] font-bold text-slate-600 mb-1">卡片底部重要自救備註 (英文尤佳)</label>
+            <textarea id="input-notes" rows="2" placeholder="如：I have asthma. Please use inhaler. (我有哮喘，請用吸入器)" oninput="syncCard()" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2 text-xs font-medium text-slate-800 focus:outline-none focus:border-tiffany focus:bg-white transition-all resize-none"></textarea>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: LIVE PREVIEW & PRINT TRIGGER (COL SPAN 7) -->
+      <div class="lg:col-span-7 space-y-6 lg:sticky lg:top-24">
+        
+        <!-- CONTROL BUTTONS -->
+        <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6 text-white space-y-4">
+          <div class="flex items-center justify-between">
+            <div class="space-y-1">
+              <span class="text-tiffany text-[10px] font-bold uppercase tracking-wider">PREVIEW & ACTIONS</span>
+              <h3 class="text-base font-bold font-serif">步驟二：預覽並列印/另存 PDF</h3>
+            </div>
+            <span class="bg-emerald-500/10 text-emerald-400 text-[10px] font-bold py-1 px-2.5 rounded-full border border-emerald-500/20">
+              ✓ Ready for PDF
+            </span>
+          </div>
+          
+          <p class="text-xs text-slate-400 leading-relaxed">
+            卡片已完美自適應為<b>標準皮夾小卡比例</b>。我們內置了專業印前輔助（切線、折線）。
+            點擊下方按鈕，在彈出視窗中選擇「<b>另存為 PDF</b>」或直接「<b>列印成實體卡</b>」！
+          </p>
+
+          <div class="flex flex-col sm:flex-row gap-3 pt-2">
+            <button onclick="window.print()" class="flex-1 bg-tiffany hover:bg-tiffany-dark text-white font-bold text-sm py-3.5 px-6 rounded-xl transition-all duration-300 shadow-md hover:scale-[1.01] flex items-center justify-center gap-2">
+              <span>🖨️</span> 列印卡片 (可另存為 PDF)
+            </button>
+            <button onclick="resetForm()" class="bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white font-bold text-sm py-3.5 px-5 rounded-xl transition-all duration-300 border border-slate-700/60 flex items-center justify-center gap-2">
+              <span>🧹</span> 清除重填
+            </button>
+          </div>
+          <div class="text-[10px] text-slate-500 text-center leading-relaxed">
+            💡 <b>行動裝置：</b>iOS/Android 請按列印，在預覽頁面雙指撐開即可儲存 PDF 到檔案。
+          </div>
+        </div>
+
+        <!-- VISUAL CONTAINER OF PREVIEW CARDS -->
+        <div class="bg-slate-950 border border-slate-800 rounded-3xl p-6 md:p-8 space-y-6 flex flex-col items-center justify-center relative overflow-hidden">
+          
+          <!-- background subtle grid or graphics -->
+          <div class="absolute inset-0 bg-[radial-gradient(#1e293b_1px,transparent_1px)] [background-size:16px_16px] opacity-20 pointer-events-none"></div>
+
+          <div class="w-full text-center mb-2">
+            <span class="text-slate-500 text-xs font-bold uppercase tracking-widest">Live Dynamic Card Preview</span>
+          </div>
+
+          <!-- THE PRINT & FOLD SIMULATOR GRID -->
+          <div class="w-full flex flex-col md:flex-row gap-6 justify-center items-center relative z-10">
+            
+            <!-- FRONT CARD (LEFT/TOP) -->
+            <div class="space-y-2">
+              <div class="flex items-center justify-between px-1 text-xs text-slate-400 font-bold">
+                <span>正面 (Front - 求救電話)</span>
+                <span class="text-[10px] text-slate-500">標準信用卡尺寸</span>
+              </div>
+              <div id="card-front" class="theme-bg-midnight w-[85.6mm] h-[53.98mm] rounded-2xl p-4 flex flex-col justify-between border shadow-2xl relative transition-all duration-300" style="width: 320px; height: 200px;">
+                <!-- Card Header -->
+                <div class="flex items-start justify-between border-b pb-1.5 mb-1.5" style="border-color: rgba(255,255,255,0.15)">
+                  <div class="flex items-center gap-1.5">
+                    <span id="country-flag-display" class="text-xl">🇯🇵</span>
+                    <div>
+                      <h4 id="country-title-display" class="text-xs font-black tracking-wide text-white uppercase leading-none">日本緊急聯絡卡</h4>
+                      <p class="text-[8px] text-slate-400 uppercase tracking-widest leading-none mt-0.5">Emergency Contact Card</p>
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-1 bg-red-600 text-white font-black text-[8px] px-1.5 py-0.5 rounded uppercase tracking-wider animate-pulse">
+                    <span>SOS</span>
+                  </div>
+                </div>
+
+                <!-- Emergency Numbers Grid -->
+                <div class="grid grid-cols-2 gap-x-2 gap-y-1.5 text-left flex-1 py-1">
+                  <div class="border-r pr-1" style="border-color: rgba(255,255,255,0.1)">
+                    <p class="text-[8px] text-slate-400 font-bold uppercase leading-none">🚓 Police (警察)</p>
+                    <p id="phone-police" class="text-sm font-black text-white mt-0.5 tracking-wide">110</p>
+                  </div>
+                  <div class="pl-1">
+                    <p class="text-[8px] text-slate-400 font-bold uppercase leading-none">🚒 Ambulance (救護/消防)</p>
+                    <p id="phone-ambulance" class="text-sm font-black text-white mt-0.5 tracking-wide">119</p>
+                  </div>
+                  <div class="col-span-2 border-t pt-1" style="border-color: rgba(255,255,255,0.08)">
+                    <p class="text-[8px] text-slate-400 font-bold uppercase leading-none">🏛️ 駐外辦事處 (Embassy / Rep.)</p>
+                    <p id="phone-embassy" class="text-[10px] font-black text-white mt-0.5 leading-tight truncate">+81-3-3280-7811</p>
+                  </div>
+                </div>
+
+                <!-- Footer hotlines -->
+                <div class="border-t pt-1.5 mt-1 flex justify-between items-center text-[7.5px]" style="border-color: rgba(255,255,255,0.15)">
+                  <div>
+                    <span class="text-slate-400">旅外救助:</span> <span class="font-bold text-white">+886-800-085-095</span>
+                  </div>
+                  <div class="text-[7.5px] font-semibold text-slate-300 flex items-center gap-0.5">
+                    <span>🧭</span> <span id="helper-hotline-display">日本觀光: 1330</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- BACK CARD (RIGHT/BOTTOM) -->
+            <div class="space-y-2">
+              <div class="flex items-center justify-between px-1 text-xs text-slate-400 font-bold">
+                <span>背面 (Back - 個人資訊)</span>
+                <span class="text-[10px] text-slate-500">標準信用卡尺寸</span>
+              </div>
+              <div id="card-back" class="theme-bg-midnight w-[85.6mm] h-[53.98mm] rounded-2xl p-4 flex flex-col justify-between border shadow-2xl relative transition-all duration-300" style="width: 320px; height: 200px;">
+                <!-- Card Header -->
+                <div class="flex items-start justify-between border-b pb-1.5 mb-1.5" style="border-color: rgba(255,255,255,0.15)">
+                  <div>
+                    <h4 class="text-xs font-black tracking-wide text-white uppercase leading-none">個人緊急醫療與聯絡檔案</h4>
+                    <p class="text-[8px] text-slate-400 uppercase tracking-widest leading-none mt-0.5">Personal Emergency Profile</p>
+                  </div>
+                  <span id="blood-badge" class="bg-white/15 text-white font-black text-[9px] px-1.5 py-0.5 rounded font-display leading-none">BLOOD: -</span>
+                </div>
+
+                <!-- Personal Info Details -->
+                <div class="grid grid-cols-2 gap-x-2 gap-y-1 text-left flex-1 py-0.5">
+                  <div class="col-span-1">
+                    <p class="text-[7px] text-slate-400 uppercase leading-none">Name (姓名)</p>
+                    <p id="preview-name" class="text-[10px] font-black text-white mt-0.5 truncate leading-none">-</p>
+                  </div>
+                  <div class="col-span-1">
+                    <p class="text-[7px] text-slate-400 uppercase leading-none">Passport No. (護照)</p>
+                    <p id="preview-passport" class="text-[10px] font-bold text-white mt-0.5 truncate leading-none">-</p>
+                  </div>
+                  
+                  <div class="col-span-1 border-t pt-1" style="border-color: rgba(255,255,255,0.06)">
+                    <p class="text-[7px] text-slate-400 uppercase leading-none">Ice Contact (聯絡人)</p>
+                    <p id="preview-ice" class="text-[9px] font-bold text-white mt-0.5 truncate leading-none">-</p>
+                  </div>
+                  <div class="col-span-1 border-t pt-1" style="border-color: rgba(255,255,255,0.06)">
+                    <p class="text-[7px] text-slate-400 uppercase leading-none">Ice Phone (聯絡電話)</p>
+                    <p id="preview-ice-phone" class="text-[9px] font-bold text-white mt-0.5 truncate leading-none">-</p>
+                  </div>
+
+                  <div class="col-span-1 border-t pt-1" style="border-color: rgba(255,255,255,0.06)">
+                    <p class="text-[7px] text-slate-400 uppercase leading-none">Insurance (海外保險)</p>
+                    <p id="preview-insurance" class="text-[8.5px] font-bold text-slate-200 mt-0.5 truncate leading-none">-</p>
+                  </div>
+                  <div class="col-span-1 border-t pt-1" style="border-color: rgba(255,255,255,0.06)">
+                    <p class="text-[7px] text-slate-400 uppercase leading-none">Hotel / Phone (住宿/電話)</p>
+                    <p id="preview-hotel" class="text-[8.5px] font-bold text-slate-200 mt-0.5 truncate leading-none">-</p>
+                  </div>
+                </div>
+
+                <!-- Allergy and note banner -->
+                <div class="border-t pt-1 mt-1 text-[7px] flex flex-col gap-0.5" style="border-color: rgba(255,255,255,0.15)">
+                  <div class="flex gap-1 truncate">
+                    <span class="text-rose-400 font-bold uppercase shrink-0">Allergies (過敏):</span>
+                    <span id="preview-allergies" class="text-white truncate">-</span>
+                  </div>
+                  <div class="flex gap-1 truncate text-slate-300">
+                    <span class="font-bold shrink-0">Medical Notes (醫學備註):</span>
+                    <span id="preview-notes" class="truncate">-</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- PRINT DIAGRAM EXPLANATION -->
+          <div class="w-full max-w-md bg-slate-900 border border-slate-800 rounded-2xl p-4 text-center mt-2 space-y-1.5 text-[11px] text-slate-400">
+            <p class="font-bold text-slate-300 flex items-center justify-center gap-1">
+              <span>🖨️</span> 摺疊與製作說明
+            </p>
+            <p class="leading-relaxed">
+              點擊列印後，紙上會呈現<b>正面與背面相鄰</b>的排版，只需用剪刀延實線剪下，再對折並用膠水黏合（或裝入卡套/護貝），即可完美裝入皮夾！
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- COUNTRY DIRECTORY AND EMERGENCY HOTLINES -->
+    <section class="bg-white rounded-3xl p-6 md:p-10 border border-slate-200/50 shadow-sm space-y-8">
+      <div class="space-y-2 border-b border-slate-100 pb-4">
+        <span class="text-tiffany text-xs font-bold tracking-widest uppercase">Emergency Reference Directory</span>
+        <h2 class="font-serif text-2xl md:text-3xl font-extrabold text-slate-950">🌍 亞洲主要旅遊國家急難電話一覽</h2>
+        <p class="text-sm text-slate-500">此表收錄各國官方最核心的求助專線與台灣旅客緊急救助窗口。您可以在上方的產生器直接選擇這些國家。</p>
+      </div>
+
+      <div class="overflow-x-auto border border-slate-200/80 rounded-2xl shadow-xs bg-white">
+        <table class="w-full border-collapse text-left text-xs sm:text-sm">
+          <thead>
+            <tr class="bg-slate-50 border-b border-slate-200 text-slate-950">
+              <th class="p-4 font-bold">國家/地區</th>
+              <th class="p-4 font-bold">警察報案</th>
+              <th class="p-4 font-bold">救護/消防</th>
+              <th class="p-4 font-bold">駐外辦事處電話 (緊急急難救助專線)</th>
+              <th class="p-4 font-bold">其他實用求助專線</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-100 text-slate-700">
+            <tr class="hover:bg-slate-50/40 transition-colors">
+              <td class="p-4 font-bold text-slate-900 flex items-center gap-2">
+                <span>🇯🇵</span> 日本 (Japan)
+              </td>
+              <td class="p-4 text-slate-950 font-bold">110</td>
+              <td class="p-4 text-slate-950 font-bold">119</td>
+              <td class="p-4">
+                <span class="block font-bold text-slate-950">+81-3-3280-7811</span>
+                <span class="text-[10px] text-slate-400">駐日代表處 (東京)</span>
+              </td>
+              <td class="p-4 leading-relaxed">
+                日本觀光諮詢: <b>0570-000-911</b><br/>
+                急難求助熱線 (英文): <b>+81-3-3501-0110</b>
+              </td>
+            </tr>
+            <tr class="hover:bg-slate-50/40 transition-colors">
+              <td class="p-4 font-bold text-slate-900 flex items-center gap-2">
+                <span>🇰🇷</span> 韓國 (South Korea)
+              </td>
+              <td class="p-4 text-slate-950 font-bold">112</td>
+              <td class="p-4 text-slate-950 font-bold">119</td>
+              <td class="p-4">
+                <span class="block font-bold text-slate-950">+82-2-399-2323</span>
+                <span class="text-[10px] text-slate-400">駐韓代表處 (首爾)</span>
+              </td>
+              <td class="p-4 leading-relaxed">
+                旅遊翻譯熱線 (有中文): <b>1330</b><br/>
+                外國人綜合服務: <b>1345</b>
+              </td>
+            </tr>
+            <tr class="hover:bg-slate-50/40 transition-colors">
+              <td class="p-4 font-bold text-slate-900 flex items-center gap-2">
+                <span>🇹🇭</span> 泰國 (Thailand)
+              </td>
+              <td class="p-4 text-slate-950 font-bold">191</td>
+              <td class="p-4 text-slate-950 font-bold">1669</td>
+              <td class="p-4">
+                <span class="block font-bold text-slate-950">+66-2-119-3555</span>
+                <span class="text-[10px] text-slate-400">駐泰代表處 (曼谷)</span>
+              </td>
+              <td class="p-4 leading-relaxed">
+                觀光警察 (有中文): <b>1155</b><br/>
+                泰國旅遊局: <b>1672</b>
+              </td>
+            </tr>
+            <tr class="hover:bg-slate-50/40 transition-colors">
+              <td class="p-4 font-bold text-slate-900 flex items-center gap-2">
+                <span>🇻🇳</span> 越南 (Vietnam)
+              </td>
+              <td class="p-4 text-slate-950 font-bold">113</td>
+              <td class="p-4 text-slate-950 font-bold">115</td>
+              <td class="p-4">
+                <span class="block font-bold text-slate-950">+84-24-3833-5501</span>
+                <span class="text-[10px] text-slate-400">駐越南辦事處 (河內)</span>
+              </td>
+              <td class="p-4 leading-relaxed">
+                駐胡志明辦事處: <b>+84-28-3834-9160</b><br/>
+                消防搶險: <b>114</b>
+              </td>
+            </tr>
+            <tr class="hover:bg-slate-50/40 transition-colors">
+              <td class="p-4 font-bold text-slate-900 flex items-center gap-2">
+                <span>🇸🇬</span> 新加坡 (Singapore)
+              </td>
+              <td class="p-4 text-slate-950 font-bold">999</td>
+              <td class="p-4 text-slate-950 font-bold">995</td>
+              <td class="p-4">
+                <span class="block font-bold text-slate-950">+65-6500-0100</span>
+                <span class="text-[10px] text-slate-400">駐新加坡代表處</span>
+              </td>
+              <td class="p-4 leading-relaxed">
+                警方防詐諮詢: <b>1800-255-0000</b><br/>
+                非緊急救護: <b>1777</b>
+              </td>
+            </tr>
+            <tr class="hover:bg-slate-50/40 transition-colors">
+              <td class="p-4 font-bold text-slate-900 flex items-center gap-2">
+                <span>🇲🇾</span> 馬來西亞 (Malaysia)
+              </td>
+              <td class="p-4 text-slate-950 font-bold">999</td>
+              <td class="p-4 text-slate-950 font-bold">999</td>
+              <td class="p-4">
+                <span class="block font-bold text-slate-950">+60-3-2161-4439</span>
+                <span class="text-[10px] text-slate-400">駐馬代表處 (吉隆坡)</span>
+              </td>
+              <td class="p-4 leading-relaxed">
+                吉隆坡旅遊警察: <b>+60-3-2149-6590</b><br/>
+                全馬路況熱線: <b>1800-88-7752</b>
+              </td>
+            </tr>
+            <tr class="hover:bg-slate-50/40 transition-colors">
+              <td class="p-4 font-bold text-slate-900 flex items-center gap-2">
+                <span>🇹🇼</span> 台灣 (Taiwan)
+              </td>
+              <td class="p-4 text-slate-950 font-bold">110</td>
+              <td class="p-4 text-slate-950 font-bold">119</td>
+              <td class="p-4">
+                <span class="block font-bold text-slate-950">0800-085-095</span>
+                <span class="text-[10px] text-slate-400">外交部急難救助中心</span>
+              </td>
+              <td class="p-4 leading-relaxed">
+                外國人來台諮詢熱線: <b>1990</b><br/>
+                防詐騙專線: <b>165</b>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- EXTREME VALUE ADD: HOW TO HANDLE TRAVEL EMERGENCIES -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      
+      <!-- EMERGENCY CRUCIAL STEPS -->
+      <div class="bg-gradient-to-br from-slate-900 to-slate-950 text-white rounded-3xl p-8 border border-slate-800 space-y-6">
+        <div class="space-y-1">
+          <span class="text-tiffany text-xs font-bold tracking-widest uppercase">Action Protocol</span>
+          <h3 class="font-serif text-xl sm:text-2xl font-bold">🚨 旅外急難求助：黃金應變三步驟</h3>
+        </div>
+        <p class="text-xs text-slate-400 leading-relaxed">
+          在國外遭遇護照遺失、車禍重大受傷、或財物被竊等重大急難事件時，請保持冷靜並遵循以下標準求助流程：
+        </p>
+        
+        <ul class="space-y-4 text-xs font-medium text-slate-300">
+          <li class="flex gap-3">
+            <span class="w-5 h-5 rounded-full bg-tiffany text-white flex items-center justify-center font-bold text-[10px] shrink-0 mt-0.5">1</span>
+            <div>
+              <strong class="text-white">先向當地警察/醫院報案、索取證明</strong>
+              <p class="text-slate-400 text-[11px] mt-0.5">財物遭竊或受傷，必須取得警局報案單 (Police Report) 或醫生診斷書。這是日後向保險公司申請理賠、或到辦事處辦理臨時護照的<b>絕對必要憑證</b>。</p>
+            </div>
+          </li>
+          <li class="flex gap-3">
+            <span class="w-5 h-5 rounded-full bg-tiffany text-white flex items-center justify-center font-bold text-[10px] shrink-0 mt-0.5">2</span>
+            <div>
+              <strong class="text-white">撥打駐外代表處電話或外交部專線</strong>
+              <p class="text-slate-400 text-[11px] mt-0.5">如需補辦護照、遭遇人身自由限制或重大危難，請撥打小卡上的駐外代表處電話。若在半夜或無人接聽，請直接撥打外交部 24 小時旅外國人緊急聯絡專線：<b>+886-800-085-095</b>。</p>
+            </div>
+          </li>
+          <li class="flex gap-3">
+            <span class="w-5 h-5 rounded-full bg-tiffany text-white flex items-center justify-center font-bold text-[10px] shrink-0 mt-0.5">3</span>
+            <div>
+              <strong class="text-white">聯繫旅遊保險急難救助中心</strong>
+              <p class="text-slate-400 text-[11px] mt-0.5">如果是重大受傷需要海外專機轉送或高昂醫療代墊，請立刻撥打小卡背面的保險海外急難專線。他們能提供多語醫療對接及國際代墊服務。</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- TRAVEL CARD LIFE HACKS -->
+      <div class="bg-white rounded-3xl p-8 border border-slate-200/50 shadow-sm space-y-6 flex flex-col justify-between">
+        <div class="space-y-4">
+          <div class="space-y-1">
+            <span class="text-tiffany text-xs font-bold tracking-widest uppercase">Traveler Life Hacks</span>
+            <h3 class="font-serif text-xl sm:text-2xl font-bold text-slate-950">💡 隨身自救卡的爆款玩法與妙用</h3>
+          </div>
+          <p class="text-xs text-slate-500 leading-relaxed">
+            這張自救小卡在背包客與旅行社領隊圈中廣受推崇，除了放錢包外，還有這幾個聰明的隱藏版實戰妙用：
+          </p>
+
+          <div class="space-y-4 pt-1">
+            <div class="flex items-start gap-2.5">
+              <span class="text-xl">🧥</span>
+              <div>
+                <h4 class="font-bold text-slate-900 text-xs">貼在外套、隨身包內袋</h4>
+                <p class="text-slate-500 text-[11px] leading-relaxed">將列印好的卡片，塞在行李箱外側透明牌、或是貼在重要隨身包內襯中。萬一包包不慎丟失，撿到的人能透過上面的飯店、聯絡電話第一時間聯繫上您。</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-2.5">
+              <span class="text-xl">🧑‍🦳</span>
+              <div>
+                <h4 class="font-bold text-slate-900 text-xs">給同行長輩、幼童隨身佩戴</h4>
+                <p class="text-slate-500 text-[11px] leading-relaxed">帶長輩或小孩出國時，最怕在景點分散迷路。將自救小卡打孔、用掛繩掛在長輩與小孩的脖子上，或塞在他們口袋裡，萬一迷路時，路人能立刻幫忙撥打電話給您。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="pt-4 border-t border-slate-100 flex items-center justify-between text-xs text-slate-400 font-display">
+          <span>🛡️ Double Safety</span>
+          <span>🎒 Travel Lab Rec</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- FAQ SECTION -->
+    <div class="bg-white rounded-3xl p-8 md:p-10 border border-slate-200/50 shadow-sm space-y-6">
+      <div class="flex items-center gap-3">
+        <span class="w-1.5 h-6 bg-tiffany rounded-full inline-block"></span>
+        <h2 class="font-serif text-2xl font-bold text-slate-950">緊急聯絡卡 常見問題 FAQ</h2>
+      </div>
+      
+      <div class="divide-y divide-slate-100">
+        
+        <!-- FAQ 1 -->
+        <div class="faq-item py-4 cursor-pointer" onclick="toggleFaq(this)">
+          <div class="flex justify-between items-center gap-4 text-slate-900 font-bold text-sm md:text-base">
+            <span>Q1：如何列印，才能得到最完美精緻的實體卡片？</span>
+            <svg class="faq-icon w-5 h-5 text-tiffany transition-transform duration-300 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+          </div>
+          <div class="faq-answer mt-2 text-xs md:text-sm text-slate-500 leading-relaxed">
+            推薦使用 150g 到 250g 的較厚卡紙（如西卡紙或銅版紙）列印。
+            1. 點擊「列印卡片」按鈕。
+            2. 在列印設定中將紙張大小選為 A4，比例設為 100% (不縮放)，方向選為橫向。
+            3. 列印後，用美工刀延卡片最外側邊框剪下。
+            4. 沿著中間的對摺中線折疊，內面塗上薄薄的口紅膠或雙面膠貼合。
+            5. 若可以，使用透明護貝、或是放入名片套中，防水防刮效果極佳。
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="faq-item py-4 cursor-pointer" onclick="toggleFaq(this)">
+          <div class="flex justify-between items-center gap-4 text-slate-900 font-bold text-sm md:text-base">
+            <span>Q2：我的手機也可以下載保存這張卡片嗎？</span>
+            <svg class="faq-icon w-5 h-5 text-tiffany transition-transform duration-300 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+          </div>
+          <div class="faq-answer mt-2 text-xs md:text-sm text-slate-500 leading-relaxed">
+            可以！在點擊「列印卡片」後，在列印目的地選擇「另存為 PDF」。儲存後，您可以將 PDF 存檔直接匯入 Apple Books 或 Google Drive 離線閱讀。此外，您也可以在網頁上直接對預覽圖進行長按儲存/截圖，保留在相簿中作為桌布或緊急備份。
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="faq-item py-4 cursor-pointer" onclick="toggleFaq(this)">
+          <div class="flex justify-between items-center gap-4 text-slate-900 font-bold text-sm md:text-base">
+            <span>Q3：卡片上為什麼不預填所有細節？有些欄位不填可以嗎？</span>
+            <svg class="faq-icon w-5 h-5 text-tiffany transition-transform duration-300 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+          </div>
+          <div class="faq-answer mt-2 text-xs md:text-sm text-slate-500 leading-relaxed">
+            可以！所有的輸入欄位都是非必填的。如果您沒有購買旅遊險、或尚未確定入住飯店，可以將對應的輸入框留空，卡面上該欄位將呈現簡潔的橫線，方便您日後用原子筆手寫填上，具備極佳的靈活度。
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="faq-item py-4 cursor-pointer" onclick="toggleFaq(this)">
+          <div class="flex justify-between items-center gap-4 text-slate-900 font-bold text-sm md:text-base">
+            <span>Q4：帶這張實體小卡，真的比手機查找有用嗎？</span>
+            <svg class="faq-icon w-5 h-5 text-tiffany transition-transform duration-300 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+          </div>
+          <div class="faq-answer mt-2 text-xs md:text-sm text-slate-500 leading-relaxed">
+            絕對有用！資深背包客都明白，在遭遇搶劫、偷竊、或手機摔壞進水時，手機是完全無法工作的。另外，海外很多醫院在救治昏迷不醒、無法溝通的病人時，第一步就是搜查錢包尋找帶有護照、緊急聯絡人與血型過敏史的紙質卡片。這張小卡在關鍵時刻是能發揮巨大自救作用的救命稻草。
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- QUICK NAV OF ASSOCIATED RESOURCES -->
+    <div class="bg-slate-50 rounded-3xl p-8 border border-slate-200/40">
+      <h3 class="font-serif text-lg font-bold text-slate-900 mb-4 flex items-center gap-2">🔗 更多線上出國神工具</h3>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+        <a href="/packing-list.html" class="bg-white border border-slate-200/50 hover:border-tiffany text-center p-4 rounded-xl shadow-xs transition-colors cursor-pointer text-xs font-bold text-slate-700">行李打包清單</a>
+        <a href="/travel-tools.html" class="bg-white border border-slate-200/50 hover:border-tiffany text-center p-4 rounded-xl shadow-xs transition-colors cursor-pointer text-xs font-bold text-slate-700">實用旅遊工具推薦</a>
+        <a href="/power-plug-guide.html" class="bg-white border border-slate-200/50 hover:border-tiffany text-center p-4 rounded-xl shadow-xs transition-colors cursor-pointer text-xs font-bold text-slate-700">各國插座電壓指南</a>
+        <a href="/budget-calculator.html" class="bg-white border border-slate-200/50 hover:border-tiffany text-center p-4 rounded-xl shadow-xs transition-colors cursor-pointer text-xs font-bold text-slate-700">出國旅費試算器</a>
+        <a href="/downloads.html" class="bg-white border border-slate-200/50 hover:border-tiffany text-center p-4 rounded-xl shadow-xs transition-colors cursor-pointer text-xs font-bold text-slate-700">免費資源下載專區</a>
+        <a href="/esim-comparison.html" class="bg-white border border-slate-200/50 hover:border-tiffany text-center p-4 rounded-xl shadow-xs transition-colors cursor-pointer text-xs font-bold text-slate-700">出國上網 eSIM 評比</a>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ========== THE PRINT ONLY REGION ========== -->
+  <div class="hidden print-only print-container">
+    <div class="printable-card-wrapper">
+      <div class="text-center mb-6" style="border-bottom: 2px solid #000; padding-bottom: 4px; width: 180mm;">
+        <h2 style="font-family: Georgia, serif; font-size: 18pt; margin: 0; font-weight: bold; letter-spacing: 1px;">TRAVEL LAB EMERGENCY CARD</h2>
+        <p style="font-size: 8pt; margin: 4px 0 0 0; color: #555;">各國旅遊應急小卡 ‧ 對折後放錢包 ‧ 請用 100% 比例列印 (橫向)</p>
+      </div>
+
+      <!-- Grid container for side-by-side cards -->
+      <div style="display: flex; gap: 8mm; justify-content: center; align-items: center; width: 180mm;">
+        
+        <!-- PRINT FRONT CARD -->
+        <div id="print-card-front" class="card-face">
+          <!-- Card Header -->
+          <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1.5px solid #000; padding-bottom: 3px; margin-bottom: 4px;">
+            <div style="display: flex; align-items: center; gap: 4px;">
+              <span id="print-flag-display" style="font-size: 16pt;">🇯🇵</span>
+              <div style="text-align: left;">
+                <h4 id="print-country-title" style="font-size: 10pt; font-weight: 900; margin: 0; line-height: 1;">JAPAN EMERGENCY</h4>
+                <p style="font-size: 6pt; color: #555; margin: 1px 0 0 0; letter-spacing: 0.5px; line-height: 1;">EMERGENCY HOTLINES</p>
+              </div>
+            </div>
+            <div style="background: #000; color: #fff; font-size: 7pt; font-weight: bold; padding: 1px 4px; border-radius: 2px; text-align: center;">SOS</div>
+          </div>
+
+          <!-- Numbers -->
+          <div style="display: flex; flex-direction: column; justify-content: space-between; flex-grow: 1; text-align: left;">
+            <div style="display: flex; width: 100%; border-bottom: 1px solid #ddd; padding-bottom: 3px; margin-bottom: 3px;">
+              <div style="width: 50%; border-right: 1px solid #ddd; padding-right: 4px;">
+                <p style="font-size: 6pt; color: #666; margin: 0; font-weight: bold; line-height: 1;">🚓 POLICE (警察)</p>
+                <p id="print-police" style="font-size: 12pt; font-weight: 900; margin: 2px 0 0 0; line-height: 1;">110</p>
+              </div>
+              <div style="width: 50%; padding-left: 6px;">
+                <p style="font-size: 6pt; color: #666; margin: 0; font-weight: bold; line-height: 1;">🚒 AMBULANCE (急救)</p>
+                <p id="print-ambulance" style="font-size: 12pt; font-weight: 900; margin: 2px 0 0 0; line-height: 1;">119</p>
+              </div>
+            </div>
+
+            <div style="text-align: left; padding-bottom: 3px;">
+              <p style="font-size: 6pt; color: #666; margin: 0; font-weight: bold; line-height: 1;">🏛️ EMBASSY/REP. (駐外代表處急難專線)</p>
+              <p id="print-embassy" style="font-size: 10pt; font-weight: bold; margin: 2px 0 0 0; line-height: 1.1;">+81-3-3280-7811</p>
+            </div>
+          </div>
+
+          <!-- Card Footer -->
+          <div style="border-top: 1.5px solid #000; padding-top: 3px; margin-top: 4px; display: flex; justify-content: space-between; font-size: 6pt; font-weight: bold;">
+            <div>GLOBAL: <span style="font-weight: 900;">+886-800-085-095</span></div>
+            <div id="print-helper-label">TOURIST: 1330</div>
+          </div>
+        </div>
+
+        <!-- FOLDING GUIDELINE IN THE MIDDLE -->
+        <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+          <div style="border-left: 1px dashed #bbb; height: 53.98mm;"></div>
+          <p style="font-size: 6pt; color: #888; transform: rotate(-90deg); margin: 0; white-space: nowrap;">✂️ 沿此線對折 (FOLD HERE)</p>
+        </div>
+
+        <!-- PRINT BACK CARD -->
+        <div id="print-card-back" class="card-face">
+          <!-- Card Header -->
+          <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1.5px solid #000; padding-bottom: 3px; margin-bottom: 4px;">
+            <div style="text-align: left;">
+              <h4 style="font-size: 10pt; font-weight: 900; margin: 0; line-height: 1;">EMERGENCY PROFILE</h4>
+              <p style="font-size: 6pt; color: #555; margin: 1px 0 0 0; letter-spacing: 0.5px; line-height: 1;">MEDICAL & CONTACT ARCHIVE</p>
+            </div>
+            <div id="print-blood-badge" style="border: 1px solid #000; font-size: 7.5pt; font-weight: bold; padding: 1px 4px; border-radius: 2px;">BLOOD: -</div>
+          </div>
+
+          <!-- Details Grid -->
+          <div style="display: flex; flex-wrap: wrap; text-align: left; flex-grow: 1; align-content: space-between; font-size: 6.5pt;">
+            <div style="width: 50%; padding-bottom: 2px;">
+              <span style="color: #666; font-size: 5.5pt; font-weight: bold; display: block; line-height: 1;">NAME (姓名)</span>
+              <strong id="print-name" style="font-size: 8.5pt; display: block; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; line-height: 1.2;">-</strong>
+            </div>
+            <div style="width: 50%; padding-bottom: 2px;">
+              <span style="color: #666; font-size: 5.5pt; font-weight: bold; display: block; line-height: 1;">PASSPORT (護照號碼)</span>
+              <strong id="print-passport" style="font-size: 8.5pt; display: block; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; line-height: 1.2;">-</strong>
+            </div>
+
+            <div style="width: 50%; border-top: 1px solid #eee; padding: 2px 0;">
+              <span style="color: #666; font-size: 5.5pt; font-weight: bold; display: block; line-height: 1;">ICE CONTACT (聯絡人)</span>
+              <strong id="print-ice" style="font-size: 7.5pt; display: block; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; line-height: 1.2;">-</strong>
+            </div>
+            <div style="width: 50%; border-top: 1px solid #eee; padding: 2px 0;">
+              <span style="color: #666; font-size: 5.5pt; font-weight: bold; display: block; line-height: 1;">ICE PHONE (聯絡電話)</span>
+              <strong id="print-ice-phone" style="font-size: 7.5pt; display: block; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; line-height: 1.2;">-</strong>
+            </div>
+
+            <div style="width: 50%; border-top: 1px solid #eee; padding: 2px 0;">
+              <span style="color: #666; font-size: 5.5pt; font-weight: bold; display: block; line-height: 1;">INSURANCE POLICY (保險)</span>
+              <strong id="print-insurance" style="font-size: 7pt; display: block; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; line-height: 1.2;">-</strong>
+            </div>
+            <div style="width: 50%; border-top: 1px solid #eee; padding: 2px 0;">
+              <span style="color: #666; font-size: 5.5pt; font-weight: bold; display: block; line-height: 1;">HOTEL / PHONE (住宿)</span>
+              <strong id="print-hotel" style="font-size: 7pt; display: block; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; line-height: 1.2;">-</strong>
+            </div>
+          </div>
+
+          <!-- Footer Allergy / Medical Notes -->
+          <div style="border-top: 1.5px solid #000; padding-top: 3px; margin-top: 4px; text-align: left; font-size: 6pt; line-height: 1.1;">
+            <div style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+              <strong>ALLERGIES (過敏):</strong> <span id="print-allergies">-</span>
+            </div>
+            <div style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+              <strong>MEDICAL NOTES (醫學備註):</strong> <span id="print-notes">-</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      
+      <div style="text-align: center; margin-top: 8mm; font-size: 7pt; color: #777;">
+        ✂️ 剪裁提示：請沿最外側細虛線剪下，左右折疊對摺貼合即可。 💻 均在路上 Travel Lab 製作
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="site-footer bg-[#020617] text-white py-12 border-t border-slate-800 no-print">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-5 gap-8 text-xs text-slate-400">
+      
+      <!-- COL 1 -->
+      <div class="space-y-3">
+        <h4 class="font-bold text-white uppercase tracking-wider text-xs border-b border-slate-800 pb-2">🇯🇵 日本自由行</h4>
+        <div class="flex flex-col gap-2">
+          <a href="/tokyo-5days.html" class="hover:text-[#e63946] transition-colors">東京5天4夜行程</a>
+          <a href="/tokyo-accommodation.html" class="hover:text-[#e63946] transition-colors">東京住宿推薦</a>
+          <a href="/japan-drugstore-checklist.html" class="hover:text-[#e63946] transition-colors">日本藥妝必買清單</a>
+          <a href="/kansai-pass.html" class="hover:text-[#e63946] transition-colors">關西交通票券指南</a>
+          <a href="/okinawa.html" class="hover:text-[#e63946] transition-colors">沖繩自駕攻略</a>
+        </div>
+      </div>
+
+      <!-- COL 2 -->
+      <div class="space-y-3">
+        <h4 class="font-bold text-white uppercase tracking-wider text-xs border-b border-slate-800 pb-2">🇰🇷 韓國自由行</h4>
+        <div class="flex flex-col gap-2">
+          <a href="/seoul-food.html" class="hover:text-[#e63946] transition-colors">首爾必吃美食攻略</a>
+          <a href="/busan-capsule.html" class="hover:text-[#e63946] transition-colors">釜山膠囊列車預約</a>
+          <a href="/busan-4days.html" class="hover:text-[#e63946] transition-colors">釜山4天3夜攻略</a>
+          <a href="/jeju-island.html" class="hover:text-[#e63946] transition-colors">濟州島自駕環島</a>
+        </div>
+      </div>
+
+      <!-- COL 3 -->
+      <div class="space-y-3">
+        <h4 class="font-bold text-white uppercase tracking-wider text-xs border-b border-slate-800 pb-2">🇹🇼 台灣旅遊</h4>
+        <div class="flex flex-col gap-2">
+          <a href="/hualien-taitung.html" class="hover:text-[#e63946] transition-colors">花東三天兩夜</a>
+          <a href="/tainan-food.html" class="hover:text-[#e63946] transition-colors">台南美食牛肉湯</a>
+          <a href="/kenting.html" class="hover:text-[#e63946] transition-colors">墾丁海景夜市攻略</a>
+          <a href="/taipei-food.html" class="hover:text-[#e63946] transition-colors">台北美食地圖</a>
+        </div>
+      </div>
+
+      <!-- COL 4 -->
+      <div class="space-y-3">
+        <h4 class="font-bold text-white uppercase tracking-wider text-xs border-b border-slate-800 pb-2">🌏 東南亞自由行</h4>
+        <div class="flex flex-col gap-2">
+          <a href="/chiang-mai.html" class="hover:text-[#e63946] transition-colors">清邁數位遊牧指南</a>
+          <a href="/bangkok-3days.html" class="hover:text-[#e63946] transition-colors">曼谷吃貨攻略</a>
+          <a href="/bangkok-massage.html" class="hover:text-[#e63946] transition-colors">曼谷按摩推薦</a>
+          <a href="/vietnam-danang.html" class="hover:text-[#e63946] transition-colors">越南峴港攻略</a>
+        </div>
+      </div>
+
+      <!-- COL 5 -->
+      <div class="space-y-3">
+        <h4 class="font-bold text-white uppercase tracking-wider text-xs border-b border-slate-800 pb-2">🔧 旅遊工具</h4>
+        <div class="flex flex-col gap-2">
+          <a href="/packing-list.html" class="hover:text-[#e63946] transition-colors">出國打包清單</a>
+          <a href="/esim-comparison.html" class="hover:text-[#e63946] transition-colors">eSIM比較推薦</a>
+          <a href="/travel-tools.html" class="hover:text-[#e63946] transition-colors">旅遊工具合集</a>
+          <a href="/power-plug-guide.html" class="hover:text-[#e63946] transition-colors">各國插座電壓指南</a>
+          <a href="/budget-calculator.html" class="hover:text-[#e63946] transition-colors">出國旅費試算器</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- SOCIALS -->
+    <div class="max-w-7xl mx-auto px-6 mt-12 pt-8 border-t border-slate-800/80 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-500">
+      <div class="space-y-1 text-center md:text-left">
+        <div class="font-bold text-slate-300">追蹤我們 📢</div>
+        <p>最新旅遊攻略、優惠資訊不漏接</p>
+      </div>
+      <div class="flex gap-4">
+        <a class="bg-slate-950 border border-slate-800 hover:border-tiffany hover:text-white px-4 py-2 rounded-xl flex items-center gap-2 transition-colors cursor-pointer" href="https://www.facebook.com/profile.php?id=61590076012361" rel="noopener" target="_blank">
+          📘 Facebook 粉專
+        </a>
+        <a class="bg-slate-950 border border-slate-800 hover:border-tiffany hover:text-white px-4 py-2 rounded-xl flex items-center gap-2 transition-colors cursor-pointer" href="https://line.me/ti/g/NbNGnW4Eh6" rel="noopener" target="_blank">
+          💬 LINE 社群
+        </a>
+      </div>
+    </div>
+
+    <!-- BOTTOM BAR -->
+    <div class="max-w-7xl mx-auto px-6 mt-8 pt-6 border-t border-slate-800/60 text-center text-[10px] text-slate-500 flex flex-col sm:flex-row justify-between gap-4">
+      <div class="flex justify-center gap-4 flex-wrap">
+        <a href="/about.html" class="hover:text-white transition-colors">關於均在路上</a>
+        <span>·</span>
+        <a href="/contact.html" class="hover:text-white transition-colors">聯絡我們</a>
+        <span>·</span>
+        <a href="/privacy.html" class="hover:text-white transition-colors">隱私權政策</a>
+        <span>·</span>
+        <a href="/terms.html" class="hover:text-white transition-colors">使用條款</a>
+        <span>·</span>
+        <a href="/disclaimer.html" class="hover:text-white transition-colors">免責聲明</a>
+      </div>
+      <div>© 2026 均在路上 Travel Lab. All Rights Reserved.</div>
+    </div>
+  </footer>
+
+  <!-- DYNAMIC LOGIC FOR GENERATOR -->
+  <script>
+    // Database of countries emergency details
+    const countryData = {
+      japan: {
+        flag: "🇯🇵",
+        title: "日本緊急聯絡卡",
+        printTitle: "JAPAN EMERGENCY",
+        police: "110",
+        ambulance: "119",
+        embassy: "+81-3-3280-7811 (駐日代表處)",
+        helperLabel: "日本觀光: 0570-000-911",
+        printHelperLabel: "TOURIST: 0570-000-911"
+      },
+      korea: {
+        flag: "🇰🇷",
+        title: "韓國緊急聯絡卡",
+        printTitle: "KOREA EMERGENCY",
+        police: "112",
+        ambulance: "119",
+        embassy: "+82-2-399-2323 (駐韓代表處)",
+        helperLabel: "旅遊翻譯: 1330",
+        printHelperLabel: "TOURIST: 1330"
+      },
+      thailand: {
+        flag: "🇹🇭",
+        title: "泰國緊急聯絡卡",
+        printTitle: "THAILAND SOS",
+        police: "191",
+        ambulance: "1669",
+        embassy: "+66-2-119-3555 (駐泰代表處)",
+        helperLabel: "觀光警察: 1155",
+        printHelperLabel: "TOURIST: 1155"
+      },
+      vietnam: {
+        flag: "🇻🇳",
+        title: "越南緊急聯絡卡",
+        printTitle: "VIETNAM EMERGENCY",
+        police: "113",
+        ambulance: "115",
+        embassy: "+84-24-3833-5501 (河內)",
+        helperLabel: "胡志明處: +84-28-3834-9160",
+        printHelperLabel: "HCMC OFF: +84-28-3834-9160"
+      },
+      singapore: {
+        flag: "🇸🇬",
+        title: "新加坡緊急聯絡卡",
+        printTitle: "SINGAPORE SOS",
+        police: "999",
+        ambulance: "995",
+        embassy: "+65-6500-0100 (駐星代表處)",
+        helperLabel: "非急救: 1777",
+        printHelperLabel: "NON-EMERG: 1777"
+      },
+      malaysia: {
+        flag: "🇲🇾",
+        title: "馬來西亞緊急聯絡卡",
+        printTitle: "MALAYSIA SOS",
+        police: "999",
+        ambulance: "999",
+        embassy: "+60-3-2161-4439 (駐馬代表處)",
+        helperLabel: "旅警: +60-3-2149-6590",
+        printHelperLabel: "TOURIST POLICE: +60-3-2149-6590"
+      },
+      taiwan: {
+        flag: "🇹🇼",
+        title: "台灣緊急聯絡卡",
+        printTitle: "TAIWAN EMERGENCY",
+        police: "110",
+        ambulance: "119",
+        embassy: "0800-085-095 (旅外國人中心)",
+        helperLabel: "防詐專線: 165",
+        printHelperLabel: "ANTI-FRAUD: 165"
+      },
+      global: {
+        flag: "🌐",
+        title: "全球旅行自救卡",
+        printTitle: "GLOBAL TRAVEL SOS",
+        police: "112 (GSM 通用電話)",
+        ambulance: "112",
+        embassy: "+886-800-085-095 (外交部專線)",
+        helperLabel: "海外急難: +886-2-2511-5900",
+        printHelperLabel: "HOTLINE: +886-2-2511-5900"
+      }
+    };
+
+    // Color theme mappings
+    const themes = {
+      midnight: {
+        bgClass: "bg-slate-950 border-slate-800 text-white",
+        accentStyleFront: "background-color: #020617 !important; border-color: #334155 !important;",
+        accentStyleBack: "background-color: #020617 !important; border-color: #334155 !important;",
+        badgeClass: "bg-slate-800 text-slate-300 border-slate-700"
+      },
+      ruby: {
+        bgClass: "bg-rose-950 border-rose-800 text-white",
+        accentStyleFront: "background-color: #4c0519 !important; border-color: #f43f5e !important;",
+        accentStyleBack: "background-color: #4c0519 !important; border-color: #f43f5e !important;",
+        badgeClass: "bg-rose-900 text-rose-200 border-rose-700"
+      },
+      teal: {
+        bgClass: "bg-teal-950 border-teal-800 text-white",
+        accentStyleFront: "background-color: #042f2e !important; border-color: #14b8a6 !important;",
+        accentStyleBack: "background-color: #042f2e !important; border-color: #14b8a6 !important;",
+        badgeClass: "bg-teal-900 text-teal-200 border-teal-700"
+      },
+      gold: {
+        bgClass: "bg-amber-950 border-amber-800 text-white",
+        accentStyleFront: "background-color: #451a03 !important; border-color: #f59e0b !important;",
+        accentStyleBack: "background-color: #451a03 !important; border-color: #f59e0b !important;",
+        badgeClass: "bg-amber-900 text-amber-200 border-amber-700"
+      }
+    };
+
+    let currentTheme = 'midnight';
+
+    // Update form elements when country dropdown changes
+    function updateCountryData() {
+      const selected = document.getElementById('country-select').value;
+      const data = countryData[selected];
+
+      if (data) {
+        document.getElementById('country-flag-display').innerText = data.flag;
+        document.getElementById('country-title-display').innerText = data.title;
+        document.getElementById('phone-police').innerText = data.police;
+        document.getElementById('phone-ambulance').innerText = data.ambulance;
+        document.getElementById('phone-embassy').innerText = data.embassy;
+        document.getElementById('helper-hotline-display').innerText = data.helperLabel;
+
+        // Print card sync
+        document.getElementById('print-flag-display').innerText = data.flag;
+        document.getElementById('print-country-title').innerText = data.printTitle;
+        document.getElementById('print-police').innerText = data.police;
+        document.getElementById('print-ambulance').innerText = data.ambulance;
+        document.getElementById('print-embassy').innerText = data.embassy;
+        document.getElementById('print-helper-label').innerText = data.printHelperLabel;
+      }
+    }
+
+    // Set Card UI Theme Color
+    function setTheme(themeName) {
+      currentTheme = themeName;
+      
+      // Update active style of theme buttons
+      const buttons = document.querySelectorAll('.theme-btn');
+      buttons.forEach(btn => btn.classList.remove('active-theme', 'border-slate-950', 'bg-slate-950', 'text-white'));
+      buttons.forEach(btn => btn.classList.add('border-slate-200', 'bg-white', 'text-slate-800'));
+
+      // Highlight target button
+      event.currentTarget.classList.remove('border-slate-200', 'bg-white', 'text-slate-800');
+      event.currentTarget.classList.add('active-theme', 'border-slate-950', 'bg-slate-950', 'text-white');
+
+      // Apply theme class to preview cards
+      const frontCard = document.getElementById('card-front');
+      const backCard = document.getElementById('card-back');
+
+      // Clear old classes
+      frontCard.className = "w-[85.6mm] h-[53.98mm] rounded-2xl p-4 flex flex-col justify-between border shadow-2xl relative transition-all duration-300";
+      backCard.className = "w-[85.6mm] h-[53.98mm] rounded-2xl p-4 flex flex-col justify-between border shadow-2xl relative transition-all duration-300";
+
+      const themeData = themes[themeName];
+      if (themeData) {
+        // Apply background/text colors
+        themeData.bgClass.split(' ').forEach(cls => {
+          frontCard.classList.add(cls);
+          backCard.classList.add(cls);
+        });
+
+        // Set Blood badge theme class
+        const bloodBadge = document.getElementById('blood-badge');
+        bloodBadge.className = "font-black text-[9px] px-1.5 py-0.5 rounded font-display leading-none";
+        themeData.badgeClass.split(' ').forEach(cls => bloodBadge.classList.add(cls));
+      }
+    }
+
+    // Synchronize Form input fields with the interactive live preview cards and print cards
+    function syncCard() {
+      // Name
+      const name = document.getElementById('input-name').value.trim() || "-";
+      document.getElementById('preview-name').innerText = name.toUpperCase();
+      document.getElementById('print-name').innerText = name.toUpperCase();
+
+      // Passport
+      const passport = document.getElementById('input-passport').value.trim() || "-";
+      document.getElementById('preview-passport').innerText = passport.toUpperCase();
+      document.getElementById('print-passport').innerText = passport.toUpperCase();
+
+      // Emergency Contact
+      const iceName = document.getElementById('input-emergency-name').value.trim() || "-";
+      document.getElementById('preview-ice').innerText = iceName;
+      document.getElementById('print-ice').innerText = iceName;
+
+      // Contact phone
+      const icePhone = document.getElementById('input-emergency-phone').value.trim() || "-";
+      document.getElementById('preview-ice-phone').innerText = icePhone;
+      document.getElementById('print-ice-phone').innerText = icePhone;
+
+      // Blood
+      const blood = document.getElementById('input-blood').value || "-";
+      document.getElementById('blood-badge').innerText = `BLOOD: ${blood}`;
+      document.getElementById('print-blood-badge').innerText = `BLOOD: ${blood}`;
+
+      // Insurance Company + Policy
+      const insCompany = document.getElementById('input-insurance-company').value.trim();
+      const insPolicy = document.getElementById('input-insurance-policy').value.trim();
+      const insHotline = document.getElementById('input-insurance-hotline').value.trim();
+      
+      let insText = "-";
+      if (insCompany || insPolicy) {
+        insText = `${insCompany || ''} / ${insPolicy || ''}`.trim().replace(/^\/|\/$/g, '');
+      }
+      if (insHotline) {
+        insText += ` (📞 ${insHotline})`;
+      }
+      document.getElementById('preview-insurance').innerText = insText;
+      document.getElementById('print-insurance').innerText = insText;
+
+      // Hotel Name & phone
+      const hotel = document.getElementById('input-hotel').value.trim();
+      const hotelPhone = document.getElementById('input-hotel-phone').value.trim();
+      
+      let hotelText = "-";
+      if (hotel || hotelPhone) {
+        hotelText = `${hotel || ''} / ${hotelPhone || ''}`.trim().replace(/^\/|\/$/g, '');
+      }
+      document.getElementById('preview-hotel').innerText = hotelText;
+      document.getElementById('print-hotel').innerText = hotelText;
+
+      // Allergies
+      const allergies = document.getElementById('input-allergies').value.trim() || "-";
+      document.getElementById('preview-allergies').innerText = allergies;
+      document.getElementById('print-allergies').innerText = allergies;
+
+      // Notes
+      const notes = document.getElementById('input-notes').value.trim() || "-";
+      document.getElementById('preview-notes').innerText = notes;
+      document.getElementById('print-notes').innerText = notes;
+    }
+
+    // Reset customization form
+    function resetForm() {
+      document.getElementById('input-name').value = "";
+      document.getElementById('input-passport').value = "";
+      document.getElementById('input-emergency-name').value = "";
+      document.getElementById('input-emergency-phone').value = "";
+      document.getElementById('input-blood').value = "";
+      document.getElementById('input-allergies').value = "";
+      document.getElementById('input-insurance-company').value = "";
+      document.getElementById('input-insurance-policy').value = "";
+      document.getElementById('input-insurance-hotline').value = "";
+      document.getElementById('input-hotel').value = "";
+      document.getElementById('input-hotel-phone').value = "";
+      document.getElementById('input-notes').value = "";
+      
+      syncCard();
+    }
+
+    // Toggle FAQ
+    function toggleFaq(el) {
+      const activeClass = 'active';
+      const items = document.querySelectorAll('.faq-item');
+      const isActive = el.classList.contains(activeClass);
+      
+      items.forEach(item => {
+        item.classList.remove(activeClass);
+      });
+      
+      if (!isActive) {
+        el.classList.add(activeClass);
+      }
+    }
+
+    // Track page actions via Analytics if defined
+    document.addEventListener('click', function(e) {
+      var link = e.target.closest('[data-affiliate]');
+      if (link) {
+        if (typeof gtag === 'function') {
+          gtag('event', 'affiliate_click', {
+            affiliate: link.getAttribute('data-affiliate'),
+            page: window.location.pathname
+          });
+        }
+      }
+    });
+
+    // Run initial loaders
+    window.addEventListener('DOMContentLoaded', () => {
+      updateCountryData();
+      setTheme('midnight');
+      syncCard();
+    });
+  </script>
+</body>
+</html>

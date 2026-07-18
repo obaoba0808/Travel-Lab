@@ -557,7 +557,13 @@
     "tags": [
       "打包助手",
       "清單必備",
-      "線上勾選"
+      "線上勾選"{
+      id: "emergency-contact-card",
+      title: "各國旅遊隨身緊急聯絡卡產生器：線上工具爆款自救錢包卡",
+      category: "旅遊工具",
+      url: "emergency-contact-card.html",
+      coverImage: "/images/travel-tools-hero.webp"
+    },
     ]
   },
   {
