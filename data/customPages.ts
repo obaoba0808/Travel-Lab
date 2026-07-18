@@ -16,7 +16,7 @@ export const customPages: CustomPageData[] = [
     "category": "日本自由行",
     "url": "tokyo-5days.html",
     "coverImage": "/images/tokyo-hero.webp",
-    "intro": "初訪東京的最佳全攻略！帶你穿梭於澀谷繁華十字路口、淺草寺江戶情懷與新宿的深夜居酒屋，打造無懈可擊的五日行程。",
+    "intro": "東京5天4夜自由行攻略2026：淺草寺晴空塔、澀谷原宿逛街、築地場外市場美食、迪士尼門票優惠，附完整地鐵乘車教學與每日行程表，預算NT$15,000搞定遊客必讀。",
     "tags": [
       "新手推薦",
       "5天4夜",
@@ -29,7 +29,7 @@ export const customPages: CustomPageData[] = [
     "category": "日本自由行",
     "url": "tokyo-accommodation.html",
     "coverImage": "/images/Tokyo-Accommodation-hero.webp",
-    "intro": "新宿、澀谷、銀座、上野、淺草到底該住哪？一圖看懂各大商圈交通便利度、平均預算、購物指數，附高性價比旅宿推薦。",
+    "intro": "東京住宿區域比較2026：新宿交通便利/上野平平價/淺草安靜/澀谷潮流/池袋家庭房。附每晚NT$800起平價飯店推薦、交通路線解析與選擇指南，幫你找到最適合的下榻地點。",
     "tags": [
       "住宿指南",
       "分區分析",
@@ -42,7 +42,7 @@ export const customPages: CustomPageData[] = [
     "category": "日本自由行",
     "url": "japan-drugstore-checklist.html",
     "coverImage": "/images/Japanese drugstore cosmetics.webp",
-    "intro": "最新日本松本清、大國藥妝必買神物！包含爆紅保養品、長輩指名保健品與家庭常備藥，提供現場結帳退稅折價券。",
+    "intro": "2026最新日本藥妝必買清單與免稅購物攻略！包含EVE、合利他命、安耐曬等最夯感冒藥、美妝、護唇膏價格與功效。內建獨家「日本藥妝購物清單與預算精算工具」，搭配唐吉訶德、松本清與大國藥妝最新折價券優惠碼，帶你用最聰明、最性價比的方式橫掃日本藥妝店！",
     "tags": [
       "購物必看",
       "2026清單",
@@ -55,7 +55,7 @@ export const customPages: CustomPageData[] = [
     "category": "日本自由行",
     "url": "kansai-pass.html",
     "coverImage": "/images/kansai-hero.webp",
-    "intro": "京阪神奈自由行交通全解析！關西ICOCA、JR PASS關西地區鐵路周遊券、京都巴士一日券究竟哪個最省？超簡單判斷公式。",
+    "intro": "關西交通票券完全指南2026：JR Pass 5日券、關西周遊卡、大阪周遊卡、ICOCA 儲值卡比較。提供獨家互動式交通省錢試算器，輸入行程自動推薦最省錢票券組合，附京阪神奈交通攻略。",
     "tags": [
       "交通票券",
       "關西攻略",
@@ -68,7 +68,7 @@ export const customPages: CustomPageData[] = [
     "category": "日本自由行",
     "url": "hokkaido-winter.html",
     "coverImage": "/images/hokkaido-hero.webp",
-    "intro": "走入銀裝素裹的純白童話世界。札榥雪祭、小樽運河裝扮夜景、登別地獄谷溫泉，附極寒氣候防寒穿搭與自駕/大眾交通指南。",
+    "intro": "2026最新日本北海道冬季5天4夜自由行最完整行程規劃！包含札幌雪祭、小樽雪燈之路、旭山動物園企鵝散步、三大蟹與成吉思汗烤肉美食指南，附JR北海道PASS乘車券精算與冬季穿搭防摔攻略。",
     "tags": [
       "冬季賞雪",
       "北海道",
@@ -81,7 +81,7 @@ export const customPages: CustomPageData[] = [
     "category": "日本自由行",
     "url": "okinawa.html",
     "coverImage": "/images/okinawa-hero.webp",
-    "intro": "沖繩自駕必讀手冊！從台灣駕照譯本辦理、OTS租車流程、MapCode使用到日本道路安全規則，附中北部絕美海景自駕路線。",
+    "intro": "2026 沖繩自駕4天3夜攻略：美麗海水族館、古宇利島大橋、美國村、國際通與瀨長島。含獨家「沖繩自駕預算試算器」與「租車保險攻略」，幫你精準抓預算、避開隱藏費用。",
     "tags": [
       "沖繩自駕",
       "租車指南",
@@ -94,7 +94,7 @@ export const customPages: CustomPageData[] = [
     "category": "日本自由行",
     "url": "kyoto-temples.html",
     "coverImage": "/images/kyoto-hero.webp",
-    "intro": "深度感受京都千年底蘊。清水寺、金閣寺、伏見稻荷大社、銀閣寺經典散策，教你洗手舍洗手、拜殿二拜二拍手一拜的精確禮儀。",
+    "intro": "2026 京都寺廟與紅葉攻略：清水寺、金閣寺、伏見稻荷大社、嵐山竹林小徑。內含獨家「京都參拜與交通預算計算器」、「寺廟參拜禮儀與禁忌測驗」與最佳賞楓時間，帶你深度探索古都禪意。",
     "tags": [
       "京都文化",
       "寺廟散策",
@@ -107,7 +107,7 @@ export const customPages: CustomPageData[] = [
     "category": "日本自由行",
     "url": "osaka-food.html",
     "coverImage": "/images/osaka-food-hero.webp",
-    "intro": "「大阪之胃」完全吃貨地圖！章魚燒、大阪燒、炸串、黑門市場海鮮與排隊拉麵，精選 15 家當地人也愛去的傳奇老店。",
+    "intro": "2026大阪2天1夜美食攻略：道頓堀必吃章魚燒、心齋橋排隊甜點、黑門市場海鮮及梅田地下街美食。內含獨家「大阪街頭美食與交通預算計算器」與「大阪吃貨美食王挑戰測驗」。",
     "tags": [
       "大阪美食",
       "必吃清單",
@@ -120,7 +120,7 @@ export const customPages: CustomPageData[] = [
     "category": "日本自由行",
     "url": "osaka-usj.html",
     "coverImage": "/images/osaka-usj-hero.webp",
-    "intro": "別當無頭蒼蠅！最新 USJ 超級任天堂世界、哈利波特魔法世界無痛入園全攻略，教你如何搶快速通關與保證入園整理券。",
+    "intro": "2026大阪環球影城（USJ）玩樂攻略：門票與快速通關券選購教學、超級任天堂世界/哈利波特免排隊秘訣。內含「USJ購票與遊玩預算計算器」與「USJ達人檢定測驗」。",
     "tags": [
       "USJ攻略",
       "快速通關",
@@ -133,7 +133,7 @@ export const customPages: CustomPageData[] = [
     "category": "日本自由行",
     "url": "japan-budget-guide.html",
     "coverImage": "/images/japan-budget-hero.webp",
-    "intro": "去日本到底要準備多少錢？本篇拆解特價機票、平價青年旅館、百元便當到米其林餐廳的真實消費區間，附動態預算試算器。",
+    "intro": "2026最新日本自由行預算精算手冊！包含機票、住宿、交通、美食與藥妝購物花費明細，提供1人到多人的小資背包客、經典高CP值與奢華行程預算範本，附省錢15招實戰技巧。",
     "tags": [
       "預算規劃",
       "真實花費",
@@ -146,7 +146,7 @@ export const customPages: CustomPageData[] = [
     "category": "日本自由行",
     "url": "fukuoka-5days.html",
     "coverImage": "/images/Fukuoka.webp",
-    "intro": "九州鐵道之旅起點！博多豚骨拉麵發源地屋台巡禮、太宰府天滿宮求學問、柳川乘著搖櫓船品嚐蒸蒸鰻魚飯，一網打盡。",
+    "intro": "2026最新日本福岡5天4夜自由行最完整行程表！包含太宰府柳川一日遊、門司港 retro、LaLaport 1:1鋼彈、博多拉麵與中洲屋台美食地圖，附地鐵JR交通券試算與飯店推薦。",
     "tags": [
       "北九州",
       "福岡行程",
@@ -159,7 +159,7 @@ export const customPages: CustomPageData[] = [
     "category": "日本自由行",
     "url": "japan-cherry-blossom-season.html",
     "coverImage": "/images/Cherry blossom and autumn foliage viewing in Japan.webp",
-    "intro": "追逐粉紅春瀾。包含氣象株式會社最新櫻前線預測、東京目黑川、京都哲學之道、大阪城公園野餐指南，教你如何拍出空靈大片。",
+    "intro": "2026最新日本櫻花滿開預測全攻略！包含東京、京都、大阪、福岡與北海道開花時程表。提供5大經典賞櫻名所與交通票券（JR Pass、地鐵券）搭配，附贈獨家互動式「追櫻時程與行程規劃器」！",
     "tags": [
       "賞櫻前線",
       "櫻花祭",
@@ -172,7 +172,7 @@ export const customPages: CustomPageData[] = [
     "category": "日本自由行",
     "url": "japan-money-saving-tips.html",
     "coverImage": "/images/Save money in Japan 20.webp",
-    "intro": "超市晚上 8 點後的半價便當、超商限定平價神物、飯店免費溫泉與接駁、跨區域夜間大巴，教你如何花少少錢玩到最極致。",
+    "intro": "去日本省錢20個必看眉角2026：里程兌換機票、免稅店退稅10%技巧、商務旅館平價住宿、超市19:00折扣時間、交通票券搭配、唐吉訶德採購攻略。自由行省下30%。",
     "tags": [
       "小資省錢",
       "高CP值",
@@ -185,7 +185,7 @@ export const customPages: CustomPageData[] = [
     "category": "韓國自由行",
     "url": "seoul-food.html",
     "coverImage": "/images/seoul-hero1.webp",
-    "intro": "首爾美食饕客指南！孔陵一隻雞、明洞神仙雪濃湯、弘大荒謬的生肉、廣藏市場生拌牛肉與綠豆煎餅，不踩雷在地推薦。",
+    "intro": "首爾必吃美食攻略2026：弘大烤肉、明洞辣炒年糕、廣藏市場生拌牛肉、新村雪濃湯、江南與聖水洞咖啡廳。附明洞換錢教學、T-money卡與交通，第一次首爾自由行必看。",
     "tags": [
       "首爾美食",
       "必吃地圖",
@@ -198,7 +198,7 @@ export const customPages: CustomPageData[] = [
     "category": "韓國自由行",
     "url": "busan-capsule.html",
     "coverImage": "/images/busan-hero1.webp",
-    "intro": "最新爆紅海雲台天空膠囊火車（Sky Capsule）超詳細預約訂票步驟教學！避開排隊人潮的秘密時段，拍出最美海景。",
+    "intro": "2026最新釜山海雲台天空膠囊列車（Sky Capsule）預約最完整攻略！教你如何搶購「尾浦往青沙浦」夕陽最美時段票、實測票價試算、最划算的VBP景點套票組合、路線地圖與防坑注意事項！",
     "tags": [
       "熱門景點",
       "釜山預約",
@@ -211,7 +211,7 @@ export const customPages: CustomPageData[] = [
     "category": "韓國自由行",
     "url": "busan-4days.html",
     "coverImage": "/images/busan-hero.webp",
-    "intro": "海洋都市慢遊提案！甘川洞文化村尋找小王子、廣安里大橋絕美夜景、機張市場現撈大雪蟹、影島青沙浦網美咖啡，慵懶出發。",
+    "intro": "2026韓國釜山4天3夜自由行最完整攻略！為您規劃最經典釜山行程：必搭海雲台天空膠囊列車、白淺灘文化村海景咖啡、甘川洞文化村尋找小王子，品嚐松亭三代豬肉湯飯與現撈海鮮烤貝，附最划算地鐵交通與飯店推薦。",
     "tags": [
       "海洋城市",
       "釜山行程",
@@ -224,7 +224,7 @@ export const customPages: CustomPageData[] = [
     "category": "韓國自由行",
     "url": "jeju-island.html",
     "coverImage": "/images/jeju-hero.webp",
-    "intro": "韓國的世外桃源。濟州島自駕路況解析、漢拏山健行、城山日出峰、涯月邑絕美夕陽咖啡街，體驗最慵懶的島嶼度假情調。",
+    "intro": "濟州島自駕環島3天2夜攻略2026：城山日出峰日出、牛島花生冰淇淋、漢拏山登頂、涯月海邊咖啡街。附租車比價平台、必吃黑豬肉烤肉店、海鮮鍋名店推薦與自駕注意事項。",
     "tags": [
       "濟州島",
       "海島自駕",
@@ -237,7 +237,7 @@ export const customPages: CustomPageData[] = [
     "category": "韓國自由行",
     "url": "korea-budget.html",
     "coverImage": "/images/korea-budget-hero.webp",
-    "intro": "去韓國需要準備多少預算？從 WOWPASS/NAMANE 卡儲值、路邊攤辣炒年糕、人參雞、美妝店 Olive Young 血拼花費大公開。",
+    "intro": "最完整的首爾自由行預算規劃：機票、飯店、餐費、景點門票與購物花費完整拆解，附明洞換錢所比價、省錢15招與費用估算計算器，5天4夜小資行程總預算詳細分析一看就懂！",
     "tags": [
       "預算規劃",
       "韓國購物",
@@ -250,7 +250,7 @@ export const customPages: CustomPageData[] = [
     "category": "韓國自由行",
     "url": "seoul-5days.html",
     "coverImage": "/images/seoul-hero.webp",
-    "intro": "經典首爾行程！穿着華麗韓服漫步景福宮、南山首爾塔鎖住愛情、弘大/新村朝聖街頭藝人、東大門夜間不眠批發市場。",
+    "intro": "2026首爾5天4夜自由行行程表：穿著華麗韓服漫步景福宮、南山首爾塔鎖住愛情、弘大/新村朝聖街頭藝人、東大門夜間批發市場。含T-money卡交通指南、AREX機場快線、明洞/弘大住宿推薦與精準預算。",
     "tags": [
       "首爾行程",
       "韓服體驗",
@@ -276,7 +276,7 @@ export const customPages: CustomPageData[] = [
     "category": "韓國自由行",
     "url": "korea-money-saving-tips.html",
     "coverImage": "/images/South Korean tax refund.webp",
-    "intro": "小資族不可不知的韓國旅遊省錢攻略！超商 2+1/1+1 優惠買法、Olive Young 現場退稅、地鐵免費轉乘公車等隱藏細節。",
+    "intro": "2026韓國首爾、釜山自由行必讀省錢祕笈：最新退稅門檻下調至₩15,000省錢技巧、明洞民間換錢所最新比價、T-money與氣候同行卡隱藏交通優惠、大型超市晚間特價、炸雞與平價咖啡外帶折扣，並附動態預算省錢試算器！",
     "tags": [
       "小資精省",
       "韓國特價",
@@ -289,7 +289,7 @@ export const customPages: CustomPageData[] = [
     "category": "韓國自由行",
     "url": "seoul-food-map.html",
     "coverImage": "/images/seoul-hero.webp",
-    "intro": "辣炒年糕、韓式炸雞、豬肉湯飯、韓式烤五花肉、蔘雞湯，最地道的首爾巷弄美食與各分店最佳免排隊用餐時段。",
+    "intro": "首爾美食地圖：10大經典韓食推薦與排隊地獄避開指南，附辣炒年糕、韓式炸雞、豬肉湯飯、蔘雞湯各分店最佳免排隊用餐時段與地鐵出口指南，2026最新美食攻略及免排隊時段表",
     "tags": [
       "韓式料理",
       "免排隊祕辛",
@@ -302,7 +302,7 @@ export const customPages: CustomPageData[] = [
     "category": "台灣旅遊",
     "url": "hualien-taitung.html",
     "coverImage": "/images/hualien-hero.webp",
-    "intro": "逃離城市，大口吸飽花東純淨空氣。池上伯朗大道、七星潭鵝卵石海灘、石梯坪獨特海蝕地貌，來一場療癒心靈的蔚藍慢旅行。",
+    "intro": "花蓮台東3天2夜慢活行程攻略2026：太魯閣國家公園壯麗峽谷、七星潭海灣風光、蘇花公路清水斷崖、池上伯朗大道金黃稻田、多良車站海景。附自駕租車指南、在地人美食與海景民宿推薦。",
     "tags": [
       "花東旅遊",
       "三天兩夜",
@@ -315,7 +315,7 @@ export const customPages: CustomPageData[] = [
     "category": "台灣旅遊",
     "url": "tainan-food.html",
     "coverImage": "/images/tainan-hero.webp",
-    "intro": "清晨 4 點的牛肉湯狂熱！六千、文章、阿村牛肉湯大比拼，加上小卷米粉、蝦仁飯、鱔魚意麵，為你解鎖台南古都的甜美滋味。",
+    "intro": "台南美食牛肉湯地圖2026：文章牛肉湯、六千牛肉湯、阿村牛肉湯比較，國華街必吃碗粿、春捲、小卷米粉，與極具故事感的日式老屋咖啡店，附交通方式與營業時間完整整理。",
     "tags": [
       "台南小吃",
       "牛肉湯",
@@ -328,7 +328,7 @@ export const customPages: CustomPageData[] = [
     "category": "台灣旅遊",
     "url": "kenting.html",
     "coverImage": "/images/kenting-hero.webp",
-    "intro": "台灣最南端的陽光、沙灘與碧海。砂島純淨貝殼砂沙灘、萬里桐潮間帶與夕陽浮潛，精選 5 間躺在床上就能看日落的海景民宿。",
+    "intro": "2026墾丁3天2夜自由行全攻略！南灣浮潛戲水、龍磐公園看海觀星、鵝鑾鼻最南端打卡，墾丁大街夜市與後壁湖海鮮必吃美食精選，以及高CP值海景民宿推薦，出發前必看！",
     "tags": [
       "墾丁渡假",
       "浮潛推薦",
@@ -341,7 +341,7 @@ export const customPages: CustomPageData[] = [
     "category": "台灣旅遊",
     "url": "taipei-food.html",
     "coverImage": "/images/taipei-food-hero.webp",
-    "intro": "台北多層次的美食面貌！在大稻埕大榕樹下品嚐排骨湯、探索饒河與寧夏夜市的米其林必比登推薦小吃、隱匿於赤峰街的深夜咖啡。",
+    "intro": "台北美食地圖2026：鼎泰豐、永康街、寧夏夜市、饒河夜市、東區早午餐完整攻略，附12個行政區必吃推薦、交通方式與營業時間，讓你吃得像在地人一樣精準不踩雷超實用！",
     "tags": [
       "台北美食",
       "文青咖啡",
@@ -354,7 +354,7 @@ export const customPages: CustomPageData[] = [
     "category": "台灣旅遊",
     "url": "jiufen.html",
     "coverImage": "/images/jiufen-hero.webp",
-    "intro": "紅燈籠高掛的山城。神似千與千尋場景的阿妹茶樓、品嚐軟 Q 的賴阿婆芋圓、遠眺基隆嶼海景、在茶館中靜聽雨水滴落聲。",
+    "intro": "九份老街2026完整攻略｜阿妹茶樓茶席、芋圓冰品排行、紅糟肉肉圓、昇平戲院懷舊。附火車+公車交通方式、平日避人潮最佳拍照時段、黃金瀑布順遊路線與住宿推薦清單完整整理。",
     "tags": [
       "山城九份",
       "茶樓體驗",
@@ -367,7 +367,7 @@ export const customPages: CustomPageData[] = [
     "category": "東南亞自由行",
     "url": "chiang-mai.html",
     "coverImage": "/images/chiangmai-hero.webp",
-    "intro": "數位遊牧民族的天堂！清邁尼曼區最棒的網路工作咖啡廳、Punspace 共享空間推薦、古城帕邢寺、周日夜市慵懶慢活日常。",
+    "intro": "2026清邁數位遊牧與自由行全攻略！整理尼曼區工作咖啡廳、Punspace/Yellow等共享空間、古城帕邢寺、周日夜市及高CP值公寓住宿與日常開銷，帶你體驗泰北文青慢活生活。",
     "tags": [
       "數位遊牧",
       "清邁生活",
@@ -380,7 +380,7 @@ export const customPages: CustomPageData[] = [
     "category": "東南亞自由行",
     "url": "bangkok-3days.html",
     "coverImage": "/images/bangkok-hero.webp",
-    "intro": "辛辣、酸甜、繽紛的曼谷街頭滋味。米其林街頭泰式炒河粉、火山排骨、路邊隨手一杯的手標泰奶，晚上登上無邊際星空酒吧俯瞰夜色。",
+    "intro": "2026曼谷3天2夜吃貨完整攻略！精選洽圖洽週末市集必買必吃、唐人街百年燕窩、水門市場海南雞飯及船麵等10大在地美食，附BTS/MRT空鐵交通教學、最划算的換錢所比價與精選暹羅區高CP值住宿。",
     "tags": [
       "曼谷吃貨",
       "高空酒吧",
@@ -393,7 +393,7 @@ export const customPages: CustomPageData[] = [
     "category": "東南亞自由行",
     "url": "bangkok-massage.html",
     "coverImage": "/images/bangkok-massage-hero.webp",
-    "intro": "一洗旅途疲憊！精選曼谷 8 家絕不踩雷的按摩店，包含百元平價泰式指壓（Let's Relax）到令人驚豔的頂級奢華貴婦 SPA（Oasis）。",
+    "intro": "2026曼谷按摩SPA完整攻略：平價臥佛寺泰式指壓、高CP值Let's Relax、頂級Oasis貴婦SPA到Divana Strings，8家精選不踩雷店家分析與預約教學",
     "tags": [
       "按摩SPA",
       "放鬆行程",
@@ -406,7 +406,7 @@ export const customPages: CustomPageData[] = [
     "category": "東南亞自由行",
     "url": "vietnam-danang.html",
     "coverImage": "/images/vietnam-danang-hero.webp",
-    "intro": "東方夏威夷的獨特魅力。漫步於世界最美沙灘之一的美溪沙灘、打卡巴拿山雲霧繚繞的黃金佛手橋、傍晚在會安古鎮釋放許願水燈。",
+    "intro": "2026越南峴港3天2夜自由行攻略！精選巴拿山佛手橋高空纜車、美溪沙灘溫暖日出、會安古鎮夢幻燈籠街等必去景點與在地美食，附電子簽證、摩托車租借與最划算海景飯店推薦。",
     "tags": [
       "越南峴港",
       "佛手橋",
@@ -419,7 +419,7 @@ export const customPages: CustomPageData[] = [
     "category": "東南亞自由行",
     "url": "singapore-3days.html",
     "coverImage": "/images/singapore.webp",
-    "intro": "精緻而震撼的花園城市。濱海灣花園超級樹燈光秀、打卡噴水魚尾獅、品嚐亞坤斑蘭吐司與松發肉骨茶、聖淘沙小島漫步。",
+    "intro": "2026最新新加坡3天2夜自由行全攻略！深度探訪濱海灣花園超級樹、牛車水美食街、小印度香料市場與哈芝巷彩繪壁畫，附免簽入境須知、地鐵交通卡EZ-Link使用教學、小資省錢技巧與熱門住宿推薦。",
     "tags": [
       "新加坡",
       "花園城市",
@@ -432,7 +432,7 @@ export const customPages: CustomPageData[] = [
     "category": "東南亞自由行",
     "url": "kualalumpur-3days.html",
     "coverImage": "/images/kualalumpur-3days.webp",
-    "intro": "驚豔的融合之美！登上著名的雙子星塔空中天橋、攀爬擁有巨大印度神像的彩虹階梯黑風洞、在阿羅街大啖沙嗲與椰漿飯。",
+    "intro": "2026最新吉隆坡3天2夜自由行全攻略！深度探訪雙峰塔觀景台、茨廠街夜市、黑風洞彩虹階梯與武吉免登購物，附交通指南、小資住宿推薦、必吃美食與省錢交通卡使用教學。",
     "tags": [
       "吉隆坡",
       "雙子星塔",
@@ -445,7 +445,7 @@ export const customPages: CustomPageData[] = [
     "category": "東南亞自由行",
     "url": "angkor-wat-2days.html",
     "coverImage": "/images/angkor.webp",
-    "intro": "沉睡在森林中的宏偉廢墟。破曉時分靜待小吳哥蓮花池上的日出倒影、造訪擁有「高棉微笑」的巴戎寺、探索被巨樹纏繞的塔普倫寺。",
+    "intro": "2026最新柬埔寨吳哥窟2天1夜自由行攻略！深度探訪小吳哥倒影日出、巴戎寺高棉的微笑、塔普倫寺巨樹奇景與神秘崩密列，附電子簽證申請、最新門票、包車交通與省錢指南。",
     "tags": [
       "吳哥窟",
       "日出美景",
@@ -458,7 +458,7 @@ export const customPages: CustomPageData[] = [
     "category": "東南亞自由行",
     "url": "thailand-sim.html",
     "coverImage": "/images/thailand-sim.webp",
-    "intro": "去曼谷清邁該用哪家電信？泰國三大電信 AIS（網速第一）、True/dtac（合併後訊號極佳）資費方案與免換卡 eSIM 設定完全指南。",
+    "intro": "泰國上網卡實測比較2026：AIS/TrueMove/DTAC三大電信訊號速度、價格฿199起、覆蓋率解析。附機場購買教學、eSIM推薦、清邁曼谷普吉島實測與常見問題解答。",
     "tags": [
       "泰國網卡",
       "eSIM資費",
@@ -471,7 +471,7 @@ export const customPages: CustomPageData[] = [
     "category": "東南亞自由行",
     "url": "seasia-budget-travel-guide.html",
     "coverImage": "/images/seasia-budget-travel-guide.webp",
-    "intro": "教你如何分配東南亞旅行預算！從超便宜的越南街頭美食、泰國嘟嘟車議價密技、到如何利用大眾運輸玩轉昂貴的新加坡。",
+    "intro": "東南亞省錢旅遊攻略2026：泰國、越南、馬來西亞、印尼、菲律賓與新加坡的預算規劃與自由行指南。含各國日均消費比較、免簽/電子簽最新資訊、廉航機票、交通、住宿與餐飲省錢心法。",
     "tags": [
       "東南亞預算",
       "省錢密技",
@@ -484,7 +484,7 @@ export const customPages: CustomPageData[] = [
     "category": "東南亞自由行",
     "url": "vietnam-hochiminh.html",
     "coverImage": "/images/vietnam-hochiminh-hero.webp",
-    "intro": "東方小巴黎的慢步調旅行。西貢聖母大教堂、百年郵局寄一張明信片、參訪極具少女心的耶穌聖心堂（粉紅教堂），喝一杯香醇蛋咖啡。",
+    "intro": "胡志明市3天2夜攻略2026：范老五街酒吧夜市、湄公河三角洲一日遊、戰爭遺跡博物館、10大必吃美食、3大住宿區推薦。含免簽證費教學、Grab叫車攻略與換錢技巧。",
     "tags": [
       "胡志明市",
       "法式情懷",
@@ -497,7 +497,7 @@ export const customPages: CustomPageData[] = [
     "category": "旅遊工具",
     "url": "travel-tools.html",
     "coverImage": "/images/travel-tools-hero.webp",
-    "intro": "我們為您打造的專屬旅行工具合集。整合插座查詢、打包清單、里程試算與免稅計算，讓旅行準備工作變得和度假一樣迷人。",
+    "intro": "旅遊省錢工具包：Trip.com 飯店比價、Skyscanner 機票、Klook 門票、Airalo eSIM、Agoda 住宿，出國必備工具一次打包，領取專屬優惠。",
     "tags": [
       "工具大集合",
       "打包助手",
@@ -510,7 +510,7 @@ export const customPages: CustomPageData[] = [
     "category": "旅遊工具",
     "url": "power-plug-guide.html",
     "coverImage": "/images/power.webp",
-    "intro": "出國電器燒掉就糟了！本篇收錄日本、韓國、歐洲、東南亞等熱門地區插座形式（A/C/SE/BF等）、電壓（110V/220V）及萬國轉接頭選購要點。",
+    "intro": "出國插座電壓查詢表 2026：台灣人出國必看，涵蓋日本、韓國、泰國、越南、歐美等 20+ 國家的插頭規格、110V-240V 電壓與頻率對照。教你如何判斷是否需要轉接頭與變壓器，萬國插座推薦。",
     "tags": [
       "插座電壓",
       "萬國插頭",
@@ -523,7 +523,7 @@ export const customPages: CustomPageData[] = [
     "category": "旅遊工具",
     "url": "budget-airline-guide.html",
     "coverImage": "/images/budget-airline.webp",
-    "intro": "樂桃、酷航、虎航買票心法！本篇公開航空公司促銷時間點、手提行李重量規則、以及清空瀏覽器 Cookie 買到最低價格的實測密技。",
+    "intro": "廉航搶票攻略：酷航Scoot、樂桃Peach、虎航Tigerair直飛機票比價，開賣時間、搶票技巧、行李規定、選座位策略、廉航vs傳統航空優缺點比較。出國省錢必看。",
     "tags": [
       "廉航促銷",
       "搶票密技",
@@ -536,7 +536,7 @@ export const customPages: CustomPageData[] = [
     "category": "旅遊工具",
     "url": "miles-calculator.html",
     "coverImage": "/images/miles.webp",
-    "intro": "機票里程累積到底怎麼算？星空聯盟、天合聯盟、寰宇一家里程計算公式，手把手教你如何將出國機票的價值最大化，免費換下張機票。",
+    "intro": "里程累積試算器：輸入每月刷卡金額與搭機頻率，自動計算多久免費飛日本/韓國/泰國。含5大信用卡紅利轉里程比例、航空公司里程需求速查、最短累積時間表與最佳刷卡組合推薦。",
     "tags": [
       "里程試算",
       "免費機票",
@@ -549,7 +549,7 @@ export const customPages: CustomPageData[] = [
     "category": "旅遊工具",
     "url": "packing-list.html",
     "coverImage": "/images/packing-list.webp",
-    "intro": "專為自由行旅客設計的智能打包清單！提供行李進度條，涵蓋護照、充電線、常備藥品，可隨時勾選、自訂新增項目。",
+    "intro": "2026最新出國打包清單！提供客製化行李檢查表（3天/5天/7天以上），日本入境藥品申報規定、液體隨身限制、行動電源登機規範。一鍵勾選進度追蹤，助你輕鬆打包不漏帶。",
     "tags": [
       "打包助手",
       "清單必備",
@@ -562,7 +562,7 @@ export const customPages: CustomPageData[] = [
     "category": "旅遊工具",
     "url": "esim-comparison.html",
     "coverImage": "/images/esim-hero.webp",
-    "intro": "免插拔、不丟卡！最新 eSIM 電信方案實測，告訴你它在日韓和東南亞的真實現速，附三大主要國家的最優 eSIM 商家推薦表。",
+    "intro": "出國eSIM實測比較2026！收錄日本、韓國、泰國、越南8大主流eSIM品牌（Airalo, Holafly, eSIM Go, ByteSIM）測速、價格與訊號覆蓋率。內置互動智慧推薦器，3秒算出最適合你的上網方案。",
     "tags": [
       "網路選法",
       "eSIM評價",
@@ -575,7 +575,7 @@ export const customPages: CustomPageData[] = [
     "category": "旅遊工具",
     "url": "tax-refund-calculator.html",
     "coverImage": "/images/Free tax refund.webp",
-    "intro": "出國購物血拼，退稅流程好複雜？本篇一鍵幫您試算在各國可退回多少稅額，附帶成田機場、仁川機場現場退稅手續與櫃檯引導。",
+    "intro": "免稅店退稅試算器：輸入消費金額與國家，自動計算退稅金額。附韓國/日本/泰國/越南退稅流程、手續費、最低消費門檻、機場退稅櫃檯位置與常見問題解答完整攻略教學。",
     "tags": [
       "退稅試算",
       "購物攻略",
@@ -588,7 +588,7 @@ export const customPages: CustomPageData[] = [
     "category": "旅遊工具",
     "url": "notion-travel-template.html",
     "coverImage": "/images/notion-travel.webp",
-    "intro": "我們為讀者獨家開發的 Notion 旅行計畫模板！包含美觀的看板行程、每日支出表、打包清單、景點卡片，免費提供一鍵複製。",
+    "intro": "免費下載 2026 Notion 旅遊規劃模板！一頁整合行程表、預算追蹤、行李打包清單與住宿筆記，支援手機同步、多人協作與離線編輯，讓你輕鬆管理每一次旅程不漏接。",
     "tags": [
       "Notion模板",
       "高顏值規劃",
@@ -601,7 +601,7 @@ export const customPages: CustomPageData[] = [
     "category": "關於我們",
     "url": "about.html",
     "coverImage": "/images/about-hero.webp",
-    "intro": "我們是一群不願意走馬看花的漫遊者。不堆砌網紅打卡點，只為尋找晨霧、清泉、古鐘與那些藏在青苔底下的地方靈魂。",
+    "intro": "關於均在路上 Travel Lab：我們的使命是幫助讀者用最合理的預算，走最深度的旅程。了解我們的故事、品牌願景、專業編輯團隊、合作夥伴與聯繫方式，以及常見問答。",
     "tags": [
       "團隊理念",
       "探索生活",
@@ -656,7 +656,7 @@ export const customPages: CustomPageData[] = [
     "category": "台灣旅遊",
     "url": "taiwan-travel.html",
     "coverImage": "/images/taiwan-travel.webp",
-    "intro": "台灣深度旅遊提案2026：花東縱谷三天兩夜、台南美食牛肉湯、墾丁海景夜市，在地人帶路私房景點。",
+    "intro": "台灣深度旅遊提案2026：花東縱谷3天2夜自然之旅、台南美食牛肉湯地圖、墾丁海景夜市攻略，由在地人帶路探索私房景點與季節限定體驗，附大眾交通與自駕路線建議指南。",
     "tags": [
       "台灣旅遊",
       "花東縱谷",
@@ -684,7 +684,7 @@ export const customPages: CustomPageData[] = [
     "category": "旅遊工具",
     "url": "budget-calculator.html",
     "coverImage": "/images/budget-calculator.webp",
-    "intro": "出國旅遊預算試算器：輸入國家、天數與人數，自動幫你計算機票、住宿、餐飲、交通與購物等預算花費。內含日本、韓國、泰國、歐洲與美國最新小資省錢技巧。",
+    "intro": "出國旅遊預算試算器：輸入國家、天數與人數，自動幫你計算機票、住宿、餐飲、交通與購物等預算花費。內含日本、韓國、泰國、歐洲多國參考價格，精準抓預算不求人超實用！",
     "tags": [
       "預算試算",
       "機票飯店",
