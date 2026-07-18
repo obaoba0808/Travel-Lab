@@ -197,7 +197,7 @@ export const customPages: CustomPageData[] = [
     "title": "釜山膠囊列車預約：海雲台海濱列車訂票教學與自製行程",
     "category": "韓國自由行",
     "url": "busan-capsule.html",
-    "coverImage": "/images/busan-hero.webp",
+    "coverImage": "/images/busan-hero1.webp",
     "intro": "最新爆紅海雲台天空膠囊火車（Sky Capsule）超詳細預約訂票步驟教學！避開排隊人潮的秘密時段，拍出最美海景。",
     "tags": [
       "熱門景點",
@@ -275,7 +275,7 @@ export const customPages: CustomPageData[] = [
     "title": "韓國省錢密技：Olive Young 退稅、平價飯捲與美妝折扣",
     "category": "韓國自由行",
     "url": "korea-money-saving-tips.html",
-    "coverImage": "/images/korea-money.webp",
+    "coverImage": "/images/South Korean tax refund.webp",
     "intro": "小資族不可不知的韓國旅遊省錢攻略！超商 2+1/1+1 優惠買法、Olive Young 現場退稅、地鐵免費轉乘公車等隱藏細節。",
     "tags": [
       "小資精省",
