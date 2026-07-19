@@ -556,16 +556,6 @@ export const customPages: CustomPageData[] = [
       "線上勾選"
     ]
   },
-
-  {
-    id: "emergency-contact-card",
-    title: "各國旅遊隨身緊急聯絡卡產生器：線上工具爆款自救錢包卡",
-    category: "旅遊工具",
-    url: "emergency-contact-card.html",
-    coverImage: "/images/travel-tools-hero.webp",
-    intro: "2026出國安全必備！一鍵客製化生成各國旅遊緊急聯絡卡，涵蓋日韓、東南亞緊急求助熱線與代表處電話。自由編輯個人醫療、聯絡人、保險與飯店資訊，支援離線下載、列印與另存PDF。",
-    tags: ["旅遊安全", "免費工具", "出國必備", "急救資訊", "線上產生器", "各國電話卡"]
-  },
   {
     "id": "esim-comparison",
     "title": "eSIM 比較推薦：原號漫遊、實體網卡、eSIM 優缺點實評",
