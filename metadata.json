@@ -1,8 +1,0 @@
-{
-  "name": "均在路上Travel Lab",
-  "description": "一個實戰旅遊攻略網站，專注於日本、韓國、台灣、東南亞自由行攻略。每篇內容都經過實地走訪驗證，提供具體的行程規劃、交通教學、美食推薦和預算參考。",
-  "requestFramePermissions": [],
-  "majorCapabilities": [
-    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
-  ]
-}
