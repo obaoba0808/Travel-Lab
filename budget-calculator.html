@@ -1,0 +1,1575 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EDPEJH91EL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-EDPEJH91EL');
+  </script>
+
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>出國旅遊預算試算器2026｜機票飯店花費一鍵試算｜均在路上 Travel Lab</title>
+  <meta name="description" content="出國旅遊預算試算器：輸入國家、天數與人數，自動幫你計算機票、住宿、餐飲、交通與購物等預算花費。內含日本、韓國、泰國、歐洲與美國最新小資省錢技巧。" />
+  <meta name="author" content="均在路上">
+  
+  <meta property="og:title" content="出國旅遊預算試算器2026｜機票飯店花費一鍵試算｜均在路上 Travel Lab"/>
+  <meta property="og:description" content="旅遊預算計算器｜一鍵試算日韓、泰國、歐美等國旅遊預算。自訂人數天數，自動生成各項支出分配與省錢規劃建議。"/>
+  <meta property="og:type" content="article"/>
+  <meta property="og:url" content="https://golightly.fun/budget-calculator.html"/>
+  <meta property="og:image" content="https://golightly.fun/images/og/og-travel-tools-hero.jpg"/>
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="出國旅遊預算試算器" />
+  <meta property="og:site_name" content="均在路上 Travel Lab"/>
+  <meta property="og:locale" content="zh_TW"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="出國旅遊預算試算器2026｜機票飯店花費一鍵試算｜均在路上 Travel Lab"/>
+  <meta name="twitter:description" content="旅遊預算計算器｜一鍵試算日韓、泰國、歐美等國旅遊預算。自訂人數天數，自動生成各項支出分配與省錢規劃建議。" />
+  <meta name="twitter:image" content="https://golightly.fun/images/og/og-travel-tools-hero.jpg" />
+
+  <link href="https://golightly.fun/budget-calculator.html" rel="canonical"/>
+  <link href="https://golightly.fun/budget-calculator.html" hreflang="zh-Hant" rel="alternate"/>
+  <link href="https://golightly.fun/budget-calculator.html" hreflang="zh-TW" rel="alternate"/>
+  <link href="https://golightly.fun/budget-calculator.html" hreflang="x-default" rel="alternate"/>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+            sans: ['"Inter"', '"Noto Sans TC"', 'sans-serif'],
+            display: ['"Space Grotesk"', '"Inter"', 'sans-serif'],
+          },
+          colors: {
+            tiffany: {
+              DEFAULT: '#e63946',     // Vitality Ultimate Red
+              light: '#fca5a5',
+              dark: '#C1121F',
+              cream: '#f8fafc',       // Cool Slate Background
+              ice: '#e2e8f0',
+              obsidian: '#020617',    // Deep Slate Dark
+              obsidianLight: '#1e293b',
+              gold: '#FBBF24',
+              rating: '#FBBF24'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Noto+Sans+TC:wght@400;500;700;900&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet"/>
+
+  <!-- Custom CSS Overrides -->
+  <style>
+    body {
+      font-family: 'Inter', 'Noto Sans TC', sans-serif;
+      background-color: #f8fafc;
+      color: #1e293b;
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #e63946;
+      border-radius: 9999px;
+    }
+    /* FAQ Accordion */
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+    }
+    .faq-item.open .faq-answer {
+      max-height: 500px;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+    }
+    .faq-item.open .faq-icon {
+      transform: rotate(180deg);
+    }
+  
+    /* Prose hyperlink styles */
+    article p a, .article-body p a, .markdown-body p a {
+      color: #2563EB !important;
+      text-decoration: underline !important;
+      transition: color 0.15s ease-in-out !important;
+    }
+    article p a:hover, .article-body p a:hover, .markdown-body p a:hover {
+      color: #1D4ED8 !important;
+    }
+  
+  </style>
+
+  <!-- Structured Data / JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "出國旅遊預算試算器2026｜機票飯店花費一鍵試算｜均在路上 Travel Lab",
+    "description": "出國旅遊預算試算器：自訂國家、天數與人數，自動生成機票、住宿、餐飲、交通與購物預算，並附贈各國行前省錢技巧。",
+    "url": "https://golightly.fun/budget-calculator.html",
+    "author": {"@type": "Person", "name": "均在路上"},
+    "publisher": {"@type": "Organization", "name": "均在路上 Travel Lab", "logo": {"@type": "ImageObject", "url": "https://golightly.fun/images/og/og-travel-lab-logo.jpg"}},
+    "datePublished": "2026-06-26",
+    "dateModified": "2026-06-26"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type": "Question", "name": "出國自由行預算該怎麼分配最合理？", "acceptedAnswer": {"@type": "Answer", "text": "通常機票與住宿會佔總預算的 50-60%，剩餘 40-50% 分配給當地餐費、交通、景點門票與購物。如果是去物價高的歐美地區，住宿占比會再拉高；若是去泰國等東南亞國家，餐食與按摩等娛樂活動的預算占比可以更高。"}},
+      {"@type": "Question", "name": "如何降低旅遊住宿的花費？", "acceptedAnswer": {"@type": "Answer", "text": "1. 避開熱門大站，選擇地鐵往後 2-3 站、走路 8-10 分鐘的商旅，房價可能直接減半。2. 使用比價網站並提早 2-3 個月預訂。3. 善用信用卡聯名卡的回饋與訂房網的 10% 折扣優惠碼。"}},
+      {"@type": "Question", "name": "去日本/韓國一天的餐費應該抓多少？", "acceptedAnswer": {"@type": "Answer", "text": "日本一天建議抓 4,000-6,000 日圓（約 NT$900-1,300），足以包含一餐拉麵、一餐精緻燒肉或居酒屋，加上超商點心。韓國一天餐費約 35,000-50,000 韓元（約 NT$850-1,200），可以吃得很豐盛。"}},
+      {"@type": "Question", "name": "廉價航空真的比較省嗎？", "acceptedAnswer": {"@type": "Answer", "text": "是的，但前提是你不加購托運行李或選位。如果需要 20kg 行李、餐點、改期服務，加上去可能跟傳統航空差不多。建議仔細評估隨身行李限制（通常 7kg）後再決定是否買廉航。"}},
+      {"@type": "Question", "name": "出國當地的交通票券要提前買嗎？", "acceptedAnswer": {"@type": "Answer", "text": "非常建議！例如日本的 JR Pass、關西周遊券，或是泰國的 BTS 一日通票等，在 Klook 或 KKday 提前購買往往比現場購買享有 5-15% 的折扣，且免去現場排隊的麻煩。"}},
+      {"@type": "Question", "name": "旅遊預算中一定要預留備用金嗎？", "acceptedAnswer": {"@type": "Answer", "text": "是的！強烈建議預留總預算的 10-15% 作為「緊急備用金」，可用於應對突發狀況、海外就醫、航班延誤後的交通住宿補貼，或者臨時的大型購物支出。"}},
+      {"@type": "Question", "name": "海外刷卡手續費怎麼避開？", "acceptedAnswer": {"@type": "Answer", "text": "大部分海外刷卡會收取 1.5% 的手續費。建議申辦專門的「海外高回饋信用卡」（如回饋 2.5% - 4% 的信用卡），這樣扣除手續費後，還能倒賺 1% - 2.5% 的現金回饋，是出國最省錢的刷卡妙招。"}},
+      {"@type": "Question", "name": "eSIM 比實體 SIM 卡更便宜方便嗎？", "acceptedAnswer": {"@type": "Answer", "text": "eSIM 不需要拔卡、一鍵掃描 QR Code 即可使用，非常方便。價格上 eSIM 目前跟實體 SIM 卡幾乎持平。如果是多人出遊，不建議買 WiFi 機，買每人一張 eSIM 既省時又不用被綁在一起。"}}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "首頁", "item": "https://golightly.fun/"},
+      {"@type": "ListItem", "position": 2, "name": "旅遊工具", "item": "https://golightly.fun/travel-tools.html"},
+      {"@type": "ListItem", "position": 3, "name": "出國旅遊預算試算器", "item": "https://golightly.fun/budget-calculator.html"}
+    ]
+  }
+  </script>
+</head>
+<body class="bg-tiffany-cream text-[#1e293b] flex flex-col min-h-screen selection:bg-tiffany selection:text-white">
+
+  <!-- ========== 核心導航進度條 ========== -->
+  <div class="reading-progress-container fixed top-0 left-0 w-full h-1 z-[110] bg-slate-100">
+    <div id="reading-progress" class="h-full bg-[#e63946] w-0 transition-all duration-100"></div>
+  </div>
+
+  <!-- ========== UNIFIED DYNAMIC HEADER ========== -->
+  <!-- UNIFIED HEADER -->
+<!-- UNIFIED HEADER -->
+<script src="/global-header.js?v=20260627_v4" defer></script>
+
+  
+  
+              <!-- EDITORIAL HERO REGION WITH BEAST-UNMASKED CARD -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8 sm:mb-12">
+    <div class="bg-white rounded-b-[2.5rem] md:rounded-b-[4.5rem] overflow-hidden">
+      
+      <!-- HERO IMAGE - FULLY UNMASKED -->
+      <div class="w-full overflow-hidden bg-slate-950">
+        <img alt="出國旅遊預算試算器｜自由行花費到底該準備多少？一鍵智能試算與省錢配置！" class="w-full h-auto block mx-auto hover:scale-[1.01] transition-transform duration-700" loading="eager" src="images/trip-taiwan.webp"/>
+      </div>
+      
+      <!-- HERO CONTENT BLOCK -->
+      <div class="py-8 px-6 md:py-10 md:px-12 text-center bg-white space-y-5">
+        
+        <!-- GRADIENT REGION TAG -->
+        <div class="inline-flex items-center justify-center">
+          <span class="inline-block bg-gradient-to-r from-tiffany to-red-500 text-white text-[10px] font-display font-semibold uppercase tracking-[0.25em] px-4 py-1.5 rounded-full shadow-md shadow-tiffany/20">
+            ✈️ TRAVEL LAB
+          </span>
+        </div>
+        
+        <!-- MAIN TITLE -->
+        <h1 class="font-serif text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-wide text-slate-900 max-w-4xl mx-auto leading-tight md:leading-[1.15]">
+          出國旅遊預算試算器｜自由行花費到底該準備多少？一鍵智能試算與省錢配置！
+        </h1>
+        
+        <!-- CONTRAST CAPSULE SUBTITLE -->
+        <div class="inline-flex flex-wrap items-center justify-center gap-x-4 gap-y-2 px-6 py-3 bg-slate-950/95 text-xs font-semibold rounded-full shadow-md max-w-3xl mx-auto border border-slate-800">
+          <span class="flex items-center gap-1.5 text-tiffany"><span class="font-sans">🗺️</span> 行前規劃</span>
+          <span class="text-white">•</span>
+          <span class="flex items-center gap-1.5 text-tiffany"><span class="font-sans">🍲</span> 在地美食</span>
+          <span class="text-white">•</span>
+          <span class="flex items-center gap-1.5 text-tiffany"><span class="font-sans">🛍️</span> 必訪景點</span>
+          <span class="text-white">•</span>
+          <span class="flex items-center gap-1.5 text-tiffany"><span class="font-sans">🏨</span> 推薦住宿</span>
+        </div>
+        
+        <!-- SITE DESCRIPTION / INTRODUCTION -->
+        <p class="text-sm md:text-base text-slate-500 max-w-2xl mx-auto leading-relaxed">
+          潮流、傳統與極致美食完美交織，為你開啟最專業、最精緻的自由行探索之旅。
+        </p>
+        
+        <!-- DATE & AUTHOR -->
+        <div class="text-xs text-slate-400 flex items-center justify-center gap-3 pt-2 font-display uppercase tracking-widest">
+          <span>📝 Travel Lab 編輯部</span>
+          <span class="text-slate-300">•</span>
+          <span>更新於 2026 年 6 月</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BREADCRUMBS -->
+  <div class="bg-white border-b border-slate-100 py-4 mb-6">
+    <div class="max-w-7xl mx-auto px-6">
+      <nav class="flex items-center gap-2 text-xs font-semibold text-[#1e293b]">
+        <a href="index.html" class="hover:text-[#e63946] transition-colors">首頁</a>
+      <span class="text-slate-300">/</span>
+      <a href="travel-tools.html" class="hover:text-[#e63946] transition-colors">旅遊工具</a>
+      <span class="text-slate-300">/</span>
+      <span class="text-[#020617] font-semibold">旅遊預算試算器</span>
+      </nav>
+    </div>
+  </div>
+
+
+  <!-- MAIN COLUMN LAYOUT -->
+  <div class="max-w-7xl mx-auto px-6 py-6">
+    <!-- Layout Grid -->
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+      
+      <!-- ==================== MAIN CONTENT (COL SPAN 9) ==================== -->
+      <main class="lg:col-span-8 space-y-12">
+        
+        <!-- Post Header -->
+        <article class="space-y-6">
+          <div class="space-y-3">
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-[#e63946]/10 text-[#e63946]">
+              📊 2026 智慧旅遊理財工具
+            </span>
+            <h1 class="serif-title text-3xl sm:text-4xl font-extrabold text-[#020617] tracking-tight leading-tight">
+              出國旅遊預算試算器｜自由行花費到底該準備多少？一鍵智能試算與省錢配置！
+            </h1>
+            <div class="flex flex-wrap items-center gap-3 text-xs text-slate-700 font-medium">
+              <span class="flex items-center gap-1"><span class="text-[#e63946]">✍️</span> 均在路上 Travel Lab 編輯部</span>
+              <span>•</span>
+              <span class="flex items-center gap-1"><span class="text-[#e63946]">📅</span> 2026 年最新實測基準</span>
+              <span>•</span>
+              <span class="flex items-center gap-1"><span class="text-[#e63946]">⚡</span> 即時動態運算</span>
+            </div>
+          </div>
+
+          <div class="p-6 bg-white border border-slate-200/80 rounded-3xl shadow-xs leading-relaxed space-y-4">
+            <p class="text-sm sm:text-base text-[#1e293b]">
+              出國自由行最令人頭痛的莫過於<strong>規劃旅遊預算</strong>！機票要買廉航還是傳統航空？飯店一晚到底要抓多少才合理？在當地吃飯、搭車、買紀念品又會花掉多少錢？
+            </p>
+            <p class="text-sm text-[#1e293b]">
+              本工具針對國人熱門的目的地，包含 <strong>日本、韓國、泰國、台灣在地、歐洲、美國</strong> 等，根據 2026 年最新當地消費物價進行了基準設定。您只需選擇目的地、輸入天數與人數，即可<strong>一鍵精算</strong>出總預算以及各品項分配比例，並附贈專屬的行前省錢極致指南，幫助您把每一分錢都花在刀口上！
+            </p>
+          </div>
+        </article>
+
+        <!-- ==================== CALCULATOR APPLET CORE ==================== -->
+        <section id="budget-calculator-app" class="bg-white border border-slate-200 rounded-3xl shadow-sm overflow-hidden p-6 sm:p-8 space-y-8">
+          
+          <!-- Category Header -->
+          <div class="border-b border-slate-100 pb-5">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-2.5">
+                <div class="w-8 h-8 rounded-xl bg-[#e63946]/10 text-[#e63946] flex items-center justify-center font-bold">🧮</div>
+                <div>
+                  <h2 class="text-xl font-bold text-[#020617]">出國預算即時試算器</h2>
+                  <p class="text-xs text-slate-600">請在下方填寫或點擊熱門國家預設，右側或下方會即時計算分析</p>
+                </div>
+              </div>
+              <button onclick="resetCalculator()" class="text-xs font-semibold text-slate-700 hover:text-[#e63946] transition-colors flex items-center gap-1 py-1 px-2.5 rounded-lg border border-slate-200 hover:border-[#e63946]/30 bg-slate-50 hover:bg-slate-100">
+                🔄 重設預設
+              </button>
+            </div>
+          </div>
+
+          <!-- Quick Prefills -->
+          <div class="space-y-3">
+            <label class="block text-xs font-bold text-[#020617] uppercase tracking-wider flex items-center gap-1">
+              <span class="text-[#e63946]">✨</span> 快速套用 2026 熱門目的地物價基準
+            </label>
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-2">
+              <button onclick="applyPreset('japan')" class="preset-btn px-3 py-2.5 rounded-xl border border-slate-200 hover:border-[#e63946] text-xs font-bold bg-white text-[#1e293b] hover:text-[#e63946] transition-all flex flex-col items-center gap-1 group shadow-xs">
+                <span class="text-lg">🇯🇵</span>
+                <span>日本自由行</span>
+              </button>
+              <button onclick="applyPreset('korea')" class="preset-btn px-3 py-2.5 rounded-xl border border-slate-200 hover:border-[#e63946] text-xs font-bold bg-white text-[#1e293b] hover:text-[#e63946] transition-all flex flex-col items-center gap-1 group shadow-xs">
+                <span class="text-lg">🇰🇷</span>
+                <span>韓國快閃</span>
+              </button>
+              <button onclick="applyPreset('thailand')" class="preset-btn px-3 py-2.5 rounded-xl border border-slate-200 hover:border-[#e63946] text-xs font-bold bg-white text-[#1e293b] hover:text-[#e63946] transition-all flex flex-col items-center gap-1 group shadow-xs">
+                <span class="text-lg">🇹🇭</span>
+                <span>泰國度假</span>
+              </button>
+              <button onclick="applyPreset('taiwan')" class="preset-btn px-3 py-2.5 rounded-xl border border-slate-200 hover:border-[#e63946] text-xs font-bold bg-white text-[#1e293b] hover:text-[#e63946] transition-all flex flex-col items-center gap-1 group shadow-xs">
+                <span class="text-lg">🇹🇼</span>
+                <span>台灣慢活</span>
+              </button>
+              <button onclick="applyPreset('europe')" class="preset-btn px-3 py-2.5 rounded-xl border border-slate-200 hover:border-[#e63946] text-xs font-bold bg-white text-[#1e293b] hover:text-[#e63946] transition-all flex flex-col items-center gap-1 group shadow-xs">
+                <span class="text-lg">🇪🇺</span>
+                <span>歐洲漫遊</span>
+              </button>
+              <button onclick="applyPreset('usa')" class="preset-btn px-3 py-2.5 rounded-xl border border-slate-200 hover:border-[#e63946] text-xs font-bold bg-white text-[#1e293b] hover:text-[#e63946] transition-all flex flex-col items-center gap-1 group shadow-xs">
+                <span class="text-lg">🇺🇸</span>
+                <span>美東美西</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Main Input and Output Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+            
+            <!-- Left inputs (Col Span 7) -->
+            <div class="md:col-span-7 space-y-5">
+              
+              <!-- Core Trip Parameters -->
+              <div class="bg-slate-50/70 p-4 rounded-2xl border border-slate-100 grid grid-cols-2 gap-4">
+                <div class="space-y-1.5">
+                  <label for="trip-days" class="block text-xs font-bold text-[#020617]">📅 旅遊天數 (天)</label>
+                  <div class="flex items-center gap-2">
+                    <button onclick="adjustInput('trip-days', -1)" class="w-8 h-8 rounded-lg border border-slate-200 bg-white text-[#1e293b] font-bold hover:bg-slate-100 active:scale-95 transition-all text-sm">-</button>
+                    <input type="number" id="trip-days" value="5" min="1" max="90" oninput="calculateTotal()" class="w-full text-center py-1.5 border border-slate-200 rounded-lg text-sm font-bold text-[#020617] focus:outline-none focus:border-[#e63946]">
+                    <button onclick="adjustInput('trip-days', 1)" class="w-8 h-8 rounded-lg border border-slate-200 bg-white text-[#1e293b] font-bold hover:bg-slate-100 active:scale-95 transition-all text-sm">+</button>
+                  </div>
+                </div>
+
+                <div class="space-y-1.5">
+                  <label for="trip-travelers" class="block text-xs font-bold text-[#020617]">👥 同行人數 (人)</label>
+                  <div class="flex items-center gap-2">
+                    <button onclick="adjustInput('trip-travelers', -1)" class="w-8 h-8 rounded-lg border border-slate-200 bg-white text-[#1e293b] font-bold hover:bg-slate-100 active:scale-95 transition-all text-sm">-</button>
+                    <input type="number" id="trip-travelers" value="2" min="1" max="30" oninput="calculateTotal()" class="w-full text-center py-1.5 border border-slate-200 rounded-lg text-sm font-bold text-[#020617] focus:outline-none focus:border-[#e63946]">
+                    <button onclick="adjustInput('trip-travelers', 1)" class="w-8 h-8 rounded-lg border border-slate-200 bg-white text-[#1e293b] font-bold hover:bg-slate-100 active:scale-95 transition-all text-sm">+</button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Expenditure details accordion/list -->
+              <div class="space-y-4">
+                <h3 class="text-xs font-bold text-[#020617] uppercase tracking-wider border-l-2 border-[#e63946] pl-2 flex items-center justify-between">
+                  <span>💰 預估各項單價支出 (台幣 NT$)</span>
+                  <span class="text-[10px] text-slate-600 lowercase font-normal">可手動調整變更數據</span>
+                </h3>
+
+                <!-- Plane ticket -->
+                <div class="space-y-1.5 bg-white p-3 border border-slate-100 rounded-xl hover:border-slate-200 transition-colors">
+                  <div class="flex justify-between items-center text-xs">
+                    <span class="font-bold text-[#1e293b] flex items-center gap-1">🎫 往返機票費用 <span class="text-[10px] text-slate-600">(每人)</span></span>
+                    <span id="flight-cost-display" class="font-bold text-[#020617]">NT$ 13,500</span>
+                  </div>
+                  <input type="range" id="flight-cost" min="0" max="60000" step="500" value="13500" oninput="updateRange('flight-cost')" class="w-full h-1 bg-slate-100 rounded-lg appearance-none cursor-pointer accent-[#e63946]">
+                </div>
+
+                <!-- Hotel per night -->
+                <div class="space-y-1.5 bg-white p-3 border border-slate-100 rounded-xl hover:border-slate-200 transition-colors">
+                  <div class="flex justify-between items-center text-xs">
+                    <span class="font-bold text-[#1e293b] flex items-center gap-1">🏨 飯店住宿費用 <span class="text-[10px] text-slate-600">(每房/晚，預設雙人一間)</span></span>
+                    <span id="hotel-cost-display" class="font-bold text-[#020617]">NT$ 3,200</span>
+                  </div>
+                  <div class="flex items-center gap-4">
+                    <input type="range" id="hotel-cost" min="0" max="20000" step="100" value="3200" oninput="updateRange('hotel-cost')" class="w-full h-1 bg-slate-100 rounded-lg appearance-none cursor-pointer accent-[#e63946]">
+                    <div class="flex items-center gap-1 text-[10px] whitespace-nowrap bg-slate-100 px-2 py-1 rounded">
+                      <span>房數: </span>
+                      <span id="rooms-count-display" class="font-bold text-[#e63946]">1</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Food and Drink per person/day -->
+                <div class="space-y-1.5 bg-white p-3 border border-slate-100 rounded-xl hover:border-slate-200 transition-colors">
+                  <div class="flex justify-between items-center text-xs">
+                    <span class="font-bold text-[#1e293b] flex items-center gap-1">🍜 每日餐飲預算 <span class="text-[10px] text-slate-600">(每人/日)</span></span>
+                    <span id="food-cost-display" class="font-bold text-[#020617]">NT$ 1,200</span>
+                  </div>
+                  <input type="range" id="food-cost" min="0" max="8000" step="50" value="1200" oninput="updateRange('food-cost')" class="w-full h-1 bg-slate-100 rounded-lg appearance-none cursor-pointer accent-[#e63946]">
+                </div>
+
+                <!-- Transport per person/day -->
+                <div class="space-y-1.5 bg-white p-3 border border-slate-100 rounded-xl hover:border-slate-200 transition-colors">
+                  <div class="flex justify-between items-center text-xs">
+                    <span class="font-bold text-[#1e293b] flex items-center gap-1">🚇 每日當地交通 <span class="text-[10px] text-slate-600">(每人/日，捷運/鐵路等)</span></span>
+                    <span id="transport-cost-display" class="font-bold text-[#020617]">NT$ 350</span>
+                  </div>
+                  <input type="range" id="transport-cost" min="0" max="4000" step="10" value="350" oninput="updateRange('transport-cost')" class="w-full h-1 bg-slate-100 rounded-lg appearance-none cursor-pointer accent-[#e63946]">
+                </div>
+
+                <!-- Attraction / Tickets per person -->
+                <div class="space-y-1.5 bg-white p-3 border border-slate-100 rounded-xl hover:border-slate-200 transition-colors">
+                  <div class="flex justify-between items-center text-xs">
+                    <span class="font-bold text-[#1e293b] flex items-center gap-1">🎟️ 景點門票與一日遊 <span class="text-[10px] text-slate-600">(每人整趟，如環球、迪士尼、按摩等)</span></span>
+                    <span id="attraction-cost-display" class="font-bold text-[#020617]">NT$ 1,500</span>
+                  </div>
+                  <input type="range" id="attraction-cost" min="0" max="25000" step="100" value="1500" oninput="updateRange('attraction-cost')" class="w-full h-1 bg-slate-100 rounded-lg appearance-none cursor-pointer accent-[#e63946]">
+                </div>
+
+                <!-- Shopping / souvenirs per person -->
+                <div class="space-y-1.5 bg-white p-3 border border-slate-100 rounded-xl hover:border-slate-200 transition-colors">
+                  <div class="flex justify-between items-center text-xs">
+                    <span class="font-bold text-[#1e293b] flex items-center gap-1">🛍️ 購物伴手禮預算 <span class="text-[10px] text-slate-600">(每人整趟)</span></span>
+                    <span id="shopping-cost-display" class="font-bold text-[#020617]">NT$ 8,000</span>
+                  </div>
+                  <input type="range" id="shopping-cost" min="0" max="100000" step="500" value="8000" oninput="updateRange('shopping-cost')" class="w-full h-1 bg-slate-100 rounded-lg appearance-none cursor-pointer accent-[#e63946]">
+                </div>
+
+                <!-- eSIM / Insurance / Miscellaneous per person -->
+                <div class="space-y-1.5 bg-white p-3 border border-slate-100 rounded-xl hover:border-slate-200 transition-colors">
+                  <div class="flex justify-between items-center text-xs">
+                    <span class="font-bold text-[#1e293b] flex items-center gap-1">🛜 保險、網卡與雜支 <span class="text-[10px] text-slate-600">(每人整趟，保險、eSIM等)</span></span>
+                    <span id="misc-cost-display" class="font-bold text-[#020617]">NT$ 1,000</span>
+                  </div>
+                  <input type="range" id="misc-cost" min="0" max="10000" step="50" value="1000" oninput="updateRange('misc-cost')" class="w-full h-1 bg-slate-100 rounded-lg appearance-none cursor-pointer accent-[#e63946]">
+                </div>
+
+              </div>
+
+            </div>
+
+            <!-- Right interactive analysis (Col Span 5) -->
+            <div class="md:col-span-5 bg-slate-50 rounded-2xl border border-slate-200/60 p-5 space-y-6">
+              
+              <!-- Total Sum Widget -->
+              <div class="text-center space-y-1 py-4 border-b border-slate-200">
+                <span class="text-[10px] font-bold text-slate-600 uppercase tracking-widest">總估算預算金額</span>
+                <div id="grand-total-display" class="text-3xl sm:text-4xl font-black text-[#e63946] font-display">NT$ 51,950</div>
+                <div class="text-[11px] text-slate-700 font-medium">
+                  每人平均：<span id="per-person-display" class="font-bold text-[#020617]">NT$ 25,975</span>
+                  <span class="mx-1">|</span>
+                  每日平均：<span id="per-day-display" class="font-bold text-[#020617]">NT$ 10,390</span>
+                </div>
+              </div>
+
+              <!-- Budget Class Indicator -->
+              <div class="space-y-2">
+                <div class="flex justify-between items-center text-xs">
+                  <span class="font-bold text-[#1e293b]">💎 旅遊奢華指數等級：</span>
+                  <span id="budget-class-badge" class="px-2.5 py-0.5 rounded-full text-[10px] font-extrabold bg-[#e63946]/10 text-[#e63946]">舒適平衡之旅</span>
+                </div>
+                <div class="w-full bg-slate-200 h-2 rounded-full overflow-hidden flex">
+                  <div id="tier-bar-1" class="h-full bg-slate-300 transition-all duration-300 w-[33%]"></div>
+                  <div id="tier-bar-2" class="h-full border-l border-white bg-[#e63946] transition-all duration-300 w-[33%]"></div>
+                  <div id="tier-bar-3" class="h-full border-l border-white bg-slate-300 transition-all duration-300 w-[34%]"></div>
+                </div>
+                <p id="budget-class-desc" class="text-[11px] text-slate-700 leading-normal">
+                  您配置的每日預算屬於中產階級精緻平衡之旅，既可以享受不錯的飯店、品嚐在地排隊餐廳，也能有一些購物與舒適的玩樂享受。
+                </p>
+              </div>
+
+              <!-- Budget Breakdown Progress bars -->
+              <div class="space-y-3.5">
+                <span class="block text-xs font-bold text-[#020617] uppercase tracking-wider">📊 預算各項目佔比</span>
+                <div class="space-y-2 text-xs">
+                  <!-- Flight -->
+                  <div>
+                    <div class="flex justify-between text-[11px] mb-1">
+                      <span class="text-[#1e293b] font-semibold">🎫 往返機票 (<span id="pct-flight">51.9</span>%)</span>
+                      <span id="tot-flight" class="font-bold text-slate-700">NT$ 27,000</span>
+                    </div>
+                    <div class="w-full bg-slate-200/50 h-1.5 rounded-full">
+                      <div id="bar-flight" class="bg-[#e63946] h-full rounded-full transition-all duration-300" style="width: 51.9%"></div>
+                    </div>
+                  </div>
+
+                  <!-- Hotel -->
+                  <div>
+                    <div class="flex justify-between text-[11px] mb-1">
+                      <span class="text-[#1e293b] font-semibold">🏨 飯店住宿 (<span id="pct-hotel">24.6</span>%)</span>
+                      <span id="tot-hotel" class="font-bold text-slate-700">NT$ 12,800</span>
+                    </div>
+                    <div class="w-full bg-slate-200/50 h-1.5 rounded-full">
+                      <div id="bar-hotel" class="bg-[#e63946]/80 h-full rounded-full transition-all duration-300" style="width: 24.6%"></div>
+                    </div>
+                  </div>
+
+                  <!-- Food -->
+                  <div>
+                    <div class="flex justify-between text-[11px] mb-1">
+                      <span class="text-[#1e293b] font-semibold">🍜 餐飲美食 (<span id="pct-food">11.5</span>%)</span>
+                      <span id="tot-food" class="font-bold text-slate-700">NT$ 6,000</span>
+                    </div>
+                    <div class="w-full bg-slate-200/50 h-1.5 rounded-full">
+                      <div id="bar-food" class="bg-[#e63946]/60 h-full rounded-full transition-all duration-300" style="width: 11.5%"></div>
+                    </div>
+                  </div>
+
+                  <!-- Transport -->
+                  <div>
+                    <div class="flex justify-between text-[11px] mb-1">
+                      <span class="text-[#1e293b] font-semibold">🚇 當地交通 (<span id="pct-transport">3.4</span>%)</span>
+                      <span id="tot-transport" class="font-bold text-slate-700">NT$ 1,750</span>
+                    </div>
+                    <div class="w-full bg-slate-200/50 h-1.5 rounded-full">
+                      <div id="bar-transport" class="bg-[#e63946]/45 h-full rounded-full transition-all duration-300" style="width: 3.4%"></div>
+                    </div>
+                  </div>
+
+                  <!-- Attraction -->
+                  <div>
+                    <div class="flex justify-between text-[11px] mb-1">
+                      <span class="text-[#1e293b] font-semibold">🎟️ 景點娛樂 (<span id="pct-attraction">5.8</span>%)</span>
+                      <span id="tot-attraction" class="font-bold text-slate-700">NT$ 3,000</span>
+                    </div>
+                    <div class="w-full bg-slate-200/50 h-1.5 rounded-full">
+                      <div id="bar-attraction" class="bg-[#e63946]/30 h-full rounded-full transition-all duration-300" style="width: 5.8%"></div>
+                    </div>
+                  </div>
+
+                  <!-- Shopping -->
+                  <div>
+                    <div class="flex justify-between text-[11px] mb-1">
+                      <span class="text-[#1e293b] font-semibold">🛍️ 購物手信 (<span id="pct-shopping">1.9</span>%)</span>
+                      <span id="tot-shopping" class="font-bold text-slate-700">NT$ 1,000</span>
+                    </div>
+                    <div class="w-full bg-slate-200/50 h-1.5 rounded-full">
+                      <div id="bar-shopping" class="bg-[#e63946]/20 h-full rounded-full transition-all duration-300" style="width: 1.9%"></div>
+                    </div>
+                  </div>
+
+                  <!-- Misc -->
+                  <div>
+                    <div class="flex justify-between text-[11px] mb-1">
+                      <span class="text-[#1e293b] font-semibold">🛜 雜項網卡 (<span id="pct-misc">1.0</span>%)</span>
+                      <span id="tot-misc" class="font-bold text-slate-700">NT$ 500</span>
+                    </div>
+                    <div class="w-full bg-slate-200/50 h-1.5 rounded-full">
+                      <div id="bar-misc" class="bg-slate-300 h-full rounded-full transition-all duration-300" style="width: 1%"></div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+              <!-- CTA Buttons inside app -->
+              <div class="pt-4 border-t border-slate-200/70 space-y-2">
+                <button onclick="copyToClipboard()" class="w-full py-2.5 bg-[#e63946] hover:bg-[#C1121F] text-white font-bold rounded-xl text-xs shadow-lg shadow-red-500/10 transition-all cursor-pointer flex items-center justify-center gap-1.5">
+                  📋 複製我的預算配置明細
+                </button>
+                <div id="copy-success" class="text-[10px] text-center text-emerald-600 font-bold hidden">
+                  ✓ 已成功複製預算明細至剪貼簿，可直接貼至 Line 或 Notion 筆記！
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+        </section>
+
+        <!-- ==================== COUNTRY SAVING ADVICE (DYNAMIC) ==================== -->
+        <section id="saving-tips-module" class="bg-white border border-slate-200 rounded-3xl shadow-sm p-6 sm:p-8 space-y-6">
+          <div class="border-b border-slate-100 pb-4">
+            <span class="text-xs font-bold text-[#e63946] uppercase tracking-wider font-display">SMART ADVICE</span>
+            <h2 id="tips-country-title" class="serif-title text-slate-950 text-2xl font-bold mt-1">💡 日本自由行智能省錢與理財規劃建議</h2>
+            <div class="w-12 h-1 bg-[#06B6D4] mt-3"></div>
+          </div>
+
+          <div id="tips-content" class="text-xs sm:text-sm text-slate-700 leading-relaxed space-y-4">
+            <!-- Dynamic Injection of Tips -->
+            <p>日本是自由行性價比極高但也充滿隱性消費的國家。以下為您整理專屬於日本自由行的三大省錢妙招：</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2">
+              <div class="p-4 bg-slate-50 border border-slate-100 rounded-xl space-y-1.5">
+                <h4 class="font-bold text-slate-950 flex items-center gap-1">🚄 善用地區鐵路周遊券</h4>
+                <p class="text-xs text-slate-700 leading-normal">日本新幹線與地鐵單程費極貴。去關東一定要辦關東三日通票；關西辦關西周遊卡。事先上 Klook 或 KKday 買能省 10-15%。</p>
+              </div>
+              <div class="p-4 bg-slate-50 border border-slate-100 rounded-xl space-y-1.5">
+                <h4 class="font-bold text-slate-950 flex items-center gap-1">🏪 夜間超商與超市「半額」</h4>
+                <p class="text-xs text-slate-700 leading-normal">日本的大型超市在每天晚上 7:30 - 8:30 後，熟食區如壽司、便當、炸物會陸續貼上「半額」(5折) 或 7 折標籤，是體驗在地美食又極省餐費的絕招。</p>
+              </div>
+              <div class="p-4 bg-slate-50 border border-slate-100 rounded-xl space-y-1.5">
+                <h4 class="font-bold text-slate-950 flex items-center gap-1">💳 備妥高回饋旅日神卡</h4>
+                <p class="text-xs text-slate-700 leading-normal">日本刷卡非常普及。建議準備一張海外刷卡回饋高於 3% 的信用卡（例如聯邦吉鶴卡、富邦J卡），扣除 1.5% 手續費後還能賺取不少現金回饋！</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ==================== DETAILED ARTICLE AND BUDGETING TIPS ==================== -->
+        <section class="bg-white rounded-3xl border border-slate-200 p-8 space-y-8 shadow-sm">
+          
+          <div class="border-b border-slate-100 pb-4">
+            <span class="text-xs font-bold text-[#e63946] uppercase tracking-wider font-display">BUDGETING STRATEGY</span>
+            <h2 class="serif-title text-slate-950 text-3xl font-bold mt-1">✈️ 專家帶路：出國旅遊省錢無痛預算規劃心法</h2>
+            <div class="w-12 h-1 bg-[#06B6D4] mt-3"></div>
+          </div>
+
+          <div class="text-xs sm:text-sm text-slate-700 leading-relaxed space-y-6">
+            <p>
+              規劃國外自由行的預算往往並非一成不變。以下是多位資深背包客與奢旅部落客共同總結的<strong>「四步無痛理財法」</strong>，幫助你在享受極致旅程的同時，也能看緊荷包：
+            </p>
+
+            <div class="space-y-4">
+              <!-- Point 1 -->
+              <div class="flex items-start gap-3">
+                <div class="flex items-center justify-center w-6 h-6 rounded bg-[#e63946] text-white text-xs font-bold mt-0.5 font-display">1</div>
+                <div class="space-y-1">
+                  <h4 class="font-bold text-slate-950 text-sm">遵守 4-3-2-1 黃金預算配比</h4>
+                  <p class="text-xs text-slate-700 leading-normal">
+                    在總預算中，建議將 <strong>40% 留給住宿、30% 分配給交通（含機票）、20% 留給每日美食享受與景點、10% 備作緊急雜支或伴手禮。</strong> 如果你發現機票太貴佔了 50% 以上，就必須縮減飯店等級或購物預算以求平衡。
+                  </p>
+                </div>
+              </div>
+
+              <!-- Point 2 -->
+              <div class="flex items-start gap-3 pt-3 border-t border-slate-100">
+                <div class="flex items-center justify-center w-6 h-6 rounded bg-[#e63946] text-white text-xs font-bold mt-0.5 font-display">2</div>
+                <div class="space-y-1">
+                  <h4 class="font-bold text-slate-950 text-sm">掌握「隱形支出」：手續費與備用金</h4>
+                  <p class="text-xs text-slate-700 leading-normal">
+                    很多人算預算時只算機票與飯店。但實際上，<strong>海外刷卡 1.5% 的手續費、當地機場至市區的接駁車、eSIM 網卡、海外急診保險</strong>、甚至飯店的觀光稅、清潔手續費等，加起來往往高達總預算的 8-12%。請務必使用本計算器中「雜項網卡」一欄列入。
+                  </p>
+                </div>
+              </div>
+
+              <!-- Point 3 -->
+              <div class="flex items-start gap-3 pt-3 border-t border-slate-100">
+                <div class="flex items-center justify-center w-6 h-6 rounded bg-[#e63946] text-white text-xs font-bold mt-0.5 font-display">3</div>
+                <div class="space-y-1">
+                  <h4 class="font-bold text-slate-950 text-sm">在不犧牲體驗的前提下「彈性節流」</h4>
+                  <p class="text-xs text-slate-700 leading-normal">
+                    去日本不一定要每天吃萬元和牛燒肉，中午吃商業便當（通常是晚上的 5-7 折價）就能享受同等美味！去曼谷不一定要每晚都住五星奢華河景飯店，選擇一兩晚有特色的小資設計青旅，最後一晚再升級奢華套房，既有深刻體驗又極度省預算。
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Hint box -->
+            <div class="p-5 bg-[#e63946]/5 border-l-4 border-[#e63946] rounded-r-2xl space-y-1.5 my-6">
+              <span class="font-bold text-slate-950 text-xs sm:text-sm flex items-center gap-1.5 text-[#e63946]">💡 編輯超好康分享：</span>
+              <p class="text-xs sm:text-sm text-slate-700 leading-relaxed">
+                利用各大行前預訂平台（如 Trip.com、Klook、KKday）在每月的 <strong>Double Days（如 7/7, 8/8, 9/9）</strong> 或黑色星期五大促銷期間，往往能搶到買一送一的景點門票、或高達 82 折的機票住宿優惠碼。建議將想要買的一日遊提早收藏，等大促當天一鍵結帳！
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- ==================== FAQ ACCORDION ==================== -->
+        <section id="faq-section" class="bg-white rounded-3xl border border-slate-200 p-8 space-y-6 shadow-sm">
+          
+          <div class="border-b border-slate-100 pb-4">
+            <span class="text-xs font-bold text-[#e63946] uppercase tracking-wider font-display">FAQ MODULE</span>
+            <h2 class="serif-title text-slate-950 text-2xl font-bold mt-1">❓ 出國旅遊預算常見問題與解答</h2>
+            <div class="w-12 h-1 bg-[#06B6D4] mt-3"></div>
+          </div>
+
+          <div class="space-y-4 divide-y divide-slate-100">
+            <!-- FAQ 1 -->
+            <div class="faq-item pt-4">
+              <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center text-left py-2 hover:text-[#e63946] transition-colors focus:outline-none">
+                <span class="font-bold text-xs sm:text-sm text-[#020617]">Q1. 出國自由行預算該怎麼分配最合理？</span>
+                <span class="faq-icon text-xs transition-transform duration-300">▼</span>
+              </button>
+              <div class="faq-answer text-xs sm:text-sm text-slate-700 leading-relaxed">
+                通常機票與住宿會佔總預算的 50-60%，剩餘 40-50% 分配給當地餐費、交通、景點門票與購物。如果是去物價高的歐美地區，住宿占比會再拉高；若是去泰國等東南亞國家，餐食與按摩等娛樂活動的預算占比可以更高。
+              </div>
+            </div>
+
+            <!-- FAQ 2 -->
+            <div class="faq-item pt-4">
+              <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center text-left py-2 hover:text-[#e63946] transition-colors focus:outline-none">
+                <span class="font-bold text-xs sm:text-sm text-[#020617]">Q2. 如何降低旅遊住宿的花費？</span>
+                <span class="faq-icon text-xs transition-transform duration-300">▼</span>
+              </button>
+              <div class="faq-answer text-xs sm:text-sm text-slate-700 leading-relaxed">
+                1. 避開熱門大站，選擇地鐵往後 2-3 站、走路 8-10 分鐘的商旅，房價可能直接減半。2. 使用比價網站並提早 2-3 個月預訂。3. 善用信用卡聯名卡的回饋與訂房網的 10% 折扣優惠碼。
+              </div>
+            </div>
+
+            <!-- FAQ 3 -->
+            <div class="faq-item pt-4">
+              <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center text-left py-2 hover:text-[#e63946] transition-colors focus:outline-none">
+                <span class="font-bold text-xs sm:text-sm text-[#020617]">Q3. 去日本/韓國一天的餐費應該抓多少？</span>
+                <span class="faq-icon text-xs transition-transform duration-300">▼</span>
+              </button>
+              <div class="faq-answer text-xs sm:text-sm text-slate-700 leading-relaxed">
+                日本一天建議抓 4,000-6,000 日圓（約 NT$900-1,300），足以包含一餐拉麵、一餐精緻燒肉或居酒屋，加上超商點心。韓國一天餐費約 35,000-50,000 韓元（約 NT$850-1,200），可以吃得很豐盛。
+              </div>
+            </div>
+
+            <!-- FAQ 4 -->
+            <div class="faq-item pt-4">
+              <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center text-left py-2 hover:text-[#e63946] transition-colors focus:outline-none">
+                <span class="font-bold text-xs sm:text-sm text-[#020617]">Q4. 廉價航空真的比較省嗎？</span>
+                <span class="faq-icon text-xs transition-transform duration-300">▼</span>
+              </button>
+              <div class="faq-answer text-xs sm:text-sm text-slate-700 leading-relaxed">
+                是的，但前提是你不加購托運行李或選位。如果需要 20kg 行李、餐點、改期服務，加上去可能跟傳統航空差不多。建議仔細評估隨身行李限制（通常 7kg）後再決定是否買廉航。
+              </div>
+            </div>
+
+            <!-- FAQ 5 -->
+            <div class="faq-item pt-4">
+              <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center text-left py-2 hover:text-[#e63946] transition-colors focus:outline-none">
+                <span class="font-bold text-xs sm:text-sm text-[#020617]">Q5. 出國當地的交通票券要提前買嗎？</span>
+                <span class="faq-icon text-xs transition-transform duration-300">▼</span>
+              </button>
+              <div class="faq-answer text-xs sm:text-sm text-slate-700 leading-relaxed">
+                非常建議！例如日本的 JR Pass、關西周遊券，或是泰國的 BTS 一日通票等，在 Klook 或 KKday 提前購買往往比現場購買享有 5-15% 的折扣，且免去現場排隊的麻煩。
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+      
+        
+  
+
+        
+  
+
+
+        
+        <!-- Section: 下載 Lead Magnet / PDF -->
+        <section id="工具包" class="bg-gradient-to-br from-[#1e293b] via-[#0f172a] to-[#020617] text-white rounded-3xl p-8 sm:p-10 space-y-6 shadow-lg border border-[#e63946]/35 relative overflow-hidden text-center sm:text-left">
+          <div class="absolute -right-16 -bottom-16 w-44 h-44 rounded-full bg-[#e63946]/10 blur-xl"></div>
+          <div class="grid grid-cols-1 sm:grid-cols-12 gap-6 items-center relative z-10">
+            <div class="sm:col-span-12 space-y-3">
+              <span class="text-xs font-bold text-[#e63946] tracking-widest uppercase">📂 讀者獨家限定福利</span>
+              <h3 class="text-xl sm:text-2xl font-bold font-serif text-white">
+                2026 全球旅行打包神器：終極行李清單、插頭電壓與里程精算全能包
+              </h3>
+              <p class="text-xs text-slate-300 leading-relaxed max-w-xl">
+                內含「3分鐘無腦出國行李檢查清單（PDF）」、全球插頭電壓與變壓器規格對照表、各大航空哩程兌換免稅票精算工具，讓你在出發前就萬無一失，行李精準減重！
+              </p>
+            </div>
+          </div>
+          <div class="h-px bg-slate-800"></div>
+          <form action="https://golightly.activehosted.com/proc.php" method="POST" class="flex flex-col sm:flex-row gap-3">
+            <input type="text" name="email" placeholder="請輸入您的 Email 電子郵件" required class="bg-slate-900/80 border border-slate-700 rounded-full px-5 py-3 text-xs w-full focus:outline-none focus:border-[#e63946] text-white" />
+            <input type="hidden" name="resource" value="global-toolkit" />
+            <button type="submit" class="bg-[#e63946] hover:bg-[#C1121F] text-white font-bold text-xs px-8 py-3.5 rounded-full transition-all duration-300 hover:scale-105 shadow-sm shrink-0">
+              立即免費下載工具包
+            </button>
+          </form>
+          <div class="text-center sm:text-left text-[10px] text-slate-600">🔒 我們極度重視您的個人隱私，絕不對外發送任何垃圾郵件</div>
+        </section>
+  
+
+        
+        <!-- Related Articles / 相關文章區塊 -->
+        <section class="space-y-6">
+          <div class="flex items-center justify-between border-b-2 border-[#06B6D4] pb-3">
+            <h2 class="text-2xl font-black text-[#020617] flex items-center gap-2.5">
+              <span class="text-xl">📚</span> 均在路上 · 更多實用旅遊工具指南</h2>
+            <span class="text-xs font-bold text-slate-500 uppercase tracking-widest hidden sm:inline">RELATED ARTICLES</span>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            
+            <!-- Card -->
+            <a href="esim-comparison.html" class="group bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-xs hover:shadow-md transition-all duration-300">
+              <div class="aspect-video w-full overflow-hidden bg-slate-150">
+                <img alt="出國上網" loading="lazy" src="images/esim-hero.webp" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+              </div>
+              <div class="p-4 space-y-2">
+                <span class="text-[10px] font-bold text-[#e63946] bg-[#e63946]/10 px-2 py-0.5 rounded-full">出國上網</span>
+                <h3 class="text-sm font-bold text-slate-900 group-hover:text-[#e63946] transition-colors line-clamp-2">
+                  2026 出國 eSIM 推薦與實測｜五大熱門方案一鍵智慧推薦
+                </h3>
+              </div>
+            </a>
+            <!-- Card -->
+            <a href="budget-airline-guide.html" class="group bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-xs hover:shadow-md transition-all duration-300">
+              <div class="aspect-video w-full overflow-hidden bg-slate-150">
+                <img alt="機票省錢" loading="lazy" src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=80&w=800" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+              </div>
+              <div class="p-4 space-y-2">
+                <span class="text-[10px] font-bold text-[#e63946] bg-[#e63946]/10 px-2 py-0.5 rounded-full">機票省錢</span>
+                <h3 class="text-sm font-bold text-slate-900 group-hover:text-[#e63946] transition-colors line-clamp-2">
+                  廉價航空搶票與搭乘終極指南｜手提行李、餐點加購與延誤理賠避坑
+                </h3>
+              </div>
+            </a>
+            <!-- Card -->
+            <a href="packing-list.html" class="group bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-xs hover:shadow-md transition-all duration-300">
+              <div class="aspect-video w-full overflow-hidden bg-slate-150">
+                <img alt="行前打包" loading="lazy" src="https://images.unsplash.com/photo-1527631746610-bca00a040d60?q=80&w=800" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+              </div>
+              <div class="p-4 space-y-2">
+                <span class="text-[10px] font-bold text-[#e63946] bg-[#e63946]/10 px-2 py-0.5 rounded-full">行前打包</span>
+                <h3 class="text-sm font-bold text-slate-900 group-hover:text-[#e63946] transition-colors line-clamp-2">
+                  出國打包不焦慮！超詳盡行李清單 check list 離線隨身攜帶包
+                </h3>
+              </div>
+            </a>
+          </div>
+        </section>
+  
+
+      </main>
+
+      <!-- ==================== SIDEBAR COLUMN (COL SPAN 3) ==================== -->
+      
+      <!-- ==================== SIDEBAR (COL SPAN 4) ==================== -->
+      <aside class="lg:col-span-4 space-y-8">
+        
+        <!-- Author Widget -->
+        <div class="bg-[#020617] text-white rounded-3xl p-6 shadow-md text-center space-y-4">
+          <div class="w-20 h-20 bg-[#e63946] rounded-full mx-auto flex items-center justify-center text-white font-black text-2xl shadow-inner">均</div>
+          <div class="space-y-1">
+            <h4 class="text-lg font-black text-white">均在路上 Travel Lab</h4>
+            <p class="text-xs text-slate-400 font-medium">✨ 2026 自由行實測開拓小隊</p>
+          </div>
+          <p class="text-xs text-slate-300 leading-relaxed px-2">
+            「均在路上」由數位遊牧旅人與美食精算師組成，專為熱愛自由的小資旅人提供100%零濾鏡、零置入、最真實的實測省錢乾貨！
+          </p>
+          <div class="h-px bg-slate-800"></div>
+          <div class="flex justify-around text-xs font-bold text-slate-300">
+            <div>
+              <span class="block text-lg font-extrabold text-[#e63946]">25+</span>
+              各國開拓
+            </div>
+            <div class="border-l border-slate-800"></div>
+            <div>
+              <span class="block text-lg font-extrabold text-[#e63946]">100%</span>
+              實測證實
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Sticky Sidebar Wrapper -->
+        <div class="sticky top-24 space-y-6">
+
+          <!-- 智能閱讀 & 快速導航 統合儀表板 (Unified Dashboard Container) -->
+          <div class="bg-white border border-slate-200 rounded-3xl p-6 shadow-xs space-y-6">
+
+            <!-- 智能閱讀儀表板 (Intelligent Reading Dashboard) -->
+            <div class="space-y-4">
+              <div class="flex items-center justify-between border-b border-slate-100 pb-2">
+                <h4 class="text-sm font-black text-[#020617] flex items-center gap-1.5 uppercase tracking-wider">
+                  ⚡ 智能閱讀儀表板
+                </h4>
+                <span class="text-[10px] font-bold px-2 py-0.5 bg-[#e63946]/10 text-[#e63946] rounded-full">LIVE</span>
+              </div>
+
+              <!-- 1. Real-time Progress & Reading speed -->
+              <div class="space-y-1.5 bg-slate-50/80 p-3.5 rounded-2xl border border-slate-100/80">
+                <div class="flex justify-between items-center text-[11px] font-bold text-slate-700">
+                  <span class="flex items-center gap-1">⏱️ 剩餘閱讀時間</span>
+                  <span id="dashboard-progress-pct" class="text-[#e63946] font-mono font-bold text-xs">0%</span>
+                </div>
+                <div class="text-xs font-black text-[#020617] mt-1 flex items-baseline gap-1">
+                  <span id="dashboard-rem-time" class="text-lg font-black text-[#e63946]">-</span>
+                  <span>分鐘</span>
+                  <span id="dashboard-read-time" class="text-[10px] text-slate-500 font-medium ml-1">...</span>
+                </div>
+                <div class="w-full bg-slate-200/80 h-1.5 rounded-full overflow-hidden mt-1.5">
+                  <div id="dashboard-scroll-bar" class="bg-[#e63946] h-full transition-all duration-300" style="width: 0%"></div>
+                </div>
+                <div class="text-[9px] text-slate-500 font-medium flex justify-between pt-1">
+                  <span>已讀 <span id="dashboard-read-words">0</span> / <span id="dashboard-total-words">-</span> 字</span>
+                  <span>均速 300 字/分</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="h-px bg-slate-100"></div>
+
+            <!-- Hot Table of Contents -->
+            <div class="space-y-4">
+              <h4 class="text-sm font-black text-[#020617] border-b border-slate-100 pb-2 uppercase tracking-wider">
+                📋 攻略快速導航
+              </h4>
+              <div class="flex flex-col gap-2.5 text-xs text-slate-700 font-bold" id="sidebar-nav-links">
+                
+                <a href="#intro" class="hover:text-[#e63946] transition-colors flex items-center justify-between group">
+                  <span class="flex items-center gap-1.5">
+                    <span class="text-[#e63946] group-hover:translate-x-0.5 transition-transform">▶</span> 
+                    <span>深度行前準備</span>
+                  </span>
+                  <span class="nav-check-status text-slate-300 font-mono text-[10px]" data-section="intro">[ ]</span>
+                </a>
+                <a href="#itinerary" class="hover:text-[#e63946] transition-colors flex items-center justify-between group">
+                  <span class="flex items-center gap-1.5">
+                    <span class="text-[#e63946] group-hover:translate-x-0.5 transition-transform">▶</span> 
+                    <span>每日行程詳解</span>
+                  </span>
+                  <span class="nav-check-status text-slate-300 font-mono text-[10px]" data-section="itinerary">[ ]</span>
+                </a>
+                <a href="#budget" class="hover:text-[#e63946] transition-colors flex items-center justify-between group">
+                  <span class="flex items-center gap-1.5">
+                    <span class="text-[#e63946] group-hover:translate-x-0.5 transition-transform">▶</span> 
+                    <span>預算花費分析</span>
+                  </span>
+                  <span class="nav-check-status text-slate-300 font-mono text-[10px]" data-section="budget">[ ]</span>
+                </a>
+                <a href="#faq" class="hover:text-[#e63946] transition-colors flex items-center justify-between group">
+                  <span class="flex items-center gap-1.5">
+                    <span class="text-[#e63946] group-hover:translate-x-0.5 transition-transform">▶</span> 
+                    <span>常見問題解答</span>
+                  </span>
+                  <span class="nav-check-status text-slate-300 font-mono text-[10px]" data-section="faq">[ ]</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="h-px bg-slate-100"></div>
+
+            <!-- Promotion Banner -->
+            <div class="space-y-3">
+              <div class="text-[10px] text-slate-400 font-extrabold uppercase tracking-wider flex items-center gap-1">
+                <span>🎁</span> <span>讀者獨家贊助推薦</span>
+              </div>
+              
+              <div class="rounded-2xl overflow-hidden shadow-xs hover:shadow-sm border border-slate-100 transition-all duration-300">
+                <a href="https://tw.trip.com/sale/w/4854/thailand-deals.html?locale=zh-TW&promo_referer=3952_4854_8&Allianceid=8237671&SID=312406690&trip_sub1=&trip_sub3=P17011353" target="_blank" rel="nofollow sponsored" class="block" data-no-replace="true">
+                  <img width="400" height="200" src="images/trip-thailand.webp" alt="均在路上 讀者贊助推薦" class="w-full h-auto object-cover hover:scale-[1.02] transition-transform duration-500" />
+                </a>
+              </div>
+  
+            </div>
+
+            <!-- Font Adjuster & Copy/Top Tool Row -->
+            <div class="h-px bg-slate-100"></div>
+            <div class="space-y-3">
+              <div class="text-xs font-black text-[#020617] flex items-center gap-1.5">
+                <span>🛠️</span> <span>隨身閱讀工具</span>
+              </div>
+              <div class="grid grid-cols-4 gap-2">
+                <button onclick="adjustArticleFontSize(-1)" class="py-2.5 bg-slate-50 hover:bg-slate-100 border border-slate-200 rounded-xl text-slate-800 font-mono text-xs font-black transition-all flex items-center justify-center cursor-pointer active:scale-95" title="縮小字體 (A-)">
+                  <span>A-</span>
+                </button>
+                <button onclick="adjustArticleFontSize(1)" class="py-2.5 bg-slate-50 hover:bg-slate-100 border border-slate-200 rounded-xl text-slate-800 font-mono text-xs font-black transition-all flex items-center justify-center cursor-pointer active:scale-95" title="放大字體 (A+)">
+                  <span>A+</span>
+                </button>
+                <button onclick="copyArticleLink()" class="py-2.5 bg-slate-50 hover:bg-slate-100 border border-slate-200 rounded-xl text-slate-700 text-xs transition-all flex items-center justify-center cursor-pointer active:scale-95" title="複製文章連結">
+                  <span>🔗</span>
+                </button>
+                <button onclick="scrollToArticleTop()" class="py-2.5 bg-slate-50 hover:bg-slate-100 border border-slate-200 rounded-xl text-slate-700 text-xs transition-all flex items-center justify-center cursor-pointer active:scale-95" title="平滑返回頂部">
+                  <span>↑</span>
+                </button>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </aside>
+  
+</div>
+</div>
+
+<!-- ========== UNIFIED FOOTER PARTIAL ========== -->
+  <footer class="bg-[#020617] border-t border-slate-800 text-slate-600 py-12 mt-16 text-xs font-sans">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-2 md:grid-cols-5 gap-8">
+      
+      <!-- Col 1 -->
+      <div class="space-y-4">
+        <h4 class="text-white font-bold text-sm">🇯🇵 日本自由行</h4>
+        <div class="flex flex-col gap-2">
+          <a href="tokyo-5days.html" class="hover:text-[#e63946] transition-colors">東京5天4夜行程</a>
+          <a href="tokyo-accommodation.html" class="hover:text-[#e63946] transition-colors">東京住宿推薦</a>
+          <a href="fukuoka-5days.html" class="hover:text-[#e63946] transition-colors">福岡5天4夜攻略</a>
+          <a href="okinawa.html" class="hover:text-[#e63946] transition-colors">沖繩自駕攻略</a>
+        </div>
+      </div>
+
+      <!-- Col 2 -->
+      <div class="space-y-4">
+        <h4 class="text-white font-bold text-sm">🇰🇷 韓國自由行</h4>
+        <div class="flex flex-col gap-2">
+          <a href="seoul-5days.html" class="hover:text-[#e63946] transition-colors">首爾5天4夜攻略</a>
+          <a href="busan-4days.html" class="hover:text-[#e63946] transition-colors">釜山4天3夜攻略</a>
+          <a href="jeju-island.html" class="hover:text-[#e63946] transition-colors">濟州島自駕環島</a>
+        </div>
+      </div>
+
+      <!-- Col 3 -->
+      <div class="space-y-4">
+        <h4 class="text-white font-bold text-sm">🇹🇼 台灣旅遊</h4>
+        <div class="flex flex-col gap-2">
+          <a href="hualien-taitung.html" class="hover:text-[#e63946] transition-colors">花東三天兩夜</a>
+          <a href="tainan-food.html" class="hover:text-[#e63946] transition-colors">台南美食地圖</a>
+          <a href="kenting.html" class="hover:text-[#e63946] transition-colors">墾丁海景攻略</a>
+          <a href="taipei-food.html" class="hover:text-[#e63946] transition-colors">台北美食地圖</a>
+        </div>
+      </div>
+
+      <!-- Col 4 -->
+      <div class="space-y-4">
+        <h4 class="text-white font-bold text-sm">🌏 東南亞自由行</h4>
+        <div class="flex flex-col gap-2">
+          <a href="bangkok-3days.html" class="hover:text-[#e63946] transition-colors">曼谷吃貨攻略</a>
+          <a href="vietnam-danang.html" class="hover:text-[#e63946] transition-colors">越南峴港攻略</a>
+          <a href="chiang-mai.html" class="hover:text-[#e63946] transition-colors">清邁遊牧指南</a>
+        </div>
+      </div>
+
+      <!-- Col 5 -->
+      <div class="space-y-4">
+        <h4 class="text-white font-bold text-sm">🔧 旅遊工具箱</h4>
+        <div class="flex flex-col gap-2">
+          <a href="travel-tools.html" class="hover:text-[#e63946] transition-colors">旅遊工具合集</a>
+          <a href="budget-calculator.html" class="hover:text-[#e63946] transition-colors text-[#e63946]">預算試算器</a>
+          <a href="tax-refund-calculator.html" class="hover:text-[#e63946] transition-colors">免稅退稅試算器</a>
+          <a href="packing-list.html" class="hover:text-[#e63946] transition-colors">出國打包清單</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Socials & bottom info -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 mt-8 border-t border-slate-800 flex flex-col md:flex-row items-center justify-between gap-4">
+      <div>
+        <p class="text-[11px] text-slate-700">© 2026 均在路上 Travel Lab. All Rights Reserved. ✈ 用最少預算，走最多地方</p>
+      </div>
+      <div class="flex items-center gap-4 text-slate-600">
+        <a href="about.html" class="hover:text-white transition-colors">關於均在路上</a>
+        <span>·</span>
+        <a href="privacy.html" class="hover:text-white transition-colors">隱私權政策</a>
+        <span>·</span>
+        <a href="terms.html" class="hover:text-white transition-colors">服務條款</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== INTERACTIVE CALCULATOR JAVASCRIPT ==================== -->
+  <script>
+    // Scroll progress handler
+    window.addEventListener('scroll', function() {
+      const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = (winScroll / height) * 100;
+      document.getElementById('reading-progress').style.width = scrolled + '%';
+    });
+
+    // Preset Rates definition
+    const PRESETS = {
+      japan: {
+        title: "🇯🇵 日本自由行智能省錢與理財規劃建議",
+        flight: 13500,
+        hotel: 3200,
+        food: 1200,
+        transport: 350,
+        attraction: 1500,
+        shopping: 8000,
+        misc: 1000,
+        tips: `
+          <p class="font-semibold text-slate-900 mb-2">日本是自由行性價比極高但也充滿隱性消費的國家。以下為您整理專屬於日本自由行的三大省錢妙招：</p>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2">
+            <div class="p-4 bg-slate-50 border border-slate-100 rounded-xl space-y-1.5">
+              <h4 class="font-bold text-slate-950 flex items-center gap-1">🚄 善用地區鐵路周遊券</h4>
+              <p class="text-xs text-slate-700 leading-normal">日本新幹線與地鐵單程費極貴。去關東一定要辦關東三日通票；關西辦關西周遊卡。事先上 Klook 或 KKday 買能省 10-15%。</p>
+            </div>
+            <div class="p-4 bg-slate-50 border border-slate-100 rounded-xl space-y-1.5">
+              <h4 class="font-bold text-slate-950 flex items-center gap-1">🏪 夜間超商與超市「半額」</h4>
+              <p class="text-xs text-slate-700 leading-normal">日本的大型超市在每天晚上 7:30 - 8:30 後，熟食區如壽司、便當、炸物會陸續貼上「半額」(5折) 或 7 折標籤，是體驗在地美食又極省餐費的絕招。</p>
+            </div>
+            <div class="p-4 bg-slate-50 border border-slate-100 rounded-xl space-y-1.5">
+              <h4 class="font-bold text-slate-950 flex items-center gap-1">💳 備妥高回饋旅日神卡</h4>
+              <p class="text-xs text-slate-700 leading-normal">日本刷卡非常普及。建議準備一張海外刷卡回饋高於 3% 的信用卡（例如聯邦吉鶴卡、富邦J卡），扣除 1.5% 手續費後還能賺取不少現金回饋！</p>
+            </div>
+          </div>
+        `
+      },
+      korea: {
+        title: "🇰🇷 韓國快閃智能省錢與理財規劃建議",
+        flight: 10500,
+        hotel: 2600,
+        food: 1000,
+        transport: 250,
+        attraction: 1200,
+        shopping: 7000,
+        misc: 1000,
+        tips: `
+          <p class="font-semibold text-slate-900 mb-2">首爾與釜山是美食與美妝購物天堂。在韓國要省得輕鬆精緻，請看這三點：</p>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2">
+            <div class="p-4 bg-slate-50 border border-slate-100 rounded-xl space-y-1.5">
+              <h4 class="font-bold text-slate-950 flex items-center gap-1">💳 下載 WOWPASS 加密貨幣卡</h4>
+              <p class="text-xs text-slate-700 leading-normal">這張專為外國旅客設計的儲值卡，可以在各大地鐵站直接用台幣、美金儲值並自動換匯，還附帶 T-money 交通卡功能，並在部分商戶享有 10% 現金回饋！</p>
+            </div>
+            <div class="p-4 bg-slate-50 border border-slate-100 rounded-xl space-y-1.5">
+              <h4 class="font-bold text-slate-950 flex items-center gap-1">💄 善用市區免稅與「即時退稅」</h4>
+              <p class="text-xs text-slate-700 leading-normal">韓國許多藥妝店（如 Olive Young）及服飾店支持現場即時退稅（結帳直接扣稅）。付款前務必出示護照，免去到機場排隊退稅之苦。</p>
+            </div>
+            <div class="p-4 bg-slate-50 border border-slate-100 rounded-xl space-y-1.5">
+              <h4 class="font-bold text-slate-950 flex items-center gap-1">🚇 善用大眾運輸與轉乘免費</h4>
+              <p class="text-xs text-slate-700 leading-normal">韓國的地鐵與公車在 30 分鐘內轉乘是免費的！在市區移動時多利用刷卡，盡量避免隨手招計程車，尤其是在尖峰通勤時段。</p>
+            </div>
+          </div>
+        `
+      },
+      thailand: {
+        title: "🇹🇭 泰國度假智能省錢與理財規劃建議",
+        flight: 8500,
+        hotel: 1800,
+        food: 600,
+        transport: 200,
+        attraction: 1800,
+        shopping: 5000,
+        misc: 1200,
+        tips: `
+          <p class="font-semibold text-slate-900 mb-2">泰國物價平實，但景點、門票與特定交通很容易有「遊客定價」。推薦的三大省預算絕招：</p>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2">
+            <div class="p-4 bg-slate-50 border border-slate-100 rounded-xl space-y-1.5">
+              <h4 class="font-bold text-slate-950 flex items-center gap-1">🚕 下載 Grab 與 Bolt 叫車系統</h4>
+              <p class="text-xs text-slate-700 leading-normal">在泰國搭計程車或嘟嘟車，常會遇到不跳表或高額開價。使用 Grab 或更便宜的 Bolt 叫車，價格透明還能綁定卡扣款，省去講價的心累。</p>
+            </div>
+            <div class="p-4 bg-slate-50 border border-slate-100 rounded-xl space-y-1.5">
+              <h4 class="font-bold text-slate-950 flex items-center gap-1">🎫 門票行程一律線上先訂</h4>
+              <p class="text-xs text-slate-700 leading-normal">曼谷暹羅海洋世界、大皇宮行程、按摩券（如 Let's Relax）在 Klook / KKday 上的促銷價往往是現場售票處的 6-8 折。千萬不要去現場買原價票。</p>
+            </div>
+            <div class="p-4 bg-slate-50 border border-slate-100 rounded-xl space-y-1.5">
+              <h4 class="font-bold text-slate-950 flex items-center gap-1">🍹 去百貨美食街 (Food Court)</h4>
+              <p class="text-xs text-slate-700 leading-normal">大商場（如 Terminal 21）的 Pier 21 美食街，一份泰式炒河粉只要 40-60 泰銖，物美價廉、乾淨衛生又有冷氣，是自由行補充餐食的不二首選。</p>
+            </div>
+          </div>
+        `
+      },
+      taiwan: {
+        title: "🇹🇼 台灣本地慢活智能省預算規劃建議",
+        flight: 0,
+        hotel: 2200,
+        food: 700,
+        transport: 150,
+        attraction: 500,
+        shopping: 2000,
+        misc: 500,
+        tips: `
+          <p class="font-semibold text-slate-900 mb-2">在國內進行深度旅行，交通與週末住宿是最大的花費來源。精省三大策略：</p>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2">
+            <div class="p-4 bg-slate-50 border border-slate-100 rounded-xl space-y-1.5">
+              <h4 class="font-bold text-slate-950 flex items-center gap-1">🚄 搶購高鐵早鳥 65 折起</h4>
+              <p class="text-xs text-slate-700 leading-normal">台灣高鐵在乘車日前 28 天開放搶票，設有「早鳥 65 折、8折、9折」優惠。提早安排行程，一趟來回直接省下近千元車資！</p>
+            </div>
+            <div class="p-4 bg-slate-50 border border-slate-100 rounded-xl space-y-1.5">
+              <h4 class="font-bold text-slate-950 flex items-center gap-1">🚴 騎乘 Ubike 與輕便轉乘</h4>
+              <p class="text-xs text-slate-700 leading-normal">台北、台中等都會區的大眾捷運非常普及。善用 Ubike 2.0 進行 10-15 分鐘的短程移動，既環保又能省下可觀的計程車費。</p>
+            </div>
+            <div class="p-4 bg-slate-50 border border-slate-100 rounded-xl space-y-1.5">
+              <h4 class="font-bold text-slate-950 flex items-center gap-1">🏨 避開連續假期與過度旺季</h4>
+              <p class="text-xs text-slate-700 leading-normal">國內民宿週末與連假價格往往是平日的 1.5 - 2.5 倍。如果能安排請假 1-2 天在週日到週二出遊，相同的精品飯店直接省下大筆費用！</p>
+            </div>
+          </div>
+        `
+      },
+      europe: {
+        title: "🇪🇺 歐洲漫遊理財省錢配置建議",
+        flight: 35000,
+        hotel: 5500,
+        food: 2000,
+        transport: 500,
+        attraction: 6000,
+        shopping: 12000,
+        misc: 2500,
+        tips: `
+          <p class="font-semibold text-slate-900 mb-2">歐洲旅遊時間長、交通跨國、飯店費用驚人。省錢的三大硬實力攻略：</p>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2">
+            <div class="p-4 bg-slate-50 border border-slate-100 rounded-xl space-y-1.5">
+              <h4 class="font-bold text-slate-950 flex items-center gap-1">🚂 搶早鳥跨國火車/歐洲之星</h4>
+              <p class="text-xs text-slate-700 leading-normal">歐洲鐵路如 TGV、DB、Eurostar，提早 3 個月買的早鳥票可能只要 €30，現場買或臨近買可能飆到 €150。越早下訂，交通成本差高達數倍。</p>
+            </div>
+            <div class="p-4 bg-slate-50 border border-slate-100 rounded-xl space-y-1.5">
+              <h4 class="font-bold text-slate-950 flex items-center gap-1">🛒 買公寓式飯店 (Airbnb) 自己煮</h4>
+              <p class="text-xs text-slate-700 leading-normal">歐洲在外面餐館用餐一餐約 €25 起跳（還要加上桌錢與水錢）。選擇帶有小廚房的公寓住宿，去 Lidl 或 Carrefour 超市採購牛排、意麵自己煮，伙食費立即省 70%。</p>
+            </div>
+            <div class="p-4 bg-slate-50 border border-slate-100 rounded-xl space-y-1.5">
+              <h4 class="font-bold text-slate-950 flex items-center gap-1">🎟️ 辦博物館通行證 (City Pass)</h4>
+              <p class="text-xs text-slate-700 leading-normal">巴黎有 Paris Museum Pass、倫敦有 London Pass。如果打算去 3 個以上的付費博物館，辦通票不僅省錢，還附帶「快速通關」(Skip the Line) 免排隊特權。</p>
+            </div>
+          </div>
+        `
+      },
+      usa: {
+        title: "🇺🇸 美加跨海自由行極致理財省錢建議",
+        flight: 42000,
+        hotel: 6500,
+        food: 2500,
+        transport: 800,
+        attraction: 8000,
+        shopping: 15000,
+        misc: 3000,
+        tips: `
+          <p class="font-semibold text-slate-900 mb-2">美國物價近年通膨高，且含有 15-22% 的小費文化。要在美國控制預算，這三招必學：</p>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2">
+            <div class="p-4 bg-slate-50 border border-slate-100 rounded-xl space-y-1.5">
+              <h4 class="font-bold text-slate-950 flex items-center gap-1">🍔 午餐吃 Fast Food 或 Food Truck</h4>
+              <p class="text-xs text-slate-700 leading-normal">在餐廳坐下點餐要收高額小費與州稅。午餐可以選擇 Shake Shack、In-N-Out、Chipotle 或街頭餐車。不需付服務小費，味道經典又省預算。</p>
+            </div>
+            <div class="p-4 bg-slate-50 border border-slate-100 rounded-xl space-y-1.5">
+              <h4 class="font-bold text-slate-950 flex items-center gap-1">🚗 自駕租車與加油理財</h4>
+              <p class="text-xs text-slate-700 leading-normal">非一線大都會區在美國強烈建議自駕。在網上提前用 Turo 或租車比價網預訂，並避免在市中心、機場或大景點旁邊的加油站加油（油價往往高出 15-30%）。</p>
+            </div>
+            <div class="p-4 bg-slate-50 border border-slate-100 rounded-xl space-y-1.5">
+              <h4 class="font-bold text-slate-950 flex items-center gap-1">🎟️ 購買 CityPASS 通票與免費天數</h4>
+              <p class="text-xs text-slate-700 leading-normal">如紐約、舊金山、西雅圖等大城市皆有 CityPASS，整合了帝國大廈、自由女神等經典門票，價格比單買便宜 40%。此外許多著名美術館在特定週三或晚間提供「免費入場」或「任意捐贈入內」，出發前做好功課直接省百元美金！</p>
+            </div>
+          </div>
+        `
+      }
+    };
+
+    // Increment and decrement parameters helper
+    function adjustInput(id, amount) {
+      const el = document.getElementById(id);
+      let val = parseInt(el.value) || 0;
+      val = Math.max(el.min, Math.min(el.max, val + amount));
+      el.value = val;
+      calculateTotal();
+    }
+
+    // Format money helper
+    function formatMoney(num) {
+      return "NT$ " + Math.round(num).toLocaleString();
+    }
+
+    // Update displays on range inputs
+    function updateRange(id) {
+      const val = parseInt(document.getElementById(id).value) || 0;
+      document.getElementById(id + '-display').innerText = formatMoney(val);
+      calculateTotal();
+    }
+
+    // Copy list to clipboard
+    function copyToClipboard() {
+      const days = document.getElementById('trip-days').value;
+      const travelers = document.getElementById('trip-travelers').value;
+      
+      const flight = parseInt(document.getElementById('flight-cost').value) || 0;
+      const hotel = parseInt(document.getElementById('hotel-cost').value) || 0;
+      const food = parseInt(document.getElementById('food-cost').value) || 0;
+      const transport = parseInt(document.getElementById('transport-cost').value) || 0;
+      const attraction = parseInt(document.getElementById('attraction-cost').value) || 0;
+      const shopping = parseInt(document.getElementById('shopping-cost').value) || 0;
+      const misc = parseInt(document.getElementById('misc-cost').value) || 0;
+
+      const rooms = Math.ceil(travelers / 2);
+      
+      const totFlight = flight * travelers;
+      const totHotel = hotel * days * rooms;
+      const totFood = food * days * travelers;
+      const totTransport = transport * days * travelers;
+      const totAttraction = attraction * travelers;
+      const totShopping = shopping * travelers;
+      const totMisc = misc * travelers;
+      const grandTotal = totFlight + totHotel + totFood + totTransport + totAttraction + totShopping + totMisc;
+
+      const summary = `✈️ 均在路上 Travel Lab 旅遊預算配置明細 ✈️
+━━━━━━━━━━━━━━━━━━━━
+📅 旅遊天數：${days} 天
+👥 同行人數：${travelers} 人 (共需 ${rooms} 間房)
+━━━━━━━━━━━━━━━━━━━━
+🎫 往返機票費用：${formatMoney(totFlight)} (每人 ${formatMoney(flight)})
+🏨 飯店住宿費用：${formatMoney(totHotel)} (每晚 ${formatMoney(hotel)})
+🍜 每日餐飲預算：${formatMoney(totFood)} (每日每人 ${formatMoney(food)})
+🚇 每日當地交通：${formatMoney(totTransport)} (每日每人 ${formatMoney(transport)})
+🎟️ 景點門票娛樂：${formatMoney(totAttraction)} (整趟每人 ${formatMoney(attraction)})
+🛍️ 購物手信預算：${formatMoney(totShopping)} (整趟每人 ${formatMoney(shopping)})
+🛜 雜項保險網卡：${formatMoney(totMisc)} (整趟每人 ${formatMoney(misc)})
+━━━━━━━━━━━━━━━━━━━━
+💰 預估總花費金額：${formatMoney(grandTotal)}
+💎 每人平均花費：${formatMoney(grandTotal / travelers)}
+📅 每日平均花費：${formatMoney(grandTotal / days)}
+━━━━━━━━━━━━━━━━━━━━
+💡 用最少預算，走最多地方！前往 https://golightly.fun/budget-calculator.html 重新配置！`;
+
+      navigator.clipboard.writeText(summary).then(() => {
+        const flag = document.getElementById('copy-success');
+        flag.classList.remove('hidden');
+        setTimeout(() => {
+          flag.classList.add('hidden');
+        }, 5000);
+      });
+    }
+
+    // Toggle FAQ elements
+    function toggleFaq(btn) {
+      const item = btn.parentElement;
+      const isOpen = item.classList.contains('open');
+      
+      // Close all other items first
+      document.querySelectorAll('.faq-item').forEach(i => {
+        i.classList.remove('open');
+      });
+
+      if (!isOpen) {
+        item.classList.add('open');
+      }
+    }
+
+    // Main Calculator core logic
+    function calculateTotal() {
+      const days = parseInt(document.getElementById('trip-days').value) || 1;
+      const travelers = parseInt(document.getElementById('trip-travelers').value) || 1;
+      
+      const flight = parseInt(document.getElementById('flight-cost').value) || 0;
+      const hotel = parseInt(document.getElementById('hotel-cost').value) || 0;
+      const food = parseInt(document.getElementById('food-cost').value) || 0;
+      const transport = parseInt(document.getElementById('transport-cost').value) || 0;
+      const attraction = parseInt(document.getElementById('attraction-cost').value) || 0;
+      const shopping = parseInt(document.getElementById('shopping-cost').value) || 0;
+      const misc = parseInt(document.getElementById('misc-cost').value) || 0;
+
+      // Number of rooms is ceil of travelers / 2
+      const rooms = Math.ceil(travelers / 2);
+      document.getElementById('rooms-count-display').innerText = rooms;
+
+      // Subtotals
+      const totFlight = flight * travelers;
+      const totHotel = hotel * days * rooms;
+      const totFood = food * days * travelers;
+      const totTransport = transport * days * travelers;
+      const totAttraction = attraction * travelers;
+      const totShopping = shopping * travelers;
+      const totMisc = misc * travelers;
+
+      const grandTotal = totFlight + totHotel + totFood + totTransport + totAttraction + totShopping + totMisc;
+
+      // Update Subtotal Displays
+      document.getElementById('tot-flight').innerText = formatMoney(totFlight);
+      document.getElementById('tot-hotel').innerText = formatMoney(totHotel);
+      document.getElementById('tot-food').innerText = formatMoney(totFood);
+      document.getElementById('tot-transport').innerText = formatMoney(totTransport);
+      document.getElementById('tot-attraction').innerText = formatMoney(totAttraction);
+      document.getElementById('tot-shopping').innerText = formatMoney(totShopping);
+      document.getElementById('tot-misc').innerText = formatMoney(totMisc);
+
+      // Grand Totals display
+      document.getElementById('grand-total-display').innerText = formatMoney(grandTotal);
+      document.getElementById('per-person-display').innerText = formatMoney(grandTotal / travelers);
+      document.getElementById('per-day-display').innerText = formatMoney(grandTotal / days);
+
+      // Percentage displays
+      const segments = [
+        { id: 'flight', value: totFlight },
+        { id: 'hotel', value: totHotel },
+        { id: 'food', value: totFood },
+        { id: 'transport', value: totTransport },
+        { id: 'attraction', value: totAttraction },
+        { id: 'shopping', value: totShopping },
+        { id: 'misc', value: totMisc }
+      ];
+
+      segments.forEach(seg => {
+        let pct = grandTotal > 0 ? (seg.value / grandTotal * 100) : 0;
+        document.getElementById('pct-' + seg.id).innerText = pct.toFixed(1);
+        document.getElementById('bar-' + seg.id).style.width = pct.toFixed(1) + '%';
+      });
+
+      // Analyze Daily Spending Tier
+      const dailySpendingPerPerson = (grandTotal / travelers) / days;
+      
+      let badge = "小資省錢之旅";
+      let desc = "您配置的預算屬於精打細算、背客慢行之旅。主要依靠大眾交通與超值街頭小吃、住在性價比極高的青旅或特色民宿，能用最少的經費體驗最在地的生活風景！";
+      
+      // Update interactive meter bars
+      const bar1 = document.getElementById('tier-bar-1');
+      const bar2 = document.getElementById('tier-bar-2');
+      const bar3 = document.getElementById('tier-bar-3');
+
+      bar1.className = 'h-full bg-slate-300 transition-all duration-300 w-[33%]';
+      bar2.className = 'h-full border-l border-white bg-slate-300 transition-all duration-300 w-[33%]';
+      bar3.className = 'h-full border-l border-white bg-slate-300 transition-all duration-300 w-[34%]';
+
+      if (dailySpendingPerPerson > 8500) {
+        badge = "極致奢華之旅";
+        desc = "您配置的每日預算充裕非凡，屬於高端奢享度假等級！可以入住頂奢五星級飯店，享用昂貴米其林星級餐廳、包車接送、體驗極致尊榮的深度玩樂與血拼樂趣。";
+        bar1.className = 'h-full bg-[#e63946]/50 transition-all duration-300 w-[33%]';
+        bar2.className = 'h-full border-l border-white bg-[#e63946]/70 transition-all duration-300 w-[33%]';
+        bar3.className = 'h-full border-l border-white bg-[#e63946] transition-all duration-300 w-[34%]';
+      } else if (dailySpendingPerPerson > 3500) {
+        badge = "舒適平衡之旅";
+        desc = "您配置的預算屬於中產精緻、舒適平衡之旅。兼顧了住宿品質（如精緻連鎖商旅）與美食樂趣（可在當地餐館或熱門居酒屋無壓力點餐），並有充足的伴手禮血拼預算。";
+        bar1.className = 'h-full bg-[#e63946]/50 transition-all duration-300 w-[33%]';
+        bar2.className = 'h-full border-l border-white bg-[#e63946] transition-all duration-300 w-[33%]';
+      } else {
+        bar1.className = 'h-full bg-[#e63946] transition-all duration-300 w-[33%]';
+      }
+
+      document.getElementById('budget-class-badge').innerText = badge;
+      document.getElementById('budget-class-desc').innerText = desc;
+    }
+
+    // Apply Prefills and show dynamic advice
+    function applyPreset(countryKey) {
+      const preset = PRESETS[countryKey];
+      if (!preset) return;
+
+      // Update values
+      document.getElementById('flight-cost').value = preset.flight;
+      document.getElementById('hotel-cost').value = preset.hotel;
+      document.getElementById('food-cost').value = preset.food;
+      document.getElementById('transport-cost').value = preset.transport;
+      document.getElementById('attraction-cost').value = preset.attraction;
+      document.getElementById('shopping-cost').value = preset.shopping;
+      document.getElementById('misc-cost').value = preset.misc;
+
+      // Update Displays
+      document.getElementById('flight-cost-display').innerText = formatMoney(preset.flight);
+      document.getElementById('hotel-cost-display').innerText = formatMoney(preset.hotel);
+      document.getElementById('food-cost-display').innerText = formatMoney(preset.food);
+      document.getElementById('transport-cost-display').innerText = formatMoney(preset.transport);
+      document.getElementById('attraction-cost-display').innerText = formatMoney(preset.attraction);
+      document.getElementById('shopping-cost-display').innerText = formatMoney(preset.shopping);
+      document.getElementById('misc-cost-display').innerText = formatMoney(preset.misc);
+
+      // Update advice module
+      document.getElementById('tips-country-title').innerText = preset.title;
+      document.getElementById('tips-content').innerHTML = preset.tips;
+
+      // Style buttons to reflect selection
+      document.querySelectorAll('.preset-btn').forEach(btn => {
+        btn.classList.remove('border-[#e63946]', 'text-[#e63946]', 'bg-[#e63946]/5');
+        btn.classList.add('border-slate-200', 'text-[#1e293b]', 'bg-white');
+      });
+
+      // Find the clicked button and highlight it
+      const eventBtn = event ? event.currentTarget : null;
+      if (eventBtn) {
+        eventBtn.classList.remove('border-slate-200', 'text-[#1e293b]', 'bg-white');
+        eventBtn.classList.add('border-[#e63946]', 'text-[#e63946]', 'bg-[#e63946]/5');
+      }
+
+      calculateTotal();
+    }
+
+    // Reset fields
+    function resetCalculator() {
+      document.getElementById('trip-days').value = 5;
+      document.getElementById('trip-travelers').value = 2;
+      applyPreset('japan');
+    }
+
+    // Run on startup
+    window.addEventListener('DOMContentLoaded', () => {
+      // Trigger preset japan on startup
+      resetCalculator();
+    });
+  </script>
+
+
+<!-- SIDEBAR UTILITY RUNTIME SCRIPT -->
+
+
+<script id="sidebar-utility-script">
+  function adjustArticleFontSize(direction) {
+    const mainArticle = document.querySelector('article') || document.querySelector('main') || document.getElementById('layout-main');
+    if (!mainArticle) return;
+    
+    const selectors = ['p', 'li', 'span:not(.group-hover\:scale-110)', 'h3', 'h4', 'blockquote'];
+    selectors.forEach(sel => {
+      mainArticle.querySelectorAll(sel).forEach(el => {
+        if (el.classList.contains('faq-icon') || el.closest('nav') || el.closest('button')) return;
+        
+        const currentSize = parseFloat(window.getComputedStyle(el).fontSize);
+        if (!el.dataset.originalSize) {
+          el.dataset.originalSize = currentSize;
+        }
+        
+        let newSize = currentSize + direction;
+        const orig = parseFloat(el.dataset.originalSize);
+        if (newSize >= orig - 3 && newSize <= orig + 6) {
+          el.style.fontSize = newSize + 'px';
+        }
+      });
+    });
+  }
+
+  function copyArticleLink() {
+    navigator.clipboard.writeText(window.location.href).then(() => {
+      const toast = document.createElement('div');
+      toast.className = 'fixed top-6 left-1/2 transform -translate-x-1/2 bg-slate-900/95 backdrop-blur-md text-white text-xs tracking-wider uppercase font-bold px-6 py-3.5 rounded-full shadow-xl z-50 transition-all duration-300 border border-white/10 flex items-center gap-2';
+      toast.innerHTML = '<span>✨</span> <span>文章連結已成功複製！</span>';
+      document.body.appendChild(toast);
+      
+      toast.style.opacity = '0';
+      toast.style.transform = 'translate(-50%, -10px)';
+      requestAnimationFrame(() => {
+        toast.style.opacity = '1';
+        toast.style.transform = 'translate(-50%, 0)';
+      });
+
+      setTimeout(() => {
+        toast.style.opacity = '0';
+        toast.style.transform = 'translate(-50%, -10px)';
+        setTimeout(() => toast.remove(), 300);
+      }, 2500);
+    });
+  }
+
+  function scrollToArticleTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  // Live Progress Tracker & Intelligent Reading Dashboard
+  window.addEventListener('DOMContentLoaded', () => {
+    const navLinks = document.querySelectorAll('#sidebar-nav-links a');
+    const sections = Array.from(navLinks).map(a => {
+      const href = a.getAttribute('href');
+      return href && href.startsWith('#') ? href.substring(1) : null;
+    }).filter(Boolean);
+
+    // Get total word count estimate
+    const mainContent = document.querySelector('main') || document.querySelector('article') || document.body;
+    const textContent = mainContent.innerText || '';
+    const charCount = textContent.replace(/\s+/g, '').length;
+    const readTimeMins = Math.max(3, Math.round(charCount / 300));
+
+    // Update reading stats headers
+    const remTimeSpan = document.getElementById('dashboard-rem-time');
+    const wordCountSpan = document.getElementById('dashboard-total-words');
+    const readTimeSpan = document.getElementById('dashboard-read-time');
+
+    if (remTimeSpan) remTimeSpan.textContent = readTimeMins;
+    if (wordCountSpan) wordCountSpan.textContent = charCount.toLocaleString();
+    if (readTimeSpan) readTimeSpan.textContent = '(共約 ' + charCount.toLocaleString() + ' 字)';
+
+    function updateProgress() {
+      const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+      if (scrollHeight > 0) {
+        const progress = Math.round((window.scrollY / scrollHeight) * 100);
+        
+        const textEl = document.getElementById('sidebar-progress-text');
+        const barEl = document.getElementById('sidebar-progress-bar');
+        if (textEl) textEl.textContent = progress + '%';
+        if (barEl) barEl.style.width = progress + '%';
+
+        // Update Intelligent Reading Dashboard
+        const dashPct = document.getElementById('dashboard-progress-pct');
+        const dashBar = document.getElementById('dashboard-scroll-bar');
+        const dashWords = document.getElementById('dashboard-read-words');
+        const dashRemTime = document.getElementById('dashboard-rem-time');
+
+        if (dashPct) dashPct.textContent = progress + '%';
+        if (dashBar) dashBar.style.width = progress + '%';
+        if (dashWords) dashWords.textContent = Math.round(charCount * (progress / 100)).toLocaleString();
+        if (dashRemTime) {
+          const remaining = Math.max(1, Math.round(readTimeMins * (1 - progress / 100)));
+          dashRemTime.textContent = remaining;
+        }
+
+        // Live update checkmarks based on scroll position
+        sections.forEach(secId => {
+          const el = document.getElementById(secId);
+          if (el) {
+            const rect = el.getBoundingClientRect();
+            // Section is read if its top is above middle of viewport
+            const isRead = rect.top < window.innerHeight * 0.4;
+            const statusEl = document.querySelector(`[data-section="${secId}"]`);
+            if (statusEl) {
+              if (isRead) {
+                statusEl.innerHTML = '<span class="text-[#e63946] font-extrabold">✓</span>';
+                statusEl.classList.remove('text-slate-300');
+                statusEl.classList.add('text-[#e63946]');
+              } else {
+                statusEl.innerHTML = '[ ]';
+                statusEl.classList.add('text-slate-300');
+                statusEl.classList.remove('text-[#e63946]');
+              }
+            }
+          }
+        });
+      }
+    }
+
+    window.addEventListener('scroll', updateProgress);
+    updateProgress(); // Run once initially
+  });
+</script>
+
+</body>
+</html>
