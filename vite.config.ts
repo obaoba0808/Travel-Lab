@@ -5,6 +5,8 @@ import react from '@vitejs/plugin-react';
 import { travelArticles } from './data/articles';
 import { customPages } from './data/customPages';
 
+import { cloudflare } from "@cloudflare/vite-plugin";
+
 // 靜態 HTML 生成插件
 function staticHtmlGenerator() {
   return {
@@ -312,7 +314,7 @@ export default defineConfig(({ mode }) => {
         port: 3000,
         host: '0.0.0.0',
       },
-      plugins: [react(), staticHtmlGenerator(), devHtmlFallbackPlugin()],
+      plugins: [react(), staticHtmlGenerator(), devHtmlFallbackPlugin(), cloudflare()],
       define: {
         'process.env.API_KEY': JSON.stringify(env.GEMINI_API_KEY),
         'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY)
