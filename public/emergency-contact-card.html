@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW" class="scroll-smooth">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EDPEJH91EL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-EDPEJH91EL');
+  </script>
+  
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="均在路上 Travel Lab"/>
+  
+  <title>緊急聯絡卡產生器：各國旅遊隨身自救卡輸出 | 均在路上 Travel Lab</title>
+  <meta name="description" content="免費線上工具！輸入保單號碼、血型、緊急聯絡人與目的地急難專線，一鍵自動排版成雙面信用卡大小的隨身自救卡（PDF）。出國前印出折疊放錢包，手機沒電、網路斷線也有實體靠山，讓緊急時刻聯絡無縫接軌。"/>
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="緊急聯絡卡產生器：各國旅遊隨身自救卡輸出 | 均在路上 Travel Lab"/>
+  <meta property="og:description" content="免費線上工具！輸入保單號碼、血型、緊急聯絡人與目的地急難專線，一鍵自動排版成雙面信用卡大小的隨身自救卡（PDF）。"/>
+  <meta property="og:url" content="https://golightly.fun/emergency-contact-card.html"/>
+  <meta property="og:image" content="https://golightly.fun/images/og-image.jpg"/>
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+  <meta property="og:site_name" content="均在路上 Travel Lab"/>
+  <meta property="og:locale" content="zh_TW"/>
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="緊急聯絡卡產生器：各國旅遊隨身自救卡輸出 | 均在路上 Travel Lab"/>
+  <meta name="twitter:description" content="免費線上工具！輸入保單號碼、血型、緊急聯絡人與目的地急難專線，一鍵自動排版成雙面信用卡大小的隨身自救卡（PDF）。"/>
+  <meta name="twitter:image" content="https://golightly.fun/images/og-image.jpg"/>
+  
+  <!-- Canonical -->
+  <link rel="canonical" href="https://golightly.fun/emergency-contact-card.html"/>
+  <link href="https://golightly.fun/emergency-contact-card.html" hreflang="zh-Hant" rel="alternate"/>
+  <link href="https://golightly.fun/emergency-contact-card.html" hreflang="zh-TW" rel="alternate"/>
+  <link href="https://golightly.fun/emergency-contact-card.html" hreflang="x-default" rel="alternate"/>
+  
+  <!-- Google Fonts & Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=Noto+Sans+TC:wght@400;500;700;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "緊急聯絡卡產生器",
+    "url": "https://golightly.fun/emergency-contact-card.html",
+    "description": "免費線上工具！輸入保單號碼、血型、緊急聯絡人與目的地急難專線，一鍵自動排版成雙面信用卡大小的隨身自救卡（PDF）。",
+    "operatingSystem": "All",
+    "browserRequirements": "Requires JavaScript",
+    "applicationCategory": "TravelApplication",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "TWD"
+    }
+  }
+  </script>
+  
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', 'Noto Sans TC', sans-serif;
+      background: #f8fafc;
+      color: #0f172a;
+      min-height: 100vh;
+    }
+    .print-area {
+      background: white;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+      border-radius: 12px;
+      padding: 24px;
+    }
+    .card-preview {
+      width: 85.6mm;
+      min-height: 54mm;
+      background: #fff;
+      border: 2px solid #1e293b;
+      border-radius: 8px;
+      padding: 10px 12px;
+      font-size: 7.5pt;
+      line-height: 1.3;
+      font-family: 'Inter', 'Noto Sans TC', sans-serif;
+    }
+    @media print {
+      body { background: white; }
+      .no-print { display: none !important; }
+      .print-area { box-shadow: none; border-radius: 0; padding: 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="no-print bg-white border-b border-slate-200 sticky top-0 z-50">
+    <div class="max-w-5xl mx-auto px-4 h-14 flex items-center justify-between">
+      <a href="/" class="text-sm font-bold text-[#0f172a] hover:text-[#06B6D4] transition-colors">← 回到首頁</a>
+      <span class="text-xs text-slate-500 font-medium">均在路上 Travel Lab</span>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="max-w-3xl mx-auto px-4 py-8">
+    
+    <!-- Header -->
+    <div class="no-print text-center mb-8">
+      <div class="text-4xl mb-2">🚨</div>
+      <h1 class="text-2xl sm:text-3xl font-black text-[#020617]">緊急聯絡卡產生器</h1>
+      <p class="text-sm text-slate-600 mt-2 max-w-xl mx-auto">
+        輸入下方資料，一鍵產生雙面信用卡大小的隨身自救卡。印出剪下折疊放錢包，手機沒電也有實體靠山。
+      </p>
+    </div>
+
+    <!-- Form -->
+    <div class="print-area no-print space-y-5">
+      
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <!-- Name -->
+        <div>
+          <label class="block text-xs font-semibold text-slate-700 mb-1">姓名 Name</label>
+          <input id="f-name" type="text" class="w-full border border-slate-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#06B6D4] focus:border-transparent" placeholder="王大明">
+        </div>
+        <!-- Blood Type -->
+        <div>
+          <label class="block text-xs font-semibold text-slate-700 mb-1">血型 Blood Type</label>
+          <select id="f-blood" class="w-full border border-slate-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#06B6D4] focus:border-transparent">
+            <option value="">-- 選擇 --</option>
+            <option value="A">A</option>
+            <option value="B">B</option>
+            <option value="O">O</option>
+            <option value="AB">AB</option>
+            <option value="Unknown">不詳 / Unknown</option>
+          </select>
+        </div>
+        <!-- Passport / ID -->
+        <div>
+          <label class="block text-xs font-semibold text-slate-700 mb-1">護照號碼 Passport No.</label>
+          <input id="f-passport" type="text" class="w-full border border-slate-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#06B6D4] focus:border-transparent" placeholder="M123456789">
+        </div>
+        <!-- DOB -->
+        <div>
+          <label class="block text-xs font-semibold text-slate-700 mb-1">出生日期 Date of Birth</label>
+          <input id="f-dob" type="date" class="w-full border border-slate-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#06B6D4] focus:border-transparent">
+        </div>
+      </div>
+
+      <!-- Emergency Contact -->
+      <div>
+        <label class="block text-xs font-semibold text-slate-700 mb-1">緊急聯絡人 Emergency Contact</label>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <input id="f-ec-name" type="text" class="w-full border border-slate-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#06B6D4] focus:border-transparent" placeholder="姓名 / 關係">
+          <input id="f-ec-phone" type="tel" class="w-full border border-slate-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#06B6D4] focus:border-transparent" placeholder="電話含國碼 (+886 912345678)">
+        </div>
+      </div>
+
+      <!-- Travel Destination -->
+      <div>
+        <label class="block text-xs font-semibold text-slate-700 mb-1">目的地 Destination</label>
+        <input id="f-dest" type="text" class="w-full border border-slate-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#06B6D4] focus:border-transparent" placeholder="日本 / 泰國 / 法國…">
+      </div>
+
+      <!-- Insurance -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div>
+          <label class="block text-xs font-semibold text-slate-700 mb-1">保險公司 Insurance Co.</label>
+          <input id="f-ins-co" type="text" class="w-full border border-slate-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#06B6D4] focus:border-transparent" placeholder="富邦 / 國泰 / 南山…">
+        </div>
+        <div>
+          <label class="block text-xs font-semibold text-slate-700 mb-1">保單號碼 Policy No.</label>
+          <input id="f-ins-policy" type="text" class="w-full border border-slate-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#06B6D4] focus:border-transparent" placeholder="保單號碼">
+        </div>
+      </div>
+
+      <!-- Local Emergency Numbers -->
+      <div>
+        <label class="block text-xs font-semibold text-slate-700 mb-1">
+          目的地急難專線 Local Emergency Numbers
+          <span class="text-slate-400 font-normal">（警 / 消 / 救護）</span>
+        </label>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+          <input id="f-police" type="text" class="w-full border border-slate-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#06B6D4] focus:border-transparent" placeholder="警察 Police">
+          <input id="f-fire" type="text" class="w-full border border-slate-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#06B6D4] focus:border-transparent" placeholder="消防 Fire">
+          <input id="f-ambulance" type="text" class="w-full border border-slate-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#06B6D4] focus:border-transparent" placeholder="救護 Ambulance">
+        </div>
+      </div>
+
+      <!-- Additional Notes -->
+      <div>
+        <label class="block text-xs font-semibold text-slate-700 mb-1">備註 Notes（過敏、慢性病等）</label>
+        <textarea id="f-notes" rows="2" class="w-full border border-slate-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#06B6D4] focus:border-transparent" placeholder="藥物過敏 / 慢性病史 / 其他重要資訊"></textarea>
+      </div>
+
+      <!-- Generate Button -->
+      <button onclick="generateCard()" class="w-full bg-[#e63946] hover:bg-[#C1121F] text-white font-bold py-3 rounded-xl transition-all text-sm shadow-md hover:shadow-lg active:scale-[0.98]">
+        📄 產生緊急聯絡卡 PDF
+      </button>
+    </div>
+
+    <!-- Preview Area -->
+    <div id="preview-area" class="mt-8 hidden">
+      <h2 class="no-print text-lg font-bold text-slate-800 mb-4">🔍 預覽</h2>
+      <div class="flex flex-col sm:flex-row gap-4 items-start">
+        <!-- Front -->
+        <div class="card-preview" id="card-front">
+          <div style="font-size:8pt;font-weight:700;text-align:center;border-bottom:1px solid #1e293b;padding-bottom:4px;margin-bottom:4px;">
+            🚨 EMERGENCY CONTACT CARD
+          </div>
+          <div><b>Name:</b> <span id="pv-name">—</span></div>
+          <div><b>Blood:</b> <span id="pv-blood">—</span></div>
+          <div><b>Passport:</b> <span id="pv-passport">—</span></div>
+          <div><b>DOB:</b> <span id="pv-dob">—</span></div>
+          <div><b>Destination:</b> <span id="pv-dest">—</span></div>
+          <div style="margin-top:4px;padding-top:4px;border-top:1px solid #ccc;">
+            <div><b>📞 EC:</b> <span id="pv-ec">—</span></div>
+          </div>
+        </div>
+        <!-- Back -->
+        <div class="card-preview" id="card-back">
+          <div style="font-size:7pt;font-weight:700;text-align:center;border-bottom:1px solid #1e293b;padding-bottom:4px;margin-bottom:4px;">
+            🚨 TRAVEL SAFETY INFO
+          </div>
+          <div><b>🏥 Insurance:</b> <span id="pv-ins">—</span></div>
+          <div><b>📋 Policy:</b> <span id="pv-policy">—</span></div>
+          <div style="margin-top:3px;">
+            <b>☎️ Police:</b> <span id="pv-police">—</span>
+          </div>
+          <div><b>🔥 Fire:</b> <span id="pv-fire">—</span></div>
+          <div><b>🚑 Ambulance:</b> <span id="pv-ambulance">—</span></div>
+          <div style="margin-top:3px;padding-top:3px;border-top:1px solid #ccc;">
+            <b>📝 Notes:</b> <span id="pv-notes" style="font-size:6.5pt;">—</span>
+          </div>
+          <div style="margin-top:4px;font-size:6pt;text-align:center;color:#666;">
+            Made with golightly.fun Travel Lab
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p class="no-print text-center text-xs text-slate-400 mt-8 max-w-md mx-auto leading-relaxed">
+      ⚠️ 本工具為輔助用途。建議出發前將資料提供給家人留存，並確認保險公司 24 小時海外急難救助電話。
+    </p>
+  </main>
+
+  <script>
+  function generateCard() {
+    // Gather values
+    const name = document.getElementById('f-name').value.trim() || '—';
+    const blood = document.getElementById('f-blood').value || '—';
+    const passport = document.getElementById('f-passport').value.trim() || '—';
+    const dob = document.getElementById('f-dob').value || '—';
+    const dest = document.getElementById('f-dest').value.trim() || '—';
+    const ecName = document.getElementById('f-ec-name').value.trim() || '—';
+    const ecPhone = document.getElementById('f-ec-phone').value.trim() || '—';
+    const insCo = document.getElementById('f-ins-co').value.trim() || '—';
+    const policy = document.getElementById('f-ins-policy').value.trim() || '—';
+    const police = document.getElementById('f-police').value.trim() || '—';
+    const fire = document.getElementById('f-fire').value.trim() || '—';
+    const ambulance = document.getElementById('f-ambulance').value.trim() || '—';
+    const notes = document.getElementById('f-notes').value.trim() || '—';
+
+    // Update preview
+    document.getElementById('pv-name').textContent = name;
+    document.getElementById('pv-blood').textContent = blood;
+    document.getElementById('pv-passport').textContent = passport;
+    document.getElementById('pv-dob').textContent = dob;
+    document.getElementById('pv-dest').textContent = dest;
+    document.getElementById('pv-ec').textContent = ecName + ' / ' + ecPhone;
+    document.getElementById('pv-ins').textContent = insCo;
+    document.getElementById('pv-policy').textContent = policy;
+    document.getElementById('pv-police').textContent = police;
+    document.getElementById('pv-fire').textContent = fire;
+    document.getElementById('pv-ambulance').textContent = ambulance;
+    document.getElementById('pv-notes').textContent = notes;
+
+    // Show preview
+    document.getElementById('preview-area').classList.remove('hidden');
+
+    // Print (opens print dialog with the whole page)
+    window.print();
+  }
+  </script>
+</body>
+</html>

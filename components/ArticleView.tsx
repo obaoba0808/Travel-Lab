@@ -6,6 +6,7 @@ import {
   Sun, Leaf, Snowflake, Flower, Camera, CloudSun
 } from 'lucide-react';
 import { TravelArticle, Comment } from '../types';
+import { Breadcrumb } from './Breadcrumb';
 
 interface ArticleViewProps {
   article: TravelArticle;
@@ -444,6 +445,7 @@ export const ArticleView: React.FC<ArticleViewProps> = ({
 
   return (
     <div className="bg-tiffany-cream min-h-screen text-slate-800 pb-12 relative">
+      <Breadcrumb title={article.title} category={article.country ? `${article.country}自由行` : undefined} />
       
       {/* 頂部 Tiffany 綠進度條 */}
       <div 

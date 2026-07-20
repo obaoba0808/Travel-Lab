@@ -17,7 +17,7 @@ export const travelArticles: TravelArticle[] = [
       avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=200&auto=format&fit=crop',
       role: '旅遊專欄作家與文化歷史學者'
     },
-    intro: '京都依然是日本傳統文化跳動的心臟。不同於東京霓虹閃爍的摩天大樓，京都將目光凝聚於美妙的枯山水、木造町家、以及祇園石板路上絲綢和服的沙沙細語。',
+    intro: '京都依然是日本傳統文化跳動的心臟。不同於東京霓虹閃爍的摩天大樓，京都將目光凝聚於美妙的枯山水、木造町家、祇園石板路上絲綢和服的沙沙細語。從清水寺的晨曦到嵐山竹林的幽徑，這座千年古都為旅人收藏了最溫柔的日本風景。',
     publishDate: '2026年6月18日',
     highlights: [
       '漫步在嵐山竹林幽徑，聆聽陽光穿透高聳竹葉的呢喃',
@@ -166,7 +166,7 @@ export const travelArticles: TravelArticle[] = [
       avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop',
       role: '高山攝影師與極限探險家'
     },
-    intro: '坐落在被垂直懸崖合抱的深邃 U 型山谷中，勞特布龍嫩是童話世界的具體化身。七十二道瀑布從四周的峭壁傾瀉而下，沒入松林，在牧場上空織起一層永不散去的縹緲水霧。',
+    intro: '坐落在被垂直懸崖合抱的深邃 U 型山谷中，勞特布龍嫩是童話世界的具體化身。七十二道瀑布從四周的峭壁傾瀉而下，沒入松林，在牧場上空織起一層永不散去的縹緲水霧。搭乘少女峰登山鐵道直上歐洲之巔，在雪山、湖泊與高山草原之間，遇見最純淨的阿爾卑斯風光。',
     publishDate: '2026年5月14日',
     highlights: [
       '仰望施陶巴赫瀑布（Staubbach Falls）從村莊後方近 300 公尺高的懸崖飛瀉而下',
@@ -315,7 +315,7 @@ export const travelArticles: TravelArticle[] = [
       avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=200&auto=format&fit=crop',
       role: '極光探險嚮導與地質學研究員'
     },
-    intro: '冰島是一個大地仍在活躍誕生的奇蹟之境。由玄武岩熔岩爆發鑄就，再經巨型大陸冰帽雕琢，這片土地充滿了野性、沉默與電影畫面般的史詩感。',
+    intro: '冰島是一個大地仍在活躍誕生的奇蹟之境。由玄武岩熔岩爆發鑄就，再經巨型大陸冰帽雕琢，這片土地充滿了野性、沉默與電影畫面般的史詩感。追尋夏季的午夜陽光與冬季的舞動極光，在瀑布、黑沙灘與溫泉之間，展開一場環島的荒野壯遊。',
     publishDate: '2026年4月2日',
     highlights: [
       '穿梭於塞里雅蘭瀑布（Seljalandsfoss）高達 60 公尺的水簾幕後方',

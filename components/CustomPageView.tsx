@@ -6,6 +6,7 @@ import {
   Compass, Info, Send, Camera, Plane, Layers, ExternalLink, Zap, X, Globe, ArrowRight
 } from 'lucide-react';
 import { CustomPageData, customPages } from '../data/customPages';
+import { Breadcrumb } from './Breadcrumb';
 import { getArticleContent } from '../data/articleContents';
 
 // --- 首爾美食地圖 10 大名物與避坑熱點數據 ---
@@ -1120,6 +1121,7 @@ export const CustomPageView: React.FC<CustomPageViewProps> = ({ page, onBackToHo
 
   return (
     <div className="bg-tiffany-cream min-h-screen text-slate-800 pb-20 relative">
+      <Breadcrumb title={page.title} category={page.category} />
       
       {/* 頂部封面圖區 - 無裁剪整張顯示 */}
       <div className="w-full bg-slate-950 relative overflow-hidden">

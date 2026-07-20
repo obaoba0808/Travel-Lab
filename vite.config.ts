@@ -41,35 +41,35 @@ function staticHtmlGenerator() {
         fs.mkdirSync(articlesDir, { recursive: true });
       }
       
-      // 輔助函式：置換 SEO Meta 標籤與注入 JSON-LD 結構化數據
-      const generatePageHtml = (templateHtml: string, title: string, description: string, imageUrl: string, canonicalUrl: string, keywords: string, extraJsonLd: any = null) => {
-        let html = templateHtml;
+      // 輔助函式：置換 SEO Meta 標籤（Title / Description / Canonical / OG / Twitter）
+      const replaceMeta = (html: string, title: string, description: string, imageUrl: string, canonicalUrl: string, keywords: string) => {
+        let h = html;
         
         // 1. 替換 Title
         const titleRegex = /<title>.*?<\/title>/;
         const newTitle = `<title>${title}</title>`;
-        if (titleRegex.test(html)) {
-          html = html.replace(titleRegex, newTitle);
+        if (titleRegex.test(h)) {
+          h = h.replace(titleRegex, newTitle);
         } else {
-          html = html.replace('</head>', `${newTitle}\n</head>`);
+          h = h.replace('</head>', `${newTitle}\n</head>`);
         }
         
         // 2. 替換 Description
         const descRegex = /<meta\s+name="description"\s+content="[^"]*"\s*\/?>/i;
         const newDesc = `<meta name="description" content="${description}" />`;
-        if (descRegex.test(html)) {
-          html = html.replace(descRegex, newDesc);
+        if (descRegex.test(h)) {
+          h = h.replace(descRegex, newDesc);
         } else {
-          html = html.replace('</head>', `${newDesc}\n</head>`);
+          h = h.replace('</head>', `${newDesc}\n</head>`);
         }
         
         // 3. 替換 Canonical
         const canonicalRegex = /<link\s+rel="canonical"\s+href="[^"]*"\s*\/?>/i;
         const newCanonical = `<link rel="canonical" href="${canonicalUrl}" />`;
-        if (canonicalRegex.test(html)) {
-          html = html.replace(canonicalRegex, newCanonical);
+        if (canonicalRegex.test(h)) {
+          h = h.replace(canonicalRegex, newCanonical);
         } else {
-          html = html.replace('</head>', `${newCanonical}\n</head>`);
+          h = h.replace('</head>', `${newCanonical}\n</head>`);
         }
         
         // 4. 注入其他 Meta 標籤 (OG, Twitter, Keywords, Robots)
@@ -78,44 +78,158 @@ function staticHtmlGenerator() {
         const twitterTitleRegex = /<meta\s+name="twitter:title"\s+content="[^"]*"\s*\/?>/i;
         const twitterDescRegex = /<meta\s+name="twitter:description"\s+content="[^"]*"\s*\/?>/i;
 
-        if (ogTitleRegex.test(html)) {
-          html = html.replace(ogTitleRegex, `<meta property="og:title" content="${title}" />`);
+        if (ogTitleRegex.test(h)) {
+          h = h.replace(ogTitleRegex, `<meta property="og:title" content="${title}" />`);
         }
-        if (ogDescRegex.test(html)) {
-          html = html.replace(ogDescRegex, `<meta property="og:description" content="${description}" />`);
+        if (ogDescRegex.test(h)) {
+          h = h.replace(ogDescRegex, `<meta property="og:description" content="${description}" />`);
         }
-        if (twitterTitleRegex.test(html)) {
-          html = html.replace(twitterTitleRegex, `<meta name="twitter:title" content="${title}" />`);
+        if (twitterTitleRegex.test(h)) {
+          h = h.replace(twitterTitleRegex, `<meta name="twitter:title" content="${title}" />`);
         }
-        if (twitterDescRegex.test(html)) {
-          html = html.replace(twitterDescRegex, `<meta name="twitter:description" content="${description}" />`);
+        if (twitterDescRegex.test(h)) {
+          h = h.replace(twitterDescRegex, `<meta name="twitter:description" content="${description}" />`);
         }
 
         const additionalTags = [
-          !html.includes('name="keywords"') ? `<meta name="keywords" content="${keywords}" />` : '',
-          !html.includes('name="robots"') ? `<meta name="robots" content="index, follow" />` : '',
-          !ogTitleRegex.test(templateHtml) ? `<meta property="og:title" content="${title}" />` : '',
-          !ogDescRegex.test(templateHtml) ? `<meta property="og:description" content="${description}" />` : '',
-          imageUrl && !html.includes('property="og:image"') ? `<meta property="og:image" content="${imageUrl}" />` : '',
-          !html.includes('property="og:url"') ? `<meta property="og:url" content="${canonicalUrl}" />` : '',
-          !html.includes('property="og:type"') ? `<meta property="og:type" content="article" />` : '',
-          !html.includes('name="twitter:card"') ? `<meta name="twitter:card" content="summary_large_image" />` : '',
-          !twitterTitleRegex.test(templateHtml) ? `<meta name="twitter:title" content="${title}" />` : '',
-          !twitterDescRegex.test(templateHtml) ? `<meta name="twitter:description" content="${description}" />` : '',
-          imageUrl && !html.includes('name="twitter:image"') ? `<meta name="twitter:image" content="${imageUrl}" />` : '',
+          !h.includes('name="keywords"') ? `<meta name="keywords" content="${keywords}" />` : '',
+          !h.includes('name="robots"') ? `<meta name="robots" content="index, follow" />` : '',
+          !ogTitleRegex.test(html) ? `<meta property="og:title" content="${title}" />` : '',
+          !ogDescRegex.test(html) ? `<meta property="og:description" content="${description}" />` : '',
+          imageUrl && !h.includes('property="og:image"') ? `<meta property="og:image" content="${imageUrl}" />` : '',
+          !h.includes('property="og:url"') ? `<meta property="og:url" content="${canonicalUrl}" />` : '',
+          !h.includes('property="og:type"') ? `<meta property="og:type" content="article" />` : '',
+          !h.includes('name="twitter:card"') ? `<meta name="twitter:card" content="summary_large_image" />` : '',
+          !twitterTitleRegex.test(html) ? `<meta name="twitter:title" content="${title}" />` : '',
+          !twitterDescRegex.test(html) ? `<meta name="twitter:description" content="${description}" />` : '',
+          imageUrl && !h.includes('name="twitter:image"') ? `<meta name="twitter:image" content="${imageUrl}" />` : '',
         ].filter(Boolean).join('\n    ');
         
         if (additionalTags) {
-          html = html.replace('</head>', `${additionalTags}\n</head>`);
+          h = h.replace('</head>', `${additionalTags}\n</head>`);
         }
         
-        // 5. 注入頁面專屬的 JSON-LD 結構數據
-        if (extraJsonLd && !html.includes('type="application/ld+json"')) {
-          const jsonLdScript = `<script type="application/ld+json">\n${JSON.stringify(extraJsonLd, null, 2)}\n</script>`;
-          html = html.replace('</head>', `${jsonLdScript}\n</head>`);
+        return h;
+      };
+
+      // 移除所有既有的 JSON-LD 腳本（改由生成器統一管理，避免重複與不一致）
+      const stripJsonLd = (html: string): string => {
+        return html.replace(/<script type="application\/ld\+json">[\s\S]*?<\/script>/gi, '');
+      };
+
+      // 從 HTML 中解析頁面專屬的 FAQPage 結構化資料（保留既有問答，避免遺失）
+      const extractFaqPage = (html: string): any | null => {
+        const matches = html.match(/<script type="application\/ld\+json">[\s\S]*?<\/script>/gi);
+        if (!matches) return null;
+        for (const m of matches) {
+          try {
+            const jsonStr = m.replace(/<script[^>]*>/i, '').replace(/<\/script>/i, '');
+            const data = JSON.parse(jsonStr);
+            const arr = Array.isArray(data) ? data : [data];
+            for (const d of arr) {
+              if (d && d['@type'] === 'FAQPage' && Array.isArray(d.mainEntity) && d.mainEntity.length > 0) {
+                return d;
+              }
+            }
+          } catch (e) { /* 解析失敗則忽略，不阻斷建置 */ }
         }
-        
+        return null;
+      };
+
+      // 分類 → 地區入口頁對應（用於 BreadcrumbList 中間層）
+      const CATEGORY_PORTAL: Record<string, { label: string; url: string }> = {
+        '日本自由行': { label: '日本自由行', url: 'https://golightly.fun/japan-travel.html' },
+        '韓國自由行': { label: '韓國自由行', url: 'https://golightly.fun/korea-travel.html' },
+        '台灣旅遊': { label: '台灣旅遊', url: 'https://golightly.fun/taiwan-travel.html' },
+        '台灣自由行': { label: '台灣旅遊', url: 'https://golightly.fun/taiwan-travel.html' },
+        '東南亞自由行': { label: '東南亞自由行', url: 'https://golightly.fun/southeast-asia.html' },
+        '旅遊工具': { label: '旅遊工具', url: 'https://golightly.fun/travel-tools.html' },
+        '關於我們': { label: '關於我們', url: 'https://golightly.fun/about.html' },
+      };
+
+      // 建立 BreadcrumbList 結構化資料（首頁 → 地區入口 → 當前頁）
+      const buildBreadcrumb = (pageUrl: string, pageTitle: string, category?: string): any => {
+        const items: any[] = [
+          { '@type': 'ListItem', position: 1, name: '首頁', item: 'https://golightly.fun/' }
+        ];
+        if (category && CATEGORY_PORTAL[category]) {
+          const p = CATEGORY_PORTAL[category];
+          items.push({ '@type': 'ListItem', position: items.length + 1, name: p.label, item: p.url });
+        }
+        items.push({ '@type': 'ListItem', position: items.length + 1, name: pageTitle, item: pageUrl });
+        return {
+          '@context': 'https://schema.org',
+          '@type': 'BreadcrumbList',
+          itemListElement: items
+        };
+      };
+
+      // 建立 Article / AboutPage 主結構化資料
+      const buildPageSchema = (page: any, canonicalUrl: string, title: string, description: string, imageUrl: string, siteName: string): any => {
+        const isAbout = page.id === 'about';
+        return {
+          '@context': 'https://schema.org',
+          '@type': isAbout ? 'AboutPage' : 'Article',
+          '@id': `${canonicalUrl}#article`,
+          'headline': page.title,
+          'image': imageUrl || 'https://golightly.fun/images/logo.webp',
+          'datePublished': '2026-06-25',
+          'dateModified': '2026-07-20',
+          'author': { '@type': 'Organization', 'name': siteName },
+          'publisher': {
+            '@type': 'Organization',
+            'name': siteName,
+            'url': 'https://golightly.fun',
+            'logo': { '@type': 'ImageObject', 'url': 'https://golightly.fun/images/logo.webp' }
+          },
+          'mainEntityOfPage': { '@type': 'WebPage', '@id': canonicalUrl },
+          'articleSection': page.category || '旅遊攻略',
+          'keywords': `${page.title}, 自由行, 旅遊攻略, 均在路上`,
+          'description': description
+        };
+      };
+
+      // 在 </head> 前注入多個 JSON-LD 區塊
+      const injectJsonLd = (html: string, blocks: any[]): string => {
+        let h = html;
+        for (const block of blocks) {
+          const script = `  <script type="application/ld+json">\n${JSON.stringify(block, null, 2)}\n  </script>`;
+          h = h.replace('</head>', `${script}\n</head>`);
+        }
+        return h;
+      };
+      
+      // 可見麵包屑 HTML（與 JSON-LD 麵包屑共用 CATEGORY_PORTAL 邏輯）
+      const buildBreadcrumbHtml = (pageUrl: string, pageTitle: string, category?: string): string => {
+        const portal = category ? CATEGORY_PORTAL[category] : undefined;
+        const items: string[] = [
+          `<li><a href="https://golightly.fun/" class="hover:text-tiffany transition-colors">首頁</a></li>`
+        ];
+        if (portal) {
+          items.push(`<li class="flex items-center gap-1.5"><span class="text-slate-300" aria-hidden="true">/</span><a href="${portal.url}" class="hover:text-tiffany transition-colors">${portal.label}</a></li>`);
+        }
+        items.push(`<li class="flex items-center gap-1.5"><span class="text-slate-300" aria-hidden="true">/</span><span class="text-slate-700 font-medium" aria-current="page">${pageTitle}</span></li>`);
+        return `  <nav aria-label="麵包屑導覽" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 pb-1 text-sm text-slate-500">\n    <ol class="flex flex-wrap items-center gap-x-1.5 gap-y-1">\n      ${items.join('\n      ')}\n    </ol>\n  </nav>`;
+      };
+      
+      // 將可見麵包屑注入實體頁（global-header.js 之後、hero 之前；SPA 頁由 React 元件處理，此處不注入）
+      const injectBreadcrumbHtml = (html: string, navHtml: string): string => {
+        const m = html.match(/<script src="\/global-header\.js[^>]*>\s*<\/script>/);
+        if (m) {
+          return html.replace(m[0], `${m[0]}\n\n${navHtml}`);
+        }
         return html;
+      };
+      
+      // 統一注入 hreflang（先移除既有，再補 zh-Hant / zh-TW / x-default）
+      const injectHreflang = (html: string, canonicalUrl: string): string => {
+        let h = html.replace(/<link[^>]*\shreflang[^>]*\/?>/gi, '');
+        const tags = [
+          `<link href="${canonicalUrl}" hreflang="zh-Hant" rel="alternate"/>`,
+          `<link href="${canonicalUrl}" hreflang="zh-TW" rel="alternate"/>`,
+          `<link href="${canonicalUrl}" hreflang="x-default" rel="alternate"/>`
+        ].join('\n  ');
+        return h.replace('</head>', `  ${tags}\n</head>`);
       };
       
       // 生成文章專題靜態頁面
@@ -129,6 +243,7 @@ function staticHtmlGenerator() {
         const jsonLd = {
           "@context": "https://schema.org",
           "@type": "BlogPosting",
+          "@id": `${canonicalUrl}#article`,
           "headline": article.title,
           "image": imageUrl || "https://golightly.fun/images/logo.webp",
           "genre": article.category || "旅遊攻略",
@@ -143,7 +258,9 @@ function staticHtmlGenerator() {
             }
           },
           "url": canonicalUrl,
+          "mainEntityOfPage": { "@type": "WebPage", "@id": canonicalUrl },
           "datePublished": article.publishDate || "2026-06-25",
+          "dateModified": "2026-07-20",
           "author": {
             "@type": "Person",
             "name": article.author?.name || "Kristian Sigurd"
@@ -151,7 +268,13 @@ function staticHtmlGenerator() {
           "description": description
         };
         
-        const articleHtml = generatePageHtml(template, title, description, imageUrl, canonicalUrl, keywords, jsonLd);
+        // 文章麵包屑：首頁 → 國家入口（若有）→ 文章
+        const breadcrumb = buildBreadcrumb(canonicalUrl, article.title, article.country ? `${article.country}自由行` : undefined);
+        
+        let articleHtml = replaceMeta(template, title, description, imageUrl, canonicalUrl, keywords);
+        articleHtml = stripJsonLd(articleHtml);
+        articleHtml = injectJsonLd(articleHtml, [jsonLd, breadcrumb]);
+        articleHtml = injectHreflang(articleHtml, canonicalUrl);
         const articlePath = path.join(articlesDir, `${article.id}.html`);
         fs.writeFileSync(articlePath, articleHtml, 'utf-8');
         console.log(`[Static Generator] 已成功為文章《${article.title}》生成靜態 HTML 檔：/articles/${article.id}.html`);
@@ -165,31 +288,34 @@ function staticHtmlGenerator() {
         const imageUrl = page.coverImage || '';
         const canonicalUrl = `https://golightly.fun/${page.id}.html`;
         const keywords = `${page.title}, 自由行, 旅遊攻略, 均在路上`;
-        
-        const jsonLd = {
-          "@context": "https://schema.org",
-          "@type": "WebPage",
-          "name": title,
-          "description": description,
-          "publisher": {
-            "@type": "Organization",
-            "name": metadataName,
-            "url": "https://golightly.fun"
-          },
-          "url": canonicalUrl
-        };
 
         const physicalPath = path.resolve(__dirname, page.url || `${page.id}.html`);
         if (fs.existsSync(physicalPath)) {
           const physicalContent = fs.readFileSync(physicalPath, 'utf-8');
-          // 透過 generatePageHtml 將實體 HTML 內部的 SEO 欄位完全對齊 article/page 資料物件，避免空值
-          const optimizedHtml = generatePageHtml(physicalContent, title, description, imageUrl, canonicalUrl, keywords, jsonLd);
+          // 保留實體 HTML 中既有的 FAQPage 問答（若有）
+          const faq = extractFaqPage(physicalContent);
+          const jsonLd = buildPageSchema(page, canonicalUrl, title, description, imageUrl, metadataName);
+          const breadcrumb = buildBreadcrumb(canonicalUrl, page.title, page.category);
+          const blocks = [jsonLd, breadcrumb];
+          if (faq) blocks.push(faq);
+          // 透過 replaceMeta 將實體 HTML 內部的 SEO 欄位對齊 page 資料物件，並由生成器統一注入 JSON-LD
+          let optimizedHtml = replaceMeta(physicalContent, title, description, imageUrl, canonicalUrl, keywords);
+          optimizedHtml = stripJsonLd(optimizedHtml);
+          optimizedHtml = injectJsonLd(optimizedHtml, blocks);
+          optimizedHtml = injectHreflang(optimizedHtml, canonicalUrl);
+          const visibleBreadcrumb = buildBreadcrumbHtml(canonicalUrl, page.title, page.category);
+          optimizedHtml = injectBreadcrumbHtml(optimizedHtml, visibleBreadcrumb);
           fs.writeFileSync(pagePath, optimizedHtml, 'utf-8');
           console.log(`[Static Generator] 已成功複製並優化實體《${page.title}》靜態 HTML 至：/dist/${page.id}.html`);
           return;
         }
         
-        const pageHtml = generatePageHtml(template, title, description, imageUrl, canonicalUrl, keywords, jsonLd);
+        const jsonLd = buildPageSchema(page, canonicalUrl, title, description, imageUrl, metadataName);
+        const breadcrumb = buildBreadcrumb(canonicalUrl, page.title, page.category);
+        let pageHtml = replaceMeta(template, title, description, imageUrl, canonicalUrl, keywords);
+        pageHtml = stripJsonLd(pageHtml);
+        pageHtml = injectJsonLd(pageHtml, [jsonLd, breadcrumb]);
+        pageHtml = injectHreflang(pageHtml, canonicalUrl);
         fs.writeFileSync(pagePath, pageHtml, 'utf-8');
         console.log(`[Static Generator] 已成功為功能頁《${page.title}》生成靜態 HTML 檔：/${page.id}.html`);
       });
@@ -201,21 +327,13 @@ function staticHtmlGenerator() {
       
       // 1. 首頁
       urls.add('https://golightly.fun/');
-      
-      // 2. 掃描專案根目錄下所有實體存在的靜態 HTML 檔案 (除 index.html 外)
-      const rootFiles = fs.readdirSync(__dirname);
-      rootFiles.forEach(file => {
-        if (file.endsWith('.html') && file !== 'index.html') {
-          urls.add(`https://golightly.fun/${file}`);
-        }
-      });
-      
-      // 3. 加入 customPages 設定檔中的所有頁面
+
+      // 2. 加入 customPages 設定檔中的所有頁面（static generator 必定會複製到 dist）
       customPages.forEach(page => {
         urls.add(`https://golightly.fun/${page.url || `${page.id}.html`}`);
       });
-      
-      // 4. 加入動態產生的 travelArticles 文章專題頁面
+
+      // 3. 加入動態產生的 travelArticles 文章專題頁面
       travelArticles.forEach(article => {
         urls.add(`https://golightly.fun/articles/${article.id}.html`);
       });
