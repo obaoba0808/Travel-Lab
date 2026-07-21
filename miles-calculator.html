@@ -1,0 +1,1289 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EDPEJH91EL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-EDPEJH91EL');
+  </script>
+
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>里程累積試算器：三大航空聯盟與票等里程計算教學｜均在路上Travel Lab</title>
+  <meta name="description" content="機票里程累積到底怎麼算？星空聯盟（長榮、國航、星宇）、天合聯盟（華航、達美、越南航空）、寰宇一家（國泰、日航）三大航空聯盟的里程計算公式詳解，手把手教你刷卡與飛航雙軌並進的里程最大化策略，以及如何用里程兌換旺季機票，是每次出國飛行後必讀的里程運用指南。" />
+  <meta name="author" content="均在路上">
+  
+  <meta property="og:title" content="里程累積試算器：三大航空聯盟與票等里程計算教學｜均在路上Travel Lab" />
+  <meta property="og:description" content="機票里程累積到底怎麼算？星空聯盟（長榮、國航、星宇）、天合聯盟（華航、達美、越南航空）、寰宇一家（國泰、日航）三大航空聯盟的里程計算公式詳解，手把手教你刷卡與飛航雙軌並進的里程最大化策略，以及如何用里程兌換旺季機票，是每次出國飛行後必讀的里程運用指南。" />
+  <meta property="og:type" content="article"/>
+  <meta property="og:url" content="https://golightly.fun/miles-calculator.html"/>
+  <meta property="og:image" content="https://golightly.fun/images/miles-calculator.webp"/>
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="里程累積試算工具" />
+  <meta property="og:site_name" content="均在路上 Travel Lab"/>
+  <meta property="og:locale" content="zh_TW"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="里程累積試算器：三大航空聯盟與票等里程計算教學｜均在路上Travel Lab" />
+  <meta name="twitter:description" content="機票里程累積到底怎麼算？星空聯盟（長榮、國航、星宇）、天合聯盟（華航、達美、越南航空）、寰宇一家（國泰、日航）三大航空聯盟的里程計算公式詳解，手把手教你刷卡與飛航雙軌並進的里程最大化策略，以及如何用里程兌換旺季機票，是每次出國飛行後必讀的里程運用指南。" />
+  <meta name="twitter:image" content="https://golightly.fun/images/miles-calculator.webp" />
+
+  <link href="https://golightly.fun/miles-calculator.html" rel="canonical"/>
+  
+  
+  
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              DEFAULT: '#e63946', // Vitality Ultimate Red
+              hover: '#b91c1c',
+              light: '#fca5a5',
+              cream: '#f8fafc',
+              slate800: '#1e293b',
+              slate950: '#020617'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Noto+Sans+TC:wght@400;500;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet"/>
+
+  <!-- Custom CSS Overrides -->
+  <style>
+    body {
+      font-family: 'Noto Sans TC', 'Inter', sans-serif;
+      background-color: #f8fafc;
+      color: #1e293b;
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #e63946;
+      border-radius: 9999px;
+    }
+    /* FAQ accordion transitions */
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+    }
+    .faq-item.open .faq-answer {
+      max-height: 500px;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+    }
+    .faq-item.open .faq-icon {
+      transform: rotate(180deg);
+    }
+  
+    /* Prose hyperlink styles */
+    article p a, .article-body p a, .markdown-body p a {
+      color: #2563EB !important;
+      text-decoration: underline !important;
+      transition: color 0.15s ease-in-out !important;
+    }
+    article p a:hover, .article-body p a:hover, .markdown-body p a:hover {
+      color: #1D4ED8 !important;
+    }
+  
+  </style>
+
+  <!-- Structured Data / JSON-LD -->
+  
+  
+  
+<link rel="canonical" href="https://golightly.fun/miles-calculator.html" />
+<meta name="keywords" content="里程累積試算器：三大航空聯盟與票等里程計算教學, 自由行, 旅遊攻略, 均在路上" />
+    <meta name="robots" content="index, follow" />
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "@id": "https://golightly.fun/miles-calculator.html#article",
+  "headline": "里程累積試算器：三大航空聯盟與票等里程計算教學",
+  "image": "/images/miles.webp",
+  "datePublished": "2026-06-25",
+  "dateModified": "2026-07-20",
+  "author": {
+    "@type": "Organization",
+    "name": "均在路上Travel Lab"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "均在路上Travel Lab",
+    "url": "https://golightly.fun",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://golightly.fun/images/logo-red.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://golightly.fun/miles-calculator.html"
+  },
+  "articleSection": "旅遊工具",
+  "keywords": "里程累積試算器：三大航空聯盟與票等里程計算教學, 自由行, 旅遊攻略, 均在路上",
+  "description": "機票里程累積到底怎麼算？星空聯盟（長榮、國航、星宇）、天合聯盟（華航、達美、越南航空）、寰宇一家（國泰、日航）三大航空聯盟的里程計算公式詳解，手把手教你刷卡與飛航雙軌並進的里程最大化策略，以及如何用里程兌換旺季機票，是每次出國飛行後必讀的里程運用指南。"
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "首頁",
+      "item": "https://golightly.fun/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "旅遊工具",
+      "item": "https://golightly.fun/travel-tools.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "里程累積試算器：三大航空聯盟與票等里程計算教學",
+      "item": "https://golightly.fun/miles-calculator.html"
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "刷卡多少錢能免費飛日本？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "以國泰世華御璽卡（2%回饋）計算：每月刷卡NT$30,000 → 年累積2,400里程 → 需約6-8年。搭配3張卡+搭飛機累積+電商商城，最快2-3年可以免費飛一次日本經濟艙（需要20,000里程）。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "里程累積最快的方式是什麼？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "①信用卡大額刷卡（繳稅/保費） ②搭飛機每次3,000-5,000里程 ③電商購物（航空商城） ④酒店住宿（聯盟酒店每次1,000-3,000） ⑤開卡送里程+加倍里程活動。綜合最快：1年可累積10,000-20,000里程。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "紅利轉里程的比例是多少？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "各銀行轉換比例不同：國泰世華1紅利=0.5里程、中國信託1紅利=0.5里程、花旗1紅利=0.5里程、玉山1紅利=0.33里程、美國運通1點數=1里程（最划算）。轉換時注意：部分銀行收手續費NT$100/次。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "哪個航線最省里程？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "台灣出發最省里程：①台北→關西（星宇15,000/長榮20,000） ②台北→首爾（酷航15,000/長榮20,000） ③台北→福岡（虎航15,000） ④台北→沖繩（虎航15,000）。最貴：台北→歐洲（60,000-80,000里程）、台北→美西（50,000-70,000里程）。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "里程不夠怎麼辦？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "如果距離目標里程不到20%，可以用「里程+現金」混搭兌換。長榮航空和ANA都支援混合兌換。差太多就等下次加倍活動或延後旅程1-2個月累積。"
+      }
+    }
+  ]
+}
+  </script>
+  <link href="https://golightly.fun/miles-calculator.html" hreflang="zh-Hant" rel="alternate"/>
+  <link href="https://golightly.fun/miles-calculator.html" hreflang="zh-TW" rel="alternate"/>
+  <link href="https://golightly.fun/miles-calculator.html" hreflang="x-default" rel="alternate"/>
+</head>
+<body class="bg-brand-cream text-[#1e293b] flex flex-col min-h-screen selection:bg-brand selection:text-white">
+
+  <!-- ========== 核心導航進度條 ========== -->
+  <div id="scroll-progress" class="fixed top-0 left-0 h-1 bg-[#e63946] z-[9999] transition-all duration-75" style="width: 0%"></div>
+
+  <!-- ========== UNIFIED DYNAMIC HEADER ========== -->
+  <!-- UNIFIED HEADER -->
+<!-- UNIFIED HEADER -->
+<!-- UNIFIED HEADER -->
+<!-- UNIFIED HEADER -->
+<script src="/global-header.js?v=20260627_v4" defer></script>
+
+  <nav aria-label="麵包屑導覽" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 pb-1 text-sm text-slate-500">
+    <ol class="flex flex-wrap items-center gap-x-1.5 gap-y-1">
+      <li><a href="https://golightly.fun/" class="hover:text-tiffany transition-colors">首頁</a></li>
+      <li class="flex items-center gap-1.5"><span class="text-slate-300" aria-hidden="true">/</span><a href="https://golightly.fun/travel-tools.html" class="hover:text-tiffany transition-colors">旅遊工具</a></li>
+      <li class="flex items-center gap-1.5"><span class="text-slate-300" aria-hidden="true">/</span><span class="text-slate-700 font-medium" aria-current="page">里程累積試算器：三大航空聯盟與票等里程計算教學</span></li>
+    </ol>
+  </nav>
+
+  
+  
+              <!-- EDITORIAL HERO REGION WITH BEAST-UNMASKED CARD -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8 sm:mb-12">
+    <div class="bg-white rounded-b-[2.5rem] md:rounded-b-[4.5rem] overflow-hidden">
+      
+      <!-- HERO IMAGE - FULLY UNMASKED -->
+      <div class="w-full overflow-hidden bg-slate-950">
+        <img alt="里程累積試算器 2026｜輸入刷卡金額與飛行習慣，一鍵試算多久免費飛日本！" class="w-full h-auto block mx-auto hover:scale-[1.01] transition-transform duration-700" loading="eager" src="/images/miles.webp"/>
+      </div>
+      
+      <!-- HERO CONTENT BLOCK -->
+      <div class="py-8 px-6 md:py-10 md:px-12 text-center bg-white space-y-5">
+        
+        <!-- GRADIENT REGION TAG -->
+        <div class="inline-flex items-center justify-center">
+          <span class="inline-block bg-gradient-to-r from-tiffany to-red-500 text-white text-[10px] font-display font-semibold uppercase tracking-[0.25em] px-4 py-1.5 rounded-full shadow-md shadow-tiffany/20">
+            ✈️ TRAVEL LAB
+          </span>
+        </div>
+        
+        <!-- MAIN TITLE -->
+        <h1 class="font-serif text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-wide text-slate-900 max-w-4xl mx-auto leading-tight md:leading-[1.15]">
+          里程累積試算器 2026｜輸入刷卡金額與飛行習慣，一鍵試算多久免費飛日本！
+        </h1>
+        
+        <!-- CONTRAST CAPSULE SUBTITLE -->
+        <div class="inline-flex flex-wrap items-center justify-center gap-x-4 gap-y-2 px-6 py-3 bg-slate-950/95 text-xs font-semibold rounded-full shadow-md max-w-3xl mx-auto border border-slate-800">
+          <span class="flex items-center gap-1.5 text-tiffany"><span class="font-sans">🗺️</span> 行前規劃</span>
+          <span class="text-white">•</span>
+          <span class="flex items-center gap-1.5 text-tiffany"><span class="font-sans">🍲</span> 在地美食</span>
+          <span class="text-white">•</span>
+          <span class="flex items-center gap-1.5 text-tiffany"><span class="font-sans">🛍️</span> 必訪景點</span>
+          <span class="text-white">•</span>
+          <span class="flex items-center gap-1.5 text-tiffany"><span class="font-sans">🏨</span> 推薦住宿</span>
+        </div>
+        
+        <!-- SITE DESCRIPTION / INTRODUCTION -->
+        <p class="text-sm md:text-base text-slate-500 max-w-2xl mx-auto leading-relaxed">
+          潮流、傳統與極致美食完美交織，為你開啟最專業、最精緻的自由行探索之旅。
+        </p>
+        
+        <!-- DATE & AUTHOR -->
+        <div class="text-xs text-slate-400 flex items-center justify-center gap-3 pt-2 font-display uppercase tracking-widest">
+          <span>📝 Travel Lab 編輯部</span>
+          <span class="text-slate-300">•</span>
+          <span>更新於 2026 年 6 月</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BREADCRUMBS -->
+  <div class="bg-white border-b border-slate-100 py-4 mb-6">
+    <div class="max-w-7xl mx-auto px-6">
+      <nav class="flex items-center gap-2 text-xs font-semibold text-[#1e293b]">
+        <a href="index.html" class="hover:text-[#e63946] transition-colors">首頁</a>
+      <span class="text-slate-300">/</span>
+      <a href="travel-tools.html" class="hover:text-[#e63946] transition-colors">旅遊工具</a>
+      <span class="text-slate-300">/</span>
+      <span class="text-[#020617] font-semibold">里程累積試算器</span>
+      </nav>
+    </div>
+  </div>
+
+
+  <!-- MAIN COLUMN LAYOUT -->
+  <div class="max-w-7xl mx-auto px-6 py-6">
+    <!-- Layout Grid -->
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+      
+      <!-- ==================== MAIN CONTENT (COL SPAN 8) ==================== -->
+      <main class="lg:col-span-8 space-y-12">
+        
+        <!-- Post Header & Hero -->
+        <article class="space-y-6">
+          
+
+          
+
+          <!-- Intro Text -->
+          <p class="text-base leading-relaxed text-[#1e293b] pt-2">
+            「辦了里程卡到底要刷多少才能換免費機票？」這是每個想入坑里程的新手心中最大的疑惑。很多人盲目申辦了高額年費的頂級卡，卻因日常刷卡量不足，導致累積速度比不上里程過期的速度，白白浪費了年費。
+            <br/><br/>
+            均在路上 Travel Lab 特別開發這款 <strong>2026 智慧里程累積試算器</strong>。只要輸入你每月平均的刷卡預算、每年搭機次數、並選定目標航線，系統將結合台灣各大熱門卡片回饋率，一鍵精算你與「免費去日本」的黃金距離！
+          </p>
+        </article>
+
+        <!-- 📊 Interactive Estimator Board (Bento Card) -->
+        <section id="interactive-calculator" class="bg-white border-2 border-[#e63946]/15 rounded-3xl p-6 sm:p-8 shadow-sm space-y-6 scroll-mt-24">
+          <div class="border-b border-slate-100 pb-4">
+            <h2 class="text-xl font-bold text-[#020617] flex items-center gap-2">
+              <span class="px-2.5 py-0.5 rounded bg-[#e63946]/10 text-[#e63946] text-sm font-bold">🧮</span>
+              2026 智能里程累積計算器
+            </h2>
+            <p class="text-xs text-slate-700 mt-1">即時根據刷卡額與航點目標計算最優累積路徑</p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Inputs Column -->
+            <div class="space-y-4">
+              <!-- Select Card -->
+              <div>
+                <label for="card" class="block text-xs font-bold text-[#1e293b] mb-1.5">1. 選擇預計持有的信用卡</label>
+                <select id="card" onchange="calculate()" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-2.5 text-xs text-[#1e293b] font-medium focus:outline-none focus:ring-2 focus:ring-[#e63946]/20 focus:border-[#e63946] transition-all">
+                  <option value="cathay" selected>國泰世華御璽卡（2%回饋，免年費無壓力）</option>
+                  <option value="ctbc">中國信託LINE Pay卡（國外3%，點數換里程靈活）</option>
+                  <option value="citi">星展(原花旗)寰宇卡（國外3%，里程終身有效）</option>
+                  <option value="amex">美國運通白金卡（1:1兌換極致，保費扣繳神器）</option>
+                </select>
+              </div>
+
+              <!-- Monthly Spend -->
+              <div>
+                <label for="spend" class="block text-xs font-bold text-[#1e293b] mb-1.5">2. 每月預期刷卡總金額 (NT$)</label>
+                <div class="relative">
+                  <span class="absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-600 text-xs font-bold">NT$</span>
+                  <input id="spend" type="number" value="30000" min="1000" step="5000" oninput="calculate()" class="w-full bg-slate-50 border border-slate-200 rounded-xl pl-12 pr-4 py-2.5 text-xs text-[#020617] font-bold focus:outline-none focus:ring-2 focus:ring-[#e63946]/20 focus:border-[#e63946] transition-all" />
+                </div>
+              </div>
+
+              <!-- Flights Frequency -->
+              <div>
+                <label for="flights" class="block text-xs font-bold text-[#1e293b] mb-1.5">3. 每年預計搭乘海外班機次數</label>
+                <select id="flights" onchange="calculate()" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-2.5 text-xs text-[#1e293b] font-medium focus:outline-none focus:ring-2 focus:ring-[#e63946]/20 focus:border-[#e63946] transition-all">
+                  <option value="0">完全不搭（純刷卡累積）</option>
+                  <option value="1">1 次（來回）</option>
+                  <option value="2" selected>2 次（來回，最常見）</option>
+                  <option value="3">3 次（來回）</option>
+                  <option value="4">4 次或更多（高度飛行愛好者）</option>
+                </select>
+              </div>
+
+              <!-- Target Flight Destination -->
+              <div>
+                <label for="route" class="block text-xs font-bold text-[#1e293b] mb-1.5">4. 兌換目標航線（來回經濟艙）</label>
+                <select id="route" onchange="calculate()" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-2.5 text-xs text-[#1e293b] font-medium focus:outline-none focus:ring-2 focus:ring-[#e63946]/20 focus:border-[#e63946] transition-all">
+                  <option value="15000" selected>台北 ↔ 關西/福岡/沖繩（星宇/虎航 15,000 哩）</option>
+                  <option value="20000">台北 ↔ 東京/大阪/首爾（長榮/大韓 20,000 哩）</option>
+                  <option value="25000">台北 ↔ 曼谷/峴港（華航/泰航 25,000 哩）</option>
+                  <option value="35000">台北 ↔ 新加坡/峇里島（新航/星宇 35,000 哩）</option>
+                  <option value="40000">台北 ↔ 北海道/札幌（長榮/ANA 40,000 哩）</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Real-time Outputs Column -->
+            <div class="bg-slate-900 rounded-2xl p-6 text-white flex flex-col justify-between relative overflow-hidden shadow-md">
+              <div class="absolute top-0 right-0 w-32 h-32 bg-[#e63946] rounded-full opacity-10 blur-2xl"></div>
+              
+              <div class="space-y-6 relative z-10">
+                <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-[10px] font-bold bg-[#e63946]/25 text-[#e63946]">
+                  📊 即時精算報告
+                </span>
+
+                <div class="grid grid-cols-3 gap-2 divide-x divide-slate-800 text-center">
+                  <div>
+                    <span class="block text-xs text-slate-300 font-semibold mb-1">年均累積里程</span>
+                    <span id="r-yearly" class="text-xl sm:text-2xl font-extrabold text-[#e63946]">12,500</span>
+                    <span class="block text-xs text-slate-400 mt-0.5">哩 / 年</span>
+                  </div>
+                  <div>
+                    <span class="block text-xs text-slate-300 font-semibold mb-1">預估需用時間</span>
+                    <span id="r-months" class="text-xl sm:text-2xl font-extrabold text-white">15</span>
+                    <span class="block text-xs text-slate-400 mt-0.5">個月</span>
+                  </div>
+                  <div>
+                    <span class="block text-xs text-slate-300 font-semibold mb-1">折合年數</span>
+                    <span id="r-years" class="text-xl sm:text-2xl font-extrabold text-amber-500">1.3</span>
+                    <span class="block text-xs text-slate-400 mt-0.5">年</span>
+                  </div>
+                </div>
+
+                <!-- Custom Tips content area -->
+                <div class="border-t border-slate-800 pt-4">
+                  <div id="r-tips" class="text-xs text-slate-300 leading-relaxed space-y-2">
+                    <!-- Javascript Will Populate Here -->
+                  </div>
+                </div>
+              </div>
+
+              <div class="text-xs text-slate-400 text-right mt-4 pt-2 border-t border-slate-800/60">
+                *本計算結果基於 2026 年常態卡片回饋，實際累積可能隨活動調整。
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ✈️ 各航線里程需求速查 -->
+        <section id="destination-table" class="space-y-6 scroll-mt-24">
+          <div class="space-y-1.5">
+            <h2 class="text-2xl font-bold text-[#020617] border-b-2 border-[#06B6D4] pb-3 flex items-center gap-2.5">
+              <span class="px-2.5 py-0.5 rounded bg-[#e63946]/10 text-[#e63946] text-sm font-bold">✈️</span> 熱門航點里程需求速查
+            </h2>
+            <p class="text-sm text-[#1e293b]">
+              以下列出台灣出發最常兌換的熱門航線所需最低來回經濟艙、商務艙點數及最佳建議：
+            </p>
+          </div>
+
+          <div class="overflow-x-auto border border-slate-200 rounded-2xl shadow-xs bg-white">
+            <table class="w-full border-collapse text-left text-xs sm:text-sm">
+              <thead>
+                <tr class="bg-slate-50 border-b border-slate-200 text-[#020617]">
+                  <th class="p-4 font-bold">兌換航線</th>
+                  <th class="p-4 font-bold text-center">最低里程(來回)</th>
+                  <th class="p-4 font-bold text-center">一般里程(來回)</th>
+                  <th class="p-4 font-bold text-center">商務艙(來回)</th>
+                  <th class="p-4 font-bold">最優配對航空公司</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-100 text-[#1e293b]">
+                <tr class="hover:bg-slate-50/40 transition-colors">
+                  <td class="p-4 font-bold text-slate-900">🟢 台北 ↔ 關西 (大阪)</td>
+                  <td class="p-4 text-center text-[#e63946] font-bold">15,000 哩</td>
+                  <td class="p-4 text-center text-slate-700">20,000 哩</td>
+                  <td class="p-4 text-center text-slate-700">45,000 哩</td>
+                  <td class="p-4 text-xs">星宇航空 (自營高CP特惠)</td>
+                </tr>
+                <tr class="hover:bg-slate-50/40 transition-colors">
+                  <td class="p-4 font-bold text-slate-900">🟢 台北 ↔ 福岡 (九州)</td>
+                  <td class="p-4 text-center text-[#e63946] font-bold">15,000 哩</td>
+                  <td class="p-4 text-center text-slate-700">20,000 哩</td>
+                  <td class="p-4 text-center text-slate-700">45,000 哩</td>
+                  <td class="p-4 text-xs">星宇/台灣虎航 (超值入門選)</td>
+                </tr>
+                <tr class="hover:bg-slate-50/40 transition-colors">
+                  <td class="p-4 font-bold text-slate-900">🟢 台北 ↔ 沖繩 (那霸)</td>
+                  <td class="p-4 text-center text-[#e63946] font-bold">15,000 哩</td>
+                  <td class="p-4 text-center text-slate-700">20,000 哩</td>
+                  <td class="p-4 text-center text-slate-700">40,000 哩</td>
+                  <td class="p-4 text-xs">星宇/虎航 (短途首選)</td>
+                </tr>
+                <tr class="hover:bg-slate-50/40 transition-colors">
+                  <td class="p-4 font-bold text-slate-900">🟡 台北 ↔ 東京 (成田)</td>
+                  <td class="p-4 text-center text-[#e63946] font-bold">20,000 哩</td>
+                  <td class="p-4 text-center text-slate-700">25,000 哩</td>
+                  <td class="p-4 text-center text-slate-700">50,000 哩</td>
+                  <td class="p-4 text-xs">酷航 (廣體機) / 全日空 (ANA)</td>
+                </tr>
+                <tr class="hover:bg-slate-50/40 transition-colors">
+                  <td class="p-4 font-bold text-slate-900">🟡 台北 ↔ 首爾 (仁川)</td>
+                  <td class="p-4 text-center text-[#e63946] font-bold">15,000 哩</td>
+                  <td class="p-4 text-center text-slate-700">20,000 哩</td>
+                  <td class="p-4 text-center text-slate-700">45,000 哩</td>
+                  <td class="p-4 text-xs">酷航 / 大韓航空</td>
+                </tr>
+                <tr class="hover:bg-slate-50/40 transition-colors">
+                  <td class="p-4 font-bold text-slate-900">🟡 台北 ↔ 曼谷 (泰國)</td>
+                  <td class="p-4 text-center text-[#e63946] font-bold">25,000 哩</td>
+                  <td class="p-4 text-center text-slate-700">30,000 哩</td>
+                  <td class="p-4 text-center text-slate-700">60,000 哩</td>
+                  <td class="p-4 text-xs">長榮航空 / 泰國航空</td>
+                </tr>
+                <tr class="hover:bg-slate-50/40 transition-colors">
+                  <td class="p-4 font-bold text-slate-900">🟠 台北 ↔ 峴港 (越南)</td>
+                  <td class="p-4 text-center text-[#e63946] font-bold">25,000 哩</td>
+                  <td class="p-4 text-center text-slate-700">30,000 哩</td>
+                  <td class="p-4 text-center text-slate-700">60,000 哩</td>
+                  <td class="p-4 text-xs">越南航空 (SkyTeam)</td>
+                </tr>
+                <tr class="hover:bg-slate-50/40 transition-colors">
+                  <td class="p-4 font-bold text-slate-900">🔴 台北 ↔ 新加坡</td>
+                  <td class="p-4 text-center text-[#e63946] font-bold">35,000 哩</td>
+                  <td class="p-4 text-center text-slate-700">40,000 哩</td>
+                  <td class="p-4 text-center text-slate-700">70,000 哩</td>
+                  <td class="p-4 text-xs">新加坡航空 / 星宇航空</td>
+                </tr>
+                <tr class="hover:bg-slate-50/40 transition-colors">
+                  <td class="p-4 font-bold text-slate-900">🔴 台北 ↔ 北海道 (札幌)</td>
+                  <td class="p-4 text-center text-[#e63946] font-bold">40,000 哩</td>
+                  <td class="p-4 text-center text-slate-700">45,000 哩</td>
+                  <td class="p-4 text-center text-slate-700">80,000 哩</td>
+                  <td class="p-4 text-xs">全日空 (ANA) / 長榮航空</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- 💳 台灣熱門里程信用卡比較 -->
+        <section id="card-comparison" class="space-y-6 scroll-mt-24">
+          <div class="space-y-1.5">
+            <h2 class="text-2xl font-bold text-[#020617] border-b-2 border-[#06B6D4] pb-3 flex items-center gap-2.5">
+              <span class="px-2.5 py-0.5 rounded bg-[#e63946]/10 text-[#e63946] text-sm font-bold">💳</span> 台灣熱門里程信用卡評比
+            </h2>
+            <p class="text-sm text-[#1e293b]">
+              台灣市面上最推薦的五款高人氣哩程回饋卡，涵蓋新手免年費到頂級保費神卡的詳細規格：
+            </p>
+          </div>
+
+          <div class="overflow-x-auto border border-slate-200 rounded-2xl shadow-xs bg-white">
+            <table class="w-full border-collapse text-left text-xs sm:text-sm">
+              <thead>
+                <tr class="bg-slate-50 border-b border-slate-200 text-[#020617]">
+                  <th class="p-4 font-bold">信用卡名稱</th>
+                  <th class="p-4 font-bold text-center">國內回饋率</th>
+                  <th class="p-4 font-bold text-center">國外回饋率</th>
+                  <th class="p-4 font-bold text-center">哩程兌換比例</th>
+                  <th class="p-4 font-bold text-center">首年年費</th>
+                  <th class="p-4 font-bold">推薦短評與最優對象</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-100 text-[#1e293b]">
+                <tr class="hover:bg-slate-50/40 transition-colors">
+                  <td class="p-4 font-bold text-slate-900">國泰世華御璽卡</td>
+                  <td class="p-4 text-center">2% 等值紅利</td>
+                  <td class="p-4 text-center">2% 等值紅利</td>
+                  <td class="p-4 text-center font-semibold text-slate-800">1點 = 0.5 哩</td>
+                  <td class="p-4 text-center text-emerald-600 font-bold">免年費</td>
+                  <td class="p-4 text-xs text-slate-700 leading-relaxed">⭐⭐⭐⭐⭐ 零年費新手首選，日常消費極為安心、不費力。</td>
+                </tr>
+                <tr class="hover:bg-slate-50/40 transition-colors">
+                  <td class="p-4 font-bold text-slate-900">中國信託 LINE Pay 卡</td>
+                  <td class="p-4 text-center">1.5% LINE Points</td>
+                  <td class="p-4 text-center">3% LINE Points</td>
+                  <td class="p-4 text-center font-semibold text-slate-800">350點 = 1,000 哩</td>
+                  <td class="p-4 text-center text-emerald-600 font-bold">免年費</td>
+                  <td class="p-4 text-xs text-slate-700 leading-relaxed">⭐⭐⭐⭐⭐ 國外與指定網購回饋高，點數轉換亞洲萬里通極快。</td>
+                </tr>
+                <tr class="hover:bg-slate-50/40 transition-colors">
+                  <td class="p-4 font-bold text-slate-900">星展寰宇現金回饋卡</td>
+                  <td class="p-4 text-center">1% 現金積點</td>
+                  <td class="p-4 text-center">3% 現金積點</td>
+                  <td class="p-4 text-center font-semibold text-slate-800">1點 = 0.5 哩</td>
+                  <td class="p-4 text-center">NT$ 3,000</td>
+                  <td class="p-4 text-xs text-slate-700 leading-relaxed">⭐⭐⭐⭐ 哩程終身有效！回饋無上限，適合大筆高額或商務支出。</td>
+                </tr>
+                <tr class="hover:bg-slate-50/40 transition-colors">
+                  <td class="p-4 font-bold text-slate-900">美國運通白金卡 (AMEX)</td>
+                  <td class="p-4 text-center">1x 積分</td>
+                  <td class="p-4 text-center">2x 積分</td>
+                  <td class="p-4 text-center font-bold text-[#e63946]">1點 = 1.0 哩</td>
+                  <td class="p-4 text-center">NT$ 15,000</td>
+                  <td class="p-4 text-xs text-slate-700 leading-relaxed">⭐⭐⭐⭐⭐ 1:1直兌，大額扣保費/買房產首選，常年累積最划算。</td>
+                </tr>
+                <tr class="hover:bg-slate-50/40 transition-colors">
+                  <td class="p-4 font-bold text-slate-900">玉山世界卡</td>
+                  <td class="p-4 text-center">1.5% 紅利</td>
+                  <td class="p-4 text-center">2.5% 紅利</td>
+                  <td class="p-4 text-center font-semibold text-slate-800">3點 = 1.0 哩</td>
+                  <td class="p-4 text-center text-emerald-600 font-bold">首年免</td>
+                  <td class="p-4 text-xs text-slate-700 leading-relaxed">⭐⭐⭐ 機場貴賓室特權，中規中矩，大額持卡人可以搭配使用。</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- 🎯 實戰進階指南 -->
+        <section id="strategy-guide" class="space-y-6 scroll-mt-24">
+          <h2 class="text-2xl font-bold text-[#020617] border-b-2 border-[#06B6D4] pb-3 flex items-center gap-2.5">
+            <span class="px-2.5 py-0.5 rounded bg-[#e63946]/10 text-[#e63946] text-sm font-bold">🎯</span> 哩程累積實戰進階攻略
+          </h2>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Box 1 -->
+            <div class="bg-white border border-slate-200 rounded-2xl p-6 space-y-3">
+              <h3 class="text-base font-bold text-[#020617] flex items-center gap-2">
+                <span class="text-[#e63946]">🔄</span>
+                三大航空聯盟轉點技巧
+              </h3>
+              <ul class="text-xs text-slate-700 space-y-2.5 list-disc list-inside">
+                <li><strong>星空聯盟 (Star Alliance)：</strong>包含長榮、全日空 (ANA)、新加坡航空。同一聯盟哩程可兌換該聯盟其他航空公司之機票。</li>
+                <li><strong>寰宇一家 (Oneworld)：</strong>包含國泰航空、日本航空 (JAL)、美國航空。飛亞洲日港極具優勢，適合使用亞洲萬里通累積。</li>
+                <li><strong>天合聯盟 (SkyTeam)：</strong>包含中華航空、大韓航空、越南航空。台灣人高頻率接觸的聯盟。</li>
+                <li class="text-[#e63946] font-semibold">⚠️ 核心法則：集中在同一個聯盟帳戶內累積，分散累積等於浪費！</li>
+              </ul>
+            </div>
+
+            <!-- Box 2 -->
+            <div class="bg-white border border-slate-200 rounded-2xl p-6 space-y-3">
+              <h3 class="text-base font-bold text-[#020617] flex items-center gap-2">
+                <span class="text-[#e63946]">🏆</span>
+                里程兌換價值最大化秘訣
+              </h3>
+              <ul class="text-xs text-slate-700 space-y-2.5 list-disc list-inside">
+                <li><strong>首選「商務艙」兌換：</strong>商務艙的現金票價通常是經濟艙的 3-5 倍，但兌換所需的哩程往往僅多出 50%。兌換商務艙是公認 CP 值最高的玩法！</li>
+                <li><strong>極致發揮「長途線」價值：</strong>例如台北 ↔ 倫敦或美西，現金票極貴，但若利用 60,000 至 80,000 哩兌換商務艙，價值高達十萬台幣以上。</li>
+                <li><strong>淡季出行更划算：</strong>避開農曆新年、櫻花季及聖誕假期，淡季兌換一般航空公司能省下高達 20% 的哩程需求。</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- ❓ FAQ Accordion Section -->
+        <section id="faq-section" class="space-y-6 scroll-mt-24">
+          <div class="space-y-3">
+            <h2 class="text-2xl font-bold text-[#020617] border-b-2 border-[#06B6D4] pb-3 flex items-center gap-2.5">
+              <span class="text-xl">❓</span> 里程新手 5 大常見問答 (FAQ)
+            </h2>
+            <p class="text-sm text-[#1e293b]">
+              我們整理了 PTT、Dcard 上最常被問到的里程新手疑惑，由資深常客為您解惑：
+            </p>
+          </div>
+
+          <div class="space-y-4">
+            
+            <!-- FAQ 1 -->
+            <div class="faq-item border border-slate-200 rounded-2xl bg-white transition-all duration-300">
+              <button class="w-full flex items-center justify-between p-5 text-left font-bold text-[#020617] hover:text-[#e63946] transition-colors focus:outline-none">
+                <span>1. 如果我的哩程不夠，能用現金補足差額嗎？</span>
+                <span class="faq-icon text-[#e63946] font-bold transition-transform duration-300">▼</span>
+              </button>
+              <div class="faq-answer px-5 text-sm text-[#1e293b] leading-relaxed border-t border-slate-100">
+                <p>
+                  <strong>部分航空公司支援「哩程+現金 (Miles + Cash)」混合兌換。</strong><br/>
+                  例如長榮航空、中華航空、新加坡航空都有此項服務。只要你的哩程達到兌換標準的最低限度 (例如總需求的 80% 以上)，就可以在官網勾選混合支付，差額部分以信用卡刷卡補足。雖然這樣做哩程的單位價值會被稍微稀釋，但對於急需飛航的人而言是極好的救急方案！
+                </p>
+              </div>
+            </div>
+
+            <!-- FAQ 2 -->
+            <div class="faq-item border border-slate-200 rounded-2xl bg-white transition-all duration-300">
+              <button class="w-full flex items-center justify-between p-5 text-left font-bold text-[#020617] hover:text-[#e63946] transition-colors focus:outline-none">
+                <span>2. 里程有有效期限嗎？快要過期了怎麼辦？</span>
+                <span class="faq-icon text-[#e63946] font-bold transition-transform duration-300">▼</span>
+              </button>
+              <div class="faq-answer px-5 text-sm text-[#1e293b] leading-relaxed border-t border-slate-100">
+                <p>
+                  <strong>大部分航空公司的哩程效期為「自入帳日起 36 個月」。</strong><br/>
+                  快過期時，可以透過以下幾種方法解套：<br/>
+                  ① <strong>小額商品兌換</strong>：在航空網路商城換成生活用品、香水或免稅品。<br/>
+                  ② <strong>移轉給親友</strong>：多數航空公司支援付手續費將里程轉讓給指定受益人，全家合併湊票。<br/>
+                  ③ <strong>兌換飯店住宿</strong>：部分聯盟可以直接使用哩程換一晚星級溫泉飯店，避免點數蒸發。
+                </p>
+              </div>
+            </div>
+
+            <!-- FAQ 3 -->
+            <div class="faq-item border border-slate-200 rounded-2xl bg-white transition-all duration-300">
+              <button class="w-full flex items-center justify-between p-5 text-left font-bold text-[#020617] hover:text-[#e63946] transition-colors focus:outline-none">
+                <span>3. 為什麼大家都推「亞洲萬里通 (Asia Miles)」累積？</span>
+                <span class="faq-icon text-[#e63946] font-bold transition-transform duration-300">▼</span>
+              </button>
+              <div class="faq-answer px-5 text-sm text-[#1e293b] leading-relaxed border-t border-slate-100">
+                <p>
+                  <strong>因為它的兌換彈性大，且在台灣累積通路最多！</strong><br/>
+                  國泰航空旗下的亞洲萬里通，在台灣除了有國泰世華、台新等聯名信用卡加持，還可以在 OpenPoint、全家便利商店、甚至網購商城直接透過消費點數轉換。此外，它的哩程有效期限只要在三年內有一次「變動」(增加或減少) 就能自動順延，幾乎等於「終身有效」，這對小資族累積非常友善。
+                </p>
+              </div>
+            </div>
+
+            <!-- FAQ 4 -->
+            <div class="faq-item border border-slate-200 rounded-2xl bg-white transition-all duration-300">
+              <button class="w-full flex items-center justify-between p-5 text-left font-bold text-[#020617] hover:text-[#e63946] transition-colors focus:outline-none">
+                <span>4. 免費機票真的完全「不用錢」嗎？</span>
+                <span class="faq-icon text-[#e63946] font-bold transition-transform duration-300">▼</span>
+              </button>
+              <div class="faq-answer px-5 text-sm text-[#1e293b] leading-relaxed border-t border-slate-100">
+                <p>
+                  <strong>不是！你需要自行負擔「機場稅」與「燃油附加費」！</strong><br/>
+                  兌換免費機票時，扣除的是「機票本身票價」的等值哩程。但各國政府收取的機場稅，以及航空公司收取的燃油稅，仍需在訂票時以信用卡另行支付。通常台北來回日本的機場稅與燃油附加費約在 NT$ 2,000 ~ NT$ 3,500 之間。
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        
+
+      
+        
+  
+
+        
+  
+
+
+        
+        <!-- Section: 下載 Lead Magnet / PDF -->
+        <section id="工具包" class="bg-gradient-to-br from-[#1e293b] via-[#0f172a] to-[#020617] text-white rounded-3xl p-8 sm:p-10 space-y-6 shadow-lg border border-[#e63946]/35 relative overflow-hidden text-center sm:text-left">
+          <div class="absolute -right-16 -bottom-16 w-44 h-44 rounded-full bg-[#e63946]/10 blur-xl"></div>
+          <div class="grid grid-cols-1 sm:grid-cols-12 gap-6 items-center relative z-10">
+            <div class="sm:col-span-12 space-y-3">
+              <span class="text-xs font-bold text-[#e63946] tracking-widest uppercase">📂 讀者獨家限定福利</span>
+              <h3 class="text-xl sm:text-2xl font-bold font-serif text-white">
+                2026 全球旅行打包神器：終極行李清單、插頭電壓與里程精算全能包
+              </h3>
+              <p class="text-xs text-slate-300 leading-relaxed max-w-xl">
+                內含「3分鐘無腦出國行李檢查清單（PDF）」、全球插頭電壓與變壓器規格對照表、各大航空哩程兌換免稅票精算工具，讓你在出發前就萬無一失，行李精準減重！
+              </p>
+            </div>
+          </div>
+          <div class="h-px bg-slate-800"></div>
+          <form action="https://golightly.activehosted.com/proc.php" method="POST" class="flex flex-col sm:flex-row gap-3">
+            <input type="text" name="email" placeholder="請輸入您的 Email 電子郵件" required class="bg-slate-900/80 border border-slate-700 rounded-full px-5 py-3 text-xs w-full focus:outline-none focus:border-[#e63946] text-white" />
+            <input type="hidden" name="resource" value="global-toolkit" />
+            <button type="submit" class="bg-[#e63946] hover:bg-[#C1121F] text-white font-bold text-xs px-8 py-3.5 rounded-full transition-all duration-300 hover:scale-105 shadow-sm shrink-0">
+              立即免費下載工具包
+            </button>
+          </form>
+          <div class="text-center sm:text-left text-[10px] text-slate-600">🔒 我們極度重視您的個人隱私，絕不對外發送任何垃圾郵件</div>
+        </section>
+  
+
+        
+        <!-- Related Articles / 相關文章區塊 -->
+        <section class="space-y-6">
+          <div class="flex items-center justify-between border-b-2 border-[#06B6D4] pb-3">
+            <h2 class="text-2xl font-black text-[#020617] flex items-center gap-2.5">
+              <span class="text-xl">📚</span> 均在路上 · 更多實用旅遊工具指南</h2>
+            <span class="text-xs font-bold text-slate-500 uppercase tracking-widest hidden sm:inline">RELATED ARTICLES</span>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            
+            <!-- Card -->
+            <a href="esim-comparison.html" class="group bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-xs hover:shadow-md transition-all duration-300">
+              <div class="aspect-video w-full overflow-hidden bg-slate-150">
+                <img alt="出國上網" loading="lazy" src="/images/esim-hero.webp" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+              </div>
+              <div class="p-4 space-y-2">
+                <span class="text-[10px] font-bold text-[#e63946] bg-[#e63946]/10 px-2 py-0.5 rounded-full">出國上網</span>
+                <h3 class="text-sm font-bold text-slate-900 group-hover:text-[#e63946] transition-colors line-clamp-2">
+                  2026 出國 eSIM 推薦與實測｜五大熱門方案一鍵智慧推薦
+                </h3>
+              </div>
+            </a>
+            <!-- Card -->
+            <a href="budget-airline-guide.html" class="group bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-xs hover:shadow-md transition-all duration-300">
+              <div class="aspect-video w-full overflow-hidden bg-slate-150">
+                <img alt="機票省錢" loading="lazy" src="/images/budget-airline.webp" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+              </div>
+              <div class="p-4 space-y-2">
+                <span class="text-[10px] font-bold text-[#e63946] bg-[#e63946]/10 px-2 py-0.5 rounded-full">機票省錢</span>
+                <h3 class="text-sm font-bold text-slate-900 group-hover:text-[#e63946] transition-colors line-clamp-2">
+                  廉價航空搶票與搭乘終極指南｜手提行李、餐點加購與延誤理賠避坑
+                </h3>
+              </div>
+            </a>
+            <!-- Card -->
+            <a href="packing-list.html" class="group bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-xs hover:shadow-md transition-all duration-300">
+              <div class="aspect-video w-full overflow-hidden bg-slate-150">
+                <img alt="行前打包" loading="lazy" src="/images/packing-list.webp" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+              </div>
+              <div class="p-4 space-y-2">
+                <span class="text-[10px] font-bold text-[#e63946] bg-[#e63946]/10 px-2 py-0.5 rounded-full">行前打包</span>
+                <h3 class="text-sm font-bold text-slate-900 group-hover:text-[#e63946] transition-colors line-clamp-2">
+                  出國打包不焦慮！超詳盡行李清單 check list 離線隨身攜帶包
+                </h3>
+              </div>
+            </a>
+          </div>
+        </section>
+  
+
+      </main>
+
+      <!-- ==================== SIDEBAR CONTENT (COL SPAN 4) ==================== -->
+      
+      <!-- ==================== SIDEBAR (COL SPAN 4) ==================== -->
+      <aside class="lg:col-span-4 space-y-8">
+        
+        <!-- Author Widget -->
+        <div class="bg-[#020617] text-white rounded-3xl p-6 shadow-md text-center space-y-4">
+          <div class="w-20 h-20 bg-[#e63946] rounded-full mx-auto flex items-center justify-center text-white font-black text-2xl shadow-inner">均</div>
+          <div class="space-y-1">
+            <h4 class="text-lg font-black text-white">均在路上 Travel Lab</h4>
+            <p class="text-xs text-slate-400 font-medium">✨ 2026 自由行實測開拓小隊</p>
+          </div>
+          <p class="text-xs text-slate-300 leading-relaxed px-2">
+            「均在路上」由數位遊牧旅人與美食精算師組成，專為熱愛自由的小資旅人提供100%零濾鏡、零置入、最真實的實測省錢乾貨！
+          </p>
+          <div class="h-px bg-slate-800"></div>
+          <div class="flex justify-around text-xs font-bold text-slate-300">
+            <div>
+              <span class="block text-lg font-extrabold text-[#e63946]">25+</span>
+              各國開拓
+            </div>
+            <div class="border-l border-slate-800"></div>
+            <div>
+              <span class="block text-lg font-extrabold text-[#e63946]">100%</span>
+              實測證實
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Sticky Sidebar Wrapper -->
+        <div class="sticky top-24 space-y-6">
+
+          <!-- 智能閱讀 & 快速導航 統合儀表板 (Unified Dashboard Container) -->
+          <div class="bg-white border border-slate-200 rounded-3xl p-6 shadow-xs space-y-6">
+
+            <!-- 智能閱讀儀表板 (Intelligent Reading Dashboard) -->
+            <div class="space-y-4">
+              <div class="flex items-center justify-between border-b border-slate-100 pb-2">
+                <h4 class="text-sm font-black text-[#020617] flex items-center gap-1.5 uppercase tracking-wider">
+                  ⚡ 智能閱讀儀表板
+                </h4>
+                <span class="text-[10px] font-bold px-2 py-0.5 bg-[#e63946]/10 text-[#e63946] rounded-full">LIVE</span>
+              </div>
+
+              <!-- 1. Real-time Progress & Reading speed -->
+              <div class="space-y-1.5 bg-slate-50/80 p-3.5 rounded-2xl border border-slate-100/80">
+                <div class="flex justify-between items-center text-[11px] font-bold text-slate-700">
+                  <span class="flex items-center gap-1">⏱️ 剩餘閱讀時間</span>
+                  <span id="dashboard-progress-pct" class="text-[#e63946] font-mono font-bold text-xs">0%</span>
+                </div>
+                <div class="text-xs font-black text-[#020617] mt-1 flex items-baseline gap-1">
+                  <span id="dashboard-rem-time" class="text-lg font-black text-[#e63946]">-</span>
+                  <span>分鐘</span>
+                  <span id="dashboard-read-time" class="text-[10px] text-slate-500 font-medium ml-1">...</span>
+                </div>
+                <div class="w-full bg-slate-200/80 h-1.5 rounded-full overflow-hidden mt-1.5">
+                  <div id="dashboard-scroll-bar" class="bg-[#e63946] h-full transition-all duration-300" style="width: 0%"></div>
+                </div>
+                <div class="text-[9px] text-slate-500 font-medium flex justify-between pt-1">
+                  <span>已讀 <span id="dashboard-read-words">0</span> / <span id="dashboard-total-words">-</span> 字</span>
+                  <span>均速 300 字/分</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="h-px bg-slate-100"></div>
+
+            <!-- Hot Table of Contents -->
+            <div class="space-y-4">
+              <h4 class="text-sm font-black text-[#020617] border-b border-slate-100 pb-2 uppercase tracking-wider">
+                📋 攻略快速導航
+              </h4>
+              <div class="flex flex-col gap-2.5 text-xs text-slate-700 font-bold" id="sidebar-nav-links">
+                
+                <a href="#intro" class="hover:text-[#e63946] transition-colors flex items-center justify-between group">
+                  <span class="flex items-center gap-1.5">
+                    <span class="text-[#e63946] group-hover:translate-x-0.5 transition-transform">▶</span> 
+                    <span>深度行前準備</span>
+                  </span>
+                  <span class="nav-check-status text-slate-300 font-mono text-[10px]" data-section="intro">[ ]</span>
+                </a>
+                <a href="#itinerary" class="hover:text-[#e63946] transition-colors flex items-center justify-between group">
+                  <span class="flex items-center gap-1.5">
+                    <span class="text-[#e63946] group-hover:translate-x-0.5 transition-transform">▶</span> 
+                    <span>每日行程詳解</span>
+                  </span>
+                  <span class="nav-check-status text-slate-300 font-mono text-[10px]" data-section="itinerary">[ ]</span>
+                </a>
+                <a href="#budget" class="hover:text-[#e63946] transition-colors flex items-center justify-between group">
+                  <span class="flex items-center gap-1.5">
+                    <span class="text-[#e63946] group-hover:translate-x-0.5 transition-transform">▶</span> 
+                    <span>預算花費分析</span>
+                  </span>
+                  <span class="nav-check-status text-slate-300 font-mono text-[10px]" data-section="budget">[ ]</span>
+                </a>
+                <a href="#faq" class="hover:text-[#e63946] transition-colors flex items-center justify-between group">
+                  <span class="flex items-center gap-1.5">
+                    <span class="text-[#e63946] group-hover:translate-x-0.5 transition-transform">▶</span> 
+                    <span>常見問題解答</span>
+                  </span>
+                  <span class="nav-check-status text-slate-300 font-mono text-[10px]" data-section="faq">[ ]</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="h-px bg-slate-100"></div>
+
+            <!-- Promotion Banner -->
+            <div class="space-y-3">
+              <div class="text-[10px] text-slate-400 font-extrabold uppercase tracking-wider flex items-center gap-1">
+                <span>🎁</span> <span>讀者獨家贊助推薦</span>
+              </div>
+              
+              <div class="rounded-2xl overflow-hidden shadow-xs hover:shadow-sm border border-slate-100 transition-all duration-300">
+                <a href="https://tw.trip.com/sale/w/4217/japan-travel.html?locale=zh_tw&amp;promo_referer=3952_4217_9&amp;Allianceid=8237671&amp;SID=312406690&amp;trip_sub1=&amp;trip_sub3=P17078945n" target="_blank" rel="nofollow sponsored" class="block" data-no-replace="true">
+                  <img width="400" height="200" src="images/trip-japan.webp" alt="均在路上 讀者贊助推薦" class="w-full h-auto object-cover hover:scale-[1.02] transition-transform duration-500" />
+                </a>
+              </div>
+  
+            </div>
+
+            <!-- Font Adjuster & Copy/Top Tool Row -->
+            <div class="h-px bg-slate-100"></div>
+            <div class="space-y-3">
+              <div class="text-xs font-black text-[#020617] flex items-center gap-1.5">
+                <span>🛠️</span> <span>隨身閱讀工具</span>
+              </div>
+              <div class="grid grid-cols-4 gap-2">
+                <button onclick="adjustArticleFontSize(-1)" class="py-2.5 bg-slate-50 hover:bg-slate-100 border border-slate-200 rounded-xl text-slate-800 font-mono text-xs font-black transition-all flex items-center justify-center cursor-pointer active:scale-95" title="縮小字體 (A-)">
+                  <span>A-</span>
+                </button>
+                <button onclick="adjustArticleFontSize(1)" class="py-2.5 bg-slate-50 hover:bg-slate-100 border border-slate-200 rounded-xl text-slate-800 font-mono text-xs font-black transition-all flex items-center justify-center cursor-pointer active:scale-95" title="放大字體 (A+)">
+                  <span>A+</span>
+                </button>
+                <button onclick="copyArticleLink()" class="py-2.5 bg-slate-50 hover:bg-slate-100 border border-slate-200 rounded-xl text-slate-700 text-xs transition-all flex items-center justify-center cursor-pointer active:scale-95" title="複製文章連結">
+                  <span>🔗</span>
+                </button>
+                <button onclick="scrollToArticleTop()" class="py-2.5 bg-slate-50 hover:bg-slate-100 border border-slate-200 rounded-xl text-slate-700 text-xs transition-all flex items-center justify-center cursor-pointer active:scale-95" title="平滑返回頂部">
+                  <span>↑</span>
+                </button>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </aside>
+  
+
+    </div>
+
+  </div>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer bg-[#020617] text-white py-12 mt-20 border-t border-slate-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-5 gap-8 text-xs sm:text-sm">
+      <div class="space-y-3">
+        <h4 class="font-bold text-[#e63946] uppercase tracking-wider text-sm">🇯🇵 日本自由行</h4>
+        <div class="flex flex-col gap-2 text-slate-600">
+          <a href="tokyo-5days.html" class="hover:text-[#e63946] transition-colors">東京5天4夜行程</a>
+          <a href="tokyo-accommodation.html" class="hover:text-[#e63946] transition-colors">東京住宿推薦</a>
+          <a href="kansai-pass.html" class="hover:text-[#e63946] transition-colors">關西交通票券指南</a>
+          <a href="osaka-food.html" class="hover:text-[#e63946] transition-colors">大阪美食攻略</a>
+          <a href="osaka-usj.html" class="hover:text-[#e63946] transition-colors">大阪環球影城</a>
+          <a href="japan-money-saving-tips.html" class="hover:text-[#e63946] transition-colors">日本省錢密技</a>
+        </div>
+      </div>
+      <div class="space-y-3">
+        <h4 class="font-bold text-[#e63946] uppercase tracking-wider text-sm">🇰🇷 韓國自由行</h4>
+        <div class="flex flex-col gap-2 text-slate-600">
+          <a href="seoul-food.html" class="hover:text-[#e63946] transition-colors">首爾必吃美食攻略</a>
+          <a href="busan-capsule.html" class="hover:text-[#e63946] transition-colors">釜山膠囊列車</a>
+          <a href="jeju-island.html" class="hover:text-[#e63946] transition-colors">濟州島自駕環島</a>
+          <a href="korea-budget.html" class="hover:text-[#e63946] transition-colors">韓國預算解析</a>
+          <a href="korea-transport.html" class="hover:text-[#e63946] transition-colors">韓國交通攻略</a>
+          <a href="korea-money-saving-tips.html" class="hover:text-[#e63946] transition-colors">韓國省錢密技</a>
+        </div>
+      </div>
+      <div class="space-y-3">
+        <h4 class="font-bold text-[#e63946] uppercase tracking-wider text-sm">🇹🇼 台灣旅遊</h4>
+        <div class="flex flex-col gap-2 text-slate-600">
+          <a href="hualien-taitung.html" class="hover:text-[#e63946] transition-colors">花東三天兩夜</a>
+          <a href="tainan-food.html" class="hover:text-[#e63946] transition-colors">台南美食牛肉湯</a>
+          <a href="kenting.html" class="hover:text-[#e63946] transition-colors">墾丁海景夜市攻略</a>
+          <a href="taipei-food.html" class="hover:text-[#e63946] transition-colors">台北美食地圖</a>
+          <a href="jiufen.html" class="hover:text-[#e63946] transition-colors">九份老街攻略</a>
+        </div>
+      </div>
+      <div class="space-y-3">
+        <h4 class="font-bold text-[#e63946] uppercase tracking-wider text-sm">🌏 東南亞自由行</h4>
+        <div class="flex flex-col gap-2 text-slate-600">
+          <a href="chiang-mai.html" class="hover:text-[#e63946] transition-colors">清邁數位遊牧</a>
+          <a href="bangkok-3days.html" class="hover:text-[#e63946] transition-colors">曼谷吃貨攻略</a>
+          <a href="vietnam-danang.html" class="hover:text-[#e63946] transition-colors">越南峴港攻略</a>
+          <a href="singapore-3days.html" class="hover:text-[#e63946] transition-colors">新加坡3天2夜攻略</a>
+          <a href="thailand-sim.html" class="hover:text-[#e63946] transition-colors">泰國eSIM指南</a>
+        </div>
+      </div>
+      <div class="space-y-3">
+        <h4 class="font-bold text-[#e63946] uppercase tracking-wider text-sm">🔧 實用旅遊工具</h4>
+        <div class="flex flex-col gap-2 text-slate-600">
+          <a href="packing-list.html" class="hover:text-[#e63946] transition-colors">出國打包清單</a>
+          <a href="esim-comparison.html" class="hover:text-[#e63946] transition-colors">eSIM比較推薦</a>
+          <a href="power-plug-guide.html" class="hover:text-[#e63946] transition-colors">各國插座電壓</a>
+          <a href="budget-airline-guide.html" class="hover:text-[#e63946] transition-colors">廉航搶票攻略</a>
+          <a href="miles-calculator.html" class="hover:text-[#e63946] transition-colors">里程累積試算器</a>
+          <a href="tax-refund-calculator.html" class="hover:text-[#e63946] transition-colors">免稅退稅試算器</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Social channels -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 pt-8 border-t border-slate-900/80 flex flex-col md:flex-row items-center justify-between gap-6 text-xs text-slate-600">
+      <div class="flex items-center gap-2">
+        <span class="text-[#e63946] font-bold">追蹤均在路上 📢</span>
+        <span>最新旅遊攻略與理財精省不漏接</span>
+      </div>
+      <div class="flex gap-4">
+        <a href="https://www.facebook.com/profile.php?id=61590076012361" target="_blank" class="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-bold transition-all">📘 Facebook 粉專</a>
+        <a href="https://line.me/ti/g/NbNGnW4Eh6" target="_blank" rel="noopener" class="px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl font-bold transition-all">💬 LINE 社群</a>
+        
+      </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8 text-center text-[11px] text-slate-700">
+      <div class="flex flex-wrap justify-center gap-4 mb-4 text-xs">
+        <a href="about.html" class="hover:text-white transition-colors">關於均在路上</a>
+        <span>·</span>
+        <a href="contact.html" class="hover:text-white transition-colors">聯絡我們</a>
+        <span>·</span>
+        <a href="privacy.html" class="hover:text-white transition-colors">隱私權政策</a>
+        <span>·</span>
+        <a href="terms.html" class="hover:text-white transition-colors">使用條款</a>
+      </div>
+      <p>© 2026 均在路上 Travel Lab. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- ========== CALCULATOR INTERACTIVE JAVASCRIPT ========== -->
+  <script>
+    // Scroll progress bar indicator
+    window.addEventListener('scroll', () => {
+      const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = (winScroll / height) * 100;
+      const progressEl = document.getElementById('scroll-progress');
+      if (progressEl) {
+        progressEl.style.width = scrolled + '%';
+      }
+    });
+
+    // Interactive FAQ accordion logic
+    document.querySelectorAll('.faq-item button').forEach(button => {
+      button.addEventListener('click', () => {
+        const item = button.parentElement;
+        const isOpen = item.classList.contains('open');
+        
+        // Close all other accordion items first
+        document.querySelectorAll('.faq-item').forEach(el => {
+          el.classList.remove('open');
+        });
+        
+        // Toggle current item
+        if (!isOpen) {
+          item.classList.add('open');
+        }
+      });
+    });
+
+    // Core calculator logic
+    function calculate() {
+      const card = document.getElementById('card').value;
+      const spendInput = document.getElementById('spend');
+      const spend = parseFloat(spendInput.value) || 0;
+      const flights = parseInt(document.getElementById('flights').value) || 0;
+      const targetMiles = parseInt(document.getElementById('route').value) || 15000;
+
+      // Card-specific rate mappings: Spent TWD per mile
+      let rate = 30; // default 30 TWD = 1 mile
+      let cardName = "";
+      if (card === 'cathay') {
+        rate = 30;
+        cardName = "國泰世華御璽卡";
+      } else if (card === 'ctbc') {
+        rate = 25;
+        cardName = "中國信託LINE Pay卡";
+      } else if (card === 'citi') {
+        rate = 20;
+        cardName = "星展寰宇卡";
+      } else if (card === 'amex') {
+        rate = 15;
+        cardName = "美國運通白金卡";
+      }
+
+      // 1. Calculate yearly miles from credit card spend
+      const yearlySpend = spend * 12;
+      const spendMiles = Math.round(yearlySpend / rate);
+
+      // 2. Flight contribution (Assume average 2,500 miles per international roundtrip)
+      const flightMiles = flights * 2500;
+
+      // 3. Total annual accumulated miles
+      const totalYearlyMiles = spendMiles + flightMiles;
+
+      // 4. Time to reach target
+      let months = 0;
+      let years = 0;
+      if (totalYearlyMiles > 0) {
+        months = Math.ceil((targetMiles / totalYearlyMiles) * 12);
+        years = (months / 12).toFixed(1);
+      } else {
+        months = '—';
+        years = '—';
+      }
+
+      // Update UI fields
+      document.getElementById('r-yearly').innerText = totalYearlyMiles > 0 ? totalYearlyMiles.toLocaleString() : '0';
+      document.getElementById('r-months').innerText = months;
+      document.getElementById('r-years').innerText = years;
+
+      // Generate dynamic coaching tips
+      let tipHTML = "";
+      if (card === 'cathay') {
+        tipHTML = `<strong>💡 國泰御璽精省建議</strong>：這張免年費卡非常適合日常一般消費。建議搭配週末在電商或外送平台等指定加倍通路消費，能直接將累積速度提升 1.5 倍！`;
+      } else if (card === 'ctbc') {
+        tipHTML = `<strong>💡 LINE Pay 點數轉換技巧</strong>：中信 LINE Pay 卡在國外網購、海外實體消費及特定旅遊訂房平台上享有高達 3% 的 LINE Points 回饋。轉換至「亞洲萬里通」時，多加留意銀行不定期舉辦的加倍兌換活動！`;
+      } else if (card === 'citi') {
+        tipHTML = `<strong>💡 星展寰宇終身有效優勢</strong>：這款卡片積點終身有效，非常適合每年消費額穩定、不希望受制於 3 年過期時限的人。出國或大筆保費消費時集中刷這張。`;
+      } else if (card === 'amex') {
+        tipHTML = `<strong>💡 AMEX 白金大額神技</strong>：雖然年費較高，但 1:1 直兌極具張力。在繳交所得稅、大額人身保險費或房租扣繳時集中使用，能在單月一次灌入大量里程，迅速達標！`;
+      }
+
+      // Add flight bonus context
+      if (flights > 0) {
+        tipHTML += `<br/><br/>✈️ <strong>飛行加成</strong>：每年 ${flights} 次的海外搭機將直接為您帶來 ${flightMiles.toLocaleString()} 哩的累積！這直接為您節省了約 ${Math.ceil(flightMiles / (spendMiles / 12 || 1))} 個月的刷卡等待時間。`;
+      } else {
+        tipHTML += `<br/><br/>✈️ <strong>進階建議</strong>：如果您今年有任何出國搭機的計畫，務必在預訂時填寫對應聯盟的會員卡號，飛行里程將為您加速 20% 以上達標！`;
+      }
+
+      document.getElementById('r-tips').innerHTML = tipHTML;
+    }
+
+    // Run initial calculation on load
+    window.addEventListener('DOMContentLoaded', () => {
+      calculate();
+    });
+  </script>
+
+  <!-- Affiliate analytics tracker script -->
+  <script>
+    document.addEventListener('click', function(e) {
+      var link = e.target.closest('[data-affiliate]');
+      if (link) {
+        if (typeof gtag === 'function') {
+          gtag('event', 'affiliate_click', {
+            affiliate: link.getAttribute('data-affiliate'),
+            page: window.location.pathname
+          });
+        }
+      }
+    });
+  </script>
+  <script defer src="js/monetization.js"></script>
+
+
+<!-- SIDEBAR UTILITY RUNTIME SCRIPT -->
+
+
+<script id="sidebar-utility-script">
+  function adjustArticleFontSize(direction) {
+    const mainArticle = document.querySelector('article') || document.querySelector('main') || document.getElementById('layout-main');
+    if (!mainArticle) return;
+    
+    const selectors = ['p', 'li', 'span:not(.group-hover\:scale-110)', 'h3', 'h4', 'blockquote'];
+    selectors.forEach(sel => {
+      mainArticle.querySelectorAll(sel).forEach(el => {
+        if (el.classList.contains('faq-icon') || el.closest('nav') || el.closest('button')) return;
+        
+        const currentSize = parseFloat(window.getComputedStyle(el).fontSize);
+        if (!el.dataset.originalSize) {
+          el.dataset.originalSize = currentSize;
+        }
+        
+        let newSize = currentSize + direction;
+        const orig = parseFloat(el.dataset.originalSize);
+        if (newSize >= orig - 3 && newSize <= orig + 6) {
+          el.style.fontSize = newSize + 'px';
+        }
+      });
+    });
+  }
+
+  function copyArticleLink() {
+    navigator.clipboard.writeText(window.location.href).then(() => {
+      const toast = document.createElement('div');
+      toast.className = 'fixed top-6 left-1/2 transform -translate-x-1/2 bg-slate-900/95 backdrop-blur-md text-white text-xs tracking-wider uppercase font-bold px-6 py-3.5 rounded-full shadow-xl z-50 transition-all duration-300 border border-white/10 flex items-center gap-2';
+      toast.innerHTML = '<span>✨</span> <span>文章連結已成功複製！</span>';
+      document.body.appendChild(toast);
+      
+      toast.style.opacity = '0';
+      toast.style.transform = 'translate(-50%, -10px)';
+      requestAnimationFrame(() => {
+        toast.style.opacity = '1';
+        toast.style.transform = 'translate(-50%, 0)';
+      });
+
+      setTimeout(() => {
+        toast.style.opacity = '0';
+        toast.style.transform = 'translate(-50%, -10px)';
+        setTimeout(() => toast.remove(), 300);
+      }, 2500);
+    });
+  }
+
+  function scrollToArticleTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  // Live Progress Tracker & Intelligent Reading Dashboard
+  window.addEventListener('DOMContentLoaded', () => {
+    const navLinks = document.querySelectorAll('#sidebar-nav-links a');
+    const sections = Array.from(navLinks).map(a => {
+      const href = a.getAttribute('href');
+      return href && href.startsWith('#') ? href.substring(1) : null;
+    }).filter(Boolean);
+
+    // Get total word count estimate
+    const mainContent = document.querySelector('main') || document.querySelector('article') || document.body;
+    const textContent = mainContent.innerText || '';
+    const charCount = textContent.replace(/\s+/g, '').length;
+    const readTimeMins = Math.max(3, Math.round(charCount / 300));
+
+    // Update reading stats headers
+    const remTimeSpan = document.getElementById('dashboard-rem-time');
+    const wordCountSpan = document.getElementById('dashboard-total-words');
+    const readTimeSpan = document.getElementById('dashboard-read-time');
+
+    if (remTimeSpan) remTimeSpan.textContent = readTimeMins;
+    if (wordCountSpan) wordCountSpan.textContent = charCount.toLocaleString();
+    if (readTimeSpan) readTimeSpan.textContent = '(共約 ' + charCount.toLocaleString() + ' 字)';
+
+    function updateProgress() {
+      const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+      if (scrollHeight > 0) {
+        const progress = Math.round((window.scrollY / scrollHeight) * 100);
+        
+        const textEl = document.getElementById('sidebar-progress-text');
+        const barEl = document.getElementById('sidebar-progress-bar');
+        if (textEl) textEl.textContent = progress + '%';
+        if (barEl) barEl.style.width = progress + '%';
+
+        // Update Intelligent Reading Dashboard
+        const dashPct = document.getElementById('dashboard-progress-pct');
+        const dashBar = document.getElementById('dashboard-scroll-bar');
+        const dashWords = document.getElementById('dashboard-read-words');
+        const dashRemTime = document.getElementById('dashboard-rem-time');
+
+        if (dashPct) dashPct.textContent = progress + '%';
+        if (dashBar) dashBar.style.width = progress + '%';
+        if (dashWords) dashWords.textContent = Math.round(charCount * (progress / 100)).toLocaleString();
+        if (dashRemTime) {
+          const remaining = Math.max(1, Math.round(readTimeMins * (1 - progress / 100)));
+          dashRemTime.textContent = remaining;
+        }
+
+        // Live update checkmarks based on scroll position
+        sections.forEach(secId => {
+          const el = document.getElementById(secId);
+          if (el) {
+            const rect = el.getBoundingClientRect();
+            // Section is read if its top is above middle of viewport
+            const isRead = rect.top < window.innerHeight * 0.4;
+            const statusEl = document.querySelector(`[data-section="${secId}"]`);
+            if (statusEl) {
+              if (isRead) {
+                statusEl.innerHTML = '<span class="text-[#e63946] font-extrabold">✓</span>';
+                statusEl.classList.remove('text-slate-300');
+                statusEl.classList.add('text-[#e63946]');
+              } else {
+                statusEl.innerHTML = '[ ]';
+                statusEl.classList.add('text-slate-300');
+                statusEl.classList.remove('text-[#e63946]');
+              }
+            }
+          }
+        });
+      }
+    }
+
+    window.addEventListener('scroll', updateProgress);
+    updateProgress(); // Run once initially
+  });
+</script>
+
+</body>
+</html>

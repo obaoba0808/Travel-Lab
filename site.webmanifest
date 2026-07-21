@@ -1,0 +1,21 @@
+{
+  "name": "均在路上 Travel Lab",
+  "short_name": "均在路上",
+  "description": "台港旅客省錢自由行攻略平台",
+  "start_url": "https://golightly.fun/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#e63946",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
