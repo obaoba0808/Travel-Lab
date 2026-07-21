@@ -1,0 +1,24 @@
+# robots.txt for 均在路上 (golightly.fun)
+# 用最少預算走最多地方的實戰旅遊攻略
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://golightly.fun/sitemap.xml
+
+# Crawl-delay (polite crawling)
+Crawl-delay: 1
+
+# Disallow unnecessary files
+Disallow: /node_modules/
+Disallow: /src/
+Disallow: /components/
+Disallow: /.github/
+Disallow: /*.ts$
+Disallow: /*.tsx$
+Disallow: /*.css$
+Disallow: /*.json$
+Disallow: /package-lock.json
+Disallow: /vite.config.ts
+Disallow: /tsconfig.json
