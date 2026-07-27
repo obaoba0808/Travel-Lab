@@ -2,6 +2,7 @@
  * global-header.js
  * Unified navigation menu matching the homepage menu
  */
+
 (function() {
   // Categories matching App.tsx
   const categories = [
@@ -11,6 +12,7 @@
     { label: '東南亞自由行', key: 'southeast' },
     { label: '旅遊工具', key: 'tools' }
   ];
+
   const customPages = [
   {
     "id": "tokyo-5days",
@@ -736,13 +738,16 @@
       "行程規劃"
     ]
   },
+
 ];
+
   // Inject Tailwind CSS if not present
   if (!window.tailwind) {
     const tailwindScript = document.createElement('script');
     tailwindScript.src = 'https://cdn.tailwindcss.com';
     document.head.appendChild(tailwindScript);
   }
+
   // Ensure fonts are loaded
   if (!document.querySelector('link[href*="Playfair+Display"]')) {
     const fontLink = document.createElement('link');
@@ -750,6 +755,7 @@
     fontLink.href = 'https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap';
     document.head.appendChild(fontLink);
   }
+
   // Setup Tailwind configuration dynamically
   window.tailwindConfigInterval = setInterval(() => {
     if (window.tailwind) {
@@ -784,6 +790,7 @@
       };
     }
   }, 50);
+
   const categoryUrls = {
     'japan': '/japan-travel.html',
     'korea': '/korea-travel.html',
@@ -791,10 +798,12 @@
     'southeast': '/southeast-asia.html',
     'tools': '/travel-tools.html'
   };
+
   // Helper to filter pages by category
   function getPagesByCategory(categoryLabel) {
     return customPages.filter(p => p.category === categoryLabel);
   }
+
   // Generate Dropdown HTML for desktop
   function generateDesktopDropdown(cat) {
     const pages = getPagesByCategory(cat.label);
@@ -816,6 +825,7 @@
         </a>
       `;
     });
+
     return `
       <div class="relative desktop-dropdown-group py-2 group">
         <a href="${catUrl}" class="flex items-center gap-1 text-slate-800 hover:text-[#e63946] transition-colors cursor-pointer text-xs font-semibold tracking-[0.2em] uppercase">
@@ -832,6 +842,7 @@
       </div>
     `;
   }
+
   // Generate Mobile Accordion HTML
   function generateMobileAccordion(cat) {
     const pages = getPagesByCategory(cat.label);
@@ -850,6 +861,7 @@
         </a>
       `;
     });
+
     return `
       <div class="flex flex-col border-b border-slate-200/50 pb-1.5">
         <button class="mobile-accordion-btn text-left py-2 hover:text-[#e63946] flex justify-between items-center w-full focus:outline-none">
@@ -862,12 +874,14 @@
       </div>
     `;
   }
+
   function initHeader() {
     if (!document.body) {
       console.warn("Unified Global Header: document.body not available yet, postponing until DOMContentLoaded...");
       document.addEventListener('DOMContentLoaded', initHeader);
       return;
     }
+
     try {
       console.log("Unified Global Header: Starting initialization...");
       
@@ -887,6 +901,7 @@
         oldMobileMenu.remove();
         console.log("Unified Global Header: Cleaned up old mobile menu.");
       }
+
       // 2. Create the unified glassmorphic header
       const header = document.createElement('header');
       header.className = "sticky top-0 left-0 right-0 z-[100] bg-[#f8fafc]/95 backdrop-blur-md border-b border-[#e2e8f0]/50 py-4 transition-all duration-300 shadow-sm";
@@ -896,27 +911,33 @@
       categories.forEach(cat => {
         desktopDropdownsHtml += generateDesktopDropdown(cat);
       });
+
       // Build mobile accordions
       let mobileAccordionsHtml = '';
       categories.forEach(cat => {
         mobileAccordionsHtml += generateMobileAccordion(cat);
       });
+
       header.innerHTML = `
       <div class="container mx-auto px-6 max-w-7xl flex justify-between items-center">
         
         <!-- Logo Block -->
         <a href="/index.html" class="flex items-center gap-3.5 cursor-pointer group">
-          <img src="/images/logo-red.png" alt="Japan Travel Lab Logo" class="w-9 h-9 rounded-full object-cover shadow-inner group-hover:scale-105 transition-transform" />
+          <div class="w-9 h-9 bg-[#e63946] rounded-full flex items-center justify-center text-white font-serif font-bold text-lg shadow-inner pb-0.5 group-hover:scale-105 transition-transform">
+            α
+          </div>
           <span class="font-serif font-bold text-lg tracking-[0.25em] text-slate-900 group-hover:text-[#e63946] transition-colors">
             均在路上
           </span>
         </a>
+
         <!-- Desktop Nav -->
         <div class="hidden lg:flex items-center gap-10 text-xs font-semibold tracking-[0.2em] uppercase">
           <a href="/index.html" class="text-slate-800 hover:text-[#e63946] transition-colors cursor-pointer">首頁</a>
           ${desktopDropdownsHtml}
           <a href="/about.html" class="text-slate-800 hover:text-[#e63946] transition-colors cursor-pointer">關於我們</a>
         </div>
+
         <!-- Mobile Toggle Button -->
         <div class="flex items-center gap-3 lg:hidden">
           <button id="mobile-menu-toggle-btn" class="p-2.5 rounded-full text-slate-900 bg-slate-100 hover:bg-slate-200 transition-colors focus:outline-none">
@@ -924,8 +945,10 @@
             <svg id="menu-icon-close" class="w-[18px] h-[18px] hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" x2="6" y1="6" y2="18"/><line x1="6" x2="18" y1="6" y2="18"/></svg>
           </button>
         </div>
+
       </div>
       `;
+
       // Create mobile menu element outside header to avoid backdrop-blur fixed positioning context restriction
       const mobileMenuEl = document.createElement('div');
       mobileMenuEl.id = "mobile-dropdown-menu";
@@ -936,13 +959,16 @@
         <a href="/about.html" class="text-left py-2 border-b border-slate-200/50 hover:text-[#e63946]">關於我們</a>
         <a href="/index.html" class="text-left py-2 hover:text-[#e63946]">探索熱門目的地</a>
       `;
+
       document.body.prepend(mobileMenuEl);
       document.body.prepend(header);
+
     // Interactive behaviors
     const toggleBtn = document.getElementById('mobile-menu-toggle-btn');
     const mobileMenu = document.getElementById('mobile-dropdown-menu');
     const barsIcon = document.getElementById('menu-icon-bars');
     const closeIcon = document.getElementById('menu-icon-close');
+
     if (toggleBtn && mobileMenu) {
       toggleBtn.addEventListener('click', () => {
         const isHidden = mobileMenu.classList.contains('hidden');
@@ -959,6 +985,7 @@
         }
       });
     }
+
     // Mobile accordions toggle
     const accordionBtns = document.querySelectorAll('.mobile-accordion-btn');
     accordionBtns.forEach(btn => {
@@ -979,13 +1006,16 @@
         }
       });
     });
+
     // Desktop dropdowns hover delay behavior
     const dropdownGroups = document.querySelectorAll('.desktop-dropdown-group');
     dropdownGroups.forEach(group => {
       const menu = group.querySelector('.desktop-dropdown-menu');
       const arrow = group.querySelector('.dropdown-arrow-icon');
       let hideTimeout = null;
+
       if (!menu) return;
+
       group.addEventListener('mouseenter', () => {
         if (hideTimeout) {
           clearTimeout(hideTimeout);
@@ -996,6 +1026,7 @@
           arrow.classList.add('rotate-180');
         }
       });
+
       group.addEventListener('mouseleave', () => {
         hideTimeout = setTimeout(() => {
           menu.classList.add('hidden');
@@ -1005,6 +1036,7 @@
         }, 250); // 250ms transition/delay to prevent quick closures
       });
     });
+
     // 5. Table of Contents Smooth Scroll & Active Highlight
     const sidebarLinks = document.querySelectorAll('#sidebar-nav-links a');
     if (sidebarLinks.length > 0) {
@@ -1030,6 +1062,7 @@
           }
         });
       });
+
       const highlightActiveSection = () => {
         const links = document.querySelectorAll('#sidebar-nav-links a');
         if (links.length === 0) return;
@@ -1084,6 +1117,7 @@
           }
         });
       };
+
       let isScrolling = false;
       window.addEventListener('scroll', () => {
         if (!isScrolling) {
@@ -1097,28 +1131,33 @@
       // Initial highlight check after layout settles
       setTimeout(highlightActiveSection, 100);
     }
+
       // Replace broken/missing TRIP affiliate banner images with beautiful text-visible HTML banners
       try {
         replaceTripBanners();
       } catch (bannerErr) {
         console.error("Unified Global Header: Error replacing TRIP banners:", bannerErr);
       }
+
       // Unify static page footer with index.html
       try {
         initFooter();
       } catch (footerErr) {
         console.error("Unified Global Footer: Error during footer initialization:", footerErr);
       }
+
       console.log("Unified Global Header: Initialization complete. Header prepended successfully.");
     } catch (err) {
       console.error("Unified Global Header: Error during initialization:", err);
     }
   }
+
   function replaceTripBanners() {
     const banners = document.querySelectorAll('a[data-affiliate="trip-com"], a[href*="trip.com"]');
     banners.forEach(oldLink => {
       // Avoid replacing if it has data-no-replace="true"
       if (oldLink.getAttribute('data-no-replace') === 'true' || oldLink.querySelector('[data-no-replace="true"]')) return;
+
       // Avoid replacing if it is already within our header or a premium banner
       if (oldLink.closest('header') || oldLink.closest('.premium-trip-banner')) return;
       
@@ -1193,6 +1232,7 @@
       }
     });
   }
+
   function initFooter() {
     try {
       const existingFooter = document.querySelector('footer');
@@ -1200,6 +1240,7 @@
         console.warn("Unified Global Footer: No <footer> element found to replace.");
         return;
       }
+
       const newFooterHtml = `
       <div class="container mx-auto px-6 max-w-7xl">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 pb-16 border-b border-slate-800/80">
@@ -1207,7 +1248,9 @@
           <!-- Brand & Philosophy -->
           <div class="lg:col-span-4 space-y-6 text-left">
             <div class="flex items-center gap-3">
-              <img src="/images/logo-red.png" alt="Japan Travel Lab Logo" class="w-10 h-10 rounded-full object-cover shadow-inner group-hover:scale-105 transition-transform" />
+              <div class="w-10 h-10 bg-[#e63946] rounded-full flex items-center justify-center text-white font-serif font-bold text-xl pb-0.5">
+                α
+              </div>
               <span class="font-serif font-bold text-xl tracking-widest text-white">
                 均在路上
               </span>
@@ -1239,6 +1282,7 @@
               </div>
             </div>
           </div>
+
           <!-- Quick Links -->
           <div class="lg:col-span-2 lg:col-start-6 space-y-6 text-left">
             <h4 class="text-xs font-bold uppercase tracking-[0.2em] text-[#e63946]">慢旅探索</h4>
@@ -1250,6 +1294,7 @@
               <li><a href="/travel-tools.html" class="hover:text-white transition-colors">旅遊工具</a></li>
             </ul>
           </div>
+
           <div class="lg:col-span-2 space-y-6 text-left">
             <h4 class="text-xs font-bold uppercase tracking-[0.2em] text-[#e63946]">支援中心</h4>
             <ul class="space-y-3 text-sm text-slate-400">
@@ -1257,6 +1302,7 @@
               <li><a href="/about.html" class="hover:text-white transition-colors">聯絡我們</a></li>
             </ul>
           </div>
+
           <!-- Newsletter Input -->
           <div class="lg:col-span-3 space-y-6 text-left">
             <h4 class="text-xs font-bold uppercase tracking-[0.2em] text-[#e63946]">慢旅期刊</h4>
@@ -1282,7 +1328,9 @@
               訂閱成功！感謝您加入我們的慢旅行列。
             </p>
           </div>
+
         </div>
+
         <!-- Footer Bottom -->
         <div class="flex flex-col md:flex-row justify-between items-center pt-8 text-xs text-slate-500 gap-4">
           <div>
@@ -1298,9 +1346,11 @@
         </div>
       </div>
       `;
+
       existingFooter.className = "bg-gradient-to-b from-[#020617] to-[#1e293b] text-slate-300 border-t border-slate-800/80 pt-20 pb-12 transition-all w-full";
       existingFooter.id = "footer";
       existingFooter.innerHTML = newFooterHtml;
+
       const form = document.getElementById('global-newsletter-form');
       const successMsg = document.getElementById('global-newsletter-success');
       if (form && successMsg) {
@@ -1318,6 +1368,7 @@
       console.error("Unified Global Footer: Error replacing footer:", err);
     }
   }
+
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', initHeader);
   } else {
