@@ -1,0 +1,67 @@
+# AI.txt for 均在路上 (golightly.fun)
+# https://golightly.fun
+# 
+# AI.txt 是給 AI 爬蟲和 AI 公司的許可聲明
+# 參考：https://ai.txt.org
+
+# ===== 基本資訊 =====
+# 網站名稱
+AI-Site-Name: 均在路上 (golightly.fun)
+
+# 網站描述
+AI-Site-Description: 用最少預算走最多地方的實戰旅遊攻略。提供東京、首爾、曼谷等熱門城市的自由行完整攻略。
+
+# 網站類型
+AI-Site-Type: Travel Guide / Affiliate Marketing
+
+# 聯絡方式（AI 公司申請授權）
+AI-Contact: https://golightly.fun/contact
+
+# ===== AI 爬蟲許可 =====
+# 允許 AI 爬蟲抓取用於索引和搜尋展示
+User-agent: *
+AI-Crawl-Command: allow, crawl-delay:1
+
+# ===== AI 訓練政策 =====
+# ⚠️ 明確禁止使用本網站內容訓練 AI 模型
+User-agent: AI-Training
+Training-Disallow: /
+
+# 允許常見 AI 爬蟲用於索引（但禁止訓練）
+User-agent: GPTBot
+AI-Crawl-Command: allow
+Training-Disallow: /
+
+User-agent: ChatGPT-User
+AI-Crawl-Command: allow
+Training-Disallow: /
+
+User-agent: Claude-Web
+AI-Crawl-Command: allow
+Training-Disallow: /
+
+User-agent: PerplexityBot
+AI-Crawl-Command: allow
+Training-Disallow: /
+
+User-agent: Google-Extended
+AI-Crawl-Command: allow
+Training-Disallow: /
+
+# ===== 具體指令 =====
+# 允許 AI 在回應中提及和連結到本網站（正常引用）
+AI-Transient-Content: allow
+
+# 允許 AI 在搜尋結果中顯示本網站摘要
+AI-Snippet-Include: allow
+
+# 允許付費內容展示（如聯盟行銷連結）
+AI-Affiliate-Links: allow
+
+# 歡迎 AI 摘要引用本網站內容（需標註來源）
+AI-Summary-Include: allow, require-attribution
+
+# ===== 附帶資訊 =====
+Sitemap: https://golightly.fun/sitemap.xml
+Generated: 2026-07-28
+Version: 1.0
